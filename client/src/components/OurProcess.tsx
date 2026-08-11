@@ -66,10 +66,10 @@ export default function OurProcess({
     <section className={`pfs-process ${className}`} id={id} aria-labelledby={titleId}>
       <div className="container">
         <p className="pfs-process__eyebrow">Our Process</p>
-        <h2 className="pfs-process__title">
+        <h2 data-animation="slideLeft" className="pfs-process__title">
           How We Engineer Your Finishing System
         </h2>
-        <p className="pfs-process__lede"> Every PFS project follows the same disciplined path — from the first site assessment to lifetime filter and service support. Here is exactly what happens, step by step.</p>
+        <p data-animation="slideLeft" className="pfs-process__lede"> Every PFS project follows the same disciplined path — from the first site assessment to lifetime filter and service support. Here is exactly what happens, step by step.</p>
 
         <ol className="pfs-steps" ref={listRef}>
 

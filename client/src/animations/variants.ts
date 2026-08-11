@@ -1,3 +1,5 @@
+const getOffset = () => (typeof window !== "undefined" && window.innerWidth <= 768 ? 20 : 60);
+
 export const fadeIn = {
   hidden: {
     opacity: 0,
@@ -13,26 +15,32 @@ export const fadeIn = {
   },
 };
 
-const isMobile = window.innerWidth <= 420;
-
 export const slideLeft = {
   hidden: {
     opacity: 0,
-    transform: `translateX(${isMobile ? -60 : -100}px)`,
+    transform: `translateX(-${getOffset()}px)`,
   },
   visible: {
     opacity: 1,
     transform: "translateX(0px)",
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
   },
 };
 
 export const slideRight = {
   hidden: {
     opacity: 0,
-    transform: `translateX(${isMobile ? 60 : 100}px)`,
+    transform: `translateX(${getOffset()}px)`,
   },
   visible: {
     opacity: 1,
     transform: "translateX(0px)",
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
   },
 };
