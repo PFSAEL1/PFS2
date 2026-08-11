@@ -81,7 +81,7 @@ export default function CareersPage() {
             <div>
               <span data-animation="slideRight" className="section-label">Join Our Team</span>
               <h2 data-animation="slideLeft" className="section-heading">Build Something That Lasts</h2>
-              <p data-animation="slideLeft" className="section-body" style={{ marginBottom: "1rem" }}>
+              <p className="section-body" style={{ marginBottom: "1rem" }}>
                 PFS has been engineering and manufacturing industrial finishing equipment in Santa Rosa, California since 1989. We build spray paint booths, powder coating systems, industrial ovens, and blast equipment for customers across North America — from collision repair shops to aerospace facilities to military installations.
               </p>
               <p className="section-body" style={{ marginBottom: "1.5rem" }}>
@@ -113,7 +113,7 @@ export default function CareersPage() {
             {VALUES.map((v, i) => (
               <div key={i} style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", padding: "1.75rem" }}>
                 <div style={{ width: 32, height: 3, background: GOLD, marginBottom: "1rem" }} />
-                <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1rem", fontWeight: 700, color: "#fff", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.75rem" }}>{v.title}</h3>
+                <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1rem", fontWeight: 700, color: "#fff", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.75rem" }}>{v.title}</h3>
                 <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "rgba(255,255,255,0.65)", lineHeight: 1.7 }}>{v.body}</p>
               </div>
             ))}

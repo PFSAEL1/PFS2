@@ -158,7 +158,7 @@ export default function WalkInOvenPage() {
             {[{ label:"Products",href:"/products" },{ label:"Industrial Ovens",href:"/products/ovens" },{ label:"Walk-In Ovens" }].map((crumb, i, arr) => (
               <span key={i} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem" }}>
                 {crumb.href
-                  ? <Link data-animation="slideLeft" href={crumb.href}><span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.72rem",fontWeight:700,letterSpacing:"0.12em",color:"rgba(255,255,255,0.5)",textTransform:"uppercase",cursor:"pointer" }}>{crumb.label}</span></Link>
+                  ? <Link href={crumb.href}><span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.72rem",fontWeight:700,letterSpacing:"0.12em",color:"rgba(255,255,255,0.5)",textTransform:"uppercase",cursor:"pointer" }}>{crumb.label}</span></Link>
                   : <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.72rem",fontWeight:700,letterSpacing:"0.12em",color:"rgba(255,255,255,0.75)",textTransform:"uppercase" }}>{crumb.label}</span>
                 }
                 {i < arr.length - 1 && <span style={{ color:"rgba(255,255,255,0.3)",fontSize:"0.7rem" }}>›</span>}
@@ -191,7 +191,7 @@ export default function WalkInOvenPage() {
       {/* ── OVERVIEW STATS ── */}
       <section style={{ background:"#f5f5f5",padding:"3rem 0",borderBottom:"1px solid #e5e7eb" }}>
         <div className="container">
-          <div data-animation="fadeIn" style={{ display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(180px,1fr))",gap:"1.5rem" }}>
+          <div style={{ display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(180px,1fr))",gap:"1.5rem" }}>
             {[
               { val:"20-ga+",  label:"Steel Construction" },
               { val:"6\"",     label:"Insulated Walls & Roof" },
@@ -201,8 +201,8 @@ export default function WalkInOvenPage() {
               { val:"USA",     label:"Manufactured" },
             ].map((s) => (
               <div key={s.val} style={{ background:"#fff",border:"1px solid #e5e7eb",padding:"1.5rem",textAlign:"center" }}>
-                <div style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"1.9rem",fontWeight:800,color:BLUE,letterSpacing:"-0.01em",lineHeight:1 }}>{s.val}</div>
-                <div style={{ fontFamily:"'Archivo Narrow','Inter',sans-serif",fontSize:"0.78rem",color:"#666",marginTop:"0.4rem",textTransform:"uppercase",letterSpacing:"0.06em" }}>{s.label}</div>
+                <div data-animation="slideLeft" style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"1.9rem",fontWeight:800,color:BLUE,letterSpacing:"-0.01em",lineHeight:1 }}>{s.val}</div>
+                <div data-animation="slideRight" style={{ fontFamily:"'Archivo Narrow','Inter',sans-serif",fontSize:"0.78rem",color:"#666",marginTop:"0.4rem",textTransform:"uppercase",letterSpacing:"0.06em" }}>{s.label}</div>
               </div>
             ))}
           </div>
@@ -307,8 +307,8 @@ export default function WalkInOvenPage() {
                 </div>
               ))}
             </div>
-            <div style={{ textAlign:"center",marginTop:"0.5rem" }}>
-              <Link data-animation="slideRight" href="/contact/talk-to-an-engineer?from=walk-in-oven">
+            <div data-animation="slideRight" style={{ textAlign:"center",marginTop:"0.5rem" }}>
+              <Link href="/contact/talk-to-an-engineer?from=walk-in-oven">
                 <span className="btn-glow">TALK TO AN ENGINEER <ArrowRight size={15}/></span>
               </Link>
             </div>

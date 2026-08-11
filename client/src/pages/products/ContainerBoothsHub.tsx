@@ -87,7 +87,7 @@ export default function ContainerBoothsHub() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <span className="section-label">Shipping Container Paint Booths</span>
-              <h2 className="section-heading">A Professional Spray Booth. Anywhere.</h2>
+              <h2 data-animation="slideRight" className="section-heading">A Professional Spray Booth. Anywhere.</h2>
               <p className="section-body">
                 PFS shipping container paint booths are standard ISO intermodal containers — 20-ft or 40-ft — fully converted into professional spray booths. The interior is outfitted with LED lighting, intake and exhaust filtration, an air supply plenum, explosion-proof electrical, and a control panel. The result is a complete, built with ETL/UL certified components spray booth that can be placed anywhere a container can be delivered.
               </p>
@@ -106,7 +106,7 @@ export default function ContainerBoothsHub() {
           {/* Configurations */}
           <div className="mb-10">
             <span className="section-label">Configurations</span>
-            <h2 className="section-heading">Available Sizes & Configurations</h2>
+            <h2 data-animation="slideLeft" className="section-heading">Available Sizes & Configurations</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
             {CONFIGURATIONS.map((config) => (

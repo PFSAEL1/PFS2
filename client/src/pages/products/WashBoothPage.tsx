@@ -155,7 +155,7 @@ export default function WashBoothPage() {
         }} />
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "3px", background: BLUE, zIndex: 3 }} />
         <div className="container" style={{ position: "relative", zIndex: 2, paddingTop: "8rem", paddingBottom: "4.5rem" }}>
-          <span data-animation="slideRight" style={{
+          <span style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.18em",
             color: "rgba(255,255,255,0.5)", textTransform: "uppercase", display: "block", marginBottom: "1rem",
@@ -244,7 +244,7 @@ export default function WashBoothPage() {
               <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.3rem" }}>STANDARD FEATURES</span>
               <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.3rem,2.5vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Every Unit Ships Fully Certified</h2>
             </div>
-            <button
+            <button data-animation="slideRight"
               onClick={() => setSpecsOpen(!specsOpen)}
               style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:specsOpen?BLUE:"transparent",border:`2px solid ${BLUE}`,color:specsOpen?"#fff":BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.5rem",cursor:"pointer",transition:"background 0.15s,color 0.15s",whiteSpace:"nowrap" }}
             >
@@ -304,8 +304,8 @@ export default function WashBoothPage() {
             <GalleryGrid images={GALLERY_IMGS} cardHeight="280px" className="grid grid-cols-1 sm:grid-cols-2 gap-3" />
           </div>
           <div data-animation="slideRight" className="text-center">
-            <Link data-animation="slideLeft" href="/contact/request-a-quote?from=wash-booth">
-              <span data-animation="slideRight" className="btn-glow">REQUEST A QUOTE <ArrowRight size={15}/></span>
+            <Link href="/contact/request-a-quote?from=wash-booth">
+              <span className="btn-glow">REQUEST A QUOTE <ArrowRight size={15}/></span>
             </Link>
           </div>
         </div>

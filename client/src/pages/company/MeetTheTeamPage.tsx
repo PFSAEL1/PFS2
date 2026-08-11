@@ -78,7 +78,7 @@ export default function MeetTheTeamPage() {
         <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "center" }}>
           <div className="container">
             <div style={{ maxWidth: 600 }}>
-              <p data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.8rem", fontWeight: 500, color: GOLD, letterSpacing: "0.2em", textTransform: "uppercase", marginBottom: "0.75rem" }}>PFS — Industrial Finishing Equipment</p>
+              <p style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.8rem", fontWeight: 500, color: GOLD, letterSpacing: "0.2em", textTransform: "uppercase", marginBottom: "0.75rem" }}>PFS — Industrial Finishing Equipment</p>
               <h1 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2.4rem, 5vw, 3.8rem)", fontWeight: 800, color: "#fff", lineHeight: 1.05, letterSpacing: "0.02em", textTransform: "uppercase", marginBottom: "1rem" }}>
                 Meet the Team
               </h1>
@@ -175,7 +175,7 @@ export default function MeetTheTeamPage() {
           </Link>
           <div style={{ width: 1, height: 40, background: "#e2e8f0" }} />
           <div>
-            <p style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.1rem", fontWeight: 700, color: BLUE, letterSpacing: "0.04em", textTransform: "uppercase", marginBottom: "0.5rem" }}>
+            <p data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.1rem", fontWeight: 700, color: BLUE, letterSpacing: "0.04em", textTransform: "uppercase", marginBottom: "0.5rem" }}>
               Ready to Work with Us?
             </p>
             <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.9rem", color: "#4a5568", lineHeight: 1.7, maxWidth: 400, marginBottom: "1.25rem" }}>

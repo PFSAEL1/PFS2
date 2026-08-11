@@ -220,7 +220,7 @@ export default function SemiDowndraftBoothPage() {
         <div className="container" style={{ position: "relative", zIndex: 2, paddingTop: "6rem", paddingBottom: "clamp(5rem, 12vw, 7rem)" }}>
 
           {/* Breadcrumb */}
-          <span data-animation="slideRight" style={{
+          <span style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "clamp(0.65rem, 2vw, 0.72rem)", fontWeight: 700, letterSpacing: "0.16em",
             color: "rgba(255,255,255,0.45)", textTransform: "uppercase", display: "block", marginBottom: "0.85rem",
@@ -294,7 +294,7 @@ export default function SemiDowndraftBoothPage() {
       <section style={{ background:"#f5f5f5", padding:"clamp(2.5rem, 6vw, 4rem) 0 clamp(2rem, 5vw, 3rem)" }}>
         <div className="container">
           <div style={{ display:"flex", flexDirection:"column", alignItems:"center", gap:"1.5rem" }}>
-            <div data-animation="slideRight" style={{ textAlign:"center" }}>
+            <div style={{ textAlign:"center" }}>
               <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.5rem" }}>FEATURED PRODUCT</span>
               <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.5rem,4vw,2.4rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.5rem" }}>PFS Orion Semi-Downdraft Spray Booth</h2>
               <div style={{ display:"flex",flexWrap:"wrap",gap:"0.5rem",justifyContent:"center",marginBottom:"0.75rem" }}>

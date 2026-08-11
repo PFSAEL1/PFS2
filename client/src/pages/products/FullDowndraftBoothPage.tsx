@@ -387,7 +387,7 @@ export default function FullDowndraftBoothPage() {
             </p>
           </div>
           <FullDowndraftAirflowSVG />
-          <div style={{ textAlign:"center",marginTop:"1.75rem" }}>
+          <div data-animation="slideRight" style={{ textAlign:"center",marginTop:"1.75rem" }}>
             <Link data-animation="slideLeft" href="/contact/request-a-quote?from=full-downdraft-booth">
               <span className="btn-glow">GET PRICING <ArrowRight size={15}/></span>
             </Link>

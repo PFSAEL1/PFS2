@@ -354,13 +354,13 @@ export default function HazLocServicesPage() {
             { label: "Component-Level Diagnostics", sub: "We find the root cause — not just the symptom" },
           ].map((item) => (
             <div key={item.label} style={{ borderLeft: `3px solid ${BLUE_LIGHT}`, paddingLeft: "1rem" }}>
-              <div style={{
+              <div data-animation="slideLeft" style={{
                 fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
                 fontSize: "0.95rem", fontWeight: 900,
                 color: "#fff", textTransform: "uppercase", letterSpacing: "0.03em",
                 marginBottom: "0.25rem",
               }}>{item.label}</div>
-              <div style={{
+              <div data-animation="slideRight" style={{
                 fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
                 fontSize: "0.78rem", color: "rgba(255,255,255,0.55)", lineHeight: 1.5,
               }}>{item.sub}</div>
@@ -392,7 +392,8 @@ export default function HazLocServicesPage() {
           </p>
         </div>
 
-        <div data-animation="fadeIn" style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+        <div
+          style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
           {SERVICES.map((svc) => {
             const isOpen = openService === svc.id;
             return (
@@ -519,7 +520,7 @@ export default function HazLocServicesPage() {
       </section>
 
       {/* ── PM PACKAGES BAND ─────────────────────────────────────────────── */}
-      <section data-animation="fadeIn" style={{
+      <section style={{
         background: BLUE, padding: "3.5rem 2rem",
         borderTop: "3px solid #111", borderBottom: "3px solid #111",
       }}>
@@ -556,7 +557,7 @@ export default function HazLocServicesPage() {
                 includes: ["Four visits per year", "Sensor bump test each visit", "Full calibration semi-annually", "Priority emergency dispatch"],
               },
             ].map((pkg) => (
-              <div key={pkg.tier} style={{
+              <div data-animation="fadeIn" key={pkg.tier} style={{
                 background: "rgba(255,255,255,0.08)",
                 border: "1px solid rgba(255,255,255,0.18)",
                 borderRadius: "2px", padding: "1.5rem",
@@ -567,7 +568,7 @@ export default function HazLocServicesPage() {
                   color: "#fff", textTransform: "uppercase",
                   letterSpacing: "0.04em", marginBottom: "0.6rem",
                 }}>{pkg.tier} PM</div>
-                <p data-animation="slideLeft" style={{
+                <p style={{
                   fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
                   fontSize: "0.82rem", color: "rgba(255,255,255,0.65)",
                   lineHeight: 1.6, marginBottom: "1rem",

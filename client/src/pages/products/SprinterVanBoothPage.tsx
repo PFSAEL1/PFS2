@@ -280,7 +280,7 @@ export default function SprinterVanBoothPage() {
         <div className="container" style={{ position:"relative", zIndex:2, padding:"5rem 0 4rem" }}>
           <nav style={{ marginBottom:"1.5rem" }}>
             <span style={{ fontFamily:"'Inter',sans-serif", fontSize:"0.7rem", color:"rgba(255,255,255,0.45)", letterSpacing:"0.08em", textTransform:"uppercase" }}>
-              <Link data-animation="slideLeft" href="/"><span style={{ cursor:"pointer", color:"rgba(255,255,255,0.45)" }}>HOME</span></Link>{" / "}
+              <Link href="/"><span style={{ cursor:"pointer", color:"rgba(255,255,255,0.45)" }}>HOME</span></Link>{" / "}
               <Link href="/products"><span style={{ cursor:"pointer", color:"rgba(255,255,255,0.45)" }}>PRODUCTS</span></Link>{" / "}
               <Link href="/products/paint-booths"><span style={{ cursor:"pointer", color:"rgba(255,255,255,0.45)" }}>PAINT BOOTHS</span></Link>{" / "}
               <Link href="/products/paint-booths/enclosed"><span style={{ cursor:"pointer", color:"rgba(255,255,255,0.45)" }}>ENCLOSED</span></Link>{" / "}
@@ -321,7 +321,7 @@ export default function SprinterVanBoothPage() {
               <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontSize:"0.7rem", fontWeight:700, letterSpacing:"0.14em", color:BLUE, textTransform:"uppercase", display:"block", marginBottom:"0.6rem" }}>PFS SPRINTER VAN SERIES</span>
               <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif", fontSize:"clamp(1.6rem,3vw,2.4rem)", fontWeight:800, color:"#111", letterSpacing:"-0.01em", marginBottom:"0.5rem" }}>Built Tall. Built Right. ETL Listed.</h2>
               <span style={{ display:"inline-flex", alignItems:"center", gap:"0.4rem", background:BLUE, color:"#fff", fontFamily:"'Barlow Condensed',sans-serif", fontSize:"0.68rem", fontWeight:800, letterSpacing:"0.16em", textTransform:"uppercase", padding:"0.28rem 0.85rem", marginBottom:"0.75rem" }}>ORION · HELIOS · ZENITH — YOUR CHOICE OF AIRFLOW</span>
-              <p style={{ fontFamily:"'Inter',sans-serif", fontSize:"0.95rem", color:"#555", maxWidth:"540px", margin:"0 auto", lineHeight:1.7 }}>
+              <p data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif", fontSize:"0.95rem", color:"#555", maxWidth:"540px", margin:"0 auto", lineHeight:1.7 }}>
                 Standard enclosed booths top out at 9–10 ft. PFS Sprinter Van booths are custom-built to 11–12 ft interior height — enough clearance for Sprinter vans, Transit high-roofs, and tall commercial vehicles. ETL & ETL-C listed, UL 508A controls, NFPA 33 compliant. We ship nationally.
               </p>
             </div>
@@ -364,7 +364,7 @@ export default function SprinterVanBoothPage() {
               { key:"side",      label:"Side Downdraft (Helios)", sub:"Ceiling intake, side-wall exhaust — no pit" },
               { key:"full",      label:"Full Downdraft (Zenith)", sub:"Vertical ceiling-to-floor — concrete pit required" },
             ] as const).map(tab => (
-              <button
+              <button 
                 key={tab.key}
                 onClick={() => setActiveFlow(tab.key)}
                 style={{
@@ -422,8 +422,8 @@ export default function SprinterVanBoothPage() {
             )}
           </div>
 
-          <div style={{ textAlign:"center", marginTop:"2rem" }}>
-            <Link data-animation="slideLeft" href="/contact/request-a-quote?from=sprinter-van-booth">
+          <div data-animation="slideRight" style={{ textAlign:"center", marginTop:"2rem" }}>
+            <Link href="/contact/request-a-quote?from=sprinter-van-booth">
               <span className="btn-glow">GET PRICING <ArrowRight size={15}/></span>
             </Link>
           </div>
@@ -438,7 +438,7 @@ export default function SprinterVanBoothPage() {
               <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontSize:"0.7rem", fontWeight:700, letterSpacing:"0.14em", color:BLUE, textTransform:"uppercase", display:"block", marginBottom:"0.3rem" }}>STANDARD FEATURES</span>
               <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif", fontSize:"clamp(1.3rem,2.5vw,1.9rem)", fontWeight:800, color:"#111", letterSpacing:"-0.01em", margin:0 }}>Every Unit Ships Fully Certified</h2>
             </div>
-            <button
+            <button data-animation="slideRight"
               onClick={() => setSpecsOpen(v => !v)}
               style={{ display:"inline-flex", alignItems:"center", gap:"0.5rem", background:specsOpen?BLUE:"transparent", border:`2px solid ${BLUE}`, color:specsOpen?"#fff":BLUE, fontFamily:"'Barlow Condensed',sans-serif", fontSize:"0.82rem", fontWeight:800, letterSpacing:"0.1em", textTransform:"uppercase", padding:"0.75rem 1.5rem", cursor:"pointer", transition:"background 0.15s,color 0.15s", whiteSpace:"nowrap" }}
             >
@@ -470,7 +470,7 @@ export default function SprinterVanBoothPage() {
               <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontSize:"0.7rem", fontWeight:700, letterSpacing:"0.14em", color:BLUE, textTransform:"uppercase", display:"block", marginBottom:"0.3rem" }}>AVAILABLE SIZES</span>
               <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif", fontSize:"clamp(1.3rem,2.5vw,1.9rem)", fontWeight:800, color:"#111", letterSpacing:"-0.01em", margin:0 }}>Orion, Helios & Zenith — All Available in Van Height</h2>
             </div>
-            <button
+            <button data-animation="slideRight"
               onClick={() => setSizesOpen(v => !v)}
               style={{ display:"inline-flex", alignItems:"center", gap:"0.5rem", background:sizesOpen?BLUE:"transparent", border:`2px solid ${BLUE}`, color:sizesOpen?"#fff":BLUE, fontFamily:"'Barlow Condensed',sans-serif", fontSize:"0.82rem", fontWeight:800, letterSpacing:"0.1em", textTransform:"uppercase", padding:"0.75rem 1.5rem", cursor:"pointer", transition:"background 0.15s,color 0.15s", whiteSpace:"nowrap" }}
             >
@@ -540,17 +540,17 @@ export default function SprinterVanBoothPage() {
       {/* ── CTA BAND ── */}
       <section style={{ background:BLUE, padding:"3.5rem 0" }}>
         <div className="container" style={{ textAlign:"center" }}>
-          <h2 style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif", fontSize:"clamp(1.6rem,3.5vw,2.6rem)", fontWeight:900, color:"#fff", letterSpacing:"-0.01em", marginBottom:"0.75rem", textTransform:"uppercase" }}>
+          <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif", fontSize:"clamp(1.6rem,3.5vw,2.6rem)", fontWeight:900, color:"#fff", letterSpacing:"-0.01em", marginBottom:"0.75rem", textTransform:"uppercase" }}>
             Ready to Spec Your Sprinter Van Booth?
           </h2>
-          <p style={{ fontFamily:"'Inter',sans-serif", fontSize:"0.95rem", color:"rgba(255,255,255,0.75)", maxWidth:"480px", margin:"0 auto 2rem", lineHeight:1.7 }}>
+          <p data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif", fontSize:"0.95rem", color:"rgba(255,255,255,0.75)", maxWidth:"480px", margin:"0 auto 2rem", lineHeight:1.7 }}>
             Tell us your vehicle height, facility dimensions, and airflow preference. We'll spec the right booth and ship it nationally.
           </p>
           <div style={{ display:"flex", flexWrap:"wrap", gap:"1rem", justifyContent:"center" }}>
             <Link data-animation="slideLeft" href="/contact/request-a-quote?from=sprinter-van-booth">
               <span style={{ display:"inline-flex", alignItems:"center", gap:"0.5rem", background:"#fff", color:BLUE, fontFamily:"'Barlow Condensed',sans-serif", fontSize:"0.9rem", fontWeight:800, letterSpacing:"0.1em", textTransform:"uppercase", padding:"1rem 2.5rem", cursor:"pointer" }}>REQUEST A QUOTE <ArrowRight size={14}/></span>
             </Link>
-            <a href="tel:8885457715" style={{ display:"inline-flex", alignItems:"center", gap:"0.5rem", background:"transparent", color:"#fff", border:"2px solid rgba(255,255,255,0.5)", fontFamily:"'Barlow Condensed',sans-serif", fontSize:"0.9rem", fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", padding:"1rem 2.5rem" }}>
+            <a data-animation="slideRight" href="tel:8885457715" style={{ display:"inline-flex", alignItems:"center", gap:"0.5rem", background:"transparent", color:"#fff", border:"2px solid rgba(255,255,255,0.5)", fontFamily:"'Barlow Condensed',sans-serif", fontSize:"0.9rem", fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", padding:"1rem 2.5rem" }}>
               CALL (888) 545-7715
             </a>
           </div>

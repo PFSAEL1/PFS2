@@ -177,7 +177,7 @@ export default function MixingRoomPage() {
           <span style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"0.72rem",fontWeight:700,letterSpacing:"0.18em",color:"rgba(255,255,255,0.5)",textTransform:"uppercase",display:"block",marginBottom:"1rem" }}>
             PREP &amp; SUPPORT — MIXING ROOMS
           </span>
-          <h1 style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"clamp(2.6rem,7vw,5rem)",fontWeight:800,color:"#fff",lineHeight:1.0,letterSpacing:"-0.01em",marginBottom:"1rem",maxWidth:"680px" }}>
+          <h1 data-animation="slideLeft" style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"clamp(2.6rem,7vw,5rem)",fontWeight:800,color:"#fff",lineHeight:1.0,letterSpacing:"-0.01em",marginBottom:"1rem",maxWidth:"680px" }}>
             Paint Mixing<br />
             Rooms Built<br />
             to Code
@@ -185,14 +185,14 @@ export default function MixingRoomPage() {
           <span style={{ display:"inline-flex",alignItems:"center",gap:"0.4rem",background:"rgba(27,58,107,0.75)",border:"1px solid rgba(107,163,224,0.4)",color:"#6fa3e0",borderRadius:"2px",fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",textTransform:"uppercase",padding:"0.3rem 0.75rem",marginBottom:"1.25rem" }}>
             PFS STANDARD SERIES
           </span>
-          <p style={{ fontFamily:"'Archivo Narrow','Inter',sans-serif",fontSize:"clamp(0.95rem,1.8vw,1.1rem)",color:"rgba(255,255,255,0.82)",lineHeight:1.7,marginBottom:"2.5rem",maxWidth:"500px" }}>
+          <p data-animation="slideLeft" style={{ fontFamily:"'Archivo Narrow','Inter',sans-serif",fontSize:"clamp(0.95rem,1.8vw,1.1rem)",color:"rgba(255,255,255,0.82)",lineHeight:1.7,marginBottom:"2.5rem",maxWidth:"500px" }}>
             ETL listed. UL 508A certified. NFPA 33 compliant. Dedicated mixing rooms for safe paint preparation adjacent to your spray booth. Ships nationally.
           </p>
           <div style={{ display:"flex",flexWrap:"wrap",gap:"1rem" }}>
             <Link data-animation="slideLeft" href="/contact/request-a-quote?from=mixing-room">
               <span className="btn-glow" style={{ width:"100%",maxWidth:"320px",justifyContent:"center" }}>GET PRICING <ArrowRight size={16} /></span>
             </Link>
-            <a href="tel:8885457715" style={{ width:"100%",maxWidth:"320px" }}>
+            <a data-animation="slideRight" href="tel:8885457715" style={{ width:"100%",maxWidth:"320px" }}>
               <span className="btn-glow-white" style={{ background:"transparent",color:"#fff",width:"100%",maxWidth:"320px",justifyContent:"center" }}>CALL (888) 545-7715</span>
             </a>
           </div>
@@ -210,15 +210,15 @@ export default function MixingRoomPage() {
               <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.6rem" }}>FEATURED UNIT</span>
               <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.6rem,3vw,2.4rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.5rem" }}>PFS Standard Paint Mix Room</h2>
               <span style={{ display:"inline-flex",alignItems:"center",gap:"0.4rem",background:BLUE,color:"#fff",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.68rem",fontWeight:800,letterSpacing:"0.16em",textTransform:"uppercase",padding:"0.28rem 0.85rem",marginBottom:"0.75rem" }}>PFS STANDARD SERIES</span>
-              <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.95rem",color:"#555",maxWidth:"520px",margin:"0 auto",lineHeight:1.7 }}>
+              <p data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.95rem",color:"#555",maxWidth:"520px",margin:"0 auto",lineHeight:1.7 }}>
                 ETL listed. UL 508A controls. Built to NFPA 33 standards. Standard sizes 9'W × 8'H × 6–15'D. Custom sizes available.
               </p>
             </div>
             <div style={{ width:"100%",maxWidth:"900px",overflow:"hidden",borderRadius:"2px" }}>
-              <img data-animation="slideLeft" src={FEATURED_IMG} alt="PFS Standard Paint Mix Room" style={{ width:"100%",height:"auto",display:"block",objectFit:"cover",objectPosition:"center" }} />
+              <img src={FEATURED_IMG} alt="PFS Standard Paint Mix Room" style={{ width:"100%",height:"auto",display:"block",objectFit:"cover",objectPosition:"center" }} />
             </div>
             <div style={{ display:"flex",gap:"1rem",flexWrap:"wrap",justifyContent:"center" }}>
-              <Link data-animation="slideLeft" href="/contact/request-a-quote?from=mixing-room">
+              <Link data-animation="slideRight" href="/contact/request-a-quote?from=mixing-room">
                 <span className="btn-glow">REQUEST A QUOTE <ArrowRight size={15}/></span>
               </Link>
             </div>
@@ -236,7 +236,7 @@ export default function MixingRoomPage() {
               <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.3rem" }}>STANDARD FEATURES</span>
               <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.3rem,2.5vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Every Unit Ships Fully Certified</h2>
             </div>
-            <button
+            <button data-animation="slideRight"
               onClick={() => setSpecsOpen(!specsOpen)}
               style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:specsOpen?BLUE:"transparent",border:`2px solid ${BLUE}`,color:specsOpen?"#fff":BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.5rem",cursor:"pointer",transition:"background 0.15s,color 0.15s",whiteSpace:"nowrap" }}
             >
@@ -292,7 +292,7 @@ export default function MixingRoomPage() {
               <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.3rem" }}>STANDARD SIZES</span>
               <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.3rem,2.5vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Typical Sizes — Custom Sizes Available</h2>
             </div>
-            <button
+            <button data-animation="slideRight"
               onClick={() => setSizesOpen(!sizesOpen)}
               style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:sizesOpen?BLUE:"transparent",border:`2px solid ${BLUE}`,color:sizesOpen?"#fff":BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.5rem",cursor:"pointer",transition:"background 0.15s,color 0.15s",whiteSpace:"nowrap" }}
             >
@@ -430,8 +430,8 @@ export default function MixingRoomPage() {
       {/* BOTTOM CTA */}
       <section style={{ background:"#f5f5f5",padding:"4rem 0",borderTop:"1px solid #e5e7eb" }}>
         <div className="container" style={{ textAlign:"center" }}>
-          <h2 style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.5rem,3vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.75rem" }}>Questions? Talk to an Engineer.</h2>
-          <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.95rem",color:"#555",marginBottom:"2rem",maxWidth:"460px",margin:"0 auto 2rem" }}>Our team has configured hundreds of mixing rooms for automotive, industrial, and production finishing shops.</p>
+          <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.5rem,3vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.75rem" }}>Questions? Talk to an Engineer.</h2>
+          <p  data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.95rem",color:"#555",marginBottom:"2rem",maxWidth:"460px",margin:"0 auto 2rem" }}>Our team has configured hundreds of mixing rooms for automotive, industrial, and production finishing shops.</p>
           <div style={{ display:"flex",gap:"1rem",justifyContent:"center",flexWrap:"wrap" }}>
             <Link data-animation="slideLeft" href="/contact/request-a-quote?from=mixing-room">
               <span className="btn-glow">GET PRICING <ArrowRight size={16}/></span>

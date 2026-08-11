@@ -249,7 +249,7 @@ export default function AircraftBoothPage() {
         <div className="container" style={{ position: "relative", zIndex: 2, paddingTop: "8rem", paddingBottom: "4.5rem" }}>
           {/* Breadcrumb */}
           <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", marginBottom: "1rem", fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.7rem", color: "rgba(255,255,255,0.4)", letterSpacing: "0.03em" }}>
-            <Link data-animation="slideLeft" href="/products/paint-booths"><span style={{ cursor: "pointer" }}>Paint Booths</span></Link>
+            <Link href="/products/paint-booths"><span style={{ cursor: "pointer" }}>Paint Booths</span></Link>
             <span style={{ color: "rgba(255,255,255,0.2)" }}>/</span>
             <span style={{ color: "rgba(255,255,255,0.7)" }}>Aerospace</span>
           </div>
@@ -390,8 +390,8 @@ export default function AircraftBoothPage() {
           <div className="mb-8">
             <GalleryGrid images={GALLERY_IMGS} cardHeight="clamp(260px,35vw,440px)" className="grid md:grid-cols-2 gap-3" />
           </div>
-          <div className="text-center">
-            <Link data-animation="slideLeft" href="/contact/request-a-quote?from=aircraft-booth">
+          <div data-animation="slideRight" className="text-center">
+            <Link href="/contact/request-a-quote?from=aircraft-booth">
               <span className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
             </Link>
           </div>
@@ -418,13 +418,13 @@ export default function AircraftBoothPage() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-5 mb-5">
+          <div className="grid md:grid-cols-3 gap-5 mb-5" data-animation="fadeIn">
             {FEATURES_VISIBLE.map((f) => (
               <div data-animation="fadeIn" key={f.title} style={{ background: "#fff", padding: "1.75rem", borderTop: `3px solid ${BLUE}`, display: "flex", flexDirection: "column" }}>
                 <div style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "2rem", fontWeight: 900, color: `rgba(27,58,107,0.12)`, lineHeight: 1, marginBottom: "0.5rem" }}>{f.num}</div>
                 <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.05rem", fontWeight: 700, color: "#111", marginBottom: "0.6rem" }}>{f.title}</h3>
                 <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.84rem", color: "#555", lineHeight: 1.75, marginBottom: "1rem", flex: 1 }}>{f.body}</p>
-                <Link data-animation="slideLeft" href="/contact/request-a-quote?from=aircraft-booth">
+                <Link href="/contact/request-a-quote?from=aircraft-booth">
                   <span style={{ display: "inline-flex", alignItems: "center", gap: "0.3rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.78rem", fontWeight: 700, color: BLUE, letterSpacing: "0.08em", textTransform: "uppercase", cursor: "pointer" }}>
                     LEARN MORE <ArrowRight size={12} />
                   </span>
@@ -471,7 +471,7 @@ export default function AircraftBoothPage() {
           )}
 
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <button
+            <button data-animation="slideLeft"
               onClick={() => setFeaturesOpen(!featuresOpen)}
               style={{
                 display: "inline-flex", alignItems: "center", gap: "0.4rem",
@@ -485,7 +485,7 @@ export default function AircraftBoothPage() {
                 ? <><ChevronUp size={14} /> SHOW LESS</>
                 : <><ChevronDown size={14} /> SEE ALL SPECIFICATIONS &amp; BOOTH TYPES</>}
             </button>
-            <Link data-animation="slideLeft" href="/contact/request-a-quote?from=aircraft-booth">
+            <Link data-animation="slideRight" href="/contact/request-a-quote?from=aircraft-booth">
               <span className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
             </Link>
           </div>

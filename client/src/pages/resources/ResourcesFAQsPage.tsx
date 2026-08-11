@@ -178,7 +178,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
           textAlign: "left",
         }}
       >
-        <span data-animation="slideRight"
+        <span
           style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "0.92rem",

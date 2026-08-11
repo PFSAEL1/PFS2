@@ -45,7 +45,7 @@ export default function IntegrationHub() {
             <div>
               <span data-animation="slideRight" className="section-label">Complete Finishing Lines</span>
               <h2 data-animation="slideLeft" className="section-heading-lg">One Source for Your Entire Finishing System</h2>
-              <p data-animation="slideRight" className="section-body mb-6">
+              <p className="section-body mb-6">
                 Most finishing equipment suppliers sell individual pieces of equipment. PFS is different — we design, engineer, manufacture, and install complete finishing systems, from the first pretreatment stage through the final curing oven.
               </p>
               <p className="section-body mb-8">
@@ -66,7 +66,7 @@ export default function IntegrationHub() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {SOLUTIONS.map((sol) => (
-              <Link key={sol.slug} href={`/integration-automation/${sol.slug}`}>
+              <Link data-animation="fadeIn" key={sol.slug} href={`/integration-automation/${sol.slug}`}>
                 <div className="product-card group">
                   <div className="overflow-hidden" style={{ height: "220px" }}>
                     <img src={sol.img} alt={sol.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
@@ -76,7 +76,7 @@ export default function IntegrationHub() {
                       <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.95rem", fontWeight: 600, color: "#1a1a1a" }}>{sol.label}</h3>
                       <ChevronRight size={16} style={{ color: "#FFFFFF" }} />
                     </div>
-                    <p data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#666", lineHeight: 1.6 }}>{sol.desc}</p>
+                    <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#666", lineHeight: 1.6 }}>{sol.desc}</p>
                   </div>
                 </div>
               </Link>

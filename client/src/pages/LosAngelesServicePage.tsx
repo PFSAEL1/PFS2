@@ -239,25 +239,25 @@ export default function LosAngelesServicePage() {
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
             <a data-animation="slideLeft"
               href="tel:8885457715"
-              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#1e3a6e", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "2px solid #1e3a6e", transition: "all 0.2s" }}
+              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#1e3a6e", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "2px solid #1e3a6e"}}
               onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#2a4f96"; el.style.boxShadow = "0 0 18px rgba(30,58,110,0.7)"; }}
               onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#1e3a6e"; el.style.boxShadow = "none"; }}
             >
               <Phone size={14} /> CALL (888) 545-7715
             </a>
-            <Link data-animation="slideLeft"
+            <Link
               href="/contact/service-request"
-              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "2px solid rgba(255,255,255,0.5)", transition: "all 0.2s" }}
+              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "2px solid rgba(255,255,255,0.5)"}}
               onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "rgba(255,255,255,0.12)"; el.style.boxShadow = "0 0 18px rgba(255,255,255,0.2)"; }}
               onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "transparent"; el.style.boxShadow = "none"; }}
             >
               REQUEST SERVICE <ArrowRight size={14} />
             </Link>
-            <a
+            <a data-animation="slideRight"
               href="https://pfsfilters.com"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(255,255,255,0.12)", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "2px solid rgba(255,255,255,0.35)", transition: "all 0.2s" }}
+              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(255,255,255,0.12)", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "2px solid rgba(255,255,255,0.35)"}}
               onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "rgba(255,255,255,0.22)"; el.style.boxShadow = "0 0 18px rgba(255,255,255,0.18)"; }}
               onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "rgba(255,255,255,0.12)"; el.style.boxShadow = "none"; }}
             >
@@ -271,7 +271,7 @@ export default function LosAngelesServicePage() {
       <section style={{ background: "#1e3a6e", padding: "20px clamp(1.5rem,5vw,5rem)" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", gap: 40, flexWrap: "wrap", justifyContent: "space-between", alignItems: "center" }}>
           {WHY_PFS.map(item => (
-            <div data-animation="slideLeft" key={item.stat} style={{ textAlign: "center" }}>
+            <div key={item.stat} style={{ textAlign: "center" }}>
               <div data-animation="slideLeft" style={{ color: "#fff", fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 900, fontFamily: "'Chakra Petch', sans-serif" }}>{item.stat}</div>
               <div data-animation="slideRight" style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" }}>{item.label}</div>
             </div>
@@ -299,17 +299,17 @@ export default function LosAngelesServicePage() {
               PFS technicians are trained on South Coast AQMD rules and provide compliant service, inspection documentation, and written reports suitable for AQMD permit compliance, CARB recordkeeping, and insurance documentation. We help LA County facilities stay compliant and avoid costly violations.
             </p>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-              <Link
+              <Link data-animation="slideLeft"
                 href="/contact/service-request"
-                style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#1e3a6e", color: "#fff", padding: "13px 24px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", transition: "all 0.2s" }}
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#1e3a6e", color: "#fff", padding: "13px 24px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none"}}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#2a4f96"; el.style.boxShadow = "0 0 18px rgba(30,58,110,0.6)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#1e3a6e"; el.style.boxShadow = "none"; }}
               >
                 SCHEDULE INSPECTION <ArrowRight size={13} />
               </Link>
-              <a
+              <a data-animation="slideRight"
                 href="tel:8885457715"
-                style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "#1e3a6e", padding: "13px 24px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "1px solid #1e3a6e", transition: "all 0.2s" }}
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "#1e3a6e", padding: "13px 24px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "1px solid #1e3a6e"}}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.boxShadow = "0 0 14px rgba(30,58,110,0.35)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.boxShadow = "none"; }}
               >
@@ -407,17 +407,17 @@ export default function LosAngelesServicePage() {
             </h2>
           </div>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-            <a
+            <a data-animation="slideLeft"
               href="tel:8885457715"
-              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", color: "#0d1b2e", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", transition: "all 0.2s" }}
+              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", color: "#0d1b2e", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none"}}
               onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#f0f4ff"; el.style.boxShadow = "0 0 18px rgba(255,255,255,0.4)"; }}
               onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#fff"; el.style.boxShadow = "none"; }}
             >
               <Phone size={14} /> CALL NOW (888) 545-7715
             </a>
-            <Link
+            <Link data-animation="slideRight"
               href="/contact/service-request"
-              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "1px solid rgba(255,255,255,0.4)", transition: "all 0.2s" }}
+              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "1px solid rgba(255,255,255,0.4)"}}
               onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "rgba(255,255,255,0.08)"; el.style.boxShadow = "0 0 16px rgba(255,255,255,0.15)"; }}
               onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "transparent"; el.style.boxShadow = "none"; }}
             >
@@ -506,9 +506,9 @@ export default function LosAngelesServicePage() {
               Need service in Northern California, the Bay Area, or Sacramento?
             </p>
           </div>
-          <Link
+          <Link data-animation="slideRight"
             href="/spray-booth-service-california"
-            style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "#1e3a6e", padding: "12px 22px", fontSize: "0.78rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "1px solid #1e3a6e", transition: "all 0.2s" }}
+            style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "#1e3a6e", padding: "12px 22px", fontSize: "0.78rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "1px solid #1e3a6e"}}
             onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.boxShadow = "0 0 14px rgba(30,58,110,0.3)"; }}
             onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.boxShadow = "none"; }}
           >
@@ -527,9 +527,9 @@ export default function LosAngelesServicePage() {
           Call us directly or submit a service request online. We'll confirm your appointment and dispatch a certified PFS technician to your Los Angeles County facility.
         </p>
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
-          <a
+          <a data-animation="slideLeft"
             href="tel:8885457715"
-            style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", color: "#0d1b2e", padding: "16px 32px", fontSize: "0.85rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", transition: "all 0.2s" }}
+            style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", color: "#0d1b2e", padding: "16px 32px", fontSize: "0.85rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none"}}
             onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#f0f4ff"; el.style.boxShadow = "0 0 20px rgba(255,255,255,0.4)"; }}
             onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#fff"; el.style.boxShadow = "none"; }}
           >
@@ -537,15 +537,15 @@ export default function LosAngelesServicePage() {
           </a>
           <Link
             href="/contact/service-request"
-            style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "#fff", padding: "16px 32px", fontSize: "0.85rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "2px solid rgba(255,255,255,0.6)", transition: "all 0.2s" }}
+            style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "#fff", padding: "16px 32px", fontSize: "0.85rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "2px solid rgba(255,255,255,0.6)"}}
             onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "rgba(255,255,255,0.1)"; el.style.boxShadow = "0 0 20px rgba(255,255,255,0.2)"; }}
             onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "transparent"; el.style.boxShadow = "none"; }}
           >
             SUBMIT SERVICE REQUEST <ArrowRight size={15} />
           </Link>
-          <Link
+          <Link data-animation="slideRight"
             href="/spray-booth-service-california"
-            style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "rgba(255,255,255,0.7)", padding: "16px 24px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "1px solid rgba(255,255,255,0.3)", transition: "all 0.2s" }}
+            style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "rgba(255,255,255,0.7)", padding: "16px 24px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "1px solid rgba(255,255,255,0.3)"}}
             onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "rgba(255,255,255,0.08)"; el.style.boxShadow = "0 0 16px rgba(255,255,255,0.15)"; }}
             onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "transparent"; el.style.boxShadow = "none"; }}
           >

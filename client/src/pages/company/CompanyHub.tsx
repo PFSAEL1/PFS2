@@ -118,7 +118,7 @@ export default function CompanyHub() {
                 Founded 2012. In-house manufacturing since 2020. Shipping across the USA and Canada.
               </p>
               <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-                <Link data-animation="slideRight" href="/contact">
+                <Link data-animation="slideLeft" href="/contact">
                   <button style={{ background: GOLD, color: "#fff", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.88rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", padding: "0.8rem 1.75rem", border: "none", cursor: "pointer", display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
                     Get a Quote <ArrowRight size={15} />
                   </button>
@@ -139,7 +139,7 @@ export default function CompanyHub() {
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "0.5rem" }}>
             {STATS.map((s) => (
-              <div data-animation="slideRight" key={s.label} style={{ textAlign: "center", padding: "0.4rem 0.25rem" }}>
+              <div key={s.label} style={{ textAlign: "center", padding: "0.4rem 0.25rem" }}>
                 <div data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.3rem, 3vw, 2rem)", fontWeight: 700, color: GOLD, lineHeight: 1.1 }}>{s.num}</div>
                 <div data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "clamp(0.6rem, 1.2vw, 0.72rem)", color: "rgba(255,255,255,0.72)", textTransform: "uppercase", letterSpacing: "0.08em", marginTop: "0.25rem" }}>{s.label}</div>
               </div>
@@ -245,8 +245,8 @@ export default function CompanyHub() {
           <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.9rem", color: "#4a5568", lineHeight: 1.75, maxWidth: 480, margin: "0 auto 1.75rem" }}>
             Engineers, fabricators, project managers, and installers who take pride in every unit that leaves our floor.
           </p>
-          <Link data-animation="slideRight" href="/company/team">
-            <span data-animation="slideLeft" className="btn-glow">Meet the Team <ArrowRight size={15} /></span>
+          <Link href="/company/team">
+            <span data-animation="slideRight" className="btn-glow">Meet the Team <ArrowRight size={15} /></span>
           </Link>
         </div>
       </section>
@@ -269,7 +269,7 @@ export default function CompanyHub() {
             </div>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.25rem", marginBottom: "2.5rem" }}>
+          <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.25rem", marginBottom: "2.5rem" }}>
             {[
               {
                 name: "Stephanie Walbourne",
@@ -312,7 +312,7 @@ export default function CompanyHub() {
             ))}
           </div>
 
-          <div data-animation="slideLeft" style={{ textAlign: "center" }}>
+          <div data-animation="slideRight" style={{ textAlign: "center" }}>
             <a
               href="https://www.google.com/maps/place/Platinum+Finishing+Systems+-+Spray+Booths/@38.5107813,-122.790046,17z/data=!3m1!4b1!4m6!3m5!1s0x80843e9a96d2e3ab:0xf9cb90a9f3dee95f"
               target="_blank"
@@ -336,7 +336,7 @@ export default function CompanyHub() {
             Tell us your application, your space, and your timeline. We'll come back with a complete system recommendation and pricing — fast.
           </p>
           <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link data-animation="slideRight" href="/contact">
+            <Link data-animation="slideLeft" href="/contact">
               <button style={{ background: GOLD, color: "#fff", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.88rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", padding: "0.85rem 2rem", border: "none", cursor: "pointer", display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
                 Get a Quote <ArrowRight size={15} />
               </button>

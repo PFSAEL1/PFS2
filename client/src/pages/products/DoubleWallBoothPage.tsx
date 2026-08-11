@@ -290,7 +290,7 @@ export default function DoubleWallBoothPage() {
         <div style={{ position:"absolute",inset:0,background:"linear-gradient(to top,rgba(5,5,5,0.96) 0%,rgba(5,5,5,0.70) 35%,rgba(5,5,5,0.30) 70%,rgba(5,5,5,0.10) 100%)" }}/>
         <div style={{ position:"absolute",bottom:0,left:0,right:0,height:"3px",background:BLUE,zIndex:3 }}/>
         <div className="container" style={{ position:"relative",zIndex:2,paddingTop:"8rem",paddingBottom:"3.5rem" }}>
-          <span data-animation="slideRight" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"0.72rem",fontWeight:700,letterSpacing:"0.18em",color:"rgba(255,255,255,0.5)",textTransform:"uppercase",display:"block",marginBottom:"1rem" }}>PAINT BOOTHS — ENCLOSED</span>
+          <span style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"0.72rem",fontWeight:700,letterSpacing:"0.18em",color:"rgba(255,255,255,0.5)",textTransform:"uppercase",display:"block",marginBottom:"1rem" }}>PAINT BOOTHS — ENCLOSED</span>
           <h1 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(2.6rem,7vw,5rem)",fontWeight:800,color:"#fff",lineHeight:1.0,letterSpacing:"-0.01em",marginBottom:"1rem",maxWidth:"680px" }}>Double-Wall<br/>Paint Booths<br/>Built to Last</h1>
           <span style={{ display:"inline-flex",alignItems:"center",gap:"0.4rem",background:"rgba(27,58,107,0.75)",border:"1px solid rgba(107,163,224,0.4)",color:"#6fa3e0",borderRadius:"2px",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",textTransform:"uppercase",padding:"0.3rem 0.75rem",marginBottom:"1.25rem" }}>PFS ZENITH SERIES</span>
           <p data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif",fontSize:"clamp(0.95rem,1.8vw,1.1rem)",color:"rgba(255,255,255,0.82)",lineHeight:1.7,marginBottom:"2.5rem",maxWidth:"500px" }}>ETL listed. UL 508A certified. Insulated double-wall panel construction — available in all four airflow configurations. Ships nationally.</p>
@@ -368,8 +368,8 @@ export default function DoubleWallBoothPage() {
           {activeFlow==="semi"      && <SemiDowndraftSVG/>}
           {activeFlow==="side"      && <SideDowndraftSVG/>}
           {activeFlow==="full"      && <FullDowndraftSVG/>}
-          <div style={{ textAlign:"center",marginTop:"2rem" }}>
-            <Link data-animation="slideLeft" href="/contact/request-a-quote?from=double-wall-booth">
+          <div data-animation="slideRight" style={{ textAlign:"center",marginTop:"2rem" }}>
+            <Link href="/contact/request-a-quote?from=double-wall-booth">
               <span className="btn-glow">GET PRICING <ArrowRight size={15}/></span>
             </Link>
           </div>
@@ -384,7 +384,7 @@ export default function DoubleWallBoothPage() {
               <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.3rem" }}>STANDARD FEATURES</span>
               <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.3rem,2.5vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Every Unit Ships Fully Certified</h2>
             </div>
-            <button onClick={() => setSpecsOpen(!specsOpen)} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:specsOpen?BLUE:"transparent",border:`2px solid ${BLUE}`,color:specsOpen?"#fff":BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.5rem",cursor:"pointer",transition:"background 0.15s,color 0.15s",whiteSpace:"nowrap" }}>
+            <button data-animation="slideRight" onClick={() => setSpecsOpen(!specsOpen)} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:specsOpen?BLUE:"transparent",border:`2px solid ${BLUE}`,color:specsOpen?"#fff":BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.5rem",cursor:"pointer",transition:"background 0.15s,color 0.15s",whiteSpace:"nowrap" }}>
               {specsOpen?<><ChevronUp size={15}/> HIDE SPECS</>:<><ChevronDown size={15}/> SEE STANDARD SPECS</>}
             </button>
           </div>
@@ -430,7 +430,7 @@ export default function DoubleWallBoothPage() {
               <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.3rem" }}>STANDARD SIZES</span>
               <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.3rem,2.5vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>14' Wide — Choose Your Height</h2>
             </div>
-            <button onClick={() => setSizesOpen(!sizesOpen)} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:sizesOpen?BLUE:"transparent",border:`2px solid ${BLUE}`,color:sizesOpen?"#fff":BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.5rem",cursor:"pointer",transition:"background 0.15s,color 0.15s",whiteSpace:"nowrap" }}>
+            <button data-animation="slideRight" onClick={() => setSizesOpen(!sizesOpen)} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:sizesOpen?BLUE:"transparent",border:`2px solid ${BLUE}`,color:sizesOpen?"#fff":BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.5rem",cursor:"pointer",transition:"background 0.15s,color 0.15s",whiteSpace:"nowrap" }}>
               {sizesOpen?<><ChevronUp size={15}/> HIDE SIZES</>:<><ChevronDown size={15}/> SEE STANDARD SIZES</>}
             </button>
           </div>
@@ -486,8 +486,8 @@ export default function DoubleWallBoothPage() {
           <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.18em",color:"rgba(255,255,255,0.45)",textTransform:"uppercase",display:"block",marginBottom:"0.5rem" }}>ADD-ON</span>
           <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.5rem,3vw,2.2rem)",fontWeight:800,color:"#fff",letterSpacing:"-0.01em",marginBottom:"0.75rem" }}>Heated Options Available</h2>
           <p data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.9rem",color:"rgba(255,255,255,0.7)",maxWidth:"480px",margin:"0 auto 1.75rem",lineHeight:1.7 }}>The double-wall insulated panel construction makes the Zenith the ideal platform for heated configurations. Add a direct-fired or indirect-fired heat system for accelerated cure times up to 180°F. Blanket intake filter upgrades included with all heated configurations.</p>
-          <Link data-animation="slideLeft" href="/contact/request-a-quote?from=double-wall-booth">
-            <span style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:BLUE,color:"#fff",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.88rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"1rem 2.5rem",cursor:"pointer" }}>ASK ABOUT HEATED OPTIONS <ArrowRight size={15}/></span>
+          <Link href="/contact/request-a-quote?from=double-wall-booth">
+            <span data-animation="slideRight" style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:BLUE,color:"#fff",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.88rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"1rem 2.5rem",cursor:"pointer" }}>ASK ABOUT HEATED OPTIONS <ArrowRight size={15}/></span>
           </Link>
         </div>
       </section>

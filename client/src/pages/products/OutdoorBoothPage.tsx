@@ -335,7 +335,7 @@ export default function OutdoorBoothPage() {
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(5,5,5,0.96) 0%, rgba(5,5,5,0.70) 35%, rgba(5,5,5,0.30) 70%, rgba(5,5,5,0.10) 100%)" }} />
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "3px", background: BLUE, zIndex: 3 }} />
         <div className="container" style={{ position: "relative", zIndex: 2, paddingTop: "8rem", paddingBottom: "4.5rem" }}>
-          <span data-animation="slideRight" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.18em", color: "rgba(255,255,255,0.5)", textTransform: "uppercase", display: "block", marginBottom: "1rem" }}>
+          <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.18em", color: "rgba(255,255,255,0.5)", textTransform: "uppercase", display: "block", marginBottom: "1rem" }}>
             PAINT BOOTHS — OUTDOOR
           </span>
           <h1 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2.6rem, 7vw, 5rem)", fontWeight: 800, color: "#fff", lineHeight: 1.0, letterSpacing: "-0.01em", marginBottom: "1rem", maxWidth: "680px" }}>
@@ -377,10 +377,10 @@ export default function OutdoorBoothPage() {
               </p>
             </div>
             <div style={{ width: "100%", maxWidth: "900px", overflow: "hidden", borderRadius: "2px" }}>
-              <img data-animation="slideLeft" src={FEATURED_IMG} alt="PFS Outdoor Multi-Bay Finishing Facility" style={{ width: "100%", height: "auto", display: "block", objectFit: "cover", objectPosition: "center" }} />
+              <img src={FEATURED_IMG} alt="PFS Outdoor Multi-Bay Finishing Facility" style={{ width: "100%", height: "auto", display: "block", objectFit: "cover", objectPosition: "center" }} />
             </div>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
-              <Link data-animation="slideLeft" href="/contact/request-a-quote?from=outdoor-booth">
+              <Link data-animation="slideRight" href="/contact/request-a-quote?from=outdoor-booth">
                 <span className="btn-glow">REQUEST A QUOTE <ArrowRight size={15} /></span>
               </Link>
             </div>

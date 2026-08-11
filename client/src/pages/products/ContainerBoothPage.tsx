@@ -184,17 +184,17 @@ export default function ContainerBoothPage() {
               <Package size={12} style={{ color: "#6b9bd2" }} />
               <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.65rem", fontWeight: 800, letterSpacing: "0.18em", color: "#6b9bd2", textTransform: "uppercase" }}>ISO CONTAINER — DEPLOY ANYWHERE</span>
             </div>
-            <h1 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2.4rem, 6vw, 4rem)", fontWeight: 900, color: "#fff", letterSpacing: "-0.02em", lineHeight: 1.0, marginBottom: "1.1rem", textTransform: "uppercase" }}>
+            <h1 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2.4rem, 6vw, 4rem)", fontWeight: 900, color: "#fff", letterSpacing: "-0.02em", lineHeight: 1.0, marginBottom: "1.1rem", textTransform: "uppercase" }}>
               Shipping Container<br />Paint Booths
             </h1>
-            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "clamp(0.88rem, 1.5vw, 1rem)", color: "rgba(255,255,255,0.72)", lineHeight: 1.75, marginBottom: "2rem", maxWidth: "460px" }}>
+            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "clamp(0.88rem, 1.5vw, 1rem)", color: "rgba(255,255,255,0.72)", lineHeight: 1.75, marginBottom: "2rem", maxWidth: "460px" }}>
               A complete, professional spray booth built inside a standard ISO shipping container — mobile, self-contained, and deployable anywhere in the world.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
-              <Link href="/contact/request-a-quote?from=container-booth">
+              <Link data-animation="slideLeft" href="/contact/request-a-quote?from=container-booth">
                 <span className="btn-glow">GET PRICING <ArrowRight size={14} /></span>
               </Link>
-              <a href="tel:8885457715">
+              <a data-animation="slideRight" href="tel:8885457715">
                 <span className="btn-glow-white" style={{ background: "transparent", color: "rgba(255,255,255,0.85)" }}>CALL (888) 545-7715</span>
               </a>
             </div>
@@ -214,7 +214,7 @@ export default function ContainerBoothPage() {
             </div>
             <div>
               <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.18em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.5rem" }}>PFS ORION SERIES</span>
-              <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", marginBottom: "1.25rem" }}>
+              <h2 data-animation="slideRight" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", marginBottom: "1.25rem" }}>
                 A Professional Spray Booth.<br />Anywhere.
               </h2>
               <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.9rem", color: "#444", lineHeight: 1.8, marginBottom: "1rem" }}>
@@ -247,9 +247,9 @@ export default function ContainerBoothPage() {
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem", marginBottom: specsOpen ? "2rem" : 0 }}>
             <div>
               <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.3rem" }}>STANDARD FEATURES</span>
-              <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.3rem, 2.5vw, 1.9rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Built to the Same Standard as Every PFS Booth</h2>
+              <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.3rem, 2.5vw, 1.9rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Built to the Same Standard as Every PFS Booth</h2>
             </div>
-            <button
+            <button data-animation="slideRight"
               onClick={() => setSpecsOpen(!specsOpen)}
               style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: specsOpen ? BLUE : "transparent", border: `2px solid ${BLUE}`, color: specsOpen ? "#fff" : BLUE, fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.82rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.75rem 1.5rem", cursor: "pointer", transition: "background 0.15s,color 0.15s", whiteSpace: "nowrap" }}
             >
@@ -297,9 +297,9 @@ export default function ContainerBoothPage() {
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem", marginBottom: sizesOpen ? "2rem" : 0 }}>
             <div>
               <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.3rem" }}>STANDARD SIZES</span>
-              <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.3rem, 2.5vw, 1.9rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Available Sizes &amp; Configurations</h2>
+              <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.3rem, 2.5vw, 1.9rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Available Sizes &amp; Configurations</h2>
             </div>
-            <button
+            <button data-animation="slideRight"
               onClick={() => setSizesOpen(!sizesOpen)}
               style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: sizesOpen ? BLUE : "transparent", border: `2px solid ${BLUE}`, color: sizesOpen ? "#fff" : BLUE, fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.82rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.75rem 1.5rem", cursor: "pointer", transition: "background 0.15s,color 0.15s", whiteSpace: "nowrap" }}
             >
@@ -341,7 +341,7 @@ export default function ContainerBoothPage() {
         <div className="container">
           <div style={{ marginBottom: "2rem" }}>
             <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.3rem" }}>REAL INSTALLS</span>
-            <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Container Booth Gallery</h2>
+            <h2 data-animation="slideLeft"  style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Container Booth Gallery</h2>
           </div>
           <GalleryGrid images={GALLERY_IMGS} cardHeight="280px" className="grid grid-cols-1 sm:grid-cols-2 gap-3" />
         </div>
@@ -351,14 +351,14 @@ export default function ContainerBoothPage() {
       <section style={{ background: BLUE, padding: "3.5rem 0" }}>
         <div className="container" style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "2rem" }}>
           <div>
-            <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800, color: "#fff", letterSpacing: "-0.01em", margin: "0 0 0.5rem" }}>Ready to Deploy a Container Booth?</h2>
-            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.9rem", color: "rgba(255,255,255,0.75)", margin: 0 }}>Factory-direct pricing. Ships to all 50 states. Dedicated support from order through installation.</p>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800, color: "#fff", letterSpacing: "-0.01em", margin: "0 0 0.5rem" }}>Ready to Deploy a Container Booth?</h2>
+            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.9rem", color: "rgba(255,255,255,0.75)", margin: 0 }}>Factory-direct pricing. Ships to all 50 states. Dedicated support from order through installation.</p>
           </div>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <Link href="/contact/request-a-quote?from=container-booth">
+            <Link data-animation="slideLeft" href="/contact/request-a-quote?from=container-booth">
               <span className="btn-glow-white">GET PRICING <ArrowRight size={14} /></span>
             </Link>
-            <a href="tel:8885457715">
+            <a data-animation="slideRight" href="tel:8885457715">
               <span className="btn-glow-white" style={{ background: "transparent", color: "#fff" }}>CALL (888) 545-7715</span>
             </a>
           </div>
@@ -370,7 +370,7 @@ export default function ContainerBoothPage() {
         <div className="container">
           <div style={{ marginBottom: "2.5rem" }}>
             <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.3rem" }}>YOU MAY ALSO LIKE</span>
-            <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Explore More PFS Products</h2>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Explore More PFS Products</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {alsoLike.map((p) => (

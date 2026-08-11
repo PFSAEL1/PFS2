@@ -229,19 +229,19 @@ export default function BayAreaServicePage() {
             <p data-animation="slideLeft" style={{ color: "rgba(255,255,255,0.88)", fontSize: "clamp(0.95rem,2vw,1.15rem)", maxWidth: 560, marginBottom: 12, lineHeight: 1.6 }}>
               BAAQMD Regulation 8 Rule 27 compliant service, repair, and inspections for San Francisco, Oakland, San Jose, and all nine Bay Area counties.
             </p>
-            <p data-animation="slideLeft" style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.9rem", marginBottom: 28, letterSpacing: "0.04em" }}>
+            <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.9rem", marginBottom: 28, letterSpacing: "0.04em" }}>
               NFPA 33 &nbsp;·&nbsp; CARB &nbsp;·&nbsp; BAAQMD &nbsp;·&nbsp; NESHAP &nbsp;·&nbsp; OSHA 1910.107
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
               <Link data-animation="slideLeft" href="/contact/service-request">
-                <a data-animation="slideRight" className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#00a896", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase", transition: "all 0.2s" }}>
+                <a className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#00a896", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase"}}>
                   REQUEST SERVICE <ArrowRight size={16} />
                 </a>
               </Link>
-              <a href="tel:+18885457715" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(255,255,255,0.7)", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase", transition: "all 0.2s" }}>
+              <a href="tel:+18885457715" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(255,255,255,0.7)", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase"}}>
                 <Phone size={16} /> (888) 545-7715
               </a>
-              <a href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(0,168,150,0.7)", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase", transition: "all 0.2s" }}>
+              <a data-animation="slideRight" href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(0,168,150,0.7)", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase"}}>
                 <Filter size={16} /> PFS FILTERS
               </a>
             </div>
@@ -259,7 +259,7 @@ export default function BayAreaServicePage() {
             { label: "Emergency Response", value: "24/7" },
             { label: "Compliance", value: "BAAQMD · CARB · NFPA 33" },
           ].map((s) => (
-            <div data-animation="slideRight" key={s.label} style={{ textAlign: "center", padding: "8px 24px", borderRight: "1px solid rgba(255,255,255,0.1)" }}>
+            <div key={s.label} style={{ textAlign: "center", padding: "8px 24px", borderRight: "1px solid rgba(255,255,255,0.1)" }}>
               <div data-animation="slideLeft" style={{ color: "#00a896", fontSize: "1.1rem", fontWeight: 800 }}>{s.value}</div>
               <div data-animation="slideRight" style={{ color: "rgba(255,255,255,0.55)", fontSize: "0.7rem", letterSpacing: "0.1em", textTransform: "uppercase" }}>{s.label}</div>
             </div>
@@ -322,7 +322,7 @@ export default function BayAreaServicePage() {
                 <svc.icon size={28} style={{ color: "#00a896", marginBottom: 14 }} />
                 <h3 style={{ fontSize: "0.85rem", fontWeight: 800, color: "#0a1628", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 10 }}>{svc.title}</h3>
                 <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.65, marginBottom: 16 }}>{svc.desc}</p>
-                <Link data-animation="slideLeft" href="/contact/service-request">
+                <Link href="/contact/service-request">
                   <a className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: 6, color: "#00a896", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", transition: "all 0.2s" }}>
                     REQUEST SERVICE <ArrowRight size={13} />
                   </a>

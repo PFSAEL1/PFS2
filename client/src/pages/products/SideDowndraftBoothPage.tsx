@@ -174,7 +174,7 @@ export default function SideDowndraftBoothPage() {
         }} />
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "3px", background: BLUE, zIndex: 3 }} />
         <div className="container" style={{ position: "relative", zIndex: 2, paddingTop: "8rem", paddingBottom: "4.5rem" }}>
-          <span data-animation="slideRight" style={{
+          <span style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.18em",
             color: "rgba(255,255,255,0.5)", textTransform: "uppercase", display: "block", marginBottom: "1rem",
@@ -244,7 +244,7 @@ export default function SideDowndraftBoothPage() {
               <img src={FEATURED_IMG} alt="PFS Helios Series Side Downdraft Spray Booth" style={{ width:"100%",height:"auto",display:"block",objectFit:"cover",objectPosition:"center" }} />
             </div>
             <div style={{ display:"flex",gap:"1rem",flexWrap:"wrap",justifyContent:"center" }}>
-              <Link data-animation="slideRight" href="/contact/request-a-quote?from=side-downdraft-booth">
+              <Link data-animation="slideLeft" href="/contact/request-a-quote?from=side-downdraft-booth">
                 <span className="btn-glow">REQUEST A QUOTE <ArrowRight size={15}/></span>
               </Link>
               <Link data-animation="slideRight" href="/products/paint-booths/enclosed">
@@ -266,10 +266,10 @@ export default function SideDowndraftBoothPage() {
             </p>
           </div>
           <div style={{ width:"100%",maxWidth:"700px",margin:"0 auto" }}>
-            <img data-animation="slideLeft" src={AIRFLOW_GIF} alt="Side Downdraft Airflow Pattern" style={{ width:"100%",height:"auto",display:"block" }} />
+            <img src={AIRFLOW_GIF} alt="Side Downdraft Airflow Pattern" style={{ width:"100%",height:"auto",display:"block" }} />
           </div>
-          <div style={{ textAlign:"center",marginTop:"2rem" }}>
-            <Link data-animation="slideRight" href="/contact/request-a-quote?from=side-downdraft-booth">
+          <div data-animation="slideRight" style={{ textAlign:"center",marginTop:"2rem" }}>
+            <Link href="/contact/request-a-quote?from=side-downdraft-booth">
               <span className="btn-glow">GET PRICING <ArrowRight size={15}/></span>
             </Link>
           </div>
@@ -284,7 +284,7 @@ export default function SideDowndraftBoothPage() {
               <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.3rem" }}>STANDARD FEATURES</span>
               <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.3rem,2.5vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Every Unit Ships Fully Certified</h2>
             </div>
-            <button onClick={() => setSpecsOpen(!specsOpen)} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:specsOpen?BLUE:"transparent",border:`2px solid ${BLUE}`,color:specsOpen?"#fff":BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.5rem",cursor:"pointer",transition:"background 0.15s,color 0.15s",whiteSpace:"nowrap" }}>
+            <button data-animation="slideRight" onClick={() => setSpecsOpen(!specsOpen)} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:specsOpen?BLUE:"transparent",border:`2px solid ${BLUE}`,color:specsOpen?"#fff":BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.5rem",cursor:"pointer",transition:"background 0.15s,color 0.15s",whiteSpace:"nowrap" }}>
               {specsOpen ? <><ChevronUp size={15}/> HIDE SPECS</> : <><ChevronDown size={15}/> SEE STANDARD SPECS</>}
             </button>
           </div>
@@ -330,7 +330,7 @@ export default function SideDowndraftBoothPage() {
               <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.3rem" }}>STANDARD SIZES</span>
               <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.3rem,2.5vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>14' Wide — Choose Your Height</h2>
             </div>
-            <button onClick={() => setSizesOpen(!sizesOpen)} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:sizesOpen?BLUE:"transparent",border:`2px solid ${BLUE}`,color:sizesOpen?"#fff":BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.5rem",cursor:"pointer",transition:"background 0.15s,color 0.15s",whiteSpace:"nowrap" }}>
+            <button data-animation="slideRight" onClick={() => setSizesOpen(!sizesOpen)} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:sizesOpen?BLUE:"transparent",border:`2px solid ${BLUE}`,color:sizesOpen?"#fff":BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.5rem",cursor:"pointer",transition:"background 0.15s,color 0.15s",whiteSpace:"nowrap" }}>
               {sizesOpen ? <><ChevronUp size={15}/> HIDE SIZES</> : <><ChevronDown size={15}/> SEE STANDARD SIZES</>}
             </button>
           </div>
@@ -388,7 +388,7 @@ export default function SideDowndraftBoothPage() {
           <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.6rem,3.5vw,2.6rem)",fontWeight:800,color:"#fff",letterSpacing:"-0.01em",marginBottom:"0.75rem" }}>Ready to Configure Your Side Downdraft Booth?</h2>
           <p data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.95rem",color:"rgba(255,255,255,0.8)",marginBottom:"2rem",maxWidth:"480px",margin:"0 auto 2rem" }}>Factory-direct pricing. Fast lead times. Dedicated support from order through installation.</p>
           <div style={{ display:"flex",gap:"1rem",justifyContent:"center",flexWrap:"wrap" }}>
-            <Link data-animation="slideRight" href="/contact/request-a-quote?from=side-downdraft-booth">
+            <Link data-animation="slideLeft" href="/contact/request-a-quote?from=side-downdraft-booth">
               <span style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:"#fff",color:BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.9rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"1.1rem 2.5rem",cursor:"pointer" }}>GET PRICING <ArrowRight size={16}/></span>
             </Link>
             <a data-animation="slideRight" href="tel:8885457715">
@@ -403,11 +403,11 @@ export default function SideDowndraftBoothPage() {
         <div className="container" style={{ textAlign:"center" }}>
           <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.18em",color:"rgba(255,255,255,0.45)",textTransform:"uppercase",display:"block",marginBottom:"0.5rem" }}>ADD-ON</span>
           <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.5rem,3vw,2.2rem)",fontWeight:800,color:"#fff",letterSpacing:"-0.01em",marginBottom:"0.75rem" }}>Heated Options Available</h2>
-          <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.9rem",color:"rgba(255,255,255,0.7)",maxWidth:"480px",margin:"0 auto 1.75rem",lineHeight:1.7 }}>
+          <p data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.9rem",color:"rgba(255,255,255,0.7)",maxWidth:"480px",margin:"0 auto 1.75rem",lineHeight:1.7 }}>
             Add a direct-fired or indirect-fired heat system to your side-downdraft booth for accelerated cure times. Blanket intake filter upgrades included with all heated configurations.
           </p>
-          <Link data-animation="slideRight" href="/contact/request-a-quote?from=side-downdraft-booth">
-            <span style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:BLUE,color:"#fff",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.88rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"1rem 2.5rem",cursor:"pointer" }}>ASK ABOUT HEATED OPTIONS <ArrowRight size={15}/></span>
+          <Link href="/contact/request-a-quote?from=side-downdraft-booth">
+            <span data-animation="slideRight" style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:BLUE,color:"#fff",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.88rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"1rem 2.5rem",cursor:"pointer" }}>ASK ABOUT HEATED OPTIONS <ArrowRight size={15}/></span>
           </Link>
         </div>
       </section>
@@ -417,7 +417,7 @@ export default function SideDowndraftBoothPage() {
         <div className="container" style={{ textAlign:"center" }}>
           <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.5rem" }}>COMPLETE YOUR SYSTEM</span>
           <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.3rem,2.5vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.75rem" }}>Pairs Well With a Mixing Room or Air Make-Up Unit</h2>
-          <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.88rem",color:"#666",maxWidth:"480px",margin:"0 auto 1.5rem",lineHeight:1.7 }}>
+          <p data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.88rem",color:"#666",maxWidth:"480px",margin:"0 auto 1.5rem",lineHeight:1.7 }}>
             Maximize throughput and compliance by pairing your side-downdraft booth with a dedicated mixing room for paint prep and an air make-up unit for tempered make-up air.
           </p>
           <div style={{ display:"flex",gap:"1rem",justifyContent:"center",flexWrap:"wrap" }}>

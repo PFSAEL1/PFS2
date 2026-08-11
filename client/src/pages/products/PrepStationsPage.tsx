@@ -301,7 +301,7 @@ export default function PrepStationsPage() {
             <p style={{ color: "#444", lineHeight: 1.75, fontSize: "0.97rem", marginBottom: "1.5rem" }}>
               Multi-bay configurations are common in high-volume collision centers, fleet shops, and industrial finishing operations where multiple vehicles or parts need to be prepped simultaneously.
             </p>
-            <Link data-animation="slideLeft" href="/contact/request-a-quote?from=prep-station" className="btn-glow" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, letterSpacing: "0.1em", fontSize: "0.85rem", padding: "0.75rem 2rem", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
+            <Link data-animation="slideRight" href="/contact/request-a-quote?from=prep-station" className="btn-glow" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, letterSpacing: "0.1em", fontSize: "0.85rem", padding: "0.75rem 2rem", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
               CONFIGURE MULTI-BAY <ArrowRight size={15} />
             </Link>
           </div>
@@ -315,14 +315,14 @@ export default function PrepStationsPage() {
           <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 800, fontSize: "clamp(1.6rem,3vw,2.4rem)", textTransform: "uppercase", lineHeight: 1.05, color: "#111", margin: "0 0 2rem" }}>
             BUILT TO THE SAME STANDARD<br />AS OUR SPRAY BOOTHS
           </h2>
-          <button
+          <button data-animation="slideRight"
             onClick={() => setFeaturesOpen(v => !v)}
             style={{ marginBottom: "1.5rem", display: "flex", alignItems: "center", gap: "0.5rem", fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, fontSize: "0.8rem", letterSpacing: "0.12em", textTransform: "uppercase", color: BLUE, background: "none", border: `1.5px solid ${BLUE}`, padding: "0.6rem 1.4rem", cursor: "pointer" }}
           >
             {featuresOpen ? <><ChevronUp size={15} /> HIDE FEATURES</> : <><ChevronDown size={15} /> VIEW ALL {ALL_FEATURES.length} FEATURES</>}
           </button>
           {featuresOpen && (
-            <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
               {ALL_FEATURES.map(f => (
                 <div key={f.num} style={{ background: "#fff", border: "1px solid #e5e5e5", padding: "1.5rem" }}>
                   <div style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 800, fontSize: "2rem", color: "#e5e5e5", lineHeight: 1, marginBottom: "0.5rem" }}>{f.num}</div>
@@ -342,7 +342,7 @@ export default function PrepStationsPage() {
           <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 800, fontSize: "clamp(1.6rem,3vw,2.4rem)", textTransform: "uppercase", lineHeight: 1.05, color: "#111", margin: 0 }}>
             STANDARD DIMENSIONS
           </h2>
-          <button
+          <button data-animation="slideRight"
             onClick={() => setSizesOpen(v => !v)}
             style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, fontSize: "0.78rem", letterSpacing: "0.12em", textTransform: "uppercase", color: BLUE, background: "none", border: `1.5px solid ${BLUE}`, padding: "0.55rem 1.2rem", cursor: "pointer" }}
           >

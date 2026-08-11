@@ -131,7 +131,7 @@ export default function BecomeADistributorPage() {
 
         <div className="container" style={{ position: "relative", zIndex: 2, paddingBottom: "4rem", paddingTop: "6rem" }}>
           <div style={{ maxWidth: 680 }}>
-            <p data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.2em", color: GOLD, textTransform: "uppercase", marginBottom: "0.8rem" }}>
+            <p style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.2em", color: GOLD, textTransform: "uppercase", marginBottom: "0.8rem" }}>
               Partnership Program
             </p>
             <h1 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(2.4rem, 5.5vw, 4.2rem)", fontWeight: 800, color: "#fff", lineHeight: 1.0, letterSpacing: "0.01em", textTransform: "uppercase", marginBottom: "1.2rem" }}>
@@ -173,7 +173,7 @@ export default function BecomeADistributorPage() {
                 <div style={{ width: 48, height: 48, background: `${BLUE}12`, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "1.25rem" }}>
                   <b.icon size={22} color={BLUE} strokeWidth={1.8} />
                 </div>
-                <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "1.05rem", fontWeight: 700, color: BLUE, textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: "0.75rem" }}>{b.title}</h3>
+                <h3 style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "1.05rem", fontWeight: 700, color: BLUE, textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: "0.75rem" }}>{b.title}</h3>
                 <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.88rem", color: "#4a5568", lineHeight: 1.75 }}>{b.body}</p>
               </div>
             ))}
@@ -191,7 +191,7 @@ export default function BecomeADistributorPage() {
               <p style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.18em", color: GOLD, textTransform: "uppercase", marginBottom: "0.6rem" }}>
                 Distributor Requirements
               </p>
-              <h2 data-animation="slideRight" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.5rem, 2.5vw, 2rem)", fontWeight: 800, color: BLUE, textTransform: "uppercase", letterSpacing: "0.02em", marginBottom: "1.5rem", lineHeight: 1.15 }}>
+              <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.5rem, 2.5vw, 2rem)", fontWeight: 800, color: BLUE, textTransform: "uppercase", letterSpacing: "0.02em", marginBottom: "1.5rem", lineHeight: 1.15 }}>
                 Who We're Looking For
               </h2>
               <div data-animation="fadeIn" style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }}>
@@ -209,7 +209,7 @@ export default function BecomeADistributorPage() {
               <p style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.18em", color: GOLD, textTransform: "uppercase", marginBottom: "0.6rem" }}>
                 What You Get
               </p>
-              <h2 data-animation="slideRight" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.5rem, 2.5vw, 2rem)", fontWeight: 800, color: BLUE, textTransform: "uppercase", letterSpacing: "0.02em", marginBottom: "1.5rem", lineHeight: 1.15 }}>
+              <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.5rem, 2.5vw, 2rem)", fontWeight: 800, color: BLUE, textTransform: "uppercase", letterSpacing: "0.02em", marginBottom: "1.5rem", lineHeight: 1.15 }}>
                 The PFS Partner Program
               </h2>
               <div data-animation="fadeIn" style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }}>

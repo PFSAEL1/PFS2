@@ -277,7 +277,7 @@ export default function DowndraftRaisedBasementPage() {
 
         <div className="container" style={{ position: "relative", zIndex: 2, paddingTop: "6rem", paddingBottom: "clamp(5rem, 12vw, 7rem)" }}>
 
-          <span data-animation="slideRight" style={{
+          <span style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.18em",
             color: "rgba(255,255,255,0.5)", textTransform: "uppercase", display: "block", marginBottom: "1rem",
@@ -357,13 +357,13 @@ export default function DowndraftRaisedBasementPage() {
           <div style={{ textAlign:"center",marginBottom:"2rem" }}>
             <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.4rem" }}>HOW IT WORKS</span>
             <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.4rem,3.5vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.65rem" }}>Raised Basement Downdraft Airflow Pattern</h2>
-            <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"clamp(0.82rem,2vw,0.9rem)",color:"#666",maxWidth:"560px",margin:"0 auto",lineHeight:1.7 }}>
+            <p data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif",fontSize:"clamp(0.82rem,2vw,0.9rem)",color:"#666",maxWidth:"560px",margin:"0 auto",lineHeight:1.7 }}>
               Air enters through a full ceiling plenum and flows straight down — identical to a concrete-pit full downdraft. The difference is at the floor: instead of exhausting into a pit poured into the slab, air enters a <strong>raised steel plenum sitting on top of your existing concrete</strong>, then travels through the duct to the exhaust stack.
             </p>
           </div>
           <RaisedBasementAirflowSVG />
-          <div style={{ textAlign:"center",marginTop:"1.75rem" }}>
-            <Link data-animation="slideLeft" href="/contact/request-a-quote?from=full-downdraft-booth">
+          <div data-animation="slideRight" style={{ textAlign:"center",marginTop:"1.75rem" }}>
+            <Link href="/contact/request-a-quote?from=full-downdraft-booth">
               <span className="btn-glow">GET PRICING <ArrowRight size={15}/></span>
             </Link>
           </div>
@@ -378,7 +378,7 @@ export default function DowndraftRaisedBasementPage() {
               <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.3rem" }}>STANDARD FEATURES</span>
               <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.2rem,3vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Every Unit Ships Fully Certified</h2>
             </div>
-            <button onClick={() => setSpecsOpen(!specsOpen)} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:specsOpen?BLUE:"transparent",border:`2px solid ${BLUE}`,color:specsOpen?"#fff":BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.25rem",cursor:"pointer",transition:"background 0.15s,color 0.15s",whiteSpace:"nowrap",minHeight:"48px" }}>
+            <button data-animation="slideRight" onClick={() => setSpecsOpen(!specsOpen)} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:specsOpen?BLUE:"transparent",border:`2px solid ${BLUE}`,color:specsOpen?"#fff":BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.25rem",cursor:"pointer",transition:"background 0.15s,color 0.15s",whiteSpace:"nowrap",minHeight:"48px" }}>
               {specsOpen ? <><ChevronUp size={15}/> HIDE SPECS</> : <><ChevronDown size={15}/> SEE STANDARD SPECS</>}
             </button>
           </div>
@@ -405,7 +405,7 @@ export default function DowndraftRaisedBasementPage() {
                 </div>
               )}
               <div style={{ textAlign:"center" }}>
-                <button onClick={() => setFeaturesOpen(!featuresOpen)} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:"transparent",border:`2px solid ${BLUE}`,color:BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.5rem",cursor:"pointer",minHeight:"48px" }}>
+                <button data-animation="slideRight  " onClick={() => setFeaturesOpen(!featuresOpen)} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:"transparent",border:`2px solid ${BLUE}`,color:BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.5rem",cursor:"pointer",minHeight:"48px" }}>
                   {featuresOpen ? <><ChevronUp size={15}/> SHOW LESS</> : <><ChevronDown size={15}/> SEE ALL {FEATURES_HIDDEN.length + FEATURES_VISIBLE.length} FEATURES</>}
                 </button>
               </div>
@@ -422,7 +422,7 @@ export default function DowndraftRaisedBasementPage() {
               <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.3rem" }}>STANDARD SIZES</span>
               <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.2rem,3vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>14' Wide — 9, 10, or 12 ft Interior Height</h2>
             </div>
-            <button onClick={() => setSizesOpen(!sizesOpen)} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:sizesOpen?BLUE:"transparent",border:`2px solid ${BLUE}`,color:sizesOpen?"#fff":BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.25rem",cursor:"pointer",transition:"background 0.15s,color 0.15s",whiteSpace:"nowrap",minHeight:"48px" }}>
+            <button data-animation="slideRight" onClick={() => setSizesOpen(!sizesOpen)} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:sizesOpen?BLUE:"transparent",border:`2px solid ${BLUE}`,color:sizesOpen?"#fff":BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.25rem",cursor:"pointer",transition:"background 0.15s,color 0.15s",whiteSpace:"nowrap",minHeight:"48px" }}>
               {sizesOpen ? <><ChevronUp size={15}/> HIDE SIZES</> : <><ChevronDown size={15}/> SEE STANDARD SIZES</>}
             </button>
           </div>
@@ -467,11 +467,11 @@ export default function DowndraftRaisedBasementPage() {
         <div className="container" style={{ textAlign:"center" }}>
           <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.18em",color:"rgba(255,255,255,0.45)",textTransform:"uppercase",display:"block",marginBottom:"0.5rem" }}>ADD-ON</span>
           <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.5rem,3vw,2.2rem)",fontWeight:800,color:"#fff",letterSpacing:"-0.01em",marginBottom:"0.75rem" }}>Heated Options Available</h2>
-          <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.9rem",color:"rgba(255,255,255,0.7)",maxWidth:"480px",margin:"0 auto 1.75rem",lineHeight:1.7 }}>
+          <p data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.9rem",color:"rgba(255,255,255,0.7)",maxWidth:"480px",margin:"0 auto 1.75rem",lineHeight:1.7 }}>
             Add a direct-fired or indirect-fired heat system to your raised-basement downdraft booth for accelerated cure times. Blanket intake filter upgrades included with all heated configurations.
           </p>
-          <Link data-animation="slideLeft" href="/contact/request-a-quote?from=full-downdraft-booth">
-            <span style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:BLUE,color:"#fff",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.88rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"1rem 2.5rem",cursor:"pointer" }}>ASK ABOUT HEATED OPTIONS <ArrowRight size={15}/></span>
+          <Link href="/contact/request-a-quote?from=full-downdraft-booth">
+            <span data-animation="slideRight" style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:BLUE,color:"#fff",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.88rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"1rem 2.5rem",cursor:"pointer" }}>ASK ABOUT HEATED OPTIONS <ArrowRight size={15}/></span>
           </Link>
         </div>
       </section>
@@ -480,7 +480,7 @@ export default function DowndraftRaisedBasementPage() {
         <div className="container" style={{ textAlign:"center" }}>
           <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.5rem" }}>COMPLETE YOUR SYSTEM</span>
           <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.3rem,2.5vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.75rem" }}>Pairs Well With a Mixing Room or Air Make-Up Unit</h2>
-          <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.88rem",color:"#666",maxWidth:"480px",margin:"0 auto 1.5rem",lineHeight:1.7 }}>
+          <p  data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.88rem",color:"#666",maxWidth:"480px",margin:"0 auto 1.5rem",lineHeight:1.7 }}>
             Maximize throughput and compliance by pairing your raised-basement booth with a dedicated mixing room for paint prep and an air make-up unit for tempered make-up air.
           </p>
           <div style={{ display:"flex",gap:"1rem",justifyContent:"center",flexWrap:"wrap" }}>

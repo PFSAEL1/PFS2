@@ -433,7 +433,7 @@ export default function AutomotiveManufacturingPage() {
               />
             </div>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
-              <Link data-animation="slideRight" href="/contact/request-a-quote">
+              <Link data-animation="slideLeft" href="/contact/request-a-quote">
                 <span className="btn-glow">REQUEST A QUOTE <ArrowRight size={15} /></span>
               </Link>
               <Link data-animation="slideRight" href="/products/paint-booths/enclosed">
@@ -503,13 +503,13 @@ export default function AutomotiveManufacturingPage() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-5 mb-5">
+          <div data-animation="fadeIn" className="grid md:grid-cols-3 gap-5 mb-5">
             {FEATURES_VISIBLE.map((f) => (
               <div key={f.title} style={{ background: "#fff", padding: "1.75rem", borderTop: `3px solid ${BLUE}`, display: "flex", flexDirection: "column" }}>
                 <div style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "2rem", fontWeight: 900, color: `rgba(27,58,107,0.12)`, lineHeight: 1, marginBottom: "0.5rem" }}>{f.num}</div>
                 <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.05rem", fontWeight: 700, color: "#111", marginBottom: "0.6rem" }}>{f.title}</h3>
                 <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.84rem", color: "#555", lineHeight: 1.75, marginBottom: "1rem", flex: 1 }}>{f.body}</p>
-                <Link data-animation="slideRight" href="/contact/request-a-quote">
+                <Link href="/contact/request-a-quote">
                   <span style={{ display: "inline-flex", alignItems: "center", gap: "0.3rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.78rem", fontWeight: 700, color: BLUE, letterSpacing: "0.08em", textTransform: "uppercase", cursor: "pointer" }}>
                     LEARN MORE <ArrowRight size={12} />
                   </span>
@@ -556,7 +556,7 @@ export default function AutomotiveManufacturingPage() {
           )}
 
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <button
+            <button data-animation="slideLeft"
               onClick={() => setFeaturesOpen(!featuresOpen)}
               style={{
                 display: "inline-flex", alignItems: "center", gap: "0.4rem",
@@ -592,7 +592,7 @@ export default function AutomotiveManufacturingPage() {
               Quote in 24 hours. manufactured in the USA with ETL/UL listed components. Installed nationwide by PFS-certified technicians.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center" }}>
-              <Link data-animation="slideRight" href="/contact/request-a-quote">
+              <Link data-animation="slideLeft" href="/contact/request-a-quote">
                 <span style={{
                   display: "inline-flex", alignItems: "center", gap: "0.5rem",
                   background: "#fff", color: BLUE,

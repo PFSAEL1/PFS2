@@ -54,16 +54,16 @@ export default function PowderBoothsHub() {
             <h2 data-animation="slideLeft" className="section-heading">Choose Your System</h2>
             <p data-animation="slideLeft" className="section-body max-w-2xl">From manual job shop booths to fully integrated automated lines, PFS engineers powder coating systems around your part geometry, production volume, and powder chemistry.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-animation="fadeIn">
             {SYSTEMS.map((s) => (
-              <Link data-animation="slideRight" key={s.label} href={s.href}>
+              <Link key={s.label} href={s.href}>
                 <div className="product-card group">
                   <div className="overflow-hidden" style={{ height: "240px" }}>
-                    <img data-animation="slideLeft" src={s.img} alt={s.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <img src={s.img} alt={s.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
                   <div className="p-5">
-                    <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1rem", fontWeight: 700, color: "#1a1a1a", marginBottom: "0.4rem" }}>{s.label}</h3>
-                    <p data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#666", lineHeight: 1.6 }}>{s.desc}</p>
+                    <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1rem", fontWeight: 700, color: "#1a1a1a", marginBottom: "0.4rem" }}>{s.label}</h3>
+                    <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#666", lineHeight: 1.6 }}>{s.desc}</p>
                   </div>
                 </div>
               </Link>

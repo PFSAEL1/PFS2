@@ -168,7 +168,7 @@ function BoothCard({ config }: { config: typeof BOOTH_CONFIGS[0] }) {
           }}
         />
         {config.tag && (
-          <span data-animation="slideRight" style={{
+          <span style={{
             position: "absolute", top: "0.75rem", left: "0.75rem",
             background: BLUE, color: "#fff",
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
@@ -180,13 +180,13 @@ function BoothCard({ config }: { config: typeof BOOTH_CONFIGS[0] }) {
 
       {/* Content */}
       <div style={{ padding: "1.5rem 1.5rem 1.75rem" }}>
-        <h3 data-animation="slideLeft" style={{
+        <h3 style={{
           fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
           fontSize: "clamp(1.2rem, 2.5vw, 1.5rem)",
           fontWeight: 800, color: "#111",
           letterSpacing: "-0.01em", marginBottom: "0.6rem",
         }}>{config.label}</h3>
-        <p data-animation="slideLeft" style={{
+        <p style={{
           fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
           fontSize: "0.88rem", color: "#555", lineHeight: 1.7,
           marginBottom: "1.25rem",
@@ -258,8 +258,8 @@ function BoothCard({ config }: { config: typeof BOOTH_CONFIGS[0] }) {
         )}
 
         {/* CTA */}
-        <Link data-animation="slideLeft" href="/contact/request-a-quote?from=truck-booth">
-          <span data-animation="slideRight" className="btn-glow" style={{ width: "100%", justifyContent: "center" }}>GET A QUOTE <ArrowRight size={14} /></span>
+        <Link href="/contact/request-a-quote?from=truck-booth">
+          <span className="btn-glow" style={{ width: "100%", justifyContent: "center" }}>GET A QUOTE <ArrowRight size={14} /></span>
         </Link>
       </div>
     </div>
@@ -350,7 +350,7 @@ export default function TruckBoothsPage() {
               Four Airflow Configurations.<br />One Standard of Quality.
             </h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
+          <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
             {BOOTH_CONFIGS.map((config) => (
               <BoothCard key={config.id} config={config} />
             ))}

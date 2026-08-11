@@ -121,7 +121,7 @@ function CollapsibleFeatures({ features }: { features: { num: string; title: str
       <div style={{ display:"flex",flexDirection:"column",gap:"0.75rem" }}>
         {visible.map((f) => (
           <div key={f.num} style={{ display:"flex",gap:"1rem",padding:"0.85rem 1rem",background:"#f8f8f6",border:"1px solid #e8e8e6" }}>
-            <span data-animation="slideRight" style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:800,color:BLUE,letterSpacing:"0.1em",minWidth:"22px",paddingTop:"2px" }}>{f.num}</span>
+            <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:800,color:BLUE,letterSpacing:"0.1em",minWidth:"22px",paddingTop:"2px" }}>{f.num}</span>
             <div>
               <div style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.92rem",fontWeight:800,color:"#111",letterSpacing:"0.02em",marginBottom:"0.2rem" }}>{f.title}</div>
               <div style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.8rem",color:"#555",lineHeight:1.6 }}>{f.body}</div>
@@ -161,7 +161,7 @@ function WallCard({
           <span style={{ background:BLUE,color:"#fff",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.65rem",fontWeight:800,letterSpacing:"0.16em",textTransform:"uppercase",padding:"0.22rem 0.7rem" }}>{badge}</span>
           <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.68rem",fontWeight:700,color:"#888",letterSpacing:"0.1em",textTransform:"uppercase" }}>{tag}</span>
         </div>
-        <h3 style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.4rem,2.5vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.5rem",lineHeight:1.1 }}>{title}</h3>
+        <h3 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.4rem,2.5vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.5rem",lineHeight:1.1 }}>{title}</h3>
         <p data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.88rem",color:"#555",lineHeight:1.7,marginBottom:"1.25rem" }}>{subtitle}</p>
 
         {/* Collapsible features */}
@@ -169,11 +169,11 @@ function WallCard({
 
         {/* CTAs */}
         <div style={{ display:"flex",gap:"0.75rem",flexWrap:"wrap",marginTop:"1.5rem" }}>
-          <Link data-animation="slideLeft" href="/contact/request-a-quote?from=paint-wall">
+          <Link data-animation="slideRight" href="/contact/request-a-quote?from=paint-wall">
             <span className="btn-glow">REQUEST A QUOTE <ArrowRight size={14}/></span>
           </Link>
           <a data-animation="slideRight" href="tel:8885457715">
-            <span data-animation="slideRight" style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:"transparent",color:BLUE,border:`2px solid ${BLUE}`,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.88rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.9rem 2rem",cursor:"pointer" }}>CALL (888) 545-7715</span>
+            <span style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:"transparent",color:BLUE,border:`2px solid ${BLUE}`,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.88rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.9rem 2rem",cursor:"pointer" }}>CALL (888) 545-7715</span>
           </a>
         </div>
       </div>
@@ -203,7 +203,7 @@ export default function PaintWallsPage() {
             Built to Last
           </h1>
           <span style={{ display:"inline-flex",alignItems:"center",gap:"0.4rem",background:"rgba(27,58,107,0.75)",border:"1px solid rgba(107,163,224,0.4)",color:"#6fa3e0",borderRadius:"2px",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",textTransform:"uppercase",padding:"0.3rem 0.75rem",marginBottom:"1.25rem" }}>PFS EXHAUST WALL SERIES</span>
-          <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"clamp(0.95rem,1.8vw,1.1rem)",color:"rgba(255,255,255,0.82)",lineHeight:1.7,marginBottom:"2.5rem",maxWidth:"500px" }}>
+          <p data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif",fontSize:"clamp(0.95rem,1.8vw,1.1rem)",color:"rgba(255,255,255,0.82)",lineHeight:1.7,marginBottom:"2.5rem",maxWidth:"500px" }}>
             Open-face exhaust filtration walls for spray painting parts and panels — no full enclosure required. Many sizes and configurations available. Built to NFPA 33. Ships nationally.
           </p>
           <div style={{ display:"flex",flexWrap:"wrap",gap:"1rem" }}>
@@ -225,7 +225,7 @@ export default function PaintWallsPage() {
         <div className="container" style={{ textAlign:"center" }}>
           <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.18em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.5rem" }}>FACTORY DIRECT</span>
           <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.6rem,3vw,2.4rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.5rem" }}>Many Sizes &amp; Configurations Available</h2>
-          <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.95rem",color:"#555",maxWidth:"560px",margin:"0 auto",lineHeight:1.7 }}>
+          <p data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.95rem",color:"#555",maxWidth:"560px",margin:"0 auto",lineHeight:1.7 }}>
             PFS manufactures Exhaust Walls in custom widths, heights, and depths — from compact benchtop units to large industrial walls. Single-phase or 3-phase, ducted or ductless, with or without heat.
           </p>
         </div>
@@ -290,7 +290,7 @@ export default function PaintWallsPage() {
 
             {/* RELATED PRODUCTS */}
       <SiteProductCardSection
-        heading="COMPLETE YOUR FINISHING SYSTEM */}"
+        heading="COMPLETE YOUR FINISHING SYSTEM"
         label="Complete Your System"
         cards={PRODUCTS}
       />

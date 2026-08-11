@@ -142,7 +142,7 @@ export default function ProductsHub() {
           {/* Card grid — larger images */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             {FAMILIES.map((f) => (
-              <Link data-animation="slideLeft" key={f.label} href={f.href}>
+              <Link data-animation="fadeIn" key={f.label} href={f.href}>
                 <div className="group cursor-pointer border border-gray-200 hover:border-[#1B2B4B] transition-all duration-300 hover:shadow-[0_0_24px_rgba(27,43,75,0.15)] overflow-hidden h-full flex flex-col">
                   <div className="overflow-hidden flex-shrink-0" style={{ height: "260px" }}>
                     <img
@@ -153,8 +153,8 @@ export default function ProductsHub() {
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-1">
-                    <div data-animation="slideLeft" className="flex items-center gap-2 mb-2">
-                      <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.2rem", fontWeight: 700, color: "#1a1a1a", lineHeight: 1.2 }}>
+                    <div className="flex items-center gap-2 mb-2">
+                      <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.2rem", fontWeight: 700, color: "#1a1a1a", lineHeight: 1.2 }}>
                         {f.label}
                       </h3>
                       {f.badge && (
@@ -163,7 +163,7 @@ export default function ProductsHub() {
                         </span>
                       )}
                     </div>
-                    <p data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.85rem", color: "#555", lineHeight: 1.7, marginBottom: "1rem", flex: 1 }}>
+                    <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.85rem", color: "#555", lineHeight: 1.7, marginBottom: "1rem", flex: 1 }}>
                       {f.desc}
                     </p>
                     <div className="flex flex-wrap gap-1 mb-4">
@@ -171,7 +171,7 @@ export default function ProductsHub() {
                         <span key={tag} style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.65rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", backgroundColor: "#f4f4f2", color: "#444", padding: "0.2rem 0.5rem" }}>{tag}</span>
                       ))}
                     </div>
-                    <div data-animation="slideLeft" className="flex items-center gap-1" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1B2B4B" }}>
+                    <div className="flex items-center gap-1" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1B2B4B" }}>
                       EXPLORE <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
@@ -184,7 +184,7 @@ export default function ProductsHub() {
           <div style={{ backgroundColor: "#1a1a1a", padding: "2.5rem 2rem" }}>
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
-                <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.4rem", fontWeight: 700, color: "#ffffff", marginBottom: "0.4rem" }}>
+                <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.4rem", fontWeight: 700, color: "#ffffff", marginBottom: "0.4rem" }}>
                   Ready to Get Pricing?
                 </h3>
                 <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.6 }}>
@@ -192,7 +192,7 @@ export default function ProductsHub() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
-                <Link href="/contact/request-a-quote">
+                <Link data-animation="slideLeft" href="/contact/request-a-quote">
                   <span className="btn-glow flex items-center gap-2">Get Pricing <ArrowRight size={14} /></span>
                 </Link>
                 <a href="tel:+18885457715">

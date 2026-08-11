@@ -209,10 +209,10 @@ export default function EnclosedBoothsPage() {
                     )}
                   </div>
                   <div className="p-5" style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-                    <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.05rem", fontWeight: 700, color: "#1C1C1E", letterSpacing: "0.02em", marginBottom: "0.4rem" }}>
+                    <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.05rem", fontWeight: 700, color: "#1C1C1E", letterSpacing: "0.02em", marginBottom: "0.4rem" }}>
                       {config.label}
                     </h3>
-                    <p data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#666", lineHeight: 1.6, marginBottom: "0.75rem", flex: 1 }}>
+                    <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#666", lineHeight: 1.6, marginBottom: "0.75rem", flex: 1 }}>
                       {config.desc}
                     </p>
                     <div data-animation="fadeIn" className="grid grid-cols-1 gap-1">

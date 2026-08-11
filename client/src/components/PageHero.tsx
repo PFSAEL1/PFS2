@@ -252,7 +252,7 @@ export default function PageHero({
         )}
 
         {/* Title */}
-        <h1
+        <h1 data-animation="slideLeft"
           style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "clamp(2.2rem, 4.5vw, 3.4rem)",
@@ -270,7 +270,7 @@ export default function PageHero({
 
         {/* Subtitle */}
         {subtitle && (
-          <p
+          <p data-animation="slideLeft"
             className="max-w-2xl"
             style={{
               fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
@@ -288,7 +288,7 @@ export default function PageHero({
         {/* CTA Buttons */}
         {ctaPricing && (
           <div className="flex flex-wrap gap-3">
-            <Link href={ctaPricingHref}>
+            <Link data-animation="slideLeft" href={ctaPricingHref}>
               <span className="btn-glow" style={{ padding: "0.75rem 2rem", fontSize: "0.85rem" }}>
                 GET PRICING →
               </span>

@@ -20,23 +20,23 @@ const BLUE_LIGHT = "#2A5298";
 const HERO_IMG = "/manus-storage/pfs-filters-card_8b47eabc.png";  // Real PFS filter media photo
 const HERO_VIDEO = "/manus-storage/pfs-parts-filters-hero_9a1b0b80.mp4"; // Cinematic hero video
 const IMG_COMPRESSOR = "/manus-storage/pfs-compressor_ac8a8f18.jpg";
-const IMG_CAR_LIFT   = "/manus-storage/pfs-lift_424297dc.jpg";
+const IMG_CAR_LIFT = "/manus-storage/pfs-lift_424297dc.jpg";
 const IMG_FILTERS = "/manus-storage/pfs-filters-card_8b47eabc.png";  // Real PFS filter media photo
-const IMG_DUCTS    = "/manus-storage/pfs-ducts_1fbe0397.jpg";
-const IMG_FIRE     = "/manus-storage/pfs-fire-suppression_742b581e.jpg";
-const IMG_MOTOR    = "/manus-storage/pfs-motor_ecdf26f3.jpg";
-const IMG_FAN      = "/manus-storage/pfs-fan_2f0815fd.jpg";
-const IMG_MANO     = "/manus-storage/pfs-manometer_5c40c0f8.jpg";
-const IMG_PANEL    = "/manus-storage/pfs-control-panel-cp1000_8ad9abea.jpg";
-const IMG_BLAST    = "/manus-storage/pfs-blast-recovery_dbce54aa.jpg";
-const IMG_DUST     = "/manus-storage/pfs-dust-collector_e05ef794.webp";
-const IMG_SEALS    = "/manus-storage/pfs-part-seals-MxbVGeBtpPQrw4J8RrUxdn.webp";
-const IMG_HANDLE   = "/manus-storage/pfs-door-hardware-v2_d749ca14.jpg";
-const IMG_MATS     = "/manus-storage/pfs-floor-mat_a51917a0.jpg";
+const IMG_DUCTS = "/manus-storage/pfs-ducts_1fbe0397.jpg";
+const IMG_FIRE = "/manus-storage/pfs-fire-suppression_742b581e.jpg";
+const IMG_MOTOR = "/manus-storage/pfs-motor_ecdf26f3.jpg";
+const IMG_FAN = "/manus-storage/pfs-fan_2f0815fd.jpg";
+const IMG_MANO = "/manus-storage/pfs-manometer_5c40c0f8.jpg";
+const IMG_PANEL = "/manus-storage/pfs-control-panel-cp1000_8ad9abea.jpg";
+const IMG_BLAST = "/manus-storage/pfs-blast-recovery_dbce54aa.jpg";
+const IMG_DUST = "/manus-storage/pfs-dust-collector_e05ef794.webp";
+const IMG_SEALS = "/manus-storage/pfs-part-seals-MxbVGeBtpPQrw4J8RrUxdn.webp";
+const IMG_HANDLE = "/manus-storage/pfs-door-hardware-v2_d749ca14.jpg";
+const IMG_MATS = "/manus-storage/pfs-floor-mat_a51917a0.jpg";
 const IMG_BOOTHCOAT = "/manus-storage/pfs-boothcoat-final_a2dbee08.jpg";
 const IMG_CLEARVIEW = "/manus-storage/like90clearviewcoating_2dada6e2.webp";
-const IMG_CURTAINS  = "/manus-storage/pfs-shop-curtains-mercedes_6813d184.png"; // shop curtain enclosure with Mercedes
-const IMG_AIRLINE   = "/manus-storage/pfs-airline-piping-kit_0baf89bd.webp"; // blue aluminum airline piping kit
+const IMG_CURTAINS = "/manus-storage/pfs-shop-curtains-mercedes_6813d184.png"; // shop curtain enclosure with Mercedes
+const IMG_AIRLINE = "/manus-storage/pfs-airline-piping-kit_0baf89bd.webp"; // blue aluminum airline piping kit
 
 // ── PARTS CATALOG ─────────────────────────────────────────────────────────────
 // ecommerceReady: true = will show "ADD TO CART" when store is live
@@ -52,199 +52,199 @@ const PARTS: {
   ecommerceReady: boolean;
   featured?: boolean;
 }[] = [
-  {
-    id: "filters",
-    label: "Filters & Media",
-    sub: "Exhaust & Intake",
-    img: IMG_FILTERS,
-    desc: "Fiberglass exhaust filters, tacky intake media, and blanket intake upgrades. Sized to your booth — order by the case.",
-    href: "https://pfsfilters.com",
-    badge: "MOST ORDERED",
-    ecommerceReady: true,
-    featured: true,
-  },
-  {
-    id: "compressors",
-    label: "Air Compressors",
-    sub: "Rotary Screw & Piston",
-    img: IMG_COMPRESSOR,
-    desc: "Industrial rotary screw and piston air compressors sized for spray booth operations. Single and two-stage configurations. Matched to your CFM and PSI requirements.",
-    href: "/contact",
-    badge: "CUSTOM ORDER",
-    ecommerceReady: false,
-  },
-  {
-    id: "car-lifts",
-    label: "Car Lifts",
-    sub: "2-Post, 4-Post & Scissor",
-    img: IMG_CAR_LIFT,
-    desc: "Professional automotive lifts for paint booth applications. 2-post, 4-post, and scissor configurations. Rated for passenger vehicles, trucks, and fleet vehicles.",
-    href: "/contact",
-    badge: "CUSTOM ORDER",
-    ecommerceReady: false,
-  },
-  {
-    id: "ducts",
-    label: "Ductwork",
-    sub: "Galvanized Steel",
-    img: IMG_DUCTS,
-    desc: "Spiral duct sections, elbows, flanges, and transition fittings. Galvanized steel matched to PFS booth specs.",
-    href: "/parts/ducts",
-    ecommerceReady: true,
-  },
-  {
-    id: "fire-kit",
-    label: "Fire Suppression Kits",
-    sub: "NFPA 33 Compliant",
-    img: IMG_FIRE,
-    desc: "Complete fire suppression kits with cylinder, fusible links, nozzles, and mounting hardware. NFPA 33 compliant.",
-    href: "/parts/fire-suppression",
-    badge: "SAFETY CRITICAL",
-    ecommerceReady: false,
-  },
-  {
-    id: "motors",
-    label: "Replacement Motors",
-    sub: "TEFC Three-Phase",
-    img: IMG_MOTOR,
-    desc: "TEFC three-phase exhaust fan motors. Tri-voltage, CSA/UL recognized. Drop-in replacements for all PFS fan assemblies.",
-    href: "/parts/motors",
-    ecommerceReady: true,
-  },
-  {
-    id: "fans",
-    label: "Fan Assemblies",
-    sub: "Tube Axial",
-    img: IMG_FAN,
-    desc: "Complete tube axial fan assemblies with belt guards and duct connector rings. UL/CUL listed. Non-sparking construction.",
-    href: "/parts/fans",
-    ecommerceReady: true,
-  },
-  {
-    id: "manometers",
-    label: "Manometers",
-    sub: "Differential Pressure",
-    img: IMG_MANO,
-    desc: "Differential pressure gauges for filter monitoring. Dial and digital options. Ensure your booth stays in compliance.",
-    href: "/parts/manometers",
-    ecommerceReady: true,
-  },
-  {
-    id: "control-panels",
-    label: "Control Panels",
-    sub: "UL 508A Certified",
-    img: IMG_PANEL,
-    desc: "Replacement and upgrade control panels. Electromechanical and programmable configurations. UL 508A certified fabrication.",
-    href: "/parts/control-panels",
-    badge: "CUSTOM ORDER",
-    ecommerceReady: false,
-  },
-  {
-    id: "blast-vacuum",
-    label: "Blast & Vacuum Recovery",
-    sub: "Abrasive Recovery Systems",
-    img: IMG_BLAST,
-    desc: "Blast room vacuum recovery systems, cyclone separators, and media reclaim components. Maximize abrasive reuse.",
-    href: "/parts/blast-vacuum",
-    ecommerceReady: false,
-  },
-  {
-    id: "dust-collector",
-    label: "Dust Collector Powder Module Filters",
-    sub: "Cartridge Replacement",
-    img: IMG_DUST,
-    desc: "Pleated cartridge filter replacements for powder coating dust collector modules. Pulse-jet compatible. Multiple micron ratings available.",
-    href: "/parts/dust-collector-filters",
-    ecommerceReady: true,
-  },
-  {
-    id: "cartridge-collector-filters",
-    label: "Cartridge Collector Filters",
-    sub: "Dust Collectors & Powder Booths",
-    img: "/manus-storage/pfs-cartridge-filters-crop_b4a8b363.jpeg",
-    desc: "OEM cartridge filters for dust collectors and powder coating booths. Pleated polyester and spunbond media in standard and high-efficiency ratings. Compatible with pulse-jet and shaker-style collectors used in powder booths, blast rooms, and industrial finishing lines.",
-    href: "/contact",
-    badge: "OEM",
-    ecommerceReady: false,
-  },
-  {
-    id: "dust-collector-modules",
-    label: "Dust Collector Modules",
-    sub: "Complete Units & Assemblies",
-    img: "/manus-storage/pfs-act-dust-module_b0566cde.webp",
-    desc: "Complete dust collector module assemblies for powder coating and industrial finishing lines. Cartridge-style, high-efficiency filtration with pulse-jet cleaning.",
-    href: "/parts/dust-collector-modules",
-    badge: "CUSTOM ORDER",
-    ecommerceReady: false,
-  },
-  {
-    id: "seals",
-    label: "Door Seals & Gaskets",
-    sub: "Neoprene & Foam",
-    img: IMG_SEALS,
-    desc: "Neoprene door seals, foam weatherstripping, and rubber gaskets. Maintain booth pressure and prevent solvent vapor leaks.",
-    href: "/parts/seals",
-    ecommerceReady: true,
-  },
-  {
-    id: "door-handles",
-    label: "Door Handles & Latches",
-    sub: "Handles, Latches & Hardware",
-    img: IMG_HANDLE,
-    desc: "Stainless steel door handles, cam latches, T-handle locks, and hinges. Direct replacements for all PFS booth door hardware.",
-    href: "/parts/door-hardware",
-    ecommerceReady: true,
-  },
-  {
-    id: "floor-mats",
-    label: "Paint Booth Floor Mats",
-    sub: "Adhesive-Backed Mat",
-    img: IMG_MATS,
-    desc: "Paint Booth Mat with Adhesive Backing — Protects your spray booth floors and mixing room surfaces from build up by collecting the overspray, dust and particles that cause paint defects or create a fire hazard.",
-    href: "/parts/floor-mats",
-    ecommerceReady: true,
-  },
-  {
-    id: "boothcoat",
-    label: "Boothcoat Peelable Coating",
-    sub: "Peelable Booth Coat",
-    img: IMG_BOOTHCOAT,
-    desc: "Boothcoat Peelable White Protective Coating for spray paint applications. Waterborne, non-hazardous formula that applies easily and peels off in large sheets — keeping booth walls, floors, and fixtures clean without scraping or solvents.",
-    href: "/contact",
-    badge: "MOST ORDERED",
-    ecommerceReady: true,
-  },
-  {
-    id: "curtains",
-    label: "Strip Curtains & Partitions",
-    sub: "PVC Strip, Welding & Prep",
-    img: IMG_CURTAINS,
-    desc: "Heavy-duty PVC strip curtains and industrial partitions for prep stations, wash bays, aluminum welding stations, shop dividers, and drive-through openings. Custom cut to width and height. Clear, opaque, and weld-grade options available.",
-    href: "/contact",
-    badge: "CUSTOM ORDER",
-    ecommerceReady: false,
-  },
-  {
-    id: "airline",
-    label: "Airline Systems",
-    sub: "Hose Reels, Drops & Fittings",
-    img: IMG_AIRLINE,
-    desc: "Complete airline systems for spray booths and finishing lines — retractable hose reels, drop lines, quick-connect fittings, regulators, and wall-mount brackets. Sized for single-gun and multi-gun booth configurations.",
-    href: "/contact",
-    badge: "CUSTOM ORDER",
-    ecommerceReady: false,
-  },
-  {
-    id: "clearview",
-    label: "Clear View Peelable Coating",
-    sub: "Glass, Lights & Windows",
-    img: IMG_CLEARVIEW,
-    desc: "Crystal-clear peelable coating for booth lights and windows. Levels to a smooth transparent film that won't distort booth lighting or window clarity. Peels off easily in large sheets — simply peel and reapply as overspray builds up. Water-based, non-hazardous, VOC 60 g/l.",
-    href: "/contact",
-    badge: "MOST ORDERED",
-    ecommerceReady: true,
-  },
-];
+    {
+      id: "filters",
+      label: "Filters & Media",
+      sub: "Exhaust & Intake",
+      img: IMG_FILTERS,
+      desc: "Fiberglass exhaust filters, tacky intake media, and blanket intake upgrades. Sized to your booth — order by the case.",
+      href: "https://pfsfilters.com",
+      badge: "MOST ORDERED",
+      ecommerceReady: true,
+      featured: true,
+    },
+    {
+      id: "compressors",
+      label: "Air Compressors",
+      sub: "Rotary Screw & Piston",
+      img: IMG_COMPRESSOR,
+      desc: "Industrial rotary screw and piston air compressors sized for spray booth operations. Single and two-stage configurations. Matched to your CFM and PSI requirements.",
+      href: "/contact",
+      badge: "CUSTOM ORDER",
+      ecommerceReady: false,
+    },
+    {
+      id: "car-lifts",
+      label: "Car Lifts",
+      sub: "2-Post, 4-Post & Scissor",
+      img: IMG_CAR_LIFT,
+      desc: "Professional automotive lifts for paint booth applications. 2-post, 4-post, and scissor configurations. Rated for passenger vehicles, trucks, and fleet vehicles.",
+      href: "/contact",
+      badge: "CUSTOM ORDER",
+      ecommerceReady: false,
+    },
+    {
+      id: "ducts",
+      label: "Ductwork",
+      sub: "Galvanized Steel",
+      img: IMG_DUCTS,
+      desc: "Spiral duct sections, elbows, flanges, and transition fittings. Galvanized steel matched to PFS booth specs.",
+      href: "/parts/ducts",
+      ecommerceReady: true,
+    },
+    {
+      id: "fire-kit",
+      label: "Fire Suppression Kits",
+      sub: "NFPA 33 Compliant",
+      img: IMG_FIRE,
+      desc: "Complete fire suppression kits with cylinder, fusible links, nozzles, and mounting hardware. NFPA 33 compliant.",
+      href: "/parts/fire-suppression",
+      badge: "SAFETY CRITICAL",
+      ecommerceReady: false,
+    },
+    {
+      id: "motors",
+      label: "Replacement Motors",
+      sub: "TEFC Three-Phase",
+      img: IMG_MOTOR,
+      desc: "TEFC three-phase exhaust fan motors. Tri-voltage, CSA/UL recognized. Drop-in replacements for all PFS fan assemblies.",
+      href: "/parts/motors",
+      ecommerceReady: true,
+    },
+    {
+      id: "fans",
+      label: "Fan Assemblies",
+      sub: "Tube Axial",
+      img: IMG_FAN,
+      desc: "Complete tube axial fan assemblies with belt guards and duct connector rings. UL/CUL listed. Non-sparking construction.",
+      href: "/parts/fans",
+      ecommerceReady: true,
+    },
+    {
+      id: "manometers",
+      label: "Manometers",
+      sub: "Differential Pressure",
+      img: IMG_MANO,
+      desc: "Differential pressure gauges for filter monitoring. Dial and digital options. Ensure your booth stays in compliance.",
+      href: "/parts/manometers",
+      ecommerceReady: true,
+    },
+    {
+      id: "control-panels",
+      label: "Control Panels",
+      sub: "UL 508A Certified",
+      img: IMG_PANEL,
+      desc: "Replacement and upgrade control panels. Electromechanical and programmable configurations. UL 508A certified fabrication.",
+      href: "/parts/control-panels",
+      badge: "CUSTOM ORDER",
+      ecommerceReady: false,
+    },
+    {
+      id: "blast-vacuum",
+      label: "Blast & Vacuum Recovery",
+      sub: "Abrasive Recovery Systems",
+      img: IMG_BLAST,
+      desc: "Blast room vacuum recovery systems, cyclone separators, and media reclaim components. Maximize abrasive reuse.",
+      href: "/parts/blast-vacuum",
+      ecommerceReady: false,
+    },
+    {
+      id: "dust-collector",
+      label: "Dust Collector Powder Module Filters",
+      sub: "Cartridge Replacement",
+      img: IMG_DUST,
+      desc: "Pleated cartridge filter replacements for powder coating dust collector modules. Pulse-jet compatible. Multiple micron ratings available.",
+      href: "/parts/dust-collector-filters",
+      ecommerceReady: true,
+    },
+    {
+      id: "cartridge-collector-filters",
+      label: "Cartridge Collector Filters",
+      sub: "Dust Collectors & Powder Booths",
+      img: "/manus-storage/pfs-cartridge-filters-crop_b4a8b363.jpeg",
+      desc: "OEM cartridge filters for dust collectors and powder coating booths. Pleated polyester and spunbond media in standard and high-efficiency ratings. Compatible with pulse-jet and shaker-style collectors used in powder booths, blast rooms, and industrial finishing lines.",
+      href: "/contact",
+      badge: "OEM",
+      ecommerceReady: false,
+    },
+    {
+      id: "dust-collector-modules",
+      label: "Dust Collector Modules",
+      sub: "Complete Units & Assemblies",
+      img: "/manus-storage/pfs-act-dust-module_b0566cde.webp",
+      desc: "Complete dust collector module assemblies for powder coating and industrial finishing lines. Cartridge-style, high-efficiency filtration with pulse-jet cleaning.",
+      href: "/parts/dust-collector-modules",
+      badge: "CUSTOM ORDER",
+      ecommerceReady: false,
+    },
+    {
+      id: "seals",
+      label: "Door Seals & Gaskets",
+      sub: "Neoprene & Foam",
+      img: IMG_SEALS,
+      desc: "Neoprene door seals, foam weatherstripping, and rubber gaskets. Maintain booth pressure and prevent solvent vapor leaks.",
+      href: "/parts/seals",
+      ecommerceReady: true,
+    },
+    {
+      id: "door-handles",
+      label: "Door Handles & Latches",
+      sub: "Handles, Latches & Hardware",
+      img: IMG_HANDLE,
+      desc: "Stainless steel door handles, cam latches, T-handle locks, and hinges. Direct replacements for all PFS booth door hardware.",
+      href: "/parts/door-hardware",
+      ecommerceReady: true,
+    },
+    {
+      id: "floor-mats",
+      label: "Paint Booth Floor Mats",
+      sub: "Adhesive-Backed Mat",
+      img: IMG_MATS,
+      desc: "Paint Booth Mat with Adhesive Backing — Protects your spray booth floors and mixing room surfaces from build up by collecting the overspray, dust and particles that cause paint defects or create a fire hazard.",
+      href: "/parts/floor-mats",
+      ecommerceReady: true,
+    },
+    {
+      id: "boothcoat",
+      label: "Boothcoat Peelable Coating",
+      sub: "Peelable Booth Coat",
+      img: IMG_BOOTHCOAT,
+      desc: "Boothcoat Peelable White Protective Coating for spray paint applications. Waterborne, non-hazardous formula that applies easily and peels off in large sheets — keeping booth walls, floors, and fixtures clean without scraping or solvents.",
+      href: "/contact",
+      badge: "MOST ORDERED",
+      ecommerceReady: true,
+    },
+    {
+      id: "curtains",
+      label: "Strip Curtains & Partitions",
+      sub: "PVC Strip, Welding & Prep",
+      img: IMG_CURTAINS,
+      desc: "Heavy-duty PVC strip curtains and industrial partitions for prep stations, wash bays, aluminum welding stations, shop dividers, and drive-through openings. Custom cut to width and height. Clear, opaque, and weld-grade options available.",
+      href: "/contact",
+      badge: "CUSTOM ORDER",
+      ecommerceReady: false,
+    },
+    {
+      id: "airline",
+      label: "Airline Systems",
+      sub: "Hose Reels, Drops & Fittings",
+      img: IMG_AIRLINE,
+      desc: "Complete airline systems for spray booths and finishing lines — retractable hose reels, drop lines, quick-connect fittings, regulators, and wall-mount brackets. Sized for single-gun and multi-gun booth configurations.",
+      href: "/contact",
+      badge: "CUSTOM ORDER",
+      ecommerceReady: false,
+    },
+    {
+      id: "clearview",
+      label: "Clear View Peelable Coating",
+      sub: "Glass, Lights & Windows",
+      img: IMG_CLEARVIEW,
+      desc: "Crystal-clear peelable coating for booth lights and windows. Levels to a smooth transparent film that won't distort booth lighting or window clarity. Peels off easily in large sheets — simply peel and reapply as overspray builds up. Water-based, non-hazardous, VOC 60 g/l.",
+      href: "/contact",
+      badge: "MOST ORDERED",
+      ecommerceReady: true,
+    },
+  ];
 
 // ── PART CARD ─────────────────────────────────────────────────────────────────
 function PartCard({
@@ -433,7 +433,7 @@ export default function PartsHubPage() {
           loop
           playsInline
           disablePictureInPicture
-          
+
           style={{
             position: "absolute", inset: 0,
             width: "100%", height: "100%", objectFit: "cover",
@@ -498,7 +498,7 @@ export default function PartsHubPage() {
                 REQUEST PARTS QUOTE <ArrowRight size={14} />
               </button>
             </Link>
-            <a href="tel:+18885457715">
+            <a data-animation="slideRight" href="tel:+18885457715">
               <button style={{
                 background: "transparent", color: "#fff",
                 border: "2px solid rgba(255,255,255,0.4)",
@@ -589,7 +589,7 @@ export default function PartsHubPage() {
               );
             })}
           </div>
-          <Link data-animation="slideLeft" href="/contact">
+          <Link href="/contact">
             <button style={{
               background: "#fff", color: BLUE,
               border: "none", padding: "0.5rem 1.2rem",
@@ -635,7 +635,7 @@ export default function PartsHubPage() {
         </div>
 
         {/* Grid */}
-        <div data-animation="fadeIn" style={{
+        <div style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))",
           gap: "1rem",
@@ -653,14 +653,14 @@ export default function PartsHubPage() {
         borderBottom: "3px solid #222",
         padding: "3rem 2rem",
       }}>
-        <div data-animation="fadeIn" style={{
+        <div style={{
           maxWidth: "1200px", margin: "0 auto",
           display: "flex", alignItems: "center",
           justifyContent: "space-between", gap: "2rem",
           flexWrap: "wrap",
         }}>
           <div>
-            <div data-animation="fadeIn" style={{
+            <div style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "0.72rem", fontWeight: 700,
               color: "rgba(255,255,255,0.5)", letterSpacing: "0.18em",
@@ -720,7 +720,7 @@ export default function PartsHubPage() {
 
       {/* ── BULK / SUBSCRIPTION SECTION ── */}
       <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "3rem 2rem" }}>
-        <div data-animation="fadeIn" style={{
+        <div style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
           gap: "1.5rem",
@@ -767,7 +767,7 @@ export default function PartsHubPage() {
               }}>
                 {card.desc}
               </div>
-              <Link data-animation="slideLeft" href="/contact">
+              <Link href="/contact">
                 <button style={{
                   background: "transparent", color: BLUE,
                   border: `2px solid ${BLUE}`,
@@ -803,7 +803,7 @@ export default function PartsHubPage() {
         padding: "2rem",
         borderTop: "3px solid #111",
       }}>
-        <div data-animation="fadeIn" style={{
+        <div style={{
           maxWidth: "1200px", margin: "0 auto",
           display: "flex", alignItems: "center",
           justifyContent: "center", gap: "3rem",

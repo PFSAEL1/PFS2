@@ -125,7 +125,7 @@ export default function NewsPage() {
         <div className="container" style={{ position: "relative", zIndex: 2, paddingBottom: "3.5rem" }}>
           {/* Breadcrumb */}
           <div style={{ display:"flex",alignItems:"center",gap:"0.5rem",marginBottom:"1.5rem" }}>
-            <Link data-animation="slideLeft" href="/company">
+            <Link href="/company">
               <span style={{ fontFamily:"'Chakra Petch',sans-serif",fontSize:"0.72rem",fontWeight:700,color:"rgba(255,255,255,0.4)",letterSpacing:"0.1em",textTransform:"uppercase",cursor:"pointer",transition:"color 0.15s" }}
                 onMouseEnter={e=>(e.currentTarget.style.color="#fff")}
                 onMouseLeave={e=>(e.currentTarget.style.color="rgba(255,255,255,0.4)")}>
@@ -194,11 +194,11 @@ export default function NewsPage() {
               background: "#fff",
               border: `1px solid #e5e7eb`,
               borderTop: `4px solid ${BLUE}`,
-              overflow: "hidden",
+              // overflow: "hidden",
             }}
           >
             {/* Press photo — full width */}
-            <div data-animation="fadeIn" style={{ position:"relative",overflow:"hidden",maxHeight:"480px" }}>
+            <div style={{ position:"relative",overflow:"hidden",maxHeight:"480px" }}>
               <img
                 src={PRESS_PHOTO}
                 alt="PFS Orion spray booth being installed at a customer facility — PFS technicians on-site with forklift and booth panels"
@@ -304,7 +304,7 @@ export default function NewsPage() {
 
               {/* Article CTAs */}
               <div style={{ display:"flex",gap:"1rem",flexWrap:"wrap",marginTop:"2.5rem",paddingTop:"2rem",borderTop:"1px solid #e5e7eb" }}>
-                <Link href="/service">
+                <Link data-animation="slideLeft" href="/service">
                   <button className="btn-glow" style={{ fontFamily:"'Chakra Petch',sans-serif",fontWeight:700,fontSize:"0.82rem",letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.9rem 2rem",display:"inline-flex",alignItems:"center",gap:"0.5rem",cursor:"pointer" }}>
                     EXPLORE PFS SERVICE <ArrowRight size={14} />
                   </button>
@@ -396,7 +396,7 @@ export default function NewsPage() {
             <h2 data-animation="slideLeft" style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"clamp(1.5rem,3vw,2.2rem)",fontWeight:800,color:"#fff",lineHeight:1.1,marginBottom:"0.5rem" }}>
               Media Inquiries
             </h2>
-            <p style={{ fontFamily:"'Archivo Narrow','Inter',sans-serif",fontSize:"0.95rem",color:"rgba(255,255,255,0.7)",lineHeight:1.6 }}>
+            <p data-animation="slideLeft" style={{ fontFamily:"'Archivo Narrow','Inter',sans-serif",fontSize:"0.95rem",color:"rgba(255,255,255,0.7)",lineHeight:1.6 }}>
               For press inquiries, product photography, or media requests, contact our team directly.
             </p>
           </div>

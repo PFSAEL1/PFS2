@@ -250,9 +250,9 @@ export default function OpenFaceBoothPage() {
         <div className="container" style={{ position:"relative",zIndex:2,paddingTop:"8rem",paddingBottom:"3.5rem" }}>
           <nav style={{ display:"flex",alignItems:"center",gap:"0.5rem",marginBottom:"1.5rem",flexWrap:"wrap" }}>
             {[{ label:"Products",href:"/products" },{ label:"Paint Booths",href:"/products/paint-booths" },{ label:"Open Face" }].map((crumb, i, arr) => (
-              <span data-animation="slideRight" key={i} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem" }}>
+              <span key={i} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem" }}>
                 {crumb.href
-                  ? <Link data-animation="slideLeft" href={crumb.href}><span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.72rem",fontWeight:700,letterSpacing:"0.12em",color:"rgba(255,255,255,0.5)",textTransform:"uppercase",cursor:"pointer" }}>{crumb.label}</span></Link>
+                  ? <Link href={crumb.href}><span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.72rem",fontWeight:700,letterSpacing:"0.12em",color:"rgba(255,255,255,0.5)",textTransform:"uppercase",cursor:"pointer" }}>{crumb.label}</span></Link>
                   : <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.72rem",fontWeight:700,letterSpacing:"0.12em",color:"rgba(255,255,255,0.75)",textTransform:"uppercase" }}>{crumb.label}</span>
                 }
                 {i < arr.length - 1 && <span style={{ color:"rgba(255,255,255,0.3)",fontSize:"0.7rem" }}>›</span>}
@@ -461,7 +461,7 @@ export default function OpenFaceBoothPage() {
             <GalleryGrid images={GALLERY_IMGS} cardHeight="280px" className="grid grid-cols-2 sm:grid-cols-4 gap-3" />
           </div>
           <div data-animation="slideRight" className="text-center">
-            <Link data-animation="slideLeft" href="/contact/request-a-quote?from=open-face-booth">
+            <Link href="/contact/request-a-quote?from=open-face-booth">
               <span className="btn-glow">REQUEST A QUOTE <ArrowRight size={15}/></span>
             </Link>
           </div>

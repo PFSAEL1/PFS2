@@ -171,7 +171,7 @@ export default function CertificationsPage() {
               gap: "0.5rem",
             }}
           >
-            <Link data-animation="slideLeft" href="/"><span style={{ cursor: "pointer", transition: "color 0.15s" }} onMouseEnter={e => (e.currentTarget.style.color = "#fff")} onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.4)")}>Home</span></Link>
+            <Link href="/"><span style={{ cursor: "pointer", transition: "color 0.15s" }} onMouseEnter={e => (e.currentTarget.style.color = "#fff")} onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.4)")}>Home</span></Link>
             <span style={{ color: "rgba(255,255,255,0.2)" }}>/</span>
             <Link href="/company"><span style={{ cursor: "pointer", transition: "color 0.15s" }} onMouseEnter={e => (e.currentTarget.style.color = "#fff")} onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.4)")}>Company</span></Link>
             <span style={{ color: "rgba(255,255,255,0.2)" }}>/</span>
@@ -319,7 +319,7 @@ export default function CertificationsPage() {
             >
               Need Compliance Documentation?
             </h2>
-            <p
+            <p data-animation="slideLeft"
               style={{
                 fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
                 fontSize: "0.95rem",

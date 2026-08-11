@@ -44,13 +44,13 @@ export default function AirMakeUpUnitsHub() {
                   />
                 </div>
                 <div className="p-8">
-                  <div data-animation="slideLeft" className="flex items-start justify-between mb-3">
-                    <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.5rem", fontWeight: 700, color: "#1a1a1a", lineHeight: 1.2 }}>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.5rem", fontWeight: 700, color: "#1a1a1a", lineHeight: 1.2 }}>
                       Heated Air Make-Up Units
                     </h3>
                     <ArrowRight size={20} className="text-[#1B2B4B] flex-shrink-0 mt-1 group-hover:translate-x-1 transition-transform" />
                   </div>
-                  <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.9rem", color: "#555", lineHeight: 1.7, marginBottom: "1.5rem" }}>
+                  <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.9rem", color: "#555", lineHeight: 1.7, marginBottom: "1.5rem" }}>
                     Gas-fired or electric heated AMUs for cold climates and temperature-sensitive coatings. Available with natural gas, propane, or electric heat sources. Required for booths operating in sub-freezing environments.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-6">
@@ -58,7 +58,7 @@ export default function AirMakeUpUnitsHub() {
                       <span key={tag} style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", backgroundColor: "#f4f4f2", color: "#444", padding: "0.25rem 0.6rem" }}>{tag}</span>
                     ))}
                   </div>
-                  <span data-animation="slideLeft" className="btn-glow inline-flex items-center gap-2">Get Pricing <ArrowRight size={14} /></span>
+                  <span className="btn-glow inline-flex items-center gap-2">Get Pricing <ArrowRight size={14} /></span>
                 </div>
               </div>
             </Link>
@@ -74,13 +74,13 @@ export default function AirMakeUpUnitsHub() {
                   />
                 </div>
                 <div className="p-8">
-                  <div data-animation="slideLeft" className="flex items-start justify-between mb-3">
+                  <div className="flex items-start justify-between mb-3">
                     <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.5rem", fontWeight: 700, color: "#1a1a1a", lineHeight: 1.2 }}>
                       Non-Heated Air Make-Up Units
                     </h3>
                     <ArrowRight size={20} className="text-[#1B2B4B] flex-shrink-0 mt-1 group-hover:translate-x-1 transition-transform" />
                   </div>
-                  <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.9rem", color: "#555", lineHeight: 1.7, marginBottom: "1.5rem" }}>
+                  <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.9rem", color: "#555", lineHeight: 1.7, marginBottom: "1.5rem" }}>
                     Designed to bring fresh outside air into the paint booth. Non-tempered. Heated options available upon request.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-6">
@@ -88,7 +88,7 @@ export default function AirMakeUpUnitsHub() {
                       <span key={tag} style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", backgroundColor: "#f4f4f2", color: "#444", padding: "0.25rem 0.6rem" }}>{tag}</span>
                     ))}
                   </div>
-                  <span data-animation="slideLeft" className="btn-glow inline-flex items-center gap-2">Get Pricing <ArrowRight size={14} /></span>
+                  <span className="btn-glow inline-flex items-center gap-2">Get Pricing <ArrowRight size={14} /></span>
                 </div>
               </div>
             </Link>

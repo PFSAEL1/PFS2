@@ -206,21 +206,21 @@ export default function FiltersPage() {
                 The Right Filter<br />for Every Booth
               </h2>
               <div style={{ width: "40px", height: "3px", background: BLUE, marginBottom: "1.5rem" }} />
-              <p data-animation="slideLeft" style={{
+              <p style={{
                 fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
                 fontSize: "0.95rem", color: "#444", lineHeight: 1.75,
                 marginBottom: "1.25rem",
               }}>
                 Spray booth filters are not a commodity — the wrong media can reduce airflow below the 100 FPM face velocity required by NFPA 33, create fire hazards from overspray accumulation, and produce finish defects that cost far more than the filter itself. As the original manufacturer of PFS spray booths, we stock the exact filter specifications your equipment requires.
               </p>
-              <p data-animation="slideLeft" style={{
+              <p style={{
                 fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
                 fontSize: "0.95rem", color: "#444", lineHeight: 1.75,
                 marginBottom: "1.25rem",
               }}>
                 PFS supplies exhaust filters, intake filters, ceiling media, paint arrest systems, and activated carbon VOC capture media for all PFS booth models and most major OEM brands. Whether you need a single replacement panel or a bulk supply for a multi-location fleet, our parts team will identify the correct specification and get it shipped fast from our Northern California warehouse.
               </p>
-              <p data-animation="slideLeft" style={{
+              <p style={{
                 fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
                 fontSize: "0.95rem", color: "#444", lineHeight: 1.75,
               }}>
@@ -373,7 +373,7 @@ export default function FiltersPage() {
                 }}>
                   {filter.subtitle}
                 </div>
-                <p data-animation="slideLeft" style={{
+                <p style={{
                   fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
                   fontSize: "0.85rem", color: "#555", lineHeight: 1.65,
                   marginBottom: "1rem",
@@ -422,21 +422,21 @@ export default function FiltersPage() {
                 Filter Rotation<br />Program
               </h2>
               <div style={{ width: "40px", height: "3px", background: BLUE, marginBottom: "1.5rem" }} />
-              <p data-animation="slideLeft" style={{
+              <p style={{
                 fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
                 fontSize: "0.95rem", color: "#444", lineHeight: 1.75,
                 marginBottom: "1.25rem",
               }}>
                 The PFS Filter Rotation Program is a scheduled replacement service designed for collision repair shops, fleet operators, and high-volume production facilities that cannot afford the cost of running with clogged or degraded filter media. We track your filter life based on your production volume and booth specifications, ship replacement media on a schedule matched to your operation, and coordinate filter changes with your preventive maintenance visits.
               </p>
-              <p data-animation="slideLeft" style={{
+              <p style={{
                 fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
                 fontSize: "0.95rem", color: "#444", lineHeight: 1.75,
                 marginBottom: "1.5rem",
               }}>
                 Program participants receive priority parts availability, volume pricing on filter media, and a dedicated account contact who knows your equipment specifications. For multi-location fleets, we coordinate filter supply and scheduling across all sites — one call, one invoice, one point of contact.
               </p>
-              <a data-animation="slideLeft" href="tel:8885457715" style={{
+              <a data-animation="slideRight" href="tel:8885457715" style={{
                 display: "inline-flex", alignItems: "center", gap: "0.5rem",
                 background: BLUE, color: "#fff",
                 padding: "0.85rem 1.8rem",
@@ -448,7 +448,7 @@ export default function FiltersPage() {
                 <Phone size={14} /> Ask About the Program: (888) 545-7715
               </a>
             </div>
-            <div data-animation="fadeIn" style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
               {[
                 { step: "01", title: "We Assess Your Booth", desc: "We review your booth model, production volume, and coating types to determine the correct filter specification and replacement schedule." },
                 { step: "02", title: "We Set the Schedule", desc: "Based on your production data, we establish a filter rotation schedule that keeps your booth running within spec at all times." },
@@ -477,7 +477,7 @@ export default function FiltersPage() {
                     }}>
                       {item.title}
                     </div>
-                    <p data-animation="slideLeft" style={{
+                    <p style={{
                       fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
                       fontSize: "0.82rem", color: "#555", lineHeight: 1.6, margin: 0,
                     }}>
@@ -512,7 +512,7 @@ export default function FiltersPage() {
               Common Questions
             </h2>
           </div>
-          <div data-animation="fadeIn" style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
             {FAQ_ITEMS.map((item) => (
               <div key={item.q} style={{
                 background: "#fff",
@@ -528,7 +528,7 @@ export default function FiltersPage() {
                 }}>
                   {item.q}
                 </h3>
-                <p data-animation="slideLeft" style={{
+                <p style={{
                   fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
                   fontSize: "0.88rem", color: "#555", lineHeight: 1.7, margin: 0,
                 }}>
