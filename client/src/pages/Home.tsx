@@ -12,7 +12,7 @@ import { useSEO } from '@/hooks/useSEO';
 import { ArrowRight, CheckCircle, Phone, ChevronRight, Shield, Zap, Wrench, MapPin } from "lucide-react";
 import { useReveal } from "@/hooks/useReveal";
 import LogoCarousel from "@/components/LogoCarousel";
-import OurProcess from "@/components/OurProcess";
+// import OurProcess from "@/components/OurProcess";
 
 const HERO_VIDEO_MP4 = "/manus-storage/pfs-home-hero-dji-v2_c53f6df4.mp4";  // DJI drone aerial — full PFS compound flyover
 const HERO_VIDEO_WEBM = "/manus-storage/pfs-hero-video_c8080ffb.webm";
@@ -358,10 +358,10 @@ export default function Home() {
         </div>
       </section>
 
-      <OurProcess />
+      {/* <OurProcess /> */}
 
       {/* ── Why PFS ── */}
-      <section ref={whyRef} style={{ padding: "7rem 0", backgroundColor: "#0A0A0A", position: "relative"}}>
+      <section ref={whyRef} style={{ padding: "7rem 0", backgroundColor: "#0A0A0A", position: "relative" }}>
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 100% 40%, rgba(255,255,255,0.04) 0%, transparent 50%), linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.3) 100%)", pointerEvents: "none" }} />
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -396,7 +396,7 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="mt-10"  data-animation="slideRight">
+              <div className="mt-10" data-animation="slideRight">
                 <Link href="/company/about">
                   <span className="btn-primary">About PFS <ArrowRight size={14} /></span>
                 </Link>
@@ -579,7 +579,7 @@ export default function Home() {
       <section style={{ backgroundColor: "#0A0A0A", position: "relative", overflow: "hidden", padding: "5rem 0", borderTop: "1px solid rgba(255,255,255,0.1)" }}>
         <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(0,0,0,0.2) 0%, transparent 50%, rgba(0,0,0,0.15) 100%)", pointerEvents: "none" }} />
         <div className="absolute right-0 top-0 bottom-0" style={{ width: "40%", background: "radial-gradient(ellipse at right, rgba(255,255,255,0.06) 0%, transparent 70%)", pointerEvents: "none" }} />
-Our Equipment
+        Our Equipment
         <div className="container relative">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
