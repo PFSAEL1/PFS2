@@ -1,4 +1,4 @@
-﻿/**
+/**
  * PFS Enclosed Paint Booths Sub-Page
  * Shows all enclosed booth airflow configurations as clickable cards:
  * Cross-Flow, Semi-Downdraft, Full Downdraft, Side Downdraft, Heated, Non-Heated, Sprinter Van / High-Clearance
@@ -11,15 +11,15 @@ import { ArrowRight, CheckCircle2, Info } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
 const HERO_VIDEO = "/manus-storage/pfs-enclosed-tesla-hero_9c110001.mp4";
-const HERO_IMG   = "/manus-storage/pfs-zenith-tesla-source_c7c540fe.jpg"; // poster fallback
+const HERO_IMG = "/manus-storage/pfs-zenith-tesla-source_c7c540fe.jpg"; // poster fallback
 const HEATED_IMG = "/manus-storage/enclosed-booth-card-zenith_7e010642.jpg";
 const CROSSFLOW_IMG = "/manus-storage/orion-crossflow-render-v3_63c04d8e.webp"; // Real PFS cross-flow booth — shop floor with teal filter doors
 const SEMI_DD_IMG = "/manus-storage/orion-semi-down-epoxy_9144ba19.png";
-const FULL_DD_IMG    = "/manus-storage/zenith_angle_epoxy_cc380a7d_3247b846.webp";
-const RAISED_BM_IMG  = "/manus-storage/PFS_Zenith_FullDD_Front_Epoxy_v2_1a902210.png";
+const FULL_DD_IMG = "/manus-storage/zenith_angle_epoxy_cc380a7d_3247b846.webp";
+const RAISED_BM_IMG = "/manus-storage/PFS_Zenith_FullDD_Front_Epoxy_v2_1a902210.png";
 const SIDE_DD_IMG = "/manus-storage/helios_front_v27_epoxy_dbe93c9f.png";
 const SPRINTER_IMG = "/manus-storage/pfs-sprinter-van-mercedes-clean_84aa20f4.jpg";
-const TRUCKS_IMG      = "/manus-storage/pfs-truck-booth-card_a0d45884_fca2d2cb.jpeg";
+const TRUCKS_IMG = "/manus-storage/pfs-truck-booth-card_a0d45884_fca2d2cb.jpeg";
 const DOUBLE_WALL_IMG = "/manus-storage/pfs-double-wall-booth-v2_8cdb7a24.webp";
 
 const CONFIGURATIONS = [
@@ -142,13 +142,13 @@ export default function EnclosedBoothsPage() {
         justifyContent: "flex-end",
         overflow: "hidden",
       }}>
-        <video  preload="auto"
+        <video preload="auto"
           autoPlay
           muted
           loop
           playsInline
           disablePictureInPicture
-         
+
           aria-hidden="true"
           style={{
             position: "absolute", inset: 0,
@@ -162,7 +162,7 @@ export default function EnclosedBoothsPage() {
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(5,5,5,0.96) 0%, rgba(5,5,5,0.70) 35%, rgba(5,5,5,0.30) 70%, rgba(5,5,5,0.10) 100%)", pointerEvents: "none", zIndex: 1 }} />
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "3px", background: "#1B3A6B", zIndex: 3 }} />
         <div className="container" style={{ position: "relative", zIndex: 2, paddingTop: "8rem", paddingBottom: "4.5rem" }}>
-          <span data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.18em", color: "rgba(255,255,255,0.5)", textTransform: "uppercase", display: "block", marginBottom: "1rem" }}>
+          <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.18em", color: "rgba(255,255,255,0.5)", textTransform: "uppercase", display: "block", marginBottom: "1rem" }}>
             PRODUCTS / PAINT BOOTHS
           </span>
           <h1 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2.6rem, 7vw, 5rem)", fontWeight: 800, color: "#fff", lineHeight: 1.0, letterSpacing: "-0.01em", marginBottom: "1rem", maxWidth: "680px" }}>
@@ -171,8 +171,8 @@ export default function EnclosedBoothsPage() {
           <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "clamp(0.95rem, 1.8vw, 1.1rem)", color: "rgba(255,255,255,0.82)", lineHeight: 1.7, marginBottom: "2.5rem", maxWidth: "500px" }}>
             Full-enclosure spray booths in every airflow configuration — cross-flow, semi-downdraft, full downdraft, side downdraft, heated, and high-clearance for Sprinter vans.
           </p>
-          <Link data-animation="slideRight" href="/contact/request-a-quote?from=enclosed-booth">
-            <span data-animation="slideLeft" className="btn-glow">GET PRICING <ArrowRight size={16} /></span>
+          <Link href="/contact/request-a-quote?from=enclosed-booth">
+            <span data-animation="slideRight" className="btn-glow">GET PRICING <ArrowRight size={16} /></span>
           </Link>
         </div>
       </section>
@@ -192,7 +192,7 @@ export default function EnclosedBoothsPage() {
           {/* Configuration cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {CONFIGURATIONS.map((config) => (
-              <Link key={config.label} href={config.href}>
+              <Link data-animation="fadeIn" key={config.label} href={config.href}>
                 <div className="product-card group h-full" style={{ display: "flex", flexDirection: "column" }}>
                   <div className="overflow-hidden relative" style={{ height: "220px" }}>
                     <img src={config.img} alt={config.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" style={{ objectPosition: config.imgPos || "center 50%" }} />
@@ -215,7 +215,7 @@ export default function EnclosedBoothsPage() {
                     <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#666", lineHeight: 1.6, marginBottom: "0.75rem", flex: 1 }}>
                       {config.desc}
                     </p>
-                    <div data-animation="fadeIn" className="grid grid-cols-1 gap-1">
+                    <div className="grid grid-cols-1 gap-1">
                       {config.specs.map((spec) => (
                         <div key={spec} className="flex items-center gap-1.5">
                           <CheckCircle2 size={12} style={{ color: "#1B2B4B", flexShrink: 0 }} />
@@ -287,7 +287,7 @@ export default function EnclosedBoothsPage() {
                 <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.25rem", fontWeight: 700, color: "white", marginBottom: "0.5rem" }}>
                   Not Sure Which Configuration Is Right for You?
                 </h3>
-                <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "rgba(255,255,255,0.6)", lineHeight: 1.7 }}>
+                <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "rgba(255,255,255,0.6)", lineHeight: 1.7 }}>
                   Our engineers will review your application, throughput, and facility constraints and recommend the right configuration.
                 </p>
               </div>

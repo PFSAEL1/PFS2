@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Woodworking — Dedicated Industry Page
  * Hero: MP4 video (PFS open-face booth, cinematic push-in)
  * Featured: Clean PFS open-face booth photo (pfs-woodworking-booth-clean)
@@ -174,7 +174,7 @@ export default function WoodworkingPage() {
     <div className="bg-white">
       {/* ── FULL-BLEED HERO — Cinematic video background ── */}
       <section style={{ position: "relative", minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "flex-end", overflow: "hidden" }}>
-        <video  preload="auto"
+        <video preload="auto"
           autoPlay
           muted
           loop

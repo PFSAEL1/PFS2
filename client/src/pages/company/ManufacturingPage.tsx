@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Company — Manufacturing Page
  * Hero: HeroShotforWebsite.mov (converted to MP4) — full-bleed autoplay video
  * Shows PFS Santa Rosa manufacturing facility, fabrication process, and quality control.
@@ -10,7 +10,7 @@ import { useSEO } from "@/hooks/useSEO";
 const HERO_VIDEO = "/manus-storage/manufacturing-hero_9216dee6.mp4";
 
 const STATS = [
-  { num: "100%",   label: "USA Fabricated" },
+  { num: "100%", label: "USA Fabricated" },
   { num: "1,000+", label: "Systems Installed" },
   { num: "ETL/UL", label: "Listed Components" },
   { num: "NFPA 33", label: "Built to Standard" },
@@ -56,7 +56,7 @@ export default function ManufacturingPage() {
           background: "#0a0a0a",
         }}
       >
-        <video 
+        <video
           autoPlay
           muted
           loop
@@ -233,7 +233,7 @@ export default function ManufacturingPage() {
                   borderRight: i < STATS.length - 1 ? "1px solid rgba(255,255,255,0.1)" : "none",
                 }}
               >
-                <div data-animation="slideLeft"
+                <div
                   style={{
                     fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
                     fontSize: "clamp(1.4rem, 2.5vw, 2rem)",
@@ -245,7 +245,7 @@ export default function ManufacturingPage() {
                 >
                   {s.num}
                 </div>
-                <div data-animation="slideRight"
+                <div
                   style={{
                     fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
                     fontSize: "0.62rem",
@@ -293,7 +293,7 @@ export default function ManufacturingPage() {
             Everything Under One Roof
           </h2>
 
-          <div
+          <div data-animation="fadeIn"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(3, 1fr)",
@@ -477,7 +477,7 @@ export default function ManufacturingPage() {
             >
               Ready to Build Your System?
             </h2>
-            <p data-animation="slideLeft"
+            <p
               style={{
                 fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
                 fontSize: "0.95rem",
@@ -512,8 +512,8 @@ export default function ManufacturingPage() {
                 GET A QUOTE <ArrowRight size={14} />
               </button>
             </Link>
-            <a data-animation="slideRight" href="tel:8885457715">
-              <button
+            <a href="tel:8885457715">
+              <button data-animation="slideRight"
                 style={{
                   fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
                   fontWeight: 700,

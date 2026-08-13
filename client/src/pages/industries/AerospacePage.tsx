@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Aerospace & Defense — Enriched Page v1
  * Mirrors IndustrialManufacturingPage structure exactly:
  * - Full-bleed hero with real PFS aerospace photo
@@ -348,14 +348,12 @@ export default function AerospacePage() {
         justifyContent: "flex-end",
         overflow: "hidden",
       }}>
-        {/* Pre-load image commented out: video loads directly via poster attribute instead
         <img
           src={HERO_IMG}
           alt="PFS aerospace spray booth for aircraft and aviation finishing"
           aria-hidden="true"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", opacity: videoReady ? 0 : 1, transition: "opacity 0.7s ease", zIndex: 0 }}
         />
-        */}
         <video preload="auto" ref={videoRef}
           autoPlay
           muted
@@ -472,7 +470,7 @@ export default function AerospacePage() {
               }}>
                 PFS ZENITH SERIES
               </span>
-              <p data-animation="slideLeft" style={{
+              <p style={{
                 fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#555",
                 maxWidth: "520px", margin: "0 auto", lineHeight: 1.7,
               }}>
@@ -535,15 +533,8 @@ export default function AerospacePage() {
             cardHeight="clamp(220px,30vw,360px)"
           />
           <div data-animation="slideRight" className="text-center">
-            <Link href="/contact/request-a-quote" className="btn-glow">
-              <span
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "0.5rem",
-                }}
-              >GET PRICING <ArrowRight size={15} /></span>
+            <Link href="/contact/request-a-quote">
+              <span className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
             </Link>
           </div>
         </div>
@@ -592,7 +583,7 @@ export default function AerospacePage() {
 
           {featuresOpen && (
             <>
-              <div data-animation="fadeIn" className="grid md:grid-cols-3 gap-5 mb-5">
+              <div className="grid md:grid-cols-3 gap-5 mb-5">
                 {FEATURES_HIDDEN.map((f) => (
                   <div key={f.title} style={{ background: "#fff", padding: "1.75rem", borderTop: `3px solid ${BLUE}`, display: "flex", flexDirection: "column" }}>
                     <div style={{
@@ -604,7 +595,7 @@ export default function AerospacePage() {
                       fontWeight: 700, color: "#111", marginBottom: "0.6rem",
                     }}>{f.title}</h3>
                     <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.84rem", color: "#555", lineHeight: 1.75, marginBottom: "1rem", flex: 1 }}>{f.body}</p>
-                    <Link data-animation="slideLeft" href="/contact/request-a-quote">
+                    <Link href="/contact/request-a-quote">
                       <span style={{ display: "inline-flex", alignItems: "center", gap: "0.3rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.78rem", fontWeight: 700, color: BLUE, letterSpacing: "0.08em", textTransform: "uppercase", cursor: "pointer" }}>
                         LEARN MORE <ArrowRight size={12} />
                       </span>
@@ -643,7 +634,7 @@ export default function AerospacePage() {
           )}
 
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <button data-animation="slideLeft"	
+            <button data-animation="slideLeft"
               onClick={() => setFeaturesOpen(!featuresOpen)}
               style={{
                 display: "inline-flex", alignItems: "center", gap: "0.4rem",
@@ -675,7 +666,7 @@ export default function AerospacePage() {
             }}>
               Tell us your aircraft dimensions.<br />We'll spec the booth.
             </h2>
-            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.85)", maxWidth: "440px" }}>
+            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.85)", maxWidth: "440px" }}>
               Quote in 24 hours. manufactured in the USA with ETL/UL listed components. Installed nationwide by PFS-certified technicians.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center" }}>
@@ -713,9 +704,9 @@ export default function AerospacePage() {
           <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
             <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: BLUE, display: "block", marginBottom: "0.5rem" }}>NEHSAP COMPLIANT FILTRATION</span>
             <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.5rem, 3vw, 2.1rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", lineHeight: 1.1, marginBottom: "0.75rem" }}>Aerospace-Grade Spray Booth Filters</h2>
-            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#444", lineHeight: 1.75 }}>NEHSAP (National Emission Standards for Hazardous Air Pollutants) compliance requires spray booths used in aerospace manufacturing to capture overspray at the source. PFS aerospace booths are engineered with high-efficiency intake and exhaust filtration systems that meet or exceed NEHSAP capture efficiency requirements for HAP-containing coatings used in aerospace surface coating operations.</p>
+            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#444", lineHeight: 1.75 }}>NEHSAP (National Emission Standards for Hazardous Air Pollutants) compliance requires spray booths used in aerospace manufacturing to capture overspray at the source. PFS aerospace booths are engineered with high-efficiency intake and exhaust filtration systems that meet or exceed NEHSAP capture efficiency requirements for HAP-containing coatings used in aerospace surface coating operations.</p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1.25rem", marginBottom: "2rem" }}>
+          <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1.25rem", marginBottom: "2rem" }}>
             {[
               { title: "Fiberglass Intake Filters", body: "Multi-stage fiberglass media panels capture particulate at the air inlet. Replaceable modules maintain 100 FPM face velocity and prevent contamination of the spray zone." },
               { title: "Exhaust Filter Banks", body: "Downstream exhaust filter banks — standard polyester or optional HEPA-grade media — capture overspray before air exits the booth, meeting NEHSAP capture efficiency thresholds for aerospace HAP coatings." },

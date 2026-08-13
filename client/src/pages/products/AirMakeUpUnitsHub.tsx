@@ -26,13 +26,13 @@ export default function AirMakeUpUnitsHub() {
       <section className="py-20 bg-white">
         <div className="container">
           <div className="mb-12">
-            <span data-animation="slideRight" className="section-label">Air Make-Up Units</span>
+            <span className="section-label">Air Make-Up Units</span>
             <h2 data-animation="slideLeft" className="section-heading">Choose Your Configuration</h2>
             <p data-animation="slideLeft" className="section-body max-w-2xl">Proper air replacement is required by OSHA and NFPA 33 for any spray booth. PFS manufactures heated and non-heated AMUs for every climate and application.</p>
           </div>
 
           {/* Two large cards side by side */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          <div data-animation="fadeIn" className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
             {/* Heated AMU */}
             <Link href="/products/air-make-up-units/heated">
               <div className="group cursor-pointer border border-gray-200 hover:border-[#1B2B4B] transition-all duration-300 hover:shadow-[0_0_24px_rgba(27,43,75,0.15)] overflow-hidden">
@@ -101,16 +101,16 @@ export default function AirMakeUpUnitsHub() {
                 <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.4rem", fontWeight: 700, color: "#ffffff", marginBottom: "0.4rem" }}>
                   Not Sure Which AMU You Need?
                 </h3>
-                <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.6 }}>
+                <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.6 }}>
                   Our team will size the right unit for your booth CFM, climate, and heat source — at no charge.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
-                <Link href="/contact/request-a-quote">
-                  <span data-animation="slideLeft" className="btn-glow flex items-center gap-2">Get Pricing <ArrowRight size={14} /></span>
+                <Link data-animation="slideLeft" href="/contact/request-a-quote">
+                  <span className="btn-glow flex items-center gap-2">Get Pricing <ArrowRight size={14} /></span>
                 </Link>
-                <a href="tel:+18885457715">
-                  <span data-animation="slideRight" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#ffffff", border: "1.5px solid rgba(255,255,255,0.4)", padding: "0.6rem 1.2rem", cursor: "pointer" }}>
+                <a data-animation="slideRight" href="tel:+18885457715">
+                  <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#ffffff", border: "1.5px solid rgba(255,255,255,0.4)", padding: "0.6rem 1.2rem", cursor: "pointer" }}>
                     <Phone size={14} /> (888) 545-7715
                   </span>
                 </a>

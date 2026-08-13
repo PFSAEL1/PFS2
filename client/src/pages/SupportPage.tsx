@@ -115,7 +115,7 @@ export default function SupportPage() {
               }}>
                 Equipment Down?<br />We're On It.
               </h1>
-              <p data-animation="slideLeft" style={{
+              <p style={{
                 fontFamily: "'Archivo Narrow', sans-serif",
                 fontSize: "1rem",
                 color: "#555",
@@ -142,7 +142,7 @@ export default function SupportPage() {
             </div>
 
             {/* Direct contact */}
-            <div style={{
+            <div data-animation="fadeIn" style={{
               backgroundColor: "#1C1C1E",
               padding: "1.25rem 1.5rem",
               borderRadius: "4px",

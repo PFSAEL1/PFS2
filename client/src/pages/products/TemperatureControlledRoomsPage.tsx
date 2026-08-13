@@ -1,4 +1,4 @@
-﻿/**
+/**
  * TemperatureControlledRoomsPage.tsx
  * Design: Industrial dark-on-white, Barlow Condensed headings — same system as PrepStationsPage
  * SEO: JSON-LD Product schema, meta title/description injected via <head>, H1/H2/H3 hierarchy
@@ -89,7 +89,7 @@ const INDUSTRIES = [
 const RELATED = [
   { label: "Process-Controlled Rooms",   href: "/products/environmental-rooms/process-controlled", img: "/manus-storage/pfs-process-controlled-room-exterior_f4302d4b.jpg",  desc: "Precise temperature, humidity, and airflow control for sensitive finishing operations." },
   { label: "Enclosed Work Environments", href: "/products/environmental-rooms/enclosed-work",      img: "/manus-storage/pfs-environmental-room-interior-large_a5ff5797.jpg", desc: "Clean, contamination-free enclosures for assembly, inspection, and precision work." },
-  { label: "Industrial Ovens",           href: "/products/ovens",                                   img: "/manus-storage/pfs-vulcan-oven-card_ad72eade_316de7d1.png",                   desc: "Batch, walk-in, and conveyor ovens for curing and heat treating." },
+  { label: "Industrial Ovens",           href: "/products/ovens",                                   img: "/manus-storage/HEROOVEN_23aea520.png",                   desc: "Batch, walk-in, and conveyor ovens for curing and heat treating." },
   { label: "Enclosed Paint Booths",      href: "/products/paint-booths/enclosed",                   img: "/manus-storage/enclosed-booth-card-zenith_7e010642.jpg",             desc: "Full-enclosure spray booths for superior overspray containment and finish quality." },
 ];
 
@@ -155,7 +155,7 @@ export default function TemperatureControlledRoomsPage() {
 
       {/* ── VIDEO HERO ── */}
       <section style={{ position: "relative", width: "100%", height: "clamp(480px, 65vh, 720px)", overflow: "hidden", background: "#000" }}>
-        <video 
+        <video
           autoPlay
           muted
           loop

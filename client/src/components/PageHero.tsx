@@ -38,12 +38,10 @@ interface PageHeroProps {
   bgPoster?: string;  // poster frame shown before video loads
 }
 
+// ── PageHeroVideo: dark background, video fades in on canplay — zero still-image flash ──
 function PageHeroVideo({
   bgVideo,
-  bgImage,
   bgImagePosition,
-  bgImageFit,
-  KB_STYLE,
   bgPoster,
 }: {
   bgVideo: string;
@@ -54,33 +52,17 @@ function PageHeroVideo({
   bgPoster?: string;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
-
   useEffect(() => {
     const v = videoRef.current;
     if (!v) return;
     v.muted = true;
     v.playsInline = true;
-    v.play().catch(() => {});
+    v.play().catch(() => { });
   }, []);
-
   return (
     <>
-      {/* bgImage pre-load commented out: video loads directly via poster attribute instead
-      {bgImage && (
-        <img
-          src={bgImage}
-          alt=""
-          aria-hidden="true"
-          style={{
-            position: "absolute", inset: 0, width: "100%", height: "100%",
-            objectFit: bgImageFit, objectPosition: bgImagePosition, display: "block",
-            zIndex: 0, ...KB_STYLE,
-          }}
-        />
-      )}
-      */}
-      <video
-        preload="auto"
+      {/* Video — plays immediately with no poster/still-frame flash */}
+      <video preload="auto"
         ref={videoRef}
         autoPlay
         muted
@@ -91,7 +73,7 @@ function PageHeroVideo({
         style={{
           position: "absolute", inset: 0, width: "100%", height: "100%",
           objectFit: "cover", objectPosition: bgImagePosition, display: "block",
-          opacity: 1, zIndex: 1,
+          opacity: 1, zIndex: 0,
         }}
       >
         <source src={bgVideo} type="video/mp4" />
@@ -140,11 +122,12 @@ export default function PageHero({
 
       {/* Hero photo or video — Aerospace-style fade: still image underneath, video fades in on canplay */}
       {bgVideo ? (
-          <PageHeroVideo
-            bgVideo={bgVideo}
-            bgImage={bgImage}
-            bgImagePosition={bgImagePosition}
-            bgImageFit={bgImageFit}
+        <PageHeroVideo
+          bgVideo={bgVideo}
+          bgImage={bgImage}
+          bgImagePosition={bgImagePosition}
+          bgImageFit={bgImageFit}
+          bgPoster={bgPoster}
           KB_STYLE={KB_STYLE}
         />
       ) : bgImage ? (

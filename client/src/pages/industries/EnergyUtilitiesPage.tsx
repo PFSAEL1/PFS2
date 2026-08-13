@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Energy & Utilities Industry Page
  * Mirrors HeavyEquipmentPage / AerospacePage structure exactly:
  * - Full-bleed video hero (electrical switchgear cabinet in PFS booth)
@@ -18,27 +18,27 @@ import { SiteProductCardSection } from "@/components/SiteProductCard";
 import { useSEO } from "@/hooks/useSEO";
 
 // ── IMAGES ────────────────────────────────────────────────────────────────────
-const HERO_IMG     = "/manus-storage/pfs-energy-hero_82223207.png";
-const HERO_VIDEO   = "/manus-storage/pfs-energy-hero_cc935a28.mp4";
+const HERO_IMG = "/manus-storage/pfs-energy-hero_82223207.png";
+const HERO_VIDEO = "/manus-storage/pfs-energy-hero_cc935a28.mp4";
 const FEATURED_IMG = "/manus-storage/pfs-energy-hero_82223207.png";
 
-const ETL_LOGO  = "/manus-storage/pfs-etl-logo_7758f722.png";
-const UL_LOGO   = "/manus-storage/pfs-ul508a-clean_e8efdeb8.jpg";
+const ETL_LOGO = "/manus-storage/pfs-etl-logo_7758f722.png";
+const UL_LOGO = "/manus-storage/pfs-ul508a-clean_e8efdeb8.jpg";
 const NFPA_LOGO = "/manus-storage/pfs-nfpa-logo_4b710cc9.png";
-const EPA_LOGO  = "/manus-storage/pfs-epa-logo_e4165f68.webp";
+const EPA_LOGO = "/manus-storage/pfs-epa-logo_e4165f68.webp";
 const OSHA_LOGO = "/manus-storage/pfs-osha-logo_0c460739.jpg";
-const USA_FLAG  = "/manus-storage/pfs-usa-flag_8fca512e.jpg";
+const USA_FLAG = "/manus-storage/pfs-usa-flag_8fca512e.jpg";
 
 const BLUE = "#1B3A6B";
 
 // ── CERT CAROUSEL ─────────────────────────────────────────────────────────────
 const CERTS = [
-  { type: "logo", img: ETL_LOGO,  title: "ETL & ETL-C Listed",       sub: "Intertek — USA & Canada",               imgH: 44 },
-  { type: "logo", img: UL_LOGO,   title: "UL 508A Certified",         sub: "Industrial Control Panel Fabricator",   imgH: 44 },
-  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant",         sub: "Spray Application Standard",            imgH: 44 },
-  { type: "logo", img: EPA_LOGO,  title: "EPA Compliant",             sub: "Air Quality Standards",                 imgH: 36 },
-  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant",            sub: "Workplace Safety Standards",            imgH: 36 },
-  { type: "flag", img: USA_FLAG,  title: "Made in the USA",           sub: "Santa Rosa, CA",                        imgH: 36 },
+  { type: "logo", img: ETL_LOGO, title: "ETL & ETL-C Listed", sub: "Intertek — USA & Canada", imgH: 44 },
+  { type: "logo", img: UL_LOGO, title: "UL 508A Certified", sub: "Industrial Control Panel Fabricator", imgH: 44 },
+  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant", sub: "Spray Application Standard", imgH: 44 },
+  { type: "logo", img: EPA_LOGO, title: "EPA Compliant", sub: "Air Quality Standards", imgH: 36 },
+  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant", sub: "Workplace Safety Standards", imgH: 36 },
+  { type: "flag", img: USA_FLAG, title: "Made in the USA", sub: "Santa Rosa, CA", imgH: 36 },
 ];
 const CERTS_LOOP = [...CERTS, ...CERTS];
 
@@ -75,11 +75,11 @@ const FEATURES_HIDDEN = [
 ];
 
 const BOOTH_LINEUP = [
-  { name: "Crossflow",      desc: "Side-to-side airflow. Cost-effective for large switchgear, transformers, and pipeline sections." },
-  { name: "Downdraft",      desc: "Ceiling-to-floor airflow. Maximum cleanliness for precision electrical component finishing." },
+  { name: "Crossflow", desc: "Side-to-side airflow. Cost-effective for large switchgear, transformers, and pipeline sections." },
+  { name: "Downdraft", desc: "Ceiling-to-floor airflow. Maximum cleanliness for precision electrical component finishing." },
   { name: "Semi-Downdraft", desc: "Rear-angled exhaust. Versatile for mixed component types and sizes." },
-  { name: "Heated Booth",   desc: "Integrated heat for accelerated cure. Required for industrial coatings, epoxies, and primers." },
-  { name: "Custom Build",   desc: "Engineered-to-order for oversized utility infrastructure or multi-bay production lines." },
+  { name: "Heated Booth", desc: "Integrated heat for accelerated cure. Required for industrial coatings, epoxies, and primers." },
+  { name: "Custom Build", desc: "Engineered-to-order for oversized utility infrastructure or multi-bay production lines." },
 ];
 
 const PRODUCTS = [
@@ -319,7 +319,7 @@ export default function EnergyUtilitiesPage() {
     if (!v) return;
     v.muted = true;
     v.playsInline = true;
-    const play = () => { v.play().catch(() => {}); setVideoReady(true); };
+    const play = () => { v.play().catch(() => { }); setVideoReady(true); };
     v.addEventListener("canplaythrough", play, { once: true });
     v.load();
     return () => v.removeEventListener("canplaythrough", play);
@@ -337,21 +337,19 @@ export default function EnergyUtilitiesPage() {
         justifyContent: "flex-end",
         overflow: "hidden",
       }}>
-        {/* Pre-load image commented out: video loads directly via poster attribute instead
         <img
           src={HERO_IMG}
           alt="PFS industrial spray booth for energy and utilities sector"
           aria-hidden="true"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", opacity: videoReady ? 0 : 1, transition: "opacity 0.7s ease", zIndex: 0 }}
         />
-        */}
-        <video  preload="auto" ref={videoRef}
+        <video preload="auto" ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
           disablePictureInPicture
-         
+
           aria-hidden="true"
           style={{
             position: "absolute", inset: 0,
@@ -459,7 +457,7 @@ export default function EnergyUtilitiesPage() {
               }}>
                 PFS ZENITH SERIES
               </span>
-              <p data-animation="slideLeft" style={{
+              <p style={{
                 fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#555",
                 maxWidth: "520px", margin: "0 auto", lineHeight: 1.7,
               }}>
@@ -521,7 +519,7 @@ export default function EnergyUtilitiesPage() {
             />
           </div>
           <div data-animation="slideRight" className="text-center">
-            <Link data-animation="slideLeft" href="/contact/request-a-quote">
+            <Link href="/contact/request-a-quote">
               <span className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
             </Link>
           </div>
@@ -654,7 +652,7 @@ export default function EnergyUtilitiesPage() {
             }}>
               Tell us your equipment dimensions.<br />We'll spec the booth.
             </h2>
-            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.85)", maxWidth: "440px" }}>
+            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.85)", maxWidth: "440px" }}>
               Quote in 24 hours. manufactured in the USA with ETL/UL listed components. Installed nationwide by PFS-certified technicians.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center" }}>
@@ -685,7 +683,7 @@ export default function EnergyUtilitiesPage() {
         </div>
       </section>
 
-            {/* RELATED PRODUCTS */}
+      {/* RELATED PRODUCTS */}
       <SiteProductCardSection
         heading="You May Also Need"
         label="Complete Your System"

@@ -32,7 +32,7 @@ export default function CompanySubPage() {
       <div>
         <PageHero title="Company" breadcrumbs={[{ label: "Company", href: "/company" }]} />
         <div className="container py-16 text-center">
-          <p data-animation="slideLeft" className="section-body">Page not found. Please use the navigation above.</p>
+          <p className="section-body">Page not found. Please use the navigation above.</p>
           <Link href="/company"><span className="btn-glow mt-4 inline-flex">Back to Company</span></Link>
         </div>
       </div>
@@ -41,20 +41,20 @@ export default function CompanySubPage() {
 
   return (
     <div>
-      <PageHero data-animation="slideLeft" title={content.title} subtitle={content.desc} breadcrumbs={[{ label: "Company", href: "/company" }, { label: content.title }]} bgImage={content.img} />
+      <PageHero title={content.title} subtitle={content.desc} breadcrumbs={[{ label: "Company", href: "/company" }, { label: content.title }]} bgImage={content.img} />
       <section className="py-16 bg-white">
         <div className="container">
           <div className="grid lg:grid-cols-3 gap-10">
             <div className="lg:col-span-2">
               <span className="section-label">Company</span>
               <h2 data-animation="slideLeft" className="section-heading">{content.title}</h2>
-              <p data-animation="slideLeft" className="section-body mb-4">{content.body}</p>
+              <p className="section-body mb-4">{content.body}</p>
               <div data-animation="slideRight" className="mt-6">
                 <Link href="/contact/request-a-quote"><span className="btn-glow">Contact Us <ArrowRight size={14} /></span></Link>
               </div>
             </div>
             <div>
-              <img data-animation="slideLeft" src={content.img} alt={content.title} className="w-full object-cover" style={{ height: "280px" }} />
+              <img src={content.img} alt={content.title} className="w-full object-cover" style={{ height: "280px" }} />
             </div>
           </div>
         </div>

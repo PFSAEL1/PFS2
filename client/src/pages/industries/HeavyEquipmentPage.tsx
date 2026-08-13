@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Heavy Equipment Industry Page
  * Mirrors AerospacePage structure exactly:
  * - Full-bleed video hero (CAT wheel loader in PFS Orion booth)
@@ -19,32 +19,32 @@ import { SiteProductCardSection } from "@/components/SiteProductCard";
 import { useSEO } from "@/hooks/useSEO";
 
 // ── IMAGES ────────────────────────────────────────────────────────────────────
-const HERO_IMG      = "/manus-storage/pfs-heavy-equip-hero_126eff72.jpg";
-const HERO_VIDEO    = "/manus-storage/pfs-heavy-equip-hero_e8cc5ad9.mp4";
-const FEATURED_IMG  = "/manus-storage/pfs-heavy-equip-featured_88fd415c.jpg";
-const GALLERY_1     = "/manus-storage/pfs-heavy-equip-gallery-4699_6cce56cb.jpg";
-const GALLERY_2     = "/manus-storage/pfs-heavy-equip-gallery-1690_3bc692e9.jpg";
-const GALLERY_3     = "/manus-storage/pfs-heavy-equip-gallery-14371_149ca544.jpg";
-const GALLERY_4     = "/manus-storage/pfs-heavy-equip-gallery-1860_5524160a.jpg";
-const GALLERY_5     = "/manus-storage/pfs-heavy-equip-gallery-874_7da53ce0.jpg";
+const HERO_IMG = "/manus-storage/pfs-heavy-equip-hero_126eff72.jpg";
+const HERO_VIDEO = "/manus-storage/pfs-heavy-equip-hero_e8cc5ad9.mp4";
+const FEATURED_IMG = "/manus-storage/pfs-heavy-equip-featured_88fd415c.jpg";
+const GALLERY_1 = "/manus-storage/pfs-heavy-equip-gallery-4699_6cce56cb.jpg";
+const GALLERY_2 = "/manus-storage/pfs-heavy-equip-gallery-1690_3bc692e9.jpg";
+const GALLERY_3 = "/manus-storage/pfs-heavy-equip-gallery-14371_149ca544.jpg";
+const GALLERY_4 = "/manus-storage/pfs-heavy-equip-gallery-1860_5524160a.jpg";
+const GALLERY_5 = "/manus-storage/pfs-heavy-equip-gallery-874_7da53ce0.jpg";
 
-const ETL_LOGO  = "/manus-storage/pfs-etl-logo_7758f722.png";
-const UL_LOGO   = "/manus-storage/pfs-ul508a-clean_e8efdeb8.jpg";
+const ETL_LOGO = "/manus-storage/pfs-etl-logo_7758f722.png";
+const UL_LOGO = "/manus-storage/pfs-ul508a-clean_e8efdeb8.jpg";
 const NFPA_LOGO = "/manus-storage/pfs-nfpa-logo_4b710cc9.png";
-const EPA_LOGO  = "/manus-storage/pfs-epa-logo_e4165f68.webp";
+const EPA_LOGO = "/manus-storage/pfs-epa-logo_e4165f68.webp";
 const OSHA_LOGO = "/manus-storage/pfs-osha-logo_0c460739.jpg";
-const USA_FLAG  = "/manus-storage/pfs-usa-flag_8fca512e.jpg";
+const USA_FLAG = "/manus-storage/pfs-usa-flag_8fca512e.jpg";
 
 const BLUE = "#1B3A6B";
 
 // ── CERT CAROUSEL ─────────────────────────────────────────────────────────────
 const CERTS = [
-  { type: "logo", img: ETL_LOGO,  title: "ETL & ETL-C Listed",       sub: "Intertek — USA & Canada",               imgH: 44 },
-  { type: "logo", img: UL_LOGO,   title: "UL 508A Certified",         sub: "Industrial Control Panel Fabricator",   imgH: 44 },
-  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant",         sub: "Spray Application Standard",            imgH: 44 },
-  { type: "logo", img: EPA_LOGO,  title: "EPA Compliant",             sub: "Air Quality Standards",                 imgH: 36 },
-  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant",            sub: "Workplace Safety Standards",            imgH: 36 },
-  { type: "flag", img: USA_FLAG,  title: "Made in the USA",           sub: "Santa Rosa, CA",                        imgH: 36 },
+  { type: "logo", img: ETL_LOGO, title: "ETL & ETL-C Listed", sub: "Intertek — USA & Canada", imgH: 44 },
+  { type: "logo", img: UL_LOGO, title: "UL 508A Certified", sub: "Industrial Control Panel Fabricator", imgH: 44 },
+  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant", sub: "Spray Application Standard", imgH: 44 },
+  { type: "logo", img: EPA_LOGO, title: "EPA Compliant", sub: "Air Quality Standards", imgH: 36 },
+  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant", sub: "Workplace Safety Standards", imgH: 36 },
+  { type: "flag", img: USA_FLAG, title: "Made in the USA", sub: "Santa Rosa, CA", imgH: 36 },
 ];
 const CERTS_LOOP = [...CERTS, ...CERTS];
 
@@ -81,11 +81,11 @@ const FEATURES_HIDDEN = [
 ];
 
 const BOOTH_LINEUP = [
-  { name: "Crossflow",      desc: "Side-to-side airflow. Cost-effective for large equipment and agricultural machinery." },
-  { name: "Downdraft",      desc: "Ceiling-to-floor airflow. Maximum cleanliness for OEM-spec equipment finishing." },
+  { name: "Crossflow", desc: "Side-to-side airflow. Cost-effective for large equipment and agricultural machinery." },
+  { name: "Downdraft", desc: "Ceiling-to-floor airflow. Maximum cleanliness for OEM-spec equipment finishing." },
   { name: "Semi-Downdraft", desc: "Rear-angled exhaust. Versatile for mixed equipment types and sizes." },
-  { name: "Heated Booth",   desc: "Integrated heat for accelerated cure. Required for industrial coatings and primers." },
-  { name: "Custom Build",   desc: "Engineered-to-order for mining trucks, cranes, or multi-bay production lines." },
+  { name: "Heated Booth", desc: "Integrated heat for accelerated cure. Required for industrial coatings and primers." },
+  { name: "Custom Build", desc: "Engineered-to-order for mining trucks, cranes, or multi-bay production lines." },
 ];
 
 const PRODUCTS = [
@@ -325,7 +325,7 @@ export default function HeavyEquipmentPage() {
     if (!v) return;
     v.muted = true;
     v.playsInline = true;
-    const play = () => { v.play().catch(() => {}); setVideoReady(true); };
+    const play = () => { v.play().catch(() => { }); setVideoReady(true); };
     v.addEventListener("canplaythrough", play, { once: true });
     v.load();
     return () => v.removeEventListener("canplaythrough", play);
@@ -343,21 +343,19 @@ export default function HeavyEquipmentPage() {
         justifyContent: "flex-end",
         overflow: "hidden",
       }}>
-        {/* Pre-load image commented out: video loads directly via poster attribute instead
         <img
           src={HERO_IMG}
           alt="PFS heavy equipment paint booth for construction machinery finishing"
           aria-hidden="true"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", opacity: videoReady ? 0 : 1, transition: "opacity 0.7s ease", zIndex: 0 }}
         />
-        */}
-        <video  preload="auto" ref={videoRef}
+        <video preload="auto" ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
           disablePictureInPicture
-         
+
           aria-hidden="true"
           style={{
             position: "absolute", inset: 0,
@@ -464,7 +462,7 @@ export default function HeavyEquipmentPage() {
               }}>
                 PFS ORION SERIES
               </span>
-              <p data-animation="slideLeft" style={{
+              <p style={{
                 fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#555",
                 maxWidth: "520px", margin: "0 auto", lineHeight: 1.7,
               }}>
@@ -528,7 +526,7 @@ export default function HeavyEquipmentPage() {
             cardHeight="clamp(220px,30vw,360px)"
           />
           <div data-animation="slideRight" className="text-center">
-            <Link data-animation="slideLeft" href="/contact/request-a-quote">
+            <Link href="/contact/request-a-quote">
               <span className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
             </Link>
           </div>
@@ -590,7 +588,7 @@ export default function HeavyEquipmentPage() {
                       fontWeight: 700, color: "#111", marginBottom: "0.6rem",
                     }}>{f.title}</h3>
                     <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.84rem", color: "#555", lineHeight: 1.75, marginBottom: "1rem", flex: 1 }}>{f.body}</p>
-                    <Link data-animation="slideLeft" href="/contact/request-a-quote">
+                    <Link href="/contact/request-a-quote">
                       <span style={{ display: "inline-flex", alignItems: "center", gap: "0.3rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.78rem", fontWeight: 700, color: BLUE, letterSpacing: "0.08em", textTransform: "uppercase", cursor: "pointer" }}>
                         LEARN MORE <ArrowRight size={12} />
                       </span>
@@ -661,7 +659,7 @@ export default function HeavyEquipmentPage() {
             }}>
               Tell us your equipment dimensions.<br />We'll spec the booth.
             </h2>
-            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.85)", maxWidth: "440px" }}>
+            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.85)", maxWidth: "440px" }}>
               Quote in 24 hours. manufactured in the USA with ETL/UL listed components. Installed nationwide by PFS-certified technicians.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center" }}>
@@ -692,7 +690,7 @@ export default function HeavyEquipmentPage() {
         </div>
       </section>
 
-            {/* RELATED PRODUCTS */}
+      {/* RELATED PRODUCTS */}
       <SiteProductCardSection
         heading="You May Also Need"
         label="Complete Your System"

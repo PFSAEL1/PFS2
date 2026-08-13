@@ -234,14 +234,14 @@ export default function BayAreaServicePage() {
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
               <Link data-animation="slideLeft" href="/contact/service-request">
-                <a className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#00a896", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase"}}>
+                <a className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#00a896", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase" }}>
                   REQUEST SERVICE <ArrowRight size={16} />
                 </a>
               </Link>
-              <a href="tel:+18885457715" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(255,255,255,0.7)", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase"}}>
+              <a href="tel:+18885457715" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(255,255,255,0.7)", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase" }}>
                 <Phone size={16} /> (888) 545-7715
               </a>
-              <a data-animation="slideRight" href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(0,168,150,0.7)", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase"}}>
+              <a data-animation="slideRight" href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(0,168,150,0.7)", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase" }}>
                 <Filter size={16} /> PFS FILTERS
               </a>
             </div>
@@ -260,8 +260,8 @@ export default function BayAreaServicePage() {
             { label: "Compliance", value: "BAAQMD · CARB · NFPA 33" },
           ].map((s) => (
             <div key={s.label} style={{ textAlign: "center", padding: "8px 24px", borderRight: "1px solid rgba(255,255,255,0.1)" }}>
-              <div data-animation="slideLeft" style={{ color: "#00a896", fontSize: "1.1rem", fontWeight: 800 }}>{s.value}</div>
-              <div data-animation="slideRight" style={{ color: "rgba(255,255,255,0.55)", fontSize: "0.7rem", letterSpacing: "0.1em", textTransform: "uppercase" }}>{s.label}</div>
+              <div style={{ color: "#00a896", fontSize: "1.1rem", fontWeight: 800 }}>{s.value}</div>
+              <div style={{ color: "rgba(255,255,255,0.55)", fontSize: "0.7rem", letterSpacing: "0.1em", textTransform: "uppercase" }}>{s.label}</div>
             </div>
           ))}
         </div>
@@ -358,7 +358,7 @@ export default function BayAreaServicePage() {
           <div style={{ textAlign: "center", marginBottom: 48 }}>
             <div style={{ color: "#00a896", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 12 }}>INDUSTRIES SERVED</div>
             <h2 data-animation="slideLeft" style={{ fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 900, color: "#0a1628" }}>Bay Area Industries We Serve</h2>
-            <p data-animation="slideLeft" style={{ color: "#666", maxWidth: 600, margin: "12px auto 0", lineHeight: 1.6 }}>
+            <p style={{ color: "#666", maxWidth: 600, margin: "12px auto 0", lineHeight: 1.6 }}>
               From Silicon Valley electronics manufacturers to East Bay aerospace contractors, PFS serves every finishing industry across the nine-county Bay Area.
             </p>
           </div>
@@ -404,7 +404,7 @@ export default function BayAreaServicePage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 32 }}>
             <h2 data-animation="slideLeft" style={{ fontSize: "1.3rem", fontWeight: 800, color: "#0a1628" }}>Also Serving All of California</h2>
-            <p data-animation="slideLeft" style={{ color: "#666", marginTop: 8 }}>PFS provides spray booth service, manufacturing, and compliance inspections statewide.</p>
+            <p style={{ color: "#666", marginTop: 8 }}>PFS provides spray booth service, manufacturing, and compliance inspections statewide.</p>
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 16, justifyContent: "center" }}>
             <Link data-animation="slideLeft" href="/spray-booth-service-california">
@@ -427,16 +427,16 @@ export default function BayAreaServicePage() {
           <h2 data-animation="slideLeft" style={{ color: "#fff", fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 900, marginBottom: 16 }}>
             Ready to Schedule Bay Area Service?
           </h2>
-          <p data-animation="slideLeft" style={{ color: "rgba(255,255,255,0.7)", marginBottom: 32, lineHeight: 1.6 }}>
+          <p style={{ color: "rgba(255,255,255,0.7)", marginBottom: 32, lineHeight: 1.6 }}>
             Call our Santa Rosa headquarters or submit a service request online. We respond same-day for emergency calls throughout all nine Bay Area counties.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 16, justifyContent: "center" }}>
             <Link data-animation="slideLeft" href="/contact/service-request">
-              <a className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#00a896", color: "#fff", padding: "16px 32px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase", transition: "all 0.2s" }}>
+              <a className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#00a896", color: "#fff", padding: "16px 32px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase" }}>
                 REQUEST SERVICE <ArrowRight size={16} />
               </a>
             </Link>
-            <a data-animation="slideRight" href="tel:+18885457715" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(255,255,255,0.5)", color: "#fff", padding: "16px 32px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase", transition: "all 0.2s" }}>
+            <a data-animation="slideRight" href="tel:+18885457715" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(255,255,255,0.5)", color: "#fff", padding: "16px 32px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase" }}>
               <Phone size={16} /> (888) 545-7715
             </a>
           </div>

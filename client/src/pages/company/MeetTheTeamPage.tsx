@@ -14,25 +14,25 @@ const HERO_IMG = "/manus-storage/pfs-facility-building_bece7d21.jpg";
 
 // Placeholder team member roles — names/photos to be filled in by client
 const TEAM_PLACEHOLDERS = [
-  { role: "Founder & CEO",                  dept: "Leadership" },
-  { role: "Director of Operations",         dept: "Operations" },
-  { role: "Lead Engineer",                  dept: "Engineering" },
-  { role: "Project Manager",                dept: "Project Management" },
-  { role: "Sales Manager",                  dept: "Sales" },
-  { role: "Lead Fabricator",                dept: "Manufacturing" },
-  { role: "Electrical Systems Specialist",  dept: "Electrical" },
-  { role: "Installation Lead",              dept: "Field Services" },
+  { role: "Founder & CEO", dept: "Leadership" },
+  { role: "Director of Operations", dept: "Operations" },
+  { role: "Lead Engineer", dept: "Engineering" },
+  { role: "Project Manager", dept: "Project Management" },
+  { role: "Sales Manager", dept: "Sales" },
+  { role: "Lead Fabricator", dept: "Manufacturing" },
+  { role: "Electrical Systems Specialist", dept: "Electrical" },
+  { role: "Installation Lead", dept: "Field Services" },
 ];
 
 function PlaceholderAvatar({ initials }: { initials: string }) {
   return (
-    <div data-animation="fadeIn" style={{
+    <div style={{
       width: "100%", aspectRatio: "1/1",
       background: `linear-gradient(135deg, ${BLUE}22 0%, ${BLUE}08 100%)`,
       display: "flex", alignItems: "center", justifyContent: "center",
       borderBottom: `2px solid ${BLUE}18`,
     }}>
-      <div data-animation="fadeIn" style={{
+      <div style={{
         width: 72, height: 72,
         borderRadius: "50%",
         background: `${BLUE}18`,
@@ -61,7 +61,7 @@ export default function MeetTheTeamPage() {
           alt="Platinum Finishing Systems manufacturing facility — Santa Rosa, CA"
           style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 50%" }}
         />
-        <div data-animation="fadeIn" style={{
+        <div style={{
           position: "absolute", inset: 0,
           background: "linear-gradient(to bottom, rgba(10,20,40,0.6) 0%, rgba(10,20,40,0.75) 100%)",
         }} />
@@ -93,7 +93,7 @@ export default function MeetTheTeamPage() {
       {/* COMING SOON NOTICE */}
       <section style={{ padding: "4rem 0", background: "#f8f9fb", borderBottom: "1px solid #e2e8f0" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <div data-animation="fadeIn" style={{
+          <div style={{
             display: "inline-flex", alignItems: "center", gap: "0.6rem",
             background: `${GOLD}18`, border: `1px solid ${GOLD}40`,
             borderRadius: "2px", padding: "0.6rem 1.25rem",
@@ -107,7 +107,7 @@ export default function MeetTheTeamPage() {
           <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontWeight: 800, color: BLUE, lineHeight: 1.1, letterSpacing: "0.02em", textTransform: "uppercase", marginBottom: "1rem" }}>
             People Who Know the Job
           </h2>
-          <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#4a5568", lineHeight: 1.75, maxWidth: 600, margin: "0 auto" }}>
+          <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#4a5568", lineHeight: 1.75, maxWidth: 600, margin: "0 auto" }}>
             Every person on the PFS team was hired because they know finishing systems — not just how to sell them, but how to build them, install them, and make them perform. Full team profiles are coming soon.
           </p>
         </div>
@@ -144,7 +144,7 @@ export default function MeetTheTeamPage() {
                     color: BLUE, letterSpacing: "0.03em",
                     lineHeight: 1.2,
                   }}>{member.role}</h3>
-                  <div data-animation="fadeIn" style={{
+                  <div style={{
                     marginTop: "0.75rem",
                     height: 2, width: 32,
                     background: `${BLUE}20`,
@@ -161,7 +161,7 @@ export default function MeetTheTeamPage() {
       <section style={{ padding: "5rem 0", background: "#f8f9fb" }}>
         <div className="container" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2rem", textAlign: "center" }}>
           <Link href="/company">
-            <button data-animation="slideRight" style={{
+            <button style={{
               background: "transparent", color: BLUE,
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "0.85rem", fontWeight: 700,
@@ -178,7 +178,7 @@ export default function MeetTheTeamPage() {
             <p data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.1rem", fontWeight: 700, color: BLUE, letterSpacing: "0.04em", textTransform: "uppercase", marginBottom: "0.5rem" }}>
               Ready to Work with Us?
             </p>
-            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.9rem", color: "#4a5568", lineHeight: 1.7, maxWidth: 400, marginBottom: "1.25rem" }}>
+            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.9rem", color: "#4a5568", lineHeight: 1.7, maxWidth: 400, marginBottom: "1.25rem" }}>
               Whether you need a single booth or a full finishing line, our team is ready to help you spec the right system.
             </p>
             <Link href="/contact">

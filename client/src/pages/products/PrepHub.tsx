@@ -1,4 +1,4 @@
-﻿import { Link } from "wouter";
+import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
@@ -71,7 +71,7 @@ export default function PrepHub() {
         justifyContent: "flex-end",
         overflow: "hidden",
       }}>
-        <video  preload="auto"
+        <video preload="auto"
           autoPlay
           muted
           loop

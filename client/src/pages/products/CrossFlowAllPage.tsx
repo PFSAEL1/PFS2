@@ -1,4 +1,4 @@
-﻿/**
+/**
  * PFS Cross-Flow Booths — Full Lineup Hub
  * All cross-flow configurations: Standard Orion, Heated, Truck/Large Equipment,
  * Sprinter Van, Drive-Through, and Custom Oversized.
@@ -94,7 +94,7 @@ export default function CrossFlowAllPage() {
 
       {/* HERO — MP4 video */}
       <section style={{ position: "relative", height: "60vh", minHeight: 400, overflow: "hidden" }}>
-        <video 
+        <video
           autoPlay muted loop playsInline
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
         >

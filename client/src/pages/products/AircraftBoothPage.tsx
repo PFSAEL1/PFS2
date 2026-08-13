@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Aerospace Paint Booths — Product Page
  * Route: /products/paint-booths/aircraft
  * Mirrors AerospacePage (industry) format exactly:
@@ -23,32 +23,32 @@ import { useSEO } from "@/hooks/useSEO";
 // HERO_IMG    : side-angle private jet in white spray booth
 // FEATURED_IMG: twin-engine prop in hangar (featured booth section)
 // GALLERY_IMGS: navigable gallery images
-const HERO_IMG       = "/manus-storage/pfs-aerospace-jet-side-booth-hero_34e5d4ce.png"; // real PFS jet side angle
-const HERO_VIDEO     = "/manus-storage/product_aerospace_jet_side_hero_ae4811fe.mp4";  // slow-zoom video from real photo
-const FEATURED_IMG   = "/manus-storage/private_jet_side_angle_fdd4968c.png";
+const HERO_IMG = "/manus-storage/pfs-aerospace-jet-side-booth-hero_34e5d4ce.png"; // real PFS jet side angle
+const HERO_VIDEO = "/manus-storage/product_aerospace_jet_side_hero_ae4811fe.mp4";  // slow-zoom video from real photo
+const FEATURED_IMG = "/manus-storage/private_jet_side_angle_fdd4968c.png";
 const GALLERY_IMGS = [
-  { src: "/manus-storage/pfs-aerospace-jet-side-booth-hero_34e5d4ce.png", alt: "PFS real jet side angle inside aerospace spray booth",      pos: "center 50%" },
+  { src: "/manus-storage/pfs-aerospace-jet-side-booth-hero_34e5d4ce.png", alt: "PFS real jet side angle inside aerospace spray booth", pos: "center 50%" },
   { src: "/manus-storage/aero_technician_spraying_21c4171a.png", alt: "Technician spraying aircraft fuselage in PFS aerospace booth", pos: "center 50%" },
-  { src: "/manus-storage/aero_twin_engine_booth_a8e9c3f1.png",   alt: "PFS-branded private jet inside aerospace spray booth",         pos: "center 50%" },
+  { src: "/manus-storage/aero_twin_engine_booth_a8e9c3f1.png", alt: "PFS-branded private jet inside aerospace spray booth", pos: "center 50%" },
 ];
 
-const ETL_LOGO   = "/manus-storage/pfs-etl-logo_7758f722.png";
-const UL_LOGO    = "/manus-storage/pfs-ul508a-clean_e8efdeb8.jpg";
-const NFPA_LOGO  = "/manus-storage/pfs-nfpa-logo_4b710cc9.png";
-const EPA_LOGO   = "/manus-storage/pfs-epa-logo_e4165f68.webp";
-const OSHA_LOGO  = "/manus-storage/pfs-osha-logo_0c460739.jpg";
-const USA_FLAG   = "/manus-storage/pfs-usa-flag_8fca512e.jpg";
+const ETL_LOGO = "/manus-storage/pfs-etl-logo_7758f722.png";
+const UL_LOGO = "/manus-storage/pfs-ul508a-clean_e8efdeb8.jpg";
+const NFPA_LOGO = "/manus-storage/pfs-nfpa-logo_4b710cc9.png";
+const EPA_LOGO = "/manus-storage/pfs-epa-logo_e4165f68.webp";
+const OSHA_LOGO = "/manus-storage/pfs-osha-logo_0c460739.jpg";
+const USA_FLAG = "/manus-storage/pfs-usa-flag_8fca512e.jpg";
 
 const BLUE = "#1B3A6B";
 
 // ── CERT CAROUSEL DATA ────────────────────────────────────────────────────────
 const CERTS = [
-  { type: "logo", img: ETL_LOGO,  title: "ETL & ETL-C Listed",    sub: "Intertek — USA & Canada",             imgH: 44 },
-  { type: "logo", img: UL_LOGO,   title: "UL 508A Certified",      sub: "Industrial Control Panel Fabricator", imgH: 44 },
-  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant",      sub: "Spray Application Standard",          imgH: 44 },
-  { type: "logo", img: EPA_LOGO,  title: "EPA Compliant",          sub: "Air Quality Standards",               imgH: 36 },
-  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant",         sub: "Workplace Safety Standards",          imgH: 36 },
-  { type: "flag", img: USA_FLAG,  title: "Made in the USA",        sub: "Santa Rosa, CA",                      imgH: 36 },
+  { type: "logo", img: ETL_LOGO, title: "ETL & ETL-C Listed", sub: "Intertek — USA & Canada", imgH: 44 },
+  { type: "logo", img: UL_LOGO, title: "UL 508A Certified", sub: "Industrial Control Panel Fabricator", imgH: 44 },
+  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant", sub: "Spray Application Standard", imgH: 44 },
+  { type: "logo", img: EPA_LOGO, title: "EPA Compliant", sub: "Air Quality Standards", imgH: 36 },
+  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant", sub: "Workplace Safety Standards", imgH: 36 },
+  { type: "flag", img: USA_FLAG, title: "Made in the USA", sub: "Santa Rosa, CA", imgH: 36 },
 ];
 const CERTS_LOOP = [...CERTS, ...CERTS];
 
@@ -85,11 +85,11 @@ const FEATURES_HIDDEN = [
 ];
 
 const BOOTH_LINEUP = [
-  { name: "Crossflow",      desc: "Side-to-side airflow. Cost-effective for large fuselage sections." },
-  { name: "Downdraft",      desc: "Full ceiling-to-floor airflow. Maximum cleanliness for aerospace topcoat." },
+  { name: "Crossflow", desc: "Side-to-side airflow. Cost-effective for large fuselage sections." },
+  { name: "Downdraft", desc: "Full ceiling-to-floor airflow. Maximum cleanliness for aerospace topcoat." },
   { name: "Semi-Downdraft", desc: "Rear-angled exhaust. Versatile for mixed MRO and new-build operations." },
-  { name: "Heated Booth",   desc: "Integrated heat for accelerated cure. Required for most aerospace primers." },
-  { name: "Custom Build",   desc: "Engineered-to-order for wide-body, military, or hangar-integrated systems." },
+  { name: "Heated Booth", desc: "Integrated heat for accelerated cure. Required for most aerospace primers." },
+  { name: "Custom Build", desc: "Engineered-to-order for wide-body, military, or hangar-integrated systems." },
 ];
 
 const RELATED_PRODUCTS = [
@@ -222,12 +222,12 @@ export default function AircraftBoothPage() {
         justifyContent: "flex-end",
         overflow: "hidden",
       }}>
-        <video  preload="auto"
+        <video preload="auto"
           autoPlay
           muted
           loop
           playsInline
-         
+
           aria-hidden="true"
           style={{
             position: "absolute", inset: 0,
@@ -336,7 +336,7 @@ export default function AircraftBoothPage() {
               }}>
                 PFS ZENITH SERIES
               </span>
-              <p data-animation="slideLeft" style={{
+              <p style={{
                 fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#555",
                 maxWidth: "520px", margin: "0 auto", lineHeight: 1.7,
               }}>
@@ -418,9 +418,9 @@ export default function AircraftBoothPage() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-5 mb-5" data-animation="fadeIn">
+          <div className="grid md:grid-cols-3 gap-5 mb-5">
             {FEATURES_VISIBLE.map((f) => (
-              <div data-animation="fadeIn" key={f.title} style={{ background: "#fff", padding: "1.75rem", borderTop: `3px solid ${BLUE}`, display: "flex", flexDirection: "column" }}>
+              <div key={f.title} style={{ background: "#fff", padding: "1.75rem", borderTop: `3px solid ${BLUE}`, display: "flex", flexDirection: "column" }}>
                 <div style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "2rem", fontWeight: 900, color: `rgba(27,58,107,0.12)`, lineHeight: 1, marginBottom: "0.5rem" }}>{f.num}</div>
                 <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.05rem", fontWeight: 700, color: "#111", marginBottom: "0.6rem" }}>{f.title}</h3>
                 <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.84rem", color: "#555", lineHeight: 1.75, marginBottom: "1rem", flex: 1 }}>{f.body}</p>
@@ -437,11 +437,11 @@ export default function AircraftBoothPage() {
             <>
               <div className="grid md:grid-cols-3 gap-5 mb-5">
                 {FEATURES_HIDDEN.map((f) => (
-                  <div data-animation="fadeIn" key={f.title} style={{ background: "#fff", padding: "1.75rem", borderTop: `3px solid ${BLUE}`, display: "flex", flexDirection: "column" }}>
+                  <div key={f.title} style={{ background: "#fff", padding: "1.75rem", borderTop: `3px solid ${BLUE}`, display: "flex", flexDirection: "column" }}>
                     <div style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "2rem", fontWeight: 900, color: `rgba(27,58,107,0.12)`, lineHeight: 1, marginBottom: "0.5rem" }}>{f.num}</div>
                     <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.05rem", fontWeight: 700, color: "#111", marginBottom: "0.6rem" }}>{f.title}</h3>
                     <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.84rem", color: "#555", lineHeight: 1.75, marginBottom: "1rem", flex: 1 }}>{f.body}</p>
-                    <Link data-animation="slideLeft" href="/contact/request-a-quote?from=aircraft-booth">
+                    <Link href="/contact/request-a-quote?from=aircraft-booth">
                       <span style={{ display: "inline-flex", alignItems: "center", gap: "0.3rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.78rem", fontWeight: 700, color: BLUE, letterSpacing: "0.08em", textTransform: "uppercase", cursor: "pointer" }}>
                         LEARN MORE <ArrowRight size={12} />
                       </span>
@@ -503,7 +503,7 @@ export default function AircraftBoothPage() {
             }}>
               Tell us your aircraft dimensions.<br />We'll spec the booth.
             </h2>
-            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.85)", maxWidth: "440px" }}>
+            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.85)", maxWidth: "440px" }}>
               Quote in 24 hours. manufactured in the USA with ETL/UL listed components. Installed nationwide by PFS-certified technicians.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center" }}>
@@ -534,7 +534,7 @@ export default function AircraftBoothPage() {
         </div>
       </section>
 
-            {/* RELATED PRODUCTS */}
+      {/* RELATED PRODUCTS */}
       <SiteProductCardSection
         heading="Complete Your Finishing System"
         label="Complete Your System"

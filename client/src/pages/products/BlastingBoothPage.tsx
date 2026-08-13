@@ -19,9 +19,9 @@ const BLUE = "#1B2B4B";
 const BLUE_LIGHT = "#2a4a8a";
 
 // ── Images ────────────────────────────────────────────────────────────────────
-const BLASTING_HERO   = "/manus-storage/pfs-blast-booth-interior_cf77951a.png";
-const RECLAIM_HERO    = "/manus-storage/pfs-blast-reclaim-unit_d0656341.png";
-const FEATURED_BLAST  = "/manus-storage/pfs-blast-systems2-gallery_01c11421.png";
+const BLASTING_HERO = "/manus-storage/pfs-blast-booth-interior_cf77951a.png";
+const RECLAIM_HERO = "/manus-storage/pfs-blast-reclaim-unit_d0656341.png";
+const FEATURED_BLAST = "/manus-storage/pfs-blast-systems2-gallery_01c11421.png";
 const FEATURED_RECLAIM = "/manus-storage/pfs-blast-reclaim-unit_d0656341.png";
 
 const BLAST_GALLERY = [
@@ -109,7 +109,7 @@ const TYPICAL_SIZES = [
 function SizesAccordion() {
   return (
     <Accordion title="Typical Standard Sizes">
-      <p data-animation="slideLeft" style={{
+      <p style={{
         fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
         fontSize: "0.82rem",
         color: "#555",
@@ -158,7 +158,7 @@ function SizesAccordion() {
         }}>
           Need a custom footprint? We build to your dimensions.
         </span>
-        <Link data-animation="slideLeft" href="/contact/request-a-quote?from=blast-booth">
+        <Link href="/contact/request-a-quote?from=blast-booth">
           <span className="btn-glow">REQUEST CUSTOM SIZE <ArrowRight size={11} /></span>
         </Link>
       </div>
@@ -331,7 +331,7 @@ function Sidebar({ featuredImage, relatedHref, relatedLabel }: {
         }}>
           Our engineers will help you select the right booth size, media type, and reclaim configuration for your application.
         </p>
-        <Link data-animation="slideLeft" href="/contact/request-a-quote?from=blast-booth">
+        <Link href="/contact/request-a-quote?from=blast-booth">
           <span style={{
             display: "inline-flex", alignItems: "center", gap: "0.4rem",
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
@@ -392,7 +392,7 @@ export function BlastingBoothsPage() {
 
               <span className="section-label">Blasting Systems</span>
               <h2 data-animation="slideLeft" className="section-heading">Blasting Booths</h2>
-              <p data-animation="slideLeft" className="section-body" style={{ marginBottom: "1.5rem" }}>
+              <p className="section-body" style={{ marginBottom: "1.5rem" }}>
                 PFS Goliath Series blast rooms are fully enclosed, purpose-built environments for abrasive blasting operations. Each booth is designed to contain media, protect operators, and capture dust — keeping your facility clean and your team safe. Whether you're blasting structural steel, heavy equipment, aerospace components, or production parts, we size and configure each booth to match your workflow.
               </p>
 
@@ -556,7 +556,7 @@ export function ReclaimBlastingBoothsPage() {
 
               <span className="section-label">Blasting Systems</span>
               <h2 data-animation="slideLeft" className="section-heading">Reclaim Blasting Booths</h2>
-              <p data-animation="slideLeft" className="section-body" style={{ marginBottom: "1.5rem" }}>
+              <p className="section-body" style={{ marginBottom: "1.5rem" }}>
                 PFS Goliath Series reclaim blast rooms add an integrated media recovery system to the standard blast booth — dramatically reducing media consumption, disposal costs, and production downtime. Recovered media is automatically classified, cleaned, and returned to the blast machine, keeping your operation running with minimal manual intervention. Available in mechanical bucket elevator or pneumatic vacuum configurations to match your media type and production volume.
               </p>
 
@@ -665,11 +665,11 @@ export function ReclaimBlastingBoothsPage() {
 
 
       {/* FAQ SECTION */}
-      <section style={{ background:"#f8f9fb", padding:"clamp(2.5rem, 6vw, 4rem) 0", borderTop:"1px solid #e5e7eb" }}>
-        <div className="container" style={{ maxWidth:"860px" }}>
-          <div style={{ textAlign:"center", marginBottom:"2.5rem" }}>
-            <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:"#1B3A6B",textTransform:"uppercase",display:"block",marginBottom:"0.4rem" }}>FREQUENTLY ASKED QUESTIONS</span>
-            <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.4rem,3.5vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Blast Rooms &amp; Abrasive Blasting Booths — Common Questions</h2>
+      <section style={{ background: "#f8f9fb", padding: "clamp(2.5rem, 6vw, 4rem) 0", borderTop: "1px solid #e5e7eb" }}>
+        <div className="container" style={{ maxWidth: "860px" }}>
+          <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
+            <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: "#1B3A6B", textTransform: "uppercase", display: "block", marginBottom: "0.4rem" }}>FREQUENTLY ASKED QUESTIONS</span>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed','Oswald',sans-serif", fontSize: "clamp(1.4rem,3.5vw,2.2rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Blast Rooms &amp; Abrasive Blasting Booths — Common Questions</h2>
           </div>
           {[
             { q: "What is a blast room used for?", a: "A blast room provides an enclosed, ventilated environment for abrasive blasting — the process of propelling abrasive media at high velocity to clean, strip, or profile a surface. Blast rooms capture spent media and dust, protect workers and the surrounding facility, and comply with OSHA and EPA regulations for abrasive blasting operations." },
@@ -678,12 +678,12 @@ export function ReclaimBlastingBoothsPage() {
             { q: "What is the difference between a blast room and a blast cabinet?", a: "A blast cabinet is a small, enclosed unit where the operator works from outside through gloves and a viewport — suitable for small parts. A blast room is a walk-in enclosure where the operator enters with a blast suit and hood — suitable for large parts, vehicles, structural steel, and other large workpieces that cannot fit in a cabinet." },
             { q: "Can PFS build a custom-size blast room?", a: "Yes. PFS manufactures blast rooms in custom sizes to accommodate any workpiece — from small parts rooms to large aircraft hangars and structural steel bays. Contact a PFS engineer with your workpiece dimensions, blasting volume, and media requirements for a custom quote." },
           ].map((item, i) => (
-            <details key={i} style={{ borderBottom:"1px solid #e5e7eb", padding:"1.25rem 0" }}>
-              <summary style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"clamp(0.95rem,2.5vw,1.1rem)",fontWeight:800,color:"#111",letterSpacing:"0.01em",cursor:"pointer",listStyle:"none",display:"flex",justifyContent:"space-between",alignItems:"center",gap:"1rem" }}>
+            <details key={i} style={{ borderBottom: "1px solid #e5e7eb", padding: "1.25rem 0" }}>
+              <summary style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "clamp(0.95rem,2.5vw,1.1rem)", fontWeight: 800, color: "#111", letterSpacing: "0.01em", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "1rem" }}>
                 {item.q}
-                <span style={{ color:"#1B3A6B", flexShrink:0, fontSize:"1.4rem", fontWeight:300, lineHeight:1 }}>+</span>
+                <span style={{ color: "#1B3A6B", flexShrink: 0, fontSize: "1.4rem", fontWeight: 300, lineHeight: 1 }}>+</span>
               </summary>
-              <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"clamp(0.82rem,2vw,0.9rem)",color:"#555",lineHeight:1.75,margin:"1rem 0 0",paddingRight:"1.5rem" }}>{item.a}</p>
+              <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(0.82rem,2vw,0.9rem)", color: "#555", lineHeight: 1.75, margin: "1rem 0 0", paddingRight: "1.5rem" }}>{item.a}</p>
             </details>
           ))}
         </div>

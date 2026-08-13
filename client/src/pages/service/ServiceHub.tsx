@@ -322,7 +322,7 @@ export default function ServiceHub() {
       {/* SERVICE CARDS */}
       <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "3rem 2rem" }}>
         <div style={{ marginBottom: "2.5rem" }}>
-          <div data-animation="slideLeft" style={{
+          <div style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "0.72rem", fontWeight: 700,
             color: BLUE, letterSpacing: "0.18em", textTransform: "uppercase",
@@ -374,7 +374,7 @@ export default function ServiceHub() {
           }}>
             Serving All of California — 20+ Years
           </h2>
-          <p data-animation="slideLeft" style={{
+          <p style={{
             fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
             fontSize: "0.95rem", color: "#444", lineHeight: 1.7,
             maxWidth: "700px", marginBottom: "1.5rem",
@@ -488,19 +488,20 @@ export default function ServiceHub() {
               Equipment Down?<br />Call Now.
             </div>
           </div>
-          <a data-animation="slideRight" href="tel:+18885457715" style={{
-            textDecoration: "none", background: "#fff", color: RED,
-            border: "none", padding: "1rem 2.2rem",
-            fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-            fontSize: "1rem", fontWeight: 900,
-            letterSpacing: "0.08em", textTransform: "uppercase",
-            cursor: "pointer", borderRadius: "2px",
-            display: "flex", alignItems: "center", gap: "0.5rem",
-            whiteSpace: "nowrap",
-          }}>
-            <Phone size={16} /> (888) 545-7715
+          <a data-animation="slideRight" href="tel:+18885457715" style={{ textDecoration: "none" }}>
+            <button style={{
+              background: "#fff", color: RED,
+              border: "none", padding: "1rem 2.2rem",
+              fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+              fontSize: "1rem", fontWeight: 900,
+              letterSpacing: "0.08em", textTransform: "uppercase",
+              cursor: "pointer", borderRadius: "2px",
+              display: "flex", alignItems: "center", gap: "0.5rem",
+              whiteSpace: "nowrap",
+            }}>
+              <Phone size={16} /> (888) 545-7715
+            </button>
           </a>
-
         </div>
       </section>
 

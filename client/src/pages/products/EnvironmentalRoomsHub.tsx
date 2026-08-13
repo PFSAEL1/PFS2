@@ -33,7 +33,7 @@ export default function EnvironmentalRoomsHub() {
           <div className="mb-10">
             <span className="section-label">Environmental Rooms</span>
             <h2 data-animation="slideLeft" className="section-heading">Choose Your Configuration</h2>
-            <p data-animation="slideLeft" className="section-body max-w-2xl">PFS environmental rooms provide precise temperature and humidity control for sensitive finishing operations and process-controlled work environments.</p>
+            <p className="section-body max-w-2xl">PFS environmental rooms provide precise temperature and humidity control for sensitive finishing operations and process-controlled work environments.</p>
           </div>
           <div data-animation="fadeIn" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <Link key="Temperature-Controlled Rooms" href="/products/environmental-rooms/temperature-controlled">
@@ -74,7 +74,7 @@ export default function EnvironmentalRoomsHub() {
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
                 <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.25rem", fontWeight: 700, color: "#1a1a1a", marginBottom: "0.5rem" }}>Need a Custom Solution?</h3>
-                <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "#555", lineHeight: 1.7 }}>Our engineers can design a system around your exact facility, process, and throughput requirements.</p>
+                <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "#555", lineHeight: 1.7 }}>Our engineers can design a system around your exact facility, process, and throughput requirements.</p>
               </div>
               <Link data-animation="slideRight" href="/contact/request-a-quote"><span className="btn-glow flex-shrink-0">Get Pricing <ArrowRight size={14} /></span></Link>
             </div>

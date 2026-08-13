@@ -1,5 +1,3 @@
-import GlobalAnimations from "./GlobalAnimations";
-import { GlobalMotion } from "@/components/GlobalMotion";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Route, Switch, useLocation } from "wouter";
@@ -112,6 +110,7 @@ import FiltersPage from "./pages/FiltersPage";
 import CaliforniaServicePage from "./pages/CaliforniaServicePage";
 import LosAngelesServicePage from "@/pages/LosAngelesServicePage";
 import BayAreaServicePage from "@/pages/BayAreaServicePage";
+import GlobalAnimations from "./GlobalAnimations";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -211,7 +210,7 @@ function Router() {
       <Route path="/industries/rail-transit" component={RailTransitPage} />
       <Route path="/industries/automotive-manufacturing" component={AutomotiveManufacturingPage} />
       <Route path="/industries/heavy-equipment" component={HeavyEquipmentPage} />
-          <Route path="/industries/energy-utilities" component={EnergyUtilitiesPage} />
+      <Route path="/industries/energy-utilities" component={EnergyUtilitiesPage} />
       <Route path="/industries/:industry" component={IndustryPage} />
 
       {/* Integration & Automation */}
@@ -262,18 +261,17 @@ function Router() {
 function App() {
   return (
     <>
-      <GlobalAnimations />
-      <GlobalMotion />
+    <GlobalAnimations />
       <ErrorBoundary>
-      <ThemeProvider defaultTheme="light">
-        <TooltipProvider>
-          <Toaster />
-          <Layout>
-            <Router />
-          </Layout>
-        </TooltipProvider>
-      </ThemeProvider>
-    </ErrorBoundary>
+        <ThemeProvider defaultTheme="light">
+          <TooltipProvider>
+            <Toaster />
+            <Layout>
+              <Router />
+            </Layout>
+          </TooltipProvider>
+        </ThemeProvider>
+      </ErrorBoundary>
     </>
   );
 }

@@ -27,11 +27,11 @@ const ENCLOSED_BOOTH_RENDER = "/manus-storage/enclosed-booth-card-zenith_7e01064
 // bgImage  : side-angle private jet in white booth (hero)
 // AERO_FEATURED: PFS-branded jet side profile (featured/gallery 1)
 // AERO_GALLERY2: twin-engine prop in hangar (gallery 2)
-const AIRCRAFT_RENDER      = "/manus-storage/pfs-aerospace-jet-side-booth-hero_34e5d4ce.png";   // hero — real PFS jet side angle
-const AIRCRAFT_HERO_VIDEO  = "/manus-storage/product_aerospace_jet_side_hero_ae4811fe.mp4"; // hero video — generated from real photo
-const AERO_FEATURED     = "/manus-storage/aero-pfs-jet-side-profile-clean_5b7a100a.jpg"; // PFS-branded jet
-const AERO_GALLERY2     = "/manus-storage/aero-twin-engine-hangar-clean_122f0945.jpg";  // twin-engine prop
-const AERO_REAL_BOOTH   = "/manus-storage/pfs-aerospace-jet-in-booth-real_2eb79dc9.png"; // real PFS install
+const AIRCRAFT_RENDER = "/manus-storage/pfs-aerospace-jet-side-booth-hero_34e5d4ce.png";   // hero — real PFS jet side angle
+const AIRCRAFT_HERO_VIDEO = "/manus-storage/product_aerospace_jet_side_hero_ae4811fe.mp4"; // hero video — generated from real photo
+const AERO_FEATURED = "/manus-storage/aero-pfs-jet-side-profile-clean_5b7a100a.jpg"; // PFS-branded jet
+const AERO_GALLERY2 = "/manus-storage/aero-twin-engine-hangar-clean_122f0945.jpg";  // twin-engine prop
+const AERO_REAL_BOOTH = "/manus-storage/pfs-aerospace-jet-in-booth-real_2eb79dc9.png"; // real PFS install
 const POWDER_RENDER = IMG_POWDER_COATING;
 const BATCH_OVEN_RENDER = IMG_OVEN_BATCH;
 const CONVEYOR_OVEN_RENDER = IMG_OVEN_CONVEYOR;
@@ -1332,7 +1332,7 @@ export default function ProductSubPage() {
             <span style={{ display: "block", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(255,255,255,0.45)", marginBottom: "0.75rem" }}>
               {data.featuredBooth.label}
             </span>
-            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "clamp(1.6rem,3.5vw,2.4rem)", textTransform: "uppercase", color: "#fff", marginBottom: "2.5rem", letterSpacing: "0.02em" }}>
+            <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "clamp(1.6rem,3.5vw,2.4rem)", textTransform: "uppercase", color: "#fff", marginBottom: "2.5rem", letterSpacing: "0.02em" }}>
               {data.featuredBooth.title}
             </h2>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5rem", marginBottom: "2.5rem" }} className="grid-cols-1 sm:grid-cols-2">
@@ -1352,7 +1352,7 @@ export default function ProductSubPage() {
               </div>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem", alignItems: "start" }} className="grid-cols-1 lg:grid-cols-2">
-              <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.7)", lineHeight: 1.7, margin: 0 }}>
+              <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.7)", lineHeight: 1.7, margin: 0 }}>
                 {data.featuredBooth.description}
               </p>
               {data.featuredBooth.specs && data.featuredBooth.specs.length > 0 && (
@@ -1382,7 +1382,7 @@ export default function ProductSubPage() {
                 </span>
               )}
               <h2 data-animation="slideLeft" className="section-heading">{data.title}</h2>
-              <p data-animation="slideLeft" className="section-body" style={{ marginBottom: "2rem" }}>{data.body}</p>
+              <p className="section-body" style={{ marginBottom: "2rem" }}>{data.body}</p>
 
               {(() => {
                 const SHOW_COUNT = 6;
@@ -1392,7 +1392,7 @@ export default function ProductSubPage() {
                   : data.features;
                 return (
                   <div className="mb-8">
-                    <div data-animation="fadeIn" className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {visibleFeatures.map((f) => (
                         <div key={f} className="flex items-start gap-2.5">
                           <CheckCircle2 size={16} style={{ color: "#1B2B4B", flexShrink: 0, marginTop: "2px" }} />
@@ -1463,7 +1463,7 @@ export default function ProductSubPage() {
                 <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.6, marginBottom: "1rem" }}>
                   Our engineers are available to help you select the right configuration for your application.
                 </p>
-                <Link data-animation="slideLeft" href="/contact/request-a-quote">
+                <Link href="/contact/request-a-quote">
                   <span style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#ffffff", borderBottom: "2px solid rgba(255,255,255,0.4)", paddingBottom: "2px", cursor: "pointer" }}>
                     GET PRICING <ArrowRight size={12} />
                   </span>

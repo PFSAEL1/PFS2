@@ -1,20 +1,20 @@
-﻿import { Link } from "wouter";
+import { Link } from "wouter";
 import { ArrowRight, Phone } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
 // All images use manus-storage paths
-const HERO_IMG       = "/manus-storage/pfs-paint-booth-kia-hero_addbde19.jpg";  // Real PFS booth — silver Kia K5 inside white booth
-const HERO_VIDEO     = "/manus-storage/pfs-paint-booth-hero_500b9d60.mp4";       // Cinematic hero video
-const OPEN_FACE_IMG  = "/manus-storage/IMG_2132_c21b2839.jpg";
-const ENCLOSED_IMG   = "/manus-storage/enclosed-booth-card-zenith_7e010642.jpg";
-const OUTDOOR_IMG    = "/manus-storage/pfs-outdoor-hero-8143_9d49ac36.jpg";
-const CONTAINER_IMG  = "/manus-storage/pfs-container-booth-card-v2_b8177420.jpg";
-const AIRCRAFT_IMG   = "/manus-storage/pfs-aerospace-jet-in-booth-real_2eb79dc9.png";
+const HERO_IMG = "/manus-storage/pfs-paint-booth-kia-hero_addbde19.jpg";  // Real PFS booth — silver Kia K5 inside white booth
+const HERO_VIDEO = "/manus-storage/pfs-paint-booth-hero_500b9d60.mp4";       // Cinematic hero video
+const OPEN_FACE_IMG = "/manus-storage/IMG_2132_c21b2839.jpg";
+const ENCLOSED_IMG = "/manus-storage/enclosed-booth-card-zenith_7e010642.jpg";
+const OUTDOOR_IMG = "/manus-storage/pfs-outdoor-hero-8143_9d49ac36.jpg";
+const CONTAINER_IMG = "/manus-storage/pfs-container-booth-card-v2_b8177420.jpg";
+const AIRCRAFT_IMG = "/manus-storage/pfs-aerospace-jet-in-booth-real_2eb79dc9.png";
 const INSPECTION_IMG = "/manus-storage/pfs-inspection-hero_1b83deb1.png";
 const DOUBLE_WALL_IMG = "/manus-storage/pfs-double-wall-booth-v2_8cdb7a24.webp";
-const PARTS_IMG      = "/manus-storage/pfs-parts-booth-angled_01b1a8aa.jpeg";
-const CUSTOM_IMG     = "/manus-storage/pfs-custom-booth-front-card_7e7d1673.jpg";
-const TRUCK_IMG      = "/manus-storage/pfs-truck-booth-card_a0d45884_fca2d2cb.jpeg";
+const PARTS_IMG = "/manus-storage/pfs-parts-booth-angled_01b1a8aa.jpeg";
+const CUSTOM_IMG = "/manus-storage/pfs-custom-booth-front-card_7e7d1673.jpg";
+const TRUCK_IMG = "/manus-storage/pfs-truck-booth-card_a0d45884_fca2d2cb.jpeg";
 
 const BOOTHS = [
   {
@@ -144,13 +144,13 @@ export default function PaintBoothsHub() {
     <div>
       {/* ── HERO — full-bleed video, text overlaid at bottom (matches Aerospace format) ── */}
       <section style={{ position: "relative", minHeight: "70vh", display: "flex", flexDirection: "column", justifyContent: "flex-end", overflow: "hidden" }}>
-        <video  preload="auto"
+        <video preload="auto"
           autoPlay
           muted
           loop
           playsInline
           disablePictureInPicture
-         
+
           aria-hidden="true"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center" }}
         >
@@ -199,7 +199,7 @@ export default function PaintBoothsHub() {
           {/* Card grid — larger images */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {BOOTHS.map((booth) => (
-              <Link data-animation="fadeIn" key={booth.label} href={booth.href} >
+              <Link data-animation="fadeIn" key={booth.label} href={booth.href}>
                 <div className="group cursor-pointer border border-gray-200 hover:border-[#1B2B4B] transition-all duration-300 hover:shadow-[0_0_24px_rgba(27,43,75,0.15)] overflow-hidden h-full flex flex-col">
                   <div className="overflow-hidden flex-shrink-0" style={{ height: "220px" }}>
                     <img
@@ -244,7 +244,7 @@ export default function PaintBoothsHub() {
                 <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.4rem", fontWeight: 700, color: "#ffffff", marginBottom: "0.4rem" }}>
                   Not Sure Which Booth Is Right for You?
                 </h3>
-                <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.6 }}>
+                <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.6 }}>
                   Our engineers will review your facility, process, and throughput — and recommend the right configuration at no charge.
                 </p>
               </div>

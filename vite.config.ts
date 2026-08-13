@@ -155,14 +155,12 @@ function vitePluginStorageProxy(): Plugin {
     name: "manus-storage-proxy",
     configureServer(server: ViteDevServer) {
       server.middlewares.use("/manus-storage", async (req, res, next) => {
-        const key = (req.url || "").replace(/^\//, "").split("?")[0];
-        if (!key) { return next(); }
-
-        const localPath = path.join(PROJECT_ROOT, "client", "public", "manus-storage", key);
-        if (fs.existsSync(localPath)) {
+        const key = req.url?.replace(/^\//, "").split("?")[0];
+        if (!key) return next();
+        const localFilePath = path.resolve(import.meta.dirname, "client", "public", "manus-storage", key);
+        if (fs.existsSync(localFilePath)) {
           return next();
         }
-
         const forgeBaseUrl = (process.env.BUILT_IN_FORGE_API_URL || "").replace(/\/+$/, "");
         const forgeKey = process.env.BUILT_IN_FORGE_API_KEY;
         if (!forgeBaseUrl || !forgeKey) { return next(); }
@@ -187,13 +185,10 @@ export default defineConfig({
   plugins,
   resolve: {
     alias: {
-      "react": path.resolve(import.meta.dirname, "node_modules", "react"),
-      "react-dom": path.resolve(import.meta.dirname, "node_modules", "react-dom"),
       "@": path.resolve(import.meta.dirname, "client", "src"),
       "@shared": path.resolve(import.meta.dirname, "shared"),
       "@assets": path.resolve(import.meta.dirname, "attached_assets"),
     },
-    dedupe: ["react", "react-dom"],
   },
   envDir: path.resolve(import.meta.dirname),
   root: path.resolve(import.meta.dirname, "client"),

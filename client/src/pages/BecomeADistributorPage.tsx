@@ -194,7 +194,7 @@ export default function BecomeADistributorPage() {
               <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.5rem, 2.5vw, 2rem)", fontWeight: 800, color: BLUE, textTransform: "uppercase", letterSpacing: "0.02em", marginBottom: "1.5rem", lineHeight: 1.15 }}>
                 Who We're Looking For
               </h2>
-              <div data-animation="fadeIn" style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }}>
                 {REQUIREMENTS.map((r, i) => (
                   <div key={i} style={{ display: "flex", gap: "0.85rem", alignItems: "flex-start" }}>
                     <CheckCircle2 size={18} color={BLUE} style={{ flexShrink: 0, marginTop: "0.15rem" }} />
@@ -209,10 +209,10 @@ export default function BecomeADistributorPage() {
               <p style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.18em", color: GOLD, textTransform: "uppercase", marginBottom: "0.6rem" }}>
                 What You Get
               </p>
-              <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.5rem, 2.5vw, 2rem)", fontWeight: 800, color: BLUE, textTransform: "uppercase", letterSpacing: "0.02em", marginBottom: "1.5rem", lineHeight: 1.15 }}>
+              <h2 data-animation="slideRight" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.5rem, 2.5vw, 2rem)", fontWeight: 800, color: BLUE, textTransform: "uppercase", letterSpacing: "0.02em", marginBottom: "1.5rem", lineHeight: 1.15 }}>
                 The PFS Partner Program
               </h2>
-              <div data-animation="fadeIn" style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }}>
                 {PROGRAM_FEATURES.map((f, i) => (
                   <div key={i} style={{ display: "flex", gap: "0.85rem", alignItems: "flex-start" }}>
                     <div style={{ width: 8, height: 8, background: GOLD, borderRadius: "50%", flexShrink: 0, marginTop: "0.45rem" }} />
@@ -243,7 +243,7 @@ export default function BecomeADistributorPage() {
               <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 800, color: "#fff", textTransform: "uppercase", lineHeight: 1.1, marginBottom: "1rem" }}>
                 The Booth Your Customers<br />Will Ask For By Name
               </h3>
-              <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.85)", lineHeight: 1.65 }}>
+              <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.85)", lineHeight: 1.65 }}>
                 Manufactured in Santa Rosa, CA. Shipped nationwide. Built with ETL/UL listed and certified components. The Helios Series is the flagship — and it sells itself.
               </p>
             </div>
@@ -262,7 +262,7 @@ export default function BecomeADistributorPage() {
               <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", fontWeight: 800, color: BLUE, textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 1.1, marginBottom: "0.75rem" }}>
                 Apply to Become a Partner
               </h2>
-              <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#4a5568", lineHeight: 1.65 }}>
+              <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#4a5568", lineHeight: 1.65 }}>
                 Fill out the form below and a PFS sales representative will contact you within 1–2 business days to discuss your territory and qualification.
               </p>
             </div>
@@ -347,14 +347,14 @@ export default function BecomeADistributorPage() {
                 </div>
 
                 <div style={{ display: "flex", gap: "1rem", alignItems: "center", flexWrap: "wrap" }}>
-                  <button
+                  <button data-animation="slideLeft"
                     type="submit"
                     disabled={submitting}
                     style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: submitting ? "#6b7280" : BLUE, color: "#fff", fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.82rem", fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", padding: "1rem 2.5rem", border: "none", cursor: submitting ? "not-allowed" : "pointer" }}
                   >
                     {submitting ? "Submitting..." : <>Submit Application <ArrowRight size={15} /></>}
                   </button>
-                  <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#6b7280" }}>
+                  <p data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#6b7280" }}>
                     We'll respond within 1–2 business days.
                   </p>
                 </div>

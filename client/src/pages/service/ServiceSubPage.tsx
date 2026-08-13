@@ -5,7 +5,7 @@ import { ArrowRight, Phone, CheckCircle } from "lucide-react";
 
 // New original AI-generated images — no internet-sourced photos
 const SERVICE_TECH_1 = "/manus-storage/pfs-service-tech-1_8685fcab.jpg";
-const SERVICE_TEAM  = "/manus-storage/pfs-team-photo-rebranded_537b580c.png";
+const SERVICE_TEAM = "/manus-storage/pfs-team-photo-rebranded_537b580c.png";
 
 interface SvcContent {
   title: string;
@@ -293,7 +293,7 @@ export default function ServiceSubPage() {
         <PageHero title="Service" breadcrumbs={[{ label: "Service", href: "/service" }]} />
         <div className="container py-16 text-center">
           <p className="section-body">Page not found. Please use the navigation above.</p>
-          <Link data-animation="slideLeft" href="/service"><span className="btn-glow mt-4 inline-flex">Back to Service</span></Link>
+          <Link href="/service"><span className="btn-glow mt-4 inline-flex">Back to Service</span></Link>
         </div>
       </div>
     );
@@ -356,14 +356,14 @@ export default function ServiceSubPage() {
             {/* Sidebar */}
             <div className="space-y-5">
               <div className="overflow-hidden" style={{ borderRadius: "2px" }}>
-                <img data-animation="slideLeft" src={content.img} alt={content.title} className="w-full object-cover" style={{ height: "260px" }} />
+                <img src={content.img} alt={content.title} className="w-full object-cover" style={{ height: "260px" }} />
               </div>
 
               <div className="p-5" style={{ backgroundColor: "#1C1C1E", borderRadius: "2px" }}>
                 <span className="section-label" style={{ color: "#FFFFFF" }}>24/7 Emergency</span>
                 <h4 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.05rem", fontWeight: 700, color: "white", marginBottom: "0.75rem" }}>Equipment Down?</h4>
                 <a href="tel:8885457715" className="btn-glow flex items-center gap-2 justify-center w-full">
-                  <Phone data-animation="slideRight" size={14} /> (888) 545-7715
+                  <Phone size={14} /> (888) 545-7715
                 </a>
               </div>
 

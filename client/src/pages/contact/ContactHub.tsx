@@ -61,7 +61,7 @@ export default function ContactHub() {
                   <label className="form-label">Message *</label>
                   <textarea className="form-input" rows={5} required value={form.message} onChange={e => setForm(f => ({ ...f, message: e.target.value }))} />
                 </div>
-                <button type="submit" className="btn-glow">Send Message</button>
+                <button data-animation="slideRight" type="submit" className="btn-glow">Send Message</button>
               </form>
             </div>
             <div className="space-y-6">

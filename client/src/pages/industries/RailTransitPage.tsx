@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Rail & Transit — Dedicated Industry Page
  * Hero: MP4 video (interior rail booth with tracks)
  * Featured: LA Metro car inside PFS rail booth
@@ -13,35 +13,35 @@ import { SiteProductCardSection } from "@/components/SiteProductCard";
 import { useSEO } from "@/hooks/useSEO";
 
 // ── CDN ASSETS ────────────────────────────────────────────────────────────────
-const HERO_VIDEO   = "/manus-storage/pfs-rail-transit-hero-v3_654a85a0.mp4";
-const HERO_IMG     = "/manus-storage/pfs-rail-sound-transit-booth_09983df7.png"; // poster fallback — Sound Transit car
+const HERO_VIDEO = "/manus-storage/pfs-rail-transit-hero-v3_654a85a0.mp4";
+const HERO_IMG = "/manus-storage/pfs-rail-sound-transit-booth_09983df7.png"; // poster fallback — Sound Transit car
 const FEATURED_IMG = "/manus-storage/pfs-rail-amtrak-locomotive-booth_3402b74f.png"; // Amtrak locomotive front-on in PFS booth
 
 // Gallery — Amtrak locomotive in booth + real booth interiors
 const GALLERY = [
-  { src: "/manus-storage/pfs-amtrak-in-booth_c7d4da1b.jpg",                   alt: "Amtrak locomotive #203 inside PFS rail paint booth" },
+  { src: "/manus-storage/pfs-amtrak-in-booth_c7d4da1b.jpg", alt: "Amtrak locomotive #203 inside PFS rail paint booth" },
   { src: "/manus-storage/pfs-rail-booth-interior-tracks-wide_63f2bdbf.jpeg", alt: "Wide interior view of PFS rail booth with grated walkways and blue lifts" },
-  { src: "/manus-storage/pfs-booth-interior-open-door_3877d125.jpg",         alt: "PFS large spray booth interior with open door view" },
+  { src: "/manus-storage/pfs-booth-interior-open-door_3877d125.jpg", alt: "PFS large spray booth interior with open door view" },
 ];
 
 // Cert logos
-const ETL_LOGO  = "/manus-storage/pfs-etl-logo_7758f722.png";
-const UL_LOGO   = "/manus-storage/pfs-ul508a-clean_e8efdeb8.jpg";
+const ETL_LOGO = "/manus-storage/pfs-etl-logo_7758f722.png";
+const UL_LOGO = "/manus-storage/pfs-ul508a-clean_e8efdeb8.jpg";
 const NFPA_LOGO = "/manus-storage/pfs-nfpa-logo_4b710cc9.png";
-const EPA_LOGO  = "/manus-storage/pfs-epa-logo_e4165f68.webp";
+const EPA_LOGO = "/manus-storage/pfs-epa-logo_e4165f68.webp";
 const OSHA_LOGO = "/manus-storage/pfs-osha-logo_0c460739.jpg";
-const USA_FLAG  = "/manus-storage/pfs-usa-flag_8fca512e.jpg";
+const USA_FLAG = "/manus-storage/pfs-usa-flag_8fca512e.jpg";
 
 const BLUE = "#1B3A6B";
 
 // ── CERT CAROUSEL ─────────────────────────────────────────────────────────────
 const CERTS = [
-  { type: "logo", img: ETL_LOGO,  title: "ETL & ETL-C Listed",       sub: "Intertek — USA & Canada",             imgH: 44 },
-  { type: "logo", img: UL_LOGO,   title: "UL 508A Certified",         sub: "Industrial Control Panel Fabricator", imgH: 44 },
-  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant",         sub: "Spray Application Standard",          imgH: 44 },
-  { type: "logo", img: EPA_LOGO,  title: "EPA Compliant",             sub: "Air Quality Standards",               imgH: 36 },
-  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant",            sub: "Workplace Safety Standards",          imgH: 36 },
-  { type: "flag", img: USA_FLAG,  title: "Made in the USA",           sub: "Santa Rosa, CA",                      imgH: 36 },
+  { type: "logo", img: ETL_LOGO, title: "ETL & ETL-C Listed", sub: "Intertek — USA & Canada", imgH: 44 },
+  { type: "logo", img: UL_LOGO, title: "UL 508A Certified", sub: "Industrial Control Panel Fabricator", imgH: 44 },
+  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant", sub: "Spray Application Standard", imgH: 44 },
+  { type: "logo", img: EPA_LOGO, title: "EPA Compliant", sub: "Air Quality Standards", imgH: 36 },
+  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant", sub: "Workplace Safety Standards", imgH: 36 },
+  { type: "flag", img: USA_FLAG, title: "Made in the USA", sub: "Santa Rosa, CA", imgH: 36 },
 ];
 const CERTS_LOOP = [...CERTS, ...CERTS];
 
@@ -147,10 +147,10 @@ const BOOTH_LINEUP = [
 ];
 
 const PRODUCTS = [
-  { label: "Custom Paint Booths",       href: "/products/paint-booths/custom",                          img: "/manus-storage/pfs-paint-booth-sprayer-card_42d3ea13.jpg",         desc: "Engineered-to-order booths for full-length railcars and locomotives." },
-  { label: "Industrial Ovens",          href: "/products/ovens",                                        img: "/manus-storage/pfs-vulcan-oven-card_ad72eade_316de7d1.png",   desc: "Batch and conveyor ovens for transit coating cure processes." },
-  { label: "Blasting Systems",          href: "/products/blast-systems",                                img: "/manus-storage/blast-systems-real_c7389401_16a0255c.webp",   desc: "Blast rooms for rail vehicle surface prep and paint stripping." },
-  { label: "Integration & Automation",  href: "/integration-automation",                                img: "/manus-storage/pfs-robotics-card_2aac132b.jpg",  desc: "Automated conveyor and transfer systems for rail finishing lines." },
+  { label: "Custom Paint Booths", href: "/products/paint-booths/custom", img: "/manus-storage/pfs-paint-booth-sprayer-card_42d3ea13.jpg", desc: "Engineered-to-order booths for full-length railcars and locomotives." },
+  { label: "Industrial Ovens", href: "/products/ovens", img: "/manus-storage/pfs-vulcan-oven-card_ad72eade_316de7d1.png", desc: "Batch and conveyor ovens for transit coating cure processes." },
+  { label: "Blasting Systems", href: "/products/blast-systems", img: "/manus-storage/blast-systems-real_c7389401_16a0255c.webp", desc: "Blast rooms for rail vehicle surface prep and paint stripping." },
+  { label: "Integration & Automation", href: "/integration-automation", img: "/manus-storage/pfs-robotics-card_2aac132b.jpg", desc: "Automated conveyor and transfer systems for rail finishing lines." },
 ];
 
 // ── MAIN PAGE ─────────────────────────────────────────────────────────────────
@@ -167,7 +167,7 @@ export default function RailTransitPage() {
     <div className="bg-white">
       {/* ── FULL-BLEED HERO — Video background ── */}
       <section style={{ position: "relative", minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "flex-end", overflow: "hidden" }}>
-        <video  preload="auto"
+        <video preload="auto"
           autoPlay
           muted
           loop
@@ -226,7 +226,7 @@ export default function RailTransitPage() {
               <span style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", background: BLUE, color: "#fff", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.68rem", fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", padding: "0.28rem 0.85rem", marginBottom: "0.75rem" }}>
                 CUSTOM DRIVE-THROUGH
               </span>
-              <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#555", maxWidth: "520px", margin: "0 auto", lineHeight: 1.7 }}>
+              <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#555", maxWidth: "520px", margin: "0 auto", lineHeight: 1.7 }}>
                 Custom drive-through booth with embedded rail tracks, grated walkways, scissor lifts, and downdraft airflow — built to accommodate full-size locomotives and passenger rail cars.
               </p>
             </div>
@@ -257,7 +257,7 @@ export default function RailTransitPage() {
             <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.6rem" }}>
               INSTALLED PROJECTS
             </span>
-            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em" }}>
+            <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em" }}>
               PFS Rail Finishing Facilities
             </h2>
           </div>
@@ -349,7 +349,7 @@ export default function RailTransitPage() {
             <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 4vw, 2.6rem)", fontWeight: 800, color: "#fff", letterSpacing: "-0.01em", lineHeight: 1.1 }}>
               Tell us your vehicle dimensions.<br />We'll spec the booth.
             </h2>
-            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.85)", maxWidth: "440px" }}>
+            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.85)", maxWidth: "440px" }}>
               Quote in 24 hours. manufactured in the USA with ETL/UL listed components. Installed at transit authority depots and rail yards by PFS-certified technicians.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center" }}>
@@ -368,7 +368,7 @@ export default function RailTransitPage() {
         </div>
       </section>
 
-            {/* RELATED PRODUCTS */}
+      {/* RELATED PRODUCTS */}
       <SiteProductCardSection
         heading="You May Also Need"
         label="Complete Your System"

@@ -112,7 +112,7 @@ function GatedDownload({ doc }: { doc: typeof GATED_DOWNLOADS[0] }) {
           >
             {doc.title}
           </h3>
-          <p data-animation="slideRight"
+          <p
             style={{
               fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
               fontSize: "0.85rem",
@@ -139,7 +139,7 @@ function GatedDownload({ doc }: { doc: typeof GATED_DOWNLOADS[0] }) {
         </div>
         <div style={{ flexShrink: 0 }}>
           {!submitted ? (
-            <button
+            <button data-animation="slideRight"
               onClick={() => setOpen(!open)}
               style={{
                 display: "inline-flex",
@@ -415,12 +415,7 @@ export default function ResourcesSubPage() {
         <PageHero title="Resources" breadcrumbs={[{ label: "Resources", href: "/resources" }]} />
         <div className="container py-16 text-center">
           <p className="section-body">Resource not found. Please use the navigation above.</p>
-          <Link data-animation="slideRight" className="btn-glow mt-4 inline-flex" href="/resources"><span data-animation="slideRight"  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: "0.5rem",
-                  }}>Back to Resources</span></Link>
+          <Link href="/resources"><span className="btn-glow mt-4 inline-flex">Back to Resources</span></Link>
         </div>
       </div>
     );
@@ -435,7 +430,7 @@ export default function ResourcesSubPage() {
             <div className="lg:col-span-2">
               <span className="section-label">Resources</span>
               <h2 data-animation="slideLeft" className="section-heading">{content.title}</h2>
-              <p data-animation="slideRight" className="section-body mb-8">{content.body}</p>
+              <p className="section-body mb-8">{content.body}</p>
 
               {/* Gated downloads for installation-guides and downloads pages */}
               {showGatedDownloads ? (
@@ -462,14 +457,8 @@ export default function ResourcesSubPage() {
                 </div>
               ) : (
                 <div className="p-6 border border-gray-200 bg-gray-50">
-                  <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "#555", lineHeight: 1.7, marginBottom: "1rem" }}>Resources are available upon request. Contact us to receive the documentation you need.</p>
-                  {/* <Link data-animation="slideRight" href="/contact/request-a-quote"><span className="btn-glow">Request Resources <ArrowRight size={14} /></span></Link> */}
-                   <Link data-animation="slideRight" className="btn-glow inline-flex" href="/contact/request-a-quote"><span style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: "0.5rem",
-                  }}>Request Resources <ArrowRight size={14} /></span></Link>
+                  <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "#555", lineHeight: 1.7, marginBottom: "1rem" }}>Resources are available upon request. Contact us to receive the documentation you need.</p>
+                  <Link href="/contact/request-a-quote"><span data-animation="slideRight" className="btn-glow">Request Resources <ArrowRight size={14} /></span></Link>
                 </div>
               )}
             </div>

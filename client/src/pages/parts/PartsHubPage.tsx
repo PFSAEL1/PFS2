@@ -1,4 +1,4 @@
-﻿/*
+/*
  * PFS OEM Parts Hub — /parts
  * - Full-bleed dark hero with parts workshop photo
  * - 14 product category cards (photo + title + desc + CTA)
@@ -18,7 +18,6 @@ const BLUE_LIGHT = "#2A5298";
 
 // ── CDN IMAGE URLS ────────────────────────────────────────────────────────────
 const HERO_IMG = "/manus-storage/pfs-filters-card_8b47eabc.png";  // Real PFS filter media photo
-const HERO_VIDEO = "/manus-storage/pfs-parts-filters-hero_9a1b0b80.mp4"; // Cinematic hero video
 const IMG_COMPRESSOR = "/manus-storage/pfs-compressor_ac8a8f18.jpg";
 const IMG_CAR_LIFT = "/manus-storage/pfs-lift_424297dc.jpg";
 const IMG_FILTERS = "/manus-storage/pfs-filters-card_8b47eabc.png";  // Real PFS filter media photo
@@ -254,7 +253,7 @@ function PartCard({
   const isExternal = href.startsWith("http");
 
   return (
-    <div
+    <div data-animation="fadeIn"
       id={`part-${id}`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -274,7 +273,7 @@ function PartCard({
     >
       {/* Badge */}
       {badge && (
-        <div data-animation="fadeIn" style={{
+        <div style={{
           position: "absolute", top: "0.75rem", left: "0.75rem", zIndex: 2,
           background: badge === "SAFETY CRITICAL" ? "#1B2B4B" : badge === "MOST ORDERED" ? BLUE : badge === "CUSTOM ORDER" ? "#374151" : "#555",
           color: "#fff",
@@ -288,7 +287,7 @@ function PartCard({
       )}
 
       {/* Image */}
-      <div data-animation="fadeIn" style={{
+      <div style={{
         width: "100%", aspectRatio: "16/9", overflow: "hidden",
         background: "#f8f9fa",
       }}>
@@ -305,7 +304,7 @@ function PartCard({
 
       {/* Content */}
       <div style={{ padding: "0.75rem 1rem", flex: 1, display: "flex", flexDirection: "column" }}>
-        <div data-animation="fadeIn" style={{
+        <div style={{
           fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
           fontSize: "0.72rem", fontWeight: 700,
           color: BLUE, letterSpacing: "0.1em", textTransform: "uppercase",
@@ -313,7 +312,7 @@ function PartCard({
         }}>
           {sub}
         </div>
-        <div data-animation="fadeIn" style={{
+        <div style={{
           fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
           fontSize: "1rem", fontWeight: 800,
           color: "#111", letterSpacing: "0.03em", textTransform: "uppercase",
@@ -321,7 +320,7 @@ function PartCard({
         }}>
           {label}
         </div>
-        <div data-animation="fadeIn" style={{
+        <div style={{
           fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
           fontSize: "0.78rem", color: "#555", lineHeight: 1.55,
           marginBottom: "1rem", flex: 1,
@@ -356,7 +355,7 @@ function PartCard({
               <ArrowRight size={12} /> SHOP FILTERS ↗
             </a>
           ) : (
-            <Link data-animation="slideLeft" href="/contact">
+            <Link href="/contact">
               <button style={{
                 flex: 1,
                 background: BLUE,
@@ -427,37 +426,31 @@ export default function PartsHubPage() {
         overflow: "hidden",
         background: "#0a0a0a",
       }}>
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          disablePictureInPicture
-
+        <img
+          src={HERO_IMG}
+          alt="PFS OEM spray booth replacement parts and components — filters, motors, control panels"
           style={{
             position: "absolute", inset: 0,
             width: "100%", height: "100%", objectFit: "cover",
             objectPosition: "center 40%",
             opacity: 0.45,
           }}
-        >
-          <source src={HERO_VIDEO} type="video/mp4" />
-        </video>
+        />
         {/* Gradient overlay */}
-        <div data-animation="fadeIn" style={{
+        <div style={{
           position: "absolute", inset: 0,
           background: "linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.2) 100%)",
         }} />
 
         {/* Text */}
-        <div data-animation="fadeIn" style={{
+        <div style={{
           position: "relative", zIndex: 2,
           maxWidth: "1200px", margin: "0 auto",
           padding: "0 2rem",
           height: "100%",
           display: "flex", flexDirection: "column", justifyContent: "center",
         }}>
-          <div data-animation="fadeIn" style={{
+          <div style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "0.72rem", fontWeight: 700,
             color: "rgba(255,255,255,0.6)", letterSpacing: "0.18em",
@@ -521,7 +514,7 @@ export default function PartsHubPage() {
         background: BLUE,
         borderBottom: "3px solid #111",
       }}>
-        <div data-animation="fadeIn" style={{
+        <div style={{
           maxWidth: "1200px", margin: "0 auto",
           padding: "1rem 2rem",
           display: "flex", alignItems: "center",
@@ -609,7 +602,7 @@ export default function PartsHubPage() {
       {/* ── PARTS GRID ── */}
       <section style={{ maxWidth: "1400px", margin: "0 auto", padding: "2rem 1.5rem" }}>
         <div style={{ marginBottom: "1.5rem" }}>
-          <div data-animation="fadeIn" style={{
+          <div style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "0.72rem", fontWeight: 700,
             color: BLUE, letterSpacing: "0.18em", textTransform: "uppercase",
@@ -625,7 +618,7 @@ export default function PartsHubPage() {
           }}>
             All Parts & Accessories
           </h2>
-          <p data-animation="slideLeft" style={{
+          <p style={{
             fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
             fontSize: "0.88rem", color: "#555", lineHeight: 1.6,
             maxWidth: "560px", marginTop: "0.5rem",
@@ -676,7 +669,7 @@ export default function PartsHubPage() {
             }}>
               We'll Cross-Reference Your<br />Booth Serial Number
             </h3>
-            <p data-animation="slideLeft" style={{
+            <p style={{
               fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
               fontSize: "0.88rem", color: "rgba(255,255,255,0.65)", lineHeight: 1.6,
               maxWidth: "480px",
@@ -720,7 +713,7 @@ export default function PartsHubPage() {
 
       {/* ── BULK / SUBSCRIPTION SECTION ── */}
       <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "3rem 2rem" }}>
-        <div style={{
+        <div data-animation="fadeIn" style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
           gap: "1.5rem",
@@ -753,7 +746,7 @@ export default function PartsHubPage() {
               display: "flex", flexDirection: "column", gap: "0.75rem",
             }}>
               {card.icon}
-              <div data-animation="fadeIn" style={{
+              <div style={{
                 fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
                 fontSize: "1.1rem", fontWeight: 900,
                 color: "#111", textTransform: "uppercase",
@@ -761,7 +754,7 @@ export default function PartsHubPage() {
               }}>
                 {card.title}
               </div>
-              <div data-animation="fadeIn" style={{
+              <div style={{
                 fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
                 fontSize: "0.82rem", color: "#555", lineHeight: 1.6, flex: 1,
               }}>

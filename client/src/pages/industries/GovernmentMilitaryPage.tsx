@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Government & Military — Enriched Industry Page
  * Hero: JavaScript multi-image Ken Burns slideshow (no video needed)
  *   - Cycles through 3 hero images with crossfade + pan/zoom via requestAnimationFrame
@@ -187,14 +187,12 @@ export default function GovernmentMilitaryPage() {
     <div className="bg-white">
       {/* ── FULL-BLEED HERO — Video background ── */}
       <section style={{ position: "relative", minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "flex-end", overflow: "hidden" }}>
-        {/* Pre-load image commented out: video loads directly via poster attribute instead
         <img
           src={HERO_IMG}
           alt="PFS government and military spray booth installation"
           aria-hidden="true"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", opacity: videoReady ? 0 : 1, transition: "opacity 0.7s ease", zIndex: 0 }}
         />
-        */}
         <video preload="auto" ref={videoRef}
           autoPlay
           muted
@@ -255,7 +253,7 @@ export default function GovernmentMilitaryPage() {
               <span style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", background: BLUE, color: "#fff", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.68rem", fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", padding: "0.28rem 0.85rem", marginBottom: "0.75rem" }}>
                 PFS HELIOS SERIES
               </span>
-              <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#555", maxWidth: "520px", margin: "0 auto", lineHeight: 1.7 }}>
+              <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#555", maxWidth: "520px", margin: "0 auto", lineHeight: 1.7 }}>
                 Drive-through clear-span construction. Downdraft airflow. manufactured in the USA with ETL/UL listed components, built to your vehicle dimensions — from HMMWVs to MRAPs and tactical trucks.
               </p>
             </div>
@@ -321,13 +319,13 @@ export default function GovernmentMilitaryPage() {
           </div>
           {featuresOpen && (
             <>
-              <div data-animation="fadeIn" className="grid md:grid-cols-3 gap-5 mb-5">
+              <div className="grid md:grid-cols-3 gap-5 mb-5">
                 {FEATURES_HIDDEN.map((f) => (
                   <div key={f.title} style={{ background: "#fff", padding: "1.75rem", borderTop: `3px solid ${BLUE}`, display: "flex", flexDirection: "column" }}>
                     <div style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "2rem", fontWeight: 900, color: "rgba(27,58,107,0.12)", lineHeight: 1, marginBottom: "0.5rem" }}>{f.num}</div>
                     <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.05rem", fontWeight: 700, color: "#111", marginBottom: "0.6rem" }}>{f.title}</h3>
                     <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.84rem", color: "#555", lineHeight: 1.75, marginBottom: "1rem", flex: 1 }}>{f.body}</p>
-                    <Link data-animation="slideLeft" href="/contact/request-a-quote">
+                    <Link href="/contact/request-a-quote">
                       <span style={{ display: "inline-flex", alignItems: "center", gap: "0.3rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.78rem", fontWeight: 700, color: BLUE, letterSpacing: "0.08em", textTransform: "uppercase", cursor: "pointer" }}>
                         LEARN MORE <ArrowRight size={12} />
                       </span>
@@ -367,7 +365,7 @@ export default function GovernmentMilitaryPage() {
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", marginBottom: "2.5rem" }}>
             <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: BLUE, display: "block", marginBottom: "0.5rem" }}>SAM.GOV REGISTERED VENDOR</span>
             <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.2rem)", fontWeight: 800, color: "#0d1b2e", letterSpacing: "-0.01em", lineHeight: 1.1, marginBottom: "0.75rem" }}>Federal Procurement Profile</h2>
-            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#444", maxWidth: "560px", lineHeight: 1.7 }}>PFS is a registered federal contractor on SAM.gov. Our booths are procurable through standard government acquisition channels including GSA schedules, competitive bids, and sole-source justifications for NFPA 33 compliant spray finishing equipment.</p>
+            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#444", maxWidth: "560px", lineHeight: 1.7 }}>PFS is a registered federal contractor on SAM.gov. Our booths are procurable through standard government acquisition channels including GSA schedules, competitive bids, and sole-source justifications for NFPA 33 compliant spray finishing equipment.</p>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.5rem", maxWidth: "960px", margin: "0 auto 2rem" }}>
             {[
@@ -400,7 +398,7 @@ export default function GovernmentMilitaryPage() {
             <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 4vw, 2.6rem)", fontWeight: 800, color: "#fff", letterSpacing: "-0.01em", lineHeight: 1.1 }}>
               Tell us your vehicle dimensions.<br />We'll spec the booth.
             </h2>
-            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.85)", maxWidth: "440px" }}>
+            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.85)", maxWidth: "440px" }}>
               Quote in 24 hours. manufactured in the USA with ETL/UL listed components. Installed at federal facilities and military bases by PFS-certified technicians.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center" }}>

@@ -1,4 +1,4 @@
-﻿import { Link } from "wouter";
+import { Link } from "wouter";
 import { ArrowRight, Phone } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
@@ -71,9 +71,9 @@ export default function PrepSupportHub() {
         justifyContent: "flex-end",
         overflow: "hidden",
       }}>
-        <video  preload="auto"
+        <video preload="auto"
           autoPlay muted loop playsInline
-         
+
           aria-hidden="true"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center" }}
         >
@@ -99,7 +99,7 @@ export default function PrepSupportHub() {
           <div className="mb-12">
             <span className="section-label">Prep & Support</span>
             <h2 data-animation="slideLeft" className="section-heading">Choose Your Equipment</h2>
-            <p data-animation="slideLeft" className="section-body max-w-2xl">PFS builds prep and support equipment for spray booth and powder coating lines.</p>
+            <p className="section-body max-w-2xl">PFS builds prep and support equipment for spray booth and powder coating lines.</p>
           </div>
 
           {/* Large card grid */}
@@ -149,7 +149,7 @@ export default function PrepSupportHub() {
                 <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.4rem", fontWeight: 700, color: "#ffffff", marginBottom: "0.4rem" }}>
                   Need a Complete Prep Solution?
                 </h3>
-                <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.6 }}>
+                <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.6 }}>
                   PFS can design and build a full prep area — from paint mix room to sanding station — as part of your finishing system.
                 </p>
               </div>
@@ -157,8 +157,8 @@ export default function PrepSupportHub() {
                 <Link data-animation="slideLeft" href="/contact/request-a-quote">
                   <span className="btn-glow flex items-center gap-2">Get Pricing <ArrowRight size={14} /></span>
                 </Link>
-                <a href="tel:+18885457715">
-                  <span data-animation="slideRight" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#ffffff", border: "1.5px solid rgba(255,255,255,0.4)", padding: "0.6rem 1.2rem", cursor: "pointer" }}>
+                <a data-animation="slideRight" href="tel:+18885457715">
+                  <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#ffffff", border: "1.5px solid rgba(255,255,255,0.4)", padding: "0.6rem 1.2rem", cursor: "pointer" }}>
                     <Phone size={14} /> (888) 545-7715
                   </span>
                 </a>

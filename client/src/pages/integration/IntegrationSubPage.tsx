@@ -346,8 +346,8 @@ export default function IntegrationSubPage() {
       <div>
         <PageHero title="Integration & Automation" breadcrumbs={[{ label: "Integration & Automation", href: "/integration-automation" }]} />
         <div className="container py-16 text-center">
-          <p data-animation="slideRight" className="section-body">Page not found. Please use the navigation above.</p>
-          <Link data-animation="slideLeft" href="/integration-automation"><span className="btn-glow mt-4 inline-flex">Back to Integration & Automation</span></Link>
+          <p className="section-body">Page not found. Please use the navigation above.</p>
+          <Link href="/integration-automation"><span className="btn-glow mt-4 inline-flex">Back to Integration & Automation</span></Link>
         </div>
       </div>
     );
@@ -362,11 +362,11 @@ export default function IntegrationSubPage() {
         bgImage={content.img}
         bgVideo={
           sub === "liquid-paint-lines" ? PAINT_VIDEO :
-          sub === "pretreatment-systems" ? PRETREAT_VIDEO :
-          sub === "robotic-finishing-cells" ? ROBOTIC_VIDEO :
-          sub === "conveyor-systems" ? CONVEYOR_VIDEO :
-          sub === "system-integration" ? SYSTEM_INTEGRATION_VIDEO :
-          sub === "powder-coating-lines" ? POWDER_VIDEO : undefined
+            sub === "pretreatment-systems" ? PRETREAT_VIDEO :
+              sub === "robotic-finishing-cells" ? ROBOTIC_VIDEO :
+                sub === "conveyor-systems" ? CONVEYOR_VIDEO :
+                  sub === "system-integration" ? SYSTEM_INTEGRATION_VIDEO :
+                    sub === "powder-coating-lines" ? POWDER_VIDEO : undefined
         }
         ctaPricingHref={`/contact/request-a-quote?from=integration-${sub}`}
       />
@@ -396,7 +396,7 @@ export default function IntegrationSubPage() {
               </div>
             </div>
             <div>
-              <img data-animation="slideLeft" src={content.img} alt={`PFS ${content.title} — automated industrial finishing system`} className="w-full object-cover" style={{ height: "280px" }} />
+              <img src={content.img} alt={`PFS ${content.title} — automated industrial finishing system`} className="w-full object-cover" style={{ height: "280px" }} />
               {sub === "pretreatment-systems" && (
                 <img src={PRETREAT_SPRAY} alt="PFS pretreatment spray washer tunnel system" className="w-full object-cover mt-3" style={{ height: "220px" }} />
               )}

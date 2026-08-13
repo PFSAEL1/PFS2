@@ -7,7 +7,7 @@ import {
 } from "@/lib/productImages";
 import { useSEO } from "@/hooks/useSEO";
 
-const HERO_IMG   = "/manus-storage/pfs-industrial-oven-hero_52d9f4df.jpg";
+const HERO_IMG = "/manus-storage/pfs-industrial-oven-hero_52d9f4df.jpg";
 const HERO_VIDEO = "/manus-storage/pfs-oven-hero-video_05e4a406.mp4";
 
 // imgHeight: card image area height in px — taller for portrait images so the full subject is visible
@@ -112,7 +112,7 @@ export default function OvensHub() {
           <div className="mb-12">
             <span className="section-label">Industrial Ovens</span>
             <h2 data-animation="slideLeft" className="section-heading">Choose Your Configuration</h2>
-            <p data-animation="slideLeft" className="section-body max-w-2xl">
+            <p className="section-body max-w-2xl">
               PFS industrial ovens are precision-engineered for curing, drying, and heat-treating applications — available in batch, conveyor, walk-in, infrared, and fully custom configurations.
             </p>
           </div>
@@ -165,7 +165,7 @@ export default function OvensHub() {
                 <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.4rem", fontWeight: 700, color: "#ffffff", marginBottom: "0.4rem" }}>
                   Need a Custom Oven Solution?
                 </h3>
-                <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.6 }}>
+                <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.6 }}>
                   Our engineers will design a system around your temperature range, part geometry, and cycle time — at no charge.
                 </p>
               </div>

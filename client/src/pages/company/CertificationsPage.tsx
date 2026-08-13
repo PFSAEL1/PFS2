@@ -11,27 +11,27 @@ import { useSEO } from "@/hooks/useSEO";
 const BLUE = "#1B3A6B";
 const VIDEO_URL = "/manus-storage/cert-hero-5s_6f5e0dab.mp4";
 
-const ETL_LOGO  = "/manus-storage/pfs-etl-logo_7758f722.png";
-const UL_LOGO   = "/manus-storage/pfs-ul508a-clean_e8efdeb8.jpg";
+const ETL_LOGO = "/manus-storage/pfs-etl-logo_7758f722.png";
+const UL_LOGO = "/manus-storage/pfs-ul508a-clean_e8efdeb8.jpg";
 const NFPA_LOGO = "/manus-storage/pfs-nfpa-logo_4b710cc9.png";
-const EPA_LOGO  = "/manus-storage/pfs-epa-logo_e4165f68.webp";
+const EPA_LOGO = "/manus-storage/pfs-epa-logo_e4165f68.webp";
 const OSHA_LOGO = "/manus-storage/pfs-osha-logo_0c460739.jpg";
-const USA_FLAG  = "/manus-storage/pfs-usa-flag_8fca512e.jpg";
+const USA_FLAG = "/manus-storage/pfs-usa-flag_8fca512e.jpg";
 
 const CERTS = [
-  { img: ETL_LOGO,  title: "ETL & ETL-C Listed",    sub: "Intertek — USA & Canada",             imgH: 44 },
-  { img: UL_LOGO,   title: "UL 508A Certified",      sub: "Industrial Control Panel Fabricator", imgH: 44 },
-  { img: NFPA_LOGO, title: "NFPA 33 Compliant",      sub: "Spray Application Standard",          imgH: 44 },
-  { img: EPA_LOGO,  title: "EPA Compliant",          sub: "Air Quality Standards",               imgH: 36 },
-  { img: OSHA_LOGO, title: "OSHA Compliant",         sub: "Workplace Safety Standards",          imgH: 36 },
-  { img: USA_FLAG,  title: "Made in the USA",        sub: "Santa Rosa, CA",                      imgH: 36 },
+  { img: ETL_LOGO, title: "ETL & ETL-C Listed", sub: "Intertek — USA & Canada", imgH: 44 },
+  { img: UL_LOGO, title: "UL 508A Certified", sub: "Industrial Control Panel Fabricator", imgH: 44 },
+  { img: NFPA_LOGO, title: "NFPA 33 Compliant", sub: "Spray Application Standard", imgH: 44 },
+  { img: EPA_LOGO, title: "EPA Compliant", sub: "Air Quality Standards", imgH: 36 },
+  { img: OSHA_LOGO, title: "OSHA Compliant", sub: "Workplace Safety Standards", imgH: 36 },
+  { img: USA_FLAG, title: "Made in the USA", sub: "Santa Rosa, CA", imgH: 36 },
 ];
 const CERTS_LOOP = [...CERTS, ...CERTS];
 
 function CertCarousel() {
   const trackRef = useRef<HTMLDivElement>(null);
-  const animRef  = useRef<number>(0);
-  const posRef   = useRef(0);
+  const animRef = useRef<number>(0);
+  const posRef = useRef(0);
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
@@ -46,17 +46,17 @@ function CertCarousel() {
     return () => cancelAnimationFrame(animRef.current);
   }, []);
   return (
-    <section style={{ background:"#ffffff", padding:"0", overflow:"hidden", borderTop:`4px solid ${BLUE}`, borderBottom:"3px solid #111", boxShadow:"0 4px 0 0 #111" }}>
-      <div style={{ overflow:"hidden", position:"relative" }}>
-        <div style={{ position:"absolute",left:0,top:0,bottom:0,width:"80px",zIndex:2,background:"linear-gradient(to right, #ffffff, transparent)",pointerEvents:"none" }} />
-        <div style={{ position:"absolute",right:0,top:0,bottom:0,width:"80px",zIndex:2,background:"linear-gradient(to left, #ffffff, transparent)",pointerEvents:"none" }} />
-        <div ref={trackRef} style={{ display:"flex",alignItems:"center",gap:"0",whiteSpace:"nowrap",willChange:"transform" }}>
+    <section style={{ background: "#ffffff", padding: "0", overflow: "hidden", borderTop: `4px solid ${BLUE}`, borderBottom: "3px solid #111", boxShadow: "0 4px 0 0 #111" }}>
+      <div style={{ overflow: "hidden", position: "relative" }}>
+        <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: "80px", zIndex: 2, background: "linear-gradient(to right, #ffffff, transparent)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", right: 0, top: 0, bottom: 0, width: "80px", zIndex: 2, background: "linear-gradient(to left, #ffffff, transparent)", pointerEvents: "none" }} />
+        <div ref={trackRef} style={{ display: "flex", alignItems: "center", gap: "0", whiteSpace: "nowrap", willChange: "transform" }}>
           {CERTS_LOOP.map((cert, i) => (
-            <div key={i} style={{ display:"inline-flex",alignItems:"center",gap:"0.75rem",padding:"1.1rem 2.5rem",borderRight:"1px solid #e5e7eb",flexShrink:0 }}>
-              <img src={cert.img} alt={cert.title} style={{ height:`${cert.imgH}px`,width:"auto",objectFit:"contain",flexShrink:0 }} />
+            <div key={i} style={{ display: "inline-flex", alignItems: "center", gap: "0.75rem", padding: "1.1rem 2.5rem", borderRight: "1px solid #e5e7eb", flexShrink: 0 }}>
+              <img src={cert.img} alt={cert.title} style={{ height: `${cert.imgH}px`, width: "auto", objectFit: "contain", flexShrink: 0 }} />
               <div>
-                <div style={{ fontFamily:"'Chakra Petch', 'Barlow Condensed', sans-serif",fontSize:"0.82rem",fontWeight:800,color:"#111",letterSpacing:"0.04em",textTransform:"uppercase" }}>{cert.title}</div>
-                <div style={{ fontFamily:"'Archivo Narrow', 'Inter', sans-serif",fontSize:"0.72rem",color:"#666" }}>{cert.sub}</div>
+                <div style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.82rem", fontWeight: 800, color: "#111", letterSpacing: "0.04em", textTransform: "uppercase" }}>{cert.title}</div>
+                <div style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.72rem", color: "#666" }}>{cert.sub}</div>
               </div>
             </div>
           ))}
@@ -150,10 +150,10 @@ export default function CertificationsPage() {
           paddingTop: "7rem",
         }}
       >
-        <video autoPlay muted loop playsInline style={{ position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",opacity:0.55 }}>
+        <video autoPlay muted loop playsInline style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.55 }}>
           <source src={VIDEO_URL} type="video/mp4" />
         </video>
-        <div aria-hidden="true" style={{ position:"absolute",inset:0,background:"linear-gradient(to top, rgba(8,8,16,0.85) 0%, rgba(8,8,16,0.3) 60%, transparent 100%)",pointerEvents:"none" }} />
+        <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(8,8,16,0.85) 0%, rgba(8,8,16,0.3) 60%, transparent 100%)", pointerEvents: "none" }} />
 
 
         <div className="container" style={{ position: "relative", zIndex: 2 }}>
@@ -178,9 +178,9 @@ export default function CertificationsPage() {
             <span style={{ color: "#fff" }}>Certifications & Compliance</span>
           </div>
 
-          <div style={{ display:"inline-flex",alignItems:"center",gap:"0.6rem",marginBottom:"1rem" }}>
-            <div style={{ width:"2rem",height:"2px",background:BLUE }} />
-            <span style={{ fontFamily:"'Chakra Petch',sans-serif",fontSize:"0.72rem",fontWeight:700,color:"rgba(255,255,255,0.55)",letterSpacing:"0.15em",textTransform:"uppercase" }}>PFS</span>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: "0.6rem", marginBottom: "1rem" }}>
+            <div style={{ width: "2rem", height: "2px", background: BLUE }} />
+            <span style={{ fontFamily: "'Chakra Petch',sans-serif", fontSize: "0.72rem", fontWeight: 700, color: "rgba(255,255,255,0.55)", letterSpacing: "0.15em", textTransform: "uppercase" }}>PFS</span>
           </div>
 
           {/* Headline */}
@@ -212,16 +212,16 @@ export default function CertificationsPage() {
             Every PFS system ships with the certifications your AHJ, insurance carrier, and facility require — built to NFPA 33, manufactured in the USA with ETL/UL listed and certified components.
           </p>
 
-          <div style={{ display:"flex",gap:"1rem",flexWrap:"wrap",marginTop:"0.5rem" }}>
+          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", marginTop: "0.5rem" }}>
             <Link data-animation="slideLeft" href="/contact/request-a-quote">
-              <button className="btn-glow" style={{ fontFamily:"'Chakra Petch',sans-serif",fontWeight:700,fontSize:"0.82rem",letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.9rem 2.2rem",display:"inline-flex",alignItems:"center",gap:"0.5rem",cursor:"pointer" }}>
+              <button className="btn-glow" style={{ fontFamily: "'Chakra Petch',sans-serif", fontWeight: 700, fontSize: "0.82rem", letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.9rem 2.2rem", display: "inline-flex", alignItems: "center", gap: "0.5rem", cursor: "pointer" }}>
                 REQUEST DOCUMENTATION <ArrowRight size={14} />
               </button>
             </Link>
             <a data-animation="slideRight" href="tel:8885457715">
-              <button style={{ fontFamily:"'Chakra Petch',sans-serif",fontWeight:700,fontSize:"0.82rem",letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.9rem 2.2rem",background:"transparent",color:"#fff",border:"1.5px solid rgba(255,255,255,0.45)",cursor:"pointer",transition:"border-color 0.2s" }}
-                onMouseEnter={e=>(e.currentTarget.style.borderColor="#fff")}
-                onMouseLeave={e=>(e.currentTarget.style.borderColor="rgba(255,255,255,0.45)")}>
+              <button style={{ fontFamily: "'Chakra Petch',sans-serif", fontWeight: 700, fontSize: "0.82rem", letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.9rem 2.2rem", background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.45)", cursor: "pointer", transition: "border-color 0.2s" }}
+                onMouseEnter={e => (e.currentTarget.style.borderColor = "#fff")}
+                onMouseLeave={e => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.45)")}>
                 (888) 545-7715
               </button>
             </a>
@@ -236,7 +236,7 @@ export default function CertificationsPage() {
       {/* ── COMPLIANCE DETAIL SECTION ──────────────────────────────────────── */}
       <section style={{ background: "#f9fafb", padding: "5rem 0" }}>
         <div className="container">
-          <div
+          <div data-animation="fadeIn"
             style={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
@@ -319,7 +319,7 @@ export default function CertificationsPage() {
             >
               Need Compliance Documentation?
             </h2>
-            <p data-animation="slideLeft"
+            <p
               style={{
                 fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
                 fontSize: "0.95rem",

@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Truck, Bus & Fleet — Industry Page (Template #1)
  * TEMPLATE #1: Full industrial page with TrustedBy logo strip
  * Structure mirrors AerospacePage exactly:
@@ -16,31 +16,31 @@ import { SiteProductCardSection } from "@/components/SiteProductCard";
 import { useSEO } from "@/hooks/useSEO";
 
 // ── IMAGES ────────────────────────────────────────────────────────────────────
-const HERO_IMG     = "/manus-storage/pfs-school-bus-booth_179842ca_6651f8d4.png";
-const HERO_VIDEO   = "/manus-storage/industry_truck_fleet_school_bus_hero_27f9918f.mp4";
+const HERO_IMG = "/manus-storage/pfs-school-bus-booth_179842ca_6651f8d4.png";
+const HERO_VIDEO = "/manus-storage/industry_truck_fleet_school_bus_hero_27f9918f.mp4";
 const FEATURED_IMG = "/manus-storage/pfs-school-bus-booth_179842ca_6651f8d4.png";
-const GALLERY_1    = "/manus-storage/pfs-school-bus-booth_179842ca_6651f8d4.png";
-const GALLERY_2    = "/manus-storage/pfs-truck-fleet-coach-bus-rear_88083367.jpg";
-const GALLERY_3    = "/manus-storage/pfs-truck-fleet-coach-bus-front_3a5f10aa.jpg";
-const GALLERY_4    = "/manus-storage/pfs-truck-box-truck-booth_34276fb7_b502ec3d.png";
+const GALLERY_1 = "/manus-storage/pfs-school-bus-booth_179842ca_6651f8d4.png";
+const GALLERY_2 = "/manus-storage/pfs-truck-fleet-coach-bus-rear_88083367.jpg";
+const GALLERY_3 = "/manus-storage/pfs-truck-fleet-coach-bus-front_3a5f10aa.jpg";
+const GALLERY_4 = "/manus-storage/pfs-truck-box-truck-booth_34276fb7_b502ec3d.png";
 
-const ETL_LOGO  = "/manus-storage/pfs-etl-logo_7758f722.png";
-const UL_LOGO   = "/manus-storage/pfs-ul508a-clean_e8efdeb8.jpg";
+const ETL_LOGO = "/manus-storage/pfs-etl-logo_7758f722.png";
+const UL_LOGO = "/manus-storage/pfs-ul508a-clean_e8efdeb8.jpg";
 const NFPA_LOGO = "/manus-storage/pfs-nfpa-logo_4b710cc9.png";
-const EPA_LOGO  = "/manus-storage/pfs-epa-logo_e4165f68.webp";
+const EPA_LOGO = "/manus-storage/pfs-epa-logo_e4165f68.webp";
 const OSHA_LOGO = "/manus-storage/pfs-osha-logo_0c460739.jpg";
-const USA_FLAG  = "/manus-storage/pfs-usa-flag_8fca512e.jpg";
+const USA_FLAG = "/manus-storage/pfs-usa-flag_8fca512e.jpg";
 
 const BLUE = "#1B3A6B";
 
 // ── CERT CAROUSEL ─────────────────────────────────────────────────────────────
 const CERTS = [
-  { type: "logo", img: ETL_LOGO,  title: "ETL & ETL-C Listed",       sub: "Intertek — USA & Canada",             filter: "none", imgH: 44 },
-  { type: "logo", img: UL_LOGO,   title: "UL 508A Certified",         sub: "Industrial Control Panel Fabricator", filter: "none", imgH: 44 },
-  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant",         sub: "Spray Application Standard",          filter: "none", imgH: 44 },
-  { type: "logo", img: EPA_LOGO,  title: "EPA Compliant",             sub: "Air Quality Standards",               filter: "none", imgH: 36 },
-  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant",            sub: "Workplace Safety Standards",          filter: "none", imgH: 36 },
-  { type: "flag", img: USA_FLAG,  title: "Made in the USA",           sub: "Santa Rosa, CA",                      filter: "none", imgH: 36 },
+  { type: "logo", img: ETL_LOGO, title: "ETL & ETL-C Listed", sub: "Intertek — USA & Canada", filter: "none", imgH: 44 },
+  { type: "logo", img: UL_LOGO, title: "UL 508A Certified", sub: "Industrial Control Panel Fabricator", filter: "none", imgH: 44 },
+  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant", sub: "Spray Application Standard", filter: "none", imgH: 44 },
+  { type: "logo", img: EPA_LOGO, title: "EPA Compliant", sub: "Air Quality Standards", filter: "none", imgH: 36 },
+  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant", sub: "Workplace Safety Standards", filter: "none", imgH: 36 },
+  { type: "flag", img: USA_FLAG, title: "Made in the USA", sub: "Santa Rosa, CA", filter: "none", imgH: 36 },
 ];
 const CERTS_LOOP = [...CERTS, ...CERTS];
 
@@ -77,11 +77,11 @@ const FEATURES_HIDDEN = [
 ];
 
 const BOOTH_LINEUP = [
-  { name: "Drive-Through Crossflow",  desc: "Side-to-side airflow. Entry and exit doors. Ideal for high-volume fleet operations." },
-  { name: "Semi-Downdraft",           desc: "Rear-angled exhaust. Versatile for mixed fleet types and transit vehicles." },
-  { name: "Heated Drive-Through",     desc: "Integrated heat for accelerated cure. Required for fleet primer and topcoat." },
-  { name: "Open Face Booth",          desc: "High-volume open-front finishing for fleet components and sub-assemblies." },
-  { name: "Custom Fleet Build",       desc: "Engineered-to-order for transit authorities, DOT facilities, and large fleet operations." },
+  { name: "Drive-Through Crossflow", desc: "Side-to-side airflow. Entry and exit doors. Ideal for high-volume fleet operations." },
+  { name: "Semi-Downdraft", desc: "Rear-angled exhaust. Versatile for mixed fleet types and transit vehicles." },
+  { name: "Heated Drive-Through", desc: "Integrated heat for accelerated cure. Required for fleet primer and topcoat." },
+  { name: "Open Face Booth", desc: "High-volume open-front finishing for fleet components and sub-assemblies." },
+  { name: "Custom Fleet Build", desc: "Engineered-to-order for transit authorities, DOT facilities, and large fleet operations." },
 ];
 
 const PRODUCTS = [
@@ -201,8 +201,8 @@ function CertCarousel() {
 function HeroSection() {
   return (
     <section style={{ position: "relative", height: "clamp(420px, 60vh, 680px)", overflow: "hidden", background: "#0a0a0a" }}>
-      <video  preload="auto" autoPlay muted loop playsInline
-          disablePictureInPicture style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}>
+      <video preload="auto" autoPlay muted loop playsInline
+        disablePictureInPicture style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}>
         <source src={HERO_VIDEO} type="video/mp4" />
       </video>
       {/* Minimal bottom vignette only — no color tint */}
@@ -256,7 +256,7 @@ export default function TruckBusFleetPage() {
       {/* ── HERO ── */}
       <HeroSection />
 
-            {/* ── CERT CAROUSEL (untouched — Template #1 standard) ── */}
+      {/* ── CERT CAROUSEL (untouched — Template #1 standard) ── */}
       <CertCarousel />
 
       {/* ── FEATURED PAINT BOOTH ── */}
@@ -273,7 +273,7 @@ export default function TruckBusFleetPage() {
               <span style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", background: BLUE, color: "#fff", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.68rem", fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", padding: "0.28rem 0.85rem", marginBottom: "0.75rem" }}>
                 PFS HELIOS SERIES
               </span>
-              <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#555", maxWidth: "520px", margin: "0 auto", lineHeight: 1.7 }}>
+              <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#555", maxWidth: "520px", margin: "0 auto", lineHeight: 1.7 }}>
                 Tall clear-span construction for school buses, coach buses, and semi-trucks. manufactured in the USA with ETL/UL listed components, built to your fleet dimensions.
               </p>
             </div>
@@ -319,7 +319,7 @@ export default function TruckBusFleetPage() {
             cardHeight="clamp(220px,30vw,360px)"
           />
           <div data-animation="slideRight" className="text-center">
-            <Link data-animation="slideLeft" href="/contact/request-a-quote">
+            <Link href="/contact/request-a-quote">
               <span className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
             </Link>
           </div>
@@ -354,13 +354,13 @@ export default function TruckBusFleetPage() {
 
           {featuresOpen && (
             <>
-              <div data-animation="fadeIn" className="grid md:grid-cols-3 gap-5 mb-5">
+              <div className="grid md:grid-cols-3 gap-5 mb-5">
                 {FEATURES_HIDDEN.map((f) => (
                   <div key={f.title} style={{ background: "#fff", padding: "1.75rem", borderTop: `3px solid ${BLUE}`, display: "flex", flexDirection: "column" }}>
                     <div style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "2rem", fontWeight: 900, color: `rgba(27,58,107,0.12)`, lineHeight: 1, marginBottom: "0.5rem" }}>{f.num}</div>
                     <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.05rem", fontWeight: 700, color: "#111", marginBottom: "0.6rem" }}>{f.title}</h3>
                     <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.84rem", color: "#555", lineHeight: 1.75, marginBottom: "1rem", flex: 1 }}>{f.body}</p>
-                    <Link data-animation="slideLeft" href="/contact/request-a-quote">
+                    <Link href="/contact/request-a-quote">
                       <span style={{ display: "inline-flex", alignItems: "center", gap: "0.3rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.78rem", fontWeight: 700, color: BLUE, letterSpacing: "0.08em", textTransform: "uppercase", cursor: "pointer" }}>
                         LEARN MORE <ArrowRight size={12} />
                       </span>
@@ -409,7 +409,7 @@ export default function TruckBusFleetPage() {
             <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 4vw, 2.6rem)", fontWeight: 800, color: "#fff", letterSpacing: "-0.01em", lineHeight: 1.1 }}>
               Tell us your fleet dimensions.<br />We'll spec the booth.
             </h2>
-            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.85)", maxWidth: "440px" }}>
+            <p data-animation="slideUp" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.85)", maxWidth: "440px" }}>
               Quote in 24 hours. manufactured in the USA with ETL/UL listed components. Installed nationwide by PFS-certified technicians.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center" }}>
@@ -431,11 +431,11 @@ export default function TruckBusFleetPage() {
       {/* ── RECOMMENDED PRODUCTS ── */}
 
       {/* FAQ SECTION */}
-      <section style={{ background:"#f8f9fb", padding:"clamp(2.5rem, 6vw, 4rem) 0", borderTop:"1px solid #e5e7eb" }}>
-        <div className="container" style={{ maxWidth:"860px" }}>
-          <div style={{ textAlign:"center", marginBottom:"2.5rem" }}>
-            <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:"#1B3A6B",textTransform:"uppercase",display:"block",marginBottom:"0.4rem" }}>FREQUENTLY ASKED QUESTIONS</span>
-            <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.4rem,3.5vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Truck, Bus & Fleet Spray Booths — Common Questions</h2>
+      <section style={{ background: "#f8f9fb", padding: "clamp(2.5rem, 6vw, 4rem) 0", borderTop: "1px solid #e5e7eb" }}>
+        <div className="container" style={{ maxWidth: "860px" }}>
+          <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
+            <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: "#1B3A6B", textTransform: "uppercase", display: "block", marginBottom: "0.4rem" }}>FREQUENTLY ASKED QUESTIONS</span>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed','Oswald',sans-serif", fontSize: "clamp(1.4rem,3.5vw,2.2rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Truck, Bus & Fleet Spray Booths — Common Questions</h2>
           </div>
           {[
             { q: "What size spray booth is needed for painting semi-trucks?", a: "A full-size semi-truck (Class 8) requires a spray booth that is at least 16 ft wide x 50 ft deep x 14 ft tall to accommodate the cab and trailer. Shops that paint both cab and trailer together need a booth 16–18 ft wide x 60–80 ft deep. PFS manufactures truck and fleet booths in all standard and custom sizes." },
@@ -444,12 +444,12 @@ export default function TruckBusFleetPage() {
             { q: "Does a truck spray booth need a heated make-up air unit?", a: "A heated make-up air unit is strongly recommended for truck and fleet spray booths in any climate where temperatures fall below 65°F. Heated make-up air maintains consistent booth temperature for spray and bake cycles, accelerates paint cure, and ensures year-round production capability. PFS manufactures heated AMUs sized for booths of all sizes." },
             { q: "Can PFS build a drive-through spray booth for fleet operations?", a: "Yes. PFS manufactures drive-through spray booths with doors at both ends for efficient vehicle flow in high-volume fleet painting operations. Drive-through booths eliminate the need to back vehicles in and out, reducing cycle time and improving throughput. Contact a PFS engineer for drive-through booth specifications." },
           ].map((item, i) => (
-            <details key={i} style={{ borderBottom:"1px solid #e5e7eb", padding:"1.25rem 0" }}>
-              <summary style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"clamp(0.95rem,2.5vw,1.1rem)",fontWeight:800,color:"#111",letterSpacing:"0.01em",cursor:"pointer",listStyle:"none",display:"flex",justifyContent:"space-between",alignItems:"center",gap:"1rem" }}>
+            <details key={i} style={{ borderBottom: "1px solid #e5e7eb", padding: "1.25rem 0" }}>
+              <summary style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "clamp(0.95rem,2.5vw,1.1rem)", fontWeight: 800, color: "#111", letterSpacing: "0.01em", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "1rem" }}>
                 {item.q}
-                <span style={{ color:"#1B3A6B", flexShrink:0, fontSize:"1.4rem", fontWeight:300, lineHeight:1 }}>+</span>
+                <span style={{ color: "#1B3A6B", flexShrink: 0, fontSize: "1.4rem", fontWeight: 300, lineHeight: 1 }}>+</span>
               </summary>
-              <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"clamp(0.82rem,2vw,0.9rem)",color:"#555",lineHeight:1.75,margin:"1rem 0 0",paddingRight:"1.5rem" }}>{item.a}</p>
+              <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(0.82rem,2vw,0.9rem)", color: "#555", lineHeight: 1.75, margin: "1rem 0 0", paddingRight: "1.5rem" }}>{item.a}</p>
             </details>
           ))}
         </div>

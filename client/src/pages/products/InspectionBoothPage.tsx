@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Inspection Booths — PFS Atlas Series
  * Layout: CrossFlow format — full-bleed MP4 video hero, cert carousel,
  *         featured product, collapsible specs/sizes, gallery, CTA band,
@@ -131,7 +131,7 @@ export default function InspectionBoothPage() {
         justifyContent: "flex-end",
         overflow: "hidden",
       }}>
-        <video  preload="auto"
+        <video preload="auto"
           autoPlay
           loop
           muted

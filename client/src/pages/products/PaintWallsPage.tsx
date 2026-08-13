@@ -161,18 +161,18 @@ function WallCard({
           <span style={{ background:BLUE,color:"#fff",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.65rem",fontWeight:800,letterSpacing:"0.16em",textTransform:"uppercase",padding:"0.22rem 0.7rem" }}>{badge}</span>
           <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.68rem",fontWeight:700,color:"#888",letterSpacing:"0.1em",textTransform:"uppercase" }}>{tag}</span>
         </div>
-        <h3 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.4rem,2.5vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.5rem",lineHeight:1.1 }}>{title}</h3>
-        <p data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.88rem",color:"#555",lineHeight:1.7,marginBottom:"1.25rem" }}>{subtitle}</p>
+        <h3 style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.4rem,2.5vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.5rem",lineHeight:1.1 }}>{title}</h3>
+        <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.88rem",color:"#555",lineHeight:1.7,marginBottom:"1.25rem" }}>{subtitle}</p>
 
         {/* Collapsible features */}
         <CollapsibleFeatures features={features} />
 
         {/* CTAs */}
         <div style={{ display:"flex",gap:"0.75rem",flexWrap:"wrap",marginTop:"1.5rem" }}>
-          <Link data-animation="slideRight" href="/contact/request-a-quote?from=paint-wall">
+          <Link href="/contact/request-a-quote?from=paint-wall">
             <span className="btn-glow">REQUEST A QUOTE <ArrowRight size={14}/></span>
           </Link>
-          <a data-animation="slideRight" href="tel:8885457715">
+          <a href="tel:8885457715">
             <span style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:"transparent",color:BLUE,border:`2px solid ${BLUE}`,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.88rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.9rem 2rem",cursor:"pointer" }}>CALL (888) 545-7715</span>
           </a>
         </div>
@@ -198,20 +198,20 @@ export default function PaintWallsPage() {
         <div style={{ position:"absolute",bottom:0,left:0,right:0,height:"3px",background:BLUE,zIndex:3 }} />
         <div className="container" style={{ position:"relative",zIndex:2,paddingTop:"8rem",paddingBottom:"4.5rem" }}>
           <span style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"0.72rem",fontWeight:700,letterSpacing:"0.18em",color:"rgba(255,255,255,0.5)",textTransform:"uppercase",display:"block",marginBottom:"1rem" }}>PREP &amp; SUPPORT — PAINT WALLS</span>
-          <h1 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(2.6rem,7vw,5rem)",fontWeight:800,color:"#fff",lineHeight:1.0,letterSpacing:"-0.01em",marginBottom:"1rem",maxWidth:"680px" }}>
+          <h1 style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(2.6rem,7vw,5rem)",fontWeight:800,color:"#fff",lineHeight:1.0,letterSpacing:"-0.01em",marginBottom:"1rem",maxWidth:"680px" }}>
             PFS Exhaust Walls<br />
             Built to Last
           </h1>
           <span style={{ display:"inline-flex",alignItems:"center",gap:"0.4rem",background:"rgba(27,58,107,0.75)",border:"1px solid rgba(107,163,224,0.4)",color:"#6fa3e0",borderRadius:"2px",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",textTransform:"uppercase",padding:"0.3rem 0.75rem",marginBottom:"1.25rem" }}>PFS EXHAUST WALL SERIES</span>
-          <p data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif",fontSize:"clamp(0.95rem,1.8vw,1.1rem)",color:"rgba(255,255,255,0.82)",lineHeight:1.7,marginBottom:"2.5rem",maxWidth:"500px" }}>
+          <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"clamp(0.95rem,1.8vw,1.1rem)",color:"rgba(255,255,255,0.82)",lineHeight:1.7,marginBottom:"2.5rem",maxWidth:"500px" }}>
             Open-face exhaust filtration walls for spray painting parts and panels — no full enclosure required. Many sizes and configurations available. Built to NFPA 33. Ships nationally.
           </p>
           <div style={{ display:"flex",flexWrap:"wrap",gap:"1rem" }}>
-            <Link data-animation="slideLeft" href="/contact/request-a-quote?from=paint-wall">
+            <Link href="/contact/request-a-quote?from=paint-wall">
               <span className="btn-glow" style={{ width: "100%", maxWidth: "320px", justifyContent: "center" }}>GET PRICING <ArrowRight size={16}/></span>
             </Link>
             <a href="tel:8885457715" style={{ width:"100%",maxWidth:"320px" }}>
-              <span data-animation="slideRight" style={{ display:"flex",alignItems:"center",justifyContent:"center",gap:"0.5rem",background:"transparent",color:"#fff",border:"1.5px solid rgba(255,255,255,0.5)",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.9rem",fontWeight:700,letterSpacing:"0.1em",textTransform:"uppercase",padding:"1.1rem 2.5rem",cursor:"pointer" }}>CALL (888) 545-7715</span>
+              <span style={{ display:"flex",alignItems:"center",justifyContent:"center",gap:"0.5rem",background:"transparent",color:"#fff",border:"1.5px solid rgba(255,255,255,0.5)",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.9rem",fontWeight:700,letterSpacing:"0.1em",textTransform:"uppercase",padding:"1.1rem 2.5rem",cursor:"pointer" }}>CALL (888) 545-7715</span>
             </a>
           </div>
         </div>
@@ -224,8 +224,8 @@ export default function PaintWallsPage() {
       <section style={{ background:"#f5f5f5",padding:"3rem 0 0.5rem" }}>
         <div className="container" style={{ textAlign:"center" }}>
           <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.18em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.5rem" }}>FACTORY DIRECT</span>
-          <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.6rem,3vw,2.4rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.5rem" }}>Many Sizes &amp; Configurations Available</h2>
-          <p data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.95rem",color:"#555",maxWidth:"560px",margin:"0 auto",lineHeight:1.7 }}>
+          <h2 style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.6rem,3vw,2.4rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.5rem" }}>Many Sizes &amp; Configurations Available</h2>
+          <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.95rem",color:"#555",maxWidth:"560px",margin:"0 auto",lineHeight:1.7 }}>
             PFS manufactures Exhaust Walls in custom widths, heights, and depths — from compact benchtop units to large industrial walls. Single-phase or 3-phase, ducted or ductless, with or without heat.
           </p>
         </div>
@@ -265,7 +265,7 @@ export default function PaintWallsPage() {
         <div className="container">
           <div style={{ textAlign:"center",marginBottom:"2rem" }}>
             <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:"rgba(255,255,255,0.5)",textTransform:"uppercase",display:"block",marginBottom:"0.4rem" }}>REAL INSTALLS</span>
-            <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.4rem,2.5vw,2rem)",fontWeight:800,color:"#fff",letterSpacing:"-0.01em",margin:0 }}>Real PFS Installations</h2>
+            <h2 style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.4rem,2.5vw,2rem)",fontWeight:800,color:"#fff",letterSpacing:"-0.01em",margin:0 }}>Real PFS Installations</h2>
           </div>
           <GalleryGrid images={GALLERY_IMGS} cardHeight="clamp(220px,35vw,360px)" />
         </div>
@@ -275,14 +275,14 @@ export default function PaintWallsPage() {
       <section style={{ background:BLUE,padding:"3.5rem 0" }}>
         <div className="container" style={{ textAlign:"center" }}>
           <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.18em",color:"rgba(255,255,255,0.55)",textTransform:"uppercase",display:"block",marginBottom:"0.75rem" }}>GET STARTED</span>
-          <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.6rem,3.5vw,2.6rem)",fontWeight:800,color:"#fff",letterSpacing:"-0.01em",marginBottom:"1rem" }}>Ready to Order? We Ship Nationally.</h2>
-          <p data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.95rem",color:"rgba(255,255,255,0.8)",marginBottom:"2rem",maxWidth:"480px",margin:"0 auto 2rem" }}>Factory-direct pricing. Fast lead times. Dedicated support from order through installation. Call or request a quote to get started.</p>
+          <h2 style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.6rem,3.5vw,2.6rem)",fontWeight:800,color:"#fff",letterSpacing:"-0.01em",marginBottom:"1rem" }}>Ready to Order? We Ship Nationally.</h2>
+          <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.95rem",color:"rgba(255,255,255,0.8)",marginBottom:"2rem",maxWidth:"480px",margin:"0 auto 2rem" }}>Factory-direct pricing. Fast lead times. Dedicated support from order through installation. Call or request a quote to get started.</p>
           <div style={{ display:"flex",gap:"1rem",justifyContent:"center",flexWrap:"wrap" }}>
-            <Link data-animation="slideLeft" href="/contact/request-a-quote?from=paint-wall">
+            <Link href="/contact/request-a-quote?from=paint-wall">
               <span style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:"#fff",color:BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.9rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"1.1rem 2.5rem",cursor:"pointer" }}>GET PRICING <ArrowRight size={16}/></span>
             </Link>
-            <a data-animation="slideRight" href="tel:8885457715">
-              <span data-animation="slideRight" style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:"transparent",color:"#fff",border:"1.5px solid rgba(255,255,255,0.6)",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.9rem",fontWeight:700,letterSpacing:"0.1em",textTransform:"uppercase",padding:"1.1rem 2.5rem",cursor:"pointer" }}>CALL (888) 545-7715</span>
+            <a href="tel:8885457715">
+              <span style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:"transparent",color:"#fff",border:"1.5px solid rgba(255,255,255,0.6)",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.9rem",fontWeight:700,letterSpacing:"0.1em",textTransform:"uppercase",padding:"1.1rem 2.5rem",cursor:"pointer" }}>CALL (888) 545-7715</span>
             </a>
           </div>
         </div>
@@ -290,7 +290,7 @@ export default function PaintWallsPage() {
 
             {/* RELATED PRODUCTS */}
       <SiteProductCardSection
-        heading="COMPLETE YOUR FINISHING SYSTEM"
+        heading="COMPLETE YOUR FINISHING SYSTEM */}"
         label="Complete Your System"
         cards={PRODUCTS}
       />

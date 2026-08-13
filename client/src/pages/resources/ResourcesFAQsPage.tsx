@@ -286,7 +286,7 @@ export default function ResourcesFAQsPage() {
                   border: "1px solid #e2e8f0",
                 }}
               >
-                <p data-animation="slideLeft"
+                <p
                   style={{
                     fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
                     fontSize: "0.875rem",

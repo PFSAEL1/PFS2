@@ -15,12 +15,12 @@ const CONVEYOR_REAL = "/manus-storage/yellow-conveyor-system_8b253b1f.jpg";  // 
 const PRETREAT_SPRAY = "/manus-storage/washbooth_75284018.png";
 
 const SOLUTIONS = [
-  { label: "Liquid Paint Lines",     slug: "liquid-paint-lines",     img: PAINT,         desc: "Complete automated liquid paint lines from pretreatment through topcoat, engineered for your production requirements." },
-  { label: "Powder Coating Lines",   slug: "powder-coating-lines",   img: POWDER,        desc: "Fully integrated powder coating lines including pretreatment, application, and curing systems." },
-  { label: "Conveyor Systems",       slug: "conveyor-systems",       img: CONVEYOR_REAL, desc: "Overhead and floor conveyor systems designed to move parts efficiently through your finishing process." },
-  { label: "Pretreatment Systems",   slug: "pretreatment-systems",   img: PRETREAT_SPRAY, desc: "Chemical pretreatment systems for cleaning, phosphating, and surface preparation prior to coating." },
-  { label: "Robotic Finishing Cells",slug: "robotic-finishing-cells",img: ROBOT,         desc: "Robotic spray and powder application cells for consistent, high-volume automated finishing." },
-  { label: "System Integration",     slug: "system-integration",     img: INTEGRATED_SYSTEM, desc: "Integration of new finishing equipment with existing production lines, controls, and facility systems." },
+  { label: "Liquid Paint Lines", slug: "liquid-paint-lines", img: PAINT, desc: "Complete automated liquid paint lines from pretreatment through topcoat, engineered for your production requirements." },
+  { label: "Powder Coating Lines", slug: "powder-coating-lines", img: POWDER, desc: "Fully integrated powder coating lines including pretreatment, application, and curing systems." },
+  { label: "Conveyor Systems", slug: "conveyor-systems", img: CONVEYOR_REAL, desc: "Overhead and floor conveyor systems designed to move parts efficiently through your finishing process." },
+  { label: "Pretreatment Systems", slug: "pretreatment-systems", img: PRETREAT_SPRAY, desc: "Chemical pretreatment systems for cleaning, phosphating, and surface preparation prior to coating." },
+  { label: "Robotic Finishing Cells", slug: "robotic-finishing-cells", img: ROBOT, desc: "Robotic spray and powder application cells for consistent, high-volume automated finishing." },
+  { label: "System Integration", slug: "system-integration", img: INTEGRATED_SYSTEM, desc: "Integration of new finishing equipment with existing production lines, controls, and facility systems." },
 ];
 
 export default function IntegrationHub() {
@@ -43,7 +43,7 @@ export default function IntegrationHub() {
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-14 items-center mb-16">
             <div>
-              <span data-animation="slideRight" className="section-label">Complete Finishing Lines</span>
+              <span className="section-label">Complete Finishing Lines</span>
               <h2 data-animation="slideLeft" className="section-heading-lg">One Source for Your Entire Finishing System</h2>
               <p className="section-body mb-6">
                 Most finishing equipment suppliers sell individual pieces of equipment. PFS is different — we design, engineer, manufacture, and install complete finishing systems, from the first pretreatment stage through the final curing oven.

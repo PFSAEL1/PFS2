@@ -70,7 +70,7 @@ export default function CareersPage() {
         <img
           src={LOGO_NO_TAGLINE}
           alt="Platinum Finishing Systems — PFS logo"
-          style={{ height: "52px", width: "auto", objectFit: "contain", filter: "brightness(0) invert(1)" }}
+          style={{ height: "52px", width: "auto", objectFit: "contain" }}
         />
       </div>
 
@@ -79,7 +79,7 @@ export default function CareersPage() {
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center" }}>
             <div>
-              <span data-animation="slideRight" className="section-label">Join Our Team</span>
+              <span className="section-label">Join Our Team</span>
               <h2 data-animation="slideLeft" className="section-heading">Build Something That Lasts</h2>
               <p className="section-body" style={{ marginBottom: "1rem" }}>
                 PFS has been engineering and manufacturing industrial finishing equipment in Santa Rosa, California since 1989. We build spray paint booths, powder coating systems, industrial ovens, and blast equipment for customers across North America — from collision repair shops to aerospace facilities to military installations.
@@ -128,11 +128,11 @@ export default function CareersPage() {
             <span className="section-label">Open Positions</span>
             <h2 data-animation="slideLeft" className="section-heading">Current Openings</h2>
           </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+          <div data-animation="fadeIn" style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
             {OPENINGS.map((job, i) => (
               <div key={i} style={{ background: "#fff", border: "1px solid #e5e5e5", padding: "1.75rem", display: "grid", gridTemplateColumns: "1fr auto", gap: "1rem", alignItems: "center" }}>
                 <div>
-                  <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.1rem", fontWeight: 700, color: "#0D1117", textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: "0.4rem" }}>{job.title}</h3>
+                  <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.1rem", fontWeight: 700, color: "#0D1117", textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: "0.4rem" }}>{job.title}</h3>
                   <div style={{ display: "flex", gap: "1.25rem", marginBottom: "0.75rem", flexWrap: "wrap" }}>
                     <span style={{ display: "flex", alignItems: "center", gap: "0.3rem", fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#666" }}>
                       <Briefcase size={12} />{job.dept}
@@ -144,11 +144,11 @@ export default function CareersPage() {
                       <Clock size={12} />{job.type}
                     </span>
                   </div>
-                  <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "#444", lineHeight: 1.65 }}>{job.desc}</p>
+                  <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "#444", lineHeight: 1.65 }}>{job.desc}</p>
                 </div>
                 <div>
                   <Link href="/contact/talk-to-an-engineer">
-                    <span data-animation="slideRight" className="btn-glow" style={{ whiteSpace: "nowrap", display: "inline-flex", alignItems: "center", gap: "0.4rem" }}>
+                    <span className="btn-glow" style={{ whiteSpace: "nowrap", display: "inline-flex", alignItems: "center", gap: "0.4rem" }}>
                       Apply <ChevronRight size={14} />
                     </span>
                   </Link>
@@ -157,11 +157,11 @@ export default function CareersPage() {
             ))}
           </div>
           <div style={{ marginTop: "2rem", padding: "1.5rem", background: "#fff", border: "1px solid #e5e5e5", textAlign: "center" }}>
-            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.9rem", color: "#555", marginBottom: "1rem" }}>
+            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.9rem", color: "#555", marginBottom: "1rem" }}>
               Don't see a role that fits? We are always interested in hearing from experienced fabricators, technicians, and finishing industry professionals.
             </p>
             <Link href="/contact/talk-to-an-engineer">
-              <span data-animation="slideRight" className="btn-glow">Send a General Application <ArrowRight size={14} /></span>
+              <span className="btn-glow">Send a General Application <ArrowRight size={14} /></span>
             </Link>
           </div>
         </div>
@@ -172,7 +172,7 @@ export default function CareersPage() {
         <div className="container">
           <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 600, color: GOLD, letterSpacing: "0.2em", textTransform: "uppercase", display: "block", marginBottom: "0.75rem" }}>Platinum Finishing Systems</span>
           <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3.5vw, 2.2rem)", fontWeight: 800, color: "#fff", textTransform: "uppercase", letterSpacing: "0.02em", marginBottom: "1rem" }}>Ready to Build Something?</h2>
-          <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.65)", maxWidth: 480, margin: "0 auto 2rem" }}>
+          <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.65)", maxWidth: 480, margin: "0 auto 2rem" }}>
             Send your resume and a brief introduction to our team in Santa Rosa, CA.
           </p>
           <Link href="/contact/talk-to-an-engineer">

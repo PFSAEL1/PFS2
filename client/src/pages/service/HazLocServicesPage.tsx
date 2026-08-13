@@ -254,7 +254,7 @@ export default function HazLocServicesPage() {
     <div style={{ background: "#f5f5f5", minHeight: "100vh" }}>
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section data-animation="fadeIn" style={{
+      <section style={{
         position: "relative", overflow: "hidden",
         minHeight: "640px", display: "flex", alignItems: "center",
         borderBottom: "3px solid #111",
@@ -342,7 +342,7 @@ export default function HazLocServicesPage() {
       </section>
 
       {/* ── INTRO BAND ───────────────────────────────────────────────────── */}
-      <section data-animation="fadeIn" style={{
+      <section style={{
         background: "#111", borderBottom: "3px solid #1B3A6B",
         padding: "2rem",
       }}>
@@ -384,7 +384,7 @@ export default function HazLocServicesPage() {
             color: "#111", textTransform: "uppercase",
             letterSpacing: "-0.01em", margin: "0 0 0.5rem", lineHeight: 1.1,
           }}>What We Service</h2>
-          <p data-animation="slideLeft" style={{
+          <p style={{
             fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
             fontSize: "0.9rem", color: "#666", lineHeight: 1.6, maxWidth: "640px",
           }}>
@@ -392,8 +392,7 @@ export default function HazLocServicesPage() {
           </p>
         </div>
 
-        <div
-          style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
           {SERVICES.map((svc) => {
             const isOpen = openService === svc.id;
             return (
@@ -440,7 +439,7 @@ export default function HazLocServicesPage() {
                     padding: "0 1.5rem 1.5rem",
                     borderTop: `1px solid #e2e8f0`,
                   }}>
-                    <p data-animation="slideLeft" style={{
+                    <p style={{
                       fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
                       fontSize: "0.88rem", color: "#444", lineHeight: 1.7,
                       margin: "1rem 0 1.25rem",
@@ -497,7 +496,7 @@ export default function HazLocServicesPage() {
                     </div>
 
                     <div style={{ marginTop: "1.25rem" }}>
-                      <Link data-animation="slideLeft" href="/contact">
+                      <Link href="/contact">
                         <button style={{
                           background: BLUE, color: "#fff", border: "none",
                           padding: "0.7rem 1.5rem",
@@ -525,7 +524,7 @@ export default function HazLocServicesPage() {
         borderTop: "3px solid #111", borderBottom: "3px solid #111",
       }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "2rem" }}>
+          <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "2rem" }}>
             <div style={{ gridColumn: "1 / -1", marginBottom: "0.5rem" }}>
               <div style={{
                 fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
@@ -557,7 +556,7 @@ export default function HazLocServicesPage() {
                 includes: ["Four visits per year", "Sensor bump test each visit", "Full calibration semi-annually", "Priority emergency dispatch"],
               },
             ].map((pkg) => (
-              <div data-animation="fadeIn" key={pkg.tier} style={{
+              <div key={pkg.tier} style={{
                 background: "rgba(255,255,255,0.08)",
                 border: "1px solid rgba(255,255,255,0.18)",
                 borderRadius: "2px", padding: "1.5rem",
@@ -587,9 +586,9 @@ export default function HazLocServicesPage() {
                 </ul>
               </div>
             ))}
-            <div data-animation="slideRight" style={{ gridColumn: "1 / -1", marginTop: "0.5rem" }}>
-              <Link data-animation="slideLeft" href="/contact">
-                <button style={{
+            <div style={{ gridColumn: "1 / -1", marginTop: "0.5rem" }}>
+              <Link href="/contact">
+                <button data-animation="slideRight" style={{
                   background: "#fff", color: BLUE, border: "none",
                   padding: "0.9rem 2rem",
                   fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
@@ -656,7 +655,7 @@ export default function HazLocServicesPage() {
                     padding: "0 1.25rem 1.1rem",
                     borderTop: "1px solid #e2e8f0",
                   }}>
-                    <p data-animation="slideLeft" style={{
+                    <p style={{
                       fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
                       fontSize: "0.88rem", color: "#555", lineHeight: 1.7,
                       margin: "0.75rem 0 0",
@@ -670,7 +669,7 @@ export default function HazLocServicesPage() {
       </section>
 
       {/* ── FINAL CTA ────────────────────────────────────────────────────── */}
-      <section data-animation="fadeIn" style={{
+      <section style={{
         background: "#111", padding: "3.5rem 2rem",
         borderTop: "3px solid #1B3A6B",
       }}>
@@ -687,7 +686,7 @@ export default function HazLocServicesPage() {
             color: "#fff", textTransform: "uppercase",
             letterSpacing: "-0.01em", margin: "0 0 1rem", lineHeight: 1.1,
           }}>Ready to Schedule Service?</h2>
-          <p data-animation="slideLeft" style={{
+          <p style={{
             fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
             fontSize: "0.95rem", color: "rgba(255,255,255,0.6)",
             lineHeight: 1.65, marginBottom: "2rem", maxWidth: "560px", margin: "0 auto 2rem",

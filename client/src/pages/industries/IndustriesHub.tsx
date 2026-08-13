@@ -44,12 +44,12 @@ export default function IndustriesHub() {
         <div className="container">
           <div className="mb-10">
             <span className="section-label">Industries</span>
-            <h2 data-animation="slideLeft" className="section-heading-lg">Built for Your Industry</h2>
-            <p data-animation="slideLeft" className="section-body max-w-2xl">From collision repair shops to aerospace facilities, PFS has the experience and product range to meet the most demanding finishing requirements.</p>
+            <h2 className="section-heading-lg">Built for Your Industry</h2>
+            <p className="section-body max-w-2xl">From collision repair shops to aerospace facilities, PFS has the experience and product range to meet the most demanding finishing requirements.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {INDUSTRIES.map((ind) => (
-              <Link data-animation="fadeIn" key={ind.slug} href={`/industries/${ind.slug}`}>
+              <Link key={ind.slug} href={`/industries/${ind.slug}`}>
                 <div className="product-card group">
                   <div className="overflow-hidden" style={{ height: "240px" }}>
                     <img src={ind.img} alt={ind.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" style={{ objectPosition: (ind as any).imgPosition || 'center center' }} />

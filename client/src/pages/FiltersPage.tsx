@@ -290,7 +290,7 @@ export default function FiltersPage() {
                 }}>
                   Toll Free · Mon–Fri 7am–5pm PT
                 </div>
-                <a data-animation="slideLeft" href="tel:8885457715" style={{
+                <a href="tel:8885457715" style={{
                   display: "inline-flex", alignItems: "center", gap: "0.4rem",
                   background: "#fff", color: BLUE,
                   padding: "0.75rem 1.5rem",
@@ -302,7 +302,7 @@ export default function FiltersPage() {
                 }}>
                   <Phone size={14} /> Call for Filters
                 </a>
-                <a data-animation="slideRight" href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" style={{
+                <a href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" style={{
                   display: "inline-flex", alignItems: "center", gap: "0.4rem",
                   background: "transparent", color: "#fff",
                   border: "2px solid rgba(255,255,255,0.4)",
@@ -569,7 +569,7 @@ export default function FiltersPage() {
             }}>
               Get the Right Filters<br />for Your Booth
             </h2>
-            <p data-animation="slideLeft" style={{
+            <p style={{
               fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
               fontSize: "0.9rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.6,
               maxWidth: "500px", margin: 0,
