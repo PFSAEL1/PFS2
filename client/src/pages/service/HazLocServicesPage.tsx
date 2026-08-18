@@ -538,7 +538,7 @@ export default function HazLocServicesPage() {
         borderTop: "3px solid #111", borderBottom: "3px solid #111",
       }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "2rem" }}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div style={{ gridColumn: "1 / -1", marginBottom: "0.5rem" }}>
               <div style={{
                 fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",

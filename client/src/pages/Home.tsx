@@ -31,7 +31,7 @@ const IMG_PARTS = "/manus-storage/pfs-filters-card_8b47eabc.png";              /
 const PRODUCT_FAMILIES = [
   { label: "Paint Booths", href: "/products/paint-booths", img: IMG_PAINT_BOOTH, desc: "Cross-flow, semi-downdraft, and full downdraft configurations for any application." },
   { label: "Powder Coating Systems", href: "/products/powder-booths", img: IMG_POWDER, desc: "Spray to waste, powder reclaim, and automated powder coating systems." },
-  { label: "Industrial Ovens", href: "/products/ovens", img: IMG_OVEN, desc: "Batch, conveyor, walk-in, and large-equipment curing ovens built to spec.", objectFit: "contain" as const, imgBg: "#1a1a1a" },
+  { label: "Industrial Ovens", href: "/products/ovens", img: IMG_OVEN, desc: "Batch, conveyor, walk-in, and large-equipment curing ovens built to spec.", objectFit: "cover" as const, imgBg: "#1a1a1a" },
   { label: "Blasting Systems", href: "/products/blast-systems", img: IMG_BLAST, desc: "Blasting booths, reclaim blasting booths, and containerized blast booths." },
   { label: "Prep & Support", href: "/products/prep-support", img: IMG_PREP, desc: "Prep stations, paint mix rooms, sanding booths, and grinding booths." },
   { label: "Air Make-Up Units", href: "/products/air-make-up-units", img: IMG_AMU, desc: "Heated and non-heated AMUs to maintain proper airflow and temperature." },
