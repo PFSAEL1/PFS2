@@ -8,9 +8,9 @@
 //
 // DO NOT touch the compliance carousel — this is the Home page customer logo strip only.
 
-const INVERT  = "brightness(0) invert(1)";
+const INVERT = "brightness(0) invert(1)";
 const GREY_UP = "grayscale(1) brightness(2.2) contrast(1.1)";
-const WHITE   = "none"; // already white marks
+const WHITE = "none"; // already white marks
 
 interface CarouselLogo {
   src: string;
@@ -20,19 +20,19 @@ interface CarouselLogo {
 }
 
 const LOGOS: CarouselLogo[] = [
-  { src: "/manus-storage/boeing-dark_0fe68a7b.png",       alt: "Boeing",           h: 36, filter: INVERT  },
-  { src: "/manus-storage/spacex-dark_ad3651e9.png",       alt: "SpaceX",           h: 28, filter: INVERT  },
-  { src: "/manus-storage/tesla-dark_d5c53013.png",        alt: "Tesla",            h: 52, filter: GREY_UP },
-  { src: "/manus-storage/cat-white-v2_0b5bf759.png",      alt: "Caterpillar",      h: 38, filter: WHITE   },
-  { src: "/manus-storage/la-metro-white_b76f3ead.png",    alt: "LA Metro",         h: 40, filter: WHITE   },
-  { src: "/manus-storage/av-dark_95aa1b71.png",           alt: "AeroVironment",    h: 44, filter: INVERT  },
-  { src: "/manus-storage/seneca-dark_453b611d.png",       alt: "Seneca Aviation",  h: 40, filter: WHITE   },
-  { src: "/manus-storage/leroi-dark_46d5d0eb.png",        alt: "LeROI",            h: 48, filter: GREY_UP },
-  { src: "/manus-storage/dempseygill-dark_dedb26bf.png",  alt: "Dempsey & Gill",   h: 44, filter: GREY_UP },
-  { src: "/manus-storage/gandc-dark_3566ab0e.png",        alt: "G&C Auto Body",    h: 44, filter: INVERT  },
-  { src: "/manus-storage/missionbell-dark_d681bce6.png",  alt: "Mission Bell",     h: 32, filter: INVERT  },
-  { src: "/manus-storage/united-rentals-white_fef4ecf8.png", alt: "United Rentals", h: 34, filter: WHITE   },
-  { src: "/manus-storage/ael-logo-black_8bbd6f11.jpeg",           alt: "Advanced Extraction Labs (AEL)", h: 52, filter: INVERT  },
+  { src: "/manus-storage/boeing-dark_0fe68a7b.png", alt: "Boeing", h: 36, filter: INVERT },
+  { src: "/manus-storage/spacex-dark_ad3651e9.png", alt: "SpaceX", h: 28, filter: INVERT },
+  { src: "/manus-storage/tesla-dark_d5c53013.png", alt: "Tesla", h: 52, filter: GREY_UP },
+  { src: "/manus-storage/cat-white-v2_0b5bf759.png", alt: "Caterpillar", h: 38, filter: WHITE },
+  { src: "/manus-storage/la-metro-white_b76f3ead.png", alt: "LA Metro", h: 40, filter: WHITE },
+  { src: "/manus-storage/av-dark_95aa1b71.png", alt: "AeroVironment", h: 44, filter: INVERT },
+  { src: "/manus-storage/seneca-dark_453b611d.png", alt: "Seneca Aviation", h: 40, filter: WHITE },
+  { src: "/manus-storage/leroi-dark_46d5d0eb.png", alt: "LeROI", h: 48, filter: GREY_UP },
+  { src: "/manus-storage/dempseygill-dark_dedb26bf.png", alt: "Dempsey & Gill", h: 44, filter: GREY_UP },
+  { src: "/manus-storage/gandc-dark_3566ab0e.png", alt: "G&C Auto Body", h: 44, filter: INVERT },
+  { src: "/manus-storage/missionbell-dark_d681bce6.png", alt: "Mission Bell", h: 32, filter: INVERT },
+  { src: "/manus-storage/united-rentals-white_fef4ecf8.png", alt: "United Rentals", h: 34, filter: WHITE },
+  { src: "/manus-storage/ael-logo-black_8bbd6f11.jpeg", alt: "Advanced Extraction Labs (AEL)", h: 52, filter: WHITE },
 ];
 
 export default function LogoCarousel() {
@@ -91,7 +91,7 @@ export default function LogoCarousel() {
               onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.opacity = "1"; }}
               onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.opacity = "0.7"; }}
             >
-                <img
+              <img
                 src={logo.src}
                 alt={logo.alt}
                 style={{
