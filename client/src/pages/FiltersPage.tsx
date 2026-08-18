@@ -115,14 +115,26 @@ export default function FiltersPage() {
         borderBottom: "3px solid #111",
         background: "#1C1C1E",
       }}>
-        <div style={{
-          position: "absolute", inset: 0,
-          backgroundImage: "url('/manus-storage/pfs-booth-clean-interior-wide_3d9c498b.jpeg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          zIndex: 0,
-          opacity: 0.35,
-        }} />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          poster="/manus-storage/pfs-booth-clean-interior-wide_3d9c498b.jpeg"
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center",
+            opacity: 0.45,
+            zIndex: 0,
+          }}
+        >
+          <source src="/manus-storage/pfs-parts-filters-hero_9a1b0b80.mp4" type="video/mp4" />
+        </video>
         <div style={{
           position: "absolute", inset: 0,
           background: "linear-gradient(90deg, rgba(27,58,107,0.92) 0%, rgba(27,58,107,0.65) 60%, rgba(27,58,107,0.3) 100%)",

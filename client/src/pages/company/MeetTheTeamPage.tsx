@@ -1,3 +1,4 @@
+const HERO_VIDEO = "/manus-storage/pfs-facility-drone-hero_ca12546c.mp4";
 /**
  * Meet the Team — PFS
  * Placeholder page at /company/team
@@ -56,11 +57,16 @@ export default function MeetTheTeamPage() {
 
       {/* HERO */}
       <section style={{ position: "relative", height: "clamp(320px, 45vh, 500px)", overflow: "hidden" }}>
-        <img
-          src={HERO_IMG}
-          alt="Platinum Finishing Systems manufacturing facility — Santa Rosa, CA"
-          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 50%" }}
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          poster={HERO_IMG}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", opacity: 0.45, zIndex: 0 }}>
+          <source src="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4" type="video/mp4" />
+        </video>
         <div style={{
           position: "absolute", inset: 0,
           background: "linear-gradient(to bottom, rgba(10,20,40,0.6) 0%, rgba(10,20,40,0.75) 100%)",
@@ -113,6 +119,48 @@ export default function MeetTheTeamPage() {
         </div>
       </section>
 
+      {/* BACK TO ABOUT + CTA */}
+      <section style={{ padding: "5rem 0", background: "#f8f9fb" }}>
+        <div className="container" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2rem", textAlign: "center" }}>
+          <Link href="/company">
+            <button style={{
+              background: "transparent", color: BLUE,
+              fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+              fontSize: "0.85rem", fontWeight: 700,
+              letterSpacing: "0.12em", textTransform: "uppercase",
+              padding: "0.75rem 1.75rem",
+              border: `2px solid ${BLUE}40`, borderRadius: "2px",
+              cursor: "pointer", display: "inline-flex", alignItems: "center", gap: "0.5rem",
+            }}>
+              <ArrowLeft size={14} /> Back to About Us
+            </button>
+          </Link>
+          <div style={{ width: 1, height: 40, background: "#e2e8f0" }} />
+          <div>
+            <p data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.1rem", fontWeight: 700, color: BLUE, letterSpacing: "0.04em", textTransform: "uppercase", marginBottom: "0.5rem" }}>
+              Ready to Work with Us?
+            </p>
+            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.9rem", color: "#4a5568", lineHeight: 1.7, maxWidth: 400, marginBottom: "1.25rem" }}>
+              Whether you need a single booth or a full finishing line, our team is ready to help you spec the right system.
+            </p>
+            <Link href="/contact">
+              <button data-animation="slideRight" style={{
+                background: BLUE, color: "#fff",
+                fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                fontSize: "0.9rem", fontWeight: 700,
+                letterSpacing: "0.12em", textTransform: "uppercase",
+                padding: "0.9rem 2.25rem",
+                border: "none", borderRadius: "2px",
+                cursor: "pointer", display: "inline-flex", alignItems: "center", gap: "0.5rem",
+              }}>
+                Get a Quote <ArrowRight size={16} />
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+
       {/* TEAM GRID — PLACEHOLDERS */}
       <section style={{ padding: "5rem 0", background: "#fff" }}>
         <div className="container">
@@ -157,46 +205,6 @@ export default function MeetTheTeamPage() {
         </div>
       </section>
 
-      {/* BACK TO ABOUT + CTA */}
-      <section style={{ padding: "5rem 0", background: "#f8f9fb" }}>
-        <div className="container" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2rem", textAlign: "center" }}>
-          <Link href="/company">
-            <button style={{
-              background: "transparent", color: BLUE,
-              fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-              fontSize: "0.85rem", fontWeight: 700,
-              letterSpacing: "0.12em", textTransform: "uppercase",
-              padding: "0.75rem 1.75rem",
-              border: `2px solid ${BLUE}40`, borderRadius: "2px",
-              cursor: "pointer", display: "inline-flex", alignItems: "center", gap: "0.5rem",
-            }}>
-              <ArrowLeft size={14} /> Back to About Us
-            </button>
-          </Link>
-          <div style={{ width: 1, height: 40, background: "#e2e8f0" }} />
-          <div>
-            <p data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.1rem", fontWeight: 700, color: BLUE, letterSpacing: "0.04em", textTransform: "uppercase", marginBottom: "0.5rem" }}>
-              Ready to Work with Us?
-            </p>
-            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.9rem", color: "#4a5568", lineHeight: 1.7, maxWidth: 400, marginBottom: "1.25rem" }}>
-              Whether you need a single booth or a full finishing line, our team is ready to help you spec the right system.
-            </p>
-            <Link href="/contact">
-              <button data-animation="slideRight" style={{
-                background: BLUE, color: "#fff",
-                fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-                fontSize: "0.9rem", fontWeight: 700,
-                letterSpacing: "0.12em", textTransform: "uppercase",
-                padding: "0.9rem 2.25rem",
-                border: "none", borderRadius: "2px",
-                cursor: "pointer", display: "inline-flex", alignItems: "center", gap: "0.5rem",
-              }}>
-                Get a Quote <ArrowRight size={16} />
-              </button>
-            </Link>
-          </div>
-        </div>
-      </section>
 
     </div>
   );

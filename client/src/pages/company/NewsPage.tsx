@@ -67,6 +67,24 @@ export default function NewsPage() {
           paddingTop: "7rem",
         }}
       >
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            opacity: 0.35,
+            zIndex: 0,
+          }}
+        >
+          <source src="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4" type="video/mp4" />
+        </video>
         {/* Geometric grid texture */}
         <div
           aria-hidden="true"

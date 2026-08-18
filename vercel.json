@@ -3,7 +3,22 @@
   "outputDirectory": "dist/public",
   "installCommand": "pnpm install",
   "framework": null,
+  "redirects": [
+    {
+      "source": "/hydrogen-service-bays",
+      "destination": "/products/custom-solutions/hydrogen-bus-finishing-system",
+      "permanent": true
+    },
+    {
+      "source": "/custom-hydrogen-service-bays-for-safe-vehicle-servicing",
+      "destination": "/products/custom-solutions/hydrogen-bus-finishing-system",
+      "permanent": true
+    }
+  ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }

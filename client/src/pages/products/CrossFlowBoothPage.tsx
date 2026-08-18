@@ -1,3 +1,4 @@
+const HERO_VIDEO = "/manus-storage/crossflow-hero_5b011231.mp4";
 /*
  * Cross-Flow Spray Booths — PFS Orion Series
  * REBUILT from scratch — same rules as AerospacePage and IndustrialManufacturingPage
@@ -177,17 +178,16 @@ export default function CrossFlowBoothPage() {
         justifyContent: "flex-end",
         overflow: "hidden",
       }}>
-        <img
-          src={HERO_RENDER}
-          alt="PFS Orion cross-flow spray booth exterior with filter doors"
-          aria-hidden="true"
-          style={{
-            position: "absolute", inset: 0,
-            width: "100%", height: "100%",
-            objectFit: "cover",
-            objectPosition: "center center",
-          }}
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          poster={HERO_RENDER}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", opacity: 0.45, zIndex: 0 }}>
+          <source src="/manus-storage/crossflow-hero_5b011231.mp4" type="video/mp4" />
+        </video>
         {/* Dark gradient — heavier at bottom so text is always readable */}
         <div style={{
           position: "absolute", inset: 0,

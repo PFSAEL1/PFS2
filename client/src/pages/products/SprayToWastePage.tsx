@@ -1,3 +1,4 @@
+const HERO_VIDEO = "/manus-storage/pfs-stw-action-clip_ba3b60d0.mp4";
 /*
  * Spray-to-Waste Powder Coating Booths — PFS
  * Route: /products/powder-booths/spray-to-waste
@@ -206,11 +207,16 @@ export default function SprayToWastePage() {
 
       {/* ── HERO ── */}
       <section style={{ position: "relative", minHeight: "clamp(420px,55vh,680px)", display: "flex", alignItems: "flex-end", overflow: "hidden", background: "#0a1628" }}>
-        <img
-          src={HERO_IMG}
-          alt="PFS spray-to-waste powder coating booth — open-face non-recovery powder booth"
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 55%", opacity: 0.55 }}
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          poster={HERO_IMG}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", opacity: 0.45, zIndex: 0 }}>
+          <source src="/manus-storage/pfs-stw-action-clip_ba3b60d0.mp4" type="video/mp4" />
+        </video>
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.45) 55%, transparent 100%)" }} />
         <div className="container" style={{ position: "relative", zIndex: 1, paddingBottom: "clamp(3rem,6vw,5rem)" }}>
           <nav aria-label="breadcrumb" style={{ marginBottom: "1.25rem", display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap" }}>

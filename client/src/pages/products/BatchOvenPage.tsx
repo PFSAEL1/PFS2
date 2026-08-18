@@ -1,3 +1,4 @@
+const HERO_VIDEO = "/manus-storage/pfs-oven-hero-video_05e4a406.mp4";
 /**
  * Batch Ovens — PFS
  * Dedicated rich page: video hero, cert carousel, features, size selector, gallery, multiple CTAs
@@ -159,11 +160,16 @@ export default function BatchOvenPage() {
         justifyContent: "flex-end",
         overflow: "hidden",
       }}>
-        <img
-          src={HERO_IMG}
-          alt="PFS VULCAN batch curing oven"
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center" }}
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          poster={HERO_IMG}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", opacity: 0.45, zIndex: 0 }}>
+          <source src="/manus-storage/pfs-oven-hero-video_05e4a406.mp4" type="video/mp4" />
+        </video>
         <div style={{
           position: "absolute", inset: 0,
           background: "linear-gradient(to top, rgba(5,5,5,0.96) 0%, rgba(5,5,5,0.72) 38%, rgba(5,5,5,0.35) 70%, rgba(5,5,5,0.12) 100%)",

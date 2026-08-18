@@ -74,7 +74,7 @@ export default function ContainerBoothsHub() {
 
   return (
     <div>
-      <PageHero
+      <PageHero bgVideo="/manus-storage/pfs-container-booth-hero-v2_c9723ea6.mp4"
         title="Shipping Container Paint Booths"
         subtitle="A complete, professional spray booth built inside a standard ISO shipping container — mobile, self-contained, and deployable anywhere in the world."
         breadcrumbs={[{ label: "Products", href: "/products" }, { label: "Shipping Container Paint Booths" }]}

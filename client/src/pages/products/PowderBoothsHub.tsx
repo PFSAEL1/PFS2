@@ -58,12 +58,12 @@ export default function PowderBoothsHub() {
             {SYSTEMS.map((s) => (
               <Link data-animation="fadeIn" key={s.label} href={s.href}>
                 <div className="product-card group">
-                  <div className="overflow-hidden" style={{ height: "240px" }}>
+                  <div className="overflow-hidden card-image" style={{ height: "240px" }}>
                     <img src={s.img} alt={s.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
                   <div className="p-5">
-                    <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1rem", fontWeight: 700, color: "#1a1a1a", marginBottom: "0.4rem" }}>{s.label}</h3>
-                    <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#666", lineHeight: 1.6 }}>{s.desc}</p>
+                    <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1rem", fontWeight: 700, color: "#1a1a1a", marginBottom: "0.4rem" }}>{s.label}</h3>
+                    <p data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#666", lineHeight: 1.6 }}>{s.desc}</p>
                   </div>
                 </div>
               </Link>

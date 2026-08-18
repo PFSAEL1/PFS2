@@ -1,3 +1,4 @@
+const HERO_VIDEO = "/manus-storage/pfs-nova-powder-reclaim-hero_8e1b0424.mp4";
 /*
  * Powder Reclaim Booths — PFS
  * Route: /products/powder-booths/powder-reclaim
@@ -201,11 +202,16 @@ export default function PowderReclaimPage() {
 
       {/* ── HERO ── */}
       <section style={{ position: "relative", minHeight: "clamp(420px,55vh,680px)", display: "flex", alignItems: "flex-end", overflow: "hidden", background: "#0a1628" }}>
-        <img
-          src={HERO_IMG}
-          alt="PFS powder reclaim booth — cyclone powder recovery system for high-volume powder coating"
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", opacity: 0.5 }}
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          poster={HERO_IMG}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", opacity: 0.45, zIndex: 0 }}>
+          <source src="/manus-storage/pfs-nova-powder-reclaim-hero_8e1b0424.mp4" type="video/mp4" />
+        </video>
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.45) 55%, transparent 100%)" }} />
         <div className="container" style={{ position: "relative", zIndex: 1, paddingBottom: "clamp(3rem,6vw,5rem)" }}>
           <nav aria-label="breadcrumb" style={{ marginBottom: "1.25rem", display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap" }}>

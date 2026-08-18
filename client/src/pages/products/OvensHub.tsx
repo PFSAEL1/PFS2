@@ -122,7 +122,7 @@ export default function OvensHub() {
             {OVENS.map((oven) => (
               <Link data-animation="fadeIn" key={oven.label} href={oven.href}>
                 <div className="group cursor-pointer border border-gray-200 hover:border-[#1B2B4B] transition-all duration-300 hover:shadow-[0_0_24px_rgba(27,43,75,0.15)] overflow-hidden h-full flex flex-col">
-                  <div className="overflow-hidden flex-shrink-0" style={{ height: `${oven.imgHeight}px` }}>
+                  <div className="overflow-hidden flex-shrink-0 card-image" style={{ height: `${oven.imgHeight}px` }}>
                     <img
                       src={oven.img}
                       alt={oven.label}

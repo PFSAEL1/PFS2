@@ -12,6 +12,7 @@ import MobileCTABar from "./components/MobileCTABar";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 
+
 // Products
 import ProductsHub from "./pages/products/ProductsHub";
 import PaintBoothsHub from "./pages/products/PaintBoothsHub";
@@ -20,6 +21,7 @@ import ContainerBoothPage from "./pages/products/ContainerBoothPage";
 import EnclosedBoothsPage from "./pages/products/EnclosedBoothsPage";
 import SprinterVanBoothPage from "./pages/products/SprinterVanBoothPage";
 import PowderBoothsHub from "./pages/products/PowderBoothsHub";
+import HydrogenBusPage from "./pages/products/HydrogenBusPage";
 import OvensHub from "./pages/products/OvensHub";
 import PrepSupportHub from "./pages/products/PrepSupportHub";
 import PaintWallsPage from "./pages/products/PaintWallsPage";
@@ -146,6 +148,7 @@ function Router() {
       <Route path="/products/paint-booths/sprinter-van" component={SprinterVanBoothPage} />
       <Route path="/products/paint-booths/enclosed/:sub" component={ProductSubPage} />
       <Route path="/products/paint-booths/aircraft" component={AircraftBoothPage} />
+      <Route path="/products/custom-solutions/hydrogen-bus-finishing-system" component={HydrogenBusPage} />
       <Route path="/products/paint-booths/crossflow" component={CrossFlowBoothPage} />
       <Route path="/products/paint-booths/open-face" component={OpenFaceBoothPage} />
       <Route path="/products/paint-booths/crossflow-all" component={CrossFlowAllPage} />
@@ -261,7 +264,7 @@ function Router() {
 function App() {
   return (
     <>
-    <GlobalAnimations />
+      <GlobalAnimations />
       <ErrorBoundary>
         <ThemeProvider defaultTheme="light">
           <TooltipProvider>

@@ -1,3 +1,4 @@
+const HERO_VIDEO = "/manus-storage/pfs-facility-drone-hero_ca12546c.mp4";
 /**
  * Become a Distributor — PFS
  * Design: Dark navy hero with Helios booth, lead capture form, benefits grid
@@ -121,11 +122,16 @@ export default function BecomeADistributorPage() {
 
       {/* ── HERO ── */}
       <section style={{ position: "relative", minHeight: "clamp(480px, 65vh, 720px)", display: "flex", alignItems: "flex-end", overflow: "hidden" }}>
-        <img
-          src={HELIOS_HERO}
-          alt="PFS Helios Series enclosed spray booth"
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 45%" }}
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          poster={HELIOS_HERO}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", opacity: 0.45, zIndex: 0 }}>
+          <source src="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4" type="video/mp4" />
+        </video>
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(10,20,40,0.92) 0%, rgba(10,20,40,0.55) 55%, rgba(10,20,40,0.2) 100%)" }} />
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "3px", background: GOLD, zIndex: 3 }} />
 

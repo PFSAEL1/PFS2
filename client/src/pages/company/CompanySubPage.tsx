@@ -30,7 +30,7 @@ export default function CompanySubPage() {
   if (!content) {
     return (
       <div>
-        <PageHero title="Company" breadcrumbs={[{ label: "Company", href: "/company" }]} />
+        <PageHero bgVideo="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4" title="Company" breadcrumbs={[{ label: "Company", href: "/company" }]} />
         <div className="container py-16 text-center">
           <p className="section-body">Page not found. Please use the navigation above.</p>
           <Link href="/company"><span className="btn-glow mt-4 inline-flex">Back to Company</span></Link>
@@ -41,7 +41,7 @@ export default function CompanySubPage() {
 
   return (
     <div>
-      <PageHero title={content.title} subtitle={content.desc} breadcrumbs={[{ label: "Company", href: "/company" }, { label: content.title }]} bgImage={content.img} />
+      <PageHero bgVideo="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4" title={content.title} subtitle={content.desc} breadcrumbs={[{ label: "Company", href: "/company" }, { label: content.title }]} bgImage={content.img} />
       <section className="py-16 bg-white">
         <div className="container">
           <div className="grid lg:grid-cols-3 gap-10">

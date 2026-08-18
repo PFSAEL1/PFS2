@@ -136,8 +136,13 @@ export default function SupportPage() {
             }}>
               <img
                 src={TECH_HERO}
-                alt="PFS factory-trained technician servicing a spray booth control panel"
-                style={{ width: "100%", display: "block", objectFit: "cover", objectPosition: "center top", maxHeight: "480px" }}
+                alt="PFS Technical Support"
+                style={{
+                  width: "100%",
+                  height: "480px",
+                  display: "block",
+                  objectFit: "cover"
+                }}
               />
             </div>
 

@@ -1,3 +1,4 @@
+const HERO_VIDEO = "/manus-storage/pfs-paint-booth-hero_500b9d60.mp4";
 /*
  * Sprinter Van & High-Clearance Paint Booths — PFS
  * Route: /products/paint-booths/sprinter-van
@@ -274,7 +275,16 @@ export default function SprinterVanBoothPage() {
       {/* ── HERO ── */}
       <section style={{ position: "relative", minHeight: "clamp(380px,60vh,640px)", background: "#0a0a0a", display: "flex", alignItems: "center", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0 }}>
-          <img src={HERO_IMG} alt="PFS Sprinter Van paint booth — full interior view" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 35%", opacity: 0.55 }} />
+          <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          poster={HERO_IMG}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", opacity: 0.45, zIndex: 0 }}>
+          <source src="/manus-storage/pfs-paint-booth-hero_500b9d60.mp4" type="video/mp4" />
+        </video>
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(90deg,rgba(0,0,0,0.90) 0%,rgba(0,0,0,0.50) 55%,rgba(0,0,0,0.15) 100%)" }} />
         </div>
         <div className="container" style={{ position: "relative", zIndex: 2, padding: "5rem 0 4rem" }}>
@@ -519,13 +529,13 @@ export default function SprinterVanBoothPage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(260px,1fr))", gap: "1.5rem" }}>
             {related.map(p => (
               <Link data-animation="fadeIn" key={p.label} href={p.href}>
-                <div style={{ background: "#fff", border: "1px solid #e5e7eb", overflow: "hidden", cursor: "pointer" }}>
+                <div style={{ background: "#fff", border: "1px solid #e5e7eb", cursor: "pointer" }}>
                   <div style={{ height: "180px", overflow: "hidden" }}>
                     <img src={p.img} alt={p.label} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} />
                   </div>
                   <div style={{ padding: "1.25rem" }}>
-                    <div style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "1rem", fontWeight: 800, color: "#111", marginBottom: "0.4rem" }}>{p.label}</div>
-                    <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.8rem", color: "#666", lineHeight: 1.6, margin: "0 0 0.75rem" }}>{p.desc}</p>
+                    <div data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "1rem", fontWeight: 800, color: "#111", marginBottom: "0.4rem" }}>{p.label}</div>
+                    <p data-animation="slideRight" style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.8rem", color: "#666", lineHeight: 1.6, margin: "0 0 0.75rem" }}>{p.desc}</p>
                     <span style={{ display: "inline-flex", alignItems: "center", gap: "0.3rem", color: BLUE, fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.78rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" }}>
                       LEARN MORE <ArrowRight size={12} />
                     </span>

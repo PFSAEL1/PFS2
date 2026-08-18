@@ -15,7 +15,7 @@ export default function AirMakeUpUnitsHub() {
 
   return (
     <div>
-      <PageHero
+      <PageHero bgVideo="/manus-storage/pfs-paint-booth-hero_500b9d60.mp4"
         title="Air Make-Up Units"
         subtitle="PFS air make-up units supply tempered, filtered replacement air to spray booths and finishing rooms — maintaining proper airflow balance and code compliance."
         breadcrumbs={[{ label: "Products", href: "/products" }, { label: "Air Make-Up Units" }]}
@@ -36,7 +36,7 @@ export default function AirMakeUpUnitsHub() {
             {/* Heated AMU */}
             <Link href="/products/air-make-up-units/heated">
               <div className="group cursor-pointer border border-gray-200 hover:border-[#1B2B4B] transition-all duration-300 hover:shadow-[0_0_24px_rgba(27,43,75,0.15)] overflow-hidden">
-                <div className="overflow-hidden" style={{ height: "280px" }}>
+                <div className="overflow-hidden card-image" style={{ height: "280px" }}>
                   <img
                     src={AMU_HEATED_IMG}
                     alt="Heated Air Make-Up Units"
@@ -66,7 +66,7 @@ export default function AirMakeUpUnitsHub() {
             {/* Non-Heated AMU */}
             <Link href="/products/air-make-up-units/non-heated">
               <div className="group cursor-pointer border border-gray-200 hover:border-[#1B2B4B] transition-all duration-300 hover:shadow-[0_0_24px_rgba(27,43,75,0.15)] overflow-hidden">
-                <div className="overflow-hidden" style={{ height: "280px" }}>
+                <div className="overflow-hidden card-image" style={{ height: "280px" }}>
                   <img
                     src={AMU_NON_HEATED_IMG}
                     alt="Non-Heated Air Make-Up Units"

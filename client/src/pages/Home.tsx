@@ -256,7 +256,7 @@ export default function Home() {
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 90% 10%, rgba(255,255,255,0.04) 0%, transparent 55%), radial-gradient(ellipse at 10% 90%, rgba(0,0,0,0.35) 0%, transparent 60%)", pointerEvents: "none" }} />
 
         <div className="container relative">
-          <div className="mb-12 reveal-left">
+          <div className="mb-12">
             <div className="flex items-center gap-3 mb-3">
               <div style={{ width: "1.5rem", height: "2px", backgroundColor: "#FFFFFF" }} />
               <span className="section-label" style={{ marginBottom: 0 }}>Our Equipment</span>
@@ -270,7 +270,7 @@ export default function Home() {
           </div>
 
           {/* Product grid — 1 col on mobile, 2 on sm, 4 on desktop */}
-          <div data-animation="fadeIn"
+          <div
             style={{
               display: "grid",
               gridTemplateColumns: "1fr",
@@ -284,7 +284,7 @@ export default function Home() {
                   className="product-card-item"
                   style={{
                     cursor: "pointer",
-                    overflow: "hidden",
+                    // overflow: "hidden",
                     border: "1px solid rgba(255,255,255,0.10)",
                     borderRadius: "3px",
                     transition: "box-shadow 0.35s ease, border-color 0.35s ease, transform 0.25s ease",
@@ -307,7 +307,7 @@ export default function Home() {
                 >
                   {/* Image — 16:9 on mobile (full width), 4:3 on desktop */}
                   <div style={{ width: "100%", aspectRatio: "16/9", overflow: "hidden", position: "relative", flexShrink: 0, backgroundColor: (pf as any).imgBg || "transparent" }}
-                    className="sm:aspect-video lg:aspect-video"
+                    className="sm:aspect-video lg:aspect-video card-image"
                   >
                     <img
                       src={pf.img}
@@ -318,12 +318,12 @@ export default function Home() {
                   {/* White text panel */}
                   <div style={{ backgroundColor: "#FFFFFF", padding: "0.9rem 1rem 1.1rem", flex: 1 }}>
                     <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "0.4rem" }}>
-                      <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#0A0A0A", letterSpacing: "-0.01em", lineHeight: 1.2, margin: 0 }}>
+                      <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#0A0A0A", letterSpacing: "-0.01em", lineHeight: 1.2, margin: 0 }}>
                         {pf.label}
                       </h3>
                       <ChevronRight size={13} style={{ color: "#0A0A0A", flexShrink: 0, marginTop: "2px" }} />
                     </div>
-                    <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.72rem", color: "#666666", lineHeight: 1.55, marginTop: "0.3rem", marginBottom: 0 }}>
+                    <p data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.72rem", color: "#666666", lineHeight: 1.55, marginTop: "0.3rem", marginBottom: 0 }}>
                       {pf.desc}
                     </p>
                   </div>
@@ -378,9 +378,9 @@ export default function Home() {
               <div className="space-y-5">
                 {WHY_PFS.map((item, i) => (
                   <div key={item.title} className={`flex gap-4 ${i + 2}`}>
-                    <div style={{ flexShrink: 0, width: "44px", height: "44px", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    {/* <div style={{ flexShrink: 0, width: "44px", height: "44px", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                       {item.icon}
-                    </div>
+                    </div> */}
                     <div>
                       <h4 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1rem", fontWeight: 700, color: "white", letterSpacing: "0.04em", marginBottom: "0.3rem" }}>
                         {item.title}

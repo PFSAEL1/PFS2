@@ -456,12 +456,12 @@ export default function IntegrationSubPage() {
               {content.related.map((rp) => (
                 <Link key={rp.href} href={rp.href}>
                   <div className="group cursor-pointer" style={{ backgroundColor: "#ffffff", border: "1px solid #e8e8e6", overflow: "hidden", transition: "box-shadow 0.2s" }}>
-                    <div style={{ aspectRatio: "16/9", overflow: "hidden", position: "relative" }}>
+                    <div style={{ aspectRatio: "16/9", overflow: "hidden", position: "relative" }} className="card-image">
                       <img src={rp.image} alt={`PFS ${rp.title}`} style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.4s ease" }} className="group-hover:scale-105" />
                     </div>
                     <div style={{ padding: "1.25rem" }}>
-                      <h4 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1rem", fontWeight: 700, color: "#1a1a1a", textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: "0.25rem" }}>{rp.title}</h4>
-                      <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#666", lineHeight: 1.5, marginBottom: "0.75rem" }}>{rp.subtitle}</p>
+                      <h4 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1rem", fontWeight: 700, color: "#1a1a1a", textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: "0.25rem" }}>{rp.title}</h4>
+                      <p data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#666", lineHeight: 1.5, marginBottom: "0.75rem" }}>{rp.subtitle}</p>
                       <span style={{ display: "inline-flex", alignItems: "center", gap: "0.3rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1B2B4B" }}>
                         Learn More <ArrowRight size={11} />
                       </span>

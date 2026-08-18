@@ -1,3 +1,4 @@
+const HERO_VIDEO = "/manus-storage/pfs-paint-booth-hero_500b9d60.mp4";
 /*
  * Downdraft Raised Basement Spray Booths — PFS Zenith Series
  * Route: /products/paint-booths/downdraft-raised-basement
@@ -258,16 +259,16 @@ export default function DowndraftRaisedBasementPage() {
         justifyContent: "flex-end",
         overflow: "hidden",
       }}>
-        <img
-          src={HERO_IMG}
-          alt="PFS Zenith Downdraft Raised Basement Spray Booth — front-facing real installation"
-          style={{
-            position: "absolute", inset: 0,
-            width: "100%", height: "100%",
-            objectFit: "cover",
-            objectPosition: "center 35%",
-          }}
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          poster={HERO_IMG}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", opacity: 0.45, zIndex: 0 }}>
+          <source src="/manus-storage/pfs-paint-booth-hero_500b9d60.mp4" type="video/mp4" />
+        </video>
         <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.22)" }} />
         <div style={{
           position: "absolute", inset: 0,

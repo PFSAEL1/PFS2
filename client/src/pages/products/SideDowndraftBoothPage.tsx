@@ -1,3 +1,4 @@
+const HERO_VIDEO = "/manus-storage/pfs-paint-booth-hero_500b9d60.mp4";
 /*
  * Side Downdraft Spray Booths — PFS Helios Series
  * Route: /products/paint-booths/side-downdraft
@@ -157,17 +158,16 @@ export default function SideDowndraftBoothPage() {
         justifyContent: "flex-end",
         overflow: "hidden",
       }}>
-        <img
-          src={HERO_RENDER}
-          alt="PFS side downdraft spray booth exterior view with exhaust stack"
-          aria-hidden="true"
-          style={{
-            position: "absolute", inset: 0,
-            width: "100%", height: "100%",
-            objectFit: "cover",
-            objectPosition: "center center",
-          }}
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          poster={HERO_RENDER}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", opacity: 0.45, zIndex: 0 }}>
+          <source src="/manus-storage/pfs-paint-booth-hero_500b9d60.mp4" type="video/mp4" />
+        </video>
         <div style={{
           position: "absolute", inset: 0,
           background: "linear-gradient(to top, rgba(5,5,5,0.96) 0%, rgba(5,5,5,0.70) 35%, rgba(5,5,5,0.30) 70%, rgba(5,5,5,0.10) 100%)",

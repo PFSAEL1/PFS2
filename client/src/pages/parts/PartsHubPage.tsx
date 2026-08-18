@@ -1,3 +1,4 @@
+const HERO_VIDEO = "/manus-storage/pfs-parts-filters-hero_9a1b0b80.mp4";
 /*
  * PFS OEM Parts Hub — /parts
  * - Full-bleed dark hero with parts workshop photo
@@ -287,7 +288,7 @@ function PartCard({
       )}
 
       {/* Image */}
-      <div style={{
+      <div className="card-image" style={{
         width: "100%", aspectRatio: "16/9", overflow: "hidden",
         background: "#f8f9fa",
       }}>
@@ -426,16 +427,16 @@ export default function PartsHubPage() {
         overflow: "hidden",
         background: "#0a0a0a",
       }}>
-        <img
-          src={HERO_IMG}
-          alt="PFS OEM spray booth replacement parts and components — filters, motors, control panels"
-          style={{
-            position: "absolute", inset: 0,
-            width: "100%", height: "100%", objectFit: "cover",
-            objectPosition: "center 40%",
-            opacity: 0.45,
-          }}
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          poster={HERO_IMG}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", opacity: 0.45, zIndex: 0 }}>
+          <source src="/manus-storage/pfs-parts-filters-hero_9a1b0b80.mp4" type="video/mp4" />
+        </video>
         {/* Gradient overlay */}
         <div style={{
           position: "absolute", inset: 0,

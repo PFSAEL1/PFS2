@@ -1,3 +1,4 @@
+const HERO_VIDEO = "/manus-storage/pfs-facility-drone-hero_ca12546c.mp4";
 import { useState } from "react";
 import { Link } from "wouter";
 import { ChevronDown, ArrowRight, Phone, Mail } from "lucide-react";
@@ -275,18 +276,16 @@ export default function LegalPage() {
           overflow: "hidden",
         }}
       >
-        <img
-          src={HERO_IMG}
-          alt="PFS Helios and Orion spray booths on the shop floor"
-          style={{
-            position: "absolute",
-            inset: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            objectPosition: "center 40%",
-          }}
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          poster={HERO_IMG}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", opacity: 0.45, zIndex: 0 }}>
+          <source src="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4" type="video/mp4" />
+        </video>
         {/* Dark overlay */}
         <div
           style={{

@@ -89,7 +89,7 @@ export default function ContactSubPage() {
   if (!content) {
     return (
       <div>
-        <PageHero title="Contact" breadcrumbs={[{ label: "Contact", href: "/contact" }]} />
+        <PageHero bgVideo="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4" title="Contact" breadcrumbs={[{ label: "Contact", href: "/contact" }]} />
         <div className="container py-16 text-center">
           <p className="section-body">Page not found. Please use the navigation above.</p>
           <Link href="/contact"><span className="btn-glow mt-4 inline-flex">Back to Contact</span></Link>
@@ -100,7 +100,7 @@ export default function ContactSubPage() {
 
   return (
     <div>
-      <PageHero
+      <PageHero bgVideo="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4"
         title={content.title}
         subtitle={content.desc}
         breadcrumbs={[{ label: "Contact", href: "/contact" }, { label: content.title }]}

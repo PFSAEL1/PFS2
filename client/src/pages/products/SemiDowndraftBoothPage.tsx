@@ -1,3 +1,4 @@
+const HERO_VIDEO = "/manus-storage/pfs-paint-booth-hero_500b9d60.mp4";
 /*
  * Semi-Downdraft Spray Booths — PFS Orion Series
  * Route: /products/paint-booths/semi-downdraft
@@ -198,16 +199,16 @@ export default function SemiDowndraftBoothPage() {
         justifyContent: "flex-end",
         overflow: "hidden",
       }}>
-        <img
-          src={HERO_IMG}
-          alt="PFS Orion Semi-Downdraft Spray Booth — open front view showing yellow exhaust filter wall"
-          style={{
-            position: "absolute", inset: 0,
-            width: "100%", height: "100%",
-            objectFit: "cover",
-            objectPosition: "center 45%",
-          }}
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          poster={HERO_IMG}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", opacity: 0.45, zIndex: 0 }}>
+          <source src="/manus-storage/pfs-paint-booth-hero_500b9d60.mp4" type="video/mp4" />
+        </video>
         {/* Gradient — heavier at bottom for text legibility */}
         <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.25)" }} />
         <div style={{

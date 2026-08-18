@@ -72,8 +72,28 @@ export default function IndustrialLandingPage() {
           />
         </div>
 
-        {/* Headline block — dark band below render */}
-        <div className="bg-[#111] text-white px-6 py-12 sm:py-16 text-center">
+        {/* Headline block — dark band below render with video background */}
+        <div className="relative bg-[#111] text-white px-6 py-12 sm:py-16 text-center overflow-hidden">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            disablePictureInPicture
+            poster={HELIOS_RENDER}
+            style={{
+              position: "absolute",
+              inset: 0,
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              opacity: 0.35,
+              zIndex: 0,
+            }}
+          >
+            <source src="/manus-storage/pfs-products-hero-robot-video_7cd286b4.mp4" type="video/mp4" />
+          </video>
+          <div className="relative z-10">
           <p className="section-label mb-3" style={{ color: "#1B2B4B" }}>
             PFS HELIOS SERIES
           </p>
@@ -95,6 +115,7 @@ export default function IndustrialLandingPage() {
               </button>
             </Link>
           </div>
+        </div>
         </div>
       </section>
 

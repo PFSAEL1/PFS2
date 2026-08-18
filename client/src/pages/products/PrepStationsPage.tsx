@@ -262,7 +262,7 @@ export default function PrepStationsPage() {
               },
             ].map(cfg => (
               <div key={cfg.title} style={{ background: "#fff", border: "1px solid #e5e5e5", overflow: "hidden" }}>
-                <div style={{ height: 220, overflow: "hidden" }}>
+                <div className="card-image" style={{ height: 220, overflow: "hidden" }}>
                   <img src={cfg.img} alt={cfg.title} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }} />
                 </div>
                 <div style={{ padding: "1.5rem" }}>

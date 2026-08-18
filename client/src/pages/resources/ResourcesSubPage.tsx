@@ -412,7 +412,7 @@ export default function ResourcesSubPage() {
   if (!content) {
     return (
       <div>
-        <PageHero title="Resources" breadcrumbs={[{ label: "Resources", href: "/resources" }]} />
+        <PageHero bgVideo="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4" title="Resources" breadcrumbs={[{ label: "Resources", href: "/resources" }]} />
         <div className="container py-16 text-center">
           <p className="section-body">Resource not found. Please use the navigation above.</p>
           <Link href="/resources"><span className="btn-glow mt-4 inline-flex">Back to Resources</span></Link>
@@ -423,7 +423,7 @@ export default function ResourcesSubPage() {
 
   return (
     <div>
-      <PageHero title={content.title} subtitle={content.desc} breadcrumbs={[{ label: "Resources", href: "/resources" }, { label: content.title }]} bgImage={IMG} />
+      <PageHero bgVideo="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4" title={content.title} subtitle={content.desc} breadcrumbs={[{ label: "Resources", href: "/resources" }, { label: content.title }]} bgImage={IMG} />
       <section className="py-16 bg-white">
         <div className="container">
           <div className="grid lg:grid-cols-3 gap-10">

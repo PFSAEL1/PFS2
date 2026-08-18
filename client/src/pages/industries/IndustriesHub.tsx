@@ -51,15 +51,15 @@ export default function IndustriesHub() {
             {INDUSTRIES.map((ind) => (
               <Link key={ind.slug} href={`/industries/${ind.slug}`}>
                 <div className="product-card group">
-                  <div className="overflow-hidden" style={{ height: "240px" }}>
+                  <div className="overflow-hidden card-image" style={{ height: "240px" }}>
                     <img src={ind.img} alt={ind.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" style={{ objectPosition: (ind as any).imgPosition || 'center center' }} />
                   </div>
                   <div className="p-5">
                     <div className="flex items-center justify-between mb-2">
-                      <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1rem", fontWeight: 600, color: "#1a1a1a", letterSpacing: "0.03em" }}>{ind.label}</h3>
+                      <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1rem", fontWeight: 600, color: "#1a1a1a", letterSpacing: "0.03em" }}>{ind.label}</h3>
                       <ChevronRight size={16} style={{ color: "#FFFFFF" }} />
                     </div>
-                    <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.82rem", color: "#666", lineHeight: 1.6 }}>{ind.desc}</p>
+                    <p data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.82rem", color: "#666", lineHeight: 1.6 }}>{ind.desc}</p>
                   </div>
                 </div>
               </Link>

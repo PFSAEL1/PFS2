@@ -109,6 +109,12 @@ const PRODUCTS = [
     img: "/manus-storage/IMG_2132_c21b2839.jpg",
     desc: "High-volume open-front finishing for fleet components and sub-assemblies.",
   },
+  {
+    label: "Hydrogen Bus & FCEV Finishing Bays",
+    href: "/products/custom-solutions/hydrogen-bus-finishing-system",
+    img: "/manus-storage/IMG_0590_3d8a1a7e.jpeg",
+    desc: "Specialized service bays and finishing enclosures engineered for H2 and FCEV fleets.",
+  },
 ];
 
 // ── LIGHTBOX ─────────────────────────────────────────────────────────────────
@@ -459,6 +465,7 @@ export default function TruckBusFleetPage() {
         heading="You May Also Need"
         label="Complete Your System"
         cards={PRODUCTS}
+
       />
     </div>
   );

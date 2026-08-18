@@ -46,7 +46,7 @@ export default function ResourcesHub() {
 
   return (
     <div>
-      <PageHero
+      <PageHero bgVideo="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4"
         title="Resources"
         subtitle="Technical documentation, installation guides, maintenance manuals, and FAQs for all PFS finishing equipment."
         breadcrumbs={[{ label: "Resources" }]}

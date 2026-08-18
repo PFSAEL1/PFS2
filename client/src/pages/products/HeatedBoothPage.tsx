@@ -1,3 +1,4 @@
+const HERO_VIDEO = "/manus-storage/pfs-paint-booth-hero_500b9d60.mp4";
 /*
  * Heated Paint Booths — PFS
  * Route: /products/paint-booths/heated
@@ -143,7 +144,16 @@ export default function HeatedBoothPage() {
       {/* ── HERO ── */}
       <section style={{ position: "relative", minHeight: "clamp(380px, 60vh, 620px)", background: "#0a0a0a", display: "flex", alignItems: "center", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0 }}>
-          <img src={HERO_IMG} alt="PFS Zenith heated paint booth" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", opacity: 0.5 }} />
+          <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          poster={HERO_IMG}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", opacity: 0.45, zIndex: 0 }}>
+          <source src="/manus-storage/pfs-paint-booth-hero_500b9d60.mp4" type="video/mp4" />
+        </video>
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(90deg, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.15) 100%)" }} />
         </div>
         <div className="container" style={{ position: "relative", zIndex: 2, padding: "5rem 0 4rem" }}>
@@ -325,8 +335,8 @@ export default function HeatedBoothPage() {
                     <div style={{ position: "absolute", top: "0.75rem", left: "0.75rem", background: BLUE, color: "#fff", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.65rem", fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", padding: "0.25rem 0.6rem" }}>{m.series}</div>
                   </div>
                   <div style={{ padding: "1rem 1.1rem 1.2rem" }}>
-                    <div style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1rem", fontWeight: 800, color: "#111", letterSpacing: "0.04em", textTransform: "uppercase", marginBottom: "0.35rem" }}>{m.name}</div>
-                    <div style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.78rem", color: "#555", lineHeight: 1.5, marginBottom: "0.75rem" }}>{m.desc}</div>
+                    <div data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1rem", fontWeight: 800, color: "#111", letterSpacing: "0.04em", textTransform: "uppercase", marginBottom: "0.35rem" }}>{m.name}</div>
+                    <div data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.78rem", color: "#555", lineHeight: 1.5, marginBottom: "0.75rem" }}>{m.desc}</div>
                     <div style={{ display: "inline-flex", alignItems: "center", gap: "0.3rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.78rem", fontWeight: 700, color: BLUE, letterSpacing: "0.08em", textTransform: "uppercase" }}>VIEW BOOTH <ArrowRight size={12} /></div>
                   </div>
                 </div>
@@ -412,8 +422,8 @@ export default function HeatedBoothPage() {
                     <img src={item.img} alt={item.label} style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.3s" }} className="group-hover:scale-105" />
                   </div>
                   <div style={{ padding: "1rem 1.1rem 1.2rem" }}>
-                    <div style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.88rem", fontWeight: 800, color: "#111", letterSpacing: "0.04em", textTransform: "uppercase", marginBottom: "0.35rem" }}>{item.label}</div>
-                    <div style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.78rem", color: "#555", lineHeight: 1.5, marginBottom: "0.75rem" }}>{item.desc}</div>
+                    <div data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.88rem", fontWeight: 800, color: "#111", letterSpacing: "0.04em", textTransform: "uppercase", marginBottom: "0.35rem" }}>{item.label}</div>
+                    <div data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.78rem", color: "#555", lineHeight: 1.5, marginBottom: "0.75rem" }}>{item.desc}</div>
                     <div style={{ display: "inline-flex", alignItems: "center", gap: "0.3rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.78rem", fontWeight: 700, color: BLUE, letterSpacing: "0.08em", textTransform: "uppercase" }}>LEARN MORE <ArrowRight size={12} /></div>
                   </div>
                 </div>

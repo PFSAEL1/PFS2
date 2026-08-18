@@ -42,7 +42,7 @@ export default function EducationPage() {
 
   return (
     <div>
-      <PageHero
+      <PageHero bgVideo="/manus-storage/pfs-paint-booth-hero_500b9d60.mp4"
         title="Education"
         subtitle="Spray booths, finishing equipment, and prep environments for vocational schools, community colleges, and universities — built to meet educational program requirements and safety codes."
         breadcrumbs={[{ label: "Industries", href: "/industries" }, { label: "Education" }]}

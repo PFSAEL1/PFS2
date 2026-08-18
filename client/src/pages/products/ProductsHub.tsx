@@ -144,7 +144,7 @@ export default function ProductsHub() {
             {FAMILIES.map((f) => (
               <Link data-animation="fadeIn" key={f.label} href={f.href}>
                 <div className="group cursor-pointer border border-gray-200 hover:border-[#1B2B4B] transition-all duration-300 hover:shadow-[0_0_24px_rgba(27,43,75,0.15)] overflow-hidden h-full flex flex-col">
-                  <div className="overflow-hidden flex-shrink-0" style={{ height: "260px" }}>
+                  <div className="overflow-hidden flex-shrink-0 card-image" style={{ height: "260px" }}>
                     <img
                       src={f.img}
                       alt={f.label}

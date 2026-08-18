@@ -22,7 +22,7 @@ export default function EnvironmentalRoomsHub() {
 
   return (
     <div>
-      <PageHero
+      <PageHero bgVideo="/manus-storage/pfs-temp-room-hero_1712ca09.mp4"
         title="Environmental Rooms"
         subtitle="PFS environmental rooms provide precise temperature and humidity control for sensitive finishing operations and process-controlled work environments."
         breadcrumbs={[{ label: "Products", href: "/products" }, { label: "Environmental Rooms" }]}
@@ -38,34 +38,34 @@ export default function EnvironmentalRoomsHub() {
           <div data-animation="fadeIn" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <Link key="Temperature-Controlled Rooms" href="/products/environmental-rooms/temperature-controlled">
               <div className="product-card group">
-                <div className="overflow-hidden" style={{ height: "240px" }}>
+                <div className="overflow-hidden card-image" style={{ height: "240px" }}>
                   <img src={TEMP_CARD} alt="Temperature-Controlled Rooms" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
                 <div className="p-5">
-                  <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.95rem", fontWeight: 600, color: "#1a1a1a" }}>Temperature-Controlled Rooms</h3>
-                  <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#666", lineHeight: 1.6 }}>Precisely controlled temperature environments for coating and curing.</p>
+                  <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.95rem", fontWeight: 600, color: "#1a1a1a" }}>Temperature-Controlled Rooms</h3>
+                  <p data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#666", lineHeight: 1.6 }}>Precisely controlled temperature environments for coating and curing.</p>
                 </div>
               </div>
             </Link>
             <Link key="Process-Controlled Rooms" href="/products/environmental-rooms/process-controlled">
               <div className="product-card group">
-                <div className="overflow-hidden" style={{ height: "240px" }}>
+                <div className="overflow-hidden card-image" style={{ height: "240px" }}>
                   <img src={PROCESS_CARD} alt="Process-Controlled Rooms" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
                 <div className="p-5">
-                  <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.95rem", fontWeight: 600, color: "#1a1a1a" }}>Process-Controlled Rooms</h3>
-                  <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#666", lineHeight: 1.6 }}>Full process control rooms for aerospace, defense, and precision manufacturing.</p>
+                  <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.95rem", fontWeight: 600, color: "#1a1a1a" }}>Process-Controlled Rooms</h3>
+                  <p data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#666", lineHeight: 1.6 }}>Full process control rooms for aerospace, defense, and precision manufacturing.</p>
                 </div>
               </div>
             </Link>
             <Link key="Enclosed Work Environments" href="/products/environmental-rooms/enclosed-work">
               <div className="product-card group">
-                <div className="overflow-hidden" style={{ height: "240px" }}>
+                <div className="overflow-hidden card-image" style={{ height: "240px" }}>
                   <img src={ENCLOSED_CARD} alt="Enclosed Work Environments" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
                 <div className="p-5">
-                  <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.95rem", fontWeight: 600, color: "#1a1a1a" }}>Enclosed Work Environments</h3>
-                  <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#666", lineHeight: 1.6 }}>Clean, enclosed work environments for sensitive assembly and inspection.</p>
+                  <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.95rem", fontWeight: 600, color: "#1a1a1a" }}>Enclosed Work Environments</h3>
+                  <p data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#666", lineHeight: 1.6 }}>Clean, enclosed work environments for sensitive assembly and inspection.</p>
                 </div>
               </div>
             </Link>
@@ -74,7 +74,7 @@ export default function EnvironmentalRoomsHub() {
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
                 <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.25rem", fontWeight: 700, color: "#1a1a1a", marginBottom: "0.5rem" }}>Need a Custom Solution?</h3>
-                <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "#555", lineHeight: 1.7 }}>Our engineers can design a system around your exact facility, process, and throughput requirements.</p>
+                <p data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "#555", lineHeight: 1.7 }}>Our engineers can design a system around your exact facility, process, and throughput requirements.</p>
               </div>
               <Link data-animation="slideRight" href="/contact/request-a-quote"><span className="btn-glow flex-shrink-0">Get Pricing <ArrowRight size={14} /></span></Link>
             </div>

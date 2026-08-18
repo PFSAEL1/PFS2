@@ -1,3 +1,4 @@
+const HERO_VIDEO = "/manus-storage/pfs-facility-drone-hero_ca12546c.mp4";
 /**
  * PFS Bay Area Spray Booth Service Landing Page
  * Route: /spray-booth-service-bay-area
@@ -212,11 +213,16 @@ export default function BayAreaServicePage() {
     <div style={{ background: "#f8f9fa", minHeight: "100vh" }}>
       {/* HERO */}
       <section style={{ position: "relative", height: "70vh", minHeight: 520, overflow: "hidden" }}>
-        <img
-          src={HERO_IMG}
-          alt="PFS spray booth service technician Bay Area California"
-          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center" }}
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          poster={HERO_IMG}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", opacity: 0.45, zIndex: 0 }}>
+          <source src="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4" type="video/mp4" />
+        </video>
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0.15) 100%)" }} />
         <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center" }}>
           <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 2rem", width: "100%" }}>

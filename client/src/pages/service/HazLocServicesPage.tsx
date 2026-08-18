@@ -259,12 +259,26 @@ export default function HazLocServicesPage() {
         minHeight: "640px", display: "flex", alignItems: "center",
         borderBottom: "3px solid #111",
       }}>
-        <div style={{
-          position: "absolute", inset: 0,
-          backgroundImage: "url('/manus-storage/pfs-hazloc-enclosure-hero_ab43557c.jpg')",
-          backgroundSize: "contain", backgroundPosition: "center center", backgroundRepeat: "no-repeat",
-          backgroundColor: "#0a0a0a", zIndex: 0,
-        }} />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          poster="/manus-storage/pfs-hazloc-enclosure-hero_ab43557c.jpg"
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center",
+            opacity: 0.55,
+            zIndex: 0,
+          }}
+        >
+          <source src="/manus-storage/pfs-military-hero-video_55488949.mp4" type="video/mp4" />
+        </video>
         <div style={{
           position: "absolute", inset: 0,
           background: "linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.50) 45%, rgba(0,0,0,0.15) 100%)",

@@ -58,7 +58,7 @@ export default function CareersPage() {
   return (
     <div>
       {/* SEO meta via PageHero */}
-      <PageHero
+      <PageHero bgVideo="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4"
         title="Careers at PFS"
         subtitle="Join the team building America's most trusted industrial finishing equipment."
         breadcrumbs={[{ label: "Company", href: "/company" }, { label: "Careers" }]}

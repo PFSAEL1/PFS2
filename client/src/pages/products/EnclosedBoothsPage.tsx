@@ -194,7 +194,7 @@ export default function EnclosedBoothsPage() {
             {CONFIGURATIONS.map((config) => (
               <Link data-animation="fadeIn" key={config.label} href={config.href}>
                 <div className="product-card group h-full" style={{ display: "flex", flexDirection: "column" }}>
-                  <div className="overflow-hidden relative" style={{ height: "220px" }}>
+                  <div className="overflow-hidden relative card-image" style={{ height: "220px" }}>
                     <img src={config.img} alt={config.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" style={{ objectPosition: config.imgPos || "center 50%" }} />
                     {config.badge && (
                       <div style={{

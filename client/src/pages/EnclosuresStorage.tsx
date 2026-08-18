@@ -14,7 +14,7 @@ export default function EnclosuresStorage() {
 
   return (
     <div>
-      <PageHero
+      <PageHero bgVideo="/manus-storage/pfs-enclosed-tesla-hero_9c110001.mp4"
         title="Enclosures & Storage Solutions"
         subtitle="Modular enclosures, storage buildings, and industrial structures engineered to complement your finishing operation."
         breadcrumbs={[{ label: "Enclosures & Storage" }]}

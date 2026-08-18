@@ -13,7 +13,7 @@ export const fadeIn = {
     },
 };
 
-const isMobile = window.innerWidth <= 420;
+const isMobile = window.innerWidth <= 480;
 
 export const slideLeft = {
     hidden: {

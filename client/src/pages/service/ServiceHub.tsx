@@ -145,7 +145,7 @@ function ServiceCard({ id, label, tagline, img, icon, desc, bullets, href, accen
           </div>
         )}
 
-        <div style={{ width: "100%", aspectRatio: "3/2", overflow: "hidden", background: "#111" }}>
+        <div className="card-image" style={{ width: "100%", aspectRatio: "3/2", overflow: "hidden", background: "#111" }}>
           <img
             src={img}
             alt={label}
@@ -247,14 +247,27 @@ export default function ServiceHub() {
         alignItems: "center",
         borderBottom: "3px solid #111",
       }}>
-        {/* Background image */}
-        <div style={{
-          position: "absolute", inset: 0,
-          backgroundImage: "url('/manus-storage/pfs-service-hero-img_a34501e0.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          zIndex: 0,
-        }} />
+        {/* Background video & poster frame */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          poster="/manus-storage/pfs-service-hero-img_a34501e0.jpg"
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center",
+            opacity: 0.55,
+            zIndex: 0,
+          }}
+        >
+          <source src="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4" type="video/mp4" />
+        </video>
         {/* Dark overlay for text legibility */}
         <div style={{
           position: "absolute", inset: 0,

@@ -24,7 +24,7 @@ export default function ContactHub() {
 
   return (
     <div>
-      <PageHero
+      <PageHero bgVideo="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4"
         title="Contact Us"
         subtitle="Get in touch with the PFS team — we're ready to help with your finishing equipment project."
         breadcrumbs={[{ label: "Contact" }]}

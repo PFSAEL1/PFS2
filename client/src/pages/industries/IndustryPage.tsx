@@ -187,6 +187,18 @@ export default function IndustryPage() {
         subtitle={content.desc}
         breadcrumbs={[{ label: "Industries", href: "/industries" }, { label: content.title }]}
         bgImage={content.img}
+        bgVideo={
+          slug === "aerospace-defense" ? "/manus-storage/industry_aerospace_hero_853cec31.mp4" :
+          slug === "automotive-manufacturing" ? "/manus-storage/pfs-auto-mfg-hero-v3-trimmed_cef14b14.mp4" :
+          slug === "collision-repair" ? "/manus-storage/industry_collision_repair_hero_d7d15cc6.mp4" :
+          slug === "heavy-equipment" ? "/manus-storage/pfs-heavy-equip-hero_e8cc5ad9.mp4" :
+          slug === "industrial-manufacturing" ? "/manus-storage/industry_industrial_warehouse_hero_4adf22bf.mp4" :
+          slug === "marine" ? "/manus-storage/marine_helios_booth_video_73a8ffa6.mp4" :
+          slug === "rail-transit" ? "/manus-storage/pfs-rail-transit-hero-v3_654a85a0.mp4" :
+          slug === "truck-bus-fleet" ? "/manus-storage/industry_truck_fleet_school_bus_hero_27f9918f.mp4" :
+          slug === "woodworking" ? "/manus-storage/pfs-woodworking-hero-v2_d530519c.mp4" :
+          "/manus-storage/industries_hub_coach_bus_hero_b5b46729.mp4"
+        }
       />
       <section className="py-16 bg-white">
         <div className="container">

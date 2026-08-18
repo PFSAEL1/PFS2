@@ -290,7 +290,7 @@ export default function ServiceSubPage() {
   if (!content) {
     return (
       <div>
-        <PageHero title="Service" breadcrumbs={[{ label: "Service", href: "/service" }]} />
+        <PageHero bgVideo="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4" title="Service" breadcrumbs={[{ label: "Service", href: "/service" }]} />
         <div className="container py-16 text-center">
           <p className="section-body">Page not found. Please use the navigation above.</p>
           <Link href="/service"><span className="btn-glow mt-4 inline-flex">Back to Service</span></Link>
@@ -301,7 +301,7 @@ export default function ServiceSubPage() {
 
   return (
     <div>
-      <PageHero
+      <PageHero bgVideo="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4"
         title={content.title}
         subtitle={content.desc}
         breadcrumbs={[{ label: "Service", href: "/service" }, { label: content.title }]}

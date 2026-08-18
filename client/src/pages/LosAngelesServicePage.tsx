@@ -1,3 +1,4 @@
+const HERO_VIDEO = "/manus-storage/pfs-facility-drone-hero_ca12546c.mp4";
 /**
  * PFS Los Angeles County Spray Booth Service Landing Page
  * Route: /spray-booth-service-los-angeles
@@ -216,11 +217,16 @@ export default function LosAngelesServicePage() {
 
       {/* HERO */}
       <section style={{ position: "relative", height: "70vh", minHeight: 520, overflow: "hidden" }}>
-        <img
-          src={HERO_IMG}
-          alt="PFS spray booth service in Los Angeles County — South Coast AQMD compliant"
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center" }}
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          poster={HERO_IMG}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", opacity: 0.45, zIndex: 0 }}>
+          <source src="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4" type="video/mp4" />
+        </video>
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(13,27,46,0.92) 0%, rgba(13,27,46,0.6) 60%, rgba(0,0,0,0.3) 100%)" }} />
         <div style={{ position: "relative", zIndex: 1, height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", padding: "0 clamp(1.5rem,5vw,5rem)" }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: 8, marginBottom: 16 }}>

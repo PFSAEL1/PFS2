@@ -68,15 +68,15 @@ export default function IntegrationHub() {
             {SOLUTIONS.map((sol) => (
               <Link data-animation="fadeIn" key={sol.slug} href={`/integration-automation/${sol.slug}`}>
                 <div className="product-card group">
-                  <div className="overflow-hidden" style={{ height: "220px" }}>
+                  <div className="overflow-hidden card-image" style={{ height: "220px" }}>
                     <img src={sol.img} alt={sol.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
                   <div className="p-5">
                     <div className="flex items-center justify-between mb-2">
-                      <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.95rem", fontWeight: 600, color: "#1a1a1a" }}>{sol.label}</h3>
+                      <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.95rem", fontWeight: 600, color: "#1a1a1a" }}>{sol.label}</h3>
                       <ChevronRight size={16} style={{ color: "#FFFFFF" }} />
                     </div>
-                    <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#666", lineHeight: 1.6 }}>{sol.desc}</p>
+                    <p data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#666", lineHeight: 1.6 }}>{sol.desc}</p>
                   </div>
                 </div>
               </Link>

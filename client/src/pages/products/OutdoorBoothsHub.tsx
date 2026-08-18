@@ -55,7 +55,7 @@ export default function OutdoorBoothsHub() {
 
   return (
     <div>
-      <PageHero
+      <PageHero bgVideo="/manus-storage/pfs-outdoor-booth-drone_22397248.mp4"
         title="Outdoor Paint Booths"
         subtitle="Permanent building-style spray booth structures installed outdoors — engineered for facilities that need a full finishing environment without adding to their existing building footprint."
         breadcrumbs={[{ label: "Products", href: "/products" }, { label: "Outdoor Paint Booths" }]}

@@ -1,3 +1,4 @@
+const HERO_VIDEO = "/manus-storage/pfs-paint-booth-hero_500b9d60.mp4";
 /**
  * Paint Walls — PFS Exhaust Wall
  * Layout: Hero → Compliance Carousel → Two product cards (each with collapsible features/specs)
@@ -193,7 +194,16 @@ export default function PaintWallsPage() {
 
       {/* ── FULL-BLEED HERO ── */}
       <section style={{ position:"relative", minHeight:"clamp(340px, 55vh, 580px)", display:"flex", flexDirection:"column", justifyContent:"flex-end", overflow:"hidden" }}>
-        <img src={HERO_IMG} alt="PFS paint wall for open-face spray finishing applications" aria-hidden="true" style={{ position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",objectPosition:"center center" }} />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          poster={HERO_IMG}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", opacity: 0.45, zIndex: 0 }}>
+          <source src="/manus-storage/pfs-paint-booth-hero_500b9d60.mp4" type="video/mp4" />
+        </video>
         <div style={{ position:"absolute",inset:0,background:"linear-gradient(to top, rgba(5,5,5,0.96) 0%, rgba(5,5,5,0.70) 35%, rgba(5,5,5,0.30) 70%, rgba(5,5,5,0.10) 100%)" }} />
         <div style={{ position:"absolute",bottom:0,left:0,right:0,height:"3px",background:BLUE,zIndex:3 }} />
         <div className="container" style={{ position:"relative",zIndex:2,paddingTop:"8rem",paddingBottom:"4.5rem" }}>

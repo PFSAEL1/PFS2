@@ -38,7 +38,7 @@ export function SiteProductCard({ label, href, img, desc }: SiteProductCardProps
         }}
       >
         {/* Full-bleed image */}
-        <div style={{ width: "100%", aspectRatio: "4/3", overflow: "hidden", background: "#f0f0f0" }}>
+        <div className="card-image" style={{ width: "100%", aspectRatio: "4/3", overflow: "hidden", background: "#f0f0f0" }}>
           <img
             src={img}
             alt={label}
@@ -53,7 +53,7 @@ export function SiteProductCard({ label, href, img, desc }: SiteProductCardProps
         </div>
         {/* Card body */}
         <div style={{ padding: "1.1rem 1.2rem 1.3rem" }}>
-          <div
+          <div data-animation="slideLeft"
             style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "0.9rem",
@@ -67,7 +67,7 @@ export function SiteProductCard({ label, href, img, desc }: SiteProductCardProps
           >
             {label}
           </div>
-          <div
+          <div data-animation="slideRight"
             style={{
               fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
               fontSize: "0.8rem",

@@ -240,7 +240,7 @@ export default function ResourcesFAQsPage() {
 
   return (
     <div>
-      <PageHero
+      <PageHero bgVideo="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4"
         title="Frequently Asked Questions"
         subtitle="Answers to common questions about PFS spray booths, powder coating systems, blast rooms, industrial ovens, and company policies."
         breadcrumbs={[{ label: "Resources", href: "/resources" }, { label: "FAQs" }]}
