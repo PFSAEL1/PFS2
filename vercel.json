@@ -905,6 +905,11 @@
       "permanent": true
     },
     {
+      "source": "/industrial-finishing-equipment-pricing-guide-2025",
+      "destination": "/blog/how-much-does-industrial-spray-booth-cost",
+      "permanent": true
+    },
+    {
       "source": "/product/:slug",
       "destination": "/products",
       "permanent": true
