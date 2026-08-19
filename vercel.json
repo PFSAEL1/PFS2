@@ -588,6 +588,71 @@
       "source": "/how-temperature-and-humidity-affect-paint-booth-finish-quality",
       "destination": "/blog",
       "permanent": true
+    },
+    {
+      "source": "/how-to-choose-the-right-air-makeup-unit-for-your-spray-booth",
+      "destination": "/products/air-make-up-units",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-clean-your-spray-booth-for-optimal-performance",
+      "destination": "/blog/spray-booth-maintenance-filter-checklist",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-get-a-paint-booth-permit-step-by-step-guide",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-improve-airflow-in-your-paint-booth",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-improve-energy-efficiency-in-your-paint-booth",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-improve-energy-efficiency-in-your-spray-booth",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-minimize-dust-in-spray-paint-booths",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-optimize-ventilation-in-your-crossflow-paint-booth",
+      "destination": "/blog/crossflow-vs-downdraft-spray-booth",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-reduce-paint-waste-in-your-spray-booth",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-select-the-best-industrial-oven-for-your-application",
+      "destination": "/products/ovens",
+      "permanent": true
+    },
+    {
+      "source": "/importance-of-regular-maintenance-for-spray-paint-booths",
+      "destination": "/blog/spray-booth-maintenance-filter-checklist",
+      "permanent": true
+    },
+    {
+      "source": "/innovative-make-up-air-units-the-secret-for-perfect-results",
+      "destination": "/products/air-make-up-units",
+      "permanent": true
+    },
+    {
+      "source": "/large-truck-cross-flow-paint-booths-for-better-finishing",
+      "destination": "/products/paint-booths/truck-buses-fleet",
+      "permanent": true
     }
   ],
   "rewrites": [
