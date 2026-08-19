@@ -298,6 +298,66 @@
       "source": "/custom-blast-rooms-for-abrasive-blasting",
       "destination": "/products/blast-systems",
       "permanent": true
+    },
+    {
+      "source": "/media-reclaim-systems-for-blast-rooms",
+      "destination": "/products/blast-systems",
+      "permanent": true
+    },
+    {
+      "source": "/product/cross-flow-paint-booth-pfscf24-2",
+      "destination": "/products/paint-booths/crossflow",
+      "permanent": true
+    },
+    {
+      "source": "/product/cross-flow-paint-booth-pfscf33",
+      "destination": "/products/paint-booths/crossflow",
+      "permanent": true
+    },
+    {
+      "source": "/product/semi-downdraft-paint-booth-pfssmd27",
+      "destination": "/products/paint-booths/semi-downdraft",
+      "permanent": true
+    },
+    {
+      "source": "/product/semi-downdraft-paint-booth-pfssmd30",
+      "destination": "/products/paint-booths/semi-downdraft",
+      "permanent": true
+    },
+    {
+      "source": "/product/semi-downdraft-paint-booth-pfssmd33",
+      "destination": "/products/paint-booths/semi-downdraft",
+      "permanent": true
+    },
+    {
+      "source": "/product/side-downdraft-paint-booth-pfssdd27",
+      "destination": "/products/paint-booths/side-downdraft",
+      "permanent": true
+    },
+    {
+      "source": "/product/side-downdraft-paint-booth-pfssdd30",
+      "destination": "/products/paint-booths/side-downdraft",
+      "permanent": true
+    },
+    {
+      "source": "/product/open-face-paint-booths-ofpb6",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/product/open-face-paint-booths-ofpb10",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/product/open-face-paint-booths-ofpb12",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/product/open-face-paint-booths-ofpb20",
+      "destination": "/products/paint-booths",
+      "permanent": true
     }
   ],
   "rewrites": [
