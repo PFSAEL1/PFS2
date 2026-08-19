@@ -1,6 +1,6 @@
 type VercelRequest = {
   method?: string;
-  body?: Record<string, unknown>;
+  body?: Record<string, any>;
 };
 
 type VercelResponse = {
