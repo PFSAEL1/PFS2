@@ -903,6 +903,41 @@
       "source": "/zz-test-lead-form-internal",
       "destination": "/contact",
       "permanent": true
+    },
+    {
+      "source": "/product/:slug",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/:slug*",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/:slug",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/tag/:slug",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/category/:slug",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})",
+      "destination": "/blog",
+      "permanent": true
     }
   ],
   "rewrites": [
