@@ -53,6 +53,31 @@
       "source": "/commercial-aerospace-aviation/",
       "destination": "/industries/aerospace-defense",
       "permanent": true
+    },
+    {
+      "source": "/revolutionizing-military-aviation-the-impact-of-paint-booths",
+      "destination": "/industries/government-military",
+      "permanent": true
+    },
+    {
+      "source": "/aerospace-paint-booth-neshap-compliance-guide",
+      "destination": "/parts/filters/neshap-aerospace-compliance",
+      "permanent": true
+    },
+    {
+      "source": "/paint-booth-maintenance-checklist-preventative-care",
+      "destination": "/blog/spray-booth-maintenance-filter-checklist",
+      "permanent": true
+    },
+    {
+      "source": "/crossflow-vs-downdraft-paint-booths-comparison",
+      "destination": "/blog/crossflow-vs-downdraft-spray-booth",
+      "permanent": true
+    },
+    {
+      "source": "/ul508a-certified-control-panels-industrial-finishing",
+      "destination": "/blog/ul508a-certified-control-panel-spray-booth",
+      "permanent": true
     }
   ],
   "rewrites": [
