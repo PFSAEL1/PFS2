@@ -95,6 +95,11 @@
       "permanent": true
     },
     {
+      "source": "/automotive-refinish/",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
       "source": "/automotive-refinish/cross-flow",
       "destination": "/products/paint-booths/crossflow",
       "permanent": true
