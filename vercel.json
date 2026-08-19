@@ -46,7 +46,12 @@
     },
     {
       "source": "/commercial-aerospace-aviation",
-      "destination": "/industries/aerospace",
+      "destination": "/industries/aerospace-defense",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-aerospace-aviation/",
+      "destination": "/industries/aerospace-defense",
       "permanent": true
     }
   ],
