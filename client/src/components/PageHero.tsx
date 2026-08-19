@@ -57,11 +57,11 @@ function PageHeroVideo({
     if (!v) return;
     v.muted = true;
     v.playsInline = true;
-    v.play().catch(() => { });
+    v.play().catch(() => {});
   }, []);
   return (
     <>
-      {/* Video — plays immediately with no poster/still-frame flash */}
+      {/* Video with poster — poster shows instantly, video plays on top */}
       <video preload="auto"
         ref={videoRef}
         autoPlay
@@ -105,7 +105,7 @@ export default function PageHero({
   } : {};
   return (
     <div
-      className="relative overflow-hidden flex flex-col justify-center"
+      className="relative overflow-hidden flex flex-col justify-end"
       style={{ backgroundColor: "#1C1C1E", minHeight }}
     >
       {/* Ken Burns keyframes */}
@@ -122,12 +122,12 @@ export default function PageHero({
 
       {/* Hero photo or video — Aerospace-style fade: still image underneath, video fades in on canplay */}
       {bgVideo ? (
-        <PageHeroVideo
-          bgVideo={bgVideo}
-          bgImage={bgImage}
-          bgImagePosition={bgImagePosition}
-          bgImageFit={bgImageFit}
-          bgPoster={bgPoster}
+          <PageHeroVideo
+            bgVideo={bgVideo}
+            bgImage={bgImage}
+            bgImagePosition={bgImagePosition}
+            bgImageFit={bgImageFit}
+            bgPoster={bgPoster}
           KB_STYLE={KB_STYLE}
         />
       ) : bgImage ? (
@@ -235,7 +235,7 @@ export default function PageHero({
         )}
 
         {/* Title */}
-        <h1 data-animation="slideLeft"
+        <h1
           style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "clamp(2.2rem, 4.5vw, 3.4rem)",
@@ -253,7 +253,7 @@ export default function PageHero({
 
         {/* Subtitle */}
         {subtitle && (
-          <p data-animation="slideLeft"
+          <p
             className="max-w-2xl"
             style={{
               fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
@@ -271,13 +271,13 @@ export default function PageHero({
         {/* CTA Buttons */}
         {ctaPricing && (
           <div className="flex flex-wrap gap-3">
-            <Link data-animation="slideLeft" href={ctaPricingHref}>
+            <Link href={ctaPricingHref}>
               <span className="btn-glow" style={{ padding: "0.75rem 2rem", fontSize: "0.85rem" }}>
                 GET PRICING →
               </span>
             </Link>
             {ctaPhone && (
-              <a data-animation="slideRight" href={`tel:${ctaPhone.replace(/\D/g, "")}`}>
+              <a href={`tel:${ctaPhone.replace(/\D/g, "")}`}>
                 <button
                   style={{
                     fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",

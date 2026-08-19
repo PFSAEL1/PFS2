@@ -11,8 +11,11 @@ async function startServer() {
   const server = createServer(app);
 
   // Serve static files from dist/public in production
-  const clientPublicPath = path.resolve(__dirname, "..", "client", "public");
-  app.use(express.static(clientPublicPath));
+  const staticPath =
+    process.env.NODE_ENV === "production"
+      ? path.resolve(__dirname, "public")
+      : path.resolve(__dirname, "..", "dist", "public");
+
   app.use(express.static(staticPath));
 
   // Handle client-side routing - serve index.html for all routes

@@ -7,7 +7,7 @@ import { useEffect } from "react";
 
 const DEFAULT_TITLE = "PFS | Industrial Finishing Equipment — Spray Booths, Ovens & Blast Systems";
 const DEFAULT_DESC  = "PFS manufactures industrial spray paint booths, powder coating systems, industrial ovens, blast equipment, and finishing lines for automotive, aerospace, industrial, and more. Manufactured in Santa Rosa, CA with ETL/UL listed and certified components.";
-const BASE_URL      = "https://platinumfinishingsystems.com";
+const BASE_URL      = "https://pfsspraybooths.com";
 const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.jpg`;
 
 interface SEOOptions {

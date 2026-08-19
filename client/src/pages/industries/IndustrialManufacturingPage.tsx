@@ -14,33 +14,33 @@ import { GalleryGrid } from "@/components/GalleryLightbox";
 import { SiteProductCardSection } from "@/components/SiteProductCard";
 import { useSEO } from "@/hooks/useSEO";
 
-const HELIOS_IMG = "/manus-storage/pfs-helios-hires_f9ec5ac5.png";
-const HERO_VIDEO = "/manus-storage/industry_industrial_warehouse_hero_4adf22bf.mp4";
-const IND_VESSEL = "/manus-storage/pfs-industrial-pressure-vessel-booth-clean_e4cae0c0.png";
-const IND_HEATER = "/manus-storage/pfs-industrial-booth-interior-heater_b5796629.jpg";
-const IND_DOORS = "/manus-storage/pfs-industrial-booth-interior-doors_f14cca64.jpg";
-const IND_ORION = "/manus-storage/pfs-industrial-orion-warehouse-install_446d41ad.jpg";
+const HELIOS_IMG   = "/assets/pfs-helios-hires_f9ec5ac5.png";
+const HERO_VIDEO   = "/assets/industry_industrial_warehouse_hero_4adf22bf.mp4";
+const IND_VESSEL   = "/assets/pfs-industrial-pressure-vessel-booth-clean_e4cae0c0.png";
+const IND_HEATER   = "/assets/pfs-industrial-booth-interior-heater_b5796629.jpg";
+const IND_DOORS    = "/assets/pfs-industrial-booth-interior-doors_f14cca64.jpg";
+const IND_ORION    = "/assets/pfs-industrial-orion-warehouse-install_446d41ad.jpg";
 // New real install photos
-const IND_HELIOS = "/manus-storage/IMG_9162_88a470ad.jpg";         // PFS Helios booth in warehouse
-const IND_TUNNEL = "/manus-storage/26141107690113360_4146768a.jpg"; // Booth interior tunnel with scissor lift
-const IND_9833A = "/manus-storage/IMG_98332_81472aca.jpg";         // Booth interior wide
-const IND_9833B = "/manus-storage/IMG_98331_84827069.jpg";         // Booth interior tall
-const IND_9733 = "/manus-storage/IMG_9733_d8b7388e.jpg";          // Additional install photo
-const IND_EXT_DOOR = "/manus-storage/industrial-paint-booth-exterior-door_0cf53c8c.webp"; // White exterior with Paint Booth sign
-const IND_SCISSOR = "/manus-storage/industrial-large-booth-scissorlift_53b75825.webp";  // Large multi-bay install with scissor lift
-const IND_FSWALL = "/manus-storage/industrial-booth-fire-suppression-wall_4282aa3f.webp"; // Exhaust wall with 5 fire suppressors
-const IND_GALV = "/manus-storage/industrial-pfs-galvanized-exterior-doors_6c7c0e6a.jpg"; // PFS galvanized exterior with green filter doors
-const IND_RAWINT = "/manus-storage/industrial-booth-interior-lights_2ea1d67d.jpg";       // Raw galvanized interior tunnel
-const IND_9833C = "/manus-storage/industrial-IMG_9833_4_5bad652f.jpg";                  // Bright white booth interior — large bay
-const IND_FACTORY = "/manus-storage/industrial-IMG_3502_fa36ad49.jpg";                   // Booth assembly in factory
-const IND_TWIN = "/manus-storage/industrial-IMG_3732_4a5f290e.jpg";                   // Two PFS booths side-by-side exterior
-const IND_INTWIDE = "/manus-storage/industrial-IMG_4717_316ca239.jpg";                   // Bright white booth interior full-length
-const ETL_LOGO = "/manus-storage/pfs-etl-logo_7758f722.png";
-const UL_LOGO = "/manus-storage/pfs-ul508a-clean_e8efdeb8.jpg";
-const NFPA_LOGO = "/manus-storage/pfs-nfpa-logo_4b710cc9.png";
-const EPA_LOGO = "/manus-storage/pfs-epa-logo_e4165f68.webp";
-const OSHA_LOGO = "/manus-storage/pfs-osha-logo_0c460739.jpg";
-const USA_FLAG = "/manus-storage/pfs-usa-flag_8fca512e.jpg";
+const IND_HELIOS   = "/assets/IMG_9162_88a470ad.jpg";         // PFS Helios booth in warehouse
+const IND_TUNNEL   = "/assets/26141107690113360_4146768a.jpg"; // Booth interior tunnel with scissor lift
+const IND_9833A    = "/assets/IMG_98332_81472aca.jpg";         // Booth interior wide
+const IND_9833B    = "/assets/IMG_98331_84827069.jpg";         // Booth interior tall
+const IND_9733     = "/assets/IMG_9733_d8b7388e.jpg";          // Additional install photo
+const IND_EXT_DOOR = "/assets/industrial-paint-booth-exterior-door_0cf53c8c.webp"; // White exterior with Paint Booth sign
+const IND_SCISSOR  = "/assets/industrial-large-booth-scissorlift_53b75825.webp";  // Large multi-bay install with scissor lift
+const IND_FSWALL   = "/assets/industrial-booth-fire-suppression-wall_4282aa3f.webp"; // Exhaust wall with 5 fire suppressors
+const IND_GALV     = "/assets/industrial-pfs-galvanized-exterior-doors_6c7c0e6a.jpg"; // PFS galvanized exterior with green filter doors
+const IND_RAWINT   = "/assets/industrial-booth-interior-lights_2ea1d67d.jpg";       // Raw galvanized interior tunnel
+const IND_9833C    = "/assets/industrial-IMG_9833_4_5bad652f.jpg";                  // Bright white booth interior — large bay
+const IND_FACTORY  = "/assets/industrial-IMG_3502_fa36ad49.jpg";                   // Booth assembly in factory
+const IND_TWIN     = "/assets/industrial-IMG_3732_4a5f290e.jpg";                   // Two PFS booths side-by-side exterior
+const IND_INTWIDE  = "/assets/industrial-IMG_4717_316ca239.jpg";                   // Bright white booth interior full-length
+const ETL_LOGO     = "/assets/pfs-etl-logo_7758f722.png";
+const UL_LOGO      = "/assets/pfs-ul508a-clean_e8efdeb8.jpg";
+const NFPA_LOGO    = "/assets/pfs-nfpa-logo_4b710cc9.png";
+const EPA_LOGO     = "/assets/pfs-epa-logo_e4165f68.webp";
+const OSHA_LOGO    = "/assets/pfs-osha-logo_0c460739.jpg";
+const USA_FLAG     = "/assets/pfs-usa-flag_8fca512e.jpg";
 
 // Brand blue
 const BLUE = "#1B3A6B";
@@ -134,36 +134,36 @@ const FEATURES_HIDDEN = [
 ];
 
 const BOOTH_LINEUP = [
-  { name: "Crossflow", desc: "Side-to-side airflow. Cost-effective for large open-floor operations." },
-  { name: "Side Downdraft", desc: "Ceiling intake, side exhaust. Ideal for wide-format equipment." },
-  { name: "Downdraft", desc: "Full ceiling-to-floor airflow. Maximum overspray capture." },
-  { name: "Semi-Downdraft", desc: "Rear-angled exhaust. Versatile for mixed production environments." },
-  { name: "Heated Booth", desc: "Integrated heat for accelerated cure cycles. Pairs with PFS control panel." },
+  { name: "Crossflow",       desc: "Side-to-side airflow. Cost-effective for large open-floor operations." },
+  { name: "Side Downdraft",  desc: "Ceiling intake, side exhaust. Ideal for wide-format equipment." },
+  { name: "Downdraft",       desc: "Full ceiling-to-floor airflow. Maximum overspray capture." },
+  { name: "Semi-Downdraft",  desc: "Rear-angled exhaust. Versatile for mixed production environments." },
+  { name: "Heated Booth",    desc: "Integrated heat for accelerated cure cycles. Pairs with PFS control panel." },
 ];
 
 const PRODUCTS = [
   {
     label: "Open Face Paint Booths",
     href: "/products/paint-booths/open-face",
-    img: "/manus-storage/IMG_2132_c21b2839.jpg",
+    img: "/assets/IMG_2132_c21b2839.jpg",
     desc: "High-volume open-front finishing for large parts and production lines.",
   },
   {
     label: "Batch Ovens",
     href: "/products/ovens/batch",
-    img: "/manus-storage/pfs-vulcan-oven-card_ad72eade_316de7d1.png",
+    img: "/assets/pfs-vulcan-oven-card_ad72eade_316de7d1.png",
     desc: "Industrial batch curing ovens for powder coat and liquid paint.",
   },
   {
     label: "Powder Coating Systems",
     href: "/products/powder-booths",
-    img: "/manus-storage/pfs-powder-coating-card2_32de7c98.png",
+    img: "/assets/pfs-powder-coating-card2_32de7c98.png",
     desc: "Complete powder coating booths with recovery and filtration systems.",
   },
   {
     label: "Blasting Systems",
     href: "/products/blast-systems",
-    img: "/manus-storage/blast-systems-real_c7389401_16a0255c.webp",
+    img: "/assets/blast-systems-real_c7389401_16a0255c.webp",
     desc: "Blast rooms and cabinets for surface prep before finishing.",
   },
 ];
@@ -375,6 +375,21 @@ export default function IndustrialManufacturingPage() {
     title: "Industrial Manufacturing Paint Booths | Production Finishing Systems | PFS",
     description: "PFS industrial manufacturing finishing systems include spray booths, ovens, powder coating systems, and blast rooms for production environments. ETL/UL listed components, NFPA 33 compliant. Manufactured in Santa Rosa, CA.",
     canonical: "/industries/industrial-manufacturing",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Industrial spray booths, powder coating systems, and batch ovens for manufacturing",
+      "provider": {
+        "@type": "Organization",
+        "name": "Platinum Finishing Systems",
+        "url": "https://pfsspraybooths.com",
+        "telephone": "+18885457715"
+      },
+      "serviceType": "Industrial Finishing Equipment",
+      "audience": { "@type": "Audience", "audienceType": "Industrial manufacturers, fabricators, and production facilities" },
+      "areaServed": { "@type": "Country", "name": "United States" },
+      "url": "https://pfsspraybooths.com/industries/industrial-manufacturing"
+    },
   });
 
   const [featuresOpen, setFeaturesOpen] = useState(false);
@@ -423,7 +438,7 @@ export default function IndustrialManufacturingPage() {
           }}>
             INDUSTRIAL MANUFACTURING
           </span>
-          <h1 data-animation="slideLeft" style={{
+          <h1 style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "clamp(2.6rem, 7vw, 5rem)",
             fontWeight: 800, color: "#fff", lineHeight: 1.0,
@@ -445,7 +460,7 @@ export default function IndustrialManufacturingPage() {
           }}>
             PFS HELIOS SERIES
           </span>
-          <p data-animation="slideLeft" style={{
+          <p style={{
             fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
             fontSize: "clamp(0.95rem, 1.8vw, 1.1rem)",
             color: "rgba(255,255,255,0.82)",
@@ -457,10 +472,10 @@ export default function IndustrialManufacturingPage() {
             Custom-sized to your equipment — delivered and installed nationwide.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-            <Link data-animation="slideLeft" href="/contact/request-a-quote">
+            <Link href="/contact/request-a-quote">
               <span className="btn-glow" style={{ width: "100%", maxWidth: "320px", justifyContent: "center" }}>GET PRICING <ArrowRight size={16} /></span>
             </Link>
-            <a data-animation="slideRight" href="tel:8885457715" style={{ width: "100%", maxWidth: "320px" }}>
+            <a href="tel:8885457715" style={{ width: "100%", maxWidth: "320px" }}>
               <span style={{
                 display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem",
                 background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.5)",
@@ -490,7 +505,7 @@ export default function IndustrialManufacturingPage() {
               }}>
                 FEATURED PAINT BOOTH
               </span>
-              <h2 data-animation="slideLeft" style={{
+              <h2 style={{
                 fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
                 fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 800,
                 color: "#111", letterSpacing: "-0.01em", marginBottom: "0.5rem",
@@ -523,10 +538,10 @@ export default function IndustrialManufacturingPage() {
               }}
             />
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
-              <Link data-animation="slideLeft" href="/contact/request-a-quote">
+              <Link href="/contact/request-a-quote">
                 <span className="btn-glow">REQUEST A QUOTE <ArrowRight size={15} /></span>
               </Link>
-              <Link data-animation="slideRight" href="/products/paint-booths/enclosed">
+              <Link href="/products/paint-booths/enclosed">
                 <span style={{
                   display: "inline-flex", alignItems: "center", gap: "0.5rem",
                   background: "transparent", color: BLUE,
@@ -555,7 +570,7 @@ export default function IndustrialManufacturingPage() {
               letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase",
               display: "block", marginBottom: "0.6rem",
             }}>GALLERY</span>
-            <h2 data-animation="slideLeft" style={{
+            <h2 style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800,
               color: "#111", letterSpacing: "-0.01em",
@@ -565,28 +580,28 @@ export default function IndustrialManufacturingPage() {
           </div>
           <GalleryGrid
             images={[
-              { src: IND_HELIOS, alt: "PFS Helios booth in industrial warehouse" },
-              { src: IND_TUNNEL, alt: "PFS booth interior — scissor lift during installation" },
-              { src: IND_ORION, alt: "PFS Orion series booths installed in industrial warehouse" },
-              { src: IND_VESSEL, alt: "Large pressure vessel inside PFS crossflow industrial spray booth" },
-              { src: IND_HEATER, alt: "PFS industrial booth interior — ceiling filters and heater unit" },
-              { src: IND_DOORS, alt: "PFS industrial booth interior — access doors and green intake filters" },
-              { src: IND_9733, alt: "PFS industrial spray booth real install" },
-              { src: IND_9833A, alt: "PFS booth interior — wide angle showing ceiling filter grid" },
-              { src: IND_9833B, alt: "PFS booth interior — tall angle showing ceiling plenum" },
+              { src: IND_HELIOS,   alt: "PFS Helios booth in industrial warehouse" },
+              { src: IND_TUNNEL,   alt: "PFS booth interior — scissor lift during installation" },
+              { src: IND_ORION,    alt: "PFS Orion series booths installed in industrial warehouse" },
+              { src: IND_VESSEL,   alt: "Large pressure vessel inside PFS crossflow industrial spray booth" },
+              { src: IND_HEATER,   alt: "PFS industrial booth interior — ceiling filters and heater unit" },
+              { src: IND_DOORS,    alt: "PFS industrial booth interior — access doors and green intake filters" },
+              { src: IND_9733,     alt: "PFS industrial spray booth real install" },
+              { src: IND_9833A,    alt: "PFS booth interior — wide angle showing ceiling filter grid" },
+              { src: IND_9833B,    alt: "PFS booth interior — tall angle showing ceiling plenum" },
               { src: IND_EXT_DOOR, alt: "PFS industrial paint booth — white exterior with personnel door and fire extinguishers" },
-              { src: IND_SCISSOR, alt: "PFS large industrial multi-bay booth installation with scissor lift" },
-              { src: IND_FSWALL, alt: "PFS industrial booth exhaust wall — five fire suppression cylinders mounted" },
-              { src: IND_GALV, alt: "PFS galvanized steel industrial booth — exterior with green exhaust filter doors" },
-              { src: IND_RAWINT, alt: "PFS industrial booth interior — raw galvanized walls with fiberglass filter end wall" },
-              { src: IND_9833C, alt: "PFS large industrial booth interior — bright white panels, ceiling lights" },
-              { src: IND_FACTORY, alt: "PFS industrial booth assembly in factory — top-down view with blue structural frame" },
-              { src: IND_TWIN, alt: "Two PFS booths installed side-by-side in shop" },
-              { src: IND_INTWIDE, alt: "PFS industrial booth interior — full-length view showing ceiling lights and access doors" },
+              { src: IND_SCISSOR,  alt: "PFS large industrial multi-bay booth installation with scissor lift" },
+              { src: IND_FSWALL,   alt: "PFS industrial booth exhaust wall — five fire suppression cylinders mounted" },
+              { src: IND_GALV,     alt: "PFS galvanized steel industrial booth — exterior with green exhaust filter doors" },
+              { src: IND_RAWINT,   alt: "PFS industrial booth interior — raw galvanized walls with fiberglass filter end wall" },
+              { src: IND_9833C,    alt: "PFS large industrial booth interior — bright white panels, ceiling lights" },
+              { src: IND_FACTORY,  alt: "PFS industrial booth assembly in factory — top-down view with blue structural frame" },
+              { src: IND_TWIN,     alt: "Two PFS booths installed side-by-side in shop" },
+              { src: IND_INTWIDE,  alt: "PFS industrial booth interior — full-length view showing ceiling lights and access doors" },
             ]}
             cardHeight="280px"
           />
-          <div data-animation="slideRight" className="text-center" style={{ marginTop: "2rem" }}>
+          <div className="text-center" style={{ marginTop: "2rem" }}>
             <Link href="/contact/request-a-quote">
               <span className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
             </Link>
@@ -605,7 +620,7 @@ export default function IndustrialManufacturingPage() {
             }}>
               STANDARD SPECIFICATION
             </span>
-            <h2 data-animation="slideLeft" style={{
+            <h2 style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800,
               color: "#111", letterSpacing: "-0.01em",
@@ -614,7 +629,7 @@ export default function IndustrialManufacturingPage() {
             </h2>
           </div>
 
-          <div data-animation="fadeIn" className="grid md:grid-cols-3 gap-5 mb-5">
+          <div className="grid md:grid-cols-3 gap-5 mb-5">
             {FEATURES_VISIBLE.map((f) => (
               <div key={f.title} style={{ background: "#fff", padding: "1.75rem", borderTop: `3px solid ${BLUE}` }}>
                 <div style={{
@@ -678,7 +693,7 @@ export default function IndustrialManufacturingPage() {
           )}
 
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <button data-animation="slideLeft"
+            <button
               onClick={() => setFeaturesOpen(!featuresOpen)}
               style={{
                 display: "inline-flex", alignItems: "center", gap: "0.4rem",
@@ -692,7 +707,7 @@ export default function IndustrialManufacturingPage() {
                 ? <><ChevronUp size={14} /> SHOW LESS</>
                 : <><ChevronDown size={14} /> SEE ALL SPECIFICATIONS &amp; BOOTH TYPES</>}
             </button>
-            <Link data-animation="slideRight" href="/contact/request-a-quote">
+            <Link href="/contact/request-a-quote">
               <span className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
             </Link>
           </div>
@@ -703,7 +718,7 @@ export default function IndustrialManufacturingPage() {
       <section style={{ background: BLUE, padding: "3.5rem 0" }}>
         <div className="container">
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "1.5rem" }}>
-            <h2 data-animation="slideLeft" style={{
+            <h2 style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "clamp(1.6rem, 4vw, 2.6rem)",
               fontWeight: 800, color: "#fff", letterSpacing: "-0.01em", lineHeight: 1.1,
@@ -714,7 +729,7 @@ export default function IndustrialManufacturingPage() {
               Quote in 24 hours. manufactured in the USA with ETL/UL listed components. Installed nationwide by PFS-certified technicians.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center" }}>
-              <Link data-animation="slideLeft" href="/contact/request-a-quote">
+              <Link href="/contact/request-a-quote">
                 <span style={{
                   display: "inline-flex", alignItems: "center", gap: "0.5rem",
                   background: "#fff", color: BLUE,
@@ -725,7 +740,7 @@ export default function IndustrialManufacturingPage() {
                   GET PRICING <ArrowRight size={16} />
                 </span>
               </Link>
-              <a data-animation="slideRight" href="tel:8885457715">
+              <a href="tel:8885457715">
                 <span style={{
                   display: "inline-flex", alignItems: "center", gap: "0.5rem",
                   background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.6)",
@@ -743,11 +758,11 @@ export default function IndustrialManufacturingPage() {
 
 
       {/* FAQ SECTION */}
-      <section style={{ background: "#f8f9fb", padding: "clamp(2.5rem, 6vw, 4rem) 0", borderTop: "1px solid #e5e7eb" }}>
-        <div className="container" style={{ maxWidth: "860px" }}>
-          <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
-            <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: "#1B3A6B", textTransform: "uppercase", display: "block", marginBottom: "0.4rem" }}>FREQUENTLY ASKED QUESTIONS</span>
-            <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed','Oswald',sans-serif", fontSize: "clamp(1.4rem,3.5vw,2.2rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Industrial Manufacturing Spray Booths — Common Questions</h2>
+      <section style={{ background:"#f8f9fb", padding:"clamp(2.5rem, 6vw, 4rem) 0", borderTop:"1px solid #e5e7eb" }}>
+        <div className="container" style={{ maxWidth:"860px" }}>
+          <div style={{ textAlign:"center", marginBottom:"2.5rem" }}>
+            <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:"#1B3A6B",textTransform:"uppercase",display:"block",marginBottom:"0.4rem" }}>FREQUENTLY ASKED QUESTIONS</span>
+            <h2 style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.4rem,3.5vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Industrial Manufacturing Spray Booths — Common Questions</h2>
           </div>
           {[
             { q: "What types of industrial spray booths does PFS manufacture?", a: "PFS manufactures a full range of industrial spray booths including full-downdraft booths for large parts and assemblies, heated booths for accelerated cure cycles, powder coating booths, blast rooms, wash booths, and custom-engineered finishing systems for industrial manufacturing applications. All PFS booths are manufactured in Santa Rosa, California with ETL/UL listed and certified components." },
@@ -756,18 +771,18 @@ export default function IndustrialManufacturingPage() {
             { q: "Can PFS design a complete industrial finishing line?", a: "Yes. PFS designs and manufactures complete industrial finishing lines including pre-treatment wash systems, blast rooms, spray booths, powder coating systems, curing ovens, and conveyor integration. Our engineering team coordinates the entire system design to ensure each stage of the finishing process is optimized for your production volume and coating requirements." },
             { q: "Does PFS provide service and maintenance for industrial spray booths?", a: "Yes. PFS provides preventive maintenance, emergency service, filter replacement, fan and motor service, control panel repair, and booth recertification for all PFS systems. Our service team is available nationwide. Contact PFS at (888) 545-7715 to schedule service." },
           ].map((item, i) => (
-            <details key={i} style={{ borderBottom: "1px solid #e5e7eb", padding: "1.25rem 0" }}>
-              <summary style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "clamp(0.95rem,2.5vw,1.1rem)", fontWeight: 800, color: "#111", letterSpacing: "0.01em", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "1rem" }}>
+            <details key={i} style={{ borderBottom:"1px solid #e5e7eb", padding:"1.25rem 0" }}>
+              <summary style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"clamp(0.95rem,2.5vw,1.1rem)",fontWeight:800,color:"#111",letterSpacing:"0.01em",cursor:"pointer",listStyle:"none",display:"flex",justifyContent:"space-between",alignItems:"center",gap:"1rem" }}>
                 {item.q}
-                <span style={{ color: "#1B3A6B", flexShrink: 0, fontSize: "1.4rem", fontWeight: 300, lineHeight: 1 }}>+</span>
+                <span style={{ color:"#1B3A6B", flexShrink:0, fontSize:"1.4rem", fontWeight:300, lineHeight:1 }}>+</span>
               </summary>
-              <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(0.82rem,2vw,0.9rem)", color: "#555", lineHeight: 1.75, margin: "1rem 0 0", paddingRight: "1.5rem" }}>{item.a}</p>
+              <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"clamp(0.82rem,2vw,0.9rem)",color:"#555",lineHeight:1.75,margin:"1rem 0 0",paddingRight:"1.5rem" }}>{item.a}</p>
             </details>
           ))}
         </div>
       </section>
 
-      {/* RELATED PRODUCTS */}
+            {/* RELATED PRODUCTS */}
       <SiteProductCardSection
         heading="You May Also Need"
         label="Complete Your System"

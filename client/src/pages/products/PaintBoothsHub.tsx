@@ -3,18 +3,18 @@ import { ArrowRight, Phone } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
 // All images use manus-storage paths
-const HERO_IMG = "/manus-storage/pfs-paint-booth-kia-hero_addbde19.jpg";  // Real PFS booth — silver Kia K5 inside white booth
-const HERO_VIDEO = "/manus-storage/pfs-paint-booth-hero_500b9d60.mp4";       // Cinematic hero video
-const OPEN_FACE_IMG = "/manus-storage/IMG_2132_c21b2839.jpg";
-const ENCLOSED_IMG = "/manus-storage/enclosed-booth-card-zenith_7e010642.jpg";
-const OUTDOOR_IMG = "/manus-storage/pfs-outdoor-hero-8143_9d49ac36.jpg";
-const CONTAINER_IMG = "/manus-storage/pfs-container-booth-card-v2_b8177420.jpg";
-const AIRCRAFT_IMG = "/manus-storage/pfs-aerospace-jet-in-booth-real_2eb79dc9.png";
-const INSPECTION_IMG = "/manus-storage/pfs-inspection-hero_1b83deb1.png";
-const DOUBLE_WALL_IMG = "/manus-storage/pfs-double-wall-booth-v2_8cdb7a24.webp";
-const PARTS_IMG = "/manus-storage/pfs-parts-booth-angled_01b1a8aa.jpeg";
-const CUSTOM_IMG = "/manus-storage/pfs-custom-booth-front-card_7e7d1673.jpg";
-const TRUCK_IMG = "/manus-storage/pfs-truck-booth-card_a0d45884_fca2d2cb.jpeg";
+const HERO_IMG       = "/assets/pfs-paint-booth-kia-hero_addbde19.jpg";  // Real PFS booth — silver Kia K5 inside white booth
+const HERO_VIDEO     = "/assets/pfs-paint-booth-hero_500b9d60.mp4";       // Cinematic hero video
+const OPEN_FACE_IMG  = "/assets/IMG_2132_c21b2839.jpg";
+const ENCLOSED_IMG   = "/assets/enclosed-booth-card-zenith_7e010642.jpg";
+const OUTDOOR_IMG    = "/assets/pfs-outdoor-hero-8143_9d49ac36.jpg";
+const CONTAINER_IMG  = "/assets/pfs-container-booth-card-v2_b8177420.jpg";
+const AIRCRAFT_IMG   = "/assets/pfs-aerospace-jet-in-booth-real_2eb79dc9.png";
+const INSPECTION_IMG = "/assets/pfs-inspection-hero_1b83deb1.png";
+const DOUBLE_WALL_IMG = "/assets/pfs-double-wall-booth-v2_8cdb7a24.webp";
+const PARTS_IMG      = "/assets/pfs-parts-booth-angled_01b1a8aa.jpeg";
+const CUSTOM_IMG     = "/assets/pfs-custom-booth-front-card_7e7d1673.jpg";
+const TRUCK_IMG      = "/assets/pfs-truck-booth-card_a0d45884_fca2d2cb.jpeg";
 
 const BOOTHS = [
   {
@@ -150,7 +150,7 @@ export default function PaintBoothsHub() {
           loop
           playsInline
           disablePictureInPicture
-
+         
           aria-hidden="true"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center" }}
         >
@@ -168,17 +168,17 @@ export default function PaintBoothsHub() {
             <span style={{ color: "rgba(255,255,255,0.2)" }}>/</span>
             <span style={{ color: "rgba(255,255,255,0.75)" }}>Paint Booths</span>
           </div>
-          <h1 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2.6rem, 7vw, 5rem)", fontWeight: 800, color: "#fff", lineHeight: 1.0, letterSpacing: "-0.01em", marginBottom: "1rem", maxWidth: "700px" }}>
+          <h1 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2.6rem, 7vw, 5rem)", fontWeight: 800, color: "#fff", lineHeight: 1.0, letterSpacing: "-0.01em", marginBottom: "1rem", maxWidth: "700px" }}>
             Paint Booths
           </h1>
-          <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "clamp(0.85rem, 1.2vw, 1rem)", color: "rgba(255,255,255,0.75)", lineHeight: 1.7, marginBottom: "1.75rem", maxWidth: "560px" }}>
+          <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "clamp(0.85rem, 1.2vw, 1rem)", color: "rgba(255,255,255,0.75)", lineHeight: 1.7, marginBottom: "1.75rem", maxWidth: "560px" }}>
             ETL-certified spray paint booths for automotive, aerospace, industrial, and fleet applications — available in open face, enclosed, aircraft, outdoor, and custom configurations.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
-            <Link data-animation="slideLeft" href="/contact/request-a-quote">
+            <Link href="/contact/request-a-quote">
               <span className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
             </Link>
-            <a data-animation="slideRight" href="tel:8885457715">
+            <a href="tel:8885457715">
               <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.4)", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.85rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.85rem 2rem", cursor: "pointer" }}>CALL (888) 545-7715</span>
             </a>
           </div>
@@ -190,8 +190,8 @@ export default function PaintBoothsHub() {
         <div className="container">
           <div className="mb-12">
             <span className="section-label">Paint Booths</span>
-            <h2 data-animation="slideLeft" className="section-heading">Choose Your Configuration</h2>
-            <p data-animation="slideLeft" className="section-body max-w-2xl">
+            <h2 className="section-heading">Choose Your Configuration</h2>
+            <p className="section-body max-w-2xl">
               PFS spray paint booths are ETL-certified and available in multiple configurations to match your application, throughput, and facility requirements.
             </p>
           </div>
@@ -199,9 +199,9 @@ export default function PaintBoothsHub() {
           {/* Card grid — larger images */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {BOOTHS.map((booth) => (
-              <Link data-animation="fadeIn" key={booth.label} href={booth.href}>
+              <Link key={booth.label} href={booth.href}>
                 <div className="group cursor-pointer border border-gray-200 hover:border-[#1B2B4B] transition-all duration-300 hover:shadow-[0_0_24px_rgba(27,43,75,0.15)] overflow-hidden h-full flex flex-col">
-                  <div className="overflow-hidden flex-shrink-0 card-image" style={{ height: "220px" }}>
+                  <div className="overflow-hidden flex-shrink-0" style={{ height: "220px" }}>
                     <img
                       src={booth.img}
                       alt={booth.label}
@@ -241,7 +241,7 @@ export default function PaintBoothsHub() {
           <div style={{ backgroundColor: "#1a1a1a", padding: "2.5rem 2rem" }}>
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
-                <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.4rem", fontWeight: 700, color: "#ffffff", marginBottom: "0.4rem" }}>
+                <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.4rem", fontWeight: 700, color: "#ffffff", marginBottom: "0.4rem" }}>
                   Not Sure Which Booth Is Right for You?
                 </h3>
                 <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.6 }}>
@@ -249,10 +249,10 @@ export default function PaintBoothsHub() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
-                <Link data-animation="slideLeft" href="/contact/request-a-quote">
+                <Link href="/contact/request-a-quote">
                   <span className="btn-glow flex items-center gap-2">Get Pricing <ArrowRight size={14} /></span>
                 </Link>
-                <a data-animation="slideRight" href="tel:+18885457715">
+                <a href="tel:+18885457715">
                   <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#ffffff", border: "1.5px solid rgba(255,255,255,0.4)", padding: "0.6rem 1.2rem", cursor: "pointer" }}>
                     <Phone size={14} /> (888) 545-7715
                   </span>

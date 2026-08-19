@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import { Link, useParams } from "wouter";
 import { ArrowRight, Download, FileText, Lock, CheckCircle } from "lucide-react";
 
-const IMG = "/manus-storage/pfs-paint-booth-sprayer-card_42d3ea13.jpg";
+const IMG = "/assets/pfs-paint-booth-sprayer-card_42d3ea13.jpg";
 
 // ─── Gated downloads ───────────────────────────────────────────────────────
 const GATED_DOWNLOADS = [
@@ -14,7 +14,7 @@ const GATED_DOWNLOADS = [
     description: "Step-by-step installation and commissioning guide for all PFS enclosed spray booth models. Covers site preparation, panel assembly, utility connections, airflow balancing, and initial startup.",
     fileSize: "10.2 MB",
     fileType: "PDF",
-    url: "/manus-storage/PFSInstallationGuidev2updated.docx_79ea2fb5.pdf",
+    url: "/assets/PFSInstallationGuidev2updated.docx_79ea2fb5.pdf",
     pages: "v2 Updated",
   },
   {
@@ -23,7 +23,7 @@ const GATED_DOWNLOADS = [
     description: "Comprehensive maintenance manual for PFS spray booths. Includes filter replacement schedules, motor and fan maintenance, lighting, electrical inspection, and troubleshooting guides.",
     fileSize: "5.3 MB",
     fileType: "PDF",
-    url: "/manus-storage/PFSSprayBooth-MaintenanceManual.docx(1)_14cb2a6d.pdf",
+    url: "/assets/PFSSprayBooth-MaintenanceManual.docx(1)_14cb2a6d.pdf",
     pages: "Full Manual",
   },
   {
@@ -32,7 +32,7 @@ const GATED_DOWNLOADS = [
     description: "Product brochure for the PFS Orion Series cross-flow paint booth. Covers specifications, airflow design, electrical, filtration, available options, and ordering information.",
     fileSize: "0.7 MB",
     fileType: "PDF",
-    url: "/manus-storage/CrossFlowPaintBooth_Orion_09b16221.pdf",
+    url: "/assets/CrossFlowPaintBooth_Orion_09b16221.pdf",
     pages: "Orion Series",
   },
   {
@@ -41,7 +41,7 @@ const GATED_DOWNLOADS = [
     description: "Product brochure for the PFS Orion Series semi-downdraft paint booth. Covers specifications, airflow configuration, electrical, filtration, available options, and ordering information.",
     fileSize: "0.5 MB",
     fileType: "PDF",
-    url: "/manus-storage/SemiDownDraftPaintBooth_Orion_27405017.pdf",
+    url: "/assets/SemiDownDraftPaintBooth_Orion_27405017.pdf",
     pages: "Orion Series",
   },
   {
@@ -50,7 +50,7 @@ const GATED_DOWNLOADS = [
     description: "Product brochure for the PFS Helios Series side-downdraft paint booth. Covers specifications, airflow design, electrical, filtration, available options, and ordering information.",
     fileSize: "2.9 MB",
     fileType: "PDF",
-    url: "/manus-storage/PFS_Helios_Side_Down_Draft_Brochure_05a9077d.pdf",
+    url: "/assets/PFS_Helios_Side_Down_Draft_Brochure_05a9077d.pdf",
     pages: "Helios Series",
   },
 ];
@@ -101,7 +101,7 @@ function GatedDownload({ doc }: { doc: typeof GATED_DOWNLOADS[0] }) {
           <FileText size={22} color="#fff" />
         </div>
         <div style={{ flex: 1 }}>
-          <h3 data-animation="slideLeft"
+          <h3
             style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "1rem",
@@ -139,7 +139,7 @@ function GatedDownload({ doc }: { doc: typeof GATED_DOWNLOADS[0] }) {
         </div>
         <div style={{ flexShrink: 0 }}>
           {!submitted ? (
-            <button data-animation="slideRight"
+            <button
               onClick={() => setOpen(!open)}
               style={{
                 display: "inline-flex",
@@ -412,7 +412,7 @@ export default function ResourcesSubPage() {
   if (!content) {
     return (
       <div>
-        <PageHero bgVideo="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4" title="Resources" breadcrumbs={[{ label: "Resources", href: "/resources" }]} />
+        <PageHero title="Resources" breadcrumbs={[{ label: "Resources", href: "/resources" }]} />
         <div className="container py-16 text-center">
           <p className="section-body">Resource not found. Please use the navigation above.</p>
           <Link href="/resources"><span className="btn-glow mt-4 inline-flex">Back to Resources</span></Link>
@@ -423,13 +423,13 @@ export default function ResourcesSubPage() {
 
   return (
     <div>
-      <PageHero bgVideo="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4" title={content.title} subtitle={content.desc} breadcrumbs={[{ label: "Resources", href: "/resources" }, { label: content.title }]} bgImage={IMG} />
+      <PageHero title={content.title} subtitle={content.desc} breadcrumbs={[{ label: "Resources", href: "/resources" }, { label: content.title }]} bgImage={IMG} />
       <section className="py-16 bg-white">
         <div className="container">
           <div className="grid lg:grid-cols-3 gap-10">
             <div className="lg:col-span-2">
               <span className="section-label">Resources</span>
-              <h2 data-animation="slideLeft" className="section-heading">{content.title}</h2>
+              <h2 className="section-heading">{content.title}</h2>
               <p className="section-body mb-8">{content.body}</p>
 
               {/* Gated downloads for installation-guides and downloads pages */}
@@ -458,7 +458,7 @@ export default function ResourcesSubPage() {
               ) : (
                 <div className="p-6 border border-gray-200 bg-gray-50">
                   <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "#555", lineHeight: 1.7, marginBottom: "1rem" }}>Resources are available upon request. Contact us to receive the documentation you need.</p>
-                  <Link href="/contact/request-a-quote"><span data-animation="slideRight" className="btn-glow">Request Resources <ArrowRight size={14} /></span></Link>
+                  <Link href="/contact/request-a-quote"><span className="btn-glow">Request Resources <ArrowRight size={14} /></span></Link>
                 </div>
               )}
             </div>

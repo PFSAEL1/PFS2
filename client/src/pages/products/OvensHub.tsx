@@ -7,8 +7,8 @@ import {
 } from "@/lib/productImages";
 import { useSEO } from "@/hooks/useSEO";
 
-const HERO_IMG = "/manus-storage/pfs-industrial-oven-hero_52d9f4df.jpg";
-const HERO_VIDEO = "/manus-storage/pfs-oven-hero-video_05e4a406.mp4";
+const HERO_IMG   = "/assets/pfs-industrial-oven-hero_52d9f4df.jpg";
+const HERO_VIDEO = "/assets/pfs-oven-hero-video_05e4a406.mp4";
 
 // imgHeight: card image area height in px — taller for portrait images so the full subject is visible
 const OVENS = [
@@ -111,7 +111,7 @@ export default function OvensHub() {
         <div className="container">
           <div className="mb-12">
             <span className="section-label">Industrial Ovens</span>
-            <h2 data-animation="slideLeft" className="section-heading">Choose Your Configuration</h2>
+            <h2 className="section-heading">Choose Your Configuration</h2>
             <p className="section-body max-w-2xl">
               PFS industrial ovens are precision-engineered for curing, drying, and heat-treating applications — available in batch, conveyor, walk-in, infrared, and fully custom configurations.
             </p>
@@ -120,9 +120,9 @@ export default function OvensHub() {
           {/* Card grid — larger images */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {OVENS.map((oven) => (
-              <Link data-animation="fadeIn" key={oven.label} href={oven.href}>
+              <Link key={oven.label} href={oven.href}>
                 <div className="group cursor-pointer border border-gray-200 hover:border-[#1B2B4B] transition-all duration-300 hover:shadow-[0_0_24px_rgba(27,43,75,0.15)] overflow-hidden h-full flex flex-col">
-                  <div className="overflow-hidden flex-shrink-0 card-image" style={{ height: `${oven.imgHeight}px` }}>
+                  <div className="overflow-hidden flex-shrink-0" style={{ height: `${oven.imgHeight}px` }}>
                     <img
                       src={oven.img}
                       alt={oven.label}
@@ -162,7 +162,7 @@ export default function OvensHub() {
           <div style={{ backgroundColor: "#1a1a1a", padding: "2.5rem 2rem" }}>
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
-                <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.4rem", fontWeight: 700, color: "#ffffff", marginBottom: "0.4rem" }}>
+                <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.4rem", fontWeight: 700, color: "#ffffff", marginBottom: "0.4rem" }}>
                   Need a Custom Oven Solution?
                 </h3>
                 <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.6 }}>
@@ -170,10 +170,10 @@ export default function OvensHub() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
-                <Link data-animation="slideLeft" href="/contact/request-a-quote">
+                <Link href="/contact/request-a-quote">
                   <span className="btn-glow flex items-center gap-2">Get Pricing <ArrowRight size={14} /></span>
                 </Link>
-                <a data-animation="slideRight" href="tel:+18885457715">
+                <a href="tel:+18885457715">
                   <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#ffffff", border: "1.5px solid rgba(255,255,255,0.4)", padding: "0.6rem 1.2rem", cursor: "pointer" }}>
                     <Phone size={14} /> (888) 545-7715
                   </span>

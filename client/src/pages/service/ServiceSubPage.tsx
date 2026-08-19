@@ -4,8 +4,8 @@ import { Link, useParams } from "wouter";
 import { ArrowRight, Phone, CheckCircle } from "lucide-react";
 
 // New original AI-generated images — no internet-sourced photos
-const SERVICE_TECH_1 = "/manus-storage/pfs-service-tech-1_8685fcab.jpg";
-const SERVICE_TEAM = "/manus-storage/pfs-team-photo-rebranded_537b580c.png";
+const SERVICE_TECH_1 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663492797025/Qb3z7L9Ycd6rmfwTi5bWop/pfs-service-tech-1_8685fcab.jpg";
+const SERVICE_TEAM  = "/assets/pfs-team-photo-rebranded_537b580c.png";
 
 interface SvcContent {
   title: string;
@@ -35,12 +35,12 @@ const CONTENT: Record<string, SvcContent> = {
       "24/7 emergency response available",
       "Multi-location fleet scheduling available",
     ],
-    img: "/manus-storage/pfs-pm-metro-train-booth_87bd97cb.jpeg",
+    img: "/assets/pfs-pm-metro-train-booth_87bd97cb.jpeg",
     gallery: [
-      "/manus-storage/pfs-install-two-techs-pfs-booth_4d46c025.jpeg",
-      "/manus-storage/pfs-service-truck-onsite_726a2168.jpeg",
-      "/manus-storage/pfs-booth-clean-hero-anon_9dfc3e0e.png",
-      "/manus-storage/pfs-booth-inspection-tech_b96d285e.jpeg",
+      "/assets/pfs-install-two-techs-pfs-booth_4d46c025.jpeg",
+      "/assets/pfs-service-truck-onsite_726a2168.jpeg",
+      "/assets/pfs-booth-clean-hero-anon_9dfc3e0e.png",
+      "/assets/pfs-booth-inspection-tech_b96d285e.jpeg",
     ],
   },
   "booth-cleaning": {
@@ -57,17 +57,22 @@ const CONTENT: Record<string, SvcContent> = {
       "Written service report provided",
       "Filter Rotation Program available",
     ],
-    img: "/manus-storage/pfs-booth-clean-hero-anon_9dfc3e0e.png",
+    img: "/assets/pfs-booth-clean-hero-anon_9dfc3e0e.png",
     gallery: [
-      "/manus-storage/pfs-booth-clean-hero-anon_9dfc3e0e.png",
-      "/manus-storage/pfs-booth-clean-interior-wide_3d9c498b.jpeg",
-      "/manus-storage/pfs-booth-clean-ceiling-anon_f9e7c3f3.png",
-      "/manus-storage/pfs-booth-clean-pit-tech_6b452e29.jpeg",
-      "/manus-storage/pfs-booth-clean-fan-dirty_1217b0a9.jpeg",
-      "/manus-storage/pfs-booth-clean-fan-clean_94da285a.jpeg",
-      "/manus-storage/pfs-booth-inspection-tech_b96d285e.jpeg",
-      "/manus-storage/pfs-install-two-techs-pfs-booth_4d46c025.jpeg",
-      "/manus-storage/pfs-service-truck-onsite_726a2168.jpeg",
+      "/assets/pfs-booth-clean-hero-anon_9dfc3e0e.png",
+      "/assets/pfs-booth-clean-interior-wide_3d9c498b.jpeg",
+      "/assets/pfs-booth-clean-ceiling-anon_f9e7c3f3.png",
+      "/assets/pfs-booth-clean-pit-tech_6b452e29.jpeg",
+      "/assets/pfs-booth-clean-fan-dirty_1217b0a9.jpeg",
+      "/assets/pfs-booth-clean-fan-clean_94da285a.jpeg",
+      "/assets/pfs-booth-inspection-tech_b96d285e.jpeg",
+      "/assets/pfs-install-two-techs-pfs-booth_4d46c025.jpeg",
+      "/assets/pfs-service-truck-onsite_726a2168.jpeg",
+      "/assets/booth-cleaning-autek-empty_bc373291.jpeg",
+      "/assets/booth-cleaning-interior-bare_7964b8eb.jpeg",
+      "/assets/booth-cleaning-tech-ladder_7f8efeaa.jpeg",
+      "/assets/booth-cleaning-crew-ceiling_14c3b37a.jpeg",
+      "/assets/booth-cleaning-floor-grating_fe870c36.jpeg",
     ],
     extraCtas: [
       { label: "Shop Intake Filters", href: "/parts" },
@@ -91,10 +96,10 @@ const CONTENT: Record<string, SvcContent> = {
       "Industrial and aerospace production support",
       "CARB / OSHA compliant repairs (California)",
     ],
-    img: "/manus-storage/pfs-emergency-service-tech-white-bg_b022a364.png",
+    img: "/assets/pfs-emergency-service-tech-white-bg_b022a364.png",
     gallery: [
-      "/manus-storage/pfs-service-truck-onsite_726a2168.jpeg",
-      "/manus-storage/pfs-booth-inspection-tech_b96d285e.jpeg",
+      "/assets/pfs-service-truck-onsite_726a2168.jpeg",
+      "/assets/pfs-booth-inspection-tech_b96d285e.jpeg",
     ],
   },
   "service-plans": {
@@ -113,8 +118,8 @@ const CONTENT: Record<string, SvcContent> = {
     ],
     img: SERVICE_TEAM,
     gallery: [
-      "/manus-storage/pfs-service-truck-onsite_726a2168.jpeg",
-      "/manus-storage/pfs-pm-metro-train-booth_87bd97cb.jpeg",
+      "/assets/pfs-service-truck-onsite_726a2168.jpeg",
+      "/assets/pfs-pm-metro-train-booth_87bd97cb.jpeg",
     ],
   },
   "retrofits-upgrades": {
@@ -131,11 +136,11 @@ const CONTENT: Record<string, SvcContent> = {
       "Automation and integration upgrades",
       "Compliance and code updates",
     ],
-    img: "/manus-storage/pfs-booth-install-jcb_9fc85464.jpg",
+    img: "/assets/pfs-booth-install-jcb_9fc85464.jpg",
     gallery: [
-      "/manus-storage/pfs-install-skytrak-amu-1_c0cc771c.jpeg",
-      "/manus-storage/pfs-install-skytrak-amu-2_2a7657bb.jpeg",
-      "/manus-storage/pfs-service-truck-onsite_726a2168.jpeg",
+      "/assets/pfs-install-skytrak-amu-1_c0cc771c.jpeg",
+      "/assets/pfs-install-skytrak-amu-2_2a7657bb.jpeg",
+      "/assets/pfs-service-truck-onsite_726a2168.jpeg",
     ],
   },
   "booth-inspections": {
@@ -155,11 +160,11 @@ const CONTENT: Record<string, SvcContent> = {
       "Insurance and fire marshal accepted reports",
       "Industrial and integrated system inspections",
     ],
-    img: "/manus-storage/pfs-booth-inspection-tech_b96d285e.jpeg",
+    img: "/assets/pfs-booth-inspection-tech_b96d285e.jpeg",
     gallery: [
-      "/manus-storage/pfs-booth-inspection-tech_b96d285e.jpeg",
-      "/manus-storage/pfs-service-truck-onsite_726a2168.jpeg",
-      "/manus-storage/pfs-booth-clean-hero-anon_9dfc3e0e.png",
+      "/assets/pfs-booth-inspection-tech_b96d285e.jpeg",
+      "/assets/pfs-service-truck-onsite_726a2168.jpeg",
+      "/assets/pfs-booth-clean-hero-anon_9dfc3e0e.png",
     ],
   },
   "oem-parts": {
@@ -176,7 +181,7 @@ const CONTENT: Record<string, SvcContent> = {
     ],
     img: SERVICE_TEAM,
     gallery: [
-      "/manus-storage/pfs-service-truck-onsite_726a2168.jpeg",
+      "/assets/pfs-service-truck-onsite_726a2168.jpeg",
     ],
   },
   "installation-services": {
@@ -198,19 +203,19 @@ const CONTENT: Record<string, SvcContent> = {
       "Robotic and conveyor system installation",
       "Aerospace and industrial finishing line builds",
     ],
-    img: "/manus-storage/pfs-install-skytrak-amu-1_c0cc771c.jpeg",
+    img: "/assets/pfs-install-skytrak-amu-1_c0cc771c.jpeg",
     gallery: [
-      "/manus-storage/pfs-booth-installation-inprogress_962dcdea.jpg",
-      "/manus-storage/pfs-installation-tech-lighting_02711a77.jpg",
-      "/manus-storage/pfs-install-skytrak-amu-1_c0cc771c.jpeg",
-      "/manus-storage/pfs-install-skytrak-amu-2_2a7657bb.jpeg",
-      "/manus-storage/pfs-install-booth-door-1_f5b71f05.jpeg",
-      "/manus-storage/pfs-install-booth-door-2_8b249ac1.jpeg",
-      "/manus-storage/pfs-install-booth-interior-1_f18934f0.jpeg",
-      "/manus-storage/pfs-install-booth-interior-2_ba11fdd0.jpeg",
-      "/manus-storage/pfs-install-booth-interior-3_ac41c24f.jpeg",
-      "/manus-storage/pfs-install-two-techs-pfs-booth_4d46c025.jpeg",
-      "/manus-storage/pfs-service-truck-onsite_726a2168.jpeg",
+      "/assets/pfs-booth-installation-inprogress_962dcdea.jpg",
+      "/assets/pfs-installation-tech-lighting_02711a77.jpg",
+      "/assets/pfs-install-skytrak-amu-1_c0cc771c.jpeg",
+      "/assets/pfs-install-skytrak-amu-2_2a7657bb.jpeg",
+      "/assets/pfs-install-booth-door-1_f5b71f05.jpeg",
+      "/assets/pfs-install-booth-door-2_8b249ac1.jpeg",
+      "/assets/pfs-install-booth-interior-1_f18934f0.jpeg",
+      "/assets/pfs-install-booth-interior-2_ba11fdd0.jpeg",
+      "/assets/pfs-install-booth-interior-3_ac41c24f.jpeg",
+      "/assets/pfs-install-two-techs-pfs-booth_4d46c025.jpeg",
+      "/assets/pfs-service-truck-onsite_726a2168.jpeg",
     ],
   },
   "technical-support": {
@@ -227,8 +232,8 @@ const CONTENT: Record<string, SvcContent> = {
     ],
     img: SERVICE_TECH_1,
     gallery: [
-      "/manus-storage/pfs-service-truck-onsite_726a2168.jpeg",
-      "/manus-storage/pfs-booth-clean-hero-anon_9dfc3e0e.png",
+      "/assets/pfs-service-truck-onsite_726a2168.jpeg",
+      "/assets/pfs-booth-clean-hero-anon_9dfc3e0e.png",
     ],
   },
 };
@@ -290,7 +295,7 @@ export default function ServiceSubPage() {
   if (!content) {
     return (
       <div>
-        <PageHero bgVideo="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4" title="Service" breadcrumbs={[{ label: "Service", href: "/service" }]} />
+        <PageHero title="Service" breadcrumbs={[{ label: "Service", href: "/service" }]} />
         <div className="container py-16 text-center">
           <p className="section-body">Page not found. Please use the navigation above.</p>
           <Link href="/service"><span className="btn-glow mt-4 inline-flex">Back to Service</span></Link>
@@ -301,7 +306,7 @@ export default function ServiceSubPage() {
 
   return (
     <div>
-      <PageHero bgVideo="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4"
+      <PageHero
         title={content.title}
         subtitle={content.desc}
         breadcrumbs={[{ label: "Service", href: "/service" }, { label: content.title }]}
@@ -312,7 +317,7 @@ export default function ServiceSubPage() {
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
               <span className="section-label">Service Details</span>
-              <h2 data-animation="slideLeft" className="section-heading">{content.title}</h2>
+              <h2 className="section-heading">{content.title}</h2>
               <div className="red-divider" />
               <p className="section-body mb-8">{content.body}</p>
 
@@ -327,8 +332,8 @@ export default function ServiceSubPage() {
               </div>
 
               <div className="flex flex-wrap gap-3">
-                <Link data-animation="slideLeft" href="/contact/service-request"><span className="btn-glow flex items-center gap-2">Request Service <ArrowRight size={14} /></span></Link>
-                <a data-animation="slideRight" href="tel:8885457715" className="btn-outline flex items-center gap-2"><Phone size={14} /> (888) 545-7715</a>
+                <Link href="/contact/service-request"><span className="btn-glow flex items-center gap-2">Request Service <ArrowRight size={14} /></span></Link>
+                <a href="tel:8885457715" className="btn-outline flex items-center gap-2"><Phone size={14} /> (888) 545-7715</a>
               </div>
 
               {/* Extra CTAs for Paint Booth Cleaning — filter store links */}
@@ -392,7 +397,7 @@ export default function ServiceSubPage() {
         <section className="py-12" style={{ background: "#F4F4F2" }}>
           <div className="container">
             <span className="section-label">{sub === "installation-services" ? "Installation Gallery" : "Field Service Gallery"}</span>
-            <h2 data-animation="slideLeft" className="section-heading" style={{ marginBottom: "1.5rem" }}>Our Work</h2>
+            <h2 className="section-heading" style={{ marginBottom: "1.5rem" }}>Our Work</h2>
             <div style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",

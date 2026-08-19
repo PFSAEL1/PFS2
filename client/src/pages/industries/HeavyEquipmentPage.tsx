@@ -19,32 +19,32 @@ import { SiteProductCardSection } from "@/components/SiteProductCard";
 import { useSEO } from "@/hooks/useSEO";
 
 // ── IMAGES ────────────────────────────────────────────────────────────────────
-const HERO_IMG = "/manus-storage/pfs-heavy-equip-hero_126eff72.jpg";
-const HERO_VIDEO = "/manus-storage/pfs-heavy-equip-hero_e8cc5ad9.mp4";
-const FEATURED_IMG = "/manus-storage/pfs-heavy-equip-featured_88fd415c.jpg";
-const GALLERY_1 = "/manus-storage/pfs-heavy-equip-gallery-4699_6cce56cb.jpg";
-const GALLERY_2 = "/manus-storage/pfs-heavy-equip-gallery-1690_3bc692e9.jpg";
-const GALLERY_3 = "/manus-storage/pfs-heavy-equip-gallery-14371_149ca544.jpg";
-const GALLERY_4 = "/manus-storage/pfs-heavy-equip-gallery-1860_5524160a.jpg";
-const GALLERY_5 = "/manus-storage/pfs-heavy-equip-gallery-874_7da53ce0.jpg";
+const HERO_IMG      = "/assets/pfs-heavy-equip-hero_126eff72.jpg";
+const HERO_VIDEO    = "/assets/pfs-heavy-equip-hero_e8cc5ad9.mp4";
+const FEATURED_IMG  = "/assets/pfs-heavy-equip-featured_88fd415c.jpg";
+const GALLERY_1     = "/assets/pfs-heavy-equip-gallery-4699_6cce56cb.jpg";
+const GALLERY_2     = "/assets/pfs-heavy-equip-gallery-1690_3bc692e9.jpg";
+const GALLERY_3     = "/assets/pfs-heavy-equip-gallery-14371_149ca544.jpg";
+const GALLERY_4     = "/assets/pfs-heavy-equip-gallery-1860_5524160a.jpg";
+const GALLERY_5     = "/assets/pfs-heavy-equip-gallery-874_7da53ce0.jpg";
 
-const ETL_LOGO = "/manus-storage/pfs-etl-logo_7758f722.png";
-const UL_LOGO = "/manus-storage/pfs-ul508a-clean_e8efdeb8.jpg";
-const NFPA_LOGO = "/manus-storage/pfs-nfpa-logo_4b710cc9.png";
-const EPA_LOGO = "/manus-storage/pfs-epa-logo_e4165f68.webp";
-const OSHA_LOGO = "/manus-storage/pfs-osha-logo_0c460739.jpg";
-const USA_FLAG = "/manus-storage/pfs-usa-flag_8fca512e.jpg";
+const ETL_LOGO  = "/assets/pfs-etl-logo_7758f722.png";
+const UL_LOGO   = "/assets/pfs-ul508a-clean_e8efdeb8.jpg";
+const NFPA_LOGO = "/assets/pfs-nfpa-logo_4b710cc9.png";
+const EPA_LOGO  = "/assets/pfs-epa-logo_e4165f68.webp";
+const OSHA_LOGO = "/assets/pfs-osha-logo_0c460739.jpg";
+const USA_FLAG  = "/assets/pfs-usa-flag_8fca512e.jpg";
 
 const BLUE = "#1B3A6B";
 
 // ── CERT CAROUSEL ─────────────────────────────────────────────────────────────
 const CERTS = [
-  { type: "logo", img: ETL_LOGO, title: "ETL & ETL-C Listed", sub: "Intertek — USA & Canada", imgH: 44 },
-  { type: "logo", img: UL_LOGO, title: "UL 508A Certified", sub: "Industrial Control Panel Fabricator", imgH: 44 },
-  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant", sub: "Spray Application Standard", imgH: 44 },
-  { type: "logo", img: EPA_LOGO, title: "EPA Compliant", sub: "Air Quality Standards", imgH: 36 },
-  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant", sub: "Workplace Safety Standards", imgH: 36 },
-  { type: "flag", img: USA_FLAG, title: "Made in the USA", sub: "Santa Rosa, CA", imgH: 36 },
+  { type: "logo", img: ETL_LOGO,  title: "ETL & ETL-C Listed",       sub: "Intertek — USA & Canada",               imgH: 44 },
+  { type: "logo", img: UL_LOGO,   title: "UL 508A Certified",         sub: "Industrial Control Panel Fabricator",   imgH: 44 },
+  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant",         sub: "Spray Application Standard",            imgH: 44 },
+  { type: "logo", img: EPA_LOGO,  title: "EPA Compliant",             sub: "Air Quality Standards",                 imgH: 36 },
+  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant",            sub: "Workplace Safety Standards",            imgH: 36 },
+  { type: "flag", img: USA_FLAG,  title: "Made in the USA",           sub: "Santa Rosa, CA",                        imgH: 36 },
 ];
 const CERTS_LOOP = [...CERTS, ...CERTS];
 
@@ -81,36 +81,36 @@ const FEATURES_HIDDEN = [
 ];
 
 const BOOTH_LINEUP = [
-  { name: "Crossflow", desc: "Side-to-side airflow. Cost-effective for large equipment and agricultural machinery." },
-  { name: "Downdraft", desc: "Ceiling-to-floor airflow. Maximum cleanliness for OEM-spec equipment finishing." },
+  { name: "Crossflow",      desc: "Side-to-side airflow. Cost-effective for large equipment and agricultural machinery." },
+  { name: "Downdraft",      desc: "Ceiling-to-floor airflow. Maximum cleanliness for OEM-spec equipment finishing." },
   { name: "Semi-Downdraft", desc: "Rear-angled exhaust. Versatile for mixed equipment types and sizes." },
-  { name: "Heated Booth", desc: "Integrated heat for accelerated cure. Required for industrial coatings and primers." },
-  { name: "Custom Build", desc: "Engineered-to-order for mining trucks, cranes, or multi-bay production lines." },
+  { name: "Heated Booth",   desc: "Integrated heat for accelerated cure. Required for industrial coatings and primers." },
+  { name: "Custom Build",   desc: "Engineered-to-order for mining trucks, cranes, or multi-bay production lines." },
 ];
 
 const PRODUCTS = [
   {
     label: "Industrial Ovens",
     href: "/products/ovens",
-    img: "/manus-storage/pfs-vulcan-oven-card_ad72eade_316de7d1.png",
+    img: "/assets/pfs-vulcan-oven-card_ad72eade_316de7d1.png",
     desc: "Batch and conveyor ovens for equipment component cure and powder coat baking.",
   },
   {
     label: "Blasting Systems",
     href: "/products/blast-systems",
-    img: "/manus-storage/blast-systems-real_c7389401_16a0255c.webp",
+    img: "/assets/blast-systems-real_c7389401_16a0255c.webp",
     desc: "Blast rooms and cabinets for heavy equipment surface prep and rust removal.",
   },
   {
     label: "Powder Coating Systems",
     href: "/products/powder-booths",
-    img: "/manus-storage/pfs-render-powder-booth_3dd083c1.jpg",
+    img: "/assets/pfs-render-powder-booth_3dd083c1.jpg",
     desc: "Powder coating booths for equipment frames, components, and ground support parts.",
   },
   {
     label: "Air Make-Up Units",
     href: "/products/air-make-up-units",
-    img: "/manus-storage/pfs-amu-card_41f0dd88.jpg",
+    img: "/assets/pfs-amu-card_41f0dd88.jpg",
     desc: "Apollo AMU systems sized for large-volume heavy equipment spray booths.",
   },
 ];
@@ -315,6 +315,21 @@ export default function HeavyEquipmentPage() {
     title: "Heavy Equipment Paint Booths | Large Equipment Finishing | PFS",
     description: "PFS Orion Series heavy equipment spray booths are custom-engineered for excavators, wheel loaders, mining trucks, and agricultural machinery. Clear-span construction with no interior columns. Downdraft or cross-flow airflow, NFPA 33 compliant, ETL/UL listed components, UL 508A certified controls. Custom widths to 60+ ft. Manufactured in Santa Rosa, CA. Ships nationally.",
     canonical: "/industries/heavy-equipment",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Oversized spray booths and finishing systems for heavy and agricultural equipment",
+      "provider": {
+        "@type": "Organization",
+        "name": "Platinum Finishing Systems",
+        "url": "https://pfsspraybooths.com",
+        "telephone": "+18885457715"
+      },
+      "serviceType": "Industrial Finishing Equipment",
+      "audience": { "@type": "Audience", "audienceType": "Heavy equipment manufacturers, construction equipment OEMs, agricultural machinery producers" },
+      "areaServed": { "@type": "Country", "name": "United States" },
+      "url": "https://pfsspraybooths.com/industries/heavy-equipment"
+    },
   });
 
   const [featuresOpen, setFeaturesOpen] = useState(false);
@@ -325,7 +340,7 @@ export default function HeavyEquipmentPage() {
     if (!v) return;
     v.muted = true;
     v.playsInline = true;
-    const play = () => { v.play().catch(() => { }); setVideoReady(true); };
+    const play = () => { v.play().catch(() => {}); setVideoReady(true); };
     v.addEventListener("canplaythrough", play, { once: true });
     v.load();
     return () => v.removeEventListener("canplaythrough", play);
@@ -343,7 +358,7 @@ export default function HeavyEquipmentPage() {
         justifyContent: "flex-end",
         overflow: "hidden",
       }}>
-        <img
+                <img
           src={HERO_IMG}
           alt="PFS heavy equipment paint booth for construction machinery finishing"
           aria-hidden="true"
@@ -355,7 +370,7 @@ export default function HeavyEquipmentPage() {
           loop
           playsInline
           disablePictureInPicture
-
+         
           aria-hidden="true"
           style={{
             position: "absolute", inset: 0,
@@ -381,7 +396,7 @@ export default function HeavyEquipmentPage() {
           }}>
             HEAVY EQUIPMENT &amp; CONSTRUCTION
           </span>
-          <h1 data-animation="slideLeft" style={{
+          <h1 style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "clamp(2.6rem, 7vw, 5rem)",
             fontWeight: 800, color: "#fff", lineHeight: 1.0,
@@ -402,7 +417,7 @@ export default function HeavyEquipmentPage() {
           }}>
             PFS ORION SERIES
           </span>
-          <p data-animation="slideLeft" style={{
+          <p style={{
             fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
             fontSize: "clamp(0.95rem, 1.8vw, 1.1rem)",
             color: "rgba(255,255,255,0.82)",
@@ -413,10 +428,10 @@ export default function HeavyEquipmentPage() {
             Clear-span construction with no interior columns. Downdraft or cross-flow airflow. NFPA 33 compliant with ETL/UL listed components and UL 508A certified controls. Custom-engineered for excavators, wheel loaders, mining trucks, and agricultural machinery — installed nationwide.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-            <Link data-animation="slideLeft" href="/contact/request-a-quote">
+            <Link href="/contact/request-a-quote">
               <span className="btn-glow" style={{ width: "100%", maxWidth: "320px", justifyContent: "center" }}>GET PRICING <ArrowRight size={16} /></span>
             </Link>
-            <a data-animation="slideRight" href="tel:8885457715" style={{ width: "100%", maxWidth: "320px" }}>
+            <a href="tel:8885457715" style={{ width: "100%", maxWidth: "320px" }}>
               <span style={{
                 display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem",
                 background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.5)",
@@ -446,7 +461,7 @@ export default function HeavyEquipmentPage() {
               }}>
                 FEATURED PAINT BOOTH
               </span>
-              <h2 data-animation="slideLeft" style={{
+              <h2 style={{
                 fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
                 fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 800,
                 color: "#111", letterSpacing: "-0.01em", marginBottom: "0.5rem",
@@ -480,10 +495,10 @@ export default function HeavyEquipmentPage() {
               />
             </div>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
-              <Link data-animation="slideLeft" href="/contact/request-a-quote">
+              <Link href="/contact/request-a-quote">
                 <span className="btn-glow">REQUEST A QUOTE <ArrowRight size={15} /></span>
               </Link>
-              <Link data-animation="slideRight" href="/products/paint-booths/enclosed">
+              <Link href="/products/paint-booths/enclosed">
                 <span style={{
                   display: "inline-flex", alignItems: "center", gap: "0.5rem",
                   background: "transparent", color: BLUE,
@@ -507,7 +522,7 @@ export default function HeavyEquipmentPage() {
       <section style={{ padding: "0 0 4rem", background: "#fff" }}>
         <div className="container">
           <div className="text-center mb-8">
-            <h2 data-animation="slideLeft" style={{
+            <h2 style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800,
               color: "#111", letterSpacing: "-0.01em",
@@ -525,7 +540,7 @@ export default function HeavyEquipmentPage() {
             ]}
             cardHeight="clamp(220px,30vw,360px)"
           />
-          <div data-animation="slideRight" className="text-center">
+          <div className="text-center">
             <Link href="/contact/request-a-quote">
               <span className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
             </Link>
@@ -544,7 +559,7 @@ export default function HeavyEquipmentPage() {
             }}>
               STANDARD SPECIFICATION
             </span>
-            <h2 data-animation="slideLeft" style={{
+            <h2 style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800,
               color: "#111", letterSpacing: "-0.01em",
@@ -553,7 +568,7 @@ export default function HeavyEquipmentPage() {
             </h2>
           </div>
 
-          <div data-animation="fadeIn" className="grid md:grid-cols-3 gap-5 mb-5">
+          <div className="grid md:grid-cols-3 gap-5 mb-5">
             {FEATURES_VISIBLE.map((f) => (
               <div key={f.title} style={{ background: "#fff", padding: "1.75rem", borderTop: `3px solid ${BLUE}`, display: "flex", flexDirection: "column" }}>
                 <div style={{
@@ -627,7 +642,7 @@ export default function HeavyEquipmentPage() {
           )}
 
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <button data-animation="slideLeft"
+            <button
               onClick={() => setFeaturesOpen(!featuresOpen)}
               style={{
                 display: "inline-flex", alignItems: "center", gap: "0.4rem",
@@ -641,7 +656,7 @@ export default function HeavyEquipmentPage() {
                 ? <><ChevronUp size={14} /> SHOW LESS</>
                 : <><ChevronDown size={14} /> SEE ALL SPECIFICATIONS &amp; BOOTH TYPES</>}
             </button>
-            <Link data-animation="slideRight" href="/contact/request-a-quote">
+            <Link href="/contact/request-a-quote">
               <span className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
             </Link>
           </div>
@@ -652,7 +667,7 @@ export default function HeavyEquipmentPage() {
       <section style={{ background: BLUE, padding: "3.5rem 0" }}>
         <div className="container">
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "1.5rem" }}>
-            <h2 data-animation="slideLeft" style={{
+            <h2 style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "clamp(1.6rem, 4vw, 2.6rem)",
               fontWeight: 800, color: "#fff", letterSpacing: "-0.01em", lineHeight: 1.1,
@@ -663,7 +678,7 @@ export default function HeavyEquipmentPage() {
               Quote in 24 hours. manufactured in the USA with ETL/UL listed components. Installed nationwide by PFS-certified technicians.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center" }}>
-              <Link data-animation="slideLeft" href="/contact/request-a-quote">
+              <Link href="/contact/request-a-quote">
                 <span style={{
                   display: "inline-flex", alignItems: "center", gap: "0.5rem",
                   background: "#fff", color: BLUE,
@@ -674,7 +689,7 @@ export default function HeavyEquipmentPage() {
                   GET PRICING <ArrowRight size={16} />
                 </span>
               </Link>
-              <a data-animation="slideRight" href="tel:8885457715">
+              <a href="tel:8885457715">
                 <span style={{
                   display: "inline-flex", alignItems: "center", gap: "0.5rem",
                   background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.6)",
@@ -690,7 +705,7 @@ export default function HeavyEquipmentPage() {
         </div>
       </section>
 
-      {/* RELATED PRODUCTS */}
+            {/* RELATED PRODUCTS */}
       <SiteProductCardSection
         heading="You May Also Need"
         label="Complete Your System"

@@ -5,19 +5,20 @@
  * Route: /products/paint-booths/crossflow-all
  */
 
+import { useEffect } from 'react';
 import { Link } from "wouter";
 import { ArrowRight, Phone, ChevronRight } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
 // CDN images
-const HERO_VIDEO     = "/manus-storage/crossflow-hero_5b011231.mp4";         // MP4 hero — Orion crossflow render
-const ORION_GREY_IMG = "/manus-storage/pfs-orion-card-grey_dc159104.jpg";   // 3/4 view, grey bg
-const CROSSFLOW_V3   = "/manus-storage/orion-crossflow-render-v3_4837ad69.webp"; // Orion crossflow epoxy v3 render
-const SPRINTER_IMG   = "/manus-storage/img_0814_sprinter_van_c044176c.jpg"; // Real sprinter van in booth
-const HEATED_IMG     = "/manus-storage/img_0917_heated_0ba418a1.jpg";        // Real heated booth
-const TRUCK_CF_RENDER = "/manus-storage/orion-truck-crossflow-render_57425bd5.webp"; // Orion truck crossflow render
-const TRUCK_CF_REAL  = "/manus-storage/truck-crossflow-real-angled_64504e75.jpg";  // Real PFS cross-flow truck booth
-const CONTAINER_IMG  = "/manus-storage/pfs-container-booth-real_9967_410e0f4f.jpg";
+const HERO_VIDEO     = "/assets/crossflow-hero_5b011231.mp4";         // MP4 hero — Orion crossflow render
+const ORION_GREY_IMG = "/assets/pfs-orion-card-grey_dc159104.jpg";   // 3/4 view, grey bg
+const CROSSFLOW_V3   = "/assets/orion-crossflow-render-v3_4837ad69.webp"; // Orion crossflow epoxy v3 render
+const SPRINTER_IMG   = "/assets/img_0814_sprinter_van_c044176c.jpg"; // Real sprinter van in booth
+const HEATED_IMG     = "/assets/img_0917_heated_0ba418a1.jpg";        // Real heated booth
+const TRUCK_CF_RENDER = "/assets/orion-truck-crossflow-render_57425bd5.webp"; // Orion truck crossflow render
+const TRUCK_CF_REAL  = "/assets/truck-crossflow-real-angled_64504e75.jpg";  // Real PFS cross-flow truck booth
+const CONTAINER_IMG  = "/assets/pfs-container-booth-real_9967_410e0f4f.jpg";
 
 const CONFIGS = [
   {
@@ -89,6 +90,24 @@ export default function CrossFlowAllPage() {
     canonical: "/products/spray-booths/cross-flow",
   });
 
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Cross-Flow Paint Booths — All Models",
+      "url": "https://pfsspraybooths.com/products/paint-booths/crossflow-all",
+      "description": "Browse all PFS cross-flow paint booth configurations — standard, heated, sprinter van, truck, shipping container, and custom cross-flow booths.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "PFS Industrial Finishing Equipment",
+        "url": "https://pfsspraybooths.com"
+      }
+    });
+    document.head.appendChild(script);
+    return () => { if (script.parentNode) script.parentNode.removeChild(script); };
+  }, []);
   return (
     <div style={{ background: "#f8f9fa", minHeight: "100vh" }}>
 

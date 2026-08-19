@@ -12,20 +12,20 @@ interface Logo {
 // Color logos on white background — real brand colors, no filters
 // CDN paths
 const LOGOS: Logo[] = [
-  { src: "/manus-storage/boeing-color_63ed4652.png",       alt: "Boeing",            h: 36 },
-  { src: "/manus-storage/spacex-color_8eda0059.png",       alt: "SpaceX",            h: 28 },
-  { src: "/manus-storage/tesla-color_4097d792.png",        alt: "Tesla",             h: 52 },
-  { src: "/manus-storage/cat-color_edbcd945.png",          alt: "Caterpillar",       h: 44 },
-  { src: "/manus-storage/carstar-color_bd301e8f.png",      alt: "CARSTAR",           h: 32 },
-  { src: "/manus-storage/lametro-color_afa94618.png",      alt: "LA Metro",          h: 40 },
-  { src: "/manus-storage/av-color_66c0f897.png",           alt: "AeroVironment",     h: 44 },
-  { src: "/manus-storage/seneca-color_9414c16d.png",       alt: "Seneca Aviation",   h: 40 },
-  { src: "/manus-storage/leroi-color_72500325.png",        alt: "LeROI",             h: 48 },
-  { src: "/manus-storage/dempseygill-color_07426f21.png",  alt: "Dempsey & Gill",    h: 44 },
-  { src: "/manus-storage/gandc-color_3c2b60a9.png",        alt: "G&C Auto Body",     h: 44 },
-  { src: "/manus-storage/missionbell-color_bec2319c.png",  alt: "Mission Bell",      h: 32 },
-  { src: "/manus-storage/pfs-logo-united-rentals_f3409286.png", alt: "United Rentals",  h: 44 },
-  { src: "/manus-storage/ael-logo-black_8bbd6f11.jpeg",           alt: "Advanced Extraction Labs (AEL)", h: 52 },
+  { src: "/assets/boeing-color_63ed4652.png",       alt: "Boeing",            h: 36 },
+  { src: "/assets/spacex-color_8eda0059.png",       alt: "SpaceX",            h: 28 },
+  { src: "/assets/tesla-color_4097d792.png",        alt: "Tesla",             h: 52 },
+  { src: "/assets/cat-color_edbcd945.png",          alt: "Caterpillar",       h: 44 },
+  { src: "/assets/carstar-color_bd301e8f.png",      alt: "CARSTAR",           h: 32 },
+  { src: "/assets/lametro-color_afa94618.png",      alt: "LA Metro",          h: 40 },
+  { src: "/assets/av-color_66c0f897.png",           alt: "AeroVironment",     h: 44 },
+  { src: "/assets/seneca-color_9414c16d.png",       alt: "Seneca Aviation",   h: 40 },
+  { src: "/assets/leroi-color_72500325.png",        alt: "LeROI",             h: 48 },
+  { src: "/assets/dempseygill-color_07426f21.png",  alt: "Dempsey & Gill",    h: 44 },
+  { src: "/assets/gandc-color_3c2b60a9.png",        alt: "G&C Auto Body",     h: 44 },
+  { src: "/assets/missionbell-color_bec2319c.png",  alt: "Mission Bell",      h: 32 },
+  { src: "/assets/pfs-logo-united-rentals_f3409286.png", alt: "United Rentals",  h: 44 },
+  { src: "/assets/ael-logo-black_8bbd6f11.jpeg",           alt: "Advanced Extraction Labs (AEL)", h: 52 },
 ];
 
 interface TrustedByProps {

@@ -3,8 +3,8 @@ import { useSEO } from '@/hooks/useSEO';
 import { Link } from "wouter";
 import { ExternalLink, Package, Wrench, RefreshCw, CheckCircle } from "lucide-react";
 
-const FILTERS_HERO = "/manus-storage/pfs-filters-card_8b47eabc.png";       // Real PFS filter media photo
-const FILTERS_HERO_VIDEO = "/manus-storage/pfs-parts-filters-hero_9a1b0b80.mp4"; // Cinematic hero video
+const FILTERS_HERO = "/assets/pfs-filters-card_8b47eabc.png";       // Real PFS filter media photo
+const FILTERS_HERO_VIDEO = "/assets/pfs-parts-filters-hero_9a1b0b80.mp4"; // Cinematic hero video
 
 const FILTER_TYPES = [
   "Intake ceiling filters",
@@ -40,7 +40,7 @@ export default function PartsFiltersHub() {
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
               <span className="section-label">OEM Quality</span>
-              <h2 data-animation="slideLeft" className="section-heading-lg">Genuine PFS Parts & Filtration</h2>
+              <h2 className="section-heading-lg">Genuine PFS Parts & Filtration</h2>
               <div className="red-divider" />
               <p className="section-body mb-6">
                 Using genuine OEM parts and certified filtration media is critical to maintaining your booth's airflow performance, compliance certifications, and warranty coverage. PFS stocks a comprehensive inventory for all current and legacy equipment models.
@@ -49,10 +49,10 @@ export default function PartsFiltersHub() {
                 Order filters and consumables online at <a href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" style={{ color: "#FFFFFF", fontWeight: 600 }}>pfsfilters.com</a> — or contact our parts team for OEM components and bulk pricing.
               </p>
               <div className="flex flex-wrap gap-3">
-                <a data-animation="slideLeft" href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" className="btn-glow flex items-center gap-2">
+                <a href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" className="btn-glow flex items-center gap-2">
                   Order Filters <ExternalLink size={14} />
                 </a>
-                <Link data-animation="slideRight" href="/contact/service-request">
+                <Link href="/contact/service-request">
                   <span className="btn-outline flex items-center gap-2">Request OEM Parts</span>
                 </Link>
               </div>
@@ -67,7 +67,7 @@ export default function PartsFiltersHub() {
       {/* Three cards */}
       <section className="py-14 section-gray">
         <div className="container">
-          <div data-animation="fadeIn" className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {/* Filters */}
             <div className="p-7 bg-white card-hover">
               <div className="w-10 h-10 flex items-center justify-center mb-4" style={{ backgroundColor: "#FFF0F0", color: "#FFFFFF", borderRadius: "2px" }}>
@@ -122,7 +122,7 @@ export default function PartsFiltersHub() {
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
               <span className="section-label">Filtration Media</span>
-              <h2 data-animation="slideLeft" className="section-heading">Filter Types Available</h2>
+              <h2 className="section-heading">Filter Types Available</h2>
               <div className="red-divider" />
               <p className="section-body mb-6">
                 PFS stocks a full range of filtration media compatible with all booth configurations. Whether you need standard polyester intake media or specialty HEPA final filters, we have the right product for your application.
@@ -138,11 +138,11 @@ export default function PartsFiltersHub() {
             </div>
             <div className="p-8" style={{ backgroundColor: "#1C1C1E", borderRadius: "2px" }}>
               <span className="section-label" style={{ color: "#FFFFFF" }}>Quick Order</span>
-              <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.3rem", fontWeight: 700, color: "white", marginBottom: "0.75rem" }}>Order at pfsfilters.com</h3>
+              <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.3rem", fontWeight: 700, color: "white", marginBottom: "0.75rem" }}>Order at pfsfilters.com</h3>
               <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.85rem", color: "rgba(255,255,255,0.6)", lineHeight: 1.7, marginBottom: "1.5rem" }}>
                 Our dedicated filter store carries the full range of PFS-compatible filtration media with fast shipping and easy reorder by booth model number.
               </p>
-              <a data-animation="slideRight" href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" className="btn-glow flex items-center gap-2 justify-center w-full">
+              <a href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" className="btn-glow flex items-center gap-2 justify-center w-full">
                 Visit pfsfilters.com <ExternalLink size={14} />
               </a>
               <div className="mt-4 pt-4" style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}>

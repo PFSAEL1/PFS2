@@ -4,12 +4,13 @@
  * Form: Name, Company, Phone, Email, Equipment Type, Issue Description (required)
  * Utility bar "Support" link points here
  */
+import { useEffect } from 'react';
 import { useState } from "react";
 import { useSEO } from '@/hooks/useSEO';
 import { Link } from "wouter";
 import { Phone, Mail, CheckCircle, ArrowRight, AlertCircle } from "lucide-react";
 
-const TECH_HERO = "/manus-storage/pfs-tech-support-studio_25c3ec02.png";
+const TECH_HERO = "/assets/pfs-tech-support-studio_25c3ec02.png";
 
 const EQUIPMENT_TYPES = [
   "Spray Paint Booth",
@@ -71,6 +72,24 @@ export default function SupportPage() {
     setSubmitted(true);
   }
 
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "PFS Technical Support",
+      "url": "https://pfsspraybooths.com/support",
+      "description": "Technical support for PFS spray booths, ovens, and finishing equipment. Submit a service request, access manuals, or contact our support team directly.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "PFS Industrial Finishing Equipment",
+        "url": "https://pfsspraybooths.com"
+      }
+    });
+    document.head.appendChild(script);
+    return () => { if (script.parentNode) script.parentNode.removeChild(script); };
+  }, []);
   return (
     <div style={{ backgroundColor: "#FFFFFF", minHeight: "100vh" }}>
 
@@ -105,7 +124,7 @@ export default function SupportPage() {
               }}>
                 PFS Technical Support
               </span>
-              <h1 data-animation="slideLeft" style={{
+              <h1 style={{
                 fontFamily: "'Archivo Narrow', sans-serif",
                 fontSize: "clamp(2rem, 4vw, 3rem)",
                 fontWeight: 700,
@@ -136,18 +155,13 @@ export default function SupportPage() {
             }}>
               <img
                 src={TECH_HERO}
-                alt="PFS Technical Support"
-                style={{
-                  width: "100%",
-                  height: "480px",
-                  display: "block",
-                  objectFit: "cover"
-                }}
+                alt="PFS factory-trained technician servicing a spray booth control panel"
+                style={{ width: "100%", display: "block", objectFit: "cover", objectPosition: "center top", maxHeight: "480px" }}
               />
             </div>
 
             {/* Direct contact */}
-            <div data-animation="fadeIn" style={{
+            <div style={{
               backgroundColor: "#1C1C1E",
               padding: "1.25rem 1.5rem",
               borderRadius: "4px",

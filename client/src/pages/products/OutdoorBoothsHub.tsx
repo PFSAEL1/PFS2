@@ -9,9 +9,9 @@ import { Link } from "wouter";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
-const HERO_IMG = "/manus-storage/pfs-outdoor-zenith-golden-hour_734e8047.jpg";
-const DRIVE_THRU_IMG = "/manus-storage/pfs-container-booth-card-v2_b8177420.jpg";
-const LARGE_EQUIP_IMG = "/manus-storage/pfs-outdoor-multi-bay-featured_477be365.jpg";
+const HERO_IMG = "/assets/pfs-outdoor-zenith-golden-hour_734e8047.jpg";
+const DRIVE_THRU_IMG = "/assets/pfs-container-booth-card-v2_b8177420.jpg";
+const LARGE_EQUIP_IMG = "/assets/pfs-outdoor-multi-bay-featured_477be365.jpg";
 
 const CONFIGURATIONS = [
   {
@@ -55,7 +55,7 @@ export default function OutdoorBoothsHub() {
 
   return (
     <div>
-      <PageHero bgVideo="/manus-storage/pfs-outdoor-booth-drone_22397248.mp4"
+      <PageHero
         title="Outdoor Paint Booths"
         subtitle="Permanent building-style spray booth structures installed outdoors — engineered for facilities that need a full finishing environment without adding to their existing building footprint."
         breadcrumbs={[{ label: "Products", href: "/products" }, { label: "Outdoor Paint Booths" }]}

@@ -5,24 +5,58 @@ import { GalleryGrid } from "@/components/GalleryLightbox";
 import { useSEO } from "@/hooks/useSEO";
 import { useState } from "react";
 
-const PAINT = "/manus-storage/pfs-robotics-card_2aac132b.jpg";
-const PAINT_VIDEO = "/manus-storage/pfs-liquid-paint-lines-robot-hero-v2_48bab39f.mp4";
-const POWDER = "/manus-storage/pfs-powder-coating-line-real_9473890b.png";
-const POWDER_VIDEO = "/manus-storage/pfs-powder-coating-line-hero_57df7526.mp4";
-const OVEN = "/manus-storage/orig-render-conveyor-oven_7e2e504a.webp";
-const AERO = "/manus-storage/pfs-aerospace-jet-in-booth-real_2eb79dc9.png";
-const PRETREAT = "/manus-storage/washbooth_75284018.png";
-const PRETREAT_SPRAY = "/manus-storage/washbooth_75284018.png";
-const PRETREAT_VIDEO = "/manus-storage/integration_pretreatment_hero_114608e5.mp4";
-const ROBOT = "/manus-storage/pfs-orion-r-robotic-cell_12c36106.png";
-const ROBOTIC_VIDEO = "/manus-storage/pfs-robotic-cells-hero-v2_5c50c32e.mp4";
-const CONVEYOR_IMG = "/manus-storage/yellow-conveyor-system_8b253b1f.jpg";
-const CONVEYOR_VIDEO = "/manus-storage/pfs-conveyor-hero_b159dbda.mp4";
-const INTEGRATED_SYSTEM = "/manus-storage/pfs-integrated-system-line_ad6dc185.png";
-const SYSTEM_INTEGRATION_VIDEO = "/manus-storage/pfs-system-integration-hero_2d68f8ec.mp4";
-const ZENITH_OVEN_CONVEYOR = "/manus-storage/pfs-zenith-oven-conveyor_5da05385.jpg";
-const CONVEYOR_OVen_LINE = "/manus-storage/pfs-conveyor-oven-line_a1034fad.png";
-const CONVEYOR_PANORAMIC = "/manus-storage/pfs-conveyor-panoramic_5c197ba2.png";
+// ─── Collapsible accordion for body text sections ────────────────────────────
+function IntegrationAccordion({ body, body2, body3, title }: { body: string; body2?: string; body3?: string; title: string }) {
+  const [open, setOpen] = useState<number | null>(0);
+  const sections = [
+    { label: "Overview", text: body },
+    ...(body2 ? [{ label: "System Components", text: body2 }] : []),
+    ...(body3 ? [{ label: "Applications & Delivery", text: body3 }] : []),
+  ];
+  return (
+    <div className="mb-8 border border-gray-200 divide-y divide-gray-200">
+      {sections.map((s, i) => (
+        <div key={i}>
+          <button
+            className="w-full flex items-center justify-between px-4 py-3 text-left"
+            style={{ background: open === i ? "#f5f8ff" : "white", border: "none", cursor: "pointer" }}
+            onClick={() => setOpen(open === i ? null : i)}
+          >
+            <span style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.72rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: open === i ? "#1B2B4B" : "#1a1a1a" }}>
+              {s.label}
+            </span>
+            <span style={{ fontSize: "1rem", color: "#1B2B4B", fontWeight: 700, lineHeight: 1 }}>{open === i ? "−" : "+"}</span>
+          </button>
+          {open === i && (
+            <div className="px-4 pb-4 pt-1">
+              <p className="section-body">{s.text}</p>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+
+const PAINT = "/assets/pfs-robotics-card_2aac132b.jpg";
+const PAINT_VIDEO = "/assets/pfs-liquid-paint-lines-robot-hero-v2_48bab39f.mp4";
+const POWDER = "/assets/pfs-powder-coating-line-real_9473890b.png";
+const POWDER_VIDEO = "/assets/pfs-powder-coating-line-hero_57df7526.mp4";
+const OVEN = "/assets/orig-render-conveyor-oven_7e2e504a.webp";
+const AERO = "/assets/pfs-aerospace-jet-in-booth-real_2eb79dc9.png";
+const PRETREAT = "/assets/washbooth_75284018.png";
+const PRETREAT_SPRAY = "/assets/washbooth_75284018.png";
+const PRETREAT_VIDEO = "/assets/integration_pretreatment_hero_114608e5.mp4";
+const ROBOT = "/assets/pfs-orion-r-robotic-cell_12c36106.png";
+const ROBOTIC_VIDEO = "/assets/pfs-robotic-cells-hero-v2_5c50c32e.mp4";
+const CONVEYOR_IMG = "/assets/yellow-conveyor-system_8b253b1f.jpg";
+const CONVEYOR_VIDEO = "/assets/pfs-conveyor-hero_b159dbda.mp4";
+const INTEGRATED_SYSTEM = "/assets/pfs-integrated-system-line_ad6dc185.png";
+const SYSTEM_INTEGRATION_VIDEO = "/assets/pfs-system-integration-hero_2d68f8ec.mp4";
+const ZENITH_OVEN_CONVEYOR = "/assets/pfs-zenith-oven-conveyor_5da05385.jpg";
+const CONVEYOR_OVen_LINE = "/assets/pfs-conveyor-oven-line_a1034fad.png";
+const CONVEYOR_PANORAMIC = "/assets/pfs-conveyor-panoramic_5c197ba2.png";
 
 interface RelatedProduct { title: string; subtitle: string; href: string; image: string; }
 interface FAQItem { q: string; a: string; }
@@ -69,10 +103,10 @@ const CONTENT: Record<string, SubContent> = {
       ZENITH_OVEN_CONVEYOR,
       CONVEYOR_OVen_LINE,
       CONVEYOR_PANORAMIC,
-      "/manus-storage/pfs-auto-powder-line1_3bb98899.png",
-      "/manus-storage/pfs-auto-powder-booth_355e5ffc.png",
-      "/manus-storage/pfs-auto-powder-conveyor_14f8b84a.png",
-      "/manus-storage/pfs-auto-powder-operator_24e559e8.jpg",
+      "/assets/pfs-auto-powder-line1_3bb98899.png",
+      "/assets/pfs-auto-powder-booth_355e5ffc.png",
+      "/assets/pfs-auto-powder-conveyor_14f8b84a.png",
+      "/assets/pfs-auto-powder-operator_24e559e8.jpg",
     ],
     related: [
       { title: "Pretreatment Systems", subtitle: "Chemical wash & prep before painting", href: "/integration-automation/pretreatment-systems", image: PRETREAT },
@@ -114,12 +148,12 @@ const CONTENT: Record<string, SubContent> = {
       ZENITH_OVEN_CONVEYOR,
       CONVEYOR_OVen_LINE,
       CONVEYOR_PANORAMIC,
-      "/manus-storage/pfs-powder-recovery-lines_a80d3e22.png",
-      "/manus-storage/pfs-auto-powder-line1_3bb98899.png",
-      "/manus-storage/pfs-auto-powder-booth_355e5ffc.png",
-      "/manus-storage/pfs-auto-powder-conveyor_14f8b84a.png",
-      "/manus-storage/pfs-auto-powder-operator_24e559e8.jpg",
-      "/manus-storage/pfs-robotic-arm-red-spray_90b1e89b.png",
+      "/assets/pfs-powder-recovery-lines_a80d3e22.png",
+      "/assets/pfs-auto-powder-line1_3bb98899.png",
+      "/assets/pfs-auto-powder-booth_355e5ffc.png",
+      "/assets/pfs-auto-powder-conveyor_14f8b84a.png",
+      "/assets/pfs-auto-powder-operator_24e559e8.jpg",
+      "/assets/pfs-robotic-arm-red-spray_90b1e89b.png",
     ],
     related: [
       { title: "Pretreatment Systems", subtitle: "Chemical wash before powder coating", href: "/integration-automation/pretreatment-systems", image: PRETREAT },
@@ -130,7 +164,7 @@ const CONTENT: Record<string, SubContent> = {
       { q: "What is a turnkey powder coating line?", a: "A turnkey powder coating line is a complete automated finishing system where a single manufacturer — PFS — designs, engineers, fabricates, installs, and commissions every stage of the line. This includes the pretreatment wash system, powder application booth, powder recovery system, conveyor, curing oven, and controls. You receive a production-ready system with a single point of accountability." },
       { q: "What is the difference between a batch and a conveyor powder coating line?", a: "A batch powder coating system processes parts in groups — parts are loaded, coated, and cured in discrete batches. A conveyor powder coating line moves parts continuously through the pretreatment, application, and curing stages on a conveyor. Conveyor lines offer higher throughput and lower labor cost per part, while batch systems offer more flexibility for low-volume, high-mix production." },
       { q: "How does powder recovery work on a PFS powder coating line?", a: "PFS powder coating lines use cyclone separators and cartridge filter recovery systems to reclaim overspray powder for reuse. Recovery efficiency varies by powder type and booth design, but well-designed systems typically achieve 95–98% powder utilization. Color change procedures are engineered into the line design to minimize changeover time and cross-contamination." },
-      { q: "What NFPA standards apply to powder coating lines?", a: "PFS powder coating lines are engineered to NFPA 33 (Standard for Spray Application Using Flammable or Combustible Materials), which covers powder coating operations, booth ventilation, fire suppression, and electrical classification requirements. All PFS powder coating systems include the required ventilation, grounding, and fire protection systems to meet NFPA 33 compliance." },
+      { q: "What NFPA standards apply to powder coating lines?", a: "PFS powder coating lines are engineered to NFPA 33 (Standard for Spray Application Using Flammable or Combustible Materials), which covers powder coating operations, booth ventilation, fire suppression, and electrical classification requirements. All PFS Nova Series powder coating systems include the required ventilation, grounding, and fire protection systems to meet NFPA 33 compliance." },
       { q: "Can PFS design a powder coating line for large or heavy parts?", a: "Yes. PFS designs powder coating lines for a wide range of part sizes and weights, from small components to large structural assemblies. Conveyor load capacity, booth dimensions, oven opening size, and hanger spacing are all engineered to your specific part envelope and weight." },
     ],
   },
@@ -159,10 +193,10 @@ const CONTENT: Record<string, SubContent> = {
       ZENITH_OVEN_CONVEYOR,
       CONVEYOR_OVen_LINE,
       CONVEYOR_PANORAMIC,
-      "/manus-storage/pfs-auto-powder-line1_3bb98899.png",
-      "/manus-storage/pfs-auto-powder-booth_355e5ffc.png",
-      "/manus-storage/pfs-auto-powder-conveyor_14f8b84a.png",
-      "/manus-storage/pfs-auto-powder-operator_24e559e8.jpg",
+      "/assets/pfs-auto-powder-line1_3bb98899.png",
+      "/assets/pfs-auto-powder-booth_355e5ffc.png",
+      "/assets/pfs-auto-powder-conveyor_14f8b84a.png",
+      "/assets/pfs-auto-powder-operator_24e559e8.jpg",
     ],
     related: [
       { title: "Liquid Paint Lines", subtitle: "Complete automated liquid paint line", href: "/integration-automation/liquid-paint-lines", image: PAINT },
@@ -236,9 +270,9 @@ const CONTENT: Record<string, SubContent> = {
     ],
     img: ROBOT,
     galleryImages: [
-      "/manus-storage/pfs-orion-r-robotic-cell_12c36106.png",
-      "/manus-storage/pfs-robotic-booth_d873cffd.png",
-      "/manus-storage/pfs-robotic-arm-red-spray_90b1e89b.png",
+      "/assets/pfs-orion-r-robotic-cell_12c36106.png",
+      "/assets/pfs-robotic-booth_d873cffd.png",
+      "/assets/pfs-robotic-arm-red-spray_90b1e89b.png",
     ],
     related: [
       { title: "Conveyor Systems", subtitle: "Move parts through the robotic cell", href: "/integration-automation/conveyor-systems", image: CONVEYOR_IMG },
@@ -278,12 +312,12 @@ const CONTENT: Record<string, SubContent> = {
       INTEGRATED_SYSTEM,
       CONVEYOR_OVen_LINE,
       CONVEYOR_PANORAMIC,
-      "/manus-storage/pfs-powder-recovery-lines_a80d3e22.png",
-      "/manus-storage/pfs-auto-powder-line1_3bb98899.png",
-      "/manus-storage/pfs-auto-powder-booth_355e5ffc.png",
-      "/manus-storage/pfs-auto-powder-conveyor_14f8b84a.png",
-      "/manus-storage/pfs-auto-powder-operator_24e559e8.jpg",
-      "/manus-storage/pfs-robotic-arm-red-spray_90b1e89b.png",
+      "/assets/pfs-powder-recovery-lines_a80d3e22.png",
+      "/assets/pfs-auto-powder-line1_3bb98899.png",
+      "/assets/pfs-auto-powder-booth_355e5ffc.png",
+      "/assets/pfs-auto-powder-conveyor_14f8b84a.png",
+      "/assets/pfs-auto-powder-operator_24e559e8.jpg",
+      "/assets/pfs-robotic-arm-red-spray_90b1e89b.png",
     ],
     related: [
       { title: "Conveyor Systems", subtitle: "Backbone of any automated line", href: "/integration-automation/conveyor-systems", image: CONVEYOR_IMG },
@@ -362,11 +396,11 @@ export default function IntegrationSubPage() {
         bgImage={content.img}
         bgVideo={
           sub === "liquid-paint-lines" ? PAINT_VIDEO :
-            sub === "pretreatment-systems" ? PRETREAT_VIDEO :
-              sub === "robotic-finishing-cells" ? ROBOTIC_VIDEO :
-                sub === "conveyor-systems" ? CONVEYOR_VIDEO :
-                  sub === "system-integration" ? SYSTEM_INTEGRATION_VIDEO :
-                    sub === "powder-coating-lines" ? POWDER_VIDEO : undefined
+          sub === "pretreatment-systems" ? PRETREAT_VIDEO :
+          sub === "robotic-finishing-cells" ? ROBOTIC_VIDEO :
+          sub === "conveyor-systems" ? CONVEYOR_VIDEO :
+          sub === "system-integration" ? SYSTEM_INTEGRATION_VIDEO :
+          sub === "powder-coating-lines" ? POWDER_VIDEO : undefined
         }
         ctaPricingHref={`/contact/request-a-quote?from=integration-${sub}`}
       />
@@ -377,10 +411,8 @@ export default function IntegrationSubPage() {
           <div className="grid lg:grid-cols-3 gap-10">
             <div className="lg:col-span-2">
               <span className="section-label" style={{ color: "#1B2B4B" }}>Solution Overview</span>
-              <h2 data-animation="slideLeft" className="section-heading">{content.title}</h2>
-              <p className="section-body mb-5">{content.body}</p>
-              {content.body2 && <p className="section-body mb-5">{content.body2}</p>}
-              {content.body3 && <p className="section-body mb-8">{content.body3}</p>}
+              <h2 className="section-heading">{content.title}</h2>
+              <IntegrationAccordion body={content.body} body2={content.body2} body3={content.body3} title={content.title} />
 
               <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.9rem", fontWeight: 600, color: "#1a1a1a", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: "0.75rem" }}>What's Included</h3>
               <ul className="space-y-2 mb-8">
@@ -391,8 +423,8 @@ export default function IntegrationSubPage() {
                 ))}
               </ul>
               <div className="flex flex-wrap gap-3">
-                <Link data-animation="slideLeft" href={`/contact/request-a-quote?from=integration-${sub}`}><span className="btn-glow">Request Info <ArrowRight size={14} /></span></Link>
-                <Link data-animation="slideRight" href="/contact/talk-to-an-engineer"><span className="btn-outline">Talk to an Engineer</span></Link>
+                <Link href={`/contact/request-a-quote?from=integration-${sub}`}><span className="btn-glow">Request Info <ArrowRight size={14} /></span></Link>
+                <Link href="/contact/talk-to-an-engineer"><span className="btn-outline">Talk to an Engineer</span></Link>
               </div>
             </div>
             <div>
@@ -430,12 +462,12 @@ export default function IntegrationSubPage() {
           <div className="container" style={{ maxWidth: "800px" }}>
             <div className="mb-8">
               <span className="section-label" style={{ color: "#1B2B4B" }}>FAQ</span>
-              <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.4rem, 3vw, 1.9rem)", fontWeight: 700, color: "#1a1a1a", textTransform: "uppercase", letterSpacing: "0.02em", marginTop: "0.25rem" }}>
+              <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.4rem, 3vw, 1.9rem)", fontWeight: 700, color: "#1a1a1a", textTransform: "uppercase", letterSpacing: "0.02em", marginTop: "0.25rem" }}>
                 Frequently Asked Questions
               </h2>
             </div>
             <FAQAccordion faqs={content.faqs} />
-            <div data-animation="slideRight" className="mt-8">
+            <div className="mt-8">
               <Link href="/contact/talk-to-an-engineer"><span className="btn-glow">Ask an Engineer <ArrowRight size={14} /></span></Link>
             </div>
           </div>
@@ -448,7 +480,7 @@ export default function IntegrationSubPage() {
           <div className="container">
             <div className="mb-8">
               <span className="section-label" style={{ color: "#1B2B4B" }}>Complete Your System</span>
-              <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.4rem, 3vw, 1.9rem)", fontWeight: 700, color: "#1a1a1a", textTransform: "uppercase", letterSpacing: "0.02em", marginTop: "0.25rem" }}>
+              <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.4rem, 3vw, 1.9rem)", fontWeight: 700, color: "#1a1a1a", textTransform: "uppercase", letterSpacing: "0.02em", marginTop: "0.25rem" }}>
                 You May Also Need
               </h3>
             </div>
@@ -456,12 +488,12 @@ export default function IntegrationSubPage() {
               {content.related.map((rp) => (
                 <Link key={rp.href} href={rp.href}>
                   <div className="group cursor-pointer" style={{ backgroundColor: "#ffffff", border: "1px solid #e8e8e6", overflow: "hidden", transition: "box-shadow 0.2s" }}>
-                    <div style={{ aspectRatio: "16/9", overflow: "hidden", position: "relative" }} className="card-image">
+                    <div style={{ aspectRatio: "16/9", overflow: "hidden", position: "relative" }}>
                       <img src={rp.image} alt={`PFS ${rp.title}`} style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.4s ease" }} className="group-hover:scale-105" />
                     </div>
                     <div style={{ padding: "1.25rem" }}>
-                      <h4 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1rem", fontWeight: 700, color: "#1a1a1a", textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: "0.25rem" }}>{rp.title}</h4>
-                      <p data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#666", lineHeight: 1.5, marginBottom: "0.75rem" }}>{rp.subtitle}</p>
+                      <h4 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1rem", fontWeight: 700, color: "#1a1a1a", textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: "0.25rem" }}>{rp.title}</h4>
+                      <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#666", lineHeight: 1.5, marginBottom: "0.75rem" }}>{rp.subtitle}</p>
                       <span style={{ display: "inline-flex", alignItems: "center", gap: "0.3rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1B2B4B" }}>
                         Learn More <ArrowRight size={11} />
                       </span>

@@ -5,7 +5,7 @@
 
 import { ArrowRight } from "lucide-react";
 
-const FACILITY_IMG = "/manus-storage/pfs-facility-building_bece7d21.jpg";
+const FACILITY_IMG = "/assets/pfs-facility-building_bece7d21.jpg";
 
 export default function DistributorSection() {
   const scrollTo = (id: string) => {

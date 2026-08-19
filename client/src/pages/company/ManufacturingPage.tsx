@@ -3,14 +3,15 @@
  * Hero: HeroShotforWebsite.mov (converted to MP4) — full-bleed autoplay video
  * Shows PFS Santa Rosa manufacturing facility, fabrication process, and quality control.
  */
+import { useEffect } from 'react';
 import { Link } from "wouter";
 import { ArrowRight, Wrench, CheckCircle, Factory } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
-const HERO_VIDEO = "/manus-storage/manufacturing-hero_9216dee6.mp4";
+const HERO_VIDEO = "/assets/manufacturing-hero_9216dee6.mp4";
 
 const STATS = [
-  { num: "100%", label: "USA Fabricated" },
+  { num: "100%",   label: "USA Fabricated" },
   { num: "1,000+", label: "Systems Installed" },
   { num: "ETL/UL", label: "Listed Components" },
   { num: "NFPA 33", label: "Built to Standard" },
@@ -41,6 +42,24 @@ export default function ManufacturingPage() {
     canonical: "/company/manufacturing",
   });
 
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "PFS Manufacturing Facility",
+      "url": "https://pfsspraybooths.com/company/manufacturing",
+      "description": "PFS Industrial Finishing Equipment manufactures spray booths, ovens, and finishing systems in-house at our Santa Rosa, CA facility using domestic steel and ETL-certified components.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "PFS Industrial Finishing Equipment",
+        "url": "https://pfsspraybooths.com"
+      }
+    });
+    document.head.appendChild(script);
+    return () => { if (script.parentNode) script.parentNode.removeChild(script); };
+  }, []);
   return (
     <div style={{ background: "#fff" }}>
 
@@ -127,7 +146,7 @@ export default function ManufacturingPage() {
           </span>
 
           {/* Headline */}
-          <h1 data-animation="slideLeft"
+          <h1
             style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "clamp(2.6rem, 7vw, 5rem)",
@@ -143,7 +162,7 @@ export default function ManufacturingPage() {
             Engineered to Last.
           </h1>
 
-          <p data-animation="slideLeft"
+          <p
             style={{
               fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
               fontSize: "clamp(0.95rem, 1.3vw, 1.1rem)",
@@ -158,7 +177,7 @@ export default function ManufacturingPage() {
 
           {/* CTAs */}
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <Link data-animation="slideLeft" href="/contact/request-a-quote">
+            <Link href="/contact/request-a-quote">
               <button
                 style={{
                   fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
@@ -182,7 +201,7 @@ export default function ManufacturingPage() {
                 REQUEST INFO <ArrowRight size={14} />
               </button>
             </Link>
-            <Link data-animation="slideRight" href="/products">
+            <Link href="/products">
               <button
                 style={{
                   fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
@@ -279,7 +298,7 @@ export default function ManufacturingPage() {
           >
             OUR CAPABILITIES
           </span>
-          <h2 data-animation="slideLeft"
+          <h2
             style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)",
@@ -293,7 +312,7 @@ export default function ManufacturingPage() {
             Everything Under One Roof
           </h2>
 
-          <div data-animation="fadeIn"
+          <div
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(3, 1fr)",
@@ -364,7 +383,7 @@ export default function ManufacturingPage() {
             className="mfg-body-grid"
           >
             <div>
-              <h2 data-animation="slideLeft"
+              <h2
                 style={{
                   fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
                   fontSize: "clamp(1.5rem, 2.5vw, 2rem)",
@@ -385,7 +404,7 @@ export default function ManufacturingPage() {
                   marginBottom: "1rem",
                 }}
               >
-                PFS was founded in Santa Rosa, California with a single mission: build the best industrial finishing equipment in North America. Over 35 years later, every system is still engineered to order by our in-house team and built on our own manufacturing floor — not outsourced, not assembled from off-the-shelf kits.
+                PFS was founded in 2012 in Santa Rosa, California with a single mission: build the best industrial finishing equipment in North America. With over 20 years of combined industry experience behind our team, every system is still engineered to order by our in-house team and built on our own manufacturing floor — not outsourced, not assembled from off-the-shelf kits.
               </p>
               <p
                 style={{
@@ -465,7 +484,7 @@ export default function ManufacturingPage() {
           }}
         >
           <div>
-            <h2 data-animation="slideLeft"
+            <h2
               style={{
                 fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
                 fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
@@ -488,7 +507,7 @@ export default function ManufacturingPage() {
             </p>
           </div>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <Link data-animation="slideLeft" href="/contact/request-a-quote">
+            <Link href="/contact/request-a-quote">
               <button
                 style={{
                   fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
@@ -513,7 +532,7 @@ export default function ManufacturingPage() {
               </button>
             </Link>
             <a href="tel:8885457715">
-              <button data-animation="slideRight"
+              <button
                 style={{
                   fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
                   fontWeight: 700,

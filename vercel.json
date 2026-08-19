@@ -1,9 +1,19 @@
 {
+  "version": 2,
   "buildCommand": "pnpm run build",
   "outputDirectory": "dist/public",
-  "installCommand": "pnpm install",
-  "framework": null,
+  "framework": "vite",
   "redirects": [
+    {
+      "source": "/about",
+      "destination": "/company",
+      "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "/service",
+      "permanent": true
+    },
     {
       "source": "/hydrogen-service-bays",
       "destination": "/products/custom-solutions/hydrogen-bus-finishing-system",
@@ -12,6 +22,16 @@
     {
       "source": "/custom-hydrogen-service-bays-for-safe-vehicle-servicing",
       "destination": "/products/custom-solutions/hydrogen-bus-finishing-system",
+      "permanent": true
+    },
+    {
+      "source": "/service/california-waste",
+      "destination": "/service/spray-to-waste",
+      "permanent": true
+    },
+    {
+      "source": "/parts/filters/andreae",
+      "destination": "/parts/filters/paint-booth-filters",
       "permanent": true
     }
   ],

@@ -5,7 +5,7 @@
 
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
-const HERO_IMG = "/manus-storage/pfs-hero-booth-9udTMKwmSMnYLiux7h7TU9.webp";
+const HERO_IMG = "/assets/pfs-hero-booth-9udTMKwmSMnYLiux7h7TU9.webp";
 
 const specs = [
   "Natural gas or propane fuel options",

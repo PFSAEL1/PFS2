@@ -1,4 +1,3 @@
-const HERO_VIDEO = "/manus-storage/pfs-facility-drone-hero_ca12546c.mp4";
 /**
  * PFS Bay Area Spray Booth Service Landing Page
  * Route: /spray-booth-service-bay-area
@@ -8,7 +7,7 @@ import { Link } from "wouter";
 import { ArrowRight, Phone, CheckCircle, MapPin, Clock, Shield, Wrench, Star, Filter } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
-const HERO_IMG = "/manus-storage/pfs-service-hero-img_017cbbfb.jpg";
+const HERO_IMG = "/assets/pfs-service-hero-img_017cbbfb.jpg";
 
 const BAY_AREA_COUNTIES = [
   "Alameda County", "Contra Costa County", "Marin County", "Napa County",
@@ -133,7 +132,7 @@ export default function BayAreaServicePage() {
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "Platinum Finishing Systems — Bay Area Spray Booth Service",
+        "name": "PFS Industrial Finishing Equipment — Bay Area Spray Booth Service",
         "url": "https://platinumfinishingsystems.com/spray-booth-service-bay-area",
         "telephone": "+18885457715",
         "email": "info@pfsspraybooths.com",
@@ -213,41 +212,36 @@ export default function BayAreaServicePage() {
     <div style={{ background: "#f8f9fa", minHeight: "100vh" }}>
       {/* HERO */}
       <section style={{ position: "relative", height: "70vh", minHeight: 520, overflow: "hidden" }}>
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          disablePictureInPicture
-          poster={HERO_IMG}
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", opacity: 0.45, zIndex: 0 }}>
-          <source src="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4" type="video/mp4" />
-        </video>
+        <img
+          src={HERO_IMG}
+          alt="PFS spray booth service technician Bay Area California"
+          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center" }}
+        />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0.15) 100%)" }} />
         <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center" }}>
           <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 2rem", width: "100%" }}>
             <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(0,168,150,0.9)", color: "#fff", fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", padding: "6px 14px", borderRadius: 4, marginBottom: 20 }}>
               <MapPin size={12} /> BAY AREA — 9 COUNTIES — 20+ YEARS
             </div>
-            <h1 data-animation="slideLeft" style={{ color: "#fff", fontSize: "clamp(2rem,5vw,3.2rem)", fontWeight: 900, lineHeight: 1.1, marginBottom: 16, textTransform: "uppercase", letterSpacing: "-0.01em" }}>
+            <h1 style={{ color: "#fff", fontSize: "clamp(2rem,5vw,3.2rem)", fontWeight: 900, lineHeight: 1.1, marginBottom: 16, textTransform: "uppercase", letterSpacing: "-0.01em" }}>
               Bay Area Spray Booth<br />Service & Repair
             </h1>
-            <p data-animation="slideLeft" style={{ color: "rgba(255,255,255,0.88)", fontSize: "clamp(0.95rem,2vw,1.15rem)", maxWidth: 560, marginBottom: 12, lineHeight: 1.6 }}>
+            <p style={{ color: "rgba(255,255,255,0.88)", fontSize: "clamp(0.95rem,2vw,1.15rem)", maxWidth: 560, marginBottom: 12, lineHeight: 1.6 }}>
               BAAQMD Regulation 8 Rule 27 compliant service, repair, and inspections for San Francisco, Oakland, San Jose, and all nine Bay Area counties.
             </p>
             <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.9rem", marginBottom: 28, letterSpacing: "0.04em" }}>
               NFPA 33 &nbsp;·&nbsp; CARB &nbsp;·&nbsp; BAAQMD &nbsp;·&nbsp; NESHAP &nbsp;·&nbsp; OSHA 1910.107
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
-              <Link data-animation="slideLeft" href="/contact/service-request">
-                <a className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#00a896", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase" }}>
+              <Link href="/contact/service-request">
+                <a className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#00a896", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase", transition: "all 0.2s" }}>
                   REQUEST SERVICE <ArrowRight size={16} />
                 </a>
               </Link>
-              <a href="tel:+18885457715" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(255,255,255,0.7)", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase" }}>
+              <a href="tel:+18885457715" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(255,255,255,0.7)", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase", transition: "all 0.2s" }}>
                 <Phone size={16} /> (888) 545-7715
               </a>
-              <a data-animation="slideRight" href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(0,168,150,0.7)", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase" }}>
+              <a href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(0,168,150,0.7)", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase", transition: "all 0.2s" }}>
                 <Filter size={16} /> PFS FILTERS
               </a>
             </div>
@@ -279,7 +273,7 @@ export default function BayAreaServicePage() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center" }}>
             <div>
               <div style={{ color: "#00a896", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 12 }}>BAAQMD COMPLIANCE</div>
-              <h2 data-animation="slideLeft" style={{ fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 900, color: "#0a1628", marginBottom: 20, lineHeight: 1.2 }}>
+              <h2 style={{ fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 900, color: "#0a1628", marginBottom: 20, lineHeight: 1.2 }}>
                 Bay Area Air Quality Management District — Regulation 8 Rule 27
               </h2>
               <p style={{ color: "#444", lineHeight: 1.7, marginBottom: 16 }}>
@@ -320,9 +314,9 @@ export default function BayAreaServicePage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 48 }}>
             <div style={{ color: "#00a896", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 12 }}>WHAT WE DO</div>
-            <h2 data-animation="slideLeft" style={{ fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 900, color: "#0a1628" }}>Bay Area Spray Booth Services</h2>
+            <h2 style={{ fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 900, color: "#0a1628" }}>Bay Area Spray Booth Services</h2>
           </div>
-          <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
             {SERVICES.map((svc) => (
               <div key={svc.title} style={{ background: "#fff", border: "1px solid #e5e7eb", borderRadius: 8, padding: 28 }}>
                 <svc.icon size={28} style={{ color: "#00a896", marginBottom: 14 }} />
@@ -344,9 +338,9 @@ export default function BayAreaServicePage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 48 }}>
             <div style={{ color: "#00a896", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 12 }}>WHY PFS</div>
-            <h2 data-animation="slideLeft" style={{ fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 900, color: "#fff" }}>The Bay Area's Manufacturer-Direct Service Provider</h2>
+            <h2 style={{ fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 900, color: "#fff" }}>The Bay Area's Manufacturer-Direct Service Provider</h2>
           </div>
-          <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 24 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 24 }}>
             {WHY_PFS.map((item) => (
               <div key={item.title} style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: 24 }}>
                 <item.icon size={24} style={{ color: "#00a896", marginBottom: 12 }} />
@@ -363,12 +357,12 @@ export default function BayAreaServicePage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 48 }}>
             <div style={{ color: "#00a896", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 12 }}>INDUSTRIES SERVED</div>
-            <h2 data-animation="slideLeft" style={{ fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 900, color: "#0a1628" }}>Bay Area Industries We Serve</h2>
+            <h2 style={{ fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 900, color: "#0a1628" }}>Bay Area Industries We Serve</h2>
             <p style={{ color: "#666", maxWidth: 600, margin: "12px auto 0", lineHeight: 1.6 }}>
               From Silicon Valley electronics manufacturers to East Bay aerospace contractors, PFS serves every finishing industry across the nine-county Bay Area.
             </p>
           </div>
-          <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20 }}>
             {INDUSTRIES.map((ind) => (
               <div key={ind.name} style={{ background: "#f8f9fa", border: "1px solid #e5e7eb", borderRadius: 8, padding: 20 }}>
                 <h3 style={{ fontSize: "0.82rem", fontWeight: 800, color: "#0a1628", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 8 }}>{ind.name}</h3>
@@ -384,7 +378,7 @@ export default function BayAreaServicePage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 48 }}>
             <div style={{ color: "#00a896", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 12 }}>SERVICE AREA</div>
-            <h2 data-animation="slideLeft" style={{ fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 900, color: "#0a1628" }}>All Nine Bay Area Counties</h2>
+            <h2 style={{ fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 900, color: "#0a1628" }}>All Nine Bay Area Counties</h2>
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center", marginBottom: 40 }}>
             {BAY_AREA_COUNTIES.map((county) => (
@@ -409,16 +403,16 @@ export default function BayAreaServicePage() {
       <section style={{ background: "#fff", padding: "48px 2rem" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 32 }}>
-            <h2 data-animation="slideLeft" style={{ fontSize: "1.3rem", fontWeight: 800, color: "#0a1628" }}>Also Serving All of California</h2>
+            <h2 style={{ fontSize: "1.3rem", fontWeight: 800, color: "#0a1628" }}>Also Serving All of California</h2>
             <p style={{ color: "#666", marginTop: 8 }}>PFS provides spray booth service, manufacturing, and compliance inspections statewide.</p>
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 16, justifyContent: "center" }}>
-            <Link data-animation="slideLeft" href="/spray-booth-service-california">
+            <Link href="/spray-booth-service-california">
               <a className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#00a896", color: "#fff", padding: "12px 24px", fontWeight: 700, fontSize: "0.82rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase", borderRadius: 4, transition: "all 0.2s" }}>
                 <MapPin size={14} /> California Service Page <ArrowRight size={14} />
               </a>
             </Link>
-            <Link data-animation="slideRight" href="/spray-booth-service-los-angeles">
+            <Link href="/spray-booth-service-los-angeles">
               <a className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#0a1628", color: "#fff", padding: "12px 24px", fontWeight: 700, fontSize: "0.82rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase", borderRadius: 4, transition: "all 0.2s" }}>
                 <MapPin size={14} /> Los Angeles Service Page <ArrowRight size={14} />
               </a>
@@ -430,19 +424,19 @@ export default function BayAreaServicePage() {
       {/* CTA FOOTER */}
       <section style={{ background: "#0a1628", padding: "64px 2rem", textAlign: "center" }}>
         <div style={{ maxWidth: 700, margin: "0 auto" }}>
-          <h2 data-animation="slideLeft" style={{ color: "#fff", fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 900, marginBottom: 16 }}>
+          <h2 style={{ color: "#fff", fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 900, marginBottom: 16 }}>
             Ready to Schedule Bay Area Service?
           </h2>
           <p style={{ color: "rgba(255,255,255,0.7)", marginBottom: 32, lineHeight: 1.6 }}>
             Call our Santa Rosa headquarters or submit a service request online. We respond same-day for emergency calls throughout all nine Bay Area counties.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 16, justifyContent: "center" }}>
-            <Link data-animation="slideLeft" href="/contact/service-request">
-              <a className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#00a896", color: "#fff", padding: "16px 32px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase" }}>
+            <Link href="/contact/service-request">
+              <a className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#00a896", color: "#fff", padding: "16px 32px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase", transition: "all 0.2s" }}>
                 REQUEST SERVICE <ArrowRight size={16} />
               </a>
             </Link>
-            <a data-animation="slideRight" href="tel:+18885457715" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(255,255,255,0.5)", color: "#fff", padding: "16px 32px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase" }}>
+            <a href="tel:+18885457715" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(255,255,255,0.5)", color: "#fff", padding: "16px 32px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase", transition: "all 0.2s" }}>
               <Phone size={16} /> (888) 545-7715
             </a>
           </div>

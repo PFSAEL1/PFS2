@@ -12,7 +12,6 @@ import MobileCTABar from "./components/MobileCTABar";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 
-
 // Products
 import ProductsHub from "./pages/products/ProductsHub";
 import PaintBoothsHub from "./pages/products/PaintBoothsHub";
@@ -21,7 +20,6 @@ import ContainerBoothPage from "./pages/products/ContainerBoothPage";
 import EnclosedBoothsPage from "./pages/products/EnclosedBoothsPage";
 import SprinterVanBoothPage from "./pages/products/SprinterVanBoothPage";
 import PowderBoothsHub from "./pages/products/PowderBoothsHub";
-import HydrogenBusPage from "./pages/products/HydrogenBusPage";
 import OvensHub from "./pages/products/OvensHub";
 import PrepSupportHub from "./pages/products/PrepSupportHub";
 import PaintWallsPage from "./pages/products/PaintWallsPage";
@@ -53,6 +51,7 @@ import WalkInOvenPage from "./pages/products/WalkInOvenPage";
 import MixingRoomPage from "./pages/products/MixingRoomPage";
 import { BlastingBoothsPage, ReclaimBlastingBoothsPage } from "./pages/products/BlastingBoothPage";
 import WashBoothPage from "./pages/products/WashBoothPage";
+import HydrogenBusPage from "./pages/products/HydrogenBusPage";
 
 // Industries
 import IndustriesHub from "./pages/industries/IndustriesHub";
@@ -78,6 +77,8 @@ import IntegrationSubPage from "./pages/integration/IntegrationSubPage";
 import ServiceHub from "./pages/service/ServiceHub";
 import ServiceSubPage from "./pages/service/ServiceSubPage";
 import HazLocServicesPage from "./pages/service/HazLocServicesPage";
+import SprayToWasteServicePage from "./pages/service/SprayToWasteServicePage";
+import PowderReclaimServicePage from "./pages/service/PowderReclaimServicePage";
 
 // Company
 import CompanyHub from "./pages/company/CompanyHub";
@@ -92,6 +93,13 @@ import NewsPage from "./pages/company/NewsPage";
 import ResourcesHub from "./pages/resources/ResourcesHub";
 import ResourcesSubPage from "./pages/resources/ResourcesSubPage";
 import ResourcesFAQsPage from "./pages/resources/ResourcesFAQsPage";
+
+// Blog
+import BlogHubPage from "./pages/blog/BlogHubPage";
+import BlogPricingGuidePage from "./pages/blog/BlogPricingGuidePage";
+import BlogCrossflowVsDowndraftPage from "./pages/blog/BlogCrossflowVsDowndraftPage";
+import BlogUL508AControlPanelPage from "./pages/blog/BlogUL508AControlPanelPage";
+import BlogMaintenanceChecklistPage from "./pages/blog/BlogMaintenanceChecklistPage";
 
 // Contact
 import ContactHub from "./pages/contact/ContactHub";
@@ -109,10 +117,12 @@ import SupportPage from "./pages/SupportPage";
 import BecomeADistributorPage from "./pages/BecomeADistributorPage";
 import LegalPage from "./pages/LegalPage";
 import FiltersPage from "./pages/FiltersPage";
+import NeshapFiltersPage from "./pages/filters/NeshapFiltersPage";
+import CaliforniaFiltersPage from "./pages/filters/CaliforniaFiltersPage";
+import PaintBoothFiltersPage from "./pages/filters/PaintBoothFiltersPage";
 import CaliforniaServicePage from "./pages/CaliforniaServicePage";
 import LosAngelesServicePage from "@/pages/LosAngelesServicePage";
 import BayAreaServicePage from "@/pages/BayAreaServicePage";
-import GlobalAnimations from "./GlobalAnimations";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -148,7 +158,6 @@ function Router() {
       <Route path="/products/paint-booths/sprinter-van" component={SprinterVanBoothPage} />
       <Route path="/products/paint-booths/enclosed/:sub" component={ProductSubPage} />
       <Route path="/products/paint-booths/aircraft" component={AircraftBoothPage} />
-      <Route path="/products/custom-solutions/hydrogen-bus-finishing-system" component={HydrogenBusPage} />
       <Route path="/products/paint-booths/crossflow" component={CrossFlowBoothPage} />
       <Route path="/products/paint-booths/open-face" component={OpenFaceBoothPage} />
       <Route path="/products/paint-booths/crossflow-all" component={CrossFlowAllPage} />
@@ -161,6 +170,7 @@ function Router() {
       <Route path="/products/paint-booths/inspection" component={InspectionBoothPage} />
       <Route path="/products/paint-booths/truck-booths" component={TruckBoothsPage} />
       <Route path="/products/paint-booths/wash-booth" component={WashBoothPage} />
+      <Route path="/products/custom-solutions/hydrogen-bus-finishing-system" component={HydrogenBusPage} />
       <Route path="/products/paint-booths/:sub" component={ProductSubPage} />
       <Route path="/products/outdoor-booths" component={OutdoorBoothPage} />
       <Route path="/products/container-booths" component={ContainerBoothPage} />
@@ -213,7 +223,7 @@ function Router() {
       <Route path="/industries/rail-transit" component={RailTransitPage} />
       <Route path="/industries/automotive-manufacturing" component={AutomotiveManufacturingPage} />
       <Route path="/industries/heavy-equipment" component={HeavyEquipmentPage} />
-      <Route path="/industries/energy-utilities" component={EnergyUtilitiesPage} />
+          <Route path="/industries/energy-utilities" component={EnergyUtilitiesPage} />
       <Route path="/industries/:industry" component={IndustryPage} />
 
       {/* Integration & Automation */}
@@ -223,6 +233,11 @@ function Router() {
       {/* Service */}
       <Route path="/service" component={ServiceHub} />
       <Route path="/service/hazardous-location" component={HazLocServicesPage} />
+      <Route path="/service/spray-to-waste" component={SprayToWasteServicePage} />
+      <Route path="/service/powder-reclaim" component={PowderReclaimServicePage} />
+      <Route path="/service/california" component={CaliforniaServicePage} />
+      <Route path="/service/los-angeles" component={LosAngelesServicePage} />
+      <Route path="/service/bay-area" component={BayAreaServicePage} />
       <Route path="/service/:sub" component={ServiceSubPage} />
 
       {/* Dedicated support request page */}
@@ -242,6 +257,13 @@ function Router() {
       <Route path="/resources/faqs" component={ResourcesFAQsPage} />
       <Route path="/resources/:sub" component={ResourcesSubPage} />
 
+      {/* Blog */}
+      <Route path="/blog" component={BlogHubPage} />
+      <Route path="/blog/how-much-does-industrial-spray-booth-cost" component={BlogPricingGuidePage} />
+      <Route path="/blog/crossflow-vs-downdraft-spray-booth" component={BlogCrossflowVsDowndraftPage} />
+      <Route path="/blog/ul508a-certified-control-panel-spray-booth" component={BlogUL508AControlPanelPage} />
+      <Route path="/blog/spray-booth-maintenance-filter-checklist" component={BlogMaintenanceChecklistPage} />
+
       {/* Contact */}
       <Route path="/contact" component={ContactHub} />
       <Route path="/contact/:sub" component={ContactSubPage} />
@@ -252,9 +274,13 @@ function Router() {
       <Route path="/become-a-distributor" component={BecomeADistributorPage} />
       <Route path="/legal" component={LegalPage} />
       <Route path="/filters" component={FiltersPage} />
-      <Route path="/spray-booth-service-california" component={CaliforniaServicePage} />
-      <Route path="/spray-booth-service-los-angeles" component={LosAngelesServicePage} />
-      <Route path="/spray-booth-service-bay-area" component={BayAreaServicePage} />
+      <Route path="/parts/filters/neshap-aerospace-compliance" component={NeshapFiltersPage} />
+      <Route path="/parts/filters/california-west-coast-paint-booth-filters" component={CaliforniaFiltersPage} />
+      <Route path="/parts/filters/paint-booth-filters" component={PaintBoothFiltersPage} />
+      {/* Legacy redirects — keep old URLs alive for SEO */}
+      <Route path="/spray-booth-service-california">{() => { window.location.replace("/service/california"); return null; }}</Route>
+      <Route path="/spray-booth-service-los-angeles">{() => { window.location.replace("/service/los-angeles"); return null; }}</Route>
+      <Route path="/spray-booth-service-bay-area">{() => { window.location.replace("/service/bay-area"); return null; }}</Route>
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
@@ -263,19 +289,16 @@ function Router() {
 
 function App() {
   return (
-    <>
-      <GlobalAnimations />
-      <ErrorBoundary>
-        <ThemeProvider defaultTheme="light">
-          <TooltipProvider>
-            <Toaster />
-            <Layout>
-              <Router />
-            </Layout>
-          </TooltipProvider>
-        </ThemeProvider>
-      </ErrorBoundary>
-    </>
+    <ErrorBoundary>
+      <ThemeProvider defaultTheme="light">
+        <TooltipProvider>
+          <Toaster />
+          <Layout>
+            <Router />
+          </Layout>
+        </TooltipProvider>
+      </ThemeProvider>
+    </ErrorBoundary>
   );
 }
 

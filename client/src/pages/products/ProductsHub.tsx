@@ -3,74 +3,74 @@ import { Link } from "wouter";
 import { ArrowRight, Phone } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
-const HERO_IMG = "/manus-storage/pfs-robotics-card_2aac132b.jpg";
-const HERO_VIDEO = "/manus-storage/pfs-products-hero-robot-video_7cd286b4.mp4";
-const HERO_POSTER = "/manus-storage/pfs-products-hub-hero-poster_bcdcb248.jpg";
+const HERO_IMG = "/assets/pfs-robotics-card_2aac132b.jpg";
+const HERO_VIDEO = "/assets/pfs-products-hero-robot-video_7cd286b4.mp4";
+const HERO_POSTER = "/assets/pfs-products-hub-hero-poster_bcdcb248.jpg";
 
 const FAMILIES = [
   {
     label: "Paint Booths",
     href: "/products/paint-booths",
-    img: "/manus-storage/pfs-paint-booth-sprayer-card_42d3ea13.jpg",
+    img: "/assets/pfs-paint-booth-sprayer-card_42d3ea13.jpg",
     imgPosition: "center 40%",
     desc: "Enclosed, open face, outdoor, shipping container, aircraft, and custom spray paint booths. built with ETL/UL certified components, made in USA.",
     badge: "Most Popular",
-    tags: ["ETL/UL Certified Components", "Made in USA"],
+        tags: ["ETL/UL Certified Components", "Made in USA"],
   },
   {
     label: "Powder Coating Systems",
     href: "/products/powder-booths",
-    img: "/manus-storage/pfs-powder-coating-card2_32de7c98.png",
+    img: "/assets/pfs-powder-coating-card2_32de7c98.png",
     desc: "Spray to waste, powder reclaim, and automated powder coating systems for high-volume finishing lines.",
     badge: null,
-    tags: ["ETL/UL Certified Components", "Made in USA"],
+        tags: ["ETL/UL Certified Components", "Made in USA"],
   },
   {
     label: "Industrial Ovens",
     href: "/products/ovens",
-    img: "/manus-storage/pfs-vulcan-oven-card_ad72eade_316de7d1.png",
+    img: "/assets/pfs-vulcan-oven-card_ad72eade_316de7d1.png",
     imgPosition: "center 50%",
     desc: "Batch, conveyor, walk-in, infrared, and large-equipment curing ovens. Any temperature, any size.",
     badge: null,
-    tags: ["ETL/UL Certified Components", "Made in USA"],
+        tags: ["ETL/UL Certified Components", "Made in USA"],
   },
   {
     label: "Prep & Support",
     href: "/products/prep-support",
-    img: "/manus-storage/pfs-prep-station-curtain-real_c07d32e0.jpg",
+    img: "/assets/pfs-prep-station-curtain-real_c07d32e0.jpg",
     desc: "Prep stations, paint walls, paint mix rooms, sanding and grinding booths for complete finishing environments.",
     badge: null,
-    tags: ["ETL/UL Certified Components", "Made in USA"],
+        tags: ["ETL/UL Certified Components", "Made in USA"],
   },
   {
     label: "Blasting Systems",
     href: "/products/blast-systems",
-    img: "/manus-storage/pfs-blast-systems2_36cb5b96.png",
+    img: "/assets/pfs-blast-systems2_36cb5b96.png",
     imgPosition: "center 55%",
     desc: "Blasting booths, reclaim blasting booths, and containerized blast booths for surface preparation.",
     badge: null,
-    tags: ["ETL/UL Certified Components", "Made in USA"],
+        tags: ["ETL/UL Certified Components", "Made in USA"],
   },
   {
     label: "Air Make-Up Units",
     href: "/products/air-make-up-units",
-    img: "/manus-storage/pfs-amu-card_41f0dd88.jpg",
+    img: "/assets/pfs-amu-card_41f0dd88.jpg",
     desc: "Heated and non-heated AMUs for proper airflow and temperature control. OSHA and NFPA 33 compliant.",
     badge: null,
-    tags: ["ETL/UL Certified Components", "Made in USA"],
+        tags: ["ETL/UL Certified Components", "Made in USA"],
   },
   {
     label: "Environmental Rooms",
     href: "/products/environmental-rooms",
-    img: "/manus-storage/pfs-environmental-room-exterior-showroom_08ee80dd.jpg",
+    img: "/assets/pfs-environmental-room-exterior-showroom_08ee80dd.jpg",
     desc: "Temperature and process-controlled finishing rooms for humidity-sensitive coatings and precision applications.",
     badge: null,
-    tags: ["ETL/UL Certified Components", "Made in USA"],
+        tags: ["ETL/UL Certified Components", "Made in USA"],
   },
   {
     label: "Parts & Filters",
     href: "/products/parts-filters",
-    img: "/manus-storage/pfs-filters-card_8b47eabc.png",
+    img: "/assets/pfs-filters-card_8b47eabc.png",
     desc: "OEM parts, filters, and consumables for all PFS systems. Fast shipping from our US warehouse.",
     badge: null,
     tags: ["OEM Parts", "Fast Shipping"],
@@ -78,7 +78,7 @@ const FAMILIES = [
   {
     label: "Integration & Automation",
     href: "/integration-automation",
-    img: "/manus-storage/pfs-robotics-card_2aac132b.jpg",
+    img: "/assets/pfs-robotics-card_2aac132b.jpg",
     desc: "Conveyor systems, robotic finishing, PLC controls, and full line integration for automated finishing operations.",
     badge: "Enterprise",
     tags: ["Robotic", "PLC Controls"],
@@ -126,6 +126,7 @@ export default function ProductsHub() {
         breadcrumbs={[{ label: "Products" }]}
         bgImage={HERO_IMG}
         bgVideo={HERO_VIDEO}
+        bgPoster={HERO_POSTER}
         bgImagePosition="center 45%"
       />
 
@@ -133,8 +134,8 @@ export default function ProductsHub() {
         <div className="container">
           <div className="mb-6">
             <span className="section-label">Product Families</span>
-            <h2 data-animation="slideLeft" className="section-heading-lg">Everything You Need for Industrial Finishing</h2>
-            <p data-animation="slideLeft" className="section-body max-w-2xl">
+            <h2 className="section-heading-lg">Everything You Need for Industrial Finishing</h2>
+            <p className="section-body max-w-2xl">
               PFS manufactures a complete range of industrial finishing equipment — from spray booths and ovens to blast systems and automation. All products are built with ETL/UL certified components and manufactured in the USA.
             </p>
           </div>
@@ -142,9 +143,9 @@ export default function ProductsHub() {
           {/* Card grid — larger images */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             {FAMILIES.map((f) => (
-              <Link data-animation="fadeIn" key={f.label} href={f.href}>
+              <Link key={f.label} href={f.href}>
                 <div className="group cursor-pointer border border-gray-200 hover:border-[#1B2B4B] transition-all duration-300 hover:shadow-[0_0_24px_rgba(27,43,75,0.15)] overflow-hidden h-full flex flex-col">
-                  <div className="overflow-hidden flex-shrink-0 card-image" style={{ height: "260px" }}>
+                  <div className="overflow-hidden flex-shrink-0" style={{ height: "260px" }}>
                     <img
                       src={f.img}
                       alt={f.label}
@@ -184,7 +185,7 @@ export default function ProductsHub() {
           <div style={{ backgroundColor: "#1a1a1a", padding: "2.5rem 2rem" }}>
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
-                <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.4rem", fontWeight: 700, color: "#ffffff", marginBottom: "0.4rem" }}>
+                <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.4rem", fontWeight: 700, color: "#ffffff", marginBottom: "0.4rem" }}>
                   Ready to Get Pricing?
                 </h3>
                 <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.6 }}>
@@ -192,10 +193,10 @@ export default function ProductsHub() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
-                <Link data-animation="slideLeft" href="/contact/request-a-quote">
+                <Link href="/contact/request-a-quote">
                   <span className="btn-glow flex items-center gap-2">Get Pricing <ArrowRight size={14} /></span>
                 </Link>
-                <a data-animation="slideRight" href="tel:+18885457715">
+                <a href="tel:+18885457715">
                   <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#ffffff", border: "1.5px solid rgba(255,255,255,0.4)", padding: "0.6rem 1.2rem", cursor: "pointer" }}>
                     <Phone size={14} /> (888) 545-7715
                   </span>

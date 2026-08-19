@@ -3,15 +3,15 @@ import { useSEO } from '@/hooks/useSEO';
 import { Link, useParams } from "wouter";
 import { ArrowRight, ChevronRight } from "lucide-react";
 
-const PAINT = "/manus-storage/pfs-paint-booth-sprayer-card_42d3ea13.jpg";
-const POWDER = "/manus-storage/pfs-powder-coating-card2_32de7c98.png";
-const OVEN = "/manus-storage/pfs-vulcan-oven-card_ad72eade_316de7d1.png";
-const AERO = "/manus-storage/pfs-aerospace-jet-in-booth-real_2eb79dc9.png";
-const RAIL_METRO = "/manus-storage/pfs-rail-transit-metro-car_5a87910a.jpeg";
-const AUTOMOTIVE_MFG = "/manus-storage/automotive-manufacturing-booth_c82d7068.jpeg";
-const RAIL_INTERIOR_TRACKS = "/manus-storage/pfs-rail-booth-interior-tracks_b026c178.jpeg";
-const RAIL_INTERIOR_WIDE = "/manus-storage/pfs-rail-booth-interior-tracks-wide_63f2bdbf.jpeg";
-const BOOTH_INTERIOR_OPEN = "/manus-storage/pfs-booth-interior-open-door_3877d125.jpg";
+const PAINT = "/assets/pfs-paint-booth-sprayer-card_42d3ea13.jpg";
+const POWDER = "/assets/pfs-powder-coating-card2_32de7c98.png";
+const OVEN = "/assets/pfs-vulcan-oven-card_ad72eade_316de7d1.png";
+const AERO = "/assets/pfs-aerospace-jet-in-booth-real_2eb79dc9.png";
+const RAIL_METRO = "/assets/pfs-rail-transit-metro-car_5a87910a.jpeg";
+const AUTOMOTIVE_MFG = "/assets/automotive-manufacturing-booth_c82d7068.jpeg";
+const RAIL_INTERIOR_TRACKS = "/assets/pfs-rail-booth-interior-tracks_b026c178.jpeg";
+const RAIL_INTERIOR_WIDE = "/assets/pfs-rail-booth-interior-tracks-wide_63f2bdbf.jpeg";
+const BOOTH_INTERIOR_OPEN = "/assets/pfs-booth-interior-open-door_3877d125.jpg";
 
 interface IndustryContent {
   title: string;
@@ -187,18 +187,6 @@ export default function IndustryPage() {
         subtitle={content.desc}
         breadcrumbs={[{ label: "Industries", href: "/industries" }, { label: content.title }]}
         bgImage={content.img}
-        bgVideo={
-          slug === "aerospace-defense" ? "/manus-storage/industry_aerospace_hero_853cec31.mp4" :
-          slug === "automotive-manufacturing" ? "/manus-storage/pfs-auto-mfg-hero-v3-trimmed_cef14b14.mp4" :
-          slug === "collision-repair" ? "/manus-storage/industry_collision_repair_hero_d7d15cc6.mp4" :
-          slug === "heavy-equipment" ? "/manus-storage/pfs-heavy-equip-hero_e8cc5ad9.mp4" :
-          slug === "industrial-manufacturing" ? "/manus-storage/industry_industrial_warehouse_hero_4adf22bf.mp4" :
-          slug === "marine" ? "/manus-storage/marine_helios_booth_video_73a8ffa6.mp4" :
-          slug === "rail-transit" ? "/manus-storage/pfs-rail-transit-hero-v3_654a85a0.mp4" :
-          slug === "truck-bus-fleet" ? "/manus-storage/industry_truck_fleet_school_bus_hero_27f9918f.mp4" :
-          slug === "woodworking" ? "/manus-storage/pfs-woodworking-hero-v2_d530519c.mp4" :
-          "/manus-storage/industries_hub_coach_bus_hero_b5b46729.mp4"
-        }
       />
       <section className="py-16 bg-white">
         <div className="container">

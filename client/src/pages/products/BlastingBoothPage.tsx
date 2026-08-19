@@ -19,31 +19,31 @@ const BLUE = "#1B2B4B";
 const BLUE_LIGHT = "#2a4a8a";
 
 // ── Images ────────────────────────────────────────────────────────────────────
-const BLASTING_HERO = "/manus-storage/pfs-blast-booth-interior_cf77951a.png";
-const RECLAIM_HERO = "/manus-storage/pfs-blast-reclaim-unit_d0656341.png";
-const FEATURED_BLAST = "/manus-storage/pfs-blast-systems2-gallery_01c11421.png";
-const FEATURED_RECLAIM = "/manus-storage/pfs-blast-reclaim-unit_d0656341.png";
+const BLASTING_HERO   = "/assets/pfs-blast-booth-interior_cf77951a.png";
+const RECLAIM_HERO    = "/assets/pfs-blast-reclaim-unit_d0656341.png";
+const FEATURED_BLAST  = "/assets/pfs-blast-systems2-gallery_01c11421.png";
+const FEATURED_RECLAIM = "/assets/pfs-blast-reclaim-unit_d0656341.png";
 
 const BLAST_GALLERY = [
-  "/manus-storage/pfs-blast-systems2-gallery_01c11421.png",
-  "/manus-storage/pfs-blast-booth-interior_cf77951a.png",
-  "/manus-storage/pfs-blast-reclaim-unit_d0656341.png",
-  "/manus-storage/pfs-blast-booth-door_d3afcc3c.jpg",
-  "/manus-storage/pfs-blast-heic1_c23a30a9.jpg",
-  "/manus-storage/pfs-blast-heic2_82efda1f.jpg",
-  "/manus-storage/pfs-blast-heic3_5967fbd4.jpg",
-  "/manus-storage/pfs-blast-heic4_68457c3f.jpg",
+  "/assets/pfs-blast-systems2-gallery_01c11421.png",
+  "/assets/pfs-blast-booth-interior_cf77951a.png",
+  "/assets/pfs-blast-reclaim-unit_d0656341.png",
+  "/assets/pfs-blast-booth-door_d3afcc3c.jpg",
+  "/assets/pfs-blast-heic1_c23a30a9.jpg",
+  "/assets/pfs-blast-heic2_82efda1f.jpg",
+  "/assets/pfs-blast-heic3_5967fbd4.jpg",
+  "/assets/pfs-blast-heic4_68457c3f.jpg",
 ];
 
 const RECLAIM_GALLERY = [
-  "/manus-storage/pfs-blast-reclaim-unit_d0656341.png",
-  "/manus-storage/pfs-blast-systems2-gallery_01c11421.png",
-  "/manus-storage/pfs-blast-booth-interior_cf77951a.png",
-  "/manus-storage/pfs-blast-booth-door_d3afcc3c.jpg",
-  "/manus-storage/pfs-blast-heic1_c23a30a9.jpg",
-  "/manus-storage/pfs-blast-heic2_82efda1f.jpg",
-  "/manus-storage/pfs-blast-heic3_5967fbd4.jpg",
-  "/manus-storage/pfs-blast-heic4_68457c3f.jpg",
+  "/assets/pfs-blast-reclaim-unit_d0656341.png",
+  "/assets/pfs-blast-systems2-gallery_01c11421.png",
+  "/assets/pfs-blast-booth-interior_cf77951a.png",
+  "/assets/pfs-blast-booth-door_d3afcc3c.jpg",
+  "/assets/pfs-blast-heic1_c23a30a9.jpg",
+  "/assets/pfs-blast-heic2_82efda1f.jpg",
+  "/assets/pfs-blast-heic3_5967fbd4.jpg",
+  "/assets/pfs-blast-heic4_68457c3f.jpg",
 ];
 
 // ── Collapsible accordion component ──────────────────────────────────────────
@@ -354,6 +354,39 @@ export function BlastingBoothsPage() {
     title: "Sandblast Booth Systems | Blast Rooms for Industrial Applications | PFS",
     description: "PFS sandblast booth systems prevent blast media from escaping while protecting workers and the workspace. 11-gauge galvanized steel panels, T8 LED lighting, rubber roll-up doors, crane openings available. OSHA and NFPA 33 compliant. Manufactured in Santa Rosa, CA.",
     canonical: "/products/blast-systems/blasting-booths",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Sandblast Booth System",
+      "description": "PFS sandblast booth systems contain blast media while protecting workers and the workspace. Built for steel fabricators, heavy equipment, and industrial surface preparation.",
+      "brand": {
+        "@type": "Brand",
+        "name": "PFS"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Platinum Finishing Systems",
+        "url": "https://pfsspraybooths.com",
+        "telephone": "+18885457715",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Santa Rosa",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "Platinum Finishing Systems"
+        },
+        "url": "https://pfsspraybooths.com/products/blast/blasting-booth"
+      },
+      "url": "https://pfsspraybooths.com/products/blast/blasting-booth"
+    },
   });
 
   return (
@@ -366,7 +399,8 @@ export function BlastingBoothsPage() {
           { label: "Blasting Systems", href: "/products/blast-systems" },
           { label: "Blasting Booths" },
         ]}
-        bgVideo="/manus-storage/pfs-blast-booth-hero_fe206ed9.mp4"
+        bgVideo="/assets/pfs-blast-booth-hero_fe206ed9.mp4"
+        bgPoster={BLASTING_HERO}
         overlayOpacity={0.35}
         ctaPricingHref="/contact/request-a-quote"
       />
@@ -391,7 +425,7 @@ export function BlastingBoothsPage() {
               </span>
 
               <span className="section-label">Blasting Systems</span>
-              <h2 data-animation="slideLeft" className="section-heading">Blasting Booths</h2>
+              <h2 className="section-heading">Blasting Booths</h2>
               <p className="section-body" style={{ marginBottom: "1.5rem" }}>
                 PFS Goliath Series blast rooms are fully enclosed, purpose-built environments for abrasive blasting operations. Each booth is designed to contain media, protect operators, and capture dust — keeping your facility clean and your team safe. Whether you're blasting structural steel, heavy equipment, aerospace components, or production parts, we size and configure each booth to match your workflow.
               </p>
@@ -419,10 +453,10 @@ export function BlastingBoothsPage() {
 
               {/* CTA row */}
               <div className="flex flex-wrap gap-3 mb-8">
-                <Link data-animation="slideLeft" href="/contact/request-a-quote?from=blast-booth">
+                <Link href="/contact/request-a-quote?from=blast-booth">
                   <span className="btn-glow">Request a Quote <ArrowRight size={14} /></span>
                 </Link>
-                <a data-animation="slideRight" href="tel:8885457715">
+                <a href="tel:8885457715">
                   <span className="btn-outline">Call (888) 545-7715</span>
                 </a>
               </div>
@@ -484,7 +518,7 @@ export function BlastingBoothsPage() {
               {/* Code compliance note */}
               <Accordion title="Code Compliance & Standards">
                 <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.82rem", color: "#444", lineHeight: 1.65 }}>
-                  PFS blast rooms are designed to comply with applicable OSHA and NFPA regulations. All UL and manufactured in the USA with ETL/UL listed components parts are used throughout each system. Local requirements may vary — we recommend consulting your local authority having jurisdiction (AHJ) prior to installation. Our team is available to assist with compliance documentation and equipment specifications.
+                  PFS Atlas Series blast rooms are designed to comply with applicable OSHA and NFPA regulations. All UL and manufactured in the USA with ETL/UL listed components parts are used throughout each system. Local requirements may vary — we recommend consulting your local authority having jurisdiction (AHJ) prior to installation. Our team is available to assist with compliance documentation and equipment specifications.
                 </p>
               </Accordion>
 
@@ -504,15 +538,15 @@ export function BlastingBoothsPage() {
       <section style={{ padding: "2rem 0", backgroundColor: "#1a1a1a" }}>
         <div className="container">
           <span className="section-label" style={{ color: "rgba(255,255,255,0.5)", display: "block", marginBottom: "0.75rem" }}>FIELD SERVICE GALLERY</span>
-          <GalleryGrid images={BLAST_GALLERY.map((src, i) => ({ src, alt: `PFS Blasting Booth ${i + 1}` }))} />
+          <GalleryGrid images={BLAST_GALLERY.map((src, i) => ({ src, alt: `PFS Atlas Series Blasting Booth ${i + 1}` }))} />
         </div>
       </section>
 
       {/* Related products */}
       <SiteProductCardSection
         cards={[
-          { label: "Powder Coating Systems", href: "/products/powder-booths", img: "/manus-storage/pfs-render-powder-booth_3dd083c1.jpg", desc: "The coating process after blasting" },
-          { label: "Enclosed Paint Booths", href: "/products/paint-booths/enclosed", img: "/manus-storage/enclosed-booth-card-zenith_7e010642.jpg", desc: "Paint after blast prep" },
+          { label: "Powder Coating Systems", href: "/products/powder-booths", img: "/assets/pfs-powder-coating-render_d6e2b3a1.jpg", desc: "The coating process after blasting" },
+          { label: "Enclosed Paint Booths", href: "/products/paint-booths/enclosed", img: "/assets/enclosed-booth-card-zenith_7e010642.jpg", desc: "Paint after blast prep" },
         ]}
       />
     </div>
@@ -555,7 +589,7 @@ export function ReclaimBlastingBoothsPage() {
               </span>
 
               <span className="section-label">Blasting Systems</span>
-              <h2 data-animation="slideLeft" className="section-heading">Reclaim Blasting Booths</h2>
+              <h2 className="section-heading">Reclaim Blasting Booths</h2>
               <p className="section-body" style={{ marginBottom: "1.5rem" }}>
                 PFS Goliath Series reclaim blast rooms add an integrated media recovery system to the standard blast booth — dramatically reducing media consumption, disposal costs, and production downtime. Recovered media is automatically classified, cleaned, and returned to the blast machine, keeping your operation running with minimal manual intervention. Available in mechanical bucket elevator or pneumatic vacuum configurations to match your media type and production volume.
               </p>
@@ -583,10 +617,10 @@ export function ReclaimBlastingBoothsPage() {
 
               {/* CTA row */}
               <div className="flex flex-wrap gap-3 mb-8">
-                <Link data-animation="slideLeft" href="/contact/request-a-quote?from=blast-booth">
+                <Link href="/contact/request-a-quote?from=blast-booth">
                   <span className="btn-glow">Request a Quote <ArrowRight size={14} /></span>
                 </Link>
-                <a data-animation="slideRight" href="tel:8885457715">
+                <a href="tel:8885457715">
                   <span className="btn-outline">Call (888) 545-7715</span>
                 </a>
               </div>
@@ -665,25 +699,25 @@ export function ReclaimBlastingBoothsPage() {
 
 
       {/* FAQ SECTION */}
-      <section style={{ background: "#f8f9fb", padding: "clamp(2.5rem, 6vw, 4rem) 0", borderTop: "1px solid #e5e7eb" }}>
-        <div className="container" style={{ maxWidth: "860px" }}>
-          <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
-            <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: "#1B3A6B", textTransform: "uppercase", display: "block", marginBottom: "0.4rem" }}>FREQUENTLY ASKED QUESTIONS</span>
-            <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed','Oswald',sans-serif", fontSize: "clamp(1.4rem,3.5vw,2.2rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Blast Rooms &amp; Abrasive Blasting Booths — Common Questions</h2>
+      <section style={{ background:"#f8f9fb", padding:"clamp(2.5rem, 6vw, 4rem) 0", borderTop:"1px solid #e5e7eb" }}>
+        <div className="container" style={{ maxWidth:"860px" }}>
+          <div style={{ textAlign:"center", marginBottom:"2.5rem" }}>
+            <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:"#1B3A6B",textTransform:"uppercase",display:"block",marginBottom:"0.4rem" }}>FREQUENTLY ASKED QUESTIONS</span>
+            <h2 style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.4rem,3.5vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Blast Rooms &amp; Abrasive Blasting Booths — Common Questions</h2>
           </div>
           {[
             { q: "What is a blast room used for?", a: "A blast room provides an enclosed, ventilated environment for abrasive blasting — the process of propelling abrasive media at high velocity to clean, strip, or profile a surface. Blast rooms capture spent media and dust, protect workers and the surrounding facility, and comply with OSHA and EPA regulations for abrasive blasting operations." },
-            { q: "What types of abrasive media can be used in a PFS blast room?", a: "PFS blast rooms are compatible with all common abrasive media including steel shot, steel grit, aluminum oxide, garnet, glass bead, and crushed glass. The media recovery and reclaim system is sized to match the media type and blasting volume. Contact a PFS engineer to confirm media compatibility for your specific application." },
-            { q: "Does a blast room need to comply with OSHA regulations?", a: "Yes. Abrasive blasting operations are regulated under OSHA 1910.94 and OSHA 1926.57. PFS blast rooms are engineered to meet OSHA ventilation requirements, with airflow designed to maintain dust concentrations below permissible exposure limits (PELs)." },
+            { q: "What types of abrasive media can be used in a PFS Atlas Series blast room?", a: "PFS Atlas Series blast rooms are compatible with all common abrasive media including steel shot, steel grit, aluminum oxide, garnet, glass bead, and crushed glass. The media recovery and reclaim system is sized to match the media type and blasting volume. Contact a PFS engineer to confirm media compatibility for your specific application." },
+            { q: "Does a blast room need to comply with OSHA regulations?", a: "Yes. Abrasive blasting operations are regulated under OSHA 1910.94 and OSHA 1926.57. PFS Atlas Series blast rooms are engineered to meet OSHA ventilation requirements, with airflow designed to maintain dust concentrations below permissible exposure limits (PELs)." },
             { q: "What is the difference between a blast room and a blast cabinet?", a: "A blast cabinet is a small, enclosed unit where the operator works from outside through gloves and a viewport — suitable for small parts. A blast room is a walk-in enclosure where the operator enters with a blast suit and hood — suitable for large parts, vehicles, structural steel, and other large workpieces that cannot fit in a cabinet." },
             { q: "Can PFS build a custom-size blast room?", a: "Yes. PFS manufactures blast rooms in custom sizes to accommodate any workpiece — from small parts rooms to large aircraft hangars and structural steel bays. Contact a PFS engineer with your workpiece dimensions, blasting volume, and media requirements for a custom quote." },
           ].map((item, i) => (
-            <details key={i} style={{ borderBottom: "1px solid #e5e7eb", padding: "1.25rem 0" }}>
-              <summary style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "clamp(0.95rem,2.5vw,1.1rem)", fontWeight: 800, color: "#111", letterSpacing: "0.01em", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "1rem" }}>
+            <details key={i} style={{ borderBottom:"1px solid #e5e7eb", padding:"1.25rem 0" }}>
+              <summary style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"clamp(0.95rem,2.5vw,1.1rem)",fontWeight:800,color:"#111",letterSpacing:"0.01em",cursor:"pointer",listStyle:"none",display:"flex",justifyContent:"space-between",alignItems:"center",gap:"1rem" }}>
                 {item.q}
-                <span style={{ color: "#1B3A6B", flexShrink: 0, fontSize: "1.4rem", fontWeight: 300, lineHeight: 1 }}>+</span>
+                <span style={{ color:"#1B3A6B", flexShrink:0, fontSize:"1.4rem", fontWeight:300, lineHeight:1 }}>+</span>
               </summary>
-              <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(0.82rem,2vw,0.9rem)", color: "#555", lineHeight: 1.75, margin: "1rem 0 0", paddingRight: "1.5rem" }}>{item.a}</p>
+              <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"clamp(0.82rem,2vw,0.9rem)",color:"#555",lineHeight:1.75,margin:"1rem 0 0",paddingRight:"1.5rem" }}>{item.a}</p>
             </details>
           ))}
         </div>
@@ -692,8 +726,8 @@ export function ReclaimBlastingBoothsPage() {
       {/* Related products */}
       <SiteProductCardSection
         cards={[
-          { label: "Powder Coating Systems", href: "/products/powder-booths", img: "/manus-storage/pfs-render-powder-booth_3dd083c1.jpg", desc: "The coating process after blasting" },
-          { label: "Conveyor Systems", href: "/integration-automation/conveyor-systems", img: "/manus-storage/pfs-conveyor-line-real_78831864.jpg", desc: "Move parts through the finishing line" },
+          { label: "Powder Coating Systems", href: "/products/powder-booths", img: "/assets/pfs-powder-coating-render_d6e2b3a1.jpg", desc: "The coating process after blasting" },
+          { label: "Conveyor Systems", href: "/integration-automation/conveyor-systems", img: "/assets/pfs-conveyor-line_9c4176ba.png", desc: "Move parts through the finishing line" },
         ]}
       />
     </div>

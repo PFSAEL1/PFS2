@@ -4,12 +4,6 @@
   <url><loc>https://platinumfinishingsystems.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <!-- Products Hub -->
   <url><loc>https://platinumfinishingsystems.com/products</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url>
-  <loc>https://pfsspraybooths.com/products/custom-solutions/hydrogen-bus-finishing-system</loc>
-  <lastmod>2026-08-13</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
   <!-- Enclosed Spray Booths -->
   <url><loc>https://platinumfinishingsystems.com/products/paint-booths</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://platinumfinishingsystems.com/products/paint-booths/full-downdraft</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
@@ -67,6 +61,10 @@
   <!-- Parts & Filters -->
   <url><loc>https://platinumfinishingsystems.com/parts</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://platinumfinishingsystems.com/parts/filters</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <!-- Filter SEO Landing Pages -->
+  <url><loc>https://platinumfinishingsystems.com/parts/filters/paint-booth-filters</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://platinumfinishingsystems.com/parts/filters/neshap-aerospace-compliance</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://platinumfinishingsystems.com/parts/filters/california-west-coast-paint-booth-filters</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <!-- Automation & Integration -->
   <url><loc>https://platinumfinishingsystems.com/integration</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://platinumfinishingsystems.com/integration/liquid-paint-lines</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
@@ -102,12 +100,21 @@
   <url><loc>https://platinumfinishingsystems.com/service/filter-replacement</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://platinumfinishingsystems.com/service/preventive-maintenance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://platinumfinishingsystems.com/service/emergency-repair</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://platinumfinishingsystems.com/service/hazardous-location</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://platinumfinishingsystems.com/service/spray-to-waste</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://platinumfinishingsystems.com/service/powder-reclaim</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <!-- Resources -->
   <url><loc>https://platinumfinishingsystems.com/resources</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://platinumfinishingsystems.com/resources/faqs</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://platinumfinishingsystems.com/resources/downloads</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://platinumfinishingsystems.com/resources/videos</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://platinumfinishingsystems.com/resources/spec-sheets</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Blog -->
+  <url><loc>https://pfsspraybooths.com/blog</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pfsspraybooths.com/blog/how-much-does-industrial-spray-booth-cost</loc><changefreq>yearly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pfsspraybooths.com/blog/crossflow-vs-downdraft-spray-booth</loc><changefreq>yearly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pfsspraybooths.com/blog/ul508a-certified-control-panel-spray-booth</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pfsspraybooths.com/blog/spray-booth-maintenance-filter-checklist</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
   <!-- California Service Landing Page -->
   <url><loc>https://platinumfinishingsystems.com/spray-booth-service-california</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <!-- Los Angeles County Service Landing Page -->

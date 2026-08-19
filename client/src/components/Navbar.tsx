@@ -11,7 +11,7 @@ import { Link, useLocation } from "wouter";
 import { ChevronDown, ChevronRight, Phone, Mail, Search, Menu, X } from "lucide-react";
 
 // Official PFS logo — transparent PNG; filter:invert(1) makes it white on dark navbar
-const LOGO_URL = "/manus-storage/pfs-logo-white-cropped_4e512383.png";
+const LOGO_URL = "/assets/pfs-logo-white-cropped_4e512383.png";
 const LOGO_FALLBACK = false;
 
 interface NavSubItem {
@@ -131,7 +131,7 @@ const NAV_ITEMS: NavItem[] = [
     children: [
       { label: "Services Overview", href: "/service" },
       { label: "OEM Parts Store", href: "/parts" },
-      { label: "Filters & Consumables", href: "https://pfsfilters.com", external: true },
+      { label: "Browse All Filters →", href: "https://pfsfilters.com", external: true },
     ],
   },
   {
@@ -165,6 +165,7 @@ const NAV_ITEMS: NavItem[] = [
       { label: "Case Studies", href: "/resources/case-studies" },
       { label: "FAQs", href: "/resources/faqs" },
       { label: "Videos", href: "/resources/videos" },
+      { label: "Blog & Guides", href: "/blog" },
     ],
   },
 ];
@@ -177,10 +178,12 @@ function ProductsMegaMenu() {
     <div
       className="absolute top-full left-0 bg-white z-50"
       style={{
-        width: "720px",
+        width: "min(720px, calc(100vw - 1rem))",
+        maxWidth: "720px",
         border: "1px solid #e8e8e6",
         borderTop: "3px solid #FFFFFF",
         boxShadow: "0 12px 40px rgba(0,0,0,0.12)",
+        overflowX: "hidden",
       }}
     >
       <div className="py-3">
@@ -361,7 +364,11 @@ function SimpleDropdown({ items, noFeatured = false }: { items: NavSubItem[]; no
           </div>
         )}
         {rest.map((item) =>
-          item.external ? (
+          item.label === "__divider__" ? (
+            <div key="divider" style={{ borderTop: "1px solid #e8e8e6", margin: "0.4rem 0", padding: "0.25rem 0.85rem 0" }}>
+              <span style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.58rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1B2B4B", opacity: 0.7 }}>Filter Resources</span>
+            </div>
+          ) : item.external ? (
             <a key={item.href + item.label} href={item.href} target="_blank" rel="noopener noreferrer"
               style={linkStyle} className={hoverClass}>
               {item.label} ↗
@@ -440,8 +447,8 @@ export default function Navbar() {
 
   return (
     <header ref={navRef} className="sticky top-0 z-50" style={{ boxShadow: "0 2px 16px rgba(0,0,0,0.1)" }}>
-      {/* ── Utility bar ── */}
-      <div style={{ backgroundColor: "#1C1C1E", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+      {/* ── Utility bar — hidden on mobile when drawer is open to avoid duplication ── */}
+      <div className={mobileOpen ? "hidden xl:block" : ""} style={{ backgroundColor: "#1C1C1E", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
         <div className="container">
           <div className="flex items-center justify-between" style={{ paddingTop: "0.38rem", paddingBottom: "0.38rem" }}>
             <div className="flex items-center gap-5">
@@ -567,25 +574,15 @@ export default function Navbar() {
       {/* ── Mobile menu ── */}
       {mobileOpen && (
         <div className="xl:hidden overflow-y-auto" style={{ maxHeight: "calc(100vh - 100px)", backgroundColor: "#1C1C1E", borderBottom: "1px solid rgba(255,255,255,0.12)" }}>
-          {/* Mobile utility links — always visible */}
-          <div style={{ borderBottom: "1px solid rgba(255,255,255,0.12)", padding: "0.6rem 1.25rem", display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
-            {[
-              { label: "Order Filters", href: "/filters" },
-              { label: "Support", href: "/support" },
-              { label: "Contact", href: "/contact" },
-              { label: "Become a Distributor", href: "/become-a-distributor" },
-            ].map((item) => (
-              <Link key={item.label} href={item.href}>
-                <span
-                  onClick={() => setMobileOpen(false)}
-                  style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.65)", cursor: "pointer", whiteSpace: "nowrap" }}>
-                  {item.label}
-                </span>
-              </Link>
-              ))}
-            </div>
 
-          {NAV_ITEMS.map((item) => (
+
+          {/* Tap-to-call row — always visible at top of mobile drawer */}
+          <a href="tel:8885457715" style={{ display: "flex", alignItems: "center", gap: "0.6rem", padding: "0.85rem 1.25rem", borderBottom: "1px solid rgba(255,255,255,0.12)", textDecoration: "none", backgroundColor: "rgba(27,43,75,0.4)" }}>
+            <Phone size={14} style={{ color: "#6BA3E0", flexShrink: 0 }} />
+            <span style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.88rem", fontWeight: 600, color: "#FFFFFF", letterSpacing: "0.03em" }}>(888) 545-7715</span>
+            <span style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.72rem", color: "rgba(255,255,255,0.45)", marginLeft: "auto" }}>TAP TO CALL</span>
+          </a>
+                    {NAV_ITEMS.map((item) => (
             <div key={item.label} style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
               <button className="w-full flex items-center justify-between px-5 py-3.5"
                 onClick={() => setMobileExpanded(mobileExpanded === item.label ? null : item.label)}>
@@ -645,14 +642,18 @@ export default function Navbar() {
               {mobileExpanded === item.label && item.children && (
                 <div className="pb-3 px-5 space-y-0.5">
                   {item.children.map((child) =>
-                    child.external ? (
+                    child.label === "__divider__" ? (
+                      <div key="divider" style={{ borderTop: "1px solid rgba(255,255,255,0.12)", margin: "0.4rem 0", paddingTop: "0.3rem" }}>
+                        <span style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.58rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(107,163,224,0.8)" }}>Filter Resources</span>
+                      </div>
+                    ) : child.external ? (
                       <a key={child.href + child.label} href={child.href} target="_blank" rel="noopener noreferrer"
                         style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.82rem", color: "rgba(255,255,255,0.5)", display: "block", padding: "0.28rem 0" }}>
                         {child.label} ↗
                       </a>
                     ) : (
                       <Link key={child.href + child.label} href={child.href}>
-                              <span style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.82rem", color: "rgba(255,255,255,0.55)", display: "block", padding: "0.28rem 0" }}>
+                        <span style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.82rem", color: "rgba(255,255,255,0.55)", display: "block", padding: "0.28rem 0" }}>
                           {child.label}
                         </span>
                       </Link>

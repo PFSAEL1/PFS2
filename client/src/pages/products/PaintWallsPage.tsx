@@ -1,4 +1,3 @@
-const HERO_VIDEO = "/manus-storage/pfs-paint-booth-hero_500b9d60.mp4";
 /**
  * Paint Walls — PFS Exhaust Wall
  * Layout: Hero → Compliance Carousel → Two product cards (each with collapsible features/specs)
@@ -13,26 +12,26 @@ import { GalleryGrid } from "@/components/GalleryLightbox";
 import { SiteProductCardSection } from "@/components/SiteProductCard";
 import { useSEO } from "@/hooks/useSEO";
 
-const HERO_IMG     = "/manus-storage/pfs-paint-wall-installed-warehouse_ce242c4f.jpeg";  // Real installed paint wall in warehouse — wide shot shows full unit
+const HERO_IMG     = "/assets/pfs-paint-wall-installed-warehouse_ce242c4f.jpeg";  // Real installed paint wall in warehouse — wide shot shows full unit
 
 const GALLERY_IMGS = [
-  { src: "/manus-storage/pfs-paint-wall-tradeshow-angled_90ac854d.jpeg", alt: "PFS Exhaust Wall — trade show display, angled view with ETL badge" },
-  { src: "/manus-storage/pfs-paint-wall-tradeshow-front_14728a6f.jpeg",  alt: "PFS Exhaust Wall — trade show display, front view with fiberglass filter media" },
-  { src: "/manus-storage/pfs-paint-wall-factory-pfs-logo_26d50457.jpeg", alt: "PFS Exhaust Wall — factory floor, large unit with PFS logo and control panel" },
-  { src: "/manus-storage/pfs-paint-wall-installed-warehouse_ce242c4f.jpeg", alt: "PFS Exhaust Wall installed in warehouse with exhaust duct stack" },
-  { src: "/manus-storage/pfs-paint-wall-compact-unit_9aa7d463.jpeg",      alt: "PFS compact Exhaust Wall unit — ETL classified, NFPA 33 compliant, ready to ship" },
-  { src: "/manus-storage/pfs-paintwall-factory-large_29070fbc.jpeg",        alt: "PFS large paint wall — factory floor, full-height filter wall with technician for scale" },
-  { src: "/manus-storage/pfs-paintwall-scissorlift-install_f3bf3586.jpeg",   alt: "PFS paint wall installation — scissor lift used to install large wall inside spray booth" },
-  { src: "/manus-storage/pfs-paintwall-dual-exhaust_3cda010e.jpeg",          alt: "PFS paint wall — dual exhaust stack installation, back view showing two exhaust risers" },
-  { src: "/manus-storage/IMG_9319_71fe9a26.jpeg",                               alt: "PFS paint wall installed inside spray booth — PFS-branded exhaust wall with paint horses and finished parts" },
+  { src: "/assets/pfs-paint-wall-tradeshow-angled_90ac854d.jpeg", alt: "PFS Exhaust Wall — trade show display, angled view with ETL badge" },
+  { src: "/assets/pfs-paint-wall-tradeshow-front_14728a6f.jpeg",  alt: "PFS Exhaust Wall — trade show display, front view with fiberglass filter media" },
+  { src: "/assets/pfs-paint-wall-factory-pfs-logo_26d50457.jpeg", alt: "PFS Exhaust Wall — factory floor, large unit with PFS logo and control panel" },
+  { src: "/assets/pfs-paint-wall-installed-warehouse_ce242c4f.jpeg", alt: "PFS Exhaust Wall installed in warehouse with exhaust duct stack" },
+  { src: "/assets/pfs-paint-wall-compact-unit_9aa7d463.jpeg",      alt: "PFS compact Exhaust Wall unit — ETL classified, NFPA 33 compliant, ready to ship" },
+  { src: "/assets/pfs-paintwall-factory-large_29070fbc.jpeg",        alt: "PFS large paint wall — factory floor, full-height filter wall with technician for scale" },
+  { src: "/assets/pfs-paintwall-scissorlift-install_f3bf3586.jpeg",   alt: "PFS paint wall installation — scissor lift used to install large wall inside spray booth" },
+  { src: "/assets/pfs-paintwall-dual-exhaust_3cda010e.jpeg",          alt: "PFS paint wall — dual exhaust stack installation, back view showing two exhaust risers" },
+  { src: "/assets/IMG_9319_71fe9a26.jpeg",                               alt: "PFS paint wall installed inside spray booth — PFS-branded exhaust wall with paint horses and finished parts" },
 ];
-const FEATURED_IMG = "/manus-storage/pfs-exhaust-wall-featured_764e5557.png";
+const FEATURED_IMG = "/assets/pfs-exhaust-wall-featured_764e5557.png";
 
 // Paint Walls are NOT built with ETL/UL certified components — use only applicable compliance logos
-const NFPA_LOGO = "/manus-storage/pfs-nfpa-logo_4b710cc9.png";
-const EPA_LOGO  = "/manus-storage/pfs-epa-logo_e4165f68.webp";
-const OSHA_LOGO = "/manus-storage/pfs-osha-logo_0c460739.jpg";
-const USA_FLAG  = "/manus-storage/pfs-usa-flag_8fca512e.jpg";
+const NFPA_LOGO = "/assets/pfs-nfpa-logo_4b710cc9.png";
+const EPA_LOGO  = "/assets/pfs-epa-logo_e4165f68.webp";
+const OSHA_LOGO = "/assets/pfs-osha-logo_0c460739.jpg";
+const USA_FLAG  = "/assets/pfs-usa-flag_8fca512e.jpg";
 
 const BLUE = "#1B3A6B";
 
@@ -67,10 +66,10 @@ const WALL2_FEATURES = [
 ];
 
 const PRODUCTS = [
-  { label: "Prep Stations",     href: "/products/prep-support/prep-stations",   img: "/manus-storage/pfs-prep-station-curtain-real_c07d32e0.jpg",    desc: "Dedicated prep and masking stations to keep your spray booth running at full capacity." },
-  { label: "Paint Mix Rooms",   href: "/products/prep-support/paint-mix-rooms", img: "/manus-storage/IMG_0498_a98f5f38.jpg",           desc: "NFPA 33 compliant mixing rooms for safe paint storage and tinting." },
-  { label: "Enclosed Booths",   href: "/products/paint-booths/enclosed",        img: "/manus-storage/pfs-paint-booth-sprayer-card_42d3ea13.jpg",       desc: "Full-enclosure spray booths for superior overspray containment and finish quality." },
-  { label: "Air Make-Up Units", href: "/products/air-make-up-units",            img: "/manus-storage/pfs-amu-card_41f0dd88.jpg",                       desc: "Tempered make-up air systems to replace exhausted air and maintain positive booth pressure." },
+  { label: "Prep Stations",     href: "/products/prep-support/prep-stations",   img: "/assets/pfs-prep-station-curtain-real_c07d32e0.jpg",    desc: "Dedicated prep and masking stations to keep your spray booth running at full capacity." },
+  { label: "Paint Mix Rooms",   href: "/products/prep-support/paint-mix-rooms", img: "/assets/IMG_0498_a98f5f38.jpg",           desc: "NFPA 33 compliant mixing rooms for safe paint storage and tinting." },
+  { label: "Enclosed Booths",   href: "/products/paint-booths/enclosed",        img: "/assets/pfs-paint-booth-sprayer-card_42d3ea13.jpg",       desc: "Full-enclosure spray booths for superior overspray containment and finish quality." },
+  { label: "Air Make-Up Units", href: "/products/air-make-up-units",            img: "/assets/pfs-amu-card_41f0dd88.jpg",                       desc: "Tempered make-up air systems to replace exhausted air and maintain positive booth pressure." },
 ];
 
 
@@ -187,6 +186,39 @@ export default function PaintWallsPage() {
     title: "Paint Walls | Industrial Spray Wall Systems | PFS",
     description: "PFS industrial paint walls provide a ventilated, code-compliant finishing environment for large parts, structural steel, and production applications. ETL/UL listed components, NFPA 33 compliant. Manufactured in Santa Rosa, CA.",
     canonical: "/products/paint-booths/paint-walls",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Industrial Paint Wall",
+      "description": "PFS industrial paint walls provide a ventilated, code-compliant finishing environment for large parts and structural components.",
+      "brand": {
+        "@type": "Brand",
+        "name": "PFS"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Platinum Finishing Systems",
+        "url": "https://pfsspraybooths.com",
+        "telephone": "+18885457715",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Santa Rosa",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "Platinum Finishing Systems"
+        },
+        "url": "https://pfsspraybooths.com/products/paint-booths/paint-walls"
+      },
+      "url": "https://pfsspraybooths.com/products/paint-booths/paint-walls"
+    },
   });
 
   return (
@@ -194,16 +226,7 @@ export default function PaintWallsPage() {
 
       {/* ── FULL-BLEED HERO ── */}
       <section style={{ position:"relative", minHeight:"clamp(340px, 55vh, 580px)", display:"flex", flexDirection:"column", justifyContent:"flex-end", overflow:"hidden" }}>
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          disablePictureInPicture
-          poster={HERO_IMG}
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", opacity: 0.45, zIndex: 0 }}>
-          <source src="/manus-storage/pfs-paint-booth-hero_500b9d60.mp4" type="video/mp4" />
-        </video>
+        <img src={HERO_IMG} alt="PFS paint wall for open-face spray finishing applications" aria-hidden="true" style={{ position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",objectPosition:"center center" }} />
         <div style={{ position:"absolute",inset:0,background:"linear-gradient(to top, rgba(5,5,5,0.96) 0%, rgba(5,5,5,0.70) 35%, rgba(5,5,5,0.30) 70%, rgba(5,5,5,0.10) 100%)" }} />
         <div style={{ position:"absolute",bottom:0,left:0,right:0,height:"3px",background:BLUE,zIndex:3 }} />
         <div className="container" style={{ position:"relative",zIndex:2,paddingTop:"8rem",paddingBottom:"4.5rem" }}>
@@ -262,7 +285,7 @@ export default function PaintWallsPage() {
             tag="LARGE INDUSTRIAL SERIES"
             title="PFS Exhaust Wall — Large Industrial"
             subtitle="The PFS Large Industrial Exhaust Wall is engineered for high-volume production environments, large bays, and facilities that need floor-to-ceiling overspray capture. Modular panel construction, dual exhaust risers, high-capacity filter bays, and an integrated UL508A control panel. Custom heights and widths available — contact us for your specific requirements."
-            img="/manus-storage/pfs-paintwall-factory-large_29070fbc.jpeg"
+            img="/assets/pfs-paintwall-factory-large_29070fbc.jpeg"
             imgAlt="PFS Large Industrial Exhaust Wall — factory floor, full-height filter wall with technician for scale"
             features={WALL2_FEATURES}
           />

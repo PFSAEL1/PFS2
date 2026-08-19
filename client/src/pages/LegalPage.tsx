@@ -1,10 +1,9 @@
-const HERO_VIDEO = "/manus-storage/pfs-facility-drone-hero_ca12546c.mp4";
 import { useState } from "react";
 import { Link } from "wouter";
 import { ChevronDown, ArrowRight, Phone, Mail } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
-const HERO_IMG = "/manus-storage/IMG_0559_5bb7ecfc.jpg";
+const HERO_IMG = "/assets/IMG_0559_5bb7ecfc.jpg";
 
 // ─── Legal sections data ───────────────────────────────────────────────────
 const SECTIONS = [
@@ -276,16 +275,18 @@ export default function LegalPage() {
           overflow: "hidden",
         }}
       >
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          disablePictureInPicture
-          poster={HERO_IMG}
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", opacity: 0.45, zIndex: 0 }}>
-          <source src="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4" type="video/mp4" />
-        </video>
+        <img
+          src={HERO_IMG}
+          alt="PFS Helios and Orion spray booths on the shop floor"
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center 40%",
+          }}
+        />
         {/* Dark overlay */}
         <div
           style={{

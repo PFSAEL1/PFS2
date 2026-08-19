@@ -1,4 +1,3 @@
-const HERO_VIDEO = "/manus-storage/pfs-paint-booth-hero_500b9d60.mp4";
 /*
  * Heated Air Make-Up Units — Dedicated Product Page
  * Apollo AMU series by PFS
@@ -12,17 +11,17 @@ import { GalleryGrid } from "@/components/GalleryLightbox";
 import { useSEO } from "@/hooks/useSEO";
 
 // ── CDN PATHS ─────────────────────────────────────────────────────────────────
-const HERO_IMG       = "/manus-storage/amu-apollo-rooftop-hero_b5d9fad1.jpg";
-const RENDER_VERT    = "/manus-storage/amu-render-vertical_2325a440.jpg";
-const RENDER_HORIZ   = "/manus-storage/amu-render-horizontal_0819be8f.jpg";
+const HERO_IMG       = "/assets/amu-apollo-rooftop-hero_b5d9fad1.jpg";
+const RENDER_VERT    = "/assets/amu-render-vertical_2325a440.jpg";
+const RENDER_HORIZ   = "/assets/amu-render-horizontal_0819be8f.jpg";
 // Gallery real install photos (cleaned — no Spray-Tech logos)
-const AMU_INSTALL1   = "/manus-storage/amu-vertical-outdoor-install1-clean_1af3eb06.jpg";
-const AMU_INSTALL2   = "/manus-storage/amu-vertical-outdoor-install2_35bf9401.jpg";
-const AMU_ROOFTOP    = "/manus-storage/amu-apollo-rooftop_e0c4456e.jpg";
-const AMU_INDOOR     = "/manus-storage/amu-apollo-indoor-pair_dde60680.jpg";
-const AMU_OUTDOOR    = "/manus-storage/amu-outdoor-multi-unit-clean_69bc9731.jpg";
-const AMU_BOOTH_0445 = "/manus-storage/amu-0445-clean_dcd2d77e.jpg";
-const AMU_BOOTH_WALL = "/manus-storage/amu-booth-mounted-install_258f1ac0.jpg";
+const AMU_INSTALL1   = "/assets/amu-vertical-outdoor-install1-clean_1af3eb06.jpg";
+const AMU_INSTALL2   = "/assets/amu-vertical-outdoor-install2_35bf9401.jpg";
+const AMU_ROOFTOP    = "/assets/amu-apollo-rooftop_e0c4456e.jpg";
+const AMU_INDOOR     = "/assets/amu-apollo-indoor-pair_dde60680.jpg";
+const AMU_OUTDOOR    = "/assets/amu-outdoor-multi-unit-clean_69bc9731.jpg";
+const AMU_BOOTH_0445 = "/assets/amu-0445-clean_dcd2d77e.jpg";
+const AMU_BOOTH_WALL = "/assets/amu-booth-mounted-install_258f1ac0.jpg";
 
 const BLUE = "#1B3A6B";
 
@@ -209,6 +208,39 @@ export default function HeatedAMUPage() {
     title: "Heated Air Make-Up Units | Spray Booth AMU Systems | PFS",
     description: "PFS heated air make-up units deliver tempered replacement air for spray booths operating in heated spray and bake cycles. Gas, propane, or electric heat. UL 508A control panel, ETL/UL listed components, NFPA 33 compliant. Manufactured in Santa Rosa, CA.",
     canonical: "/products/air-make-up-units/heated",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Heated Air Make-Up Unit",
+      "description": "PFS Apollo heated air make-up units replace conditioned air exhausted by spray booths. Gas-fired, direct or indirect heat, UL508A controls.",
+      "brand": {
+        "@type": "Brand",
+        "name": "PFS Apollo"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Platinum Finishing Systems",
+        "url": "https://pfsspraybooths.com",
+        "telephone": "+18885457715",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Santa Rosa",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "Platinum Finishing Systems"
+        },
+        "url": "https://pfsspraybooths.com/products/air-make-up-units/heated-amu"
+      },
+      "url": "https://pfsspraybooths.com/products/air-make-up-units/heated-amu"
+    },
   });
 
   const [featuresOpen, setFeaturesOpen] = useState(false);
@@ -225,16 +257,11 @@ export default function HeatedAMUPage() {
 
       {/* ── HERO (IMAGE) ── */}
       <section style={{ position: "relative", minHeight: "80vh", display: "flex", flexDirection: "column", justifyContent: "flex-end", overflow: "hidden", background: "#0a0a0a" }}>
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          disablePictureInPicture
-          poster={HERO_IMG}
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", opacity: 0.45, zIndex: 0 }}>
-          <source src="/manus-storage/pfs-paint-booth-hero_500b9d60.mp4" type="video/mp4" />
-        </video>
+        <img
+          src={HERO_IMG}
+          alt="PFS Apollo AMU rooftop horizontal installation"
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }}
+        />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.90) 0%, rgba(0,0,0,0.50) 50%, rgba(0,0,0,0.15) 100%)" }} />
         <div className="container" style={{ position: "relative", zIndex: 2, paddingBottom: "4rem" }}>
           <div style={{ display: "flex", gap: "0.5rem", marginBottom: "1.2rem", flexWrap: "wrap" }}>
@@ -506,10 +533,10 @@ export default function HeatedAMUPage() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.5rem" }}>
             {[
-              { label: "Enclosed Paint Booths", href: "/products/paint-booths/enclosed", img: "/manus-storage/enclosed-booth-card-zenith_7e010642.jpg", desc: "The booth your AMU serves." },
-              { label: "Batch Ovens", href: "/products/ovens/batch", img: "/manus-storage/pfs-vulcan-oven-card_ad72eade_316de7d1.png", desc: "Pair with a heated AMU for spray-bake cycles." },
-              { label: "Mixing Rooms", href: "/products/mixing-rooms", img: "/manus-storage/mixing-room-front_7de356e6.jpg", desc: "Tempered air supply for mixing room ventilation." },
-              { label: "Prep Stations", href: "/products/prep-stations", img: "/manus-storage/IMG_2133_14cdb1d1.webp", desc: "Heated prep airflow for pre-paint surface work." },
+              { label: "Enclosed Paint Booths", href: "/products/paint-booths/enclosed", img: "/assets/enclosed-booth-card-zenith_7e010642.jpg", desc: "The booth your AMU serves." },
+              { label: "Batch Ovens", href: "/products/ovens/batch", img: "/assets/pfs-vulcan-oven-card_ad72eade_316de7d1.png", desc: "Pair with a heated AMU for spray-bake cycles." },
+              { label: "Mixing Rooms", href: "/products/mixing-rooms", img: "/assets/mixing-room-front_7de356e6.jpg", desc: "Tempered air supply for mixing room ventilation." },
+              { label: "Prep Stations", href: "/products/prep-stations", img: "/assets/IMG_2133_14cdb1d1.webp", desc: "Heated prep airflow for pre-paint surface work." },
             ].map(r => (
               <Link key={r.label} href={r.href}>
                 <div className="group cursor-pointer" style={{ border: "1px solid #e5e5e5", overflow: "hidden", background: "#fff" }}>

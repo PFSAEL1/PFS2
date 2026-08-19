@@ -23,28 +23,28 @@ import { useSEO } from "@/hooks/useSEO";
 const BLUE = "#1b3a6b";
 
 // ── ASSET URLS ──────────────────────────────────────────────────────────────
-const HERO_VIDEO = "/manus-storage/pfs-auto-mfg-hero-v3-trimmed_cef14b14.mp4";
-const HERO_POSTER = "/manus-storage/pfs-auto-mfg-hero-poster_6d8c01e4.jpg";
-const FEATURED_IMG = "/manus-storage/automotive-manufacturing-booth_801eeddf.jpeg";
-const GALLERY_CAR_SPRAY = "/manus-storage/pfs-auto-mfg-car-spray_5dfb08d5.png";
-const GALLERY_1 = "/manus-storage/automotive-mfg-robot-booth_049a4e5f.png";
+const HERO_VIDEO     = "/assets/pfs-auto-mfg-hero-v3-trimmed_cef14b14.mp4";
+const HERO_POSTER    = "/assets/pfs-auto-mfg-hero-poster_6d8c01e4.jpg";
+const FEATURED_IMG   = "/assets/automotive-manufacturing-booth_801eeddf.jpeg";
+const GALLERY_CAR_SPRAY = "/assets/pfs-auto-mfg-car-spray_5dfb08d5.png";
+const GALLERY_1      = "/assets/automotive-mfg-robot-booth_049a4e5f.png";
 
 // ── CERT LOGOS ───────────────────────────────────────────────────────────────
-const ETL_LOGO = "/manus-storage/pfs-etl-logo_7758f722.png";
-const UL_LOGO = "/manus-storage/pfs-ul508a-clean_e8efdeb8.jpg";
-const NFPA_LOGO = "/manus-storage/pfs-nfpa-logo_4b710cc9.png";
-const EPA_LOGO = "/manus-storage/pfs-epa-logo_e4165f68.webp";
-const OSHA_LOGO = "/manus-storage/pfs-osha-logo_0c460739.jpg";
-const USA_FLAG = "/manus-storage/pfs-usa-flag_8fca512e.jpg";
+const ETL_LOGO  = "/assets/pfs-etl-logo_7758f722.png";
+const UL_LOGO   = "/assets/pfs-ul508a-clean_e8efdeb8.jpg";
+const NFPA_LOGO = "/assets/pfs-nfpa-logo_4b710cc9.png";
+const EPA_LOGO  = "/assets/pfs-epa-logo_e4165f68.webp";
+const OSHA_LOGO = "/assets/pfs-osha-logo_0c460739.jpg";
+const USA_FLAG  = "/assets/pfs-usa-flag_8fca512e.jpg";
 
 // ── CERT CAROUSEL DATA ────────────────────────────────────────────────────────
 const CERTS = [
-  { type: "logo", img: ETL_LOGO, title: "ETL & ETL-C Listed", sub: "Intertek — USA & Canada", filter: "none", imgH: 44 },
-  { type: "logo", img: UL_LOGO, title: "UL 508A Certified", sub: "Industrial Control Panel Fabricator", filter: "none", imgH: 44 },
-  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant", sub: "Spray Application Standard", filter: "none", imgH: 44 },
-  { type: "logo", img: EPA_LOGO, title: "EPA Compliant", sub: "Air Quality Standards", filter: "none", imgH: 36 },
-  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant", sub: "Workplace Safety Standards", filter: "none", imgH: 36 },
-  { type: "flag", img: USA_FLAG, title: "Made in the USA", sub: "Santa Rosa, CA", filter: "none", imgH: 36 },
+  { type: "logo", img: ETL_LOGO,  title: "ETL & ETL-C Listed",       sub: "Intertek — USA & Canada",             filter: "none", imgH: 44 },
+  { type: "logo", img: UL_LOGO,   title: "UL 508A Certified",         sub: "Industrial Control Panel Fabricator", filter: "none", imgH: 44 },
+  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant",         sub: "Spray Application Standard",          filter: "none", imgH: 44 },
+  { type: "logo", img: EPA_LOGO,  title: "EPA Compliant",             sub: "Air Quality Standards",               filter: "none", imgH: 36 },
+  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant",            sub: "Workplace Safety Standards",          filter: "none", imgH: 36 },
+  { type: "flag", img: USA_FLAG,  title: "Made in the USA",           sub: "Santa Rosa, CA",                      filter: "none", imgH: 36 },
 ];
 const CERTS_LOOP = [...CERTS, ...CERTS];
 
@@ -87,11 +87,11 @@ const FEATURES_HIDDEN = [
 
 // ── BOOTH LINEUP ─────────────────────────────────────────────────────────────
 const BOOTH_LINEUP = [
-  { name: "ZENITH", desc: "Full downdraft — maximum contamination control for OEM quality finishes" },
-  { name: "HELIOS", desc: "Semi-downdraft — ideal for mid-volume shops and Tier 1 suppliers" },
-  { name: "ORION", desc: "Cross-flow — cost-effective for fleet and production refinishing" },
-  { name: "ORION-R", desc: "Robotic cell — purpose-built for automated spray arm integration" },
-  { name: "CUSTOM", desc: "Drive-through, tandem, or multi-zone — engineered to your line layout" },
+  { name: "ZENITH",   desc: "Full downdraft — maximum contamination control for OEM quality finishes" },
+  { name: "HELIOS",   desc: "Semi-downdraft — ideal for mid-volume shops and Tier 1 suppliers" },
+  { name: "ORION",    desc: "Cross-flow — cost-effective for fleet and production refinishing" },
+  { name: "ORION-R",  desc: "Robotic cell — purpose-built for automated spray arm integration" },
+  { name: "CUSTOM",   desc: "Drive-through, tandem, or multi-zone — engineered to your line layout" },
 ];
 
 // ── RECOMMENDED PRODUCTS ─────────────────────────────────────────────────────
@@ -99,25 +99,25 @@ const PRODUCTS = [
   {
     label: "Enclosed Paint Booths",
     href: "/products/paint-booths/enclosed",
-    img: "/manus-storage/enclosed-booth-card-zenith_7e010642.jpg",
+    img: "/assets/enclosed-booth-card-zenith_7e010642.jpg",
     desc: "Full downdraft and semi-downdraft booths for OEM and Tier 1 automotive finishing.",
   },
   {
     label: "Robotic Finishing Cells",
     href: "/integration-automation/robotic-finishing-cells",
-    img: "/manus-storage/pfs-robotic-cell-orion-r_4f0c33bb_2d3b524c.png",
+    img: "/assets/pfs-robotic-cell-orion-r_4f0c33bb_2d3b524c.png",
     desc: "ORION-R robotic cells for consistent, high-volume automated spray application.",
   },
   {
     label: "Prep Stations",
     href: "/products/prep/paint-prep-stations",
-    img: "/manus-storage/pfs-prep-station-curtain-real_c07d32e0.jpg",
+    img: "/assets/pfs-prep-station-curtain-real_c07d32e0.jpg",
     desc: "Masking and prep stations to keep your production line moving.",
   },
   {
     label: "Powder Coating Lines",
     href: "/integration-automation/powder-coating-lines",
-    img: "/manus-storage/pfs-powder-coating-line-real_9473890b.png",
+    img: "/assets/pfs-powder-coating-line-real_9473890b.png",
     desc: "Complete powder coating lines for automotive components and sub-assemblies.",
   },
 ];
@@ -271,6 +271,21 @@ export default function AutomotiveManufacturingPage() {
     title: "Automotive Manufacturing Paint Booths | OEM & Tier 1 Finishing | PFS",
     description: "PFS Zenith and Orion-R Series automotive paint booths serve OEM and Tier 1 manufacturers. Laminar downdraft airflow, robotic arm integration, drive-through and conveyor-integrated configurations. NFPA 33 compliant, ETL/UL listed components, UL 508A certified controls. Custom widths to 40+ ft for body-in-white assemblies. Manufactured in Santa Rosa, CA. Ships nationally.",
     canonical: "/industries/automotive-manufacturing",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Production paint booths and powder coating systems for automotive manufacturing",
+      "provider": {
+        "@type": "Organization",
+        "name": "Platinum Finishing Systems",
+        "url": "https://pfsspraybooths.com",
+        "telephone": "+18885457715"
+      },
+      "serviceType": "Industrial Finishing Equipment",
+      "audience": { "@type": "Audience", "audienceType": "Automotive OEMs, Tier 1 and Tier 2 suppliers, automotive component manufacturers" },
+      "areaServed": { "@type": "Country", "name": "United States" },
+      "url": "https://pfsspraybooths.com/industries/automotive-manufacturing"
+    },
   });
 
   const [featuresOpen, setFeaturesOpen] = useState(false);
@@ -282,7 +297,7 @@ export default function AutomotiveManufacturingPage() {
     if (!v) return;
     v.muted = true;
     v.playsInline = true;
-    const play = () => { v.play().catch(() => { }); setVideoReady(true); };
+    const play = () => { v.play().catch(() => {}); setVideoReady(true); };
     v.addEventListener("canplaythrough", play, { once: true });
     v.load();
     return () => v.removeEventListener("canplaythrough", play);
@@ -336,7 +351,7 @@ export default function AutomotiveManufacturingPage() {
           }}>
             AUTOMOTIVE MANUFACTURING
           </span>
-          <h1 data-animation="slideLeft" style={{
+          <h1 style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "clamp(2.6rem, 7vw, 5rem)",
             fontWeight: 800, color: "#fff", lineHeight: 1.0,
@@ -358,7 +373,7 @@ export default function AutomotiveManufacturingPage() {
           }}>
             PFS ZENITH &amp; ORION-R SERIES
           </span>
-          <p data-animation="slideLeft" style={{
+          <p style={{
             fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
             fontSize: "clamp(0.95rem, 1.8vw, 1.1rem)",
             color: "rgba(255,255,255,0.82)",
@@ -367,10 +382,10 @@ export default function AutomotiveManufacturingPage() {
             Laminar downdraft airflow. Robotic arm integration ready. Drive-through and conveyor-integrated configurations. ETL/UL listed and UL 508A certified components. NFPA 33 compliant. Engineered for OEM, Tier 1, and high-volume automotive finishing — installed nationwide.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-            <Link data-animation="slideLeft" href="/contact/request-a-quote">
+            <Link href="/contact/request-a-quote">
               <span className="btn-glow">GET PRICING <ArrowRight size={16} /></span>
             </Link>
-            <a data-animation="slideRight" href="tel:8885457715">
+            <a href="tel:8885457715">
               <span style={{
                 display: "inline-flex", alignItems: "center", gap: "0.5rem",
                 background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.55)",
@@ -400,7 +415,7 @@ export default function AutomotiveManufacturingPage() {
               }}>
                 FEATURED PAINT BOOTH
               </span>
-              <h2 data-animation="slideLeft" style={{
+              <h2 style={{
                 fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
                 fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 800,
                 color: "#111", letterSpacing: "-0.01em", marginBottom: "0.5rem",
@@ -431,10 +446,10 @@ export default function AutomotiveManufacturingPage() {
               />
             </div>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
-              <Link data-animation="slideLeft" href="/contact/request-a-quote">
+              <Link href="/contact/request-a-quote">
                 <span className="btn-glow">REQUEST A QUOTE <ArrowRight size={15} /></span>
               </Link>
-              <Link data-animation="slideRight" href="/products/paint-booths/enclosed">
+              <Link href="/products/paint-booths/enclosed">
                 <span style={{
                   display: "inline-flex", alignItems: "center", gap: "0.5rem",
                   background: "transparent", color: BLUE, border: `2px solid ${BLUE}`,
@@ -457,7 +472,7 @@ export default function AutomotiveManufacturingPage() {
       <section style={{ padding: "0 0 4rem", background: "#fff" }}>
         <div className="container">
           <div className="text-center mb-8">
-            <h2 data-animation="slideLeft" style={{
+            <h2 style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800,
               color: "#111", letterSpacing: "-0.01em",
@@ -468,12 +483,12 @@ export default function AutomotiveManufacturingPage() {
           <GalleryGrid
             images={[
               { src: GALLERY_CAR_SPRAY, alt: "Robotic arms spraying automotive car body on production line" },
-              { src: FEATURED_IMG, alt: "Silver vehicle inside PFS automotive paint booth" },
-              { src: GALLERY_1, alt: "PFS ORION-R robotic finishing cell spraying automotive parts" },
+              { src: FEATURED_IMG,      alt: "Silver vehicle inside PFS automotive paint booth" },
+              { src: GALLERY_1,         alt: "PFS ORION-R robotic finishing cell spraying automotive parts" },
             ]}
             cardHeight="clamp(220px,30vw,360px)"
           />
-          <div data-animation="slideRight" className="text-center">
+          <div className="text-center">
             <Link href="/contact/request-a-quote">
               <span className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
             </Link>
@@ -492,7 +507,7 @@ export default function AutomotiveManufacturingPage() {
             }}>
               STANDARD SPECIFICATION
             </span>
-            <h2 data-animation="slideLeft" style={{
+            <h2 style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800,
               color: "#111", letterSpacing: "-0.01em",
@@ -501,7 +516,7 @@ export default function AutomotiveManufacturingPage() {
             </h2>
           </div>
 
-          <div data-animation="fadeIn" className="grid md:grid-cols-3 gap-5 mb-5">
+          <div className="grid md:grid-cols-3 gap-5 mb-5">
             {FEATURES_VISIBLE.map((f) => (
               <div key={f.title} style={{ background: "#fff", padding: "1.75rem", borderTop: `3px solid ${BLUE}`, display: "flex", flexDirection: "column" }}>
                 <div style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "2rem", fontWeight: 900, color: `rgba(27,58,107,0.12)`, lineHeight: 1, marginBottom: "0.5rem" }}>{f.num}</div>
@@ -554,7 +569,7 @@ export default function AutomotiveManufacturingPage() {
           )}
 
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <button data-animation="slideLeft"
+            <button
               onClick={() => setFeaturesOpen(!featuresOpen)}
               style={{
                 display: "inline-flex", alignItems: "center", gap: "0.4rem",
@@ -568,7 +583,7 @@ export default function AutomotiveManufacturingPage() {
                 ? <><ChevronUp size={14} /> SHOW LESS</>
                 : <><ChevronDown size={14} /> SEE ALL SPECIFICATIONS &amp; BOOTH TYPES</>}
             </button>
-            <Link data-animation="slideRight" href="/contact/request-a-quote">
+            <Link href="/contact/request-a-quote">
               <span className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
             </Link>
           </div>
@@ -579,7 +594,7 @@ export default function AutomotiveManufacturingPage() {
       <section style={{ background: BLUE, padding: "3.5rem 0" }}>
         <div className="container">
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "1.5rem" }}>
-            <h2 data-animation="slideLeft" style={{
+            <h2 style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "clamp(1.6rem, 4vw, 2.6rem)",
               fontWeight: 800, color: "#fff", letterSpacing: "-0.01em", lineHeight: 1.1,
@@ -590,7 +605,7 @@ export default function AutomotiveManufacturingPage() {
               Quote in 24 hours. manufactured in the USA with ETL/UL listed components. Installed nationwide by PFS-certified technicians.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center" }}>
-              <Link data-animation="slideLeft" href="/contact/request-a-quote">
+              <Link href="/contact/request-a-quote">
                 <span style={{
                   display: "inline-flex", alignItems: "center", gap: "0.5rem",
                   background: "#fff", color: BLUE,
@@ -601,7 +616,7 @@ export default function AutomotiveManufacturingPage() {
                   GET PRICING <ArrowRight size={16} />
                 </span>
               </Link>
-              <a data-animation="slideRight" href="tel:8885457715">
+              <a href="tel:8885457715">
                 <span style={{
                   display: "inline-flex", alignItems: "center", gap: "0.5rem",
                   background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.6)",
@@ -619,11 +634,11 @@ export default function AutomotiveManufacturingPage() {
 
 
       {/* FAQ SECTION */}
-      <section style={{ background: "#f8f9fb", padding: "clamp(2.5rem, 6vw, 4rem) 0", borderTop: "1px solid #e5e7eb" }}>
-        <div className="container" style={{ maxWidth: "860px" }}>
-          <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
-            <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: "#1B3A6B", textTransform: "uppercase", display: "block", marginBottom: "0.4rem" }}>FREQUENTLY ASKED QUESTIONS</span>
-            <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed','Oswald',sans-serif", fontSize: "clamp(1.4rem,3.5vw,2.2rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Automotive Manufacturing Spray Booths — Common Questions</h2>
+      <section style={{ background:"#f8f9fb", padding:"clamp(2.5rem, 6vw, 4rem) 0", borderTop:"1px solid #e5e7eb" }}>
+        <div className="container" style={{ maxWidth:"860px" }}>
+          <div style={{ textAlign:"center", marginBottom:"2.5rem" }}>
+            <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:"#1B3A6B",textTransform:"uppercase",display:"block",marginBottom:"0.4rem" }}>FREQUENTLY ASKED QUESTIONS</span>
+            <h2 style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.4rem,3.5vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Automotive Manufacturing Spray Booths — Common Questions</h2>
           </div>
           {[
             { q: "What type of spray booth is used in automotive manufacturing?", a: "Automotive manufacturing plants use full-downdraft spray booths for body-in-white (BIW) painting, heated booths for primer and topcoat bake cycles, and integrated conveyor finishing lines for high-volume production. PFS manufactures all of these systems and can design integrated finishing lines for OEM and Tier 1 automotive suppliers." },
@@ -632,18 +647,18 @@ export default function AutomotiveManufacturingPage() {
             { q: "Can PFS integrate a spray booth with an existing conveyor system?", a: "Yes. PFS designs spray booths and finishing systems to integrate with power-and-free conveyors, overhead monorails, floor-mounted chain conveyors, and automated guided vehicle (AGV) systems. Our engineers coordinate with your conveyor supplier to ensure the booth opening dimensions, airflow, and heating systems are compatible with your production line." },
             { q: "Does PFS manufacture spray booths for EV battery assembly?", a: "Yes. PFS manufactures environmentally controlled finishing rooms and battery module coating systems for electric vehicle battery assembly. These systems provide controlled temperature, humidity, and airflow for battery cell and module coating processes. Contact a PFS engineer for EV-specific requirements." },
           ].map((item, i) => (
-            <details key={i} style={{ borderBottom: "1px solid #e5e7eb", padding: "1.25rem 0" }}>
-              <summary style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "clamp(0.95rem,2.5vw,1.1rem)", fontWeight: 800, color: "#111", letterSpacing: "0.01em", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "1rem" }}>
+            <details key={i} style={{ borderBottom:"1px solid #e5e7eb", padding:"1.25rem 0" }}>
+              <summary style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"clamp(0.95rem,2.5vw,1.1rem)",fontWeight:800,color:"#111",letterSpacing:"0.01em",cursor:"pointer",listStyle:"none",display:"flex",justifyContent:"space-between",alignItems:"center",gap:"1rem" }}>
                 {item.q}
-                <span style={{ color: "#1B3A6B", flexShrink: 0, fontSize: "1.4rem", fontWeight: 300, lineHeight: 1 }}>+</span>
+                <span style={{ color:"#1B3A6B", flexShrink:0, fontSize:"1.4rem", fontWeight:300, lineHeight:1 }}>+</span>
               </summary>
-              <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(0.82rem,2vw,0.9rem)", color: "#555", lineHeight: 1.75, margin: "1rem 0 0", paddingRight: "1.5rem" }}>{item.a}</p>
+              <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"clamp(0.82rem,2vw,0.9rem)",color:"#555",lineHeight:1.75,margin:"1rem 0 0",paddingRight:"1.5rem" }}>{item.a}</p>
             </details>
           ))}
         </div>
       </section>
 
-      {/* RELATED PRODUCTS */}
+            {/* RELATED PRODUCTS */}
       <SiteProductCardSection
         heading="You May Also Need"
         label="Complete Your System"

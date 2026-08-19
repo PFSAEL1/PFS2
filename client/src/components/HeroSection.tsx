@@ -6,7 +6,7 @@
 
 import { ArrowRight } from "lucide-react";
 
-const HERO_IMAGE = "/manus-storage/pfs-hero-booth-9udTMKwmSMnYLiux7h7TU9.webp";
+const HERO_IMAGE = "/assets/pfs-hero-booth-9udTMKwmSMnYLiux7h7TU9.webp";
 
 export default function HeroSection() {
   const scrollTo = (id: string) => {

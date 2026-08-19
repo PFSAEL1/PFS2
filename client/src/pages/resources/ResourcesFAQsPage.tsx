@@ -4,7 +4,7 @@ import { Link } from "wouter";
 import { ChevronDown, ArrowRight, Phone } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
-const IMG = "/manus-storage/pfs-paint-booth-sprayer-card_42d3ea13.jpg";
+const IMG = "/assets/pfs-paint-booth-sprayer-card_42d3ea13.jpg";
 
 // ─── FAQ Data ─────────────────────────────────────────────────────────────
 const FAQ_SECTIONS = [
@@ -56,10 +56,10 @@ const FAQ_SECTIONS = [
       },
       {
         q: "Does a powder coating booth need to comply with NFPA 33?",
-        a: "Yes. Powder coating booths are subject to NFPA 33 because powder coatings are combustible materials. The standard requires proper ventilation, listed electrical components, grounding, and fire protection provisions. PFS powder coating booths are designed to NFPA 33 and IFC Chapter 24 requirements.",
+        a: "Yes. Powder coating booths are subject to NFPA 33 because powder coatings are combustible materials. The standard requires proper ventilation, listed electrical components, grounding, and fire protection provisions. PFS Nova Series powder coating booths are designed to NFPA 33 and IFC Chapter 24 requirements.",
       },
       {
-        q: "Can a PFS powder coating booth be integrated with a curing oven?",
+        q: "Can a PFS Nova Series powder coating booth be integrated with a curing oven?",
         a: "Yes. PFS manufactures both powder coating booths and batch curing ovens, and designs them to work together as a complete finishing line. Integrated systems can include conveyor systems, load/unload stations, and automated powder application. Contact our engineering team to discuss a complete powder coating line.",
       },
     ],
@@ -70,11 +70,11 @@ const FAQ_SECTIONS = [
     faqs: [
       {
         q: "What is an abrasive blast room?",
-        a: "An abrasive blast room is an enclosed, ventilated structure designed to contain the abrasive media and dust generated during sandblasting or abrasive blasting operations. Blast rooms protect workers and the surrounding environment, allow media recovery and reuse, and maintain OSHA-compliant air quality. PFS blast rooms are custom-engineered to your part size, blast media, and production requirements.",
+        a: "An abrasive blast room is an enclosed, ventilated structure designed to contain the abrasive media and dust generated during sandblasting or abrasive blasting operations. Blast rooms protect workers and the surrounding environment, allow media recovery and reuse, and maintain OSHA-compliant air quality. PFS Atlas Series blast rooms are custom-engineered to your part size, blast media, and production requirements.",
       },
       {
-        q: "What blast media can be used in a PFS blast room?",
-        a: "PFS blast rooms are compatible with a wide range of abrasive media including steel grit, steel shot, glass bead, aluminum oxide, garnet, crushed glass, and plastic media. The media recovery system design (mechanical, vacuum, or pneumatic) is selected based on the media type, density, and production volume.",
+        q: "What blast media can be used in a PFS Atlas Series blast room?",
+        a: "PFS Atlas Series blast rooms are compatible with a wide range of abrasive media including steel grit, steel shot, glass bead, aluminum oxide, garnet, crushed glass, and plastic media. The media recovery system design (mechanical, vacuum, or pneumatic) is selected based on the media type, density, and production volume.",
       },
       {
         q: "What is the difference between mechanical and vacuum media reclaim?",
@@ -82,7 +82,7 @@ const FAQ_SECTIONS = [
       },
       {
         q: "Does a blast room need to comply with NFPA or OSHA?",
-        a: "Yes. Abrasive blast rooms must comply with OSHA 1910.94 (ventilation requirements for abrasive blasting), which specifies minimum airflow to maintain safe dust concentrations. Blast rooms must also comply with applicable NFPA standards and local building codes. PFS blast rooms are designed to OSHA 1910.94 and NFPA requirements with ETL/UL listed components.",
+        a: "Yes. Abrasive blast rooms must comply with OSHA 1910.94 (ventilation requirements for abrasive blasting), which specifies minimum airflow to maintain safe dust concentrations. Blast rooms must also comply with applicable NFPA standards and local building codes. PFS Atlas Series blast rooms are designed to OSHA 1910.94 and NFPA requirements with ETL/UL listed components.",
       },
     ],
   },
@@ -240,7 +240,7 @@ export default function ResourcesFAQsPage() {
 
   return (
     <div>
-      <PageHero bgVideo="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4"
+      <PageHero
         title="Frequently Asked Questions"
         subtitle="Answers to common questions about PFS spray booths, powder coating systems, blast rooms, industrial ovens, and company policies."
         breadcrumbs={[{ label: "Resources", href: "/resources" }, { label: "FAQs" }]}
@@ -297,7 +297,7 @@ export default function ResourcesFAQsPage() {
                   For the complete warranty terms, return policy, freight policy, and legal notices, see the PFS Legal & Policies page.
                 </p>
                 <Link href="/legal">
-                  <span data-animation="slideRight" className="btn-glow" style={{ fontSize: "0.78rem", padding: "0.65rem 1.5rem" }}>
+                  <span className="btn-glow" style={{ fontSize: "0.78rem", padding: "0.65rem 1.5rem" }}>
                     View Full Legal & Policies <ArrowRight size={13} />
                   </span>
                 </Link>

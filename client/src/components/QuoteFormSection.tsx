@@ -5,7 +5,7 @@
 
 import { useState } from "react";
 
-const HELIOS_IMG = "/manus-storage/helios-booth-warehouse_7b31d966.jpg";
+const HELIOS_IMG = "/assets/helios-booth-warehouse_7b31d966.jpg";
 
 export default function QuoteFormSection() {
   const [submitted, setSubmitted] = useState(false);

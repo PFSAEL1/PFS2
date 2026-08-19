@@ -13,21 +13,21 @@ import { GalleryGrid } from "@/components/GalleryLightbox";
 import { SiteProductCardSection } from "@/components/SiteProductCard";
 
 // ── CDN IMAGES ────────────────────────────────────────────────────────────────
-const FEATURED_IMG  = "/manus-storage/pfs-tcr-exterior-angled_30f84dad.jpg";
-const GALLERY_1     = "/manus-storage/pfs-tcr-exterior-control-panel_3227f697.jpg";
-const GALLERY_2     = "/manus-storage/pfs-tcr-interior-heater-wall_ec638003.jpg";
-const GALLERY_3     = "/manus-storage/pfs-tcr-interior-exit-door_8dc0f0ed.jpg";
-const GALLERY_4     = "/manus-storage/pfs-tcr-interior-hazloc-door_ce38dc15.jpg";
-const GALLERY_5     = "/manus-storage/pfs-tcr-interior-wide-blue-filter_fe875867.jpg";
+const FEATURED_IMG  = "/assets/pfs-tcr-exterior-angled_30f84dad.jpg";
+const GALLERY_1     = "/assets/pfs-tcr-exterior-control-panel_3227f697.jpg";
+const GALLERY_2     = "/assets/pfs-tcr-interior-heater-wall_ec638003.jpg";
+const GALLERY_3     = "/assets/pfs-tcr-interior-exit-door_8dc0f0ed.jpg";
+const GALLERY_4     = "/assets/pfs-tcr-interior-hazloc-door_ce38dc15.jpg";
+const GALLERY_5     = "/assets/pfs-tcr-interior-wide-blue-filter_fe875867.jpg";
 
 // ── CDN VIDEO ─────────────────────────────────────────────────────────────────
-const HERO_VIDEO    = "/manus-storage/pfs-temp-room-hero_1712ca09.mp4";
+const HERO_VIDEO    = "/assets/pfs-temp-room-hero_1712ca09.mp4";
 
 // ── CERTS ─────────────────────────────────────────────────────────────────────
-const ETL_LOGO   = "/manus-storage/pfs-etl-logo_7758f722.png";
-const UL_LOGO    = "/manus-storage/pfs-ul508a-clean_e8efdeb8.jpg";
-const NFPA_LOGO  = "/manus-storage/pfs-nfpa-logo_4b710cc9.png";
-const USA_FLAG   = "/manus-storage/pfs-usa-flag_8fca512e.jpg";
+const ETL_LOGO   = "/assets/pfs-etl-logo_7758f722.png";
+const UL_LOGO    = "/assets/pfs-ul508a-clean_e8efdeb8.jpg";
+const NFPA_LOGO  = "/assets/pfs-nfpa-logo_4b710cc9.png";
+const USA_FLAG   = "/assets/pfs-usa-flag_c1b7e9f2.png";
 
 const BLUE = "#1B3A6B";
 
@@ -87,10 +87,10 @@ const INDUSTRIES = [
 
 // ── RELATED PRODUCTS ──────────────────────────────────────────────────────────
 const RELATED = [
-  { label: "Process-Controlled Rooms",   href: "/products/environmental-rooms/process-controlled", img: "/manus-storage/pfs-process-controlled-room-exterior_f4302d4b.jpg",  desc: "Precise temperature, humidity, and airflow control for sensitive finishing operations." },
-  { label: "Enclosed Work Environments", href: "/products/environmental-rooms/enclosed-work",      img: "/manus-storage/pfs-environmental-room-interior-large_a5ff5797.jpg", desc: "Clean, contamination-free enclosures for assembly, inspection, and precision work." },
-  { label: "Industrial Ovens",           href: "/products/ovens",                                   img: "/manus-storage/HEROOVEN_23aea520.png",                   desc: "Batch, walk-in, and conveyor ovens for curing and heat treating." },
-  { label: "Enclosed Paint Booths",      href: "/products/paint-booths/enclosed",                   img: "/manus-storage/enclosed-booth-card-zenith_7e010642.jpg",             desc: "Full-enclosure spray booths for superior overspray containment and finish quality." },
+  { label: "Process-Controlled Rooms",   href: "/products/environmental-rooms/process-controlled", img: "/assets/pfs-process-controlled-room-exterior_f4302d4b.jpg",  desc: "Precise temperature, humidity, and airflow control for sensitive finishing operations." },
+  { label: "Enclosed Work Environments", href: "/products/environmental-rooms/enclosed-work",      img: "/assets/pfs-environmental-room-interior-large_a5ff5797.jpg", desc: "Clean, contamination-free enclosures for assembly, inspection, and precision work." },
+  { label: "Industrial Ovens",           href: "/products/ovens",                                   img: "/assets/pfs-batch-oven-card_f2b3e9a1.jpg",                   desc: "Batch, walk-in, and conveyor ovens for curing and heat treating." },
+  { label: "Enclosed Paint Booths",      href: "/products/paint-booths/enclosed",                   img: "/assets/enclosed-booth-card-zenith_7e010642.jpg",             desc: "Full-enclosure spray booths for superior overspray containment and finish quality." },
 ];
 
 // ── SEO JSON-LD ───────────────────────────────────────────────────────────────

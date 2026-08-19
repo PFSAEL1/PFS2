@@ -1,12 +1,13 @@
+import { useEffect } from 'react';
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
-const HERO_VIDEO = "/manus-storage/pfs-prep-station-hero_2554e281.mp4";
-const HERO_IMG   = "/manus-storage/pfs-prep-station-facility_f1978a4b.jpg"; // poster fallback
-const SANDING_IMG = "/manus-storage/pfs-prep-station-curtain-real_c07d32e0.jpg";
-const MIX_ROOM_IMG = "/manus-storage/IMG_0498_a98f5f38.jpg";
-const PREP_STATION_IMG = "/manus-storage/pfs-prep-station-curtain-real_c07d32e0.jpg";
+const HERO_VIDEO = "/assets/pfs-prep-station-hero_2554e281.mp4";
+const HERO_IMG   = "/assets/pfs-prep-station-facility_f1978a4b.jpg"; // poster fallback
+const SANDING_IMG = "/assets/pfs-prep-station-curtain-real_c07d32e0.jpg";
+const MIX_ROOM_IMG = "/assets/IMG_0498_a98f5f38.jpg";
+const PREP_STATION_IMG = "/assets/pfs-prep-station-curtain-real_c07d32e0.jpg";
 
 const PREP_ITEMS = [
   {
@@ -60,6 +61,24 @@ export default function PrepHub() {
     canonical: "/products/prep",
   });
 
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Surface Preparation Equipment — PFS Industrial Finishing Equipment",
+      "url": "https://pfsspraybooths.com/products/prep-support",
+      "description": "PFS surface preparation equipment — prep stations, wash booths, mixing rooms, and paint walls for automotive, industrial, and aerospace finishing operations.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "PFS Industrial Finishing Equipment",
+        "url": "https://pfsspraybooths.com"
+      }
+    });
+    document.head.appendChild(script);
+    return () => { if (script.parentNode) script.parentNode.removeChild(script); };
+  }, []);
   return (
     <div>
       {/* ── FULL-BLEED VIDEO HERO ── */}

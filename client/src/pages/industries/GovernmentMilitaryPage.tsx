@@ -15,41 +15,41 @@ import { SiteProductCardSection } from "@/components/SiteProductCard";
 import { useSEO } from "@/hooks/useSEO";
 
 // ── CDN IMAGES ────────────────────────────────────────────────────────────────
-const HERO_VIDEO = "/manus-storage/pfs-military-hero-video_55488949.mp4";
-const HERO_IMG = "/manus-storage/pfs-military-humvee-booth-clean_ef5c4409.jpeg"; // poster fallback
+const HERO_VIDEO   = "/assets/pfs-military-hero-video_55488949.mp4";
+const HERO_IMG     = "/assets/pfs-military-humvee-booth-clean_ef5c4409.jpeg"; // poster fallback
 
 // Featured product image — clean Humvee JPEG (no phone UI chrome)
-const FEATURED_IMG = "/manus-storage/pfs-military-humvee-booth-clean_ef5c4409.jpeg";
+const FEATURED_IMG = "/assets/pfs-military-humvee-booth-clean_ef5c4409.jpeg";
 
 // Gallery — 6 military-specific photos (jet turbine removed — aerospace product, not military)
 const GALLERY: GalleryImage[] = [
-  { src: "/manus-storage/pfs-military-humvee-booth-clean_15890e0d.png", alt: "Military HMMWV inside PFS paint booth" },
-  { src: "/manus-storage/pfs-helios-military-booth_f3b03d46.png", alt: "PFS Helios Series booth with armored military vehicle" },
-  { src: "/manus-storage/pfs-military-stryker-outdoor-base_9293cfd5.png", alt: "PFS booth with Stryker armored vehicle at military base" },
-  { src: "/manus-storage/pfs-military-booth-exterior-warehouse_0980594a.jpeg", alt: "PFS booth exterior in warehouse" },
-  { src: "/manus-storage/pfs-military-booth-interior-ceiling_e9371cbf.jpeg", alt: "Interior ceiling of large PFS military paint booth" },
-  { src: "/manus-storage/pfs-military-booth-fire-suppression_ac66ffc7.jpeg", alt: "PFS booth with red fire suppression tanks in warehouse" },
+  { src: "/assets/pfs-military-humvee-booth-clean_15890e0d.png",          alt: "Military HMMWV inside PFS paint booth" },
+  { src: "/assets/pfs-helios-military-booth_f3b03d46.png",               alt: "PFS Helios Series booth with armored military vehicle" },
+  { src: "/assets/pfs-military-stryker-outdoor-base_9293cfd5.png",       alt: "PFS booth with Stryker armored vehicle at military base" },
+  { src: "/assets/pfs-military-booth-exterior-warehouse_0980594a.jpeg",  alt: "PFS booth exterior in warehouse" },
+  { src: "/assets/pfs-military-booth-interior-ceiling_e9371cbf.jpeg",    alt: "Interior ceiling of large PFS military paint booth" },
+  { src: "/assets/pfs-military-booth-fire-suppression_ac66ffc7.jpeg",    alt: "PFS booth with red fire suppression tanks in warehouse" },
 ];
 
 // Cert logos
-const ETL_LOGO = "/manus-storage/pfs-etl-logo_7758f722.png";
-const UL_LOGO = "/manus-storage/pfs-ul508a-clean_e8efdeb8.jpg";
-const NFPA_LOGO = "/manus-storage/pfs-nfpa-logo_4b710cc9.png";
-const EPA_LOGO = "/manus-storage/pfs-epa-logo_e4165f68.webp";
-const OSHA_LOGO = "/manus-storage/pfs-osha-logo_0c460739.jpg";
-const USA_FLAG = "/manus-storage/pfs-usa-flag_8fca512e.jpg";
+const ETL_LOGO  = "/assets/pfs-etl-logo_7758f722.png";
+const UL_LOGO   = "/assets/pfs-ul508a-clean_e8efdeb8.jpg";
+const NFPA_LOGO = "/assets/pfs-nfpa-logo_4b710cc9.png";
+const EPA_LOGO  = "/assets/pfs-epa-logo_e4165f68.webp";
+const OSHA_LOGO = "/assets/pfs-osha-logo_0c460739.jpg";
+const USA_FLAG  = "/assets/pfs-usa-flag_8fca512e.jpg";
 
 const BLUE = "#1B3A6B";
 // (Ken Burns slideshow replaced with video hero)
 
 // ── CERT CAROUSEL ─────────────────────────────────────────────────────────────
 const CERTS = [
-  { type: "logo", img: ETL_LOGO, title: "ETL & ETL-C Listed", sub: "Intertek — USA & Canada", imgH: 44 },
-  { type: "logo", img: UL_LOGO, title: "UL 508A Certified", sub: "Industrial Control Panel Fabricator", imgH: 44 },
-  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant", sub: "Spray Application Standard", imgH: 44 },
-  { type: "logo", img: EPA_LOGO, title: "EPA Compliant", sub: "Air Quality Standards", imgH: 36 },
-  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant", sub: "Workplace Safety Standards", imgH: 36 },
-  { type: "flag", img: USA_FLAG, title: "Made in the USA", sub: "Santa Rosa, CA", imgH: 36 },
+  { type: "logo", img: ETL_LOGO,  title: "ETL & ETL-C Listed",       sub: "Intertek — USA & Canada",             imgH: 44 },
+  { type: "logo", img: UL_LOGO,   title: "UL 508A Certified",         sub: "Industrial Control Panel Fabricator", imgH: 44 },
+  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant",         sub: "Spray Application Standard",          imgH: 44 },
+  { type: "logo", img: EPA_LOGO,  title: "EPA Compliant",             sub: "Air Quality Standards",               imgH: 36 },
+  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant",            sub: "Workplace Safety Standards",          imgH: 36 },
+  { type: "flag", img: USA_FLAG,  title: "Made in the USA",           sub: "Santa Rosa, CA",                      imgH: 36 },
 ];
 const CERTS_LOOP = [...CERTS, ...CERTS];
 
@@ -155,10 +155,10 @@ const BOOTH_LINEUP = [
 ];
 
 const PRODUCTS = [
-  { label: "Industrial Ovens", href: "/products/ovens", img: "/manus-storage/pfs-vulcan-oven-card_ad72eade_316de7d1.png", desc: "Batch and conveyor ovens for military vehicle primer cure and coating processes." },
-  { label: "Blasting Systems", href: "/products/blast-systems", img: "/manus-storage/blast-systems-real_c7389401_16a0255c.webp", desc: "Blast rooms and cabinets for military vehicle surface prep and paint stripping." },
-  { label: "Powder Coating Systems", href: "/products/powder-booths", img: "/manus-storage/pfs-powder-coating-card2_32de7c98.png", desc: "Powder coating booths for government equipment, components, and infrastructure." },
-  { label: "Process-Controlled Rooms", href: "/products/environmental-rooms/process-controlled", img: "/manus-storage/pfs-process-controlled-room-exterior_f4302d4b.jpg", desc: "Temperature and humidity-controlled environments for precision government finishing." },
+  { label: "Industrial Ovens", href: "/products/ovens", img: "/assets/pfs-vulcan-oven-card_ad72eade_316de7d1.png", desc: "Batch and conveyor ovens for military vehicle primer cure and coating processes." },
+  { label: "Blasting Systems", href: "/products/blast-systems", img: "/assets/blast-systems-real_c7389401_16a0255c.webp", desc: "Blast rooms and cabinets for military vehicle surface prep and paint stripping." },
+  { label: "Powder Coating Systems", href: "/products/powder-booths", img: "/assets/pfs-powder-coating-card2_32de7c98.png", desc: "Powder coating booths for government equipment, components, and infrastructure." },
+  { label: "Process-Controlled Rooms", href: "/products/environmental-rooms/process-controlled", img: "/assets/pfs-process-controlled-room-exterior_f4302d4b.jpg", desc: "Temperature and humidity-controlled environments for precision government finishing." },
 ];
 
 // ── MAIN PAGE ─────────────────────────────────────────────────────────────────
@@ -167,6 +167,21 @@ export default function GovernmentMilitaryPage() {
     title: "Military & Government Paint Booths | Defense Finishing Systems | PFS",
     description: "PFS military and government spray booths are built to meet MIL-SPEC coating requirements, federal procurement standards, and OSHA/EPA regulations. Drive-through configurations for HMMWVs, MRAPs, and tactical vehicles. NFPA 33 compliant, ETL/UL listed components, CID2 explosion-proof electrical available. Full documentation packages for government facility audits. Manufactured in Santa Rosa, CA. Ships to federal facilities and military bases nationwide.",
     canonical: "/industries/government-military",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "NFPA and MIL-SPEC compliant spray booths for military and government applications",
+      "provider": {
+        "@type": "Organization",
+        "name": "Platinum Finishing Systems",
+        "url": "https://pfsspraybooths.com",
+        "telephone": "+18885457715"
+      },
+      "serviceType": "Industrial Finishing Equipment",
+      "audience": { "@type": "Audience", "audienceType": "Military contractors, government facilities, defense manufacturers" },
+      "areaServed": { "@type": "Country", "name": "United States" },
+      "url": "https://pfsspraybooths.com/industries/government-military"
+    },
   });
 
   const [featuresOpen, setFeaturesOpen] = useState(false);
@@ -177,7 +192,7 @@ export default function GovernmentMilitaryPage() {
     if (!v) return;
     v.muted = true;
     v.playsInline = true;
-    const play = () => { v.play().catch(() => { }); setVideoReady(true); };
+    const play = () => { v.play().catch(() => {}); setVideoReady(true); };
     v.addEventListener("canplaythrough", play, { once: true });
     v.load();
     return () => v.removeEventListener("canplaythrough", play);
@@ -187,7 +202,7 @@ export default function GovernmentMilitaryPage() {
     <div className="bg-white">
       {/* ── FULL-BLEED HERO — Video background ── */}
       <section style={{ position: "relative", minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "flex-end", overflow: "hidden" }}>
-        <img
+                <img
           src={HERO_IMG}
           alt="PFS government and military spray booth installation"
           aria-hidden="true"
@@ -199,8 +214,8 @@ export default function GovernmentMilitaryPage() {
           loop
           playsInline
           disablePictureInPicture
-
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", zIndex: 0, opacity: videoReady ? 1 : 0, transition: "opacity 0.7s ease" }}
+         
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", zIndex: 0 , opacity: videoReady ? 1 : 0, transition: "opacity 0.7s ease" }}
         >
           <source src={HERO_VIDEO} type="video/mp4" />
         </video>
@@ -212,22 +227,22 @@ export default function GovernmentMilitaryPage() {
           <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.18em", color: "rgba(255,255,255,0.5)", textTransform: "uppercase", display: "block", marginBottom: "1rem" }}>
             GOVERNMENT &amp; MILITARY
           </span>
-          <h1 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2.6rem, 7vw, 5rem)", fontWeight: 800, color: "#fff", lineHeight: 1.0, letterSpacing: "-0.01em", marginBottom: "1rem", maxWidth: "680px" }}>
+          <h1 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2.6rem, 7vw, 5rem)", fontWeight: 800, color: "#fff", lineHeight: 1.0, letterSpacing: "-0.01em", marginBottom: "1rem", maxWidth: "680px" }}>
             Military-Grade Paint Booths<br />
             for Government &amp; Defense<br />
             Applications
           </h1>
-          <span style={{ display: "block", alignItems: "center", gap: "0.4rem", background: "rgba(27,58,107,0.75)", border: "1px solid rgba(107,163,224,0.4)", color: "#6fa3e0", borderRadius: "2px", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "0.3rem 0.75rem", marginBottom: "1.25rem", width: "fit-content" }}>
+            <span style={{ display: "block", alignItems: "center", gap: "0.4rem", background: "rgba(27,58,107,0.75)", border: "1px solid rgba(107,163,224,0.4)", color: "#6fa3e0", borderRadius: "2px", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "0.3rem 0.75rem", marginBottom: "1.25rem", width: "fit-content" }}>
             PFS HELIOS SERIES
           </span>
-          <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "clamp(0.95rem, 1.8vw, 1.1rem)", color: "rgba(255,255,255,0.82)", lineHeight: 1.7, marginBottom: "2.5rem", maxWidth: "500px" }}>
+          <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "clamp(0.95rem, 1.8vw, 1.1rem)", color: "rgba(255,255,255,0.82)", lineHeight: 1.7, marginBottom: "2.5rem", maxWidth: "500px" }}>
             MIL-SPEC compliant with full documentation packages for government facility audits. Drive-through configurations for HMMWVs, MRAPs, and tactical vehicles. ETL/UL listed and UL 508A certified components. NFPA 33 compliant — installed at federal facilities and military bases nationwide.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem", maxWidth: "360px" }}>
-            <Link data-animation="slideLeft" href="/contact/request-a-quote">
+            <Link href="/contact/request-a-quote">
               <span className="btn-glow" style={{ width: "100%", maxWidth: "320px", justifyContent: "center" }}>GET PRICING <ArrowRight size={16} /></span>
             </Link>
-            <a data-animation="slideRight" href="tel:8885457715" style={{ width: "100%", maxWidth: "320px" }}>
+            <a href="tel:8885457715" style={{ width: "100%", maxWidth: "320px" }}>
               <span style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem", background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.5)", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.9rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "1.1rem 2.5rem", cursor: "pointer", width: "100%" }}>
                 CALL (888) 545-7715
               </span>
@@ -247,7 +262,7 @@ export default function GovernmentMilitaryPage() {
               <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.6rem" }}>
                 FEATURED PAINT BOOTH
               </span>
-              <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", marginBottom: "0.5rem" }}>
+              <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", marginBottom: "0.5rem" }}>
                 Military Vehicle Paint Booth
               </h2>
               <span style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", background: BLUE, color: "#fff", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.68rem", fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", padding: "0.28rem 0.85rem", marginBottom: "0.75rem" }}>
@@ -261,10 +276,10 @@ export default function GovernmentMilitaryPage() {
               <img src={FEATURED_IMG} alt="Military HMMWV inside large PFS paint booth" style={{ width: "100%", height: "auto", display: "block", objectFit: "cover" }} />
             </div>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
-              <Link data-animation="slideLeft" href="/contact/request-a-quote">
+              <Link href="/contact/request-a-quote">
                 <span className="btn-glow">REQUEST A QUOTE <ArrowRight size={15} /></span>
               </Link>
-              <Link data-animation="slideRight" href="/products/paint-booths">
+              <Link href="/products/paint-booths">
                 <span className="btn-glow">
                   SEE ALL BOOTHS <ArrowRight size={15} />
                 </span>
@@ -284,7 +299,7 @@ export default function GovernmentMilitaryPage() {
             <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.6rem" }}>
               INSTALLED PROJECTS
             </span>
-            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em" }}>
+            <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em" }}>
               PFS in the Field
             </h2>
           </div>
@@ -299,11 +314,11 @@ export default function GovernmentMilitaryPage() {
             <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.6rem" }}>
               STANDARD SPECIFICATION
             </span>
-            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em" }}>
+            <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em" }}>
               Certified. Engineered. Delivered Complete.
             </h2>
           </div>
-          <div data-animation="fadeIn" className="grid md:grid-cols-3 gap-5 mb-5">
+          <div className="grid md:grid-cols-3 gap-5 mb-5">
             {FEATURES_VISIBLE.map((f) => (
               <div key={f.title} style={{ background: "#fff", padding: "1.75rem", borderTop: `3px solid ${BLUE}`, display: "flex", flexDirection: "column" }}>
                 <div style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "2rem", fontWeight: 900, color: "rgba(27,58,107,0.12)", lineHeight: 1, marginBottom: "0.5rem" }}>{f.num}</div>
@@ -348,10 +363,10 @@ export default function GovernmentMilitaryPage() {
             </>
           )}
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "center" }}>
-            <button data-animation="slideLeft" onClick={() => setFeaturesOpen(!featuresOpen)} style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", background: "transparent", color: "#111", border: "1.5px solid #111", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.82rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", padding: "0.75rem 1.5rem", cursor: "pointer" }}>
+            <button onClick={() => setFeaturesOpen(!featuresOpen)} style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", background: "transparent", color: "#111", border: "1.5px solid #111", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.82rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", padding: "0.75rem 1.5rem", cursor: "pointer" }}>
               {featuresOpen ? <><ChevronUp size={14} /> SHOW LESS</> : <><ChevronDown size={14} /> SEE ALL SPECIFICATIONS &amp; BOOTH TYPES</>}
             </button>
-            <Link data-animation="slideRight" href="/contact/request-a-quote">
+            <Link href="/contact/request-a-quote">
               <span className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
             </Link>
           </div>
@@ -364,7 +379,7 @@ export default function GovernmentMilitaryPage() {
         <div className="container">
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", marginBottom: "2.5rem" }}>
             <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: BLUE, display: "block", marginBottom: "0.5rem" }}>SAM.GOV REGISTERED VENDOR</span>
-            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.2rem)", fontWeight: 800, color: "#0d1b2e", letterSpacing: "-0.01em", lineHeight: 1.1, marginBottom: "0.75rem" }}>Federal Procurement Profile</h2>
+            <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.2rem)", fontWeight: 800, color: "#0d1b2e", letterSpacing: "-0.01em", lineHeight: 1.1, marginBottom: "0.75rem" }}>Federal Procurement Profile</h2>
             <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#444", maxWidth: "560px", lineHeight: 1.7 }}>PFS is a registered federal contractor on SAM.gov. Our booths are procurable through standard government acquisition channels including GSA schedules, competitive bids, and sole-source justifications for NFPA 33 compliant spray finishing equipment.</p>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.5rem", maxWidth: "960px", margin: "0 auto 2rem" }}>
@@ -384,7 +399,7 @@ export default function GovernmentMilitaryPage() {
           <div style={{ background: "#fff", border: "1px solid #dce4ef", padding: "1.25rem 1.5rem", maxWidth: "960px", margin: "0 auto" }}>
             <div style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: BLUE, marginBottom: "0.75rem" }}>Secondary NAICS Codes</div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
-              {["236210", "236220", "238390", "321992", "332322", "332323", "332439", "332999", "811310", "812332"].map(code => (
+              {["236210","236220","238390","321992","332322","332323","332439","332999","811310","812332"].map(code => (
                 <span key={code} style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.82rem", fontWeight: 700, background: "#eff4ff", color: BLUE, border: "1px solid #c7d9f5", padding: "0.3rem 0.75rem", letterSpacing: "0.04em" }}>{code}</span>
               ))}
             </div>
@@ -395,19 +410,19 @@ export default function GovernmentMilitaryPage() {
       <section style={{ background: BLUE, padding: "3.5rem 0" }}>
         <div className="container">
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "1.5rem" }}>
-            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 4vw, 2.6rem)", fontWeight: 800, color: "#fff", letterSpacing: "-0.01em", lineHeight: 1.1 }}>
+            <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 4vw, 2.6rem)", fontWeight: 800, color: "#fff", letterSpacing: "-0.01em", lineHeight: 1.1 }}>
               Tell us your vehicle dimensions.<br />We'll spec the booth.
             </h2>
             <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.85)", maxWidth: "440px" }}>
               Quote in 24 hours. manufactured in the USA with ETL/UL listed components. Installed at federal facilities and military bases by PFS-certified technicians.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center" }}>
-              <Link data-animation="slideLeft" href="/contact/request-a-quote">
+              <Link href="/contact/request-a-quote">
                 <span className="btn-glow-white">
                   GET PRICING <ArrowRight size={16} />
                 </span>
               </Link>
-              <a data-animation="slideRight" href="tel:8885457715">
+              <a href="tel:8885457715">
                 <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.6)", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.9rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "1.1rem 2.5rem", cursor: "pointer" }}>
                   (888) 545-7715
                 </span>
@@ -417,7 +432,7 @@ export default function GovernmentMilitaryPage() {
         </div>
       </section>
 
-      {/* RELATED PRODUCTS */}
+            {/* RELATED PRODUCTS */}
       <SiteProductCardSection
         heading="You May Also Need"
         label="Complete Your System"

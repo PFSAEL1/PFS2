@@ -13,21 +13,21 @@ import { GalleryGrid } from "@/components/GalleryLightbox";
 import { SiteProductCardSection } from "@/components/SiteProductCard";
 import { useSEO } from "@/hooks/useSEO";
 
-const HERO_VIDEO   = "/manus-storage/pfs-inspection-hero_c1cd5e13.mp4";
-const HERO_POSTER  = "/manus-storage/pfs-inspection-hero_1b83deb1.png";
-const FEATURED_IMG = "/manus-storage/pfs-inspection-hero_1b83deb1.png";
+const HERO_VIDEO   = "/assets/pfs-inspection-hero_c1cd5e13.mp4";
+const HERO_POSTER  = "/assets/pfs-inspection-hero_1b83deb1.png";
+const FEATURED_IMG = "/assets/pfs-inspection-hero_1b83deb1.png";
 
 const GALLERY_IMGS = [
-  { src: "/manus-storage/pfs-inspection-grey-car_388ad0fd.png",   alt: "PFS Atlas inspection booth — grey vehicle on lift under high-CRI LED lighting",  pos: "center 40%" },
-  { src: "/manus-storage/pfs-inspection-airplane_ae784329.png",   alt: "PFS Atlas inspection booth — aircraft fuselage inspection tunnel with LED banks", pos: "center 50%" },
+  { src: "/assets/pfs-inspection-grey-car_388ad0fd.png",   alt: "PFS Atlas inspection booth — grey vehicle on lift under high-CRI LED lighting",  pos: "center 40%" },
+  { src: "/assets/pfs-inspection-airplane_ae784329.png",   alt: "PFS Atlas inspection booth — aircraft fuselage inspection tunnel with LED banks", pos: "center 50%" },
 ];
 
-const ETL_LOGO  = "/manus-storage/pfs-etl-logo_7758f722.png";
-const UL_LOGO   = "/manus-storage/pfs-ul508a-clean_e8efdeb8.jpg";
-const NFPA_LOGO = "/manus-storage/pfs-nfpa-logo_4b710cc9.png";
-const EPA_LOGO  = "/manus-storage/pfs-epa-logo_e4165f68.webp";
-const OSHA_LOGO = "/manus-storage/pfs-osha-logo_0c460739.jpg";
-const USA_FLAG  = "/manus-storage/pfs-usa-flag_8fca512e.jpg";
+const ETL_LOGO  = "/assets/pfs-etl-logo_7758f722.png";
+const UL_LOGO   = "/assets/pfs-ul508a-clean_e8efdeb8.jpg";
+const NFPA_LOGO = "/assets/pfs-nfpa-logo_4b710cc9.png";
+const EPA_LOGO  = "/assets/pfs-epa-logo_e4165f68.webp";
+const OSHA_LOGO = "/assets/pfs-osha-logo_0c460739.jpg";
+const USA_FLAG  = "/assets/pfs-usa-flag_8fca512e.jpg";
 
 const BLUE = "#1B3A6B";
 
@@ -61,10 +61,10 @@ const SIZES: Record<string, { w: string; h: string; l: string }[]> = {
 };
 
 const PRODUCTS = [
-  { label: "Cross-Flow Booths",      href: "/products/paint-booths/crossflow",      img: "/manus-storage/orion-crossflow-render-v3_63c04d8e.webp",              desc: "Horizontal airflow — the most cost-effective enclosed booth for automotive and industrial finishing." },
-  { label: "Semi-Downdraft Booths",  href: "/products/paint-booths/semi-downdraft", img: "/manus-storage/orion-semi-down-epoxy_9144ba19.png",             desc: "Rear-angled exhaust for versatile applications — a step up from crossflow airflow." },
-  { label: "Air Make-Up Units",      href: "/products/air-make-up-units",            img: "/manus-storage/pfs-amu-card_41f0dd88.jpg",                      desc: "Tempered make-up air systems to replace exhausted air and maintain positive booth pressure." },
-  { label: "Prep Stations",          href: "/products/prep-support/prep-stations",               img: "/manus-storage/pfs-prep-station-curtain-real_c07d32e0.jpg",      desc: "Dedicated prep and masking stations to keep your spray booth running at full capacity." },
+  { label: "Cross-Flow Booths",      href: "/products/paint-booths/crossflow",      img: "/assets/orion-crossflow-render-v3_63c04d8e.webp",              desc: "Horizontal airflow — the most cost-effective enclosed booth for automotive and industrial finishing." },
+  { label: "Semi-Downdraft Booths",  href: "/products/paint-booths/semi-downdraft", img: "/assets/orion-semi-down-epoxy_9144ba19.png",             desc: "Rear-angled exhaust for versatile applications — a step up from crossflow airflow." },
+  { label: "Air Make-Up Units",      href: "/products/air-make-up-units",            img: "/assets/pfs-amu-card_41f0dd88.jpg",                      desc: "Tempered make-up air systems to replace exhausted air and maintain positive booth pressure." },
+  { label: "Prep Stations",          href: "/products/prep-support/prep-stations",               img: "/assets/pfs-prep-station-curtain-real_c07d32e0.jpg",      desc: "Dedicated prep and masking stations to keep your spray booth running at full capacity." },
 ];
 
 
@@ -112,6 +112,39 @@ export default function InspectionBoothPage() {
     title: "Inspection Booths | Quality Control Finishing Booths | PFS",
     description: "PFS inspection booths deliver controlled lighting and airflow for quality control inspection of painted and coated parts. ETL/UL listed components, NFPA 33 compliant. Manufactured in Santa Rosa, CA.",
     canonical: "/products/paint-booths/inspection",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Inspection Booth",
+      "description": "PFS inspection booths provide controlled lighting and ventilation for quality control inspection of finished coatings and surface defects.",
+      "brand": {
+        "@type": "Brand",
+        "name": "PFS"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Platinum Finishing Systems",
+        "url": "https://pfsspraybooths.com",
+        "telephone": "+18885457715",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Santa Rosa",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "Platinum Finishing Systems"
+        },
+        "url": "https://pfsspraybooths.com/products/paint-booths/inspection-booth"
+      },
+      "url": "https://pfsspraybooths.com/products/paint-booths/inspection-booth"
+    },
   });
 
   const [featuresOpen, setFeaturesOpen] = useState(false);

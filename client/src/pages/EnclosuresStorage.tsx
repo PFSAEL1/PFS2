@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
-const IMG = "/manus-storage/pfs-aerospace-jet-in-booth-real_2eb79dc9.png";
+const IMG = "/assets/pfs-aerospace-jet-in-booth-real_2eb79dc9.png";
 
 export default function EnclosuresStorage() {
   useSEO({
@@ -14,7 +14,7 @@ export default function EnclosuresStorage() {
 
   return (
     <div>
-      <PageHero bgVideo="/manus-storage/pfs-enclosed-tesla-hero_9c110001.mp4"
+      <PageHero
         title="Enclosures & Storage Solutions"
         subtitle="Modular enclosures, storage buildings, and industrial structures engineered to complement your finishing operation."
         breadcrumbs={[{ label: "Enclosures & Storage" }]}

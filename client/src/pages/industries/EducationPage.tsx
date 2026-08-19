@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
-const HERO_IMG = "/manus-storage/pfs-paint-booth-sprayer-card_42d3ea13.jpg";
+const HERO_IMG = "/assets/pfs-paint-booth-sprayer-card_42d3ea13.jpg";
 
 const SOLUTIONS = [
   {
@@ -38,11 +38,26 @@ export default function EducationPage() {
     title: "Educational Spray Booths | Vocational Training Paint Booths | PFS",
     description: "PFS educational spray booths are designed for vocational training programs, community colleges, and trade schools. Safe, code-compliant finishing environments for student instruction. ETL/UL listed components. Manufactured in Santa Rosa, CA.",
     canonical: "/industries/education",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Code-compliant spray booths for vocational and automotive training programs",
+      "provider": {
+        "@type": "Organization",
+        "name": "Platinum Finishing Systems",
+        "url": "https://pfsspraybooths.com",
+        "telephone": "+18885457715"
+      },
+      "serviceType": "Industrial Finishing Equipment",
+      "audience": { "@type": "Audience", "audienceType": "Vocational schools, community colleges, automotive training programs" },
+      "areaServed": { "@type": "Country", "name": "United States" },
+      "url": "https://pfsspraybooths.com/industries/education"
+    },
   });
 
   return (
     <div>
-      <PageHero bgVideo="/manus-storage/pfs-paint-booth-hero_500b9d60.mp4"
+      <PageHero
         title="Education"
         subtitle="Spray booths, finishing equipment, and prep environments for vocational schools, community colleges, and universities — built to meet educational program requirements and safety codes."
         breadcrumbs={[{ label: "Industries", href: "/industries" }, { label: "Education" }]}

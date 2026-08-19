@@ -5,22 +5,23 @@
  * Drive-Through is featured as a configuration option note, not a separate card.
  */
 
+import { useEffect } from 'react';
 import PageHero from "@/components/PageHero";
 import { Link } from "wouter";
 import { ArrowRight, CheckCircle2, Info } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
-const HERO_VIDEO = "/manus-storage/pfs-enclosed-tesla-hero_9c110001.mp4";
-const HERO_IMG = "/manus-storage/pfs-zenith-tesla-source_c7c540fe.jpg"; // poster fallback
-const HEATED_IMG = "/manus-storage/enclosed-booth-card-zenith_7e010642.jpg";
-const CROSSFLOW_IMG = "/manus-storage/orion-crossflow-render-v3_63c04d8e.webp"; // Real PFS cross-flow booth — shop floor with teal filter doors
-const SEMI_DD_IMG = "/manus-storage/orion-semi-down-epoxy_9144ba19.png";
-const FULL_DD_IMG = "/manus-storage/zenith_angle_epoxy_cc380a7d_3247b846.webp";
-const RAISED_BM_IMG = "/manus-storage/PFS_Zenith_FullDD_Front_Epoxy_v2_1a902210.png";
-const SIDE_DD_IMG = "/manus-storage/helios_front_v27_epoxy_dbe93c9f.png";
-const SPRINTER_IMG = "/manus-storage/pfs-sprinter-van-mercedes-clean_84aa20f4.jpg";
-const TRUCKS_IMG = "/manus-storage/pfs-truck-booth-card_a0d45884_fca2d2cb.jpeg";
-const DOUBLE_WALL_IMG = "/manus-storage/pfs-double-wall-booth-v2_8cdb7a24.webp";
+const HERO_VIDEO = "/assets/pfs-enclosed-tesla-hero_9c110001.mp4";
+const HERO_IMG   = "/assets/pfs-zenith-tesla-source_c7c540fe.jpg"; // poster fallback
+const HEATED_IMG = "/assets/enclosed-booth-card-zenith_7e010642.jpg";
+const CROSSFLOW_IMG = "/assets/orion-crossflow-render-v3_63c04d8e.webp"; // Real PFS cross-flow booth — shop floor with teal filter doors
+const SEMI_DD_IMG = "/assets/orion-semi-down-epoxy_9144ba19.png";
+const FULL_DD_IMG    = "/assets/zenith_angle_epoxy_cc380a7d_3247b846.webp";
+const RAISED_BM_IMG  = "/assets/PFS_Zenith_FullDD_Front_Epoxy_v2_1a902210.png";
+const SIDE_DD_IMG = "/assets/helios_front_v27_epoxy_dbe93c9f.png";
+const SPRINTER_IMG = "/assets/pfs-sprinter-van-mercedes-clean_84aa20f4.jpg";
+const TRUCKS_IMG      = "/assets/pfs-truck-booth-card_a0d45884_fca2d2cb.jpeg";
+const DOUBLE_WALL_IMG = "/assets/pfs-double-wall-booth-v2_8cdb7a24.webp";
 
 const CONFIGURATIONS = [
   {
@@ -107,7 +108,7 @@ const CONFIGURATIONS = [
   {
     label: "Wash Booths",
     href: "/products/paint-booths/wash-booth",
-    img: "/manus-storage/pfs-wash-booth-man-washing_86c386b9.png",
+    img: "/assets/pfs-wash-booth-man-washing_86c386b9.png",
     imgPos: "center 50%",
     badge: "Surface Preparation",
     desc: "Controlled wash environments for manual cleaning and surface preparation before powder coating or liquid paint application. Open-face or enclosed with floor drain.",
@@ -116,7 +117,7 @@ const CONFIGURATIONS = [
   {
     label: "Outdoor Paint Booths",
     href: "/products/outdoor-booths",
-    img: "/manus-storage/pfs-outdoor-hero-8143_9d49ac36.jpg",
+    img: "/assets/pfs-outdoor-hero-8143_9d49ac36.jpg",
     imgPos: "center 40%",
     badge: "No Building Required",
     desc: "Permanent steel building structure installed on a concrete pad — a complete outdoor finishing environment with no facility expansion needed. ETL listed, NFPA 33 compliant, ships nationally.",
@@ -131,6 +132,24 @@ export default function EnclosedBoothsPage() {
     canonical: "/products/spray-booths/enclosed",
   });
 
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Enclosed Paint Booths — PFS Industrial Finishing Equipment",
+      "url": "https://pfsspraybooths.com/products/paint-booths/enclosed",
+      "description": "PFS enclosed paint booths — full downdraft, semi-downdraft, side-downdraft, and cross-flow configurations. ETL-listed, NFPA 33 compliant, built in the USA.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "PFS Industrial Finishing Equipment",
+        "url": "https://pfsspraybooths.com"
+      }
+    });
+    document.head.appendChild(script);
+    return () => { if (script.parentNode) script.parentNode.removeChild(script); };
+  }, []);
   return (
     <div>
       {/* ── FULL-BLEED HERO — Cinematic video background (matches Aerospace/Industrial pattern) ── */}
@@ -148,7 +167,7 @@ export default function EnclosedBoothsPage() {
           loop
           playsInline
           disablePictureInPicture
-
+         
           aria-hidden="true"
           style={{
             position: "absolute", inset: 0,
@@ -165,14 +184,14 @@ export default function EnclosedBoothsPage() {
           <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.18em", color: "rgba(255,255,255,0.5)", textTransform: "uppercase", display: "block", marginBottom: "1rem" }}>
             PRODUCTS / PAINT BOOTHS
           </span>
-          <h1 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2.6rem, 7vw, 5rem)", fontWeight: 800, color: "#fff", lineHeight: 1.0, letterSpacing: "-0.01em", marginBottom: "1rem", maxWidth: "680px" }}>
+          <h1 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2.6rem, 7vw, 5rem)", fontWeight: 800, color: "#fff", lineHeight: 1.0, letterSpacing: "-0.01em", marginBottom: "1rem", maxWidth: "680px" }}>
             Enclosed Paint Booths
           </h1>
-          <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "clamp(0.95rem, 1.8vw, 1.1rem)", color: "rgba(255,255,255,0.82)", lineHeight: 1.7, marginBottom: "2.5rem", maxWidth: "500px" }}>
+          <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "clamp(0.95rem, 1.8vw, 1.1rem)", color: "rgba(255,255,255,0.82)", lineHeight: 1.7, marginBottom: "2.5rem", maxWidth: "500px" }}>
             Full-enclosure spray booths in every airflow configuration — cross-flow, semi-downdraft, full downdraft, side downdraft, heated, and high-clearance for Sprinter vans.
           </p>
           <Link href="/contact/request-a-quote?from=enclosed-booth">
-            <span data-animation="slideRight" className="btn-glow">GET PRICING <ArrowRight size={16} /></span>
+            <span className="btn-glow">GET PRICING <ArrowRight size={16} /></span>
           </Link>
         </div>
       </section>
@@ -183,8 +202,8 @@ export default function EnclosedBoothsPage() {
           {/* Intro */}
           <div className="mb-12 max-w-3xl">
             <span className="section-label">Enclosed Paint Booths</span>
-            <h2 data-animation="slideLeft" className="section-heading">Choose Your Airflow Configuration</h2>
-            <p data-animation="slideLeft" className="section-body">
+            <h2 className="section-heading">Choose Your Airflow Configuration</h2>
+            <p className="section-body">
               PFS enclosed paint booths provide complete containment for overspray, VOCs, and airborne particles. All models are ETL-certified to NFPA 33 and OSHA standards. The right airflow configuration depends on your application, finish quality requirements, and facility constraints — our engineers will help you choose.
             </p>
           </div>
@@ -192,9 +211,9 @@ export default function EnclosedBoothsPage() {
           {/* Configuration cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {CONFIGURATIONS.map((config) => (
-              <Link data-animation="fadeIn" key={config.label} href={config.href}>
+              <Link key={config.label} href={config.href}>
                 <div className="product-card group h-full" style={{ display: "flex", flexDirection: "column" }}>
-                  <div className="overflow-hidden relative card-image" style={{ height: "220px" }}>
+                  <div className="overflow-hidden relative" style={{ height: "220px" }}>
                     <img src={config.img} alt={config.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" style={{ objectPosition: config.imgPos || "center 50%" }} />
                     {config.badge && (
                       <div style={{
@@ -284,14 +303,14 @@ export default function EnclosedBoothsPage() {
           <div className="p-8" style={{ backgroundColor: "#1C1C1E" }}>
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
-                <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.25rem", fontWeight: 700, color: "white", marginBottom: "0.5rem" }}>
+                <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.25rem", fontWeight: 700, color: "white", marginBottom: "0.5rem" }}>
                   Not Sure Which Configuration Is Right for You?
                 </h3>
                 <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "rgba(255,255,255,0.6)", lineHeight: 1.7 }}>
                   Our engineers will review your application, throughput, and facility constraints and recommend the right configuration.
                 </p>
               </div>
-              <Link data-animation="slideRight" href="/contact/request-a-quote?from=enclosed-booth">
+              <Link href="/contact/request-a-quote?from=enclosed-booth">
                 <span className="btn-glow flex-shrink-0">Get Pricing <ArrowRight size={14} /></span>
               </Link>
             </div>

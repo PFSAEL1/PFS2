@@ -9,10 +9,10 @@ import { Link } from "wouter";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
-const HERO_IMG = "/manus-storage/pfs-container-booth-real_9967_410e0f4f.jpg";
-const CONTAINER_40FT_IMG = "/manus-storage/pfs-container-booth-card-v2_b8177420.jpg";
-const CONTAINER_HC_IMG = "/manus-storage/pfs-render-outdoor-booth_cac6c545.jpg";
-const CONTAINER_REAL_IMG = "/manus-storage/container_IMG_9966_615f74aa.jpg";
+const HERO_IMG = "/assets/pfs-container-booth-real_9967_410e0f4f.jpg";
+const CONTAINER_40FT_IMG = "/assets/pfs-container-booth-card-v2_b8177420.jpg";
+const CONTAINER_HC_IMG = "/assets/pfs-render-outdoor-booth_cac6c545.jpg";
+const CONTAINER_REAL_IMG = "/assets/container_IMG_9966_615f74aa.jpg";
 
 const CONFIGURATIONS = [
   {
@@ -74,7 +74,7 @@ export default function ContainerBoothsHub() {
 
   return (
     <div>
-      <PageHero bgVideo="/manus-storage/pfs-container-booth-hero-v2_c9723ea6.mp4"
+      <PageHero
         title="Shipping Container Paint Booths"
         subtitle="A complete, professional spray booth built inside a standard ISO shipping container — mobile, self-contained, and deployable anywhere in the world."
         breadcrumbs={[{ label: "Products", href: "/products" }, { label: "Shipping Container Paint Booths" }]}

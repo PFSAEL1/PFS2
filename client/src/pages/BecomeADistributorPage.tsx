@@ -1,9 +1,9 @@
-const HERO_VIDEO = "/manus-storage/pfs-facility-drone-hero_ca12546c.mp4";
 /**
  * Become a Distributor — PFS
  * Design: Dark navy hero with Helios booth, lead capture form, benefits grid
  * Route: /become-a-distributor
  */
+import { useEffect } from 'react';
 import { useState } from "react";
 import { useSEO } from '@/hooks/useSEO';
 import { Link } from "wouter";
@@ -13,8 +13,8 @@ const BLUE = "#1B3A6B";
 const GOLD = "#C8A84B";
 
 // Helios booth hero — real warehouse install shot
-const HELIOS_HERO = "/manus-storage/pfs-helios-enclosed-booth-real_2bc88039.jpeg";
-const HELIOS_WAREHOUSE = "/manus-storage/pfs-helios-enclosed-booth-real_2bc88039.jpeg";
+const HELIOS_HERO = "/assets/pfs-helios-enclosed-booth-real_2bc88039.jpeg";
+const HELIOS_WAREHOUSE = "/assets/pfs-helios-enclosed-booth-real_2bc88039.jpeg";
 
 const BENEFITS = [
   {
@@ -117,21 +117,34 @@ export default function BecomeADistributorPage() {
     marginBottom: "0.4rem",
   };
 
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Become a PFS Distributor",
+      "url": "https://pfsspraybooths.com/become-a-distributor",
+      "description": "Partner with PFS Industrial Finishing Equipment as an authorized distributor. Sell ETL-certified spray booths, ovens, and finishing systems with full factory support.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "PFS Industrial Finishing Equipment",
+        "url": "https://pfsspraybooths.com"
+      }
+    });
+    document.head.appendChild(script);
+    return () => { if (script.parentNode) script.parentNode.removeChild(script); };
+  }, []);
   return (
     <div style={{ background: "#fff" }}>
 
       {/* ── HERO ── */}
       <section style={{ position: "relative", minHeight: "clamp(480px, 65vh, 720px)", display: "flex", alignItems: "flex-end", overflow: "hidden" }}>
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          disablePictureInPicture
-          poster={HELIOS_HERO}
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", opacity: 0.45, zIndex: 0 }}>
-          <source src="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4" type="video/mp4" />
-        </video>
+        <img
+          src={HELIOS_HERO}
+          alt="PFS Helios Series enclosed spray booth"
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 45%" }}
+        />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(10,20,40,0.92) 0%, rgba(10,20,40,0.55) 55%, rgba(10,20,40,0.2) 100%)" }} />
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "3px", background: GOLD, zIndex: 3 }} />
 
@@ -140,19 +153,19 @@ export default function BecomeADistributorPage() {
             <p style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.2em", color: GOLD, textTransform: "uppercase", marginBottom: "0.8rem" }}>
               Partnership Program
             </p>
-            <h1 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(2.4rem, 5.5vw, 4.2rem)", fontWeight: 800, color: "#fff", lineHeight: 1.0, letterSpacing: "0.01em", textTransform: "uppercase", marginBottom: "1.2rem" }}>
+            <h1 style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(2.4rem, 5.5vw, 4.2rem)", fontWeight: 800, color: "#fff", lineHeight: 1.0, letterSpacing: "0.01em", textTransform: "uppercase", marginBottom: "1.2rem" }}>
               Become a<br /><span style={{ color: GOLD }}>PFS Distributor</span>
             </h1>
-            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "clamp(0.95rem, 1.8vw, 1.1rem)", color: "rgba(255,255,255,0.85)", lineHeight: 1.7, marginBottom: "2rem", maxWidth: 520 }}>
+            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "clamp(0.95rem, 1.8vw, 1.1rem)", color: "rgba(255,255,255,0.85)", lineHeight: 1.7, marginBottom: "2rem", maxWidth: 520 }}>
               Partner with the manufacturer. Sell factory-direct finishing equipment — spray booths, ovens, blast rooms, and powder coating systems — with full technical backing and protected territory.
             </p>
             <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-              <a data-animation="slideLeft" href="#apply">
+              <a href="#apply">
                 <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: GOLD, color: "#fff", fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.82rem", fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", padding: "0.9rem 2rem", cursor: "pointer" }}>
                   Apply Now <ArrowRight size={15} />
                 </span>
               </a>
-              <a data-animation="slideRight" href="tel:+18885457715">
+              <a href="tel:+18885457715">
                 <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", color: "#fff", fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.82rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.9rem 2rem", border: "2px solid rgba(255,255,255,0.5)", cursor: "pointer" }}>
                   <Phone size={14} /> Call (888) 545-7715
                 </span>
@@ -169,11 +182,11 @@ export default function BecomeADistributorPage() {
             <p style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.2em", color: GOLD, textTransform: "uppercase", marginBottom: "0.6rem" }}>
               Why Partner with PFS
             </p>
-            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 800, color: BLUE, textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 1.1 }}>
+            <h2 style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 800, color: BLUE, textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 1.1 }}>
               The Distributor Advantage
             </h2>
           </div>
-          <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.5rem" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.5rem" }}>
             {BENEFITS.map((b) => (
               <div key={b.title} style={{ background: "#fff", border: "1px solid #e2e8f0", borderTop: `4px solid ${BLUE}`, padding: "2rem 1.75rem" }}>
                 <div style={{ width: 48, height: 48, background: `${BLUE}12`, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "1.25rem" }}>
@@ -197,7 +210,7 @@ export default function BecomeADistributorPage() {
               <p style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.18em", color: GOLD, textTransform: "uppercase", marginBottom: "0.6rem" }}>
                 Distributor Requirements
               </p>
-              <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.5rem, 2.5vw, 2rem)", fontWeight: 800, color: BLUE, textTransform: "uppercase", letterSpacing: "0.02em", marginBottom: "1.5rem", lineHeight: 1.15 }}>
+              <h2 style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.5rem, 2.5vw, 2rem)", fontWeight: 800, color: BLUE, textTransform: "uppercase", letterSpacing: "0.02em", marginBottom: "1.5rem", lineHeight: 1.15 }}>
                 Who We're Looking For
               </h2>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }}>
@@ -215,7 +228,7 @@ export default function BecomeADistributorPage() {
               <p style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.18em", color: GOLD, textTransform: "uppercase", marginBottom: "0.6rem" }}>
                 What You Get
               </p>
-              <h2 data-animation="slideRight" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.5rem, 2.5vw, 2rem)", fontWeight: 800, color: BLUE, textTransform: "uppercase", letterSpacing: "0.02em", marginBottom: "1.5rem", lineHeight: 1.15 }}>
+              <h2 style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.5rem, 2.5vw, 2rem)", fontWeight: 800, color: BLUE, textTransform: "uppercase", letterSpacing: "0.02em", marginBottom: "1.5rem", lineHeight: 1.15 }}>
                 The PFS Partner Program
               </h2>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }}>
@@ -246,7 +259,7 @@ export default function BecomeADistributorPage() {
               <p style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.2em", color: GOLD, textTransform: "uppercase", marginBottom: "0.8rem" }}>
                 PFS Helios Series
               </p>
-              <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 800, color: "#fff", textTransform: "uppercase", lineHeight: 1.1, marginBottom: "1rem" }}>
+              <h3 style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 800, color: "#fff", textTransform: "uppercase", lineHeight: 1.1, marginBottom: "1rem" }}>
                 The Booth Your Customers<br />Will Ask For By Name
               </h3>
               <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.85)", lineHeight: 1.65 }}>
@@ -265,7 +278,7 @@ export default function BecomeADistributorPage() {
               <p style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.2em", color: GOLD, textTransform: "uppercase", marginBottom: "0.6rem" }}>
                 Distributor Application
               </p>
-              <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", fontWeight: 800, color: BLUE, textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 1.1, marginBottom: "0.75rem" }}>
+              <h2 style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", fontWeight: 800, color: BLUE, textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 1.1, marginBottom: "0.75rem" }}>
                 Apply to Become a Partner
               </h2>
               <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#4a5568", lineHeight: 1.65 }}>
@@ -353,14 +366,14 @@ export default function BecomeADistributorPage() {
                 </div>
 
                 <div style={{ display: "flex", gap: "1rem", alignItems: "center", flexWrap: "wrap" }}>
-                  <button data-animation="slideLeft"
+                  <button
                     type="submit"
                     disabled={submitting}
                     style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: submitting ? "#6b7280" : BLUE, color: "#fff", fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.82rem", fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", padding: "1rem 2.5rem", border: "none", cursor: submitting ? "not-allowed" : "pointer" }}
                   >
                     {submitting ? "Submitting..." : <>Submit Application <ArrowRight size={15} /></>}
                   </button>
-                  <p data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#6b7280" }}>
+                  <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "#6b7280" }}>
                     We'll respond within 1–2 business days.
                   </p>
                 </div>
@@ -378,15 +391,15 @@ export default function BecomeADistributorPage() {
               <p style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.18em", color: GOLD, textTransform: "uppercase", marginBottom: "0.3rem" }}>
                 Prefer to Talk First?
               </p>
-              <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.85)" }}>
+              <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.85)" }}>
                 Call us directly to discuss the program before applying.
               </p>
             </div>
             <div style={{ display: "flex", gap: "1.25rem", flexWrap: "wrap" }}>
-              <a data-animation="slideLeft" href="tel:+18885457715" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", color: "#fff", fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.88rem", fontWeight: 700, letterSpacing: "0.08em", textDecoration: "none" }}>
+              <a href="tel:+18885457715" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", color: "#fff", fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.88rem", fontWeight: 700, letterSpacing: "0.08em", textDecoration: "none" }}>
                 <Phone size={16} color={GOLD} /> (888) 545-7715
               </a>
-              <a data-animation="slideRight" href="mailto:info@pfsspraybooths.com" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", color: "#fff", fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.88rem", fontWeight: 700, letterSpacing: "0.08em", textDecoration: "none" }}>
+              <a href="mailto:info@pfsspraybooths.com" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", color: "#fff", fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.88rem", fontWeight: 700, letterSpacing: "0.08em", textDecoration: "none" }}>
                 <Mail size={16} color={GOLD} /> info@pfsspraybooths.com
               </a>
             </div>

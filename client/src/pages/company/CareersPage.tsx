@@ -3,9 +3,10 @@ import { useSEO } from '@/hooks/useSEO';
 import { Link } from "wouter";
 import { ArrowRight, MapPin, Briefcase, Clock, ChevronRight } from "lucide-react";
 
-const HERO_IMG = "/manus-storage/pfs-careers-hero-6RYnuymp4L3HSjNSxm4AVY.webp";
-const TEAM_IMG = "/manus-storage/pfs-careers-team-NFnR4urUc2YUSREk6KyZjd.webp";
-const LOGO_NO_TAGLINE = "/manus-storage/pfs-logo-black_cdac0791.jpg";
+const HERO_IMG = "/assets/pfs-careers-hero-6RYnuymp4L3HSjNSxm4AVY.webp";
+const TEAM_IMG = "/assets/pfs-careers-team-NFnR4urUc2YUSREk6KyZjd.webp";
+const LOGO_NO_TAGLINE = "/assets/pfs-logo-black_cdac0791.jpg";
+const LOGO_CORRECT = "/assets/pfs-logo-black-bg_50809aaa.webp";
 
 const GOLD = "#D4AF37";
 const NAVY = "#0D1117";
@@ -51,14 +52,14 @@ const VALUES = [
 export default function CareersPage() {
   useSEO({
     title: "Careers at PFS | Industrial Finishing Equipment Manufacturing Jobs",
-    description: "Join the Platinum Finishing Systems team. We manufacture ETL-certified spray paint booths, industrial ovens, and finishing lines in Santa Rosa, CA. Open positions in fabrication, field service, engineering, and sales.",
+    description: "Join the PFS Industrial Finishing Equipment team (formerly Platinum Finishing Systems). We manufacture ETL-certified spray paint booths, industrial ovens, and finishing lines in Santa Rosa, CA. Open positions in fabrication, field service, engineering, and sales.",
     canonical: "/company/careers",
   });
 
   return (
     <div>
       {/* SEO meta via PageHero */}
-      <PageHero bgVideo="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4"
+      <PageHero
         title="Careers at PFS"
         subtitle="Join the team building America's most trusted industrial finishing equipment."
         breadcrumbs={[{ label: "Company", href: "/company" }, { label: "Careers" }]}
@@ -68,9 +69,9 @@ export default function CareersPage() {
       {/* ── PFS LOGO BAND ── */}
       <div style={{ background: "#0D1117", padding: "1.5rem 0", display: "flex", justifyContent: "center", alignItems: "center", borderBottom: "2px solid #1B3A6B" }}>
         <img
-          src={LOGO_NO_TAGLINE}
-          alt="Platinum Finishing Systems — PFS logo"
-          style={{ height: "52px", width: "auto", objectFit: "contain" }}
+          src={LOGO_CORRECT}
+          alt="PFS Industrial Finishing Equipment — PFS logo"
+          style={{ height: "80px", width: "auto", objectFit: "contain" }}
         />
       </div>
 
@@ -80,15 +81,15 @@ export default function CareersPage() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center" }}>
             <div>
               <span className="section-label">Join Our Team</span>
-              <h2 data-animation="slideLeft" className="section-heading">Build Something That Lasts</h2>
+              <h2 className="section-heading">Build Something That Lasts</h2>
               <p className="section-body" style={{ marginBottom: "1rem" }}>
-                PFS has been engineering and manufacturing industrial finishing equipment in Santa Rosa, California since 1989. We build spray paint booths, powder coating systems, industrial ovens, and blast equipment for customers across North America — from collision repair shops to aerospace facilities to military installations.
+                PFS was founded in 2012 and has been engineering and manufacturing industrial finishing equipment in Santa Rosa, California with over 20 years of combined industry experience behind our team. We build spray paint booths, powder coating systems, industrial ovens, and blast equipment for customers across North America — from collision repair shops to aerospace facilities to military installations.
               </p>
               <p className="section-body" style={{ marginBottom: "1.5rem" }}>
                 We are a team of fabricators, engineers, technicians, and sales professionals who take pride in building equipment that protects workers, meets the toughest compliance standards, and lasts for decades. If that sounds like the kind of work you want to do, we want to hear from you.
               </p>
               <Link href="/contact/talk-to-an-engineer">
-                <span data-animation="slideRight" className="btn-glow">Send Your Resume <ArrowRight size={14} /></span>
+                <span className="btn-glow">Send Your Resume <ArrowRight size={14} /></span>
               </Link>
             </div>
             <div>
@@ -107,9 +108,9 @@ export default function CareersPage() {
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
             <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 600, color: GOLD, letterSpacing: "0.2em", textTransform: "uppercase", display: "block", marginBottom: "0.5rem" }}>Why PFS</span>
-            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3.5vw, 2.2rem)", fontWeight: 800, color: "#fff", textTransform: "uppercase", letterSpacing: "0.02em" }}>What We Stand For</h2>
+            <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3.5vw, 2.2rem)", fontWeight: 800, color: "#fff", textTransform: "uppercase", letterSpacing: "0.02em" }}>What We Stand For</h2>
           </div>
-          <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.5rem" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.5rem" }}>
             {VALUES.map((v, i) => (
               <div key={i} style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", padding: "1.75rem" }}>
                 <div style={{ width: 32, height: 3, background: GOLD, marginBottom: "1rem" }} />
@@ -126,9 +127,9 @@ export default function CareersPage() {
         <div className="container">
           <div style={{ marginBottom: "2rem" }}>
             <span className="section-label">Open Positions</span>
-            <h2 data-animation="slideLeft" className="section-heading">Current Openings</h2>
+            <h2 className="section-heading">Current Openings</h2>
           </div>
-          <div data-animation="fadeIn" style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
             {OPENINGS.map((job, i) => (
               <div key={i} style={{ background: "#fff", border: "1px solid #e5e5e5", padding: "1.75rem", display: "grid", gridTemplateColumns: "1fr auto", gap: "1rem", alignItems: "center" }}>
                 <div>
@@ -170,13 +171,13 @@ export default function CareersPage() {
       {/* ── BOTTOM CTA ── */}
       <section style={{ padding: "4rem 0", background: NAVY, textAlign: "center" }}>
         <div className="container">
-          <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 600, color: GOLD, letterSpacing: "0.2em", textTransform: "uppercase", display: "block", marginBottom: "0.75rem" }}>Platinum Finishing Systems</span>
-          <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3.5vw, 2.2rem)", fontWeight: 800, color: "#fff", textTransform: "uppercase", letterSpacing: "0.02em", marginBottom: "1rem" }}>Ready to Build Something?</h2>
+          <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 600, color: GOLD, letterSpacing: "0.2em", textTransform: "uppercase", display: "block", marginBottom: "0.75rem" }}>PFS Industrial Finishing Equipment</span>
+          <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3.5vw, 2.2rem)", fontWeight: 800, color: "#fff", textTransform: "uppercase", letterSpacing: "0.02em", marginBottom: "1rem" }}>Ready to Build Something?</h2>
           <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.65)", maxWidth: 480, margin: "0 auto 2rem" }}>
             Send your resume and a brief introduction to our team in Santa Rosa, CA.
           </p>
           <Link href="/contact/talk-to-an-engineer">
-            <span data-animation="slideRight" className="btn-glow">Contact HR <ArrowRight size={14} /></span>
+            <span className="btn-glow">Contact HR <ArrowRight size={14} /></span>
           </Link>
         </div>
       </section>

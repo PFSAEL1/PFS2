@@ -5,8 +5,8 @@
 
 import { ArrowRight } from "lucide-react";
 
-const AUTOMOTIVE_IMG = "/manus-storage/pfs-automotive-booth-5Xw6Nq9kErF5rCQakrcqSS.webp";
-const AEROSPACE_IMG = "/manus-storage/pfs-aerospace-booth-gQ3YiB7j5kqdTwxXZsWzPk.webp";
+const AUTOMOTIVE_IMG = "/assets/pfs-automotive-booth-5Xw6Nq9kErF5rCQakrcqSS.webp";
+const AEROSPACE_IMG = "/assets/pfs-aerospace-booth-gQ3YiB7j5kqdTwxXZsWzPk.webp";
 
 const industries = [
   {

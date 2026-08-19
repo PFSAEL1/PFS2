@@ -12,75 +12,75 @@ import { GalleryGrid, type GalleryImage } from "@/components/GalleryLightbox";
 import { useSEO } from "@/hooks/useSEO";
 
 /* ── CDN ASSETS ── */
-const HERO_IMG = "/manus-storage/pfs-container-booth-real_9967_410e0f4f.jpg";
-const HERO_VIDEO = "/manus-storage/pfs-container-booth-hero-v2_c9723ea6.mp4";
-const FEATURED_IMG = "/manus-storage/container_booth_render_b3efc409.png";
+const HERO_IMG     = "/assets/pfs-container-booth-real_9967_410e0f4f.jpg";
+const HERO_VIDEO   = "/assets/pfs-container-booth-hero-v2_c9723ea6.mp4";
+const FEATURED_IMG = "/assets/container_booth_render_b3efc409.png";
 
 /* ── GALLERY ── */
 const GALLERY_IMGS: GalleryImage[] = [
-  { src: "/manus-storage/pfs-container-booth-real_9967_410e0f4f.jpg", alt: "PFS container booth — real installation exterior view" },
-  { src: "/manus-storage/container_IMG_9966_615f74aa.jpg", alt: "PFS container booth — front install view" },
-  { src: "/manus-storage/container_IMG_9966b_bfa4bc58.jpg", alt: "PFS container booth — front angle view" },
-  { src: "/manus-storage/container_IMG_9967_f935d590.jpg", alt: "PFS container booth — side and rear view" },
-  { src: "/manus-storage/container_IMG_9963_0c55fb70.jpg", alt: "PFS container booth — installation site" },
+  { src: "/assets/pfs-container-booth-real_9967_410e0f4f.jpg",   alt: "PFS container booth — real installation exterior view" },
+  { src: "/assets/container_IMG_9966_615f74aa.jpg",             alt: "PFS container booth — front install view" },
+  { src: "/assets/container_IMG_9966b_bfa4bc58.jpg",            alt: "PFS container booth — front angle view" },
+  { src: "/assets/container_IMG_9967_f935d590.jpg",             alt: "PFS container booth — side and rear view" },
+  { src: "/assets/container_IMG_9963_0c55fb70.jpg",             alt: "PFS container booth — installation site" },
 ];
 
 /* ── CERT LOGOS ── */
-const UL_LOGO = "/manus-storage/pfs-ul508a-clean_e8efdeb8.jpg";
-const ETL_LOGO = "/manus-storage/pfs-etl-logo_7758f722.png";
-const NFPA_LOGO = "/manus-storage/pfs-nfpa-logo_4b710cc9.png";
-const EPA_LOGO = "/manus-storage/pfs-epa-logo_e4165f68.webp";
-const OSHA_LOGO = "/manus-storage/pfs-osha-logo_0c460739.jpg";
-const USA_FLAG = "/manus-storage/pfs-usa-flag_8fca512e.jpg";
+const UL_LOGO   = "/assets/pfs-ul508a-clean_e8efdeb8.jpg";
+const ETL_LOGO  = "/assets/pfs-etl-logo_7758f722.png";
+const NFPA_LOGO = "/assets/pfs-nfpa-logo_4b710cc9.png";
+const EPA_LOGO  = "/assets/pfs-epa-logo_e4165f68.webp";
+const OSHA_LOGO = "/assets/pfs-osha-logo_0c460739.jpg";
+const USA_FLAG  = "/assets/pfs-usa-flag_8fca512e.jpg";
 
 const BLUE = "#1B3A6B";
 
 const CERTS = [
-  { img: UL_LOGO, title: "UL-Listed Components", sub: "UL Parts in Every Build", imgH: 44 },
-  { img: ETL_LOGO, title: "ETL-Certified Parts", sub: "ETL Listed Components Used", imgH: 44 },
-  { img: NFPA_LOGO, title: "NFPA 33 Compliant", sub: "Spray Application Standard", imgH: 44 },
-  { img: EPA_LOGO, title: "EPA Compliant", sub: "Air Quality Standards", imgH: 36 },
-  { img: OSHA_LOGO, title: "OSHA Compliant", sub: "Workplace Safety Standards", imgH: 36 },
-  { img: USA_FLAG, title: "Made in the USA", sub: "Santa Rosa, CA", imgH: 36 },
+  { img: UL_LOGO,   title: "UL-Listed Components",  sub: "UL Parts in Every Build",           imgH: 44 },
+  { img: ETL_LOGO,  title: "ETL-Certified Parts",   sub: "ETL Listed Components Used",         imgH: 44 },
+  { img: NFPA_LOGO, title: "NFPA 33 Compliant",     sub: "Spray Application Standard",         imgH: 44 },
+  { img: EPA_LOGO,  title: "EPA Compliant",          sub: "Air Quality Standards",              imgH: 36 },
+  { img: OSHA_LOGO, title: "OSHA Compliant",         sub: "Workplace Safety Standards",         imgH: 36 },
+  { img: USA_FLAG,  title: "Made in the USA",        sub: "Santa Rosa, CA",                     imgH: 36 },
 ];
 const CERTS_LOOP = [...CERTS, ...CERTS];
 
 /* ── FEATURES ── */
 const FEATURES_VISIBLE = [
-  { num: "01", title: "ISO Container + 18-Gauge Steel Liner", body: "PFS container booths start with a standard ISO intermodal shipping container, then layer the entire interior with 18-gauge galvanized steel panels. The result is a rigid, durable spray booth shell that is weather-tight, corrosion-resistant, and built to the same structural standards as our permanent enclosed booths." },
-  { num: "02", title: "Cross-Flow Airflow — Horizontal", body: "Air enters through tacky intake filters at one end of the container and exhausts through fiberglass media filters at the opposite end. Horizontal front-to-rear airflow keeps overspray moving away from the operator at all times — same airflow pattern as the PFS Orion Cross-Flow." },
-  { num: "03", title: "UL-Listed & ETL-Certified Components", body: "Every PFS container booth is built using UL-listed and built with ETL/UL certified components components throughout — motors, controls, electrical panels, and fixtures. We use the same certified parts in every build, whether it's a container booth or a permanent facility installation." },
+  { num: "01", title: "ISO Container + 18-Gauge Steel Liner",       body: "PFS container booths start with a standard ISO intermodal shipping container, then layer the entire interior with 18-gauge galvanized steel panels. The result is a rigid, durable spray booth shell that is weather-tight, corrosion-resistant, and built to the same structural standards as our permanent enclosed booths." },
+  { num: "02", title: "Cross-Flow Airflow — Horizontal",            body: "Air enters through tacky intake filters at one end of the container and exhausts through fiberglass media filters at the opposite end. Horizontal front-to-rear airflow keeps overspray moving away from the operator at all times — same airflow pattern as the PFS Orion Cross-Flow." },
+  { num: "03", title: "UL-Listed & ETL-Certified Components",       body: "Every PFS container booth is built using UL-listed and built with ETL/UL certified components components throughout — motors, controls, electrical panels, and fixtures. We use the same certified parts in every build, whether it's a container booth or a permanent facility installation." },
 ];
 const FEATURES_HIDDEN = [
-  { num: "04", title: "UL 508A Control Panel", body: "Pairs with our PFS Core Control Panel — UL 508A certified. Programmable cycle timers, safety interlocks, and optional BMS integration. Spray and cure modes built in. Same panel used in all PFS enclosed booth series." },
-  { num: "05", title: "UL Listed Tube Axial Fans", body: "High-efficiency, UL-listed tube axial fans deliver consistent face velocity across the full cross-section of the container — no dead zones, no overspray recirculation. Fan sizing is calculated for the container volume." },
-  { num: "06", title: "CID2 Lighting — 4-Tube Fixtures", body: "Class I Division 2 inside-access four-tube light fixtures (LED tube compatible). Uniform, shadow-free illumination across the full interior length of the container. Optional LED upgrade available." },
-  { num: "07", title: "Fiberglass Exhaust + Tacky Intake Filters", body: "Exhaust uses fiberglass media filters rated for the container's CFM. Intake uses tacky-type filters standard. Blanket intake upgrades available for heated configurations or high-dust environments." },
-  { num: "08", title: "Self-Contained — No Building Required", body: "No building permit, no foundation, no permanent structure. Set the container on a concrete pad, connect utilities, and spray. Relocate or expand as your operation grows. Ideal for remote job sites, temporary facilities, and multi-site operations." },
-  { num: "09", title: "Heated Option Available", body: "Container booths are available with a direct-fired or indirect-fired heat system — spray, flash, and bake modes up to 180°F. Ideal for remote sites or facilities without a dedicated heated booth." },
-  { num: "10", title: "We Ship Nationally", body: "PFS container booths ship to all 50 states. Factory-direct pricing, fast lead times, and dedicated project support from order through installation." },
+  { num: "04", title: "UL 508A Control Panel",                      body: "Pairs with our PFS Core Control Panel — UL 508A certified. Programmable cycle timers, safety interlocks, and optional BMS integration. Spray and cure modes built in. Same panel used in all PFS enclosed booth series." },
+  { num: "05", title: "UL Listed Tube Axial Fans",                  body: "High-efficiency, UL-listed tube axial fans deliver consistent face velocity across the full cross-section of the container — no dead zones, no overspray recirculation. Fan sizing is calculated for the container volume." },
+  { num: "06", title: "CID2 Lighting — 4-Tube Fixtures",           body: "Class I Division 2 inside-access four-tube light fixtures (LED tube compatible). Uniform, shadow-free illumination across the full interior length of the container. Optional LED upgrade available." },
+  { num: "07", title: "Fiberglass Exhaust + Tacky Intake Filters",  body: "Exhaust uses fiberglass media filters rated for the container's CFM. Intake uses tacky-type filters standard. Blanket intake upgrades available for heated configurations or high-dust environments." },
+  { num: "08", title: "Self-Contained — No Building Required",      body: "No building permit, no foundation, no permanent structure. Set the container on a concrete pad, connect utilities, and spray. Relocate or expand as your operation grows. Ideal for remote job sites, temporary facilities, and multi-site operations." },
+  { num: "09", title: "Heated Option Available",                    body: "Container booths are available with a direct-fired or indirect-fired heat system — spray, flash, and bake modes up to 180°F. Ideal for remote sites or facilities without a dedicated heated booth." },
+  { num: "10", title: "We Ship Nationally",                         body: "PFS container booths ship to all 50 states. Factory-direct pricing, fast lead times, and dedicated project support from order through installation." },
 ];
 
 /* ── SIZES ── */
 const SIZES = [
   { label: "20-Foot Container Booth", dims: '20\'L × 8\'W × 8\'6"H', desc: "Compact 20-ft ISO container converted to a fully equipped spray booth. Ideal for small parts, touch-up, and remote job sites." },
   { label: "40-Foot Container Booth", dims: '40\'L × 8\'W × 8\'6"H', desc: "Full-size 40-ft ISO container with extended spray zone. Accommodates full-size vehicles, equipment, and large fabricated parts." },
-  { label: "40-Foot High-Cube", dims: '40\'L × 8\'W × 9\'6"H', desc: "High-cube variant adds an extra foot of interior height — ideal for tall vehicles, trucks, or agricultural equipment." },
+  { label: "40-Foot High-Cube",       dims: '40\'L × 8\'W × 9\'6"H', desc: "High-cube variant adds an extra foot of interior height — ideal for tall vehicles, trucks, or agricultural equipment." },
 ];
 
 /* ── YOU MAY ALSO LIKE — pool of 5, show 3 randomly ── */
 const ALSO_LIKE_POOL = [
-  { label: "Cross-Flow Spray Booths", href: "/products/paint-booths/crossflow", img: "/manus-storage/orion-crossflow-render-v3_63c04d8e.webp", desc: "Horizontal airflow enclosed booth — the most cost-effective option for automotive and industrial finishing." },
-  { label: "Side Downdraft Booths", href: "/products/paint-booths/side-downdraft", img: "/manus-storage/pfs_helios_side_angle_final_73768c1f_5eaf3967.png", desc: "Side-wall exhaust plenums — no pit required. Premium finish quality without a basement." },
-  { label: "Full Downdraft Booths", href: "/products/paint-booths/full-downdraft", img: "/manus-storage/pfs_zenith_booth_v2_d56f2cd8_d3f181cd.png", desc: "Vertical downdraft airflow through a raised basement. Highest finish quality available." },
-  { label: "Outdoor Paint Booths", href: "/products/paint-booths/outdoor", img: "/manus-storage/pfs-render-outdoor-booth_7fca5b65.jpg", desc: "Open-face outdoor spray booths for large equipment, fabrication, and field operations." },
-  { label: "Air Make-Up Units", href: "/products/air-make-up-units", img: "/manus-storage/pfs-amu-card_41f0dd88.jpg", desc: "Tempered make-up air to replace exhausted air and maintain positive booth pressure." },
+  { label: "Cross-Flow Spray Booths",  href: "/products/paint-booths/crossflow",      img: "/assets/orion-crossflow-render-v3_63c04d8e.webp",         desc: "Horizontal airflow enclosed booth — the most cost-effective option for automotive and industrial finishing." },
+  { label: "Side Downdraft Booths",    href: "/products/paint-booths/side-downdraft", img: "/assets/pfs_helios_side_angle_final_73768c1f_5eaf3967.png",   desc: "Side-wall exhaust plenums — no pit required. Premium finish quality without a basement." },
+  { label: "Full Downdraft Booths",    href: "/products/paint-booths/full-downdraft", img: "/assets/pfs_zenith_booth_v2_d56f2cd8_d3f181cd.png",           desc: "Vertical downdraft airflow through a raised basement. Highest finish quality available." },
+  { label: "Outdoor Paint Booths",     href: "/products/paint-booths/outdoor",        img: "/assets/pfs-render-outdoor-booth_7fca5b65.jpg", desc: "Open-face outdoor spray booths for large equipment, fabrication, and field operations." },
+  { label: "Air Make-Up Units",        href: "/products/air-make-up-units",            img: "/assets/pfs-amu-card_41f0dd88.jpg",           desc: "Tempered make-up air to replace exhausted air and maintain positive booth pressure." },
 ];
 
 function CertCarousel() {
   const trackRef = useRef<HTMLDivElement>(null);
-  const animRef = useRef<number>(0);
-  const posRef = useRef(0);
+  const animRef  = useRef<number>(0);
+  const posRef   = useRef(0);
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
@@ -120,11 +120,44 @@ export default function ContainerBoothPage() {
     title: "Container Spray Booths | Portable Paint Booths | PFS Industrial",
     description: "PFS container spray booths are self-contained, portable finishing environments built inside standard shipping containers. Rapid deployment, ETL/UL listed components, NFPA 33 compliant. Manufactured in Santa Rosa, CA.",
     canonical: "/products/spray-booths/container",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Container Spray Booth",
+      "description": "PFS containerized spray booths built inside ISO shipping containers. Portable, self-contained, deployable to any location. ETL listed.",
+      "brand": {
+        "@type": "Brand",
+        "name": "PFS"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Platinum Finishing Systems",
+        "url": "https://pfsspraybooths.com",
+        "telephone": "+18885457715",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Santa Rosa",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "Platinum Finishing Systems"
+        },
+        "url": "https://pfsspraybooths.com/products/container-booths/container-booth"
+      },
+      "url": "https://pfsspraybooths.com/products/container-booths/container-booth"
+    },
   });
 
-  const [specsOpen, setSpecsOpen] = useState(false);
+  const [specsOpen,    setSpecsOpen]    = useState(false);
   const [featuresOpen, setFeaturesOpen] = useState(false);
-  const [sizesOpen, setSizesOpen] = useState(false);
+  const [sizesOpen,    setSizesOpen]    = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [videoReady, setVideoReady] = useState(false);
   useEffect(() => {
@@ -132,7 +165,7 @@ export default function ContainerBoothPage() {
     if (!v) return;
     v.muted = true;
     v.playsInline = true;
-    const play = () => { v.play().catch(() => { }); setVideoReady(true); };
+    const play = () => { v.play().catch(() => {}); setVideoReady(true); };
     v.addEventListener("canplaythrough", play, { once: true });
     v.load();
     return () => v.removeEventListener("canplaythrough", play);
@@ -224,8 +257,8 @@ export default function ContainerBoothPage() {
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.6rem" }}>
                 {[
                   { icon: <Package size={14} style={{ color: BLUE }} />, label: "ISO 20-ft or 40-ft" },
-                  { icon: <MapPin size={14} style={{ color: BLUE }} />, label: "Deploy Anywhere" },
-                  { icon: <Zap size={14} style={{ color: BLUE }} />, label: "Plug-and-Spray Ready" },
+                  { icon: <MapPin  size={14} style={{ color: BLUE }} />, label: "Deploy Anywhere" },
+                  { icon: <Zap    size={14} style={{ color: BLUE }} />, label: "Plug-and-Spray Ready" },
                   { icon: <Shield size={14} style={{ color: BLUE }} />, label: "UL & ETL Components" },
                 ].map((item) => (
                   <div key={item.label} style={{ display: "flex", alignItems: "center", gap: "0.5rem", padding: "0.65rem 0.75rem", background: "#fff", border: "1px solid #e5e7eb" }}>
@@ -374,12 +407,12 @@ export default function ContainerBoothPage() {
             {alsoLike.map((p) => (
               <Link key={p.label} href={p.href}>
                 <div style={{ display: "flex", flexDirection: "column", border: "2px solid #d0d8e8", overflow: "hidden", cursor: "pointer", background: "#fff" }} className="group hover:border-blue-800 transition-colors">
-                  <div className="card-image" style={{ width: "100%", aspectRatio: "4/3", overflow: "hidden", background: "#f5f5f5" }}>
+                  <div style={{ width: "100%", aspectRatio: "4/3", overflow: "hidden", background: "#f5f5f5" }}>
                     <img src={p.img} alt={p.label} style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.3s" }} className="group-hover:scale-105" />
                   </div>
                   <div style={{ padding: "1rem 1.1rem 1.2rem" }}>
-                    <div data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.88rem", fontWeight: 800, color: "#111", letterSpacing: "0.04em", textTransform: "uppercase", marginBottom: "0.35rem" }}>{p.label}</div>
-                    <div data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.78rem", color: "#555", lineHeight: 1.5, marginBottom: "0.75rem" }}>{p.desc}</div>
+                    <div style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.88rem", fontWeight: 800, color: "#111", letterSpacing: "0.04em", textTransform: "uppercase", marginBottom: "0.35rem" }}>{p.label}</div>
+                    <div style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.78rem", color: "#555", lineHeight: 1.5, marginBottom: "0.75rem" }}>{p.desc}</div>
                     <div style={{ display: "inline-flex", alignItems: "center", gap: "0.3rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.78rem", fontWeight: 700, color: BLUE, letterSpacing: "0.08em", textTransform: "uppercase" }}>LEARN MORE <ArrowRight size={12} /></div>
                   </div>
                 </div>

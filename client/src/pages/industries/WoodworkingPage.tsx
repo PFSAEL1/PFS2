@@ -13,28 +13,28 @@ import { SiteProductCardSection } from "@/components/SiteProductCard";
 import { useSEO } from "@/hooks/useSEO";
 
 // ── CDN ASSETS ────────────────────────────────────────────────────────────────
-const HERO_VIDEO   = "/manus-storage/pfs-woodworking-hero-v2_d530519c.mp4";
-const HERO_IMG     = "/manus-storage/pfs-woodworking-booth-orange-rack_3920ba0e.jpg"; // poster fallback — orange rack booth
-const FEATURED_IMG = "/manus-storage/pfs-woodworking-booth-clean_26912a5d.jpg"; // featured project photo
+const HERO_VIDEO   = "/assets/pfs-woodworking-hero-v2_d530519c.mp4";
+const HERO_IMG     = "/assets/pfs-woodworking-booth-orange-rack_3920ba0e.jpg"; // poster fallback — orange rack booth
+const FEATURED_IMG = "/assets/pfs-woodworking-booth-clean_26912a5d.jpg"; // featured project photo
 
 // Gallery — clean booth photo + real customer installation photos
 const GALLERY = [
-  { src: "/manus-storage/pfs-woodworking-real-1_f1df1f96.png",                 alt: "PFS open-face spray booth installed at woodworking facility" },
-  { src: "/manus-storage/pfs-woodworking-real-3_75810668.jpg",                 alt: "PFS spray booth interior — wood finishing shop" },
-  { src: "/manus-storage/pfs-woodworking-real-3_75810668.jpg",                 alt: "PFS spray booth side view — cabinet and furniture shop" },
-  { src: "/manus-storage/pfs-woodworking-real-4_d3b9ccc7.jpg",                 alt: "PFS open-face booth installation — woodworking facility" },
-  { src: "/manus-storage/pfs-woodworking-real-5_8fb37936.jpg",                 alt: "PFS spray booth — wood finishing and cabinetry application" },
-  { src: "/manus-storage/pfs-woodworking-real-6_2d06d7b7.jpg",                 alt: "PFS finishing booth — furniture and millwork shop" },
-  { src: "/manus-storage/pfs-woodworking-booth-clean_26912a5d.jpg",            alt: "PFS open-face spray booth for woodworking and wood finishing" },
+  { src: "/assets/pfs-woodworking-real-1_f1df1f96.png",                 alt: "PFS open-face spray booth installed at woodworking facility" },
+  { src: "/assets/pfs-woodworking-real-3_75810668.jpg",                 alt: "PFS spray booth interior — wood finishing shop" },
+  { src: "/assets/pfs-woodworking-real-3_75810668.jpg",                 alt: "PFS spray booth side view — cabinet and furniture shop" },
+  { src: "/assets/pfs-woodworking-real-4_d3b9ccc7.jpg",                 alt: "PFS open-face booth installation — woodworking facility" },
+  { src: "/assets/pfs-woodworking-real-5_8fb37936.jpg",                 alt: "PFS spray booth — wood finishing and cabinetry application" },
+  { src: "/assets/pfs-woodworking-real-6_2d06d7b7.jpg",                 alt: "PFS finishing booth — furniture and millwork shop" },
+  { src: "/assets/pfs-woodworking-booth-clean_26912a5d.jpg",            alt: "PFS open-face spray booth for woodworking and wood finishing" },
 ];
 
 // Cert logos
-const ETL_LOGO  = "/manus-storage/pfs-etl-logo_7758f722.png";
-const UL_LOGO   = "/manus-storage/pfs-ul508a-clean_e8efdeb8.jpg";
-const NFPA_LOGO = "/manus-storage/pfs-nfpa-logo_4b710cc9.png";
-const EPA_LOGO  = "/manus-storage/pfs-epa-logo_e4165f68.webp";
-const OSHA_LOGO = "/manus-storage/pfs-osha-logo_0c460739.jpg";
-const USA_FLAG  = "/manus-storage/pfs-usa-flag_8fca512e.jpg";
+const ETL_LOGO  = "/assets/pfs-etl-logo_7758f722.png";
+const UL_LOGO   = "/assets/pfs-ul508a-clean_e8efdeb8.jpg";
+const NFPA_LOGO = "/assets/pfs-nfpa-logo_4b710cc9.png";
+const EPA_LOGO  = "/assets/pfs-epa-logo_e4165f68.webp";
+const OSHA_LOGO = "/assets/pfs-osha-logo_0c460739.jpg";
+const USA_FLAG  = "/assets/pfs-usa-flag_8fca512e.jpg";
 
 const BLUE = "#1B3A6B";
 
@@ -154,10 +154,10 @@ const BOOTH_LINEUP = [
 ];
 
 const PRODUCTS = [
-  { label: "Open Face Booths",      href: "/products/paint-booths",          img: "/manus-storage/pfs-woodworking-booth-clean_26912a5d.jpg",                                                                                                        desc: "Open-face spray booths sized for furniture, cabinetry, and millwork finishing." },
-  { label: "Industrial Ovens",      href: "/products/ovens",                  img: "/manus-storage/pfs-vulcan-oven-card_ad72eade_316de7d1.png",                           desc: "Batch cure ovens for water-based and solvent wood finish systems." },
-  { label: "Custom Paint Booths",   href: "/products/paint-booths/custom",   img: "/manus-storage/pfs-paint-booth-sprayer-card_42d3ea13.jpg",                                 desc: "Engineered-to-order booths for high-volume cabinet and furniture shops." },
-  { label: "Integration & Automation", href: "/integration-automation",      img: "/manus-storage/pfs-robotics-card_2aac132b.jpg",                                                                                                     desc: "Automated conveyor and transfer systems for wood finishing production lines." },
+  { label: "Open Face Booths",      href: "/products/paint-booths",          img: "/assets/pfs-woodworking-booth-clean_26912a5d.jpg",                                                                                                        desc: "Open-face spray booths sized for furniture, cabinetry, and millwork finishing." },
+  { label: "Industrial Ovens",      href: "/products/ovens",                  img: "/assets/pfs-vulcan-oven-card_ad72eade_316de7d1.png",                           desc: "Batch cure ovens for water-based and solvent wood finish systems." },
+  { label: "Custom Paint Booths",   href: "/products/paint-booths/custom",   img: "/assets/pfs-paint-booth-sprayer-card_42d3ea13.jpg",                                 desc: "Engineered-to-order booths for high-volume cabinet and furniture shops." },
+  { label: "Integration & Automation", href: "/integration-automation",      img: "/assets/pfs-robotics-card_2aac132b.jpg",                                                                                                     desc: "Automated conveyor and transfer systems for wood finishing production lines." },
 ];
 
 // ── MAIN PAGE ─────────────────────────────────────────────────────────────────
@@ -166,6 +166,21 @@ export default function WoodworkingPage() {
     title: "Woodworking Spray Booths | Wood Finishing Booths | PFS Industrial",
     description: "PFS woodworking spray booths provide a safe, ventilated environment for wood staining, lacquering, and finishing. NFPA 33 compliant, ETL/UL listed components, custom sizes available. Manufactured in Santa Rosa, CA.",
     canonical: "/industries/woodworking",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Spray booths for wood finishing, lacquer application, and furniture coating",
+      "provider": {
+        "@type": "Organization",
+        "name": "Platinum Finishing Systems",
+        "url": "https://pfsspraybooths.com",
+        "telephone": "+18885457715"
+      },
+      "serviceType": "Industrial Finishing Equipment",
+      "audience": { "@type": "Audience", "audienceType": "Cabinet makers, furniture manufacturers, millwork shops, wood finishing operations" },
+      "areaServed": { "@type": "Country", "name": "United States" },
+      "url": "https://pfsspraybooths.com/industries/woodworking"
+    },
   });
 
   const [featuresOpen, setFeaturesOpen] = useState(false);

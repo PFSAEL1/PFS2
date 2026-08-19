@@ -3,8 +3,8 @@ import { Link } from "wouter";
 import { ArrowRight, Phone } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
-const AMU_HEATED_IMG = "/manus-storage/pfs-amu-card_41f0dd88.jpg";
-const AMU_NON_HEATED_IMG = "/manus-storage/apollo-amu-non-heated-render_2991eb20.png";
+const AMU_HEATED_IMG = "/assets/pfs-amu-card_41f0dd88.jpg";
+const AMU_NON_HEATED_IMG = "/assets/apollo-amu-non-heated-render_2991eb20.png";
 
 export default function AirMakeUpUnitsHub() {
   useSEO({
@@ -15,7 +15,7 @@ export default function AirMakeUpUnitsHub() {
 
   return (
     <div>
-      <PageHero bgVideo="/manus-storage/pfs-paint-booth-hero_500b9d60.mp4"
+      <PageHero
         title="Air Make-Up Units"
         subtitle="PFS air make-up units supply tempered, filtered replacement air to spray booths and finishing rooms — maintaining proper airflow balance and code compliance."
         breadcrumbs={[{ label: "Products", href: "/products" }, { label: "Air Make-Up Units" }]}
@@ -27,16 +27,16 @@ export default function AirMakeUpUnitsHub() {
         <div className="container">
           <div className="mb-12">
             <span className="section-label">Air Make-Up Units</span>
-            <h2 data-animation="slideLeft" className="section-heading">Choose Your Configuration</h2>
-            <p data-animation="slideLeft" className="section-body max-w-2xl">Proper air replacement is required by OSHA and NFPA 33 for any spray booth. PFS manufactures heated and non-heated AMUs for every climate and application.</p>
+            <h2 className="section-heading">Choose Your Configuration</h2>
+            <p className="section-body max-w-2xl">Proper air replacement is required by OSHA and NFPA 33 for any spray booth. PFS manufactures heated and non-heated AMUs for every climate and application.</p>
           </div>
 
           {/* Two large cards side by side */}
-          <div data-animation="fadeIn" className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
             {/* Heated AMU */}
             <Link href="/products/air-make-up-units/heated">
               <div className="group cursor-pointer border border-gray-200 hover:border-[#1B2B4B] transition-all duration-300 hover:shadow-[0_0_24px_rgba(27,43,75,0.15)] overflow-hidden">
-                <div className="overflow-hidden card-image" style={{ height: "280px" }}>
+                <div className="overflow-hidden" style={{ height: "280px" }}>
                   <img
                     src={AMU_HEATED_IMG}
                     alt="Heated Air Make-Up Units"
@@ -66,7 +66,7 @@ export default function AirMakeUpUnitsHub() {
             {/* Non-Heated AMU */}
             <Link href="/products/air-make-up-units/non-heated">
               <div className="group cursor-pointer border border-gray-200 hover:border-[#1B2B4B] transition-all duration-300 hover:shadow-[0_0_24px_rgba(27,43,75,0.15)] overflow-hidden">
-                <div className="overflow-hidden card-image" style={{ height: "280px" }}>
+                <div className="overflow-hidden" style={{ height: "280px" }}>
                   <img
                     src={AMU_NON_HEATED_IMG}
                     alt="Non-Heated Air Make-Up Units"
@@ -98,7 +98,7 @@ export default function AirMakeUpUnitsHub() {
           <div style={{ backgroundColor: "#1a1a1a", padding: "2.5rem 2rem" }}>
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
-                <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.4rem", fontWeight: 700, color: "#ffffff", marginBottom: "0.4rem" }}>
+                <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.4rem", fontWeight: 700, color: "#ffffff", marginBottom: "0.4rem" }}>
                   Not Sure Which AMU You Need?
                 </h3>
                 <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.6 }}>
@@ -106,10 +106,10 @@ export default function AirMakeUpUnitsHub() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
-                <Link data-animation="slideLeft" href="/contact/request-a-quote">
+                <Link href="/contact/request-a-quote">
                   <span className="btn-glow flex items-center gap-2">Get Pricing <ArrowRight size={14} /></span>
                 </Link>
-                <a data-animation="slideRight" href="tel:+18885457715">
+                <a href="tel:+18885457715">
                   <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#ffffff", border: "1.5px solid rgba(255,255,255,0.4)", padding: "0.6rem 1.2rem", cursor: "pointer" }}>
                     <Phone size={14} /> (888) 545-7715
                   </span>

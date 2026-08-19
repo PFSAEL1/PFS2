@@ -5,12 +5,12 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
-const IMG = "/manus-storage/helios-booth-warehouse_7b31d966.jpg";
+const IMG = "/assets/helios-booth-warehouse_7b31d966.jpg";
 
 export default function ContactHub() {
   useSEO({
     title: "Contact PFS | Request a Quote for Spray Booths & Finishing Equipment",
-    description: "Contact Platinum Finishing Systems for spray paint booth pricing, industrial oven quotes, blast room specifications, and finishing line consultations. Call (888) 545-7715 or email info@pfsspraybooths.com.",
+    description: "Contact PFS Industrial Finishing Equipment (formerly Platinum Finishing Systems) for spray paint booth pricing, industrial oven quotes, blast room specifications, and finishing line consultations. Call (888) 545-7715 or email info@pfsspraybooths.com.",
     canonical: "/contact",
   });
 
@@ -24,7 +24,7 @@ export default function ContactHub() {
 
   return (
     <div>
-      <PageHero bgVideo="/manus-storage/pfs-facility-drone-hero_ca12546c.mp4"
+      <PageHero
         title="Contact Us"
         subtitle="Get in touch with the PFS team — we're ready to help with your finishing equipment project."
         breadcrumbs={[{ label: "Contact" }]}
@@ -35,7 +35,7 @@ export default function ContactHub() {
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
               <span className="section-label">Get in Touch</span>
-              <h2 data-animation="slideLeft" className="section-heading">Send Us a Message</h2>
+              <h2 className="section-heading">Send Us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-5 mt-6">
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
@@ -61,7 +61,7 @@ export default function ContactHub() {
                   <label className="form-label">Message *</label>
                   <textarea className="form-input" rows={5} required value={form.message} onChange={e => setForm(f => ({ ...f, message: e.target.value }))} />
                 </div>
-                <button data-animation="slideRight" type="submit" className="btn-glow">Send Message</button>
+                <button type="submit" className="btn-glow">Send Message</button>
               </form>
             </div>
             <div className="space-y-6">

@@ -24,31 +24,31 @@ import { useSEO } from "@/hooks/useSEO";
 // HERO_IMG     : speedboat masked and prepped inside PFS booth (fallback poster for hero video)
 // FEATURED_IMG : PFS Helios with sailboat — doors open
 // GALLERY_1/2  : placeholders until user supplies gallery photos
-const HERO_VIDEO = "/manus-storage/marine_helios_booth_video_73a8ffa6.mp4";
-const HERO_IMG = "/manus-storage/marine_hero_boat_in_booth_cfbd5064.jpg";
-const FEATURED_IMG = "/manus-storage/marine_helios_sailboat_card_6d98788d.jpg"; // PFS Helios with sailboat — doors open
-const GALLERY_1 = "/manus-storage/marine_helios_sailboat_card_6d98788d.jpg"; // PFS Helios — sailboat (doors open)
-const GALLERY_3 = "/manus-storage/marine_zenith_sportboat_87a339d9.jpg";     // PFS Zenith — sport boat
-const GALLERY_4 = "/manus-storage/marine_helios_centerconsole_0ad4a213.jpg"; // PFS Helios — center-console hull
+const HERO_VIDEO   = "/assets/marine_helios_booth_video_73a8ffa6.mp4";
+const HERO_IMG     = "/assets/marine_hero_boat_in_booth_cfbd5064.jpg";
+const FEATURED_IMG = "/assets/marine_helios_sailboat_card_6d98788d.jpg"; // PFS Helios with sailboat — doors open
+const GALLERY_1    = "/assets/marine_helios_sailboat_card_6d98788d.jpg"; // PFS Helios — sailboat (doors open)
+const GALLERY_3    = "/assets/marine_zenith_sportboat_87a339d9.jpg";     // PFS Zenith — sport boat
+const GALLERY_4    = "/assets/marine_helios_centerconsole_0ad4a213.jpg"; // PFS Helios — center-console hull
 
-const ETL_LOGO = "/manus-storage/pfs-etl-logo_7758f722.png";
-const UL_LOGO = "/manus-storage/pfs-ul508a-clean_e8efdeb8.jpg";
-const NFPA_LOGO = "/manus-storage/pfs-nfpa-logo_4b710cc9.png";
-const EPA_LOGO = "/manus-storage/pfs-epa-logo_e4165f68.webp";
-const OSHA_LOGO = "/manus-storage/pfs-osha-logo_0c460739.jpg";
-const USA_FLAG = "/manus-storage/pfs-usa-flag_8fca512e.jpg";
+const ETL_LOGO     = "/assets/pfs-etl-logo_7758f722.png";
+const UL_LOGO      = "/assets/pfs-ul508a-clean_e8efdeb8.jpg";
+const NFPA_LOGO    = "/assets/pfs-nfpa-logo_4b710cc9.png";
+const EPA_LOGO     = "/assets/pfs-epa-logo_e4165f68.webp";
+const OSHA_LOGO    = "/assets/pfs-osha-logo_0c460739.jpg";
+const USA_FLAG     = "/assets/pfs-usa-flag_8fca512e.jpg";
 
 // Brand blue
 const BLUE = "#1B3A6B";
 
 // ── CERT CAROUSEL ─────────────────────────────────────────────────────────────
 const CERTS = [
-  { type: "logo", img: ETL_LOGO, title: "ETL & ETL-C Listed", sub: "Intertek — USA & Canada", imgH: 44 },
-  { type: "logo", img: UL_LOGO, title: "UL 508A Certified", sub: "Industrial Control Panel Fabricator", imgH: 44 },
-  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant", sub: "Spray Application Standard", imgH: 44 },
-  { type: "logo", img: EPA_LOGO, title: "EPA Compliant", sub: "Air Quality Standards", imgH: 36 },
-  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant", sub: "Workplace Safety Standards", imgH: 36 },
-  { type: "flag", img: USA_FLAG, title: "Made in the USA", sub: "Santa Rosa, CA", imgH: 36 },
+  { type: "logo", img: ETL_LOGO,  title: "ETL & ETL-C Listed",      sub: "Intertek — USA & Canada",              imgH: 44 },
+  { type: "logo", img: UL_LOGO,   title: "UL 508A Certified",        sub: "Industrial Control Panel Fabricator",  imgH: 44 },
+  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant",        sub: "Spray Application Standard",           imgH: 44 },
+  { type: "logo", img: EPA_LOGO,  title: "EPA Compliant",            sub: "Air Quality Standards",                imgH: 36 },
+  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant",           sub: "Workplace Safety Standards",           imgH: 36 },
+  { type: "flag", img: USA_FLAG,  title: "Made in the USA",          sub: "Santa Rosa, CA",                       imgH: 36 },
 ];
 const CERTS_LOOP = [...CERTS, ...CERTS];
 
@@ -100,36 +100,36 @@ const FEATURES_HIDDEN = [
 ];
 
 const BOOTH_LINEUP = [
-  { name: "Cross-Flow", desc: "Side-to-side airflow. Cost-effective for center consoles and sport boats." },
+  { name: "Cross-Flow",     desc: "Side-to-side airflow. Cost-effective for center consoles and sport boats." },
   { name: "Semi-Downdraft", desc: "Rear-angled exhaust. Versatile for mixed hull sizes and production schedules." },
   { name: "Full Downdraft", desc: "Ceiling-to-floor airflow. Maximum cleanliness for gelcoat and premium topcoat." },
-  { name: "Heated Booth", desc: "Integrated heat for accelerated cure of marine primers and two-part topcoats." },
-  { name: "Custom Build", desc: "Engineered-to-order for wide-body vessels, commercial hulls, or multi-bay facilities." },
+  { name: "Heated Booth",   desc: "Integrated heat for accelerated cure of marine primers and two-part topcoats." },
+  { name: "Custom Build",   desc: "Engineered-to-order for wide-body vessels, commercial hulls, or multi-bay facilities." },
 ];
 
 const PRODUCTS = [
   {
     label: "Enclosed Paint Booths",
     href: "/products/paint-booths/enclosed",
-    img: "/manus-storage/enclosed-booth-card-zenith_7e010642.jpg",
+    img: "/assets/enclosed-booth-card-zenith_7e010642.jpg",
     desc: "Cross-flow, semi-downdraft, and full downdraft configurations for marine vessel finishing.",
   },
   {
     label: "Heated Paint Booths",
     href: "/products/paint-booths/heated",
-    img: "/manus-storage/pfs-vulcan-oven-card_ad72eade_316de7d1.png",
+    img: "/assets/pfs-vulcan-oven-card_ad72eade_316de7d1.png",
     desc: "Spray, flash, and bake cycles for marine primer and two-part polyurethane topcoat.",
   },
   {
     label: "Blasting Systems",
     href: "/products/blast-systems",
-    img: "/manus-storage/blast-systems-real_c7389401_16a0255c.webp",
+    img: "/assets/blast-systems-real_c7389401_16a0255c.webp",
     desc: "Blast rooms for hull surface prep, paint stripping, and antifouling removal.",
   },
   {
     label: "Open Face Paint Booths",
     href: "/products/paint-booths/open-face",
-    img: "/manus-storage/openface-exterior-pfs-logo_dc802808.png",
+    img: "/assets/openface-exterior-pfs-logo_dc802808.png",
     desc: "High-volume open-front finishing for marine components, outdrives, and sub-assemblies.",
   },
 ];
@@ -334,6 +334,21 @@ export default function MarinePage() {
     title: "Marine Paint Booths | Boat & Vessel Finishing Systems | PFS",
     description: "PFS Orion Series marine spray booths are custom-engineered for boat builders, shipyards, and marine MRO facilities. Wide-span clear-span construction for full hull and deck access. Cross-flow and downdraft airflow, NFPA 33 compliant, ETL/UL listed components, UL 508A certified controls. Engineered for gelcoat, antifouling, and marine topcoat applications. Manufactured in Santa Rosa, CA. Ships nationally.",
     canonical: "/industries/marine",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Marine-grade spray booths and finishing systems for boat and vessel coating",
+      "provider": {
+        "@type": "Organization",
+        "name": "Platinum Finishing Systems",
+        "url": "https://pfsspraybooths.com",
+        "telephone": "+18885457715"
+      },
+      "serviceType": "Industrial Finishing Equipment",
+      "audience": { "@type": "Audience", "audienceType": "Marine manufacturers, boat builders, yacht refinishers" },
+      "areaServed": { "@type": "Country", "name": "United States" },
+      "url": "https://pfsspraybooths.com/industries/marine"
+    },
   });
 
   const [featuresOpen, setFeaturesOpen] = useState(false);
@@ -350,7 +365,7 @@ export default function MarinePage() {
         justifyContent: "flex-end",
         overflow: "hidden",
       }}>
-        <video preload="auto"
+                <video preload="auto"
           src={HERO_VIDEO}
           autoPlay
           muted
@@ -381,7 +396,7 @@ export default function MarinePage() {
           }}>
             MARINE &amp; WATERCRAFT
           </span>
-          <h1 data-animation="slideLeft" style={{
+          <h1 style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "clamp(2.6rem, 7vw, 5rem)",
             fontWeight: 800, color: "#fff", lineHeight: 1.0,
@@ -403,7 +418,7 @@ export default function MarinePage() {
           }}>
             PFS ORION · HELIOS · ZENITH SERIES
           </span>
-          <p data-animation="slideLeft" style={{
+          <p style={{
             fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
             fontSize: "clamp(0.95rem, 1.8vw, 1.1rem)",
             color: "rgba(255,255,255,0.82)",
@@ -414,10 +429,10 @@ export default function MarinePage() {
             Wide-span clear-span construction for full hull and deck access. ETL/UL listed and UL 508A certified components. NFPA 33 compliant. Engineered for gelcoat, antifouling, and marine topcoat applications — installed nationwide.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-            <Link data-animation="slideLeft" href="/contact/request-a-quote">
+            <Link href="/contact/request-a-quote">
               <span className="btn-glow" style={{ width: "100%", maxWidth: "320px", justifyContent: "center" }}>GET PRICING <ArrowRight size={16} /></span>
             </Link>
-            <a data-animation="slideRight" href="tel:8885457715" style={{ width: "100%", maxWidth: "320px" }}>
+            <a href="tel:8885457715" style={{ width: "100%", maxWidth: "320px" }}>
               <span style={{
                 display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem",
                 background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.5)",
@@ -447,7 +462,7 @@ export default function MarinePage() {
               }}>
                 FEATURED PAINT BOOTH
               </span>
-              <h2 data-animation="slideLeft" style={{
+              <h2 style={{
                 fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
                 fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 800,
                 color: "#111", letterSpacing: "-0.01em", marginBottom: "0.5rem",
@@ -481,10 +496,10 @@ export default function MarinePage() {
               />
             </div>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
-              <Link data-animation="slideLeft" href="/contact/request-a-quote">
+              <Link href="/contact/request-a-quote">
                 <span className="btn-glow">REQUEST A QUOTE <ArrowRight size={15} /></span>
               </Link>
-              <Link data-animation="slideRight" href="/products/paint-booths/enclosed">
+              <Link href="/products/paint-booths/enclosed">
                 <span style={{
                   display: "inline-flex", alignItems: "center", gap: "0.5rem",
                   background: "transparent", color: BLUE,
@@ -508,7 +523,7 @@ export default function MarinePage() {
       <section style={{ padding: "0 0 4rem", background: "#fff" }}>
         <div className="container">
           <div className="text-center mb-8">
-            <h2 data-animation="slideLeft" style={{
+            <h2 style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800,
               color: "#111", letterSpacing: "-0.01em",
@@ -524,7 +539,7 @@ export default function MarinePage() {
             ]}
             cardHeight="clamp(220px,30vw,360px)"
           />
-          <div data-animation="slideRight" className="text-center">
+          <div className="text-center">
             <Link href="/contact/request-a-quote">
               <span className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
             </Link>
@@ -543,7 +558,7 @@ export default function MarinePage() {
             }}>
               STANDARD SPECIFICATION
             </span>
-            <h2 data-animation="slideLeft" style={{
+            <h2 style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800,
               color: "#111", letterSpacing: "-0.01em",
@@ -552,7 +567,7 @@ export default function MarinePage() {
             </h2>
           </div>
 
-          <div data-animation="fadeIn" className="grid md:grid-cols-3 gap-5 mb-5">
+          <div className="grid md:grid-cols-3 gap-5 mb-5">
             {FEATURES_VISIBLE.map((f) => (
               <div key={f.title} style={{ background: "#fff", padding: "1.75rem", borderTop: `3px solid ${BLUE}`, display: "flex", flexDirection: "column" }}>
                 <div style={{
@@ -626,7 +641,7 @@ export default function MarinePage() {
           )}
 
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <button data-animation="slideLeft"
+            <button
               onClick={() => setFeaturesOpen(!featuresOpen)}
               style={{
                 display: "inline-flex", alignItems: "center", gap: "0.4rem",
@@ -640,7 +655,7 @@ export default function MarinePage() {
                 ? <><ChevronUp size={14} /> SHOW LESS</>
                 : <><ChevronDown size={14} /> SEE ALL SPECIFICATIONS &amp; BOOTH TYPES</>}
             </button>
-            <Link data-animation="slideRight" href="/contact/request-a-quote">
+            <Link href="/contact/request-a-quote">
               <span className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
             </Link>
           </div>
@@ -651,7 +666,7 @@ export default function MarinePage() {
       <section style={{ background: BLUE, padding: "3.5rem 0" }}>
         <div className="container">
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "1.5rem" }}>
-            <h2 data-animation="slideLeft" style={{
+            <h2 style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "clamp(1.6rem, 4vw, 2.6rem)",
               fontWeight: 800, color: "#fff", letterSpacing: "-0.01em", lineHeight: 1.1,
@@ -662,7 +677,7 @@ export default function MarinePage() {
               Quote in 24 hours. manufactured in the USA with ETL/UL listed components. Installed nationwide by PFS-certified technicians.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center" }}>
-              <Link data-animation="slideLeft" href="/contact/request-a-quote">
+              <Link href="/contact/request-a-quote">
                 <span style={{
                   display: "inline-flex", alignItems: "center", gap: "0.5rem",
                   background: "#fff", color: BLUE,
@@ -673,7 +688,7 @@ export default function MarinePage() {
                   GET PRICING <ArrowRight size={16} />
                 </span>
               </Link>
-              <a data-animation="slideRight" href="tel:8885457715">
+              <a href="tel:8885457715">
                 <span style={{
                   display: "inline-flex", alignItems: "center", gap: "0.5rem",
                   background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.6)",
@@ -689,7 +704,7 @@ export default function MarinePage() {
         </div>
       </section>
 
-      {/* RELATED PRODUCTS */}
+            {/* RELATED PRODUCTS */}
       <SiteProductCardSection
         heading="You May Also Need"
         label="Complete Your System"
