@@ -263,6 +263,41 @@
       "source": "/large-equipment-booths/truck-full-down-draft",
       "destination": "/products/paint-booths/truck-buses-fleet",
       "permanent": true
+    },
+    {
+      "source": "/large-equipment-booths/truck-side-down-draft",
+      "destination": "/products/paint-booths/truck-buses-fleet",
+      "permanent": true
+    },
+    {
+      "source": "/conveyor-finishing-systems",
+      "destination": "/integration-automation",
+      "permanent": true
+    },
+    {
+      "source": "/side-load-finishing-systems",
+      "destination": "/integration-automation",
+      "permanent": true
+    },
+    {
+      "source": "/turn-key-finishing-systems",
+      "destination": "/integration-automation",
+      "permanent": true
+    },
+    {
+      "source": "/custom-side-load-finishing-systems-for-high-productivity",
+      "destination": "/integration-automation",
+      "permanent": true
+    },
+    {
+      "source": "/custom-paint-booth-tailored-solutions-for-your-unique-needs",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/custom-blast-rooms-for-abrasive-blasting",
+      "destination": "/products/blast-systems",
+      "permanent": true
     }
   ],
   "rewrites": [
