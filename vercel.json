@@ -823,6 +823,86 @@
       "source": "/why-spray-booths-are-essential-for-train-maintenance",
       "destination": "/industries/rail-transit",
       "permanent": true
+    },
+    {
+      "source": "/category/spray-paint-booths",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/tag/aerospace",
+      "destination": "/industries/aerospace-defense",
+      "permanent": true
+    },
+    {
+      "source": "/tag/aircraft-paint-booth",
+      "destination": "/industries/aerospace-defense",
+      "permanent": true
+    },
+    {
+      "source": "/tag/boat-paint-solutions",
+      "destination": "/industries/marine",
+      "permanent": true
+    },
+    {
+      "source": "/tag/body-shop-supplies",
+      "destination": "/products/parts-filters",
+      "permanent": true
+    },
+    {
+      "source": "/tag/etl-certified-booths",
+      "destination": "/company/certifications",
+      "permanent": true
+    },
+    {
+      "source": "/tag/paint-booth-installation",
+      "destination": "/service",
+      "permanent": true
+    },
+    {
+      "source": "/tag/pfs-spray-booth",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/tag/spray-booth-automation",
+      "destination": "/integration-automation",
+      "permanent": true
+    },
+    {
+      "source": "/tag/spray-booth-clean-room-systems",
+      "destination": "/products/environmental-rooms",
+      "permanent": true
+    },
+    {
+      "source": "/2024/04/29",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/2024/09",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/2025/01/03",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/uncategorized",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/elementor-6778",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/zz-test-lead-form-internal",
+      "destination": "/contact",
+      "permanent": true
     }
   ],
   "rewrites": [
