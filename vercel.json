@@ -358,6 +358,71 @@
       "source": "/product/open-face-paint-booths-ofpb20",
       "destination": "/products/paint-booths/open-face",
       "permanent": true
+    },
+    {
+      "source": "/product/small-parts-booth-sp4-4w-x-4l-x-7h",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/product/small-parts-booth-sp4-4w-x-4l-x-7h-2-2",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/product/small-parts-booth-sp6-6w-x-5l-x-7h",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/automotive-paint-booths/downdraft-paint-booth",
+      "destination": "/products/paint-booths/full-downdraft",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/open-face-paint-booths",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/small-parts-booths",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/shop",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/industrial-manufacturing",
+      "destination": "/industries/industrial-manufacturing",
+      "permanent": true
+    },
+    {
+      "source": "/military-defense",
+      "destination": "/industries/government-military",
+      "permanent": true
+    },
+    {
+      "source": "/marine-yacht-paint-booths",
+      "destination": "/industries/marine",
+      "permanent": true
+    },
+    {
+      "source": "/train-and-railway",
+      "destination": "/industries/rail-transit",
+      "permanent": true
+    },
+    {
+      "source": "/education-booths",
+      "destination": "/industries",
+      "permanent": true
+    },
+    {
+      "source": "/woodworking-paint-booths",
+      "destination": "/industries",
+      "permanent": true
     }
   ],
   "rewrites": [
