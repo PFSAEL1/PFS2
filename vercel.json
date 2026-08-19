@@ -78,6 +78,16 @@
       "source": "/ul508a-certified-control-panels-industrial-finishing",
       "destination": "/blog/ul508a-certified-control-panel-spray-booth",
       "permanent": true
+    },
+    {
+      "source": "/filters",
+      "destination": "/parts/filters",
+      "permanent": true
+    },
+    {
+      "source": "/filters/",
+      "destination": "/parts/filters",
+      "permanent": true
     }
   ],
   "rewrites": [
