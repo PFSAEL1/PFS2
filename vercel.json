@@ -728,6 +728,101 @@
       "source": "/the-rise-of-waterborne-auto-paint-what-you-need-to-know",
       "destination": "/blog",
       "permanent": true
+    },
+    {
+      "source": "/the-role-of-paint-booth-heaters-in-achieving-flawless-finishes",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/the-ultimate-paint-booth-usage-guide-for-perfect-results",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/things-you-need-to-know-about-open-face-spray-paint-booths",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/top-features-quality-paint-booth",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/understanding-spray-booths-and-rooms-for-quality-finishes",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/what-are-spray-booths-made-of-materials-and-benefits",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/what-are-spray-booths-made-of-materials-construction",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/what-are-the-osha-requirements-for-spray-booths",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/what-are-woodworking-paint-booths-for-superior-finishes",
+      "destination": "/industries",
+      "permanent": true
+    },
+    {
+      "source": "/what-is-a-spray-booth-how-to-choose-the-right-one-for-your-business",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/what-is-a-spray-booth-how-to-choose-the-right-one-for-your-business-2",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/what-kind-of-paint-booth-should-i-use-for-woodworking",
+      "destination": "/industries",
+      "permanent": true
+    },
+    {
+      "source": "/what-size-do-you-need-for-a-spray-booth",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/why-auto-repair-shops-need-professional-spray-booths",
+      "destination": "/industries/collision-repair",
+      "permanent": true
+    },
+    {
+      "source": "/why-every-tech-school-needs-a-professional-paint-booth",
+      "destination": "/industries",
+      "permanent": true
+    },
+    {
+      "source": "/why-mixing-rooms-are-essential-for-paint-booth-operations",
+      "destination": "/products/prep-support",
+      "permanent": true
+    },
+    {
+      "source": "/why-mixing-rooms-are-essential-for-spray-booth-operations",
+      "destination": "/products/prep-support",
+      "permanent": true
+    },
+    {
+      "source": "/why-semi-downdraft-spray-booths-are-essential-for-painting",
+      "destination": "/products/paint-booths/semi-downdraft",
+      "permanent": true
+    },
+    {
+      "source": "/why-spray-booths-are-essential-for-train-maintenance",
+      "destination": "/industries/rail-transit",
+      "permanent": true
     }
   ],
   "rewrites": [
