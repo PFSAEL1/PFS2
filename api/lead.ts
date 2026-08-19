@@ -18,8 +18,8 @@ type VercelResponse = {
 
 const ZOHO_WEB_TO_LEAD_URL = "https://crm.zoho.com/crm/WebToLeadForm";
 const ZOHO_FORM_TOKENS = {
-  xnQsjsdp: "cb74e5135578ea535ac30ecbc6b4bbee03d2390e3820a658c6e3ee3bd081b57b",
-  xmIwtLD: "95aa12312f3eeb164a9664904fed878335000ea249091d49c2e58bde246a4227a7ec5943fc55762ea2918c01e72624a1",
+  xnQsjsdp: "5a18df1f66aa73da22ffcf206fa8757b1cb333689d187eb7a7c8ae997f754f78",
+  xmIwtLD: "a0b8d8a9350384c9863c11ac16a12848a1c908bfbd00930275201d1fa394e9a3091645841aaaa233241e3a2598344969",
   actionType: "TGVhZHM=",
 };
 
