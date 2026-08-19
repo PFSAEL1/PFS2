@@ -423,6 +423,91 @@
       "source": "/woodworking-paint-booths",
       "destination": "/industries/woodworking",
       "permanent": true
+    },
+    {
+      "source": "/service-and-maintenance-for-paint-booths",
+      "destination": "/service",
+      "permanent": true
+    },
+    {
+      "source": "/faq",
+      "destination": "/support",
+      "permanent": true
+    },
+    {
+      "source": "/flexible-spray-booth-financing",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/advanced-coating-technology-for-aviation-and-military-use",
+      "destination": "/industries/aerospace",
+      "permanent": true
+    },
+    {
+      "source": "/advanced-paint-booths-for-construction-and-agriculture",
+      "destination": "/industries/heavy-equipment",
+      "permanent": true
+    },
+    {
+      "source": "/advantages-of-using-automated-spray-booths-in-your-operation",
+      "destination": "/integration-automation",
+      "permanent": true
+    },
+    {
+      "source": "/aerospace-aviation-paint-booths-for-superior-finishing",
+      "destination": "/industries/aerospace",
+      "permanent": true
+    },
+    {
+      "source": "/ai-powered-spray-booths-smarter-faster-better-finishes",
+      "destination": "/integration-automation",
+      "permanent": true
+    },
+    {
+      "source": "/analyzing-paint-booth-air-flow-which-is-best",
+      "destination": "/blog/crossflow-vs-downdraft-spray-booth",
+      "permanent": true
+    },
+    {
+      "source": "/benefits-of-pfs-side-downdraft-paint-booths-for-quality-finishes",
+      "destination": "/products/paint-booths/side-downdraft",
+      "permanent": true
+    },
+    {
+      "source": "/best-ppe-for-safe-spray-painting-in-professional-booths",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/choosing-the-best-paint-booth-for-small-parts-and-components",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/choosing-the-right-paint-booth-for-your-industry",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-and-industrial-paint-booths-a-complete-guide",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/common-paint-defects-in-body-shops-how-to-prevent-them",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/common-spray-booth-mistakes-and-how-to-avoid-them",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/deciding-on-the-right-spray-booth-for-your-business",
+      "destination": "/products/paint-booths",
+      "permanent": true
     }
   ],
   "rewrites": [
