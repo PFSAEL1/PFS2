@@ -653,6 +653,81 @@
       "source": "/large-truck-cross-flow-paint-booths-for-better-finishing",
       "destination": "/products/paint-booths/truck-buses-fleet",
       "permanent": true
+    },
+    {
+      "source": "/learn-about-heat-dissipating-paint-technology",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/maximizing-space-with-small-parts-spray-booths-a-complete-guide",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/outdoor-vs-indoor-paint-booths-key-differences-explained",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/paint-booth-lighting-what-you-need-to-know-for-perfect-results",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/paint-storage-best-practices-how-to-store-paint-safely",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/pitted-vs-raised-basement-paint-booths-which-one-is-better",
+      "destination": "/products/paint-booths/raised-basement",
+      "permanent": true
+    },
+    {
+      "source": "/practical-tips-for-extending-your-paint-booth-filter-life",
+      "destination": "/parts/filters",
+      "permanent": true
+    },
+    {
+      "source": "/practical-tips-for-improving-spray-booth-efficiency",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/precision-painting-best-automotive-spray-booths-for-quality",
+      "destination": "/industries/collision-repair",
+      "permanent": true
+    },
+    {
+      "source": "/quality-and-safety-with-air-filtration-in-spray-booths",
+      "destination": "/parts/filters",
+      "permanent": true
+    },
+    {
+      "source": "/revamp-your-production-the-power-of-new-industrial-paint-booths-2",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/role-of-prep-stations-in-auto-body-shops-explained",
+      "destination": "/products/prep-support",
+      "permanent": true
+    },
+    {
+      "source": "/see-the-2032-spray-booth-market-insights-and-innovations",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/the-importance-of-regular-maintenance-spray-booth-longevity",
+      "destination": "/blog/spray-booth-maintenance-filter-checklist",
+      "permanent": true
+    },
+    {
+      "source": "/the-rise-of-waterborne-auto-paint-what-you-need-to-know",
+      "destination": "/blog",
+      "permanent": true
     }
   ],
   "rewrites": [
