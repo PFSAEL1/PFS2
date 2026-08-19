@@ -508,6 +508,86 @@
       "source": "/deciding-on-the-right-spray-booth-for-your-business",
       "destination": "/products/paint-booths",
       "permanent": true
+    },
+    {
+      "source": "/do-i-need-a-prep-station-in-my-bodyshop",
+      "destination": "/products/prep-support",
+      "permanent": true
+    },
+    {
+      "source": "/double-wall-paint-booths-insulation-efficiency-and-more",
+      "destination": "/products/paint-booths/double-wall",
+      "permanent": true
+    },
+    {
+      "source": "/effective-project-management-for-better-finishing-results",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/efficient-air-makeup-units-ensure-spray-booth-performance",
+      "destination": "/products/air-make-up-units",
+      "permanent": true
+    },
+    {
+      "source": "/ensuring-safety-in-your-spray-booth-best-practices-and-tips",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/essential-features-of-industrial-paint-booths-for-businesses",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/essential-fire-suppression-systems-for-safe-spray-booths",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/factors-affecting-body-shop-layout-paint-booth-location",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/fire-suppression-systems-for-paint-booths-nfpa-33-compliance",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/from-good-to-great-powder-booths-impact-on-finish-quality",
+      "destination": "/products/powder-booths",
+      "permanent": true
+    },
+    {
+      "source": "/full-downdraft-spray-booths-the-best-in-auto-refinishing",
+      "destination": "/products/paint-booths/full-downdraft",
+      "permanent": true
+    },
+    {
+      "source": "/high-quality-marine-finishes-with-pfs-paint-booths",
+      "destination": "/industries/marine",
+      "permanent": true
+    },
+    {
+      "source": "/how-do-paint-booth-control-panels-work-a-complete-guide",
+      "destination": "/blog/ul508a-certified-control-panel-spray-booth",
+      "permanent": true
+    },
+    {
+      "source": "/how-paint-booths-ensure-quality-control-in-automotive-finishes",
+      "destination": "/industries/automotive-manufacturing",
+      "permanent": true
+    },
+    {
+      "source": "/how-spray-booths-improve-safety-quality-and-compliance",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/how-temperature-and-humidity-affect-paint-booth-finish-quality",
+      "destination": "/blog",
+      "permanent": true
     }
   ],
   "rewrites": [
