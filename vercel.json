@@ -130,6 +130,11 @@
       "permanent": true
     },
     {
+      "source": "/industrial-paint-booths",
+      "destination": "/industries/industrial-manufacturing",
+      "permanent": true
+    },
+    {
       "source": "/spray-booth",
       "destination": "/products/paint-booths",
       "permanent": true
