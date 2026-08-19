@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { submitLead } from "@/lib/submitLead";
 
 const IMG = "/assets/helios-booth-warehouse_7b31d966.jpg";
 
@@ -18,6 +19,7 @@ export default function ContactHub() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    submitLead({ name: form.name, company: form.company, email: form.email, phone: form.phone, message: form.message, formSource: "contact-general" });
     toast.success("Message sent! A PFS representative will contact you shortly.");
     setForm({ name: "", company: "", email: "", phone: "", message: "" });
   }

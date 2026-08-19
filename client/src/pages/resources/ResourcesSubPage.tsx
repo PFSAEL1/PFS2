@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useSEO } from '@/hooks/useSEO';
+import { submitLead } from "@/lib/submitLead";
 import PageHero from "@/components/PageHero";
 import { Link, useParams } from "wouter";
 import { ArrowRight, Download, FileText, Lock, CheckCircle } from "lucide-react";
@@ -73,7 +74,7 @@ function GatedDownload({ doc }: { doc: typeof GATED_DOWNLOADS[0] }) {
     e.preventDefault();
     const errs = validate();
     if (Object.keys(errs).length > 0) { setErrors(errs); return; }
-    // In production this would POST to a CRM/email endpoint
+    submitLead({ name: form.name, company: form.company, email: form.email, phone: form.phone, document: doc.title, formSource: "resource-download" });
     setSubmitted(true);
   };
 

@@ -7,6 +7,7 @@
 import { useEffect } from 'react';
 import { useState } from "react";
 import { useSEO } from '@/hooks/useSEO';
+import { submitLead } from "@/lib/submitLead";
 import { Link } from "wouter";
 import { Phone, Mail, CheckCircle, ArrowRight, AlertCircle } from "lucide-react";
 
@@ -63,12 +64,7 @@ export default function SupportPage() {
       setErrors(errs);
       return;
     }
-    // Static site — open mailto as fallback
-    const subject = encodeURIComponent(`Support Request — ${form.equipment || "Equipment"}`);
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nCompany: ${form.company}\nPhone: ${form.phone}\nEmail: ${form.email}\nEquipment: ${form.equipment}\n\nIssue:\n${form.issue}`
-    );
-    window.location.href = `mailto:info@pfsspraybooths.com?subject=${subject}&body=${body}`;
+    submitLead({ name: form.name, company: form.company, phone: form.phone, email: form.email, equipment: form.equipment, issue: form.issue, formSource: "support-request" });
     setSubmitted(true);
   }
 

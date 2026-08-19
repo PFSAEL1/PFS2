@@ -4,6 +4,7 @@ import { Link, useParams } from "wouter";
 import { Phone, Mail } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { submitLead } from "@/lib/submitLead";
 
 /* ─────────────────────────────────────────────────────────────────────────
    CONTEXTUAL IMAGE MAP
@@ -82,6 +83,7 @@ export default function ContactSubPage() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    submitLead({ name: form.name, company: form.company, email: form.email, phone: form.phone, message: form.message, formSource: `contact-${sub}` });
     toast.success("Submitted! A PFS representative will contact you shortly.");
     setForm({ name: "", company: "", email: "", phone: "", message: "" });
   }

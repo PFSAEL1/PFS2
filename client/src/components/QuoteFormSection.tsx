@@ -4,6 +4,7 @@
  */
 
 import { useState } from "react";
+import { submitLead } from "@/lib/submitLead";
 
 const HELIOS_IMG = "/assets/helios-booth-warehouse_7b31d966.jpg";
 
@@ -15,6 +16,7 @@ export default function QuoteFormSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    submitLead({ firstName: form.firstName, lastName: form.lastName, company: form.company, email: form.email, phone: form.phone, state: form.state, product: form.product, message: form.message, formSource: "homepage-quote" });
     setSubmitted(true);
   };
 

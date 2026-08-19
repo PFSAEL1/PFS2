@@ -6,6 +6,7 @@
 import { useEffect } from 'react';
 import { useState } from "react";
 import { useSEO } from '@/hooks/useSEO';
+import { submitLead } from "@/lib/submitLead";
 import { Link } from "wouter";
 import { ArrowRight, CheckCircle2, TrendingUp, Wrench, Package, Users, Phone, Mail } from "lucide-react";
 
@@ -87,8 +88,8 @@ export default function BecomeADistributorPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
-    // Simulate form submission (replace with real endpoint)
-    await new Promise(r => setTimeout(r, 1200));
+    submitLead({ firstName: form.firstName, lastName: form.lastName, company: form.company, email: form.email, phone: form.phone, territory: form.territory, experience: form.experience, message: form.message, formSource: "distributor-application" });
+    await new Promise(r => setTimeout(r, 800));
     setSubmitting(false);
     setSubmitted(true);
   };
