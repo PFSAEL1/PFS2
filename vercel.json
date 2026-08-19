@@ -40,6 +40,11 @@
       "permanent": true
     },
     {
+      "source": "/large-equipment-booths/truck-semi-down-draft/",
+      "destination": "/products/paint-booths/truck-buses-fleet",
+      "permanent": true
+    },
+    {
       "source": "/commercial-aerospace-aviation",
       "destination": "/industries/aerospace",
       "permanent": true

@@ -270,7 +270,7 @@ export default function TruckBoothsPage() {
   useSEO({
     title: "Truck Paint Booths | Large Vehicle Spray Booths | PFS Industrial",
     description: "PFS truck paint booths are engineered for semi-trucks, heavy equipment, and large vehicle finishing. Custom widths and heights, downdraft or cross-flow airflow, ETL/UL listed components, NFPA 33 compliant. Manufactured in Santa Rosa, CA.",
-    canonical: "/products/spray-booths/truck",
+    canonical: "/products/paint-booths/truck-buses-fleet",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Product",
@@ -300,9 +300,9 @@ export default function TruckBoothsPage() {
           "@type": "Organization",
           "name": "Platinum Finishing Systems"
         },
-        "url": "https://pfsspraybooths.com/products/paint-booths/truck-booths"
+        "url": "https://pfsspraybooths.com/products/paint-booths/truck-buses-fleet"
       },
-      "url": "https://pfsspraybooths.com/products/paint-booths/truck-booths"
+      "url": "https://pfsspraybooths.com/products/paint-booths/truck-buses-fleet"
     },
   });
 

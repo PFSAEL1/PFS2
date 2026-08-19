@@ -169,6 +169,7 @@ function Router() {
       <Route path="/products/paint-booths/heated" component={HeatedBoothPage} />
       <Route path="/products/paint-booths/double-wall" component={DoubleWallBoothPage} />
       <Route path="/products/paint-booths/inspection" component={InspectionBoothPage} />
+      <Route path="/products/paint-booths/truck-buses-fleet" component={TruckBoothsPage} />
       <Route path="/products/paint-booths/truck-booths" component={TruckBoothsPage} />
       <Route path="/products/paint-booths/wash-booth" component={WashBoothPage} />
       <Route path="/products/custom-solutions/hydrogen-bus-finishing-system" component={HydrogenBusPage} />
