@@ -381,7 +381,7 @@
     },
     {
       "source": "/product-category/open-face-paint-booths",
-      "destination": "/products/paint-booths",
+      "destination": "/products/paint-booths/open-face",
       "permanent": true
     },
     {
@@ -421,7 +421,7 @@
     },
     {
       "source": "/woodworking-paint-booths",
-      "destination": "/industries",
+      "destination": "/industries/woodworking",
       "permanent": true
     }
   ],
