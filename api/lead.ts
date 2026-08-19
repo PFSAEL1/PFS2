@@ -1,4 +1,12 @@
-import type { VercelRequest, VercelResponse } from "@vercel/node";
+type VercelRequest = {
+  method?: string;
+  body?: Record<string, unknown>;
+};
+
+type VercelResponse = {
+  setHeader: (name: string, value: string | string[]) => void;
+  status: (code: number) => { json: (body: unknown) => unknown; end: () => unknown };
+};
 
 /**
  * POST /api/lead
