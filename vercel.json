@@ -143,6 +143,71 @@
       "source": "/spray-booths-for-sale-high-quality-finishing-solutions",
       "destination": "/products/paint-booths",
       "permanent": true
+    },
+    {
+      "source": "/spray-booths-for-sale-high-quality-finishing-solutions/air-makeup-units",
+      "destination": "/products/air-make-up-units",
+      "permanent": true
+    },
+    {
+      "source": "/spray-booths-for-sale-high-quality-finishing-solutions__trashed/air-makeup-units",
+      "destination": "/products/air-make-up-units",
+      "permanent": true
+    },
+    {
+      "source": "/powder-coating-booths",
+      "destination": "/products/powder-booths",
+      "permanent": true
+    },
+    {
+      "source": "/powder-coating-ovens",
+      "destination": "/products/ovens",
+      "permanent": true
+    },
+    {
+      "source": "/powder-coating-ovens-vulcan",
+      "destination": "/products/ovens",
+      "permanent": true
+    },
+    {
+      "source": "/industrial-ovens",
+      "destination": "/products/ovens",
+      "permanent": true
+    },
+    {
+      "source": "/industrial-curing-ovens",
+      "destination": "/products/ovens",
+      "permanent": true
+    },
+    {
+      "source": "/sandblasting-booths",
+      "destination": "/products/blast-systems",
+      "permanent": true
+    },
+    {
+      "source": "/blasting",
+      "destination": "/products/blast-systems",
+      "permanent": true
+    },
+    {
+      "source": "/prep-station",
+      "destination": "/products/prep-support",
+      "permanent": true
+    },
+    {
+      "source": "/prep-stations",
+      "destination": "/products/prep-support",
+      "permanent": true
+    },
+    {
+      "source": "/prep-stations/mobile-prep-station",
+      "destination": "/products/prep-support",
+      "permanent": true
+    },
+    {
+      "source": "/aluminum-repair-stations",
+      "destination": "/products/prep-support",
+      "permanent": true
     }
   ],
   "rewrites": [
