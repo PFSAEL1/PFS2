@@ -341,22 +341,22 @@
     },
     {
       "source": "/product/open-face-paint-booths-ofpb6",
-      "destination": "/products/paint-booths",
+      "destination": "/products/paint-booths/open-face",
       "permanent": true
     },
     {
       "source": "/product/open-face-paint-booths-ofpb10",
-      "destination": "/products/paint-booths",
+      "destination": "/products/paint-booths/open-face",
       "permanent": true
     },
     {
       "source": "/product/open-face-paint-booths-ofpb12",
-      "destination": "/products/paint-booths",
+      "destination": "/products/paint-booths/open-face",
       "permanent": true
     },
     {
       "source": "/product/open-face-paint-booths-ofpb20",
-      "destination": "/products/paint-booths",
+      "destination": "/products/paint-booths/open-face",
       "permanent": true
     }
   ],
