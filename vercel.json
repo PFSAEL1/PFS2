@@ -88,6 +88,56 @@
       "source": "/filters/",
       "destination": "/parts/filters",
       "permanent": true
+    },
+    {
+      "source": "/automotive-refinish/cross-flow",
+      "destination": "/products/paint-booths/crossflow",
+      "permanent": true
+    },
+    {
+      "source": "/automotive-refinish/full-down-draft",
+      "destination": "/products/paint-booths/full-downdraft",
+      "permanent": true
+    },
+    {
+      "source": "/automotive-refinish/semi-down-draft",
+      "destination": "/products/paint-booths/semi-downdraft",
+      "permanent": true
+    },
+    {
+      "source": "/automotive-refinish/side-down",
+      "destination": "/products/paint-booths/side-downdraft",
+      "permanent": true
+    },
+    {
+      "source": "/automotive-refinish/zenith-downdraft",
+      "destination": "/products/paint-booths/full-downdraft",
+      "permanent": true
+    },
+    {
+      "source": "/automotive-refinish/zenith-downdraft-v2",
+      "destination": "/products/paint-booths/full-downdraft",
+      "permanent": true
+    },
+    {
+      "source": "/automotive-refinish-2/full-down-draft",
+      "destination": "/products/paint-booths/full-downdraft",
+      "permanent": true
+    },
+    {
+      "source": "/paint-booths",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/spray-booth",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/spray-booths-for-sale-high-quality-finishing-solutions",
+      "destination": "/products/paint-booths",
+      "permanent": true
     }
   ],
   "rewrites": [
