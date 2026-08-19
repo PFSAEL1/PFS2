@@ -208,6 +208,61 @@
       "source": "/aluminum-repair-stations",
       "destination": "/products/prep-support",
       "permanent": true
+    },
+    {
+      "source": "/mixing-room-2",
+      "destination": "/products/prep-support",
+      "permanent": true
+    },
+    {
+      "source": "/grinding-and-sanding-booths",
+      "destination": "/products/prep-support/grinding-booths",
+      "permanent": true
+    },
+    {
+      "source": "/paint-inspection-booths",
+      "destination": "/products/paint-booths/inspection",
+      "permanent": true
+    },
+    {
+      "source": "/small-parts-booths",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/open-face-booth",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/outdoor-paint-booths",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/mobile-paint-booths",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/mobile-paint-booth-v2",
+      "destination": "/products/paint-booths",
+      "permanent": true
+    },
+    {
+      "source": "/large-equipment-booths",
+      "destination": "/products/paint-booths/truck-buses-fleet",
+      "permanent": true
+    },
+    {
+      "source": "/large-equipment-booths/truck-cross-flow-paint-booth",
+      "destination": "/products/paint-booths/truck-buses-fleet",
+      "permanent": true
+    },
+    {
+      "source": "/large-equipment-booths/truck-full-down-draft",
+      "destination": "/products/paint-booths/truck-buses-fleet",
+      "permanent": true
     }
   ],
   "rewrites": [
