@@ -1482,15 +1482,15 @@ export default function ProductSubPage() {
             <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "clamp(1.4rem,3vw,2rem)", textTransform: "uppercase", color: "#fff", marginBottom: "1.5rem", letterSpacing: "0.02em" }}>See It Running</h2>
             <div style={{ position: "relative", width: "100%", maxWidth: 960, margin: "0 auto", background: "#000", lineHeight: 0 }}>
               <video
+                key={data.sectionVideo}
+                src={data.sectionVideo}
                 autoPlay
                 muted
                 loop
                 playsInline
                 preload="auto"
                 style={{ width: "100%", display: "block", maxHeight: 540, objectFit: "cover" }}
-              >
-                <source src={data.sectionVideo} type="video/mp4" />
-              </video>
+              />
             </div>
           </div>
         </section>

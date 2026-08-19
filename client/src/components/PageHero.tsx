@@ -58,11 +58,15 @@ function PageHeroVideo({
     v.muted = true;
     v.playsInline = true;
     v.play().catch(() => {});
-  }, []);
+  }, [bgVideo]);
   return (
     <>
       {/* Video with poster — poster shows instantly, video plays on top */}
-      <video preload="auto"
+      <video
+        key={bgVideo}
+        src={bgVideo}
+        poster={bgPoster}
+        preload="auto"
         ref={videoRef}
         autoPlay
         muted
@@ -75,9 +79,7 @@ function PageHeroVideo({
           objectFit: "cover", objectPosition: bgImagePosition, display: "block",
           opacity: 1, zIndex: 0,
         }}
-      >
-        <source src={bgVideo} type="video/mp4" />
-      </video>
+      />
     </>
   );
 }

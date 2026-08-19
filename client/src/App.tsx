@@ -127,7 +127,7 @@ import BayAreaServicePage from "@/pages/BayAreaServicePage";
 function ScrollToTop() {
   const [location] = useLocation();
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    window.scrollTo(0, 0);
   }, [location]);
   return null;
 }
@@ -146,8 +146,9 @@ function Layout({ children }: { children: React.ReactNode }) {
 }
 
 function Router() {
+  const [location] = useLocation();
   return (
-    <Switch>
+    <Switch key={location}>
       <Route path="/" component={Home} />
 
       {/* Products */}
