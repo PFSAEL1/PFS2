@@ -58,7 +58,7 @@ export default function PowderBoothsHub() {
             {SYSTEMS.map((s) => (
               <Link  key={s.label} href={s.href}>
                 <div className="product-card group">
-                  <div className="overflow-hidden" style={{ height: "240px" }}>
+                  <div className="overflow-hidden card-image" style={{ height: "240px" }}>
                     <img src={s.img} alt={s.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
                   <div className="p-5">

@@ -129,7 +129,7 @@ export default function CaliforniaFiltersPage() {
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
               <span className="section-label">California & West Coast</span>
-              <h2 className="section-heading-lg">Filters for Every California Finishing Operation</h2>
+              <h2 data-animation="slideLeft" className="section-heading-lg">Filters for Every California Finishing Operation</h2>
               <div className="red-divider" />
               <p className="section-body mb-5">
                 California finishing operations often work under air district and permit requirements. SCAQMD Rule 1151 in Los Angeles, BAAQMD guidance in the Bay Area, and statewide CARB programs can affect the documentation a facility maintains. PFS helps identify filter media for auto body shops, aerospace facilities, industrial coating lines, and custom fabricators across the state.
@@ -138,12 +138,12 @@ export default function CaliforniaFiltersPage() {
                 PFS manufactures spray booths in Santa Rosa, CA and supports California filter inquiries with booth-aware matching. Share a photo, current media, dimensions, and booth configuration for a clear replacement quote and documentation discussion.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Link href="/contact">
+                <Link data-animation="slideLeft" href="/contact">
                   <span className="btn-glow" style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
                     Get California Quote <ArrowRight size={14} />
                   </span>
                 </Link>
-                <a href="tel:+18885457715">
+                <a data-animation="slideRight" href="tel:+18885457715">
                   <span className="btn-outline" style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
                     <Phone size={14} /> (888) 545-7715
                   </span>
@@ -171,18 +171,18 @@ export default function CaliforniaFiltersPage() {
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "3rem" }}>
             <span className="section-label">Filter Types</span>
-            <h2 className="section-heading">Filter Media for California Finishing Operations</h2>
+            <h2 data-animation="slideLeft" className="section-heading">Filter Media for California Finishing Operations</h2>
             <div className="red-divider" style={{ margin: "0.75rem auto 0" }} />
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div data-animation="fadeIn" className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {FILTER_TYPES.map((ft) => (
-              <div key={ft.name} className="card-hover" style={{ background: "#fff", borderRadius: "2px", overflow: "hidden" }}>
-                <div style={{ background: "#f4f4f2", aspectRatio: "4/3", display: "flex", alignItems: "center", justifyContent: "center", padding: "1.5rem", overflow: "hidden" }}>
+              <div key={ft.name} className="card-hover" style={{ background: "#fff", borderRadius: "2px"}}>
+                <div className="card-image" style={{ background: "#f4f4f2", aspectRatio: "4/3", display: "flex", alignItems: "center", justifyContent: "center", padding: "1.5rem", overflow: "hidden" }}>
                   <img src={ft.img} alt={ft.name} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
                 </div>
                 <div style={{ padding: "1.25rem" }}>
-                  <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1C1C1E", letterSpacing: "0.02em", textTransform: "uppercase", marginBottom: "0.6rem" }}>{ft.name}</h3>
-                  <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.83rem", color: "#555", lineHeight: 1.65, marginBottom: "0.9rem" }}>{ft.desc}</p>
+                  <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1C1C1E", letterSpacing: "0.02em", textTransform: "uppercase", marginBottom: "0.6rem" }}>{ft.name}</h3>
+                  <p data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.83rem", color: "#555", lineHeight: 1.65, marginBottom: "0.9rem" }}>{ft.desc}</p>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: "0.35rem" }}>
                     {ft.tags.map((t) => (
                       <span key={t} style={{ background: "#EEF2FF", color: BLUE, fontSize: "0.68rem", fontWeight: 700, padding: "0.2rem 0.55rem", borderRadius: "2px", letterSpacing: "0.05em", textTransform: "uppercase" }}>{t}</span>
@@ -192,7 +192,7 @@ export default function CaliforniaFiltersPage() {
               </div>
             ))}
           </div>
-          <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
+          <div data-animation="slideRight" style={{ textAlign: "center", marginTop: "2.5rem" }}>
             <Link href="/contact">
               <span className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem" }}>
                 Order California Filters <ArrowRight size={14} />
@@ -216,10 +216,10 @@ export default function CaliforniaFiltersPage() {
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "3rem" }}>
             <span className="section-label" style={{ color: "rgba(255,255,255,0.5)" }}>Service Area</span>
-            <h2 className="section-heading-white">West Coast Regions We Serve</h2>
+            <h2 data-animation="slideLeft" className="section-heading-white">West Coast Regions We Serve</h2>
             <div className="red-divider" style={{ margin: "0.75rem auto 0" }} />
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div data-animation="fadeIn" className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {REGIONS.map((r) => (
               <div key={r.name} style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "2px", padding: "1.5rem", display: "flex", alignItems: "flex-start", gap: "0.9rem" }}>
                 <span style={{ color: "#4A90D9", marginTop: "0.1rem", flexShrink: 0 }}>{r.icon}</span>
@@ -238,7 +238,7 @@ export default function CaliforniaFiltersPage() {
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
             <span className="section-label">Filter Media Gallery</span>
-            <h2 className="section-heading">Our Filtration Product Line</h2>
+            <h2 data-animation="slideLeft" className="section-heading">Our Filtration Product Line</h2>
             <div className="red-divider" style={{ margin: "0.75rem auto 0" }} />
           </div>
           <GalleryGrid images={GALLERY_IMAGES} cardHeight="clamp(180px, 20vw, 280px)" />
@@ -248,19 +248,19 @@ export default function CaliforniaFiltersPage() {
       {/* MID-PAGE CTA BAND */}
       <section style={{ background: BLUE, padding: "3.5rem 0" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 800, color: "#fff", letterSpacing: "-0.01em", marginBottom: "0.75rem" }}>
+          <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 800, color: "#fff", letterSpacing: "-0.01em", marginBottom: "0.75rem" }}>
             California Shop? Start With the Right Filter Match.
           </h2>
-          <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.8)", maxWidth: "560px", margin: "0 auto 2rem", lineHeight: 1.7 }}>
+          <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.8)", maxWidth: "560px", margin: "0 auto 2rem", lineHeight: 1.7 }}>
             PFS manufactures in Santa Rosa, CA. Send your booth type, dimensions, current media, and application so our team can help identify the right intake, exhaust, or accordion paint arrestor format.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/contact">
+            <Link data-animation="slideLeft" href="/contact">
               <span className="btn-glow-white" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem" }}>
                 Get California Quote <ArrowRight size={14} />
               </span>
             </Link>
-            <a href="tel:+18885457715">
+            <a data-animation="slideRight" href="tel:+18885457715">
               <span className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", borderColor: "rgba(255,255,255,0.5)", color: "#fff" }}>
                 <Phone size={14} /> (888) 545-7715
               </span>
@@ -275,9 +275,9 @@ export default function CaliforniaFiltersPage() {
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
               <span className="section-label">Why PFS</span>
-              <h2 className="section-heading-lg">California's Industrial Finishing Specialist</h2>
+              <h2 data-animation="slideLeft" className="section-heading-lg">California's Industrial Finishing Specialist</h2>
               <div className="red-divider" />
-              <p className="section-body mb-5">
+              <p data-animation="slideLeft" className="section-body mb-5">
                 PFS was founded in 2012 in Santa Rosa, CA, bringing over 20 years of combined industrial finishing experience to every project. We design, manufacture, and service spray booths and supply filtration media for our own equipment and for every major booth brand operating in California.
               </p>
               <ul style={{ listStyle: "none", padding: 0, margin: "0 0 2rem" }}>
@@ -295,12 +295,12 @@ export default function CaliforniaFiltersPage() {
                 ))}
               </ul>
               <div className="flex flex-wrap gap-3">
-                <Link href="/contact">
+                <Link data-animation="slideLeft" href="/contact">
                   <span className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem" }}>
                     Get a Quote <ArrowRight size={14} />
                   </span>
                 </Link>
-                <Link href="/parts/filters/neshap-aerospace-compliance">
+                <Link data-animation="slideRight" href="/parts/filters/neshap-aerospace-compliance">
                   <span className="btn-outline">NESHAP Compliance →</span>
                 </Link>
               </div>
@@ -326,7 +326,7 @@ export default function CaliforniaFiltersPage() {
         <div className="container" style={{ maxWidth: "820px", margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
             <span className="section-label">FAQ</span>
-            <h2 className="section-heading">California Filter Questions</h2>
+            <h2 data-animation="slideLeft"  className="section-heading">California Filter Questions</h2>
             <div className="red-divider" style={{ margin: "0.75rem auto 0" }} />
           </div>
           {[
@@ -362,24 +362,24 @@ export default function CaliforniaFiltersPage() {
       {/* BOTTOM CTA */}
       <section className="section-dark" style={{ padding: "4rem 0" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 900, color: "#fff", letterSpacing: "-0.01em", marginBottom: "1rem" }}>
+          <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 900, color: "#fff", letterSpacing: "-0.01em", marginBottom: "1rem" }}>
             Order California Paint Booth Filters Today
           </h2>
           <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.75)", maxWidth: "520px", margin: "0 auto 2.5rem", lineHeight: 1.7 }}>
             Call our parts team or submit a quote request. We ship from Santa Rosa, CA and can help match the replacement media to your booth.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/contact">
+            <Link data-animation="slideLeft" href="/contact">
               <span className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", padding: "0.9rem 2.2rem", fontSize: "0.9rem" }}>
                 GET CALIFORNIA QUOTE <ArrowRight size={15} />
               </span>
             </Link>
-            <a href="tel:+18885457715">
+            <a data-animation="fadeIn" href="tel:+18885457715">
               <span className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", padding: "0.9rem 2.2rem", fontSize: "0.9rem" }}>
                 <Phone size={15} /> (888) 545-7715
               </span>
             </a>
-            <Link href="/parts/filters/paint-booth-filters">
+            <Link data-animation="slideRight" href="/parts/filters/paint-booth-filters">
               <span className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", padding: "0.9rem 2.2rem", fontSize: "0.9rem" }}>
                 All Filter Types →
               </span>

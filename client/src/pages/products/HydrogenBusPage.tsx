@@ -78,7 +78,7 @@ function CertCarousel() {
     return () => cancelAnimationFrame(animRef.current);
   }, []);
   return (
-    <div style={{ overflow: "hidden", width: "100%" }}>
+    <div style={{ width: "100%" }}>
       <div ref={trackRef} style={{ display: "flex", gap: "3rem", width: "max-content", alignItems: "center" }}>
         {CERTS_LOOP.map((c, i) => (
           <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.4rem", minWidth: 120 }}>
@@ -159,19 +159,19 @@ export default function HydrogenBusPage() {
           <div style={{ display: "inline-flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
             <span style={{ color: "#60a5fa", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase" }}>PFS CUSTOM SOLUTIONS — ZERO-EMISSION FLEET FINISHING</span>
           </div>
-          <h1 style={{ color: "#fff", fontSize: "clamp(2.2rem, 5.5vw, 4rem)", fontWeight: 900, lineHeight: 1.05, margin: "0 0 16px", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", textTransform: "uppercase", maxWidth: 850 }}>
+          <h1 data-animation="slideLeft" style={{ color: "#fff", fontSize: "clamp(2.2rem, 5.5vw, 4rem)", fontWeight: 900, lineHeight: 1.05, margin: "0 0 16px", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", textTransform: "uppercase", maxWidth: 850 }}>
             Hydrogen Bus &amp; FCEV<br />Finishing Systems
           </h1>
-          <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "clamp(1rem, 1.8vw, 1.2rem)", maxWidth: 680, margin: "0 0 32px", lineHeight: 1.65 }}>
+          <p data-animation="slideLeft" style={{ color: "rgba(255,255,255,0.85)", fontSize: "clamp(1rem, 1.8vw, 1.2rem)", maxWidth: 680, margin: "0 0 32px", lineHeight: 1.65 }}>
             Specialized finishing enclosures and maintenance service bays engineered for hydrogen fuel cell electric buses, commercial transit fleets, and alternative-fuel vehicles. NFPA 33, NFPA 2, UL 508A, and CID2 classified location compliant.
           </p>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-            <Link href="/contact/request-a-quote">
+            <Link data-animation="slideLeft" href="/contact/request-a-quote">
               <span className="btn-glow" style={{ background: BLUE, color: "#fff", border: "2px solid rgba(107,163,224,0.6)" }}>
                 GET PRICING <ArrowRight size={15} />
               </span>
             </Link>
-            <a href="tel:8885457715" className="btn-glow-white" style={{ background: "rgba(255,255,255,0.15)", color: "#fff", border: "2px solid rgba(255,255,255,0.5)" }}>
+            <a data-animation="slideRight" href="tel:8885457715" className="btn-glow-white" style={{ background: "rgba(255,255,255,0.15)", color: "#fff", border: "2px solid rgba(255,255,255,0.5)" }}>
               <Phone size={15} /> (888) 545-7715
             </a>
           </div>
@@ -193,7 +193,7 @@ export default function HydrogenBusPage() {
               <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(27,58,107,0.08)", color: BLUE, padding: "4px 12px", borderRadius: 2, fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16 }}>
                 <Flame size={13} /> CLASSIFIED ENVIRONMENT ENGINEERING
               </div>
-              <h2 style={{ fontSize: "clamp(1.8rem, 3.8vw, 2.8rem)", fontWeight: 900, color: "#0d1b2e", margin: "0 0 16px", fontFamily: "'Chakra Petch', sans-serif", textTransform: "uppercase", lineHeight: 1.1 }}>
+              <h2 data-animation="slideLeft" style={{ fontSize: "clamp(1.8rem, 3.8vw, 2.8rem)", fontWeight: 900, color: "#0d1b2e", margin: "0 0 16px", fontFamily: "'Chakra Petch', sans-serif", textTransform: "uppercase", lineHeight: 1.1 }}>
                 Engineered for Hydrogen &amp; FCEV Transit Fleets
               </h2>
               <p style={{ color: "#4b5563", fontSize: "0.95rem", lineHeight: 1.75, margin: "0 0 20px" }}>
@@ -216,12 +216,12 @@ export default function HydrogenBusPage() {
                 ))}
               </div>
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-                <Link href="/contact/request-a-quote">
+                <Link data-animation="slideLeft" href="/contact/request-a-quote">
                   <span className="btn-glow" style={{ background: BLUE, color: "#fff" }}>
                     REQUEST SPECIFICATIONS <ArrowRight size={14} />
                   </span>
                 </Link>
-                <Link href="/industries/truck-bus-fleet">
+                <Link data-animation="slideRight" href="/industries/truck-bus-fleet">
                   <span className="btn-outline">TRUCK, BUS &amp; FLEET HUB</span>
                 </Link>
               </div>
@@ -254,16 +254,16 @@ export default function HydrogenBusPage() {
         <div className="container">
           <div style={{ textAlign: "center", maxWidth: 700, margin: "0 auto 40px" }}>
             <p style={{ color: BLUE, fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 8 }}>SYSTEM GALLERY</p>
-            <h2 style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: 900, color: "#0d1b2e", margin: "0 0 12px", fontFamily: "'Chakra Petch', sans-serif", textTransform: "uppercase" }}>
+            <h2 data-animation="slideLeft" style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: 900, color: "#0d1b2e", margin: "0 0 12px", fontFamily: "'Chakra Petch', sans-serif", textTransform: "uppercase" }}>
               Hydrogen Fleet Bays &amp; Finishing Enclosures
             </h2>
-            <p style={{ color: "#4b5563", fontSize: "0.95rem" }}>
+            <p data-animation="slideLeft" style={{ color: "#4b5563", fontSize: "0.95rem" }}>
               Real installation photography and heavy commercial finishing systems built by PFS. Click any image to inspect in full resolution.
             </p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 20 }}>
+          <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 20 }}>
             {GALLERY_IMGS.map((img, i) => (
-              <div key={i} onClick={() => openLightbox(i)} style={{ background: "#fff", border: "1px solid #e5e7eb", borderRadius: 3, overflow: "hidden", cursor: "pointer", transition: "transform 0.2s, box-shadow 0.2s" }}
+              <div className="card-image" key={i} onClick={() => openLightbox(i)} style={{ background: "#fff", border: "1px solid #e5e7eb", borderRadius: 3, overflow: "hidden", cursor: "pointer", transition: "transform 0.2s, box-shadow 0.2s" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-3px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 10px 25px rgba(0,0,0,0.12)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "none"; (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; }}>
                 <img src={img.src} alt={img.alt} style={{ width: "100%", height: 220, objectFit: "cover", objectPosition: img.pos }} />
@@ -284,13 +284,13 @@ export default function HydrogenBusPage() {
         <div className="container" style={{ maxWidth: 1000 }}>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
             <p style={{ color: BLUE, fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 8 }}>ENGINEERING ADVANTAGE</p>
-            <h2 style={{ fontSize: "clamp(1.8rem, 3.8vw, 2.6rem)", fontWeight: 900, color: "#0d1b2e", margin: "0 0 12px", fontFamily: "'Chakra Petch', sans-serif", textTransform: "uppercase" }}>
+            <h2 data-animation="slideLeft" style={{ fontSize: "clamp(1.8rem, 3.8vw, 2.6rem)", fontWeight: 900, color: "#0d1b2e", margin: "0 0 12px", fontFamily: "'Chakra Petch', sans-serif", textTransform: "uppercase" }}>
               Hydrogen Bus Bay Specifications &amp; Features
             </h2>
-            <p style={{ color: "#4b5563", fontSize: "0.95rem", maxWidth: 640, margin: "0 auto" }}>
+            <p data-animation="slideLeft" style={{ color: "#4b5563", fontSize: "0.95rem", maxWidth: 640, margin: "0 auto" }}>
               Explore the core engineering and compliance specifications built into every PFS hydrogen and alternative-fuel fleet bay.
             </p>
-            <button
+            <button data-animation="slideRight"
               onClick={() => setFeaturesOpen(!featuresOpen)}
               style={{ marginTop: 20, background: BLUE, color: "#fff", border: "none", padding: "10px 24px", fontSize: "0.8rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", cursor: "pointer", display: "inline-flex", alignItems: "center", gap: 8 }}
             >
@@ -324,24 +324,24 @@ export default function HydrogenBusPage() {
         <div className="container">
           <div style={{ textAlign: "center", maxWidth: 700, margin: "0 auto 40px" }}>
             <p style={{ color: BLUE, fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 8 }}>COMPLETE ECOSYSTEM</p>
-            <h2 style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: 900, color: "#0d1b2e", margin: "0 0 12px", fontFamily: "'Chakra Petch', sans-serif", textTransform: "uppercase" }}>
+            <h2 data-animation="slideLeft" style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: 900, color: "#0d1b2e", margin: "0 0 12px", fontFamily: "'Chakra Petch', sans-serif", textTransform: "uppercase" }}>
               Related Finishing Equipment
             </h2>
-            <p style={{ color: "#4b5563", fontSize: "0.95rem" }}>
+            <p data-animation="slideLeft" style={{ color: "#4b5563", fontSize: "0.95rem" }}>
               Pair your hydrogen bus finishing bay with complementary PFS equipment for a complete, regulation-compliant facility.
             </p>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 24 }}>
             {PRODUCTS.map((prod) => (
               <Link key={prod.label} href={prod.href} style={{ textDecoration: "none" }}>
-                <div style={{ background: "#fff", border: "1px solid #e2e8f0", borderRadius: 3, overflow: "hidden", height: "100%", display: "flex", flexDirection: "column", transition: "transform 0.2s, box-shadow 0.2s" }}
+                <div className="card-image" style={{ background: "#fff", border: "1px solid #e2e8f0", borderRadius: 3,height: "100%", display: "flex", flexDirection: "column"}}
                   onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-3px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 10px 25px rgba(0,0,0,0.1)"; }}
                   onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "none"; (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; }}>
                   <img src={prod.img} alt={prod.label} style={{ width: "100%", height: 180, objectFit: "cover" }} />
                   <div style={{ padding: "20px", display: "flex", flexDirection: "column", flex: 1, justifyContent: "space-between" }}>
                     <div>
-                      <h3 style={{ fontSize: "0.95rem", fontWeight: 800, color: "#0d1b2e", margin: "0 0 8px", fontFamily: "'Chakra Petch', sans-serif", textTransform: "uppercase" }}>{prod.label}</h3>
-                      <p style={{ color: "#6b7280", fontSize: "0.83rem", lineHeight: 1.6, margin: 0 }}>{prod.desc}</p>
+                      <h3 data-animation="slideLeft" style={{ fontSize: "0.95rem", fontWeight: 800, color: "#0d1b2e", margin: "0 0 8px", fontFamily: "'Chakra Petch', sans-serif", textTransform: "uppercase" }}>{prod.label}</h3>
+                      <p data-animation="slideRight" style={{ color: "#6b7280", fontSize: "0.83rem", lineHeight: 1.6, margin: 0 }}>{prod.desc}</p>
                     </div>
                     <div style={{ marginTop: 16, display: "flex", alignItems: "center", gap: 6, color: BLUE, fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase" }}>
                       View Product <ArrowRight size={13} />
@@ -357,15 +357,15 @@ export default function HydrogenBusPage() {
       {/* ── TRUCK, BUS & FLEET RETURN PATH BANNER ── */}
       <section style={{ background: "#0d1b2e", padding: "3.5rem 0", color: "#fff", textAlign: "center", borderTop: "1px solid rgba(255,255,255,0.1)" }}>
         <div className="container" style={{ maxWidth: 700 }}>
-          <p style={{ color: "#60a5fa", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 8 }}>FLEET FINISHING ECOSYSTEM</p>
-          <h3 style={{ fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 900, marginBottom: 16, fontFamily: "'Chakra Petch', sans-serif", textTransform: "uppercase" }}>
+          <p data-animation="slideLeft" style={{ color: "#60a5fa", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 8 }}>FLEET FINISHING ECOSYSTEM</p>
+          <h3 data-animation="slideLeft" style={{ fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 900, marginBottom: 16, fontFamily: "'Chakra Petch', sans-serif", textTransform: "uppercase" }}>
             Part of the Truck, Bus &amp; Fleet Finishing Lineup
           </h3>
-          <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.95rem", lineHeight: 1.7, marginBottom: 28 }}>
+          <p data-animation="slideLeft" style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.95rem", lineHeight: 1.7, marginBottom: 28 }}>
             Explore our complete range of commercial vehicle finishing systems, drive-through configurations, and heavy-duty booth solutions.
           </p>
           <Link href="/industries/truck-bus-fleet">
-            <span className="btn-glow" style={{ background: BLUE, color: "#fff", display: "inline-flex", alignItems: "center", gap: 8 }}>
+            <span data-animation="slideRight" className="btn-glow" style={{ background: BLUE, color: "#fff", display: "inline-flex", alignItems: "center", gap: 8 }}>
               EXPLORE TRUCK, BUS &amp; FLEET <ArrowRight size={15} />
             </span>
           </Link>

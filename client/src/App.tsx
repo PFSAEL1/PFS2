@@ -155,6 +155,7 @@ function Router() {
       {/* Products */}
       <Route path="/industrial-paint-booths" component={IndustrialLandingPage} />
       <Route path="/products" component={ProductsHub} />
+      <Route path="/products/custom-solutions/hydrogen-bus-finishing-system" component={HydrogenBusPage} />
       <Route path="/products/paint-booths" component={PaintBoothsHub} />
       <Route path="/products/paint-booths/enclosed" component={EnclosedBoothsPage} />
       <Route path="/products/paint-booths/sprinter-van" component={SprinterVanBoothPage} />

@@ -193,17 +193,17 @@ export default function HeatedBoothPage() {
               <Thermometer size={12} style={{ color: "#6b9bd2" }} />
               <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.65rem", fontWeight: 800, letterSpacing: "0.18em", color: "#6b9bd2", textTransform: "uppercase" }}>MAX BAKE TEMP 180°F</span>
             </div>
-            <h1 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2.4rem, 6vw, 4rem)", fontWeight: 900, color: "#fff", letterSpacing: "-0.02em", lineHeight: 1.0, marginBottom: "1.1rem", textTransform: "uppercase" }}>
+            <h1 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2.4rem, 6vw, 4rem)", fontWeight: 900, color: "#fff", letterSpacing: "-0.02em", lineHeight: 1.0, marginBottom: "1.1rem", textTransform: "uppercase" }}>
               Heated<br />Paint Booths
             </h1>
-            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "clamp(0.88rem, 1.5vw, 1rem)", color: "rgba(255,255,255,0.72)", lineHeight: 1.75, marginBottom: "2rem", maxWidth: "460px" }}>
+            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "clamp(0.88rem, 1.5vw, 1rem)", color: "rgba(255,255,255,0.72)", lineHeight: 1.75, marginBottom: "2rem", maxWidth: "460px" }}>
               Available on the PFS Orion, Helios, and Zenith — any booth, any airflow configuration. Spray, flash, and bake modes with programmable cure cycles up to 180°F.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
-              <Link href="/contact/request-a-quote?from=heated-booth">
+              <Link data-animation="slideLeft" href="/contact/request-a-quote?from=heated-booth">
                 <span className="btn-glow">GET PRICING <ArrowRight size={14} /></span>
               </Link>
-              <a href="tel:8885457715" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", color: "rgba(255,255,255,0.85)", border: "1.5px solid rgba(255,255,255,0.35)", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.88rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "1rem 2rem" }}>
+              <a data-animation="slideRight" href="tel:8885457715" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", color: "rgba(255,255,255,0.85)", border: "1.5px solid rgba(255,255,255,0.35)", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.88rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "1rem 2rem" }}>
                 CALL (888) 545-7715
               </a>
             </div>
@@ -220,9 +220,9 @@ export default function HeatedBoothPage() {
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "1.5rem" }}>
             <div style={{ textAlign: "center" }}>
               <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.6rem" }}>PFS HEATED SERIES</span>
-              <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", marginBottom: "0.5rem" }}>Spray. Flash. Bake. All in One Booth.</h2>
+              <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", marginBottom: "0.5rem" }}>Spray. Flash. Bake. All in One Booth.</h2>
               <span style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", background: BLUE, color: "#fff", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.68rem", fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", padding: "0.28rem 0.85rem", marginBottom: "0.75rem" }}>PFS ZENITH — FULL DOWNDRAFT</span>
-              <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#555", maxWidth: "520px", margin: "0 auto", lineHeight: 1.7 }}>
+              <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#555", maxWidth: "520px", margin: "0 auto", lineHeight: 1.7 }}>
                 PFS heated booths add a direct-fired or indirect-fired heat system to any enclosed booth configuration. ETL listed, NFPA 33 compliant, UL 508A controls. Spray, flash, and bake modes built in — programmable cure cycles up to 180°F.
               </p>
             </div>
@@ -242,7 +242,7 @@ export default function HeatedBoothPage() {
                 </div>
               ))}
             </div>
-            <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
+            <div data-animation="slideRight" style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
               <Link href="/contact/request-a-quote?from=heated-booth">
                 <span className="btn-glow">REQUEST A QUOTE <ArrowRight size={15} /></span>
               </Link>
@@ -257,9 +257,9 @@ export default function HeatedBoothPage() {
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem", marginBottom: specsOpen ? "2rem" : 0 }}>
             <div>
               <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.3rem" }}>STANDARD FEATURES</span>
-              <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.3rem, 2.5vw, 1.9rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Every Heated Booth Ships Fully Certified</h2>
+              <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.3rem, 2.5vw, 1.9rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Every Heated Booth Ships Fully Certified</h2>
             </div>
-            <button onClick={() => setSpecsOpen(!specsOpen)} style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: specsOpen ? BLUE : "transparent", border: `2px solid ${BLUE}`, color: specsOpen ? "#fff" : BLUE, fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.82rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.75rem 1.5rem", cursor: "pointer", transition: "background 0.15s,color 0.15s", whiteSpace: "nowrap" }}>
+            <button data-animation="slideRight" onClick={() => setSpecsOpen(!specsOpen)} style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: specsOpen ? BLUE : "transparent", border: `2px solid ${BLUE}`, color: specsOpen ? "#fff" : BLUE, fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.82rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.75rem 1.5rem", cursor: "pointer", transition: "background 0.15s,color 0.15s", whiteSpace: "nowrap" }}>
               {specsOpen ? <><ChevronUp size={15} /> HIDE SPECS</> : <><ChevronDown size={15} /> SEE STANDARD SPECS</>}
             </button>
           </div>
@@ -303,9 +303,9 @@ export default function HeatedBoothPage() {
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem", marginBottom: sizesOpen ? "2rem" : 0 }}>
             <div>
               <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.3rem" }}>STANDARD SIZES</span>
-              <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.3rem, 2.5vw, 1.9rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Available on All Three PFS Series</h2>
+              <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.3rem, 2.5vw, 1.9rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Available on All Three PFS Series</h2>
             </div>
-            <button onClick={() => setSizesOpen(!sizesOpen)} style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: sizesOpen ? BLUE : "transparent", border: `2px solid ${BLUE}`, color: sizesOpen ? "#fff" : BLUE, fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.82rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.75rem 1.5rem", cursor: "pointer", transition: "background 0.15s,color 0.15s", whiteSpace: "nowrap" }}>
+            <button data-animation="slideRight" onClick={() => setSizesOpen(!sizesOpen)} style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: sizesOpen ? BLUE : "transparent", border: `2px solid ${BLUE}`, color: sizesOpen ? "#fff" : BLUE, fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.82rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.75rem 1.5rem", cursor: "pointer", transition: "background 0.15s,color 0.15s", whiteSpace: "nowrap" }}>
               {sizesOpen ? <><ChevronUp size={15} /> HIDE SIZES</> : <><ChevronDown size={15} /> SEE STANDARD SIZES</>}
             </button>
           </div>
@@ -335,7 +335,7 @@ export default function HeatedBoothPage() {
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "2rem" }}>
             <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.18em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.3rem" }}>REAL INSTALLS</span>
-            <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em" }}>Heated Booth Gallery</h2>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em" }}>Heated Booth Gallery</h2>
           </div>
           <GalleryGrid images={GALLERY} cardHeight="280px" className="grid grid-cols-1 sm:grid-cols-2 gap-3" />
         </div>
@@ -346,14 +346,14 @@ export default function HeatedBoothPage() {
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
             <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.5rem" }}>AVAILABLE ON</span>
-            <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", marginBottom: "0.5rem" }}>Any PFS Enclosed Booth</h2>
-            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.88rem", color: "#666", maxWidth: "460px", margin: "0 auto", lineHeight: 1.7 }}>Same heat system, same controls, same certifications — regardless of airflow configuration.</p>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", marginBottom: "0.5rem" }}>Any PFS Enclosed Booth</h2>
+            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.88rem", color: "#666", maxWidth: "460px", margin: "0 auto", lineHeight: 1.7 }}>Same heat system, same controls, same certifications — regardless of airflow configuration.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div data-animation="fadeIn" className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {MODELS.map((m) => (
               <Link key={m.name} href={m.href}>
                 <div style={{ display: "flex", flexDirection: "column", border: "2px solid #d0d8e8", overflow: "hidden", cursor: "pointer", background: "#fff" }} className="group hover:border-blue-800 transition-colors">
-                  <div style={{ width: "100%", aspectRatio: "4/3", overflow: "hidden", background: "#f5f5f5", position: "relative" }}>
+                  <div className="card-image" style={{ width: "100%", aspectRatio: "4/3", overflow: "hidden", background: "#f5f5f5", position: "relative" }}>
                     <img src={m.img} alt={m.name} style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.3s" }} className="group-hover:scale-105" />
                     <div style={{ position: "absolute", top: "0.75rem", left: "0.75rem", background: BLUE, color: "#fff", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.65rem", fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", padding: "0.25rem 0.6rem" }}>{m.series}</div>
                   </div>
@@ -373,14 +373,14 @@ export default function HeatedBoothPage() {
       <section style={{ background: BLUE, padding: "3.5rem 0" }}>
         <div className="container" style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "2rem" }}>
           <div>
-            <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800, color: "#fff", letterSpacing: "-0.01em", margin: "0 0 0.5rem" }}>Ready to Configure Your Heated Booth?</h2>
-            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.9rem", color: "rgba(255,255,255,0.75)", margin: 0 }}>Factory-direct pricing. Fast lead times. Dedicated support from order through installation.</p>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800, color: "#fff", letterSpacing: "-0.01em", margin: "0 0 0.5rem" }}>Ready to Configure Your Heated Booth?</h2>
+            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.9rem", color: "rgba(255,255,255,0.75)", margin: 0 }}>Factory-direct pricing. Fast lead times. Dedicated support from order through installation.</p>
           </div>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <Link href="/contact/request-a-quote?from=heated-booth">
+            <Link data-animation="slideLeft" href="/contact/request-a-quote?from=heated-booth">
               <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#fff", color: BLUE, fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.88rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", padding: "1rem 2rem", cursor: "pointer" }}>GET PRICING <ArrowRight size={14} /></span>
             </Link>
-            <a href="tel:8885457715" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.6)", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.88rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "1rem 2rem" }}>
+            <a data-animation="slideRight" href="tel:8885457715" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.6)", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.88rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "1rem 2rem" }}>
               CALL (888) 545-7715
             </a>
           </div>
@@ -393,7 +393,7 @@ export default function HeatedBoothPage() {
         <div className="container" style={{ maxWidth:"860px" }}>
           <div style={{ textAlign:"center", marginBottom:"2.5rem" }}>
             <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:"#1B3A6B",textTransform:"uppercase",display:"block",marginBottom:"0.4rem" }}>FREQUENTLY ASKED QUESTIONS</span>
-            <h2 style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.4rem,3.5vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Heated Spray Booths — Common Questions</h2>
+            <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.4rem,3.5vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Heated Spray Booths — Common Questions</h2>
           </div>
           {[
             { q: "What is a heated spray booth?", a: "A heated spray booth is an enclosed finishing booth equipped with a direct-fired or indirect-fired burner system that heats the incoming make-up air to a controlled temperature. Heated booths accelerate paint curing, improve finish quality in cold weather, and enable faster cycle times compared to unheated booths. They are standard equipment in high-volume automotive refinishing, aerospace, and industrial finishing operations." },
@@ -429,7 +429,7 @@ export default function HeatedBoothPage() {
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
             <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.5rem" }}>PAIRS WELL WITH</span>
-            <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em" }}>Complete Your Finishing System</h2>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em" }}>Complete Your Finishing System</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
@@ -439,12 +439,12 @@ export default function HeatedBoothPage() {
             ].map((item) => (
               <Link key={item.label} href={item.href}>
                 <div style={{ display: "flex", flexDirection: "column", border: "2px solid #d0d8e8", overflow: "hidden", cursor: "pointer", background: "#fff" }} className="group hover:border-blue-800 transition-colors">
-                  <div style={{ width: "100%", aspectRatio: "4/3", overflow: "hidden", background: "#f5f5f5" }}>
+                  <div className="card-image" style={{ width: "100%", aspectRatio: "4/3", overflow: "hidden", background: "#f5f5f5" }}>
                     <img src={item.img} alt={item.label} style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.3s" }} className="group-hover:scale-105" />
                   </div>
                   <div style={{ padding: "1rem 1.1rem 1.2rem" }}>
-                    <div style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.88rem", fontWeight: 800, color: "#111", letterSpacing: "0.04em", textTransform: "uppercase", marginBottom: "0.35rem" }}>{item.label}</div>
-                    <div style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.78rem", color: "#555", lineHeight: 1.5, marginBottom: "0.75rem" }}>{item.desc}</div>
+                    <div data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.88rem", fontWeight: 800, color: "#111", letterSpacing: "0.04em", textTransform: "uppercase", marginBottom: "0.35rem" }}>{item.label}</div>
+                    <div data-animation="slideRight"  style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.78rem", color: "#555", lineHeight: 1.5, marginBottom: "0.75rem" }}>{item.desc}</div>
                     <div style={{ display: "inline-flex", alignItems: "center", gap: "0.3rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.78rem", fontWeight: 700, color: BLUE, letterSpacing: "0.08em", textTransform: "uppercase" }}>LEARN MORE <ArrowRight size={12} /></div>
                   </div>
                 </div>

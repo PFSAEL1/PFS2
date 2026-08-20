@@ -68,7 +68,7 @@ export default function IntegrationHub() {
             {SOLUTIONS.map((sol) => (
               <Link key={sol.slug} href={`/integration-automation/${sol.slug}`}>
                 <div className="product-card group">
-                  <div className="overflow-hidden" style={{ height: "220px" }}>
+                  <div className="overflow-hidden card-image" style={{ height: "220px" }}>
                     <img src={sol.img} alt={sol.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
                   <div className="p-5">

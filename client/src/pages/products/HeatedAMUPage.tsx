@@ -275,17 +275,17 @@ export default function HeatedAMUPage() {
             <div style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.18em", color: "rgba(255,255,255,0.55)", textTransform: "uppercase", marginBottom: "0.8rem" }}>
               PFS APOLLO AMU SERIES
             </div>
-            <h1 style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(2.4rem,5vw,4rem)", fontWeight: 800, color: "#ffffff", lineHeight: 1.05, marginBottom: "1.2rem", letterSpacing: "-0.01em" }}>
+            <h1 data-animation="slideLeft"  style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(2.4rem,5vw,4rem)", fontWeight: 800, color: "#ffffff", lineHeight: 1.05, marginBottom: "1.2rem", letterSpacing: "-0.01em" }}>
               Heated Air<br />Make-Up Units
             </h1>
-            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "1.05rem", color: "rgba(255,255,255,0.78)", lineHeight: 1.7, marginBottom: "2rem", maxWidth: "560px" }}>
+            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "1.05rem", color: "rgba(255,255,255,0.78)", lineHeight: 1.7, marginBottom: "2rem", maxWidth: "560px" }}>
               Direct-fired gas furnaces with 98% thermal efficiency. 750K–3M BTU. Natural gas, propane, or electric. Five installation configurations — horizontal, vertical, booth-mounted, roof-mounted, and outdoor.
             </p>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-              <Link href="/contact/request-a-quote?from=heated-amu">
+              <Link data-animation="slideLeft" href="/contact/request-a-quote?from=heated-amu">
                 <span className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
               </Link>
-              <a href="tel:+18885457715">
+              <a data-animation="slideRight" href="tel:+18885457715">
                 <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.82rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#ffffff", border: "1.5px solid rgba(255,255,255,0.45)", padding: "0.9rem 1.8rem", cursor: "pointer" }}>
                   <Phone size={14} /> (888) 545-7715
                 </span>
@@ -320,8 +320,8 @@ export default function HeatedAMUPage() {
         <div className="container">
           <div style={{ marginBottom: "2.5rem" }}>
             <span style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.6rem" }}>FIVE CONFIGURATIONS</span>
-            <h2 style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 800, color: "#111", lineHeight: 1.1 }}>Choose Your Installation Type</h2>
-            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#555", lineHeight: 1.7, maxWidth: "560px", marginTop: "0.75rem" }}>
+            <h2 data-animation="slideLeft"  style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 800, color: "#111", lineHeight: 1.1 }}>Choose Your Installation Type</h2>
+            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#555", lineHeight: 1.7, maxWidth: "560px", marginTop: "0.75rem" }}>
               Every facility is different. PFS Apollo AMUs ship in five configurations to fit your footprint, ductwork layout, and installation requirements.
             </p>
           </div>
@@ -384,7 +384,7 @@ export default function HeatedAMUPage() {
         <div className="container">
           <div style={{ marginBottom: "2.5rem" }}>
             <span style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.6rem" }}>STANDARD FEATURES</span>
-            <h2 style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 800, color: "#111", lineHeight: 1.1 }}>Built for Production. Engineered to Last.</h2>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 800, color: "#111", lineHeight: 1.1 }}>Built for Production. Engineered to Last.</h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1.5rem" }}>
             {[...FEATURES_VISIBLE, ...(featuresOpen ? FEATURES_HIDDEN : [])].map(f => (
@@ -395,7 +395,7 @@ export default function HeatedAMUPage() {
               </div>
             ))}
           </div>
-          <button
+          <button data-animation="slideRight"
             onClick={() => setFeaturesOpen(!featuresOpen)}
             style={{ marginTop: "2rem", display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: BLUE, background: "transparent", border: `1.5px solid ${BLUE}`, padding: "0.6rem 1.4rem", cursor: "pointer" }}
           >
@@ -409,7 +409,7 @@ export default function HeatedAMUPage() {
         <div className="container">
           <div style={{ marginBottom: "2.5rem" }}>
             <span style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.6rem" }}>HEAT SOURCES</span>
-            <h2 style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 800, color: "#111", lineHeight: 1.1 }}>Natural Gas, Propane, or Electric</h2>
+            <h2 data-animation="slideLeft"style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 800, color: "#111", lineHeight: 1.1 }}>Natural Gas, Propane, or Electric</h2>
           </div>
 
           {/* Fuel selector buttons */}
@@ -452,12 +452,12 @@ export default function HeatedAMUPage() {
         <div className="container">
           <div style={{ marginBottom: "2.5rem" }}>
             <span style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: "rgba(255,255,255,0.5)", textTransform: "uppercase", display: "block", marginBottom: "0.6rem" }}>CONTROL PANELS</span>
-            <h2 style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 800, color: "#ffffff", lineHeight: 1.1 }}>PFS Control Panel Options</h2>
-            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.65)", lineHeight: 1.7, maxWidth: "560px", marginTop: "0.75rem" }}>
+            <h2 data-animation="slideLeft"  style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 800, color: "#ffffff", lineHeight: 1.1 }}>PFS Control Panel Options</h2>
+            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.65)", lineHeight: 1.7, maxWidth: "560px", marginTop: "0.75rem" }}>
               Every Apollo AMU pairs with a PFS control panel. Choose the level of automation, VFD count, and HMI capability that matches your production requirements. Industrial PLC communication protocols (EtherNet/IP, Modbus, DeviceNet) available on request for CP4000 series.
             </p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.5rem" }}>
+          <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.5rem" }}>
             {PANELS.map(p => (
               <div key={p.model} style={{ background: "#1a1a1a", border: "1px solid rgba(255,255,255,0.08)", padding: "2rem", position: "relative" }}>
                 <div style={{ position: "absolute", top: "1.25rem", right: "1.25rem", background: p.badgeColor, fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#fff", padding: "0.2rem 0.6rem" }}>{p.badge}</div>
@@ -479,19 +479,19 @@ export default function HeatedAMUPage() {
       <section style={{ padding: "4rem 0", background: BLUE }}>
         <div className="container">
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "1.5rem" }}>
-            <h2 style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.4rem,3vw,2rem)", fontWeight: 800, color: "#ffffff", lineHeight: 1.1 }}>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.4rem,3vw,2rem)", fontWeight: 800, color: "#ffffff", lineHeight: 1.1 }}>
               Need Help Sizing Your AMU?
             </h2>
-            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.8)", lineHeight: 1.7, maxWidth: "500px" }}>
+            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.8)", lineHeight: 1.7, maxWidth: "500px" }}>
               Our engineers will size the right unit for your booth CFM, climate zone, heat source, and control panel — at no charge.
             </p>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
-              <Link href="/contact/request-a-quote?from=heated-amu">
+              <Link data-animation="slideLeft" href="/contact/request-a-quote?from=heated-amu">
                 <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#fff", color: BLUE, fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.82rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.9rem 2rem", cursor: "pointer" }}>
                   GET PRICING <ArrowRight size={15} />
                 </span>
               </Link>
-              <a href="tel:+18885457715">
+              <a data-animation="slideRight" href="tel:+18885457715">
                 <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.82rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#ffffff", border: "1.5px solid rgba(255,255,255,0.5)", padding: "0.9rem 1.8rem", cursor: "pointer" }}>
                   <Phone size={14} /> (888) 545-7715
                 </span>
@@ -506,7 +506,7 @@ export default function HeatedAMUPage() {
         <div className="container">
           <div style={{ marginBottom: "2.5rem" }}>
             <span style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.6rem" }}>REAL INSTALLS</span>
-            <h2 style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 800, color: "#111", lineHeight: 1.1 }}>Apollo AMU in the Field</h2>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 800, color: "#111", lineHeight: 1.1 }}>Apollo AMU in the Field</h2>
           </div>
           <GalleryGrid
             images={[
@@ -529,9 +529,9 @@ export default function HeatedAMUPage() {
         <div className="container">
           <div style={{ marginBottom: "2rem" }}>
             <span style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.6rem" }}>PAIRS WITH</span>
-            <h2 style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.4rem,2.5vw,2rem)", fontWeight: 800, color: "#111", lineHeight: 1.1 }}>Complete Your Finishing System</h2>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.4rem,2.5vw,2rem)", fontWeight: 800, color: "#111", lineHeight: 1.1 }}>Complete Your Finishing System</h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.5rem" }}>
+          <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.5rem" }}>
             {[
               { label: "Enclosed Paint Booths", href: "/products/paint-booths/enclosed", img: "/assets/enclosed-booth-card-zenith_7e010642.jpg", desc: "The booth your AMU serves." },
               { label: "Batch Ovens", href: "/products/ovens/batch", img: "/assets/pfs-vulcan-oven-card_ad72eade_316de7d1.png", desc: "Pair with a heated AMU for spray-bake cycles." },
@@ -560,7 +560,7 @@ export default function HeatedAMUPage() {
         <div className="container" style={{ maxWidth:"860px" }}>
           <div style={{ textAlign:"center", marginBottom:"2.5rem" }}>
             <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:"#1B3A6B",textTransform:"uppercase",display:"block",marginBottom:"0.4rem" }}>FREQUENTLY ASKED QUESTIONS</span>
-            <h2 style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.4rem,3.5vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Heated Air Make-Up Units — Common Questions</h2>
+            <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.4rem,3.5vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Heated Air Make-Up Units — Common Questions</h2>
           </div>
           {[
             { q: "What is a heated air make-up unit (AMU)?", a: "A heated air make-up unit (AMU) is a rooftop or wall-mounted air handler that supplies tempered replacement air to a spray booth to compensate for the air exhausted by the booth's ventilation system. Without a make-up air unit, a spray booth creates negative pressure in the building — causing cold drafts, contamination, and code violations. A heated AMU maintains positive booth pressure, controls booth temperature, and ensures consistent airflow velocity for optimal finish quality." },
@@ -594,14 +594,14 @@ export default function HeatedAMUPage() {
       {/* ── BOTTOM CTA ── */}
       <section style={{ padding: "5rem 0", background: "#0a0a0a" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <h2 style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.8rem,4vw,3rem)", fontWeight: 800, color: "#ffffff", lineHeight: 1.05, marginBottom: "1.2rem" }}>
+          <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.8rem,4vw,3rem)", fontWeight: 800, color: "#ffffff", lineHeight: 1.05, marginBottom: "1.2rem" }}>
             Ready to Heat Your Booth?
           </h2>
-          <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.65)", lineHeight: 1.7, maxWidth: "480px", margin: "0 auto 2rem" }}>
+          <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.65)", lineHeight: 1.7, maxWidth: "480px", margin: "0 auto 2rem" }}>
             Get a quote for your Apollo AMU — sized to your booth CFM, climate, and heat source.
           </p>
           <Link href="/contact/request-a-quote?from=heated-amu">
-            <span className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
+            <span data-animation="slideRight"  className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
           </Link>
         </div>
       </section>

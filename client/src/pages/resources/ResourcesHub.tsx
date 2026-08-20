@@ -234,7 +234,7 @@ export default function ResourcesHub() {
                   }}
                 >
                   {/* Image area — no overlay */}
-                  <div style={{
+                  <div className="card-image" style={{
                     height: "220px",
                     backgroundImage: `url(${item.img})`,
                     backgroundSize: item.imgSize,

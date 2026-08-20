@@ -31,7 +31,7 @@ const IMG_PARTS = "/assets/pfs-filters-card_8b47eabc.png";              // Real 
 const PRODUCT_FAMILIES = [
   { label: "Paint Booths", href: "/products/paint-booths", img: IMG_PAINT_BOOTH, desc: "Cross-flow, semi-downdraft, and full downdraft configurations for any application." },
   { label: "Powder Coating Systems", href: "/products/powder-booths", img: IMG_POWDER, desc: "Spray to waste, powder reclaim, and automated powder coating systems." },
-  { label: "Industrial Ovens", href: "/products/ovens", img: IMG_OVEN, desc: "Batch, conveyor, walk-in, and large-equipment curing ovens built to spec.", objectFit: "contain" as const, imgBg: "#1a1a1a" },
+  { label: "Industrial Ovens", href: "/products/ovens", img: IMG_OVEN, desc: "Batch, conveyor, walk-in, and large-equipment curing ovens built to spec."},
   { label: "Blasting Systems", href: "/products/blast-systems", img: IMG_BLAST, desc: "Blasting booths, reclaim blasting booths, and containerized blast booths." },
   { label: "Prep & Support", href: "/products/prep-support", img: IMG_PREP, desc: "Prep stations, paint mix rooms, sanding booths, and grinding booths." },
   { label: "Air Make-Up Units", href: "/products/air-make-up-units", img: IMG_AMU, desc: "Heated and non-heated AMUs to maintain proper airflow and temperature." },
@@ -303,8 +303,9 @@ export default function Home() {
                   }}
                 >
                   {/* Image — 16:9 on mobile (full width), 4:3 on desktop */}
-                  <div style={{ width: "100%", aspectRatio: "16/9", overflow: "hidden", position: "relative", flexShrink: 0, backgroundColor: (pf as any).imgBg || "transparent" }}
-                    className="sm:aspect-video lg:aspect-video"
+                  <div
+                    style={{ width: "100%", aspectRatio: "16/9", overflow: "hidden", position: "relative", flexShrink: 0, backgroundColor: (pf as any).imgBg || "transparent" }}
+                    className="sm:aspect-video lg:aspect-video card-image"
                   >
                     <img
                       src={pf.img}
@@ -375,9 +376,9 @@ export default function Home() {
               <div className="space-y-5">
                 {WHY_PFS.map((item, i) => (
                   <div key={item.title} className={`flex gap-4 ${i + 2}`}>
-                    <div style={{ flexShrink: 0, width: "44px", height: "44px", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    {/* <div style={{ flexShrink: 0, width: "44px", height: "44px", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                       {item.icon}
-                    </div>
+                    </div> */}
                     <div>
                       <h4 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1rem", fontWeight: 700, color: "white", letterSpacing: "0.04em", marginBottom: "0.3rem" }}>
                         {item.title}

@@ -156,7 +156,7 @@ export default function PaintBoothFiltersPage() {
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
               <span className="section-label">Replacement Filters</span>
-              <h2 className="section-heading-lg">The Right Filter for Every Booth</h2>
+              <h2 data-animation="slideLeft" className="section-heading-lg">The Right Filter for Every Booth</h2>
               <div className="red-divider" />
               <p className="section-body mb-5">
                 Using the correct filter media is critical to maintaining your booth's airflow performance, finish quality, and maintenance or permit documentation. The wrong filter — wrong efficiency rating, wrong dimensions, wrong media type — can contribute to pressure-drop issues, overspray blowback, and avoidable inspection questions.
@@ -165,12 +165,12 @@ export default function PaintBoothFiltersPage() {
                 PFS helps source intake filters, exhaust filters, ceiling diffusion blankets, pocket bag filters, fiberglass media rolls, and accordion-style paint arrestor media for PFS and non-PFS equipment. Call or submit a quote request and we will help match the filter to your booth.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Link href="/contact">
+                <Link data-animation="slideLeft" href="/contact">
                   <span className="btn-glow" style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
                     Get Filter Quote <ArrowRight size={14} />
                   </span>
                 </Link>
-                <a href="tel:+18885457715">
+                <a data-animation="slideRight" href="tel:+18885457715">
                   <span className="btn-outline" style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
                     <Phone size={14} /> (888) 545-7715
                   </span>
@@ -198,18 +198,18 @@ export default function PaintBoothFiltersPage() {
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "3rem" }}>
             <span className="section-label">Filter Types</span>
-            <h2 className="section-heading">Complete Filter Media Catalog</h2>
+            <h2 data-animation="slideLeft" className="section-heading">Complete Filter Media Catalog</h2>
             <div className="red-divider" style={{ margin: "0.75rem auto 0" }} />
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {FILTER_TYPES.map((ft) => (
-              <div key={ft.name} className="card-hover" style={{ background: "#fff", borderRadius: "2px", overflow: "hidden" }}>
-                <div style={{ background: "#f4f4f2", aspectRatio: "4/3", display: "flex", alignItems: "center", justifyContent: "center", padding: "1.5rem", overflow: "hidden" }}>
+              <div key={ft.name} className="card-hover" style={{ background: "#fff", borderRadius: "2px"}}>
+                <div className="card-image" style={{ background: "#f4f4f2", aspectRatio: "4/3", display: "flex", alignItems: "center", justifyContent: "center", padding: "1.5rem", overflow: "hidden" }}>
                   <img src={ft.img} alt={ft.name} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
                 </div>
                 <div style={{ padding: "1.25rem" }}>
-                  <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1C1C1E", letterSpacing: "0.02em", textTransform: "uppercase", marginBottom: "0.6rem" }}>{ft.name}</h3>
-                  <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.83rem", color: "#555", lineHeight: 1.65, marginBottom: "0.9rem" }}>{ft.desc}</p>
+                  <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1C1C1E", letterSpacing: "0.02em", textTransform: "uppercase", marginBottom: "0.6rem" }}>{ft.name}</h3>
+                  <p data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.83rem", color: "#555", lineHeight: 1.65, marginBottom: "0.9rem" }}>{ft.desc}</p>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: "0.35rem" }}>
                     {ft.tags.map((t) => (
                       <span key={t} style={{ background: "#EEF2FF", color: BLUE, fontSize: "0.68rem", fontWeight: 700, padding: "0.2rem 0.55rem", borderRadius: "2px", letterSpacing: "0.05em", textTransform: "uppercase" }}>{t}</span>
@@ -219,7 +219,7 @@ export default function PaintBoothFiltersPage() {
               </div>
             ))}
           </div>
-          <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
+          <div data-animation="slideRight" style={{ textAlign: "center", marginTop: "2.5rem" }}>
             <Link href="/contact">
               <span className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem" }}>
                 Order Filters Now <ArrowRight size={14} />
@@ -244,7 +244,7 @@ export default function PaintBoothFiltersPage() {
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
               <span className="section-label">Authorized Filter Support</span>
-              <h2 className="section-heading-lg">Accordion Exhaust Filters & Authorized Andreae Support</h2>
+              <h2 data-animation="slideLeft" className="section-heading-lg">Accordion Exhaust Filters & Authorized Andreae Support</h2>
               <div className="red-divider" />
               <p className="section-body mb-5">
                 PFS is an authorized Andreae filter distributor. We help finishing operations identify appropriate exhaust media for their booth configuration, production volume, and replacement schedule — including accordion-style paint arrestor media, pads, rolls, and related filter formats.
@@ -253,12 +253,12 @@ export default function PaintBoothFiltersPage() {
                 Send us your existing filter model, dimensions, booth make, or a photo of the filter rack. Our team will confirm the applicable product and quote the correct replacement media rather than asking you to guess at a generic size.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Link href="/contact">
+                <Link data-animation="slideLeft" href="/contact">
                   <span className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem" }}>
                     Request Andreae Filter Quote <ArrowRight size={14} />
                   </span>
                 </Link>
-                <a href="tel:+18885457715">
+                <a data-animation="slideRight" href="tel:+18885457715">
                   <span className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem" }}>
                     <Phone size={14} /> (888) 545-7715
                   </span>
@@ -286,7 +286,7 @@ export default function PaintBoothFiltersPage() {
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
             <span className="section-label">Filter Media Gallery</span>
-            <h2 className="section-heading">Our Filtration Product Line</h2>
+            <h2 data-animation="slideLeft" className="section-heading">Our Filtration Product Line</h2>
             <div className="red-divider" style={{ margin: "0.75rem auto 0" }} />
           </div>
           <GalleryGrid images={GALLERY_IMAGES} cardHeight="clamp(180px, 20vw, 280px)" />
@@ -298,9 +298,9 @@ export default function PaintBoothFiltersPage() {
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
             <span className="section-label" style={{ color: "rgba(255,255,255,0.5)" }}>Booth Compatibility</span>
-            <h2 className="section-heading-white">Filters for Every Major Booth Brand</h2>
+            <h2 data-animation="slideLeft" className="section-heading-white">Filters for Every Major Booth Brand</h2>
             <div className="red-divider" style={{ margin: "0.75rem auto 0" }} />
-            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.65)", maxWidth: "560px", margin: "1rem auto 0", lineHeight: 1.7 }}>
+            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.65)", maxWidth: "560px", margin: "1rem auto 0", lineHeight: 1.7 }}>
               PFS supplies replacement filters for all major spray booth brands. If your booth uses a standard filter size, we can supply it.
             </p>
           </div>
@@ -309,7 +309,7 @@ export default function PaintBoothFiltersPage() {
               <span key={brand} style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", color: "rgba(255,255,255,0.8)", fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.82rem", fontWeight: 600, padding: "0.4rem 0.9rem", borderRadius: "2px" }}>{brand}</span>
             ))}
           </div>
-          <div style={{ textAlign: "center" }}>
+          <div data-animation="slideRight" style={{ textAlign: "center" }}>
             <Link href="/contact">
               <span className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem" }}>
                 Find Filters for My Booth <ArrowRight size={14} />
@@ -322,19 +322,19 @@ export default function PaintBoothFiltersPage() {
       {/* MID-PAGE CTA BAND */}
       <section style={{ background: BLUE, padding: "3.5rem 0" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 800, color: "#fff", letterSpacing: "-0.01em", marginBottom: "0.75rem" }}>
+          <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 800, color: "#fff", letterSpacing: "-0.01em", marginBottom: "0.75rem" }}>
             Not Sure Which Filter You Need?
           </h2>
-          <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.8)", maxWidth: "560px", margin: "0 auto 2rem", lineHeight: 1.7 }}>
+          <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.8)", maxWidth: "560px", margin: "0 auto 2rem", lineHeight: 1.7 }}>
             Call our parts team with your booth brand, model, and configuration. We will identify the correct filter dimensions, media type, and efficiency rating — and get you a same-day quote.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/contact">
+            <Link  data-animation="slideLeft" href="/contact">
               <span className="btn-glow-white" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem" }}>
                 Get Filter Quote <ArrowRight size={14} />
               </span>
             </Link>
-            <a href="tel:+18885457715">
+            <a data-animation="slideRight" href="tel:+18885457715">
               <span className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", borderColor: "rgba(255,255,255,0.5)", color: "#fff" }}>
                 <Phone size={14} /> (888) 545-7715
               </span>
@@ -349,9 +349,9 @@ export default function PaintBoothFiltersPage() {
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
               <span className="section-label">Why PFS</span>
-              <h2 className="section-heading-lg">The Industrial Finishing Specialist</h2>
+              <h2 data-animation="slideLeft" className="section-heading-lg">The Industrial Finishing Specialist</h2>
               <div className="red-divider" />
-              <p className="section-body mb-5">
+              <p data-animation="slideLeft" className="section-body mb-5">
                 PFS was founded in 2012 in Santa Rosa, CA, bringing over 20 years of combined industrial finishing experience to every project. We supply filtration media for our own equipment and for every major booth brand — because the right filter matters regardless of who built your booth.
               </p>
               <ul style={{ listStyle: "none", padding: 0, margin: "0 0 2rem" }}>
@@ -369,12 +369,12 @@ export default function PaintBoothFiltersPage() {
                 ))}
               </ul>
               <div className="flex flex-wrap gap-3">
-                <Link href="/contact">
+                <Link data-animation="slideLeft" href="/contact">
                   <span className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem" }}>
                     Get a Quote <ArrowRight size={14} />
                   </span>
                 </Link>
-                <Link href="/parts/filters/neshap-aerospace-compliance">
+                <Link data-animation="slideRight" href="/parts/filters/neshap-aerospace-compliance">
                   <span className="btn-outline">NESHAP Compliance →</span>
                 </Link>
               </div>
@@ -400,7 +400,7 @@ export default function PaintBoothFiltersPage() {
         <div className="container" style={{ maxWidth: "820px", margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
             <span className="section-label">FAQ</span>
-            <h2 className="section-heading">Paint Booth Filter Questions</h2>
+            <h2 data-animation="slideLeft" className="section-heading">Paint Booth Filter Questions</h2>
             <div className="red-divider" style={{ margin: "0.75rem auto 0" }} />
           </div>
           {[
@@ -437,24 +437,24 @@ export default function PaintBoothFiltersPage() {
       {/* BOTTOM CTA */}
       <section className="section-dark" style={{ padding: "4rem 0" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 900, color: "#fff", letterSpacing: "-0.01em", marginBottom: "1rem" }}>
+          <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 900, color: "#fff", letterSpacing: "-0.01em", marginBottom: "1rem" }}>
             Order Paint Booth Filters Today
           </h2>
-          <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.75)", maxWidth: "520px", margin: "0 auto 2.5rem", lineHeight: 1.7 }}>
+          <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.75)", maxWidth: "520px", margin: "0 auto 2.5rem", lineHeight: 1.7 }}>
             Call our parts team or submit a quote request. We will match the correct filter to your booth and ship from Santa Rosa, CA.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/contact">
+            <Link data-animation="slideLeft" href="/contact">
               <span className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", padding: "0.9rem 2.2rem", fontSize: "0.9rem" }}>
                 GET FILTER QUOTE <ArrowRight size={15} />
               </span>
             </Link>
-            <a href="tel:+18885457715">
+            <a data-animation="fadeIn" href="tel:+18885457715">
               <span className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", padding: "0.9rem 2.2rem", fontSize: "0.9rem" }}>
                 <Phone size={15} /> (888) 545-7715
               </span>
             </a>
-            <Link href="/parts/filters/neshap-aerospace-compliance">
+            <Link data-animation="slideRight" href="/parts/filters/neshap-aerospace-compliance">
               <span className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", padding: "0.9rem 2.2rem", fontSize: "0.9rem" }}>
                 NESHAP Compliance →
               </span>

@@ -107,7 +107,7 @@ export default function PageHero({
   } : {};
   return (
     <div
-      className="relative overflow-hidden flex flex-col justify-end"
+      className="relative overflow-hidden flex flex-col justify-center"
       style={{ backgroundColor: "#1C1C1E", minHeight }}
     >
       {/* Ken Burns keyframes */}

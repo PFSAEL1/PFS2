@@ -70,7 +70,7 @@ export default function IndustriesHub() {
             {INDUSTRIES.map((ind) => (
               <Link key={ind.slug} href={`/industries/${ind.slug}`}>
                 <div className="product-card group">
-                  <div className="overflow-hidden" style={{ height: "240px" }}>
+                  <div className="overflow-hidden card-image" style={{ height: "240px" }}>
                     <img src={ind.img} alt={ind.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" style={{ objectPosition: (ind as any).imgPosition || 'center center' }} />
                   </div>
                   <div className="p-5">

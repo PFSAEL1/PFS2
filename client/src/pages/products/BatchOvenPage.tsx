@@ -601,18 +601,18 @@ export default function BatchOvenPage() {
       {/* ── BOTTOM CTA ── */}
       <section style={{ background:"#f5f5f5",padding:"3rem 0",borderTop:"1px solid #e5e7eb" }}>
         <div className="container" style={{ textAlign:"center" }}>
-          <h2 style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"clamp(1.4rem,3vw,2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.75rem" }}>Questions? Talk to a PFS Engineer.</h2>
-          <p style={{ fontFamily:"'Archivo Narrow','Inter',sans-serif",fontSize:"0.9rem",color:"#666",maxWidth:"440px",margin:"0 auto 1.75rem",lineHeight:1.7 }}>
+          <h2 data-animation="slideLeft" style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"clamp(1.4rem,3vw,2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.75rem" }}>Questions? Talk to a PFS Engineer.</h2>
+          <p data-animation="slideLeft"style={{ fontFamily:"'Archivo Narrow','Inter',sans-serif",fontSize:"0.9rem",color:"#666",maxWidth:"440px",margin:"0 auto 1.75rem",lineHeight:1.7 }}>
             Our engineering team can help you select the right oven configuration, size, and heat source for your application.
           </p>
           <div style={{ display:"flex",gap:"1rem",justifyContent:"center",flexWrap:"wrap" }}>
-            <Link href="/contact/talk-to-an-engineer?from=batch-oven">
+            <Link data-animation="slideLeft"  href="/contact/talk-to-an-engineer?from=batch-oven">
               <span className="btn-glow">TALK TO AN ENGINEER <ArrowRight size={15}/></span>
             </Link>
-            <Link href="/contact/request-a-quote?from=batch-oven">
+            <Link data-animation="fadeIn" href="/contact/request-a-quote?from=batch-oven">
               <span style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:"transparent",color:BLUE,border:`2px solid ${BLUE}`,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.88rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"1rem 2.5rem",cursor:"pointer" }}>REQUEST A QUOTE <ArrowRight size={15}/></span>
             </Link>
-            <a href="tel:8885457715">
+            <a data-animation="slideRight" href="tel:8885457715">
               <span style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:"transparent",color:BLUE,border:`2px solid ${BLUE}`,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.88rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"1rem 2.5rem",cursor:"pointer" }}>CALL (888) 545-7715</span>
             </a>
           </div>

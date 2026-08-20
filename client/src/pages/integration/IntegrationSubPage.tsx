@@ -488,7 +488,7 @@ export default function IntegrationSubPage() {
               {content.related.map((rp) => (
                 <Link key={rp.href} href={rp.href}>
                   <div className="group cursor-pointer" style={{ backgroundColor: "#ffffff", border: "1px solid #e8e8e6", overflow: "hidden", transition: "box-shadow 0.2s" }}>
-                    <div style={{ aspectRatio: "16/9", overflow: "hidden", position: "relative" }}>
+                    <div className="card-image" style={{ aspectRatio: "16/9", overflow: "hidden", position: "relative" }}>
                       <img src={rp.image} alt={`PFS ${rp.title}`} style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.4s ease" }} className="group-hover:scale-105" />
                     </div>
                     <div style={{ padding: "1.25rem" }}>

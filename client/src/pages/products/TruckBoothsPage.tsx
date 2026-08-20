@@ -155,7 +155,7 @@ function BoothCard({ config }: { config: typeof BOOTH_CONFIGS[0] }) {
       onMouseLeave={() => setHovered(false)}
     >
       {/* Image */}
-      <div style={{ width: "100%", aspectRatio: "4/3", overflow: "hidden", background: config.imgBg || "#f5f5f5", position: "relative" }}>
+      <div className="card-image" style={{ width: "100%", aspectRatio: "4/3", overflow: "hidden", background: config.imgBg || "#f5f5f5", position: "relative" }}>
         <img
           src={config.img}
           alt={config.label}

@@ -114,8 +114,8 @@ export default function ContactSubPage() {
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
               <span className="section-label">{content.formTitle}</span>
-              <h2 className="section-heading">{content.title}</h2>
-              <p className="section-body mb-6">{content.desc}</p>
+              <h2 data-animation="slideLeft"  className="section-heading">{content.title}</h2>
+              <p data-animation="slideLeft" className="section-body mb-6">{content.desc}</p>
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>

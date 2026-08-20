@@ -188,7 +188,7 @@ function ServiceCard({ id, label, tagline, img, icon, desc, bullets, href, accen
         </div>
       )}
 
-      <div style={{ width: "100%", aspectRatio: "3/2", overflow: "hidden", background: "#111" }}>
+      <div className="card-image" style={{ width: "100%", aspectRatio: "3/2", overflow: "hidden", background: "#111" }}>
         <img
           src={img}
           alt={label}

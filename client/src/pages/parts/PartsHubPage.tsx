@@ -288,7 +288,7 @@ function PartCard({
       )}
 
       {/* Image */}
-      <div style={{
+      <div className="card-image" style={{
         width: "100%", aspectRatio: "16/9", overflow: "hidden",
         background: "#f8f9fa",
       }}>

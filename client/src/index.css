@@ -535,6 +535,40 @@
     animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 
+   /* Image hover effect */
+     .card-image {
+    position: relative;
+    /* overflow: hidden; */
+  }
+
+  .card-image::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.4) 100%);
+    transform: skewX(-25deg);
+    pointer-events: none;
+  }
+
+  .card-image:hover::before {
+    animation: shine 0.75s;
+  }
+
+  @keyframes shine {
+    100% {
+      left: 125%;
+    }
+  }
+
+
+
   /* ── Section alternating bg ── */
   .section-white { background-color: #ffffff; }
   .section-gray { background-color: #F4F4F2; }

@@ -38,7 +38,7 @@ export function SiteProductCard({ label, href, img, desc }: SiteProductCardProps
         }}
       >
         {/* Full-bleed image */}
-        <div style={{ width: "100%", aspectRatio: "4/3", overflow: "hidden", background: "#f0f0f0" }}>
+        <div className="card-image" style={{ width: "100%", aspectRatio: "4/3", overflow: "hidden", background: "#f0f0f0" }}>
           <img
             src={img}
             alt={label}

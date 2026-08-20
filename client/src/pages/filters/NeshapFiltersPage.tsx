@@ -126,7 +126,7 @@ export default function NeshapFiltersPage() {
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
               <span className="section-label">Regulated Environments</span>
-              <h2 className="section-heading-lg">Filter Selection for Documented Workflows</h2>
+              <h2 data-animation="slideLeft"  className="section-heading-lg">Filter Selection for Documented Workflows</h2>
               <div className="red-divider" />
               <p className="section-body mb-5">
                 Aerospace rework facilities, military maintenance depots, and industrial coating lines may need to document their booth filtration and coating process. PFS helps identify media from manufacturers that provide relevant product information for the facility’s system — for PFS and non-PFS equipment.
@@ -135,12 +135,12 @@ export default function NeshapFiltersPage() {
                 PFS can help request available filter specification sheets and manufacturer data that a facility may evaluate for its maintenance, permit, or compliance file.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Link href="/contact">
+                <Link data-animation="slideLeft" href="/contact">
                   <span className="btn-glow" style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
                     Request Compliance Quote <ArrowRight size={14} />
                   </span>
                 </Link>
-                <a href="tel:+18885457715">
+                <a data-animation="slideRight" href="tel:+18885457715">
                   <span className="btn-outline" style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
                     <Phone size={14} /> (888) 545-7715
                   </span>
@@ -168,18 +168,18 @@ export default function NeshapFiltersPage() {
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "3rem" }}>
             <span className="section-label">Filter Types</span>
-            <h2 className="section-heading">Filter Media for NESHAP & Aerospace Workflows</h2>
+            <h2 data-animation="slideLeft" className="section-heading">Filter Media for NESHAP & Aerospace Workflows</h2>
             <div className="red-divider" style={{ margin: "0.75rem auto 0" }} />
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div data-animation="fadeIn" className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {FILTER_TYPES.map((ft) => (
-              <div key={ft.name} className="card-hover" style={{ background: "#fff", borderRadius: "2px", overflow: "hidden" }}>
-                <div style={{ background: "#f4f4f2", aspectRatio: "4/3", display: "flex", alignItems: "center", justifyContent: "center", padding: "1.5rem", overflow: "hidden" }}>
+              <div key={ft.name} className="card-hover" style={{ background: "#fff", borderRadius: "2px" }}>
+                <div className="card-image" style={{ background: "#f4f4f2", aspectRatio: "4/3", display: "flex", alignItems: "center", justifyContent: "center", padding: "1.5rem", overflow: "hidden" }}>
                   <img src={ft.img} alt={ft.name} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
                 </div>
                 <div style={{ padding: "1.25rem" }}>
-                  <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1C1C1E", letterSpacing: "0.02em", textTransform: "uppercase", marginBottom: "0.6rem" }}>{ft.name}</h3>
-                  <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.83rem", color: "#555", lineHeight: 1.65, marginBottom: "0.9rem" }}>{ft.desc}</p>
+                  <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1C1C1E", letterSpacing: "0.02em", textTransform: "uppercase", marginBottom: "0.6rem" }}>{ft.name}</h3>
+                  <p data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.83rem", color: "#555", lineHeight: 1.65, marginBottom: "0.9rem" }}>{ft.desc}</p>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: "0.35rem" }}>
                     {ft.tags.map((t) => (
                       <span key={t} style={{ background: "#EEF2FF", color: BLUE, fontSize: "0.68rem", fontWeight: 700, padding: "0.2rem 0.55rem", borderRadius: "2px", letterSpacing: "0.05em", textTransform: "uppercase" }}>{t}</span>
@@ -189,7 +189,7 @@ export default function NeshapFiltersPage() {
               </div>
             ))}
           </div>
-          <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
+          <div data-animation="slideRight" style={{ textAlign: "center", marginTop: "2.5rem" }}>
             <Link href="/contact">
               <span className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem" }}>
                 Order Compliance Filters <ArrowRight size={14} />
@@ -213,10 +213,10 @@ export default function NeshapFiltersPage() {
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "3rem" }}>
             <span className="section-label" style={{ color: "rgba(255,255,255,0.5)" }}>Regulatory Standards</span>
-            <h2 className="section-heading-white">Regulatory Topics That May Affect Filter Selection</h2>
+            <h2 data-animation="slideLeft" className="section-heading-white">Regulatory Topics That May Affect Filter Selection</h2>
             <div className="red-divider" style={{ margin: "0.75rem auto 0" }} />
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div data-animation="fadeIn" className="grid md:grid-cols-2 gap-6">
             {STANDARDS.map((s) => (
               <div key={s.code} style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "2px", padding: "1.75rem" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.75rem" }}>
@@ -236,7 +236,7 @@ export default function NeshapFiltersPage() {
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
             <span className="section-label">Filter Media Gallery</span>
-            <h2 className="section-heading">Our Filtration Product Line</h2>
+            <h2 data-animation="slideLeft" className="section-heading">Our Filtration Product Line</h2>
             <div className="red-divider" style={{ margin: "0.75rem auto 0" }} />
           </div>
           <GalleryGrid images={GALLERY_IMAGES} cardHeight="clamp(180px, 20vw, 280px)" />
@@ -246,19 +246,19 @@ export default function NeshapFiltersPage() {
       {/* MID-PAGE CTA BAND */}
       <section style={{ background: BLUE, padding: "3.5rem 0" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 800, color: "#fff", letterSpacing: "-0.01em", marginBottom: "0.75rem" }}>
+          <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 800, color: "#fff", letterSpacing: "-0.01em", marginBottom: "0.75rem" }}>
             Need Filter Documentation for a Regulated Facility?
           </h2>
-          <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.8)", maxWidth: "560px", margin: "0 auto 2rem", lineHeight: 1.7 }}>
+          <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.8)", maxWidth: "560px", margin: "0 auto 2rem", lineHeight: 1.7 }}>
             PFS can help identify available manufacturer data, product information, and replacement guidance for your filter-selection review. Facility owners and their advisors determine the complete compliance approach.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/contact">
+            <Link data-animation="slideLeft" href="/contact">
               <span className="btn-glow-white" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem" }}>
                 Request Compliance Package <ArrowRight size={14} />
               </span>
             </Link>
-            <a href="tel:+18885457715">
+            <a data-animation="slideRight"  href="tel:+18885457715">
               <span className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", borderColor: "rgba(255,255,255,0.5)", color: "#fff" }}>
                 <Phone size={14} /> (888) 545-7715
               </span>
@@ -273,9 +273,9 @@ export default function NeshapFiltersPage() {
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
               <span className="section-label">Why PFS</span>
-              <h2 className="section-heading-lg">The Industrial Finishing Specialist</h2>
+              <h2 data-animation="slideLeft" className="section-heading-lg">The Industrial Finishing Specialist</h2>
               <div className="red-divider" />
-              <p className="section-body mb-5">
+              <p data-animation="slideLeft" className="section-body mb-5">
                 PFS was founded in 2012 in Santa Rosa, CA, bringing over 20 years of combined industrial finishing experience to every project. We supply filtration media for our own equipment and for many major booth brands — because documentation needs do not stop at the brand on the door.
               </p>
               <ul style={{ listStyle: "none", padding: 0, margin: "0 0 2rem" }}>
@@ -287,12 +287,12 @@ export default function NeshapFiltersPage() {
                 ))}
               </ul>
               <div className="flex flex-wrap gap-3">
-                <Link href="/contact">
+                <Link data-animation="slideLeft"  href="/contact">
                   <span className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem" }}>
                     Get a Quote <ArrowRight size={14} />
                   </span>
                 </Link>
-                <Link href="/parts/filters/paint-booth-filters">
+                <Link data-animation="slideRight" href="/parts/filters/paint-booth-filters">
                   <span className="btn-outline">All Filter Types →</span>
                 </Link>
               </div>
@@ -318,7 +318,7 @@ export default function NeshapFiltersPage() {
         <div className="container" style={{ maxWidth: "820px", margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
             <span className="section-label">FAQ</span>
-            <h2 className="section-heading">Common Compliance Questions</h2>
+            <h2 data-animation="slideLeft" className="section-heading">Common Compliance Questions</h2>
             <div className="red-divider" style={{ margin: "0.75rem auto 0" }} />
           </div>
           {[
@@ -354,24 +354,24 @@ export default function NeshapFiltersPage() {
       {/* BOTTOM CTA */}
       <section className="section-dark" style={{ padding: "4rem 0" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 900, color: "#fff", letterSpacing: "-0.01em", marginBottom: "1rem" }}>
+          <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 900, color: "#fff", letterSpacing: "-0.01em", marginBottom: "1rem" }}>
             Ready to Order NESHAP Compliance Filters?
           </h2>
-          <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.75)", maxWidth: "520px", margin: "0 auto 2.5rem", lineHeight: 1.7 }}>
+          <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.75)", maxWidth: "520px", margin: "0 auto 2.5rem", lineHeight: 1.7 }}>
             Call our parts team or submit a quote request. We'll confirm filter specs, provide documentation, and ship from Santa Rosa, CA.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/contact">
+            <Link data-animation="slideLeft" href="/contact">
               <span className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", padding: "0.9rem 2.2rem", fontSize: "0.9rem" }}>
                 GET COMPLIANCE QUOTE <ArrowRight size={15} />
               </span>
             </Link>
-            <a href="tel:+18885457715">
+            <a data-animation="slideRight" href="tel:+18885457715">
               <span className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", padding: "0.9rem 2.2rem", fontSize: "0.9rem" }}>
                 <Phone size={15} /> (888) 545-7715
               </span>
             </a>
-            <Link href="/parts/filters/california-west-coast-paint-booth-filters">
+            <Link data-animation="slideRight" href="/parts/filters/california-west-coast-paint-booth-filters">
               <span className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", padding: "0.9rem 2.2rem", fontSize: "0.9rem" }}>
                 California Filters →
               </span>

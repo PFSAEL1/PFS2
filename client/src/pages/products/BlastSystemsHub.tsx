@@ -63,7 +63,7 @@ export default function BlastSystemsHub() {
             {SYSTEMS.map((s) => (
               <Link key={s.label} href={s.href}>
                 <div className="product-card group">
-                  <div className="overflow-hidden" style={{ height: "240px" }}>
+                  <div className="overflow-hidden card-image" style={{ height: "240px" }}>
                     <img src={s.img} alt={s.label} className="w-full h-full transition-transform duration-500 group-hover:scale-105" style={{ objectFit: "cover", objectPosition: s.img.includes("blast-systems2") ? "center 60%" : "center" }} />
                   </div>
                   <div className="p-5">

@@ -458,8 +458,8 @@ export default function ResourcesSubPage() {
                 </div>
               ) : (
                 <div className="p-6 border border-gray-200 bg-gray-50">
-                  <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "#555", lineHeight: 1.7, marginBottom: "1rem" }}>Resources are available upon request. Contact us to receive the documentation you need.</p>
-                  <Link href="/contact/request-a-quote"><span className="btn-glow">Request Resources <ArrowRight size={14} /></span></Link>
+                  <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "#555", lineHeight: 1.7, marginBottom: "1rem" }}>Resources are available upon request. Contact us to receive the documentation you need.</p>
+                  <Link  href="/contact/request-a-quote"><span data-animation="slideRight" className="btn-glow">Request Resources <ArrowRight size={14} /></span></Link>
                 </div>
               )}
             </div>

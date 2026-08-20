@@ -108,7 +108,7 @@ export default function FiltersPage() {
       {/* HERO */}
       <section style={{
         position: "relative",
-        overflow: "hidden",
+        // overflow: "hidden",
         minHeight: "460px",
         display: "flex",
         alignItems: "center",
@@ -139,7 +139,7 @@ export default function FiltersPage() {
             <span style={{ display: "inline-block", width: "28px", height: "2px", background: BLUE_LIGHT }} />
             PFS — SPRAY BOOTH FILTERS & REPLACEMENT MEDIA
           </div>
-          <h1 style={{
+          <h1 data-animation="slideLeft" style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "clamp(2.4rem, 5vw, 3.8rem)", fontWeight: 900,
             color: "#fff", lineHeight: 1.0, textTransform: "uppercase",
@@ -147,7 +147,7 @@ export default function FiltersPage() {
           }}>
             Spray Booth<br />Filters
           </h1>
-          <p style={{
+          <p data-animation="slideLeft" style={{
             fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
             fontSize: "clamp(0.88rem, 1.4vw, 1rem)",
             color: "rgba(255,255,255,0.8)", lineHeight: 1.7,
@@ -155,8 +155,8 @@ export default function FiltersPage() {
           }}>
             OEM exhaust filters, intake media, ceiling filters, and replacement kits for all PFS booth models and most major OEM brands. NFPA 33 compliant. Ships nationwide from our Northern California warehouse.
           </p>
-          <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-            <a href="tel:8885457715" style={{
+          <div  style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+            <a data-animation="slideLeft" href="tel:8885457715" style={{
               background: BLUE, color: "#fff",
               border: "none", padding: "0.85rem 1.8rem",
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
@@ -168,7 +168,7 @@ export default function FiltersPage() {
             }}>
               <Phone size={14} /> Call for Filters: (888) 545-7715
             </a>
-            <a href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" style={{
+            <a data-animation="slideRight" href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" style={{
               background: "transparent", color: "#fff",
               border: "2px solid rgba(255,255,255,0.5)", padding: "0.85rem 1.8rem",
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
@@ -197,7 +197,7 @@ export default function FiltersPage() {
               }}>
                 OEM FILTER MEDIA — CALIFORNIA & NATIONWIDE
               </div>
-              <h2 style={{
+              <h2 data-animation="slideLeft" style={{
                 fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
                 fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontWeight: 900,
                 color: "#111", textTransform: "uppercase",
@@ -206,7 +206,7 @@ export default function FiltersPage() {
                 The Right Filter<br />for Every Booth
               </h2>
               <div style={{ width: "40px", height: "3px", background: BLUE, marginBottom: "1.5rem" }} />
-              <p style={{
+              <p  style={{
                 fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
                 fontSize: "0.95rem", color: "#444", lineHeight: 1.75,
                 marginBottom: "1.25rem",
@@ -333,7 +333,7 @@ export default function FiltersPage() {
             }}>
               FILTER TYPES & MEDIA
             </div>
-            <h2 style={{
+            <h2 data-animation="slideLeft" style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontWeight: 900,
               color: "#111", textTransform: "uppercase",
@@ -343,7 +343,7 @@ export default function FiltersPage() {
             </h2>
           </div>
 
-          <div style={{
+          <div data-animation="fadeIn" style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))",
             gap: "1.5rem",
@@ -413,7 +413,7 @@ export default function FiltersPage() {
               }}>
                 NEVER RUN WITH CLOGGED FILTERS AGAIN
               </div>
-              <h2 style={{
+              <h2 data-animation="slideLeft" style={{
                 fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
                 fontSize: "clamp(1.6rem, 2.8vw, 2.2rem)", fontWeight: 900,
                 color: "#111", textTransform: "uppercase",
@@ -436,7 +436,7 @@ export default function FiltersPage() {
               }}>
                 Program participants receive priority parts availability, volume pricing on filter media, and a dedicated account contact who knows your equipment specifications. For multi-location fleets, we coordinate filter supply and scheduling across all sites — one call, one invoice, one point of contact.
               </p>
-              <a href="tel:8885457715" style={{
+              <a data-animation="slideRight" href="tel:8885457715" style={{
                 display: "inline-flex", alignItems: "center", gap: "0.5rem",
                 background: BLUE, color: "#fff",
                 padding: "0.85rem 1.8rem",
@@ -503,7 +503,7 @@ export default function FiltersPage() {
             }}>
               SPRAY BOOTH FILTER FAQ
             </div>
-            <h2 style={{
+            <h2 data-animation="slideLeft" style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontWeight: 900,
               color: "#111", textTransform: "uppercase",
@@ -512,7 +512,7 @@ export default function FiltersPage() {
               Common Questions
             </h2>
           </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+          <div data-animation="fadeIn" style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
             {FAQ_ITEMS.map((item) => (
               <div key={item.q} style={{
                 background: "#fff",
@@ -561,7 +561,7 @@ export default function FiltersPage() {
             }}>
               READY TO ORDER?
             </div>
-            <h2 style={{
+            <h2 data-animation="slideLeft" style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "clamp(1.6rem, 3vw, 2.2rem)", fontWeight: 900,
               color: "#fff", textTransform: "uppercase",
@@ -569,7 +569,7 @@ export default function FiltersPage() {
             }}>
               Get the Right Filters<br />for Your Booth
             </h2>
-            <p style={{
+            <p data-animation="slideLeft" style={{
               fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
               fontSize: "0.9rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.6,
               maxWidth: "500px", margin: 0,
@@ -578,7 +578,7 @@ export default function FiltersPage() {
             </p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", minWidth: "260px" }}>
-            <a href="tel:8885457715" style={{
+            <a data-animation="slideLeft" href="tel:8885457715" style={{
               display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "0.5rem",
               background: "#fff", color: BLUE,
               padding: "1rem 2rem",
@@ -589,7 +589,7 @@ export default function FiltersPage() {
             }}>
               <Phone size={15} /> (888) 545-7715 — Call for Filters
             </a>
-            <a href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" style={{
+            <a data-animation="slideRight" href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" style={{
               display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "0.5rem",
               background: "transparent", color: "#fff",
               border: "2px solid rgba(255,255,255,0.5)",

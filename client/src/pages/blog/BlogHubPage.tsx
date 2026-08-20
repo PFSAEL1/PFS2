@@ -94,7 +94,7 @@ export default function BlogHubPage() {
       />
 
       <div className="container" style={{ paddingTop: "3rem", paddingBottom: "4rem" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: "1.75rem" }}>
+        <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: "1.75rem" }}>
           {POSTS.map((post) => (
             <Link key={post.slug} href={post.slug}>
               <div
@@ -117,7 +117,7 @@ export default function BlogHubPage() {
                 }}
               >
                 {/* Image */}
-                <div style={{ height: "200px", overflow: "hidden", position: "relative" }}>
+                <div className="card-image" style={{ height: "200px", overflow: "hidden", position: "relative" }}>
                   <img
                     src={post.img}
                     alt={post.title}

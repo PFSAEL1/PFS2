@@ -37,7 +37,7 @@ export default function ContactHub() {
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
               <span className="section-label">Get in Touch</span>
-              <h2 className="section-heading">Send Us a Message</h2>
+              <h2 data-animation="slideLeft" className="section-heading">Send Us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-5 mt-6">
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
