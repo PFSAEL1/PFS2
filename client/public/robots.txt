@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://platinumfinishingsystems.com/sitemap.xml
+
+Sitemap: https://www.pfsspraybooths.com/sitemap.xml
