@@ -75,9 +75,9 @@ export default function ResourcesHub() {
         <div className="container">
           <div className="mb-10">
             <span className="section-label">Resource Library</span>
-            <h2 className="section-heading-lg">Everything You Need to Specify, Install, and Operate PFS Equipment</h2>
+            <h2 data-animation="slideLeft" className="section-heading-lg">Everything You Need to Specify, Install, and Operate PFS Equipment</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div data-animation="fadeIn" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {RESOURCES.map((r) => {
               const Icon = r.icon;
               return (
@@ -168,13 +168,13 @@ export default function ResourcesHub() {
               color: "#1B3A6B", letterSpacing: "0.18em",
               textTransform: "uppercase", marginBottom: "0.4rem",
             }}>FILTER COMPLIANCE GUIDES</div>
-            <h2 style={{
+            <h2 data-animation="slideLeft" style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "clamp(1.4rem, 2.5vw, 1.9rem)", fontWeight: 900,
               color: "#0d1b2e", textTransform: "uppercase",
               letterSpacing: "-0.01em", margin: "0 0 0.4rem", lineHeight: 1.1,
             }}>Paint Booth Filter Guides</h2>
-            <p style={{
+            <p data-animation="slideLeft" style={{
               fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
               fontSize: "0.85rem", color: "#5a6a7e", lineHeight: 1.6, maxWidth: "560px",
             }}>
@@ -251,13 +251,13 @@ export default function ResourcesHub() {
                       color: "#2A5298", letterSpacing: "0.2em",
                       textTransform: "uppercase", marginBottom: "0.35rem",
                     }}>{item.eyebrow}</div>
-                    <h3 style={{
+                    <h3 data-animation="slideLeft" style={{
                       fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
                       fontSize: "1.05rem", fontWeight: 900,
                       color: "#0d1b2e", textTransform: "uppercase",
                       letterSpacing: "0.01em", margin: "0 0 0.5rem", lineHeight: 1.2,
                     }}>{item.label}</h3>
-                    <p style={{
+                    <p data-animation="slideRight" style={{
                       fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
                       fontSize: "0.82rem", color: "#4a5a6e",
                       lineHeight: 1.6, margin: "0 0 1rem",

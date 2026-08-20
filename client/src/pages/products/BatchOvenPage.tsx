@@ -215,19 +215,19 @@ export default function BatchOvenPage() {
             ))}
           </nav>
           <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.72rem",fontWeight:700,letterSpacing:"0.18em",color:"rgba(255,255,255,0.5)",textTransform:"uppercase",display:"block",marginBottom:"1rem" }}>INDUSTRIAL OVENS — BATCH</span>
-          <h1 style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"clamp(2.6rem,7vw,5rem)",fontWeight:800,color:"#fff",lineHeight:1.0,letterSpacing:"-0.01em",marginBottom:"1rem",maxWidth:"700px" }}>
+          <h1 data-animation="slideLeft" style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"clamp(2.6rem,7vw,5rem)",fontWeight:800,color:"#fff",lineHeight:1.0,letterSpacing:"-0.01em",marginBottom:"1rem",maxWidth:"700px" }}>
             Batch Curing Ovens<br />
             Built for Production
           </h1>
           <span style={{ display:"inline-flex",alignItems:"center",gap:"0.4rem",background:"rgba(27,58,107,0.75)",border:"1px solid rgba(107,163,224,0.4)",color:"#6fa3e0",borderRadius:"2px",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",textTransform:"uppercase",padding:"0.3rem 0.75rem",marginBottom:"1.25rem" }}>PFS VULCAN SERIES</span>
-          <p style={{ fontFamily:"'Archivo Narrow','Inter',sans-serif",fontSize:"clamp(0.95rem,1.8vw,1.1rem)",color:"rgba(255,255,255,0.82)",lineHeight:1.7,marginBottom:"2.5rem",maxWidth:"520px" }}>
+          <p data-animation="slideLeft" style={{ fontFamily:"'Archivo Narrow','Inter',sans-serif",fontSize:"clamp(0.95rem,1.8vw,1.1rem)",color:"rgba(255,255,255,0.82)",lineHeight:1.7,marginBottom:"2.5rem",maxWidth:"520px" }}>
             Industrial powder curing, paint baking, and heat treating ovens. Double-wall insulated panels, UL 508A controls, gas or electric heat. Custom sizes available. Ships nationally.
           </p>
           <div style={{ display:"flex",flexWrap:"wrap",gap:"1rem" }}>
-            <Link href="/contact/request-a-quote?from=batch-oven">
+            <Link data-animation="slideLeft" href="/contact/request-a-quote?from=batch-oven">
               <span className="btn-glow" style={{ width:"100%",maxWidth:"320px",justifyContent:"center" }}>GET PRICING <ArrowRight size={16} /></span>
             </Link>
-            <Link href="/contact/talk-to-an-engineer?from=batch-oven">
+            <Link data-animation="slideRight" href="/contact/talk-to-an-engineer?from=batch-oven">
               <span className="btn-glow-white" style={{ width:"100%",maxWidth:"320px",justifyContent:"center" }}>TALK TO AN ENGINEER <ArrowRight size={16} /></span>
             </Link>
           </div>
@@ -240,7 +240,7 @@ export default function BatchOvenPage() {
       {/* ── OVERVIEW STATS ── */}
       <section style={{ background:"#f5f5f5",padding:"3rem 0",borderBottom:"1px solid #e5e7eb" }}>
         <div className="container">
-          <div style={{ display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(180px,1fr))",gap:"1.5rem" }}>
+          <div data-animation="fadeIn" style={{ display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(180px,1fr))",gap:"1.5rem" }}>
             {[
               { val:"20-ga+",  label:"Steel Construction" },
               { val:"6\"",     label:"Insulated Walls & Roof" },
@@ -264,9 +264,9 @@ export default function BatchOvenPage() {
           <div style={{ display:"flex",flexDirection:"column",alignItems:"center",gap:"1.5rem" }}>
             <div style={{ textAlign:"center" }}>
               <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.6rem" }}>FEATURED OVEN</span>
-              <h2 style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"clamp(1.5rem,3vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.5rem" }}>PFS VULCAN Batch Curing Oven</h2>
+              <h2 data-animation="slideLeft"  style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"clamp(1.5rem,3vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.5rem" }}>PFS VULCAN Batch Curing Oven</h2>
               <span style={{ display:"inline-flex",alignItems:"center",gap:"0.4rem",background:BLUE,color:"#fff",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.68rem",fontWeight:800,letterSpacing:"0.16em",textTransform:"uppercase",padding:"0.28rem 0.85rem",marginBottom:"0.75rem" }}>PFS VULCAN SERIES</span>
-              <p style={{ fontFamily:"'Archivo Narrow','Inter',sans-serif",fontSize:"0.95rem",color:"#555",maxWidth:"560px",margin:"0 auto",lineHeight:1.7 }}>
+              <p data-animation="slideRight" style={{ fontFamily:"'Archivo Narrow','Inter',sans-serif",fontSize:"0.95rem",color:"#555",maxWidth:"560px",margin:"0 auto",lineHeight:1.7 }}>
                 Double-wall insulated construction. UL 508A controls. Gas, propane, or electric heat. Available in walk-in, drive-in, and conveyor pass-through configurations. Standard and fully custom sizes.
               </p>
             </div>
@@ -274,10 +274,10 @@ export default function BatchOvenPage() {
               <img src={FEATURED_IMG} alt="PFS VULCAN batch curing oven" style={{ width:"100%",height:"auto",display:"block",objectFit:"contain",maxHeight:"420px" }} />
             </div>
             <div style={{ display:"flex",gap:"1rem",flexWrap:"wrap",justifyContent:"center" }}>
-              <Link href="/contact/request-a-quote?from=batch-oven">
+              <Link data-animation="slideLeft"  href="/contact/request-a-quote?from=batch-oven">
                 <span className="btn-glow">REQUEST A QUOTE <ArrowRight size={15}/></span>
               </Link>
-              <Link href="/contact/talk-to-an-engineer?from=batch-oven">
+              <Link data-animation="slideRight"  href="/contact/talk-to-an-engineer?from=batch-oven">
                 <span className="btn-outline">TALK TO AN ENGINEER <ArrowRight size={15}/></span>
               </Link>
             </div>
@@ -291,9 +291,9 @@ export default function BatchOvenPage() {
           <div style={{ display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:"1rem",marginBottom:specsOpen?"2rem":0 }}>
             <div>
               <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.3rem" }}>STANDARD FEATURES</span>
-              <h2 style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"clamp(1.3rem,2.5vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Every Oven Ships Fully Equipped</h2>
+              <h2 data-animation="slideLeft" style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"clamp(1.3rem,2.5vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Every Oven Ships Fully Equipped</h2>
             </div>
-            <button onClick={() => setSpecsOpen(!specsOpen)} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:specsOpen?BLUE:"transparent",border:`2px solid ${BLUE}`,color:specsOpen?"#fff":BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.5rem",cursor:"pointer",transition:"background 0.15s,color 0.15s",whiteSpace:"nowrap" }}>
+            <button data-animation="slideRight" onClick={() => setSpecsOpen(!specsOpen)} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:specsOpen?BLUE:"transparent",border:`2px solid ${BLUE}`,color:specsOpen?"#fff":BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.5rem",cursor:"pointer",transition:"background 0.15s,color 0.15s",whiteSpace:"nowrap" }}>
               {specsOpen ? <><ChevronUp size={15}/> HIDE FEATURES</> : <><ChevronDown size={15}/> SEE STANDARD FEATURES</>}
             </button>
           </div>
@@ -337,8 +337,8 @@ export default function BatchOvenPage() {
           <div style={{ display:"flex",flexDirection:"column",gap:"1.5rem",maxWidth:960,margin:"0 auto" }}>
             <div style={{ textAlign:"center" }}>
               <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.18em",color:"rgba(255,255,255,0.45)",textTransform:"uppercase",display:"block",marginBottom:"0.5rem" }}>BUILT-IN PROTECTION</span>
-              <h2 style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"clamp(1.5rem,3vw,2.2rem)",fontWeight:800,color:"#fff",letterSpacing:"-0.01em",marginBottom:"0.75rem" }}>Comprehensive Safety — Standard on Every Unit</h2>
-              <p style={{ fontFamily:"'Archivo Narrow','Inter',sans-serif",fontSize:"0.9rem",color:"rgba(255,255,255,0.7)",maxWidth:"520px",margin:"0 auto",lineHeight:1.7 }}>
+              <h2 data-animation="slideLeft" style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"clamp(1.5rem,3vw,2.2rem)",fontWeight:800,color:"#fff",letterSpacing:"-0.01em",marginBottom:"0.75rem" }}>Comprehensive Safety — Standard on Every Unit</h2>
+              <p data-animation="slideLeft" style={{ fontFamily:"'Archivo Narrow','Inter',sans-serif",fontSize:"0.9rem",color:"rgba(255,255,255,0.7)",maxWidth:"520px",margin:"0 auto",lineHeight:1.7 }}>
                 PFS batch ovens include the following safety equipment as standard:
               </p>
             </div>
@@ -356,7 +356,7 @@ export default function BatchOvenPage() {
                 </div>
               ))}
             </div>
-            <div style={{ textAlign:"center",marginTop:"0.5rem" }}>
+            <div data-animation="slideRight" style={{ textAlign:"center",marginTop:"0.5rem" }}>
               <Link href="/contact/talk-to-an-engineer?from=batch-oven">
                 <span className="btn-glow">TALK TO AN ENGINEER <ArrowRight size={15}/></span>
               </Link>
@@ -371,9 +371,9 @@ export default function BatchOvenPage() {
           <div style={{ display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:"1rem",marginBottom:sizesOpen?"2rem":0 }}>
             <div>
               <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.3rem" }}>STANDARD SIZES</span>
-              <h2 style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"clamp(1.3rem,2.5vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Find Your Configuration</h2>
+              <h2 data-animation="slideLeft" style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"clamp(1.3rem,2.5vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Find Your Configuration</h2>
             </div>
-            <button onClick={() => setSizesOpen(!sizesOpen)} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:sizesOpen?BLUE:"transparent",border:`2px solid ${BLUE}`,color:sizesOpen?"#fff":BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.5rem",cursor:"pointer",transition:"background 0.15s,color 0.15s",whiteSpace:"nowrap" }}>
+            <button data-animation="slideRight"  onClick={() => setSizesOpen(!sizesOpen)} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:sizesOpen?BLUE:"transparent",border:`2px solid ${BLUE}`,color:sizesOpen?"#fff":BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.5rem",cursor:"pointer",transition:"background 0.15s,color 0.15s",whiteSpace:"nowrap" }}>
               {sizesOpen ? <><ChevronUp size={15}/> HIDE SIZES</> : <><ChevronDown size={15}/> SEE STANDARD SIZES</>}
             </button>
           </div>
@@ -455,16 +455,16 @@ export default function BatchOvenPage() {
         <div className="container">
           <div className="text-center mb-6">
             <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.5rem" }}>GALLERY</span>
-            <h2 style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"clamp(1.5rem,3vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em" }}>Built in the USA. Proven in the Field.</h2>
+            <h2 data-animation="slideLeft" style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"clamp(1.5rem,3vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em" }}>Built in the USA. Proven in the Field.</h2>
           </div>
           <div className="mb-6">
             <GalleryGrid images={GALLERY_IMGS} cardHeight="320px" className="grid grid-cols-1 sm:grid-cols-3 gap-3" />
           </div>
           <div className="text-center" style={{ display:"flex",gap:"1rem",justifyContent:"center",flexWrap:"wrap" }}>
-            <Link href="/contact/request-a-quote?from=batch-oven">
+            <Link data-animation="slideLeft" href="/contact/request-a-quote?from=batch-oven">
               <span className="btn-glow">REQUEST A QUOTE <ArrowRight size={15}/></span>
             </Link>
-            <a href="tel:8885457715">
+            <a data-animation="slideRight" href="tel:8885457715">
               <span style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:"transparent",color:BLUE,border:`2px solid ${BLUE}`,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.85rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"1rem 2.5rem",cursor:"pointer" }}>CALL (888) 545-7715</span>
             </a>
           </div>
@@ -495,12 +495,12 @@ export default function BatchOvenPage() {
         <div className="container">
           <div style={{ textAlign:"center",marginBottom:"2rem" }}>
             <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.5rem" }}>DOOR OPTIONS</span>
-            <h2 style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"clamp(1.5rem,3vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.75rem" }}>Door Configurations</h2>
-            <p style={{ fontFamily:"'Archivo Narrow','Inter',sans-serif",fontSize:"0.9rem",color:"#666",maxWidth:"520px",margin:"0 auto",lineHeight:1.7 }}>
+            <h2 data-animation="slideLeft" style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"clamp(1.5rem,3vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.75rem" }}>Door Configurations</h2>
+            <p data-animation="slideLeft" style={{ fontFamily:"'Archivo Narrow','Inter',sans-serif",fontSize:"0.9rem",color:"#666",maxWidth:"520px",margin:"0 auto",lineHeight:1.7 }}>
               PFS oven doors are available in the following configurations:
             </p>
           </div>
-          <div style={{ display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(180px,1fr))",gap:"1rem" }}>
+          <div data-animation="fadeIn" style={{ display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(180px,1fr))",gap:"1rem" }}>
             {[
               { title:"Swing Doors",               desc:"Single or double swing doors — standard configuration for most batch applications." },
               { title:"Bi-Parting Doors",           desc:"Two-panel doors that open from the center — ideal for wide openings and drive-in access." },
@@ -516,7 +516,7 @@ export default function BatchOvenPage() {
           </div>
           <div style={{ textAlign:"center",marginTop:"2rem" }}>
             <Link href="/contact/request-a-quote?from=batch-oven">
-              <span className="btn-glow">GET PRICING <ArrowRight size={15}/></span>
+              <span data-animation="slideRight"  className="btn-glow">GET PRICING <ArrowRight size={15}/></span>
             </Link>
           </div>
         </div>
@@ -528,12 +528,12 @@ export default function BatchOvenPage() {
           <div style={{ display:"flex",flexWrap:"wrap",gap:"3rem",alignItems:"center" }}>
             <div style={{ flex:"1 1 280px" }}>
               <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.18em",color:"rgba(255,255,255,0.45)",textTransform:"uppercase",display:"block",marginBottom:"0.5rem" }}>INDUSTRIAL CONTROLS</span>
-              <h2 style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"clamp(1.5rem,3vw,2.2rem)",fontWeight:800,color:"#fff",letterSpacing:"-0.01em",marginBottom:"0.75rem" }}>Advanced Control Systems</h2>
-              <p style={{ fontFamily:"'Archivo Narrow','Inter',sans-serif",fontSize:"0.9rem",color:"rgba(255,255,255,0.7)",lineHeight:1.7,marginBottom:"1.5rem" }}>
+              <h2 data-animation="slideLeft" style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"clamp(1.5rem,3vw,2.2rem)",fontWeight:800,color:"#fff",letterSpacing:"-0.01em",marginBottom:"0.75rem" }}>Advanced Control Systems</h2>
+              <p data-animation="slideLeft" style={{ fontFamily:"'Archivo Narrow','Inter',sans-serif",fontSize:"0.9rem",color:"rgba(255,255,255,0.7)",lineHeight:1.7,marginBottom:"1.5rem" }}>
                 UL 508A control system included. Standard and advanced options available.
               </p>
               <Link href="/contact/talk-to-an-engineer?from=batch-oven">
-                <span className="btn-glow">TALK TO AN ENGINEER <ArrowRight size={15}/></span>
+                <span data-animation="slideRight" className="btn-glow">TALK TO AN ENGINEER <ArrowRight size={15}/></span>
               </Link>
             </div>
             <div style={{ flex:"1 1 280px",display:"grid",gridTemplateColumns:"1fr 1fr",gap:"0.6rem" }}>
@@ -573,7 +573,7 @@ export default function BatchOvenPage() {
         })}} />
         <div className="container" style={{ maxWidth:"860px" }}>
           <p style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif", fontSize:"0.72rem", fontWeight:700, letterSpacing:"0.15em", textTransform:"uppercase", color:"#1a3a6b", marginBottom:"0.75rem" }}>FREQUENTLY ASKED QUESTIONS</p>
-          <h2 style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif", fontSize:"clamp(1.5rem,3vw,2.2rem)", fontWeight:800, color:"#0d1b2a", marginBottom:"2.5rem", lineHeight:1.1 }}>Batch Oven FAQ</h2>
+          <h2 data-animation="slideLeft" style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif", fontSize:"clamp(1.5rem,3vw,2.2rem)", fontWeight:800, color:"#0d1b2a", marginBottom:"2.5rem", lineHeight:1.1 }}>Batch Oven FAQ</h2>
           {[
             { q:"What is a batch oven used for?", a:"A batch oven is an industrial curing oven designed to process parts in individual loads rather than on a continuous conveyor. Batch ovens are widely used for powder coating cure cycles, liquid paint baking, heat treating, drying, and preheating. They are ideal for job shops, low-to-medium production volumes, and operations with varied part sizes." },
             { q:"What temperature does a batch oven need to reach for powder coating?", a:"Most powder coatings require a metal temperature of 325°F to 400°F (163°C–204°C) held for 10–20 minutes depending on the specific powder. PFS batch ovens are engineered to reach and maintain these temperatures with ±10°F uniformity throughout the chamber." },

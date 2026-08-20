@@ -197,14 +197,14 @@ export default function MeetTheTeamPage() {
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(10,10,10,0.1) 0%, rgba(10,10,10,0.0) 40%, rgba(10,10,10,0.8) 100%)" }} />
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "2.5rem 2rem 2rem", maxWidth: "1200px", margin: "0 auto" }}>
           <div style={{ fontFamily: "'Chakra Petch',sans-serif", fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.25em", color: "#C8A84B", textTransform: "uppercase", marginBottom: "0.5rem" }}>PFS INDUSTRIAL FINISHING EQUIPMENT</div>
-          <h1 style={{ fontFamily: "'Chakra Petch',sans-serif", fontSize: "clamp(1.8rem,4vw,3rem)", fontWeight: 700, color: "#fff", margin: 0, lineHeight: 1.1 }}>Meet the Team</h1>
-          <p style={{ fontFamily: "'Archivo Narrow',sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.75)", marginTop: "0.6rem", maxWidth: "520px" }}>The people behind every system we ship — built to the highest standard in industrial finishing.</p>
+          <h1 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch',sans-serif", fontSize: "clamp(1.8rem,4vw,3rem)", fontWeight: 700, color: "#fff", margin: 0, lineHeight: 1.1 }}>Meet the Team</h1>
+          <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow',sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.75)", marginTop: "0.6rem", maxWidth: "520px" }}>The people behind every system we ship — built to the highest standard in industrial finishing.</p>
         </div>
       </div>
 
       {/* ── Intro ── */}
       <div style={{ maxWidth: "860px", margin: "0 auto", padding: "3.5rem 1.5rem 2rem" }}>
-        <p style={{ fontFamily: "'Archivo Narrow',sans-serif", fontSize: "1.05rem", color: "rgba(255,255,255,0.7)", lineHeight: 1.75, textAlign: "center" }}>
+        <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow',sans-serif", fontSize: "1.05rem", color: "rgba(255,255,255,0.7)", lineHeight: 1.75, textAlign: "center" }}>
           PFS was founded in 2012 and brought manufacturing fully in-house in 2020. Today our team of engineers, fabricators, welders, assembly technicians, and field service specialists designs, builds, and installs finishing systems across the United States and Canada — for clients including SpaceX, Tesla, PACCAR, CARSTAR, and Caterpillar.
         </p>
       </div>
@@ -212,7 +212,7 @@ export default function MeetTheTeamPage() {
       {/* ── Leadership ── */}
       <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "1rem 1.5rem 4rem" }}>
         <SectionHeader label="LEADERSHIP" />
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.5rem" }}>
+        <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.5rem" }}>
           {LEADERSHIP.map(m => <LeaderCard key={m.name} member={m} />)}
         </div>
       </section>
@@ -220,7 +220,7 @@ export default function MeetTheTeamPage() {
       {/* ── Management ── */}
       <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem 4rem" }}>
         <SectionHeader label="MANAGEMENT" />
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "1.25rem" }}>
+        <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "1.25rem" }}>
           {MANAGEMENT.map(m => <TeamCard key={m.name} member={m} />)}
         </div>
       </section>
@@ -228,7 +228,7 @@ export default function MeetTheTeamPage() {
       {/* ── Team ── */}
       <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem 4rem" }}>
         <SectionHeader label="THE TEAM" />
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))", gap: "1.1rem" }}>
+        <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))", gap: "1.1rem" }}>
           {TEAM.map(m => <TeamCard key={m.name} member={m} />)}
         </div>
       </section>
@@ -286,17 +286,17 @@ export default function MeetTheTeamPage() {
       <section style={{ background: "#0d1520", borderTop: "1px solid rgba(27,58,107,0.3)", padding: "4rem 1.5rem" }}>
         <div style={{ maxWidth: "700px", margin: "0 auto", textAlign: "center" }}>
           <div style={{ fontFamily: "'Chakra Petch',sans-serif", fontSize: "0.55rem", fontWeight: 700, letterSpacing: "0.22em", color: "#1B3A6B", textTransform: "uppercase", marginBottom: "0.75rem" }}>JOIN THE TEAM</div>
-          <h2 style={{ fontFamily: "'Chakra Petch',sans-serif", fontSize: "clamp(1.4rem,3vw,2rem)", fontWeight: 700, color: "#fff", marginBottom: "1rem" }}>We Build What Others Can't</h2>
-          <p style={{ fontFamily: "'Archivo Narrow',sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.65)", lineHeight: 1.7, marginBottom: "2rem" }}>
+          <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch',sans-serif", fontSize: "clamp(1.4rem,3vw,2rem)", fontWeight: 700, color: "#fff", marginBottom: "1rem" }}>We Build What Others Can't</h2>
+          <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow',sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.65)", lineHeight: 1.7, marginBottom: "2rem" }}>
             PFS is growing. We are always looking for skilled fabricators, welders, service technicians, and engineers who take pride in their craft. If you want to build systems that end up at SpaceX, Tesla, and PACCAR — we want to hear from you.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/company/careers">
+            <Link data-animation="slideLeft" href="/company/careers">
               <a className="btn-glow" style={{ display: "inline-block", padding: "0.75rem 2rem", fontFamily: "'Chakra Petch',sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", color: "#fff" }}>
                 VIEW OPEN POSITIONS
               </a>
             </Link>
-            <Link href="/contact">
+            <Link data-animation="slideRight" href="/contact">
               <a style={{ display: "inline-block", padding: "0.75rem 2rem", fontFamily: "'Chakra Petch',sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", color: "#fff", border: "1px solid rgba(27,58,107,0.6)" }}>
                 CONTACT US
               </a>
