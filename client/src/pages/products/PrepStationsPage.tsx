@@ -213,17 +213,17 @@ export default function PrepStationsPage() {
             <div style={{ width: 32, height: 2, background: "#fff" }} />
             <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, fontSize: "0.72rem", letterSpacing: "0.18em", color: "rgba(255,255,255,0.7)", textTransform: "uppercase" }}>PFS PREP & SUPPORT SYSTEMS</span>
           </div>
-          <h1 style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 800, fontSize: "clamp(2.4rem,6vw,4.5rem)", lineHeight: 1.0, color: "#fff", textTransform: "uppercase", letterSpacing: "-0.01em", margin: "0 0 0.75rem" }}>
+          <h1 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 800, fontSize: "clamp(2.4rem,6vw,4.5rem)", lineHeight: 1.0, color: "#fff", textTransform: "uppercase", letterSpacing: "-0.01em", margin: "0 0 0.75rem" }}>
             ORION PREP<br />STATIONS
           </h1>
-          <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "clamp(0.95rem,1.8vw,1.15rem)", maxWidth: 560, lineHeight: 1.6, margin: "0 0 1.5rem" }}>
+          <p data-animation="slideLeft"   style={{ color: "rgba(255,255,255,0.8)", fontSize: "clamp(0.95rem,1.8vw,1.15rem)", maxWidth: 560, lineHeight: 1.6, margin: "0 0 1.5rem" }}>
             Exhaust wall prep stations with curtain or fully enclosed ceiling configurations. Single and multi-bay layouts for body shops, collision centers, and industrial finishing lines.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <Link href="/contact/request-a-quote?from=prep-station" className="btn-glow" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, letterSpacing: "0.1em", fontSize: "0.85rem", padding: "0.75rem 2rem", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
+            <Link data-animation="slideLeft" href="/contact/request-a-quote?from=prep-station" className="btn-glow" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, letterSpacing: "0.1em", fontSize: "0.85rem", padding: "0.75rem 2rem", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
               REQUEST A QUOTE <ArrowRight size={15} />
             </Link>
-            <a href="tel:8885457715" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, letterSpacing: "0.1em", fontSize: "0.85rem", padding: "0.75rem 2rem", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.5rem", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", background: "transparent" }}>
+            <a data-animation="slideRight"  href="tel:8885457715" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, letterSpacing: "0.1em", fontSize: "0.85rem", padding: "0.75rem 2rem", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.5rem", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", background: "transparent" }}>
               <Phone size={14} /> (888) 545-7715
             </a>
           </div>
@@ -240,7 +240,7 @@ export default function PrepStationsPage() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, fontSize: "0.7rem", letterSpacing: "0.18em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.6rem" }}>ORION PREP SERIES</span>
-            <h2 style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 800, fontSize: "clamp(1.8rem,3.5vw,2.8rem)", textTransform: "uppercase", lineHeight: 1.05, color: "#111", margin: "0 0 1.2rem" }}>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 800, fontSize: "clamp(1.8rem,3.5vw,2.8rem)", textTransform: "uppercase", lineHeight: 1.05, color: "#111", margin: "0 0 1.2rem" }}>
               PREP SMARTER.<br />PAINT FASTER.
             </h2>
             <p style={{ color: "#444", lineHeight: 1.75, fontSize: "0.97rem", marginBottom: "1rem" }}>
@@ -276,10 +276,10 @@ export default function PrepStationsPage() {
       <section style={{ background: "#f5f5f5", padding: "clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,4rem)" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, fontSize: "0.7rem", letterSpacing: "0.18em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.5rem" }}>CONFIGURATIONS</span>
-          <h2 style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 800, fontSize: "clamp(1.6rem,3vw,2.4rem)", textTransform: "uppercase", lineHeight: 1.05, color: "#111", margin: "0 0 2rem" }}>
+          <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 800, fontSize: "clamp(1.6rem,3vw,2.4rem)", textTransform: "uppercase", lineHeight: 1.05, color: "#111", margin: "0 0 2rem" }}>
             TWO WAYS TO CONFIGURE
           </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
+          <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
             {[
               {
                 title: "EXHAUST WALL + CURTAINS",
@@ -325,7 +325,7 @@ export default function PrepStationsPage() {
           </div>
           <div>
             <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, fontSize: "0.7rem", letterSpacing: "0.18em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.6rem" }}>MULTI-BAY CONFIGURATIONS</span>
-            <h2 style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 800, fontSize: "clamp(1.6rem,3vw,2.4rem)", textTransform: "uppercase", lineHeight: 1.05, color: "#111", margin: "0 0 1rem" }}>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 800, fontSize: "clamp(1.6rem,3vw,2.4rem)", textTransform: "uppercase", lineHeight: 1.05, color: "#111", margin: "0 0 1rem" }}>
               SCALE YOUR<br />PREP CAPACITY
             </h2>
             <p style={{ color: "#444", lineHeight: 1.75, fontSize: "0.97rem", marginBottom: "1rem" }}>
@@ -334,7 +334,7 @@ export default function PrepStationsPage() {
             <p style={{ color: "#444", lineHeight: 1.75, fontSize: "0.97rem", marginBottom: "1.5rem" }}>
               Multi-bay configurations are common in high-volume collision centers, fleet shops, and industrial finishing operations where multiple vehicles or parts need to be prepped simultaneously.
             </p>
-            <Link href="/contact/request-a-quote?from=prep-station" className="btn-glow" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, letterSpacing: "0.1em", fontSize: "0.85rem", padding: "0.75rem 2rem", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
+            <Link data-animation="slideRight" href="/contact/request-a-quote?from=prep-station" className="btn-glow" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, letterSpacing: "0.1em", fontSize: "0.85rem", padding: "0.75rem 2rem", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
               CONFIGURE MULTI-BAY <ArrowRight size={15} />
             </Link>
           </div>
@@ -345,10 +345,10 @@ export default function PrepStationsPage() {
       <section style={{ background: "#f5f5f5", padding: "clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,4rem)" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, fontSize: "0.7rem", letterSpacing: "0.18em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.5rem" }}>STANDARD FEATURES</span>
-          <h2 style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 800, fontSize: "clamp(1.6rem,3vw,2.4rem)", textTransform: "uppercase", lineHeight: 1.05, color: "#111", margin: "0 0 2rem" }}>
+          <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 800, fontSize: "clamp(1.6rem,3vw,2.4rem)", textTransform: "uppercase", lineHeight: 1.05, color: "#111", margin: "0 0 2rem" }}>
             BUILT TO THE SAME STANDARD<br />AS OUR SPRAY BOOTHS
           </h2>
-          <button
+          <button data-animation="slideRight"
             onClick={() => setFeaturesOpen(v => !v)}
             style={{ marginBottom: "1.5rem", display: "flex", alignItems: "center", gap: "0.5rem", fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, fontSize: "0.8rem", letterSpacing: "0.12em", textTransform: "uppercase", color: BLUE, background: "none", border: `1.5px solid ${BLUE}`, padding: "0.6rem 1.4rem", cursor: "pointer" }}
           >
@@ -372,10 +372,10 @@ export default function PrepStationsPage() {
       <section style={{ padding: "clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,4rem)", maxWidth: 1200, margin: "0 auto" }}>
         <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, fontSize: "0.7rem", letterSpacing: "0.18em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.5rem" }}>STANDARD SIZES</span>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem", marginBottom: "1.5rem" }}>
-          <h2 style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 800, fontSize: "clamp(1.6rem,3vw,2.4rem)", textTransform: "uppercase", lineHeight: 1.05, color: "#111", margin: 0 }}>
+          <h2 data-animation="slideLeft"  style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 800, fontSize: "clamp(1.6rem,3vw,2.4rem)", textTransform: "uppercase", lineHeight: 1.05, color: "#111", margin: 0 }}>
             STANDARD DIMENSIONS
           </h2>
-          <button
+          <button data-animation="slideRight"
             onClick={() => setSizesOpen(v => !v)}
             style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, fontSize: "0.78rem", letterSpacing: "0.12em", textTransform: "uppercase", color: BLUE, background: "none", border: `1.5px solid ${BLUE}`, padding: "0.55rem 1.2rem", cursor: "pointer" }}
           >
@@ -444,7 +444,7 @@ export default function PrepStationsPage() {
       <section style={{ background: "#111", padding: "clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,4rem)" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, fontSize: "0.7rem", letterSpacing: "0.18em", color: "rgba(255,255,255,0.5)", textTransform: "uppercase", display: "block", marginBottom: "0.5rem" }}>REAL INSTALLS &amp; RENDERS</span>
-          <h2 style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 800, fontSize: "clamp(1.6rem,3vw,2.4rem)", textTransform: "uppercase", lineHeight: 1.05, color: "#fff", margin: "0 0 2rem" }}>
+          <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 800, fontSize: "clamp(1.6rem,3vw,2.4rem)", textTransform: "uppercase", lineHeight: 1.05, color: "#fff", margin: "0 0 2rem" }}>
             ORION PREP GALLERY
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "0.75rem" }}>
@@ -492,14 +492,14 @@ export default function PrepStationsPage() {
       <section style={{ background: BLUE, padding: "clamp(2rem,4vw,3rem) clamp(1.5rem,5vw,4rem)" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1.5rem" }}>
           <div>
-            <h2 style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 800, fontSize: "clamp(1.4rem,2.5vw,2rem)", textTransform: "uppercase", color: "#fff", margin: "0 0 0.4rem" }}>READY TO CONFIGURE YOUR PREP STATION?</h2>
-            <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.95rem", margin: 0 }}>Single bay, multi-bay, curtain or enclosed ceiling — we build to your specs.</p>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 800, fontSize: "clamp(1.4rem,2.5vw,2rem)", textTransform: "uppercase", color: "#fff", margin: "0 0 0.4rem" }}>READY TO CONFIGURE YOUR PREP STATION?</h2>
+            <p data-animation="slideLeft" style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.95rem", margin: 0 }}>Single bay, multi-bay, curtain or enclosed ceiling — we build to your specs.</p>
           </div>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <Link href="/contact/request-a-quote?from=prep-station" className="btn-glow" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, letterSpacing: "0.1em", fontSize: "0.85rem", padding: "0.75rem 2rem", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
+            <Link data-animation="slideLeft"  href="/contact/request-a-quote?from=prep-station" className="btn-glow" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, letterSpacing: "0.1em", fontSize: "0.85rem", padding: "0.75rem 2rem", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
               GET PRICING <ArrowRight size={15} />
             </Link>
-            <a href="tel:8885457715" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, letterSpacing: "0.1em", fontSize: "0.85rem", padding: "0.75rem 2rem", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.5rem", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", background: "transparent" }}>
+            <a data-animation="slideRight" href="tel:8885457715" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, letterSpacing: "0.1em", fontSize: "0.85rem", padding: "0.75rem 2rem", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.5rem", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", background: "transparent" }}>
               <Phone size={14} /> (888) 545-7715
             </a>
           </div>
@@ -512,7 +512,7 @@ export default function PrepStationsPage() {
         <div className="container" style={{ maxWidth:"860px" }}>
           <div style={{ textAlign:"center", marginBottom:"2.5rem" }}>
             <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:"#1B3A6B",textTransform:"uppercase",display:"block",marginBottom:"0.4rem" }}>FREQUENTLY ASKED QUESTIONS</span>
-            <h2 style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.4rem,3.5vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Paint Prep Stations — Common Questions</h2>
+            <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.4rem,3.5vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Paint Prep Stations — Common Questions</h2>
           </div>
           {[
             { q: "What is a paint prep station used for?", a: "A paint prep station provides a dedicated, code-compliant environment for sanding, priming, masking, and other surface preparation tasks that need to happen before final painting. By handling prep work in a separate station, you keep your spray booth available for final coats — increasing overall throughput and reducing contamination risk in the booth." },

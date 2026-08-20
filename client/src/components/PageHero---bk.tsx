@@ -58,15 +58,11 @@ function PageHeroVideo({
     v.muted = true;
     v.playsInline = true;
     v.play().catch(() => {});
-  }, [bgVideo]);
+  }, []);
   return (
     <>
       {/* Video with poster — poster shows instantly, video plays on top */}
-      <video
-        key={bgVideo}
-        src={bgVideo}
-        poster={bgPoster}
-        preload="auto"
+      <video preload="auto"
         ref={videoRef}
         autoPlay
         muted
@@ -79,7 +75,9 @@ function PageHeroVideo({
           objectFit: "cover", objectPosition: bgImagePosition, display: "block",
           opacity: 1, zIndex: 0,
         }}
-      />
+      >
+        <source src={bgVideo} type="video/mp4" />
+      </video>
     </>
   );
 }
@@ -237,7 +235,7 @@ export default function PageHero({
         )}
 
         {/* Title */}
-        <h1 data-animation="slideLeft"
+        <h1
           style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "clamp(2.2rem, 4.5vw, 3.4rem)",
@@ -255,7 +253,7 @@ export default function PageHero({
 
         {/* Subtitle */}
         {subtitle && (
-          <p data-animation="slideRight"
+          <p
             className="max-w-2xl"
             style={{
               fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
@@ -273,13 +271,13 @@ export default function PageHero({
         {/* CTA Buttons */}
         {ctaPricing && (
           <div className="flex flex-wrap gap-3">
-            <Link data-animation="slideLeft" href={ctaPricingHref}>
+            <Link href={ctaPricingHref}>
               <span className="btn-glow" style={{ padding: "0.75rem 2rem", fontSize: "0.85rem" }}>
                 GET PRICING →
               </span>
             </Link>
             {ctaPhone && (
-              <a data-animation="slideRight" href={`tel:${ctaPhone.replace(/\D/g, "")}`}>
+              <a href={`tel:${ctaPhone.replace(/\D/g, "")}`}>
                 <button
                   style={{
                     fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
