@@ -155,8 +155,8 @@ export default function FiltersPage() {
           }}>
             OEM exhaust filters, intake media, ceiling filters, and replacement kits for all PFS booth models and most major OEM brands. NFPA 33 compliant. Ships nationwide from our Northern California warehouse.
           </p>
-          <div  style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-            <a data-animation="slideLeft" href="tel:8885457715" style={{
+          <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+            {/* <a data-animation="slideLeft" href="tel:8885457715" style={{
               background: BLUE, color: "#fff",
               border: "none", padding: "0.85rem 1.8rem",
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
@@ -167,19 +167,49 @@ export default function FiltersPage() {
               textDecoration: "none",
             }}>
               <Phone size={14} /> Call for Filters: (888) 545-7715
+            </a> */}
+
+            <a href="tel:+18885457715">
+              <span
+                className="btn-primary"
+                style={{ fontSize: "0.78rem", padding: "0.7rem 1.75rem" }}
+              >
+                <Phone size={14} /> Call for Filters: (888) 545-7715
+              </span>
             </a>
-            <a data-animation="slideRight" href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" style={{
-              background: "transparent", color: "#fff",
-              border: "2px solid rgba(255,255,255,0.5)", padding: "0.85rem 1.8rem",
-              fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-              fontSize: "0.85rem", fontWeight: 800,
-              letterSpacing: "0.1em", textTransform: "uppercase",
-              cursor: "pointer", borderRadius: "2px",
-              display: "inline-flex", alignItems: "center", gap: "0.4rem",
-              textDecoration: "none",
-            }}>
-              Order Online at pfsfilters.com <ExternalLink size={13} />
-            </a>
+     <a
+  data-animation="slideRight"
+  href="https://pfsfilters.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+    fontWeight: 700,
+    fontSize: "0.85rem",
+    letterSpacing: "0.1em",
+    textTransform: "uppercase",
+    padding: "0.75rem 2rem",
+    backgroundColor: "transparent",
+    color: "#fff",
+    border: "1.5px solid rgba(255,255,255,0.55)",
+    cursor: "pointer",
+    transition: "border-color 0.2s, background 0.2s",
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "0.4rem",
+    textDecoration: "none",
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.borderColor = "#fff";
+    e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.08)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.borderColor = "rgba(255,255,255,0.55)";
+    e.currentTarget.style.backgroundColor = "transparent";
+  }}
+>
+  Order Online at pfsfilters.com <ExternalLink size={13} />
+</a>
           </div>
         </div>
       </section>
@@ -206,7 +236,7 @@ export default function FiltersPage() {
                 The Right Filter<br />for Every Booth
               </h2>
               <div style={{ width: "40px", height: "3px", background: BLUE, marginBottom: "1.5rem" }} />
-              <p  style={{
+              <p style={{
                 fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
                 fontSize: "0.95rem", color: "#444", lineHeight: 1.75,
                 marginBottom: "1.25rem",

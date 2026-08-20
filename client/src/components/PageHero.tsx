@@ -90,7 +90,7 @@ export default function PageHero({
   breadcrumbs,
   bgImage,
   bgVideo,
-  bgImagePosition = "center 55%",
+  bgImagePosition = "center 50%",
   bgImageFit = "cover",
   minHeight = "clamp(300px, 38vw, 460px)",
   overlayOpacity = 0.22,

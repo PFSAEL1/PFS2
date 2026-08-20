@@ -6,7 +6,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { submitLead } from "@/lib/submitLead";
 
-const IMG = "/assets/helios-booth-warehouse_7b31d966.jpg";
+const IMG = "/assets/pfs-helios-enclosed-booth-real_2bc88039.jpeg";
 
 export default function ContactHub() {
   useSEO({

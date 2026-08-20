@@ -90,20 +90,20 @@ export default function Footer() {
                 style={{ height: "52px", width: "auto", objectFit: "contain", display: "block", cursor: "pointer" }}
               />
             </Link>
-            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "rgba(255,255,255,0.45)", lineHeight: 1.75, marginBottom: "1.25rem" }}>
+            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "rgba(255,255,255)", lineHeight: 1.75, marginBottom: "1.25rem" }}>
               Industrial spray paint booths, powder booths, ovens, blast systems, and finishing equipment — manufactured in the USA with ETL/UL listed and certified components, for automotive, aerospace, industrial, and more.
             </p>
             <div className="space-y-1.5">
-              <a href="tel:8885457715" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "rgba(255,255,255,0.55)", display: "block", textDecoration: "none", transition: "color 0.15s" }}
-                onMouseEnter={e => (e.currentTarget.style.color = "white")} onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.55)")}>
+              <a href="tel:8885457715" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "rgba(255,255,255)", display: "block", textDecoration: "none", transition: "color 0.15s" }}
+                onMouseEnter={e => (e.currentTarget.style.color = "white")} onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255)")}>
                 (888) 545-7715 Toll Free
               </a>
 
-              <a href="mailto:info@pfsspraybooths.com" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "rgba(255,255,255,0.55)", display: "block", textDecoration: "none", transition: "color 0.15s" }}
-                onMouseEnter={e => (e.currentTarget.style.color = "white")} onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.55)")}>
+              <a href="mailto:info@pfsspraybooths.com" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "rgba(255,255,255)", display: "block", textDecoration: "none", transition: "color 0.15s" }}
+                onMouseEnter={e => (e.currentTarget.style.color = "white")} onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255)")}>
                 info@pfsspraybooths.com
               </a>
-              <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "rgba(255,255,255,0.35)" }}>
+              <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "rgba(255,255,255)" }}>
                 1400 Airport Blvd, Santa Rosa, CA 95403
               </p>
             </div>
@@ -129,7 +129,7 @@ export default function Footer() {
                   "external" in link && link.external ? (
                     <li key={link.label}>
                       <a href={link.href} target="_blank" rel="noopener noreferrer"
-                        style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.78rem", color: "rgba(255,255,255,0.45)", textDecoration: "none", transition: "color 0.15s" }}
+                        style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.78rem", color: "rgb(255,255,255)", textDecoration: "none", transition: "color 0.15s" }}
                         onMouseEnter={e => (e.currentTarget.style.color = "white")}
                         onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.45)")}>
                         {link.label} ↗
@@ -138,9 +138,9 @@ export default function Footer() {
                   ) : (
                     <li key={link.label}>
                       <Link href={link.href}>
-                        <span style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.78rem", color: "rgba(255,255,255,0.45)", cursor: "pointer", transition: "color 0.15s" }}
+                        <span style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.78rem", color: "rgb(255,255,255)", cursor: "pointer", transition: "color 0.15s" }}
                           onMouseEnter={e => ((e.target as HTMLElement).style.color = "white")}
-                          onMouseLeave={e => ((e.target as HTMLElement).style.color = "rgba(255,255,255,0.45)")}>
+                          onMouseLeave={e => ((e.target as HTMLElement).style.color = "rgba(255,255,255)")}>
                           {link.label}
                         </span>
                       </Link>

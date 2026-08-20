@@ -265,6 +265,7 @@ function ProductsMegaMenu() {
                             fontSize: "0.78rem",
                             color: "#555",
                             display: "block",
+                            fontWeight: 600,
                             padding: "0.28rem 1.5rem",
                             transition: "color 0.15s, background 0.15s",
                             cursor: "pointer",
@@ -325,6 +326,7 @@ function SimpleDropdown({ items, noFeatured = false }: { items: NavSubItem[]; no
     padding: "0.3rem 0.85rem",
     textDecoration: "none",
     transition: "all 0.15s",
+    fontWeight: 600,
     cursor: "pointer",
   };
   const hoverClass = "hover:text-[#1B2B4B] hover:bg-gray-50";
@@ -459,12 +461,12 @@ export default function Navbar() {
                 (888) 545-7715
               </a>
 
-              <a href="mailto:info@pfsspraybooths.com" className="hidden lg:flex items-center transition-colors"
+              {/* <a href="mailto:info@pfsspraybooths.com" className="hidden lg:flex items-center transition-colors"
                 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.62rem", color: "#FFFFFF", letterSpacing: "0.08em", textTransform: "uppercase" }}
                 onMouseEnter={e => (e.currentTarget.style.color = "rgba(255,255,255,0.75)")}
                 onMouseLeave={e => (e.currentTarget.style.color = "#FFFFFF")}>
                 info@pfsspraybooths.com
-              </a>
+              </a> */}
             </div>
             <div className="flex items-center gap-3 md:gap-5">
               {[

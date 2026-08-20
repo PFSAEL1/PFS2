@@ -206,15 +206,15 @@ export default function Home() {
               Engineering the Future<br />
               <span style={{ color: "#FFFFFF", textShadow: "0 0 40px rgba(255,255,255,0.25)" }}>of Industrial Finish</span>
             </h1>
-            <p style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(0.85rem, 2vw, 1rem)", color: "rgba(255,255,255,0.85)", lineHeight: 2, marginBottom: "2.5rem", maxWidth: "520px", letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 600 }}>
-              Paint.&nbsp;&nbsp;Powder.&nbsp;&nbsp;Automation.&nbsp;&nbsp;Filters.&nbsp;&nbsp;Service.<br />
+            <p style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(0.85rem, 2vw, 1rem)", color: "rgba(255,255,255,0.85)", lineHeight: 2, marginBottom: "2.5rem", maxWidth: "700px", letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 600, whiteSpace: "nowrap"}}>
+              PFS Industrial Finishing.&nbsp;&nbsp;Powder.&nbsp;&nbsp;Automation.&nbsp;&nbsp;Filtration.&nbsp;&nbsp;Service.<br />
               <span style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.75em", letterSpacing: "0.1em" }}>ETL Listed &nbsp;·&nbsp; Made in USA</span>
             </p>
 
             <div style={{ display: "flex", flexDirection: "row", flexWrap: "nowrap", gap: "0.75rem", marginBottom: "2.5rem", alignItems: "center" }}>
               <Link data-animation="slideLeft" href="/contact/request-a-quote">
                 <span className="btn-primary" style={{ fontSize: "0.78rem", padding: "0.75rem 1.4rem", whiteSpace: "nowrap" }}>
-                  Request Info <ArrowRight size={14} />
+                  START A PROJECT <ArrowRight size={14} />
                 </span>
               </Link>
               {/* Mobile-only: View Products CTA */}
@@ -231,7 +231,7 @@ export default function Home() {
                   transition: "all 0.2s ease",
                   boxShadow: "0 0 12px rgba(255,255,255,0.15), inset 0 0 12px rgba(255,255,255,0.05)",
                 }}>
-                  View Products <ArrowRight size={14} />
+                  EXPLORE EQUIPMENT <ArrowRight size={14} />
                 </span>
               </Link>
             </div>
@@ -257,13 +257,14 @@ export default function Home() {
           <div className="mb-12">
             <div className="flex items-center gap-3 mb-3">
               <div style={{ width: "1.5rem", height: "2px", backgroundColor: "#FFFFFF" }} />
-              <span className="section-label" style={{ marginBottom: 0 }}>Our Equipment</span>
+              <span className="section-label" style={{ marginBottom: 0 }}>INDUSTRIAL FINISHING EQUIPMENT</span>
             </div>
             <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2.2rem, 4vw, 3.5rem)", fontWeight: 800, color: "white", lineHeight: 1.0, letterSpacing: "-0.02em", marginBottom: "1rem" }}>
-              Complete Finishing Solutions
+              ENGINEERED FOR PRODUCTION
             </h2>
             <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.92rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.8, maxWidth: "520px" }}>
-              From single spray booths to fully integrated finishing lines, PFS manufactures the complete range of industrial finishing equipment your operation needs.
+              From individual spray booths to fully integrated finishing lines, PFS engineers and manufactures industrial finishing equipment for demanding production environments.
+              {/* From single spray booths to fully integrated finishing lines, PFS manufactures the complete range of industrial finishing equipment your operation needs. */}
             </p>
           </div>
 

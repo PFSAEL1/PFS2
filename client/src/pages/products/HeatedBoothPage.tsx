@@ -176,7 +176,7 @@ export default function HeatedBoothPage() {
       {/* ── HERO ── */}
       <section style={{ position: "relative", minHeight: "clamp(380px, 60vh, 620px)", background: "#0a0a0a", display: "flex", alignItems: "center", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0 }}>
-          <img src={HERO_IMG} alt="PFS Zenith heated paint booth" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", opacity: 0.5 }} />
+          <img src={HERO_IMG} alt="PFS Zenith heated paint booth" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%", opacity: 0.5 }} />
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(90deg, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.15) 100%)" }} />
         </div>
         <div className="container" style={{ position: "relative", zIndex: 2, padding: "5rem 0 4rem" }}>
