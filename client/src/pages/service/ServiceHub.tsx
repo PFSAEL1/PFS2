@@ -155,7 +155,7 @@ function ServiceCard({ id, label, tagline, img, icon, desc, bullets, href, accen
     return () => { if (script.parentNode) script.parentNode.removeChild(script); };
   }, []);
   return (
-    <Link href={href} style={{ textDecoration: "none", display: "block" }}>
+    <Link  data-animation="fadeIn" href={href} style={{ textDecoration: "none", display: "block" }}>
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -163,7 +163,7 @@ function ServiceCard({ id, label, tagline, img, icon, desc, bullets, href, accen
         background: "#fff",
         border: `2px solid ${hovered ? accent : "#e2e8f0"}`,
         borderRadius: "2px",
-        overflow: "hidden",
+        // overflow: "hidden",
         transition: "border-color 0.15s, box-shadow 0.15s",
         boxShadow: hovered
           ? `0 0 0 3px rgba(27,58,107,0.08), 0 8px 28px rgba(27,58,107,0.12)`
@@ -315,7 +315,7 @@ export default function ServiceHub() {
             <span style={{ display: "inline-block", width: "28px", height: "2px", background: BLUE_LIGHT }} />
             PFS — INDUSTRIAL FINISHING EQUIPMENT
           </div>
-          <h1 style={{
+          <h1 data-animation="slideLeft" style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "clamp(2.4rem, 5vw, 3.8rem)", fontWeight: 900,
             color: "#fff", lineHeight: 1.0, textTransform: "uppercase",
@@ -323,7 +323,7 @@ export default function ServiceHub() {
           }}>
             Service &<br />Support
           </h1>
-          <p style={{
+          <p data-animation="slideLeft" style={{
             fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
             fontSize: "clamp(0.88rem, 1.4vw, 1rem)",
             color: "rgba(255,255,255,0.75)", lineHeight: 1.6,
@@ -332,7 +332,7 @@ export default function ServiceHub() {
             From scheduled maintenance and booth cleaning to 24/7 emergency response — PFS backs every system we build. We service collision repair shops, fleet operators, auto dealership groups, aerospace facilities, and industrial finishing lines across North America.
           </p>
           <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-            <Link href="/contact">
+            <Link data-animation="slideLeft" href="/contact">
               <button style={{
                 background: BLUE, color: "#fff",
                 border: "none", padding: "0.85rem 1.8rem",
@@ -345,7 +345,7 @@ export default function ServiceHub() {
                 REQUEST SERVICE <ArrowRight size={14} />
               </button>
             </Link>
-            <a href="tel:+18885457715">
+            <a data-animation="slideRight" href="tel:+18885457715">
               <button style={{
                 background: RED, color: "#fff",
                 border: "none", padding: "0.85rem 1.8rem",
@@ -373,7 +373,7 @@ export default function ServiceHub() {
           }}>
             SELECT A SERVICE CATEGORY
           </div>
-          <h2 style={{
+          <h2 data-animation="slideLeft" style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontWeight: 900,
             color: "#111", textTransform: "uppercase",
@@ -384,7 +384,7 @@ export default function ServiceHub() {
         </div>
 
         <div style={{
-          display: "grid",
+          display: "grid", 
           gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
           gap: "1.5rem",
         }}>
@@ -409,7 +409,7 @@ export default function ServiceHub() {
           }}>
             CALIFORNIA SERVICE COVERAGE
           </div>
-          <h2 style={{
+          <h2 data-animation="slideLeft" style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "clamp(1.4rem, 2.5vw, 1.9rem)", fontWeight: 900,
             color: "#111", textTransform: "uppercase",
@@ -417,7 +417,7 @@ export default function ServiceHub() {
           }}>
             Serving All of California — 20+ Years
           </h2>
-          <p style={{
+          <p data-animation="slideLeft" style={{
             fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
             fontSize: "0.95rem", color: "#444", lineHeight: 1.7,
             maxWidth: "700px", marginBottom: "1.5rem",
@@ -425,7 +425,7 @@ export default function ServiceHub() {
             PFS has been the trusted spray booth service provider across California for over 20 years. Our technicians are NFPA 33, CARB, AQMD, and NESHAP certified — serving automotive, aerospace, industrial, and fleet finishing operations from San Diego to Sacramento.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <a href="/spray-booth-service-california" style={{
+            <a data-animation="slideLeft" href="/spray-booth-service-california" style={{
               background: BLUE, color: "#fff",
               padding: "0.75rem 1.6rem",
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
@@ -434,7 +434,7 @@ export default function ServiceHub() {
               borderRadius: "2px",
               display: "inline-flex", alignItems: "center", gap: "0.4rem",
               textDecoration: "none",
-              transition: "box-shadow 0.2s ease, background 0.18s ease, transform 0.15s ease",
+              // transition: "box-shadow 0.2s ease, background 0.18s ease, transform 0.15s ease",
             }}
             onMouseEnter={e => {
               e.currentTarget.style.background = "#2A5298";
@@ -448,7 +448,7 @@ export default function ServiceHub() {
             }}>
               California Service Page
             </a>
-            <a href="/spray-booth-service-los-angeles" style={{
+            <a data-animation="fadeIn" href="/spray-booth-service-los-angeles" style={{
               background: "transparent", color: BLUE,
               border: `2px solid ${BLUE}`, padding: "0.75rem 1.6rem",
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
@@ -457,7 +457,7 @@ export default function ServiceHub() {
               borderRadius: "2px",
               display: "inline-flex", alignItems: "center", gap: "0.4rem",
               textDecoration: "none",
-              transition: "box-shadow 0.2s ease, background 0.18s ease, color 0.18s ease, transform 0.15s ease",
+              // transition: "box-shadow 0.2s ease, background 0.18s ease, color 0.18s ease, transform 0.15s ease",
             }}
             onMouseEnter={e => {
               e.currentTarget.style.background = BLUE;
@@ -473,7 +473,7 @@ export default function ServiceHub() {
             }}>
               Los Angeles County Service
             </a>
-            <a href="/spray-booth-service-bay-area" style={{
+            <a data-animation="slideRight" href="/spray-booth-service-bay-area" style={{
               background: "transparent", color: BLUE,
               border: `2px solid ${BLUE}`, padding: "0.75rem 1.6rem",
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
@@ -482,7 +482,7 @@ export default function ServiceHub() {
               borderRadius: "2px",
               display: "inline-flex", alignItems: "center", gap: "0.4rem",
               textDecoration: "none",
-              transition: "box-shadow 0.2s ease, background 0.18s ease, color 0.18s ease, transform 0.15s ease",
+              // transition: "box-shadow 0.2s ease, background 0.18s ease, color 0.18s ease, transform 0.15s ease",
             }}
             onMouseEnter={e => {
               e.currentTarget.style.background = BLUE;
@@ -522,7 +522,7 @@ export default function ServiceHub() {
             }}>
               24/7 EMERGENCY SERVICE
             </div>
-            <div style={{
+            <div data-animation="slideLeft" style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "clamp(1.6rem, 3vw, 2.2rem)", fontWeight: 900,
               color: "#fff", textTransform: "uppercase",
@@ -531,7 +531,7 @@ export default function ServiceHub() {
               Equipment Down?<br />Call Now.
             </div>
           </div>
-          <a href="tel:+18885457715" style={{ textDecoration: "none" }}>
+          <a data-animation="slideRight" href="tel:+18885457715" style={{ textDecoration: "none" }}>
             <button style={{
               background: "#fff", color: RED,
               border: "none", padding: "1rem 2.2rem",

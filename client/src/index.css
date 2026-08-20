@@ -154,7 +154,7 @@
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    transition: all 0.2s ease, box-shadow 0.2s ease;
+    /* transition: all 0.2s ease, box-shadow 0.2s ease; */
     cursor: pointer;
     text-decoration: none;
     white-space: nowrap;
@@ -181,7 +181,7 @@
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    transition: all 0.2s ease, box-shadow 0.2s ease;
+    /* transition: all 0.2s ease, box-shadow 0.2s ease; */
     cursor: pointer;
     text-decoration: none;
     white-space: nowrap;
@@ -206,7 +206,7 @@
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    transition: all 0.2s ease, box-shadow 0.2s ease;
+    /* transition: all 0.2s ease, box-shadow 0.2s ease; */
     cursor: pointer;
     text-decoration: none;
     white-space: nowrap;
@@ -232,7 +232,7 @@
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    transition: all 0.2s ease, box-shadow 0.25s ease;
+    /* transition: all 0.2s ease, box-shadow 0.25s ease; */
     cursor: pointer;
     text-decoration: none;
     white-space: nowrap;
@@ -263,7 +263,7 @@
     cursor: pointer;
     text-decoration: none;
     white-space: nowrap;
-    transition: all 0.2s ease, box-shadow 0.25s ease;
+    /* transition: all 0.2s ease, box-shadow 0.25s ease; */
   }
   .btn-glow:hover, .btn-glow:active {
     background: #0f1a30;
@@ -291,7 +291,7 @@
     cursor: pointer;
     text-decoration: none;
     white-space: nowrap;
-    transition: all 0.2s ease, box-shadow 0.25s ease;
+    /* transition: all 0.2s ease, box-shadow 0.25s ease; */
   }
   .btn-glow-white:hover, .btn-glow-white:active {
     background: transparent;
@@ -597,7 +597,7 @@
   .product-card {
     background: #FFFFFF;
     border: 1.5px solid #D8D8D4;
-    overflow: hidden;
+    /* overflow: hidden; */
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   }
@@ -712,7 +712,7 @@
   white-space: nowrap;
   min-height: 44px;
   flex-shrink: 0;
-  transition: all 0.2s ease, box-shadow 0.25s ease;
+  /* transition: all 0.2s ease, box-shadow 0.25s ease; */
   cursor: pointer;
 }
 .mobile-cta-bar .cta-btn:hover,
@@ -811,7 +811,7 @@
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.2s ease, box-shadow 0.25s ease;
+  /* transition: all 0.2s ease, box-shadow 0.25s ease; */
 }
 .btn-white-outline:hover,
 .btn-white-outline:active {

@@ -324,14 +324,14 @@ export default function DoubleWallBoothPage() {
         <div style={{ position:"absolute",bottom:0,left:0,right:0,height:"3px",background:BLUE,zIndex:3 }}/>
         <div className="container" style={{ position:"relative",zIndex:2,paddingTop:"8rem",paddingBottom:"3.5rem" }}>
           <span style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"0.72rem",fontWeight:700,letterSpacing:"0.18em",color:"rgba(255,255,255,0.5)",textTransform:"uppercase",display:"block",marginBottom:"1rem" }}>PAINT BOOTHS — ENCLOSED</span>
-          <h1 style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(2.6rem,7vw,5rem)",fontWeight:800,color:"#fff",lineHeight:1.0,letterSpacing:"-0.01em",marginBottom:"1rem",maxWidth:"680px" }}>Double-Wall<br/>Paint Booths<br/>Built to Last</h1>
+          <h1 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(2.6rem,7vw,5rem)",fontWeight:800,color:"#fff",lineHeight:1.0,letterSpacing:"-0.01em",marginBottom:"1rem",maxWidth:"680px" }}>Double-Wall<br/>Paint Booths<br/>Built to Last</h1>
           <span style={{ display:"inline-flex",alignItems:"center",gap:"0.4rem",background:"rgba(27,58,107,0.75)",border:"1px solid rgba(107,163,224,0.4)",color:"#6fa3e0",borderRadius:"2px",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",textTransform:"uppercase",padding:"0.3rem 0.75rem",marginBottom:"1.25rem" }}>PFS ZENITH SERIES</span>
-          <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"clamp(0.95rem,1.8vw,1.1rem)",color:"rgba(255,255,255,0.82)",lineHeight:1.7,marginBottom:"2.5rem",maxWidth:"500px" }}>ETL listed. UL 508A certified. Insulated double-wall panel construction — available in all four airflow configurations. Ships nationally.</p>
+          <p data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif",fontSize:"clamp(0.95rem,1.8vw,1.1rem)",color:"rgba(255,255,255,0.82)",lineHeight:1.7,marginBottom:"2.5rem",maxWidth:"500px" }}>ETL listed. UL 508A certified. Insulated double-wall panel construction — available in all four airflow configurations. Ships nationally.</p>
           <div style={{ display:"flex",flexWrap:"wrap",gap:"1rem" }}>
-            <Link href="/contact/request-a-quote?from=double-wall-booth">
+            <Link data-animation="slideLeft" href="/contact/request-a-quote?from=double-wall-booth">
               <span className="btn-glow" style={{ width: "100%", maxWidth: "320px", justifyContent: "center" }}>GET PRICING <ArrowRight size={16}/></span>
             </Link>
-            <a href="tel:8885457715" style={{ width:"100%",maxWidth:"320px" }}>
+            <a data-animation="slideRight" href="tel:8885457715" style={{ width:"100%",maxWidth:"320px" }}>
               <span style={{ display:"flex",alignItems:"center",justifyContent:"center",gap:"0.5rem",background:"transparent",color:"#fff",border:"1.5px solid rgba(255,255,255,0.5)",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.9rem",fontWeight:700,letterSpacing:"0.1em",textTransform:"uppercase",padding:"1.1rem 2.5rem",cursor:"pointer" }}>CALL (888) 545-7715</span>
             </a>
           </div>
@@ -347,18 +347,18 @@ export default function DoubleWallBoothPage() {
           <div style={{ display:"flex",flexDirection:"column",alignItems:"center",gap:"1.5rem" }}>
             <div style={{ textAlign:"center" }}>
               <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.6rem" }}>FEATURED PAINT BOOTH</span>
-              <h2 style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.6rem,3vw,2.4rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.5rem" }}>PFS Zenith Double-Wall Paint Booth</h2>
+              <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.6rem,3vw,2.4rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.5rem" }}>PFS Zenith Double-Wall Paint Booth</h2>
               <span style={{ display:"inline-flex",alignItems:"center",gap:"0.4rem",background:BLUE,color:"#fff",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.68rem",fontWeight:800,letterSpacing:"0.16em",textTransform:"uppercase",padding:"0.28rem 0.85rem",marginBottom:"0.75rem" }}>PFS ZENITH SERIES</span>
-              <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.95rem",color:"#555",maxWidth:"520px",margin:"0 auto",lineHeight:1.7 }}>Insulated double-wall panel construction. ETL listed. UL 508A controls. Built to NFPA 33 standards. Available in all airflow configurations. Standard sizes 14'W × 9–12'H × 24–33'L. Custom sizes available.</p>
+              <p  data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.95rem",color:"#555",maxWidth:"520px",margin:"0 auto",lineHeight:1.7 }}>Insulated double-wall panel construction. ETL listed. UL 508A controls. Built to NFPA 33 standards. Available in all airflow configurations. Standard sizes 14'W × 9–12'H × 24–33'L. Custom sizes available.</p>
             </div>
             <div style={{ width:"100%",maxWidth:"900px",overflow:"hidden",borderRadius:"2px" }}>
               <img src={FEATURED_IMG} alt="PFS Zenith Series Double-Wall Paint Booth — open doors view" style={{ width:"100%",height:"auto",display:"block",objectFit:"cover",objectPosition:"center" }}/>
             </div>
             <div style={{ display:"flex",gap:"1rem",flexWrap:"wrap",justifyContent:"center" }}>
-              <Link href="/contact/request-a-quote?from=double-wall-booth">
+              <Link data-animation="slideLeft" href="/contact/request-a-quote?from=double-wall-booth">
                 <span className="btn-glow">REQUEST A QUOTE <ArrowRight size={15}/></span>
               </Link>
-              <Link href="/products/paint-booths/enclosed">
+              <Link data-animation="slideRight" href="/products/paint-booths/enclosed">
                 <span style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:"transparent",color:BLUE,border:`2px solid ${BLUE}`,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.88rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"1rem 2.5rem",cursor:"pointer" }}>SEE ALL ENCLOSED BOOTHS <ArrowRight size={15}/></span>
               </Link>
             </div>
@@ -371,7 +371,7 @@ export default function DoubleWallBoothPage() {
         <div className="container">
           <div style={{ textAlign:"center",marginBottom:"2rem" }}>
             <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:"rgba(255,255,255,0.5)",textTransform:"uppercase",display:"block",marginBottom:"0.4rem" }}>REAL INSTALLS</span>
-            <h2 style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.4rem,2.5vw,2rem)",fontWeight:800,color:"#fff",letterSpacing:"-0.01em",margin:0 }}>Real PFS Installations</h2>
+            <h2  data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.4rem,2.5vw,2rem)",fontWeight:800,color:"#fff",letterSpacing:"-0.01em",margin:0 }}>Real PFS Installations</h2>
           </div>
           <GalleryGrid images={GALLERY_IMGS} cardHeight="clamp(220px,35vw,360px)" />
         </div>
@@ -382,8 +382,8 @@ export default function DoubleWallBoothPage() {
         <div className="container">
           <div style={{ textAlign:"center",marginBottom:"2.5rem" }}>
             <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.5rem" }}>AIRFLOW CONFIGURATIONS</span>
-            <h2 style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.5rem,3vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.75rem" }}>Available in All Four Airflow Types</h2>
-            <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.9rem",color:"#666",maxWidth:"520px",margin:"0 auto",lineHeight:1.7 }}>The PFS Zenith double-wall platform supports every airflow configuration — choose the one that fits your application, facility, and finish quality requirements.</p>
+            <h2  data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.5rem,3vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.75rem" }}>Available in All Four Airflow Types</h2>
+            <p  data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.9rem",color:"#666",maxWidth:"520px",margin:"0 auto",lineHeight:1.7 }}>The PFS Zenith double-wall platform supports every airflow configuration — choose the one that fits your application, facility, and finish quality requirements.</p>
           </div>
           <div style={{ display:"flex",flexWrap:"wrap",justifyContent:"center",gap:"0.5rem",marginBottom:"2.5rem" }}>
             {AIRFLOW_CONFIGS.map((cfg) => (
@@ -401,7 +401,7 @@ export default function DoubleWallBoothPage() {
           {activeFlow==="semi"      && <SemiDowndraftSVG/>}
           {activeFlow==="side"      && <SideDowndraftSVG/>}
           {activeFlow==="full"      && <FullDowndraftSVG/>}
-          <div style={{ textAlign:"center",marginTop:"2rem" }}>
+          <div  data-animation="slideRight" style={{ textAlign:"center",marginTop:"2rem" }}>
             <Link href="/contact/request-a-quote?from=double-wall-booth">
               <span className="btn-glow">GET PRICING <ArrowRight size={15}/></span>
             </Link>
@@ -415,9 +415,9 @@ export default function DoubleWallBoothPage() {
           <div style={{ display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:"1rem",marginBottom:specsOpen?"2rem":0 }}>
             <div>
               <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.3rem" }}>STANDARD FEATURES</span>
-              <h2 style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.3rem,2.5vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Every Unit Ships Fully Certified</h2>
+              <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.3rem,2.5vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Every Unit Ships Fully Certified</h2>
             </div>
-            <button onClick={() => setSpecsOpen(!specsOpen)} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:specsOpen?BLUE:"transparent",border:`2px solid ${BLUE}`,color:specsOpen?"#fff":BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.5rem",cursor:"pointer",transition:"background 0.15s,color 0.15s",whiteSpace:"nowrap" }}>
+            <button data-animation="slideRight" onClick={() => setSpecsOpen(!specsOpen)} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:specsOpen?BLUE:"transparent",border:`2px solid ${BLUE}`,color:specsOpen?"#fff":BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.5rem",cursor:"pointer",transition:"background 0.15s,color 0.15s",whiteSpace:"nowrap" }}>
               {specsOpen?<><ChevronUp size={15}/> HIDE SPECS</>:<><ChevronDown size={15}/> SEE STANDARD SPECS</>}
             </button>
           </div>
@@ -461,9 +461,9 @@ export default function DoubleWallBoothPage() {
           <div style={{ display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:"1rem",marginBottom:sizesOpen?"2rem":0 }}>
             <div>
               <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.3rem" }}>STANDARD SIZES</span>
-              <h2 style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.3rem,2.5vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>14' Wide — Choose Your Height</h2>
+              <h2 data-animation="slideLeft"  style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.3rem,2.5vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>14' Wide — Choose Your Height</h2>
             </div>
-            <button onClick={() => setSizesOpen(!sizesOpen)} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:sizesOpen?BLUE:"transparent",border:`2px solid ${BLUE}`,color:sizesOpen?"#fff":BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.5rem",cursor:"pointer",transition:"background 0.15s,color 0.15s",whiteSpace:"nowrap" }}>
+            <button data-animation="slideRight" onClick={() => setSizesOpen(!sizesOpen)} style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:sizesOpen?BLUE:"transparent",border:`2px solid ${BLUE}`,color:sizesOpen?"#fff":BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.75rem 1.5rem",cursor:"pointer",transition:"background 0.15s,color 0.15s",whiteSpace:"nowrap" }}>
               {sizesOpen?<><ChevronUp size={15}/> HIDE SIZES</>:<><ChevronDown size={15}/> SEE STANDARD SIZES</>}
             </button>
           </div>
@@ -500,13 +500,13 @@ export default function DoubleWallBoothPage() {
       {/* MID-PAGE CTA BAND */}
       <section style={{ background:BLUE,padding:"3.5rem 0" }}>
         <div className="container" style={{ textAlign:"center" }}>
-          <h2 style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.6rem,3.5vw,2.6rem)",fontWeight:800,color:"#fff",letterSpacing:"-0.01em",marginBottom:"0.75rem" }}>Ready to Configure Your Double-Wall Booth?</h2>
-          <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.95rem",color:"rgba(255,255,255,0.8)",marginBottom:"2rem",maxWidth:"480px",margin:"0 auto 2rem" }}>Factory-direct pricing. All four airflow configurations. Fast lead times. Dedicated support from order through installation.</p>
+          <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.6rem,3.5vw,2.6rem)",fontWeight:800,color:"#fff",letterSpacing:"-0.01em",marginBottom:"0.75rem" }}>Ready to Configure Your Double-Wall Booth?</h2>
+          <p data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.95rem",color:"rgba(255,255,255,0.8)",marginBottom:"2rem",maxWidth:"480px",margin:"0 auto 2rem" }}>Factory-direct pricing. All four airflow configurations. Fast lead times. Dedicated support from order through installation.</p>
           <div style={{ display:"flex",gap:"1rem",justifyContent:"center",flexWrap:"wrap" }}>
-            <Link href="/contact/request-a-quote?from=double-wall-booth">
+            <Link data-animation="slideLeft" href="/contact/request-a-quote?from=double-wall-booth">
               <span style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:"#fff",color:BLUE,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.9rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"1.1rem 2.5rem",cursor:"pointer" }}>GET PRICING <ArrowRight size={16}/></span>
             </Link>
-            <a href="tel:8885457715">
+            <a data-animation="slideRight" href="tel:8885457715">
               <span style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:"transparent",color:"#fff",border:"1.5px solid rgba(255,255,255,0.6)",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.9rem",fontWeight:700,letterSpacing:"0.1em",textTransform:"uppercase",padding:"1.1rem 2.5rem",cursor:"pointer" }}>CALL (888) 545-7715</span>
             </a>
           </div>
@@ -517,10 +517,10 @@ export default function DoubleWallBoothPage() {
       <section style={{ background:"#111",padding:"3rem 0",borderTop:`4px solid ${BLUE}` }}>
         <div className="container" style={{ textAlign:"center" }}>
           <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.18em",color:"rgba(255,255,255,0.45)",textTransform:"uppercase",display:"block",marginBottom:"0.5rem" }}>ADD-ON</span>
-          <h2 style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.5rem,3vw,2.2rem)",fontWeight:800,color:"#fff",letterSpacing:"-0.01em",marginBottom:"0.75rem" }}>Heated Options Available</h2>
-          <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.9rem",color:"rgba(255,255,255,0.7)",maxWidth:"480px",margin:"0 auto 1.75rem",lineHeight:1.7 }}>The double-wall insulated panel construction makes the Zenith the ideal platform for heated configurations. Add a direct-fired or indirect-fired heat system for accelerated cure times up to 180°F. Blanket intake filter upgrades included with all heated configurations.</p>
+          <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.5rem,3vw,2.2rem)",fontWeight:800,color:"#fff",letterSpacing:"-0.01em",marginBottom:"0.75rem" }}>Heated Options Available</h2>
+          <p data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.9rem",color:"rgba(255,255,255,0.7)",maxWidth:"480px",margin:"0 auto 1.75rem",lineHeight:1.7 }}>The double-wall insulated panel construction makes the Zenith the ideal platform for heated configurations. Add a direct-fired or indirect-fired heat system for accelerated cure times up to 180°F. Blanket intake filter upgrades included with all heated configurations.</p>
           <Link href="/contact/request-a-quote?from=double-wall-booth">
-            <span style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:BLUE,color:"#fff",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.88rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"1rem 2.5rem",cursor:"pointer" }}>ASK ABOUT HEATED OPTIONS <ArrowRight size={15}/></span>
+            <span data-animation="slideRight" style={{ display:"inline-flex",alignItems:"center",gap:"0.5rem",background:BLUE,color:"#fff",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.88rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"1rem 2.5rem",cursor:"pointer" }}>ASK ABOUT HEATED OPTIONS <ArrowRight size={15}/></span>
           </Link>
         </div>
       </section>
@@ -529,13 +529,13 @@ export default function DoubleWallBoothPage() {
       <section style={{ background:"#fff",padding:"3rem 0",borderBottom:"1px solid #e5e7eb" }}>
         <div className="container" style={{ textAlign:"center" }}>
           <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:BLUE,textTransform:"uppercase",display:"block",marginBottom:"0.5rem" }}>COMPLETE YOUR SYSTEM</span>
-          <h2 style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.3rem,2.5vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.75rem" }}>Pairs Well With a Mixing Room or Air Make-Up Unit</h2>
-          <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.88rem",color:"#666",maxWidth:"480px",margin:"0 auto 1.5rem",lineHeight:1.7 }}>Maximize throughput and compliance by pairing your double-wall booth with a dedicated mixing room for paint prep and an AMU for tempered make-up air.</p>
+          <h2 data-animation="slideLeft"  style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.3rem,2.5vw,1.9rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",marginBottom:"0.75rem" }}>Pairs Well With a Mixing Room or Air Make-Up Unit</h2>
+          <p data-animation="slideLeft" style={{ fontFamily:"'Inter',sans-serif",fontSize:"0.88rem",color:"#666",maxWidth:"480px",margin:"0 auto 1.5rem",lineHeight:1.7 }}>Maximize throughput and compliance by pairing your double-wall booth with a dedicated mixing room for paint prep and an AMU for tempered make-up air.</p>
           <div style={{ display:"flex",gap:"1rem",justifyContent:"center",flexWrap:"wrap" }}>
-            <Link href="/products/mixing-rooms">
+            <Link data-animation="slideLeft"  href="/products/mixing-rooms">
               <span style={{ display:"inline-flex",alignItems:"center",gap:"0.4rem",background:BLUE,color:"#fff",fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.85rem 1.75rem",cursor:"pointer" }}>VIEW MIXING ROOMS <ArrowRight size={13}/></span>
             </Link>
-            <Link href="/products/air-make-up-units">
+            <Link data-animation="slideRight" href="/products/air-make-up-units">
               <span style={{ display:"inline-flex",alignItems:"center",gap:"0.4rem",background:"transparent",color:BLUE,border:`2px solid ${BLUE}`,fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.82rem",fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.85rem 1.75rem",cursor:"pointer" }}>VIEW AIR MAKE-UP UNITS <ArrowRight size={13}/></span>
             </Link>
           </div>

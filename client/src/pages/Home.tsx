@@ -19,24 +19,24 @@ const HERO_POSTER = "/assets/pfs-hero-poster_9c70e41f.jpg";
 const AEROSPACE_IMG = "/assets/pfs-aerospace-jet-in-booth-real_2eb79dc9.png";
 
 // Distinct stock photos per category — no repeats
-const IMG_PAINT_BOOTH   = "/assets/pfs-paint-booth-sprayer-card_42d3ea13.jpg";  // Real PFS booth — technician spraying inside PFS-branded booth
-const IMG_POWDER        = "/assets/pfs-powder-coating-card2_32de7c98.png";     // Gema powder guns blue cloud
-const IMG_OVEN          = "/assets/pfs-vulcan-oven-card_ad72eade_316de7d1.png";           // Real PFS Vulcan batch oven photo
-const IMG_BLAST         = "/assets/blast-systems-real_c7389401_16a0255c.webp";           // Real PFS Atlas Series blast booth photo
-const IMG_PREP          = "/assets/pfs-prep-station-curtain-real_c07d32e0.jpg";
-const IMG_AMU           = "/assets/pfs-amu-card_41f0dd88.jpg";                    // Real PFS Apollo AMU rooftop photo
-const IMG_ROBOTICS      = "/assets/pfs-robotics-card_2aac132b.jpg";               // Real PFS robotic finishing cell — dual arms, red paint spray
-const IMG_PARTS         = "/assets/pfs-filters-card_8b47eabc.png";              // Real PFS filter photo
+const IMG_PAINT_BOOTH = "/assets/pfs-paint-booth-sprayer-card_42d3ea13.jpg";  // Real PFS booth — technician spraying inside PFS-branded booth
+const IMG_POWDER = "/assets/pfs-powder-coating-card2_32de7c98.png";     // Gema powder guns blue cloud
+const IMG_OVEN = "/assets/pfs-vulcan-oven-card_ad72eade_316de7d1.png";           // Real PFS Vulcan batch oven photo
+const IMG_BLAST = "/assets/blast-systems-real_c7389401_16a0255c.webp";           // Real PFS Atlas Series blast booth photo
+const IMG_PREP = "/assets/pfs-prep-station-curtain-real_c07d32e0.jpg";
+const IMG_AMU = "/assets/pfs-amu-card_41f0dd88.jpg";                    // Real PFS Apollo AMU rooftop photo
+const IMG_ROBOTICS = "/assets/pfs-robotics-card_2aac132b.jpg";               // Real PFS robotic finishing cell — dual arms, red paint spray
+const IMG_PARTS = "/assets/pfs-filters-card_8b47eabc.png";              // Real PFS filter photo
 
 const PRODUCT_FAMILIES = [
-  { label: "Paint Booths",            href: "/products/paint-booths",         img: IMG_PAINT_BOOTH, desc: "Cross-flow, semi-downdraft, and full downdraft configurations for any application." },
-  { label: "Powder Coating Systems",  href: "/products/powder-booths",        img: IMG_POWDER,      desc: "Spray to waste, powder reclaim, and automated powder coating systems." },
-  { label: "Industrial Ovens",        href: "/products/ovens",                img: IMG_OVEN,        desc: "Batch, conveyor, walk-in, and large-equipment curing ovens built to spec.", objectFit: "contain" as const, imgBg: "#1a1a1a" },
-  { label: "Blasting Systems",        href: "/products/blast-systems",        img: IMG_BLAST,       desc: "Blasting booths, reclaim blasting booths, and containerized blast booths." },
-  { label: "Prep & Support",          href: "/products/prep-support",         img: IMG_PREP,        desc: "Prep stations, paint mix rooms, sanding booths, and grinding booths." },
-  { label: "Air Make-Up Units",       href: "/products/air-make-up-units",    img: IMG_AMU,         desc: "Heated and non-heated AMUs to maintain proper airflow and temperature." },
-  { label: "Integration & Automation", href: "/integration-automation",       img: IMG_ROBOTICS,    desc: "Robotic spray and powder cells, automated conveyor lines, and turnkey finishing systems." },
-  { label: "Parts & Filters",         href: "/parts",                          img: IMG_PARTS,       desc: "OEM replacement parts, filters, and consumables for all PFS equipment." },
+  { label: "Paint Booths", href: "/products/paint-booths", img: IMG_PAINT_BOOTH, desc: "Cross-flow, semi-downdraft, and full downdraft configurations for any application." },
+  { label: "Powder Coating Systems", href: "/products/powder-booths", img: IMG_POWDER, desc: "Spray to waste, powder reclaim, and automated powder coating systems." },
+  { label: "Industrial Ovens", href: "/products/ovens", img: IMG_OVEN, desc: "Batch, conveyor, walk-in, and large-equipment curing ovens built to spec.", objectFit: "contain" as const, imgBg: "#1a1a1a" },
+  { label: "Blasting Systems", href: "/products/blast-systems", img: IMG_BLAST, desc: "Blasting booths, reclaim blasting booths, and containerized blast booths." },
+  { label: "Prep & Support", href: "/products/prep-support", img: IMG_PREP, desc: "Prep stations, paint mix rooms, sanding booths, and grinding booths." },
+  { label: "Air Make-Up Units", href: "/products/air-make-up-units", img: IMG_AMU, desc: "Heated and non-heated AMUs to maintain proper airflow and temperature." },
+  { label: "Integration & Automation", href: "/integration-automation", img: IMG_ROBOTICS, desc: "Robotic spray and powder cells, automated conveyor lines, and turnkey finishing systems." },
+  { label: "Parts & Filters", href: "/parts", img: IMG_PARTS, desc: "OEM replacement parts, filters, and consumables for all PFS equipment." },
 ];
 
 const INDUSTRIES = [
@@ -153,7 +153,7 @@ export default function Home() {
   });
 
   const productsRef = useReveal();
-    const whyRef = useReveal();
+  const whyRef = useReveal();
   const industriesRef = useReveal();
   const integrationRef = useReveal();
   const serviceRef = useReveal();
@@ -163,7 +163,7 @@ export default function Home() {
     <div style={{ backgroundColor: "#0D0D14" }}>
 
       {/* ── Hero ── */}
-      <section className="relative" style={{ minHeight: "100vh", maxHeight: "900px", overflow: "hidden" }}>
+      <section className="relative" style={{ minHeight: "100vh", maxHeight: "900px"}}>
         <div className="absolute inset-0">
           {/* Video background — no poster to prevent mismatched still-frame flash */}
           <video
@@ -194,7 +194,7 @@ export default function Home() {
               </span>
             </div>
 
-            <h1 style={{
+            <h1 data-animation="slideLeft" style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "clamp(3rem, 7vw, 5.5rem)",
               fontWeight: 700,
@@ -203,7 +203,7 @@ export default function Home() {
               letterSpacing: "0.01em",
               marginBottom: "1.5rem",
             }}>
-                            Engineering the Future<br />
+              Engineering the Future<br />
               <span style={{ color: "#FFFFFF", textShadow: "0 0 40px rgba(255,255,255,0.25)" }}>of Industrial Finish</span>
             </h1>
             <p style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(0.85rem, 2vw, 1rem)", color: "rgba(255,255,255,0.85)", lineHeight: 2, marginBottom: "2.5rem", maxWidth: "520px", letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 600 }}>
@@ -212,13 +212,13 @@ export default function Home() {
             </p>
 
             <div style={{ display: "flex", flexDirection: "row", flexWrap: "nowrap", gap: "0.75rem", marginBottom: "2.5rem", alignItems: "center" }}>
-              <Link href="/contact/request-a-quote">
+              <Link data-animation="slideLeft" href="/contact/request-a-quote">
                 <span className="btn-primary" style={{ fontSize: "0.78rem", padding: "0.75rem 1.4rem", whiteSpace: "nowrap" }}>
                   Request Info <ArrowRight size={14} />
                 </span>
               </Link>
               {/* Mobile-only: View Products CTA */}
-              <Link href="/products">
+              <Link data-animation="slideRight" href="/products">
                 <span className="md:hidden" style={{
                   display: "inline-flex", alignItems: "center", gap: "0.4rem",
                   fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
@@ -254,15 +254,15 @@ export default function Home() {
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 90% 10%, rgba(255,255,255,0.04) 0%, transparent 55%), radial-gradient(ellipse at 10% 90%, rgba(0,0,0,0.35) 0%, transparent 60%)", pointerEvents: "none" }} />
 
         <div className="container relative">
-          <div className="mb-12 reveal-left">
+          <div className="mb-12">
             <div className="flex items-center gap-3 mb-3">
               <div style={{ width: "1.5rem", height: "2px", backgroundColor: "#FFFFFF" }} />
               <span className="section-label" style={{ marginBottom: 0 }}>Our Equipment</span>
             </div>
-            <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2.2rem, 4vw, 3.5rem)", fontWeight: 800, color: "white", lineHeight: 1.0, letterSpacing: "-0.02em", marginBottom: "1rem" }}>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2.2rem, 4vw, 3.5rem)", fontWeight: 800, color: "white", lineHeight: 1.0, letterSpacing: "-0.02em", marginBottom: "1rem" }}>
               Complete Finishing Solutions
             </h2>
-            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.92rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.8, maxWidth: "520px" }}>
+            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.92rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.8, maxWidth: "520px" }}>
               From single spray booths to fully integrated finishing lines, PFS manufactures the complete range of industrial finishing equipment your operation needs.
             </p>
           </div>
@@ -282,7 +282,6 @@ export default function Home() {
                   className="product-card-item"
                   style={{
                     cursor: "pointer",
-                    overflow: "hidden",
                     border: "1px solid rgba(255,255,255,0.10)",
                     borderRadius: "3px",
                     transition: "box-shadow 0.35s ease, border-color 0.35s ease, transform 0.25s ease",
@@ -316,12 +315,12 @@ export default function Home() {
                   {/* White text panel */}
                   <div style={{ backgroundColor: "#FFFFFF", padding: "0.9rem 1rem 1.1rem", flex: 1 }}>
                     <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "0.4rem" }}>
-                      <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#0A0A0A", letterSpacing: "-0.01em", lineHeight: 1.2, margin: 0 }}>
+                      <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#0A0A0A", letterSpacing: "-0.01em", lineHeight: 1.2, margin: 0 }}>
                         {pf.label}
                       </h3>
                       <ChevronRight size={13} style={{ color: "#0A0A0A", flexShrink: 0, marginTop: "2px" }} />
                     </div>
-                    <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.72rem", color: "#666666", lineHeight: 1.55, marginTop: "0.3rem", marginBottom: 0 }}>
+                    <p data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.72rem", color: "#666666", lineHeight: 1.55, marginTop: "0.3rem", marginBottom: 0 }}>
                       {pf.desc}
                     </p>
                   </div>
@@ -330,8 +329,8 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-10 reveal-left flex flex-wrap gap-4 items-center">
-            <Link href="/products">
+          <div className="mt-10 flex flex-wrap gap-4 items-center">
+            <Link data-animation="slideLeft" href="/products">
               <span style={{
                 display: "inline-flex", alignItems: "center", gap: "0.45rem",
                 border: "1.5px solid rgba(255,255,255,0.18)", color: "rgba(255,255,255,0.7)",
@@ -346,7 +345,7 @@ export default function Home() {
                 View All Products <ArrowRight size={13} />
               </span>
             </Link>
-            <Link href="/contact/request-a-quote">
+            <Link data-animation="slideRight" href="/contact/request-a-quote">
               <span className="btn-primary" style={{ fontSize: "0.78rem", padding: "0.7rem 1.75rem" }}>
                 Get Pricing <ArrowRight size={13} />
               </span>
@@ -362,20 +361,20 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left: content */}
             <div>
-              <div className="flex items-center gap-3 mb-3 reveal-left">
+              <div className="flex items-center gap-3 mb-3">
                 <div style={{ width: "1.5rem", height: "2px", backgroundColor: "#FFFFFF" }} />
                 <span className="section-label" style={{ marginBottom: 0 }}>Why PFS</span>
               </div>
-              <h2 className="reveal-left reveal-delay-1" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2rem, 4vw, 3.2rem)", fontWeight: 800, color: "white", lineHeight: 1.0, letterSpacing: "-0.02em", marginBottom: "1.25rem" }}>
+              <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2rem, 4vw, 3.2rem)", fontWeight: 800, color: "white", lineHeight: 1.0, letterSpacing: "-0.02em", marginBottom: "1.25rem" }}>
                 The Standard for<br />Industrial Finishing
               </h2>
-              <p className="reveal-left reveal-delay-2" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.9rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.8, marginBottom: "2.5rem" }}>
+              <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.9rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.8, marginBottom: "2.5rem" }}>
                 For over 20 years, PFS has been the trusted source for ETL Listed spray booths and finishing equipment across North America. We don't just sell booths — we engineer complete finishing solutions.
               </p>
 
               <div className="space-y-5">
                 {WHY_PFS.map((item, i) => (
-                  <div key={item.title} className={`flex gap-4 reveal-left reveal-delay-${i + 2}`}>
+                  <div key={item.title} className={`flex gap-4 ${i + 2}`}>
                     <div style={{ flexShrink: 0, width: "44px", height: "44px", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                       {item.icon}
                     </div>
@@ -391,7 +390,7 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="mt-10 reveal-left reveal-delay-6">
+              <div data-animation="slideRight" className="mt-10">
                 <Link href="/company/about">
                   <span className="btn-primary">About PFS <ArrowRight size={14} /></span>
                 </Link>
@@ -399,8 +398,8 @@ export default function Home() {
             </div>
 
             {/* Right: CTA block with image background */}
-            <div className="relative reveal-right">
-              <div style={{ position: "relative", overflow: "hidden" }}>
+            <div className="relative">
+              <div style={{ position: "relative" }}>
                 <img src={AEROSPACE_IMG} alt="PFS aerospace spray booth with aircraft — Zenith Series industrial finishing system" className="w-full object-cover" style={{ height: "520px" }} />
                 <div className="absolute inset-0" style={{ background: "linear-gradient(160deg, rgba(13,13,20,0.55) 0%, rgba(13,13,20,0.88) 100%)" }} />
                 <div className="absolute top-0 right-0" style={{ width: "3px", height: "80px", backgroundColor: "#1B2B4B" }} />
@@ -408,10 +407,10 @@ export default function Home() {
                 <div className="absolute inset-0 flex flex-col justify-between p-8">
                   <div>
                     <div style={{ width: "2rem", height: "2px", backgroundColor: "#1B2B4B", marginBottom: "1rem" }} />
-                    <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 800, color: "#FFFFFF", lineHeight: 1.05, letterSpacing: "-0.01em", marginBottom: "0.75rem" }}>
+                    <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 800, color: "#FFFFFF", lineHeight: 1.05, letterSpacing: "-0.01em", marginBottom: "0.75rem" }}>
                       Built to Perform.<br />Backed by 20+ Years.
                     </h3>
-                    <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.88rem", color: "rgba(255,255,255,0.65)", lineHeight: 1.7, maxWidth: "340px" }}>
+                    <p data-animation="slideRight" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.88rem", color: "rgba(255,255,255,0.65)", lineHeight: 1.7, maxWidth: "340px" }}>
                       Every PFS system is engineered in-house, manufactured in the USA, and backed by factory-direct service from day one.
                     </p>
                   </div>
@@ -430,12 +429,12 @@ export default function Home() {
                       ))}
                     </div>
                     <div className="flex flex-wrap gap-3">
-                      <Link href="/contact/request-a-quote">
+                      <Link data-animation="slideLeft" href="/contact/request-a-quote">
                         <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", backgroundColor: "#1B2B4B", color: "#FFFFFF", border: "2px solid #1B2B4B", padding: "0.9rem 2rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.95rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", cursor: "pointer", textDecoration: "none", minHeight: "50px" }}>
                           Get Pricing <ArrowRight size={14} />
                         </span>
                       </Link>
-                      <Link href="/company/about">
+                      <Link data-animation="slideRight" href="/company/about">
                         <span style={{ display: "inline-flex", alignItems: "center", gap: "0.45rem", backgroundColor: "transparent", color: "rgba(255,255,255,0.85)", border: "1.5px solid rgba(255,255,255,0.3)", padding: "0.9rem 1.6rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.88rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", cursor: "pointer", textDecoration: "none" }}>
                           Our Story <ArrowRight size={13} />
                         </span>
@@ -453,15 +452,15 @@ export default function Home() {
       <section ref={industriesRef} style={{ padding: "7rem 0", backgroundColor: "#111111", position: "relative" }}>
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 80% 50%, rgba(255,255,255,0.05) 0%, transparent 55%), linear-gradient(180deg, rgba(0,0,0,0.3) 0%, transparent 30%, rgba(0,0,0,0.2) 100%)", pointerEvents: "none" }} />
         <div className="container relative">
-          <div className="mb-12 reveal-left">
+          <div className="mb-12">
             <div className="flex items-center gap-3 mb-3">
               <div style={{ width: "1.5rem", height: "2px", backgroundColor: "#FFFFFF" }} />
               <span className="section-label" style={{ marginBottom: 0 }}>Industries Served</span>
             </div>
-            <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2.2rem, 4vw, 3.5rem)", fontWeight: 800, color: "white", lineHeight: 1.0, letterSpacing: "-0.02em", marginBottom: "1rem" }}>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2.2rem, 4vw, 3.5rem)", fontWeight: 800, color: "white", lineHeight: 1.0, letterSpacing: "-0.02em", marginBottom: "1rem" }}>
               Built for Your Industry
             </h2>
-            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.92rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.8, maxWidth: "480px" }}>
+            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.92rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.8, maxWidth: "480px" }}>
               PFS finishing equipment is deployed across a wide range of demanding industries. Whatever your application, we have the expertise and equipment to match.
             </p>
           </div>
@@ -469,7 +468,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
             {INDUSTRIES.map((ind, i) => (
               <Link key={ind.label} href={ind.href}>
-                <div className={`dark-card reveal-pop reveal-delay-${Math.min(i % 4 + 1, 6)} flex items-center justify-between p-4`}>
+                <div className={`dark-card ${Math.min(i % 4 + 1, 6)} flex items-center justify-between p-4`}>
                   <span style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.82rem", color: "rgba(255,255,255,0.65)", fontWeight: 500 }}>
                     {ind.label}
                   </span>
@@ -479,7 +478,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-8 reveal-right">
+          <div data-animation="slideRight" className="mt-8">
             <Link href="/industries">
               <span style={{
                 display: "inline-flex", alignItems: "center", gap: "0.45rem",
@@ -502,24 +501,24 @@ export default function Home() {
       {/* ── Integration & Automation ── */}
       <section ref={integrationRef} style={{ backgroundColor: "#0A0A0A" }}>
         <div className="grid lg:grid-cols-2" style={{ minHeight: "480px" }}>
-          <div className="flex flex-col justify-center reveal-left" style={{ padding: "5rem 3rem 5rem", backgroundColor: "#0A0A0A", borderRight: "1px solid rgba(255,255,255,0.08)" }}>
+          <div className="flex flex-col justify-center" style={{ padding: "5rem 3rem 5rem", backgroundColor: "#0A0A0A", borderRight: "1px solid rgba(255,255,255,0.08)" }}>
             <div className="flex items-center gap-3 mb-4">
               <div style={{ width: "1.5rem", height: "2px", backgroundColor: "#FFFFFF" }} />
               <span className="section-label" style={{ marginBottom: 0, color: "#FFFFFF" }}>Integration & Automation</span>
             </div>
-            <h2 className="reveal-left reveal-delay-1" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 800, color: "white", lineHeight: 1.0, letterSpacing: "-0.02em", marginBottom: "1.25rem" }}>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 800, color: "white", lineHeight: 1.0, letterSpacing: "-0.02em", marginBottom: "1.25rem" }}>
               Complete Automated<br />Finishing Lines
             </h2>
-            <p className="reveal-left reveal-delay-2" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.92rem", color: "rgba(255,255,255,0.55)", lineHeight: 1.8, marginBottom: "2.5rem", maxWidth: "480px" }}>
+            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.92rem", color: "rgba(255,255,255,0.55)", lineHeight: 1.8, marginBottom: "2.5rem", maxWidth: "480px" }}>
               Beyond individual booths and ovens, PFS engineers complete liquid paint lines, powder coating lines, conveyor systems, pretreatment systems, and robotic finishing cells — all under one roof.
             </p>
-            <div className="reveal-left reveal-delay-3">
+            <div data-animation="slideRight">
               <Link href="/integration-automation">
                 <span className="btn-primary">Explore Integration & Automation <ArrowRight size={14} /></span>
               </Link>
             </div>
           </div>
-          <div className="relative overflow-hidden reveal-right" style={{ minHeight: "420px" }}>
+          <div className="relative overflow-hidden" style={{ minHeight: "420px" }}>
             <img src="/assets/pfs-robotics-card_2aac132b.jpg" alt="Automated Finishing Line" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, rgba(10,10,10,0.4) 0%, transparent 35%)" }} />
           </div>
@@ -530,12 +529,12 @@ export default function Home() {
       <section ref={serviceRef} style={{ padding: "6rem 0", backgroundColor: "#0D0D14", position: "relative", overflow: "hidden" }}>
         <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.025) 0%, transparent 45%, rgba(0,0,0,0.2) 100%)", pointerEvents: "none" }} />
         <div className="container">
-          <div className="mb-10 reveal">
+          <div className="mb-10">
             <div className="flex items-center gap-3 mb-3">
               <div style={{ width: "1.5rem", height: "2px", backgroundColor: "#FFFFFF" }} />
               <span className="section-label" style={{ marginBottom: 0 }}>Service & Support</span>
             </div>
-            <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.8rem, 3vw, 2.8rem)", fontWeight: 800, color: "white", lineHeight: 1.0, letterSpacing: "-0.02em" }}>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.8rem, 3vw, 2.8rem)", fontWeight: 800, color: "white", lineHeight: 1.0, letterSpacing: "-0.02em" }}>
               We're With You After the Sale
             </h2>
           </div>
@@ -546,7 +545,7 @@ export default function Home() {
               { title: "Emergency Service", body: "When downtime isn't an option, our field service team responds fast to get you back up and running.", href: "/service/emergency-service" },
               { title: "Retrofits & Upgrades", body: "Modernize existing equipment with new controls, lighting, filtration, and energy-efficiency upgrades.", href: "/service/retrofits-upgrades" },
             ].map((item, i) => (
-              <Link key={item.title} href={item.href}>
+              <Link data-animation="fadeIn" key={item.title} href={item.href}>
                 <div
                   className={`dark-card ${i === 0 ? 'reveal-left' : i === 1 ? 'reveal' : 'reveal-right'} reveal-delay-${i + 1}`}
                   style={{ padding: "2rem", cursor: "pointer", transition: "background-color 0.25s ease, border-color 0.25s ease", border: "1px solid rgba(255,255,255,0.06)" }}
@@ -579,15 +578,15 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
               <div style={{ width: "2rem", height: "2px", backgroundColor: "rgba(255,255,255,0.5)", marginBottom: "1rem" }} />
-              <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 3rem)", fontWeight: 800, color: "white", lineHeight: 1.0, letterSpacing: "-0.02em" }}>
+              <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 3rem)", fontWeight: 800, color: "white", lineHeight: 1.0, letterSpacing: "-0.02em" }}>
                 Ready to Spec Your<br />Next Finishing System?
               </h2>
-              <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.92rem", color: "rgba(255,255,255,0.72)", marginTop: "0.75rem" }}>
+              <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.92rem", color: "rgba(255,255,255,0.72)", marginTop: "0.75rem" }}>
                 Talk to a PFS engineer about your project — no obligation.
               </p>
             </div>
             <div className="flex flex-wrap gap-3 flex-shrink-0">
-              <Link href="/contact/request-a-quote">
+              <Link data-animation="slideLeft" href="/contact/request-a-quote">
                 <span style={{
                   display: "inline-flex", alignItems: "center", gap: "0.45rem",
                   backgroundColor: "white", color: "#0A0A0A",
@@ -602,7 +601,7 @@ export default function Home() {
                   Request Info <ArrowRight size={14} />
                 </span>
               </Link>
-              <a href="tel:8885457715" style={{
+              <a data-animation="slideRight" href="tel:8885457715" style={{
                 display: "inline-flex", alignItems: "center", gap: "0.45rem",
                 backgroundColor: "transparent", color: "white",
                 border: "2px solid rgba(255,255,255,0.45)", padding: "0.8rem 1.75rem",

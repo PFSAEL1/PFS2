@@ -145,7 +145,7 @@ export default function NewsPage() {
             </span>
           </div>
 
-          <h1
+          <h1 data-animation="slideLeft"
             style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "clamp(2.4rem, 6vw, 4.5rem)",
@@ -160,7 +160,7 @@ export default function NewsPage() {
             News &<br />Press
           </h1>
 
-          <p
+          <p data-animation="slideLeft" 
             style={{
               fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
               fontSize: "clamp(0.95rem, 1.4vw, 1.1rem)",
@@ -193,8 +193,7 @@ export default function NewsPage() {
             style={{
               background: "#fff",
               border: `1px solid #e5e7eb`,
-              borderTop: `4px solid ${BLUE}`,
-              overflow: "hidden",
+              borderTop: `4px solid ${BLUE}`
             }}
           >
             {/* Press photo — full width */}
@@ -224,7 +223,7 @@ export default function NewsPage() {
               </div>
 
               {/* Headline */}
-              <h2
+              <h2 data-animation="slideLeft"
                 style={{
                   fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
                   fontSize: "clamp(1.6rem, 3vw, 2.4rem)",
@@ -304,17 +303,17 @@ export default function NewsPage() {
 
               {/* Article CTAs */}
               <div style={{ display:"flex",gap:"1rem",flexWrap:"wrap",marginTop:"2.5rem",paddingTop:"2rem",borderTop:"1px solid #e5e7eb" }}>
-                <Link href="/service">
+                <Link data-animation="slideLeft" href="/service">
                   <button className="btn-glow" style={{ fontFamily:"'Chakra Petch',sans-serif",fontWeight:700,fontSize:"0.82rem",letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.9rem 2rem",display:"inline-flex",alignItems:"center",gap:"0.5rem",cursor:"pointer" }}>
                     EXPLORE PFS SERVICE <ArrowRight size={14} />
                   </button>
                 </Link>
-                <Link href="/filters">
+                <Link data-animation="fadeIn" href="/filters">
                   <button className="btn-glow" style={{ fontFamily:"'Chakra Petch',sans-serif",fontWeight:700,fontSize:"0.82rem",letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.9rem 2rem",display:"inline-flex",alignItems:"center",gap:"0.5rem",cursor:"pointer" }}>
                     ORDER FILTERS <ArrowRight size={14} />
                   </button>
                 </Link>
-                <a href="tel:8885457715">
+                <a data-animation="slideRight" href="tel:8885457715">
                   <button style={{ fontFamily:"'Chakra Petch',sans-serif",fontWeight:700,fontSize:"0.82rem",letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.9rem 2rem",background:"transparent",color:"#111",border:"1.5px solid #ccc",cursor:"pointer",transition:"border-color 0.2s" }}
                     onMouseEnter={e=>(e.currentTarget.style.borderColor="#111")}
                     onMouseLeave={e=>(e.currentTarget.style.borderColor="#ccc")}>
@@ -337,7 +336,7 @@ export default function NewsPage() {
                 Recent News
               </span>
             </div>
-            <h2
+            <h2 data-animation="slideLeft"
               style={{
                 fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
                 fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
@@ -352,7 +351,7 @@ export default function NewsPage() {
 
           <div style={{ display:"flex",flexDirection:"column",gap:"1.5rem" }}>
             {PRESS_RELEASES.map((pr, i) => (
-              <Link key={i} href={pr.href}>
+              <Link data-animation="fadeIn" key={i} href={pr.href}>
                 <div
                   style={{
                     background: "#f9fafb",
@@ -393,20 +392,20 @@ export default function NewsPage() {
       <section style={{ background: BLUE, padding: "4rem 0" }}>
         <div className="container" style={{ display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:"1.5rem" }}>
           <div>
-            <h2 style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"clamp(1.5rem,3vw,2.2rem)",fontWeight:800,color:"#fff",lineHeight:1.1,marginBottom:"0.5rem" }}>
+            <h2 data-animation="slideLeft" style={{ fontFamily:"'Chakra Petch','Barlow Condensed',sans-serif",fontSize:"clamp(1.5rem,3vw,2.2rem)",fontWeight:800,color:"#fff",lineHeight:1.1,marginBottom:"0.5rem" }}>
               Media Inquiries
             </h2>
-            <p style={{ fontFamily:"'Archivo Narrow','Inter',sans-serif",fontSize:"0.95rem",color:"rgba(255,255,255,0.7)",lineHeight:1.6 }}>
+            <p data-animation="slideLeft"  style={{ fontFamily:"'Archivo Narrow','Inter',sans-serif",fontSize:"0.95rem",color:"rgba(255,255,255,0.7)",lineHeight:1.6 }}>
               For press inquiries, product photography, or media requests, contact our team directly.
             </p>
           </div>
           <div style={{ display:"flex",gap:"1rem",flexWrap:"wrap" }}>
-            <a href="mailto:info@pfsspraybooths.com">
+            <a data-animation="slideLeft" href="mailto:info@pfsspraybooths.com">
               <button className="btn-glow" style={{ fontFamily:"'Chakra Petch',sans-serif",fontWeight:700,fontSize:"0.82rem",letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.85rem 2rem",cursor:"pointer",display:"inline-flex",alignItems:"center",gap:"0.5rem" }}>
                 EMAIL US <ArrowRight size={14} />
               </button>
             </a>
-            <a href="tel:8885457715">
+            <a data-animation="slideRight" href="tel:8885457715">
               <button style={{ fontFamily:"'Chakra Petch',sans-serif",fontWeight:700,fontSize:"0.82rem",letterSpacing:"0.1em",textTransform:"uppercase",padding:"0.85rem 2rem",background:"transparent",color:"#fff",border:"1.5px solid rgba(255,255,255,0.5)",cursor:"pointer",transition:"border-color 0.2s" }}
                 onMouseEnter={e=>(e.currentTarget.style.borderColor="#fff")}
                 onMouseLeave={e=>(e.currentTarget.style.borderColor="rgba(255,255,255,0.5)")}>

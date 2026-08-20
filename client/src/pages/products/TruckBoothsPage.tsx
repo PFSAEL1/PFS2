@@ -350,17 +350,17 @@ export default function TruckBoothsPage() {
             <div style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.22em", color: "rgba(255,255,255,0.65)", textTransform: "uppercase", marginBottom: "0.75rem" }}>
               PAINT BOOTHS / TRUCK BOOTHS
             </div>
-            <h1 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2.4rem, 6vw, 5rem)", fontWeight: 900, color: "#fff", letterSpacing: "-0.01em", lineHeight: 1.0, marginBottom: "1.25rem", maxWidth: "800px" }}>
+            <h1 data-animation="slideLeft"  style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2.4rem, 6vw, 5rem)", fontWeight: 900, color: "#fff", letterSpacing: "-0.01em", lineHeight: 1.0, marginBottom: "1.25rem", maxWidth: "800px" }}>
               TRUCK &amp; FLEET<br />PAINT BOOTHS
             </h1>
-            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "clamp(0.95rem, 1.5vw, 1.1rem)", color: "rgba(255,255,255,0.85)", maxWidth: "520px", lineHeight: 1.7, marginBottom: "2rem" }}>
+            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "clamp(0.95rem, 1.5vw, 1.1rem)", color: "rgba(255,255,255,0.85)", maxWidth: "520px", lineHeight: 1.7, marginBottom: "2rem" }}>
               Purpose-built paint booths for semi trucks, buses, RVs, and fleet vehicles. manufactured in the USA with ETL/UL listed components, NFPA 33 compliant, made in the USA. Ships nationally.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-              <Link href="/contact/request-a-quote?from=truck-booth">
+              <Link data-animation="slideLeft" href="/contact/request-a-quote?from=truck-booth">
                 <span className="btn-glow">GET PRICING <ArrowRight size={16} /></span>
               </Link>
-              <a href="tel:8885457715">
+              <a data-animation="slideRight" href="tel:8885457715">
                 <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.55)", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.9rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "1.1rem 2.5rem", cursor: "pointer" }}>
                   (888) 545-7715
                 </span>
@@ -377,11 +377,11 @@ export default function TruckBoothsPage() {
             <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.75rem" }}>
               CHOOSE YOUR AIRFLOW CONFIGURATION
             </span>
-            <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 900, color: "#111", letterSpacing: "-0.01em", lineHeight: 1.1, maxWidth: "600px" }}>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 900, color: "#111", letterSpacing: "-0.01em", lineHeight: 1.1, maxWidth: "600px" }}>
               Four Airflow Configurations.<br />One Standard of Quality.
             </h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
+          <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
             {BOOTH_CONFIGS.map((config) => (
               <BoothCard key={config.id} config={config} />
             ))}
@@ -396,7 +396,7 @@ export default function TruckBoothsPage() {
             <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.6rem" }}>
               REAL INSTALLS
             </span>
-            <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 900, color: "#111", letterSpacing: "-0.01em", lineHeight: 1.1 }}>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 900, color: "#111", letterSpacing: "-0.01em", lineHeight: 1.1 }}>
               Truck Booth Gallery
             </h2>
           </div>
@@ -408,20 +408,20 @@ export default function TruckBoothsPage() {
       <section style={{ background: BLUE, padding: "4rem 0" }}>
         <div className="container" style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "2rem" }}>
           <div>
-            <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 900, color: "#fff", letterSpacing: "-0.01em", lineHeight: 1.1, marginBottom: "0.5rem" }}>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 900, color: "#fff", letterSpacing: "-0.01em", lineHeight: 1.1, marginBottom: "0.5rem" }}>
               Ready to spec your truck booth?
             </h2>
-            <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.8)", lineHeight: 1.6 }}>
+            <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.8)", lineHeight: 1.6 }}>
               A PFS engineer will prepare a detailed quote — typically within 24 hours.
             </p>
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-            <Link href="/contact/request-a-quote?from=truck-booth">
+            <Link data-animation="slideLeft" href="/contact/request-a-quote?from=truck-booth">
               <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#fff", color: BLUE, fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.9rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", padding: "1.1rem 2.5rem", cursor: "pointer" }}>
                 GET PRICING <ArrowRight size={16} />
               </span>
             </Link>
-            <a href="tel:8885457715">
+            <a data-animation="slideRight" href="tel:8885457715">
               <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.55)", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.9rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "1.1rem 2.5rem", cursor: "pointer" }}>
                 CALL (888) 545-7715
               </span>

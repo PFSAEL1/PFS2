@@ -1381,8 +1381,8 @@ export default function ProductSubPage() {
                   {data.seriesBadge}
                 </span>
               )}
-              <h2 data-animation="slideLeft" className="section-heading">{data.title}</h2>
-              <p data-animation="slideLeft" className="section-body" style={{ marginBottom: "2rem" }}>{data.body}</p>
+              <h2 className="section-heading">{data.title}</h2>
+              <p className="section-body" style={{ marginBottom: "2rem" }}>{data.body}</p>
 
               {(() => {
                 const SHOW_COUNT = 6;
@@ -1414,10 +1414,10 @@ export default function ProductSubPage() {
               })()}
 
               <div className="flex flex-wrap gap-3">
-                <Link data-animation="slideLeft" href="/contact/request-a-quote">
+                <Link href="/contact/request-a-quote">
                   <span className="btn-glow">Request a Quote <ArrowRight size={14} /></span>
                 </Link>
-                <a data-animation="slideRight" href="tel:8885457715">
+                <a href="tel:8885457715">
                   <span className="btn-outline">Call (888) 545-7715</span>
                 </a>
               </div>
@@ -1482,15 +1482,15 @@ export default function ProductSubPage() {
             <h2 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "clamp(1.4rem,3vw,2rem)", textTransform: "uppercase", color: "#fff", marginBottom: "1.5rem", letterSpacing: "0.02em" }}>See It Running</h2>
             <div style={{ position: "relative", width: "100%", maxWidth: 960, margin: "0 auto", background: "#000", lineHeight: 0 }}>
               <video
-                key={data.sectionVideo}
-                src={data.sectionVideo}
                 autoPlay
                 muted
                 loop
                 playsInline
                 preload="auto"
                 style={{ width: "100%", display: "block", maxHeight: 540, objectFit: "cover" }}
-              />
+              >
+                <source src={data.sectionVideo} type="video/mp4" />
+              </video>
             </div>
           </div>
         </section>
