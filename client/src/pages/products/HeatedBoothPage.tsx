@@ -252,7 +252,7 @@ export default function HeatedBoothPage() {
       position: "absolute",
       inset: 0,
       background:
-        "linear-gradient(to top, rgba(4,8,20,0.97) 0%, rgba(4,8,20,0.82) 32%, rgba(4,8,20,0.42) 62%, rgba(4,8,20,0.06) 100%)",
+        "linear-gradient(90deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.45) 55%, rgba(0, 0, 0, 0.15) 100%)",
     }}
   />
 
