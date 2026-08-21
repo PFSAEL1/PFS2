@@ -227,7 +227,7 @@ export default function Home() {
             </h1> */}
             <p style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(0.85rem, 2vw, 1rem)", color: "rgba(255,255,255,0.85)", lineHeight: 2, marginBottom: "2.5rem", maxWidth: "700px", letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 600, whiteSpace: "nowrap" }}>
               PFS Industrial Finishing.&nbsp;&nbsp;Powder.&nbsp;&nbsp;Automation.&nbsp;&nbsp;Filtration.&nbsp;&nbsp;Service.<br />
-              <span style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.75em", letterSpacing: "0.1em" }}>ETL Listed &nbsp;·&nbsp; Made in USA</span>
+              <span style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.75em", letterSpacing: "0.1em" }}>ETL Listed &nbsp;·&nbsp; Made in USA</span>
             </p>
 
             <div style={{ display: "flex", flexDirection: "row", flexWrap: "nowrap", gap: "0.75rem", marginBottom: "2.5rem", alignItems: "center" }}>
@@ -279,7 +279,7 @@ export default function Home() {
               <span className="section-label" style={{ marginBottom: 0 }}>INDUSTRIAL FINISHING EQUIPMENT</span>
             </div>
             <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2.2rem, 4vw, 3.5rem)", fontWeight: 800, color: "white", lineHeight: 1.0, letterSpacing: "-0.02em", marginBottom: "1rem" }}>
-              ENGINEERED FOR PRODUCTION
+              Engineered for Production
             </h2>
             <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.92rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.8, maxWidth: "520px" }}>
               From individual spray booths to fully integrated finishing lines, PFS engineers and manufactures industrial finishing equipment for demanding production environments.
@@ -384,13 +384,16 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-3 mb-3">
                 <div style={{ width: "1.5rem", height: "2px", backgroundColor: "#FFFFFF" }} />
-                <span className="section-label" style={{ marginBottom: 0 }}>Why PFS</span>
+                <span className="section-label" style={{ marginBottom: 0 }}>THE PFS ECOSYSTEM</span>
               </div>
-              <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2rem, 4vw, 3.2rem)", fontWeight: 800, color: "white", lineHeight: 1.0, letterSpacing: "-0.02em", marginBottom: "1.25rem" }}>
-                The Standard for<br />Industrial Finishing
+              <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2rem, 4vw, 3.2rem)", textTransform: "capitalize", fontWeight: 800, color: "white", lineHeight: 1.1, letterSpacing: "-0.02em", marginBottom: "1.25rem", maxWidth: "450px" }}>
+                One Company.
+                Every System. <br />
+                Built to Last.
               </h2>
               <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.9rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.8, marginBottom: "2.5rem" }}>
-                For over 20 years, PFS has been the trusted source for ETL Listed spray booths and finishing equipment across North America. We don't just sell booths — we engineer complete finishing solutions.
+                {/* For over 20 years, PFS has been the trusted source for ETL Listed spray booths and finishing equipment across North America. We don't just sell booths — we engineer complete finishing solutions. */}
+                Equipment. Automation. Filtration. Service. One partner supporting your finishing operation from initial engineering through the life of the system.
               </p>
 
               <div className="space-y-5">

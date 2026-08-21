@@ -123,15 +123,24 @@ import PaintBoothFiltersPage from "./pages/filters/PaintBoothFiltersPage";
 import CaliforniaServicePage from "./pages/CaliforniaServicePage";
 import LosAngelesServicePage from "@/pages/LosAngelesServicePage";
 import BayAreaServicePage from "@/pages/BayAreaServicePage";
+import { useEffect } from "react";
 
 function LegacyAutomotiveRefinishRedirect() {
   return <Redirect to="/products/paint-booths" replace />;
 }
 
+function ScrollToTop() {
+  const [location] = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [location]);
+  return null;
+}
+
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* <ScrollToTop /> */}
+      <ScrollToTop />
       <Navbar />
       <main className="flex-1">{children}</main>
       <Footer />

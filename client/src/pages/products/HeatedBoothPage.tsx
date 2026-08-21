@@ -174,7 +174,7 @@ export default function HeatedBoothPage() {
   return (
     <div>
       {/* ── HERO ── */}
-      <section style={{ position: "relative", minHeight: "clamp(380px, 60vh, 620px)", background: "#0a0a0a", display: "flex", alignItems: "center", overflow: "hidden" }}>
+      {/* <section style={{ position: "relative", minHeight: "clamp(380px, 60vh, 620px)", background: "#0a0a0a", display: "flex", alignItems: "center", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0 }}>
           <img src={HERO_IMG} alt="PFS Zenith heated paint booth" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%", opacity: 0.5 }} />
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(90deg, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.15) 100%)" }} />
@@ -209,8 +209,252 @@ export default function HeatedBoothPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+{/* ── FULL-BLEED HEATED HERO ── */}
+<section
+  style={{
+    position: "relative",
+    minHeight: "clamp(520px, 70vh, 680px)",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-end",
+    overflow: "hidden",
+    background: "#0a0a0a",
+  }}
+>
+  {/* HERO IMAGE */}
+  <img
+    src={HERO_IMG}
+    alt="PFS Zenith heated paint booth"
+    style={{
+      position: "absolute",
+      inset: 0,
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+      objectPosition: "center 55%",
+      opacity: 0.5,
+    }}
+  />
 
+  {/* DARK OVERLAY */}
+  <div
+    style={{
+      position: "absolute",
+      inset: 0,
+      background: "rgba(0,0,0,0.22)",
+    }}
+  />
+
+  {/* GRADIENT */}
+  <div
+    style={{
+      position: "absolute",
+      inset: 0,
+      background:
+        "linear-gradient(to top, rgba(4,8,20,0.97) 0%, rgba(4,8,20,0.82) 32%, rgba(4,8,20,0.42) 62%, rgba(4,8,20,0.06) 100%)",
+    }}
+  />
+
+  {/* BLUE BOTTOM LINE */}
+  <div
+    style={{
+      position: "absolute",
+      bottom: 0,
+      left: 0,
+      right: 0,
+      height: "3px",
+      background: BLUE,
+      zIndex: 3,
+    }}
+  />
+
+  {/* HERO CONTENT */}
+  <div
+    className="container"
+    style={{
+      position: "relative",
+      zIndex: 2,
+      paddingTop: "5rem",
+      paddingBottom: "clamp(5rem, 12vw, 7rem)",
+    }}
+  >
+    {/* BREADCRUMBS */}
+    <nav style={{ marginBottom: "1.5rem" }}>
+      <span
+        style={{
+          fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
+          fontSize: "0.7rem",
+          color: "rgba(255,255,255,0.5)",
+          letterSpacing: "0.08em",
+          textTransform: "uppercase",
+        }}
+      >
+        <Link href="/">
+          <span
+            style={{
+              cursor: "pointer",
+              color: "rgba(255,255,255,0.5)",
+            }}
+          >
+            HOME
+          </span>
+        </Link>{" / "}
+
+        <Link href="/products">
+          <span
+            style={{
+              cursor: "pointer",
+              color: "rgba(255,255,255,0.5)",
+            }}
+          >
+            PRODUCTS
+          </span>
+        </Link>{" / "}
+
+        <Link href="/products/paint-booths">
+          <span
+            style={{
+              cursor: "pointer",
+              color: "rgba(255,255,255,0.5)",
+            }}
+          >
+            PAINT BOOTHS
+          </span>
+        </Link>{" / "}
+
+        <span style={{ color: "rgba(255,255,255,0.85)" }}>
+          HEATED
+        </span>
+      </span>
+    </nav>
+
+    {/* MAIN CONTENT */}
+    <div style={{ maxWidth: "680px" }}>
+
+      {/* HEATED BADGE */}
+      <span
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "0.5rem",
+          background: "rgba(27,58,107,0.75)",
+          border: "1px solid rgba(107,163,224,0.4)",
+          color: "#6fa3e0",
+          borderRadius: "2px",
+          fontFamily:
+            "'Chakra Petch', 'Barlow Condensed', sans-serif",
+          fontSize: "0.7rem",
+          fontWeight: 700,
+          letterSpacing: "0.14em",
+          textTransform: "uppercase",
+          padding: "0.3rem 0.75rem",
+          marginBottom: "1.25rem",
+        }}
+      >
+        <Thermometer size={12} />
+        MAX BAKE TEMP 180°F
+      </span>
+
+      {/* HEATED TITLE */}
+      <h1
+        data-animation="slideLeft"
+        style={{
+          fontFamily:
+            "'Chakra Petch', 'Barlow Condensed', sans-serif",
+          fontSize: "clamp(2.6rem, 7vw, 5rem)",
+          fontWeight: 800,
+          color: "#fff",
+          lineHeight: 1.0,
+          letterSpacing: "-0.01em",
+          marginBottom: "1rem",
+          maxWidth: "680px",
+          textTransform: "uppercase",
+        }}
+      >
+        Heated
+        <br />
+        Paint Booths
+      </h1>
+
+      {/* DESCRIPTION */}
+      <p
+        data-animation="slideLeft"
+        style={{
+          fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
+          fontSize: "clamp(0.88rem, 1.5vw, 1rem)",
+          color: "rgba(255,255,255,0.72)",
+          lineHeight: 1.65,
+          marginBottom: "1.5rem",
+          maxWidth: "520px",
+        }}
+      >
+        Available on the PFS Orion, Helios, and Zenith — any booth,
+        any airflow configuration. Spray, flash, and bake modes with
+        programmable cure cycles up to 180°F.
+      </p>
+
+      {/* CTAs */}
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "0.85rem",
+          maxWidth: "340px",
+        }}
+      >
+        {/* GET PRICING */}
+        <Link
+          data-animation="slideLeft"
+          href="/contact/request-a-quote?from=heated-booth"
+        >
+          <span
+            className="btn-glow"
+            style={{
+              width: "100%",
+              justifyContent: "center",
+            }}
+          >
+            GET PRICING <ArrowRight size={16} />
+          </span>
+        </Link>
+
+        {/* PHONE */}
+        <a
+          data-animation="slideRight"
+          href="tel:8885457715"
+          style={{
+            width: "100%",
+            textDecoration: "none",
+          }}
+        >
+          <span
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "0.5rem",
+              background: "transparent",
+              color: "#fff",
+              border: "1.5px solid rgba(255,255,255,0.5)",
+              fontFamily:
+                "'Chakra Petch', 'Barlow Condensed', sans-serif",
+              fontSize: "clamp(0.88rem, 3vw, 0.95rem)",
+              fontWeight: 700,
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              padding: "1.1rem 2rem",
+              cursor: "pointer",
+              width: "100%",
+            }}
+          >
+            CALL (888) 545-7715
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
       {/* ── CERT CAROUSEL ── */}
       <CertCarousel />
 
