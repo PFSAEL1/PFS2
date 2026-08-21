@@ -5,7 +5,7 @@ import { useSEO } from "@/hooks/useSEO";
 
 const HERO_IMG = "/assets/pfs-robotics-card_2aac132b.jpg";
 const HERO_VIDEO = "/assets/pfs-products-hero-robot-video_7cd286b4.mp4";
-const HERO_POSTER = "/assets/pfs-products-hub-hero-poster_bcdcb248.jpg";
+// const HERO_POSTER = "/assets/pfs-products-hub-hero-poster_bcdcb248.jpg";
 
 const FAMILIES = [
   {
@@ -126,7 +126,7 @@ export default function ProductsHub() {
         breadcrumbs={[{ label: "Products" }]}
         bgImage={HERO_IMG}
         bgVideo={HERO_VIDEO}
-        bgPoster={HERO_POSTER}
+        // bgPoster={HERO_POSTER}
         bgImagePosition="center 45%"
       />
 

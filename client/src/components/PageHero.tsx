@@ -36,6 +36,8 @@ interface PageHeroProps {
   ctaPricingHref?: string;
   kenBurns?: boolean; // slow zoom-pan animation on static image
   bgPoster?: string;  // poster frame shown before video loads
+videoStartTime?: number;
+
 }
 
 // ── PageHeroVideo: dark background, video fades in on canplay — zero still-image flash ──
@@ -52,35 +54,68 @@ function PageHeroVideo({
   bgPoster?: string;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
+
   useEffect(() => {
     const v = videoRef.current;
     if (!v) return;
+
+    const START_TIME = 2;
+
     v.muted = true;
     v.playsInline = true;
-    v.play().catch(() => {});
+
+    const startVideo = () => {
+      // Skip the first 2 seconds
+      if (v.duration > START_TIME) {
+        v.currentTime = START_TIME;
+      }
+
+      v.play().catch(() => {});
+    };
+
+    const restartVideo = () => {
+      // When video ends, start again at 2 seconds
+      v.currentTime = START_TIME;
+      v.play().catch(() => {});
+    };
+
+    v.addEventListener("loadedmetadata", startVideo);
+    v.addEventListener("ended", restartVideo);
+
+    // In case metadata has already loaded
+    if (v.readyState >= 1) {
+      startVideo();
+    }
+
+    return () => {
+      v.removeEventListener("loadedmetadata", startVideo);
+      v.removeEventListener("ended", restartVideo);
+    };
   }, [bgVideo]);
+
   return (
-    <>
-      {/* Video with poster — poster shows instantly, video plays on top */}
-      <video
-        key={bgVideo}
-        src={bgVideo}
-        poster={bgPoster}
-        preload="auto"
-        ref={videoRef}
-        autoPlay
-        muted
-        loop
-        playsInline
-        disablePictureInPicture
-        aria-hidden="true"
-        style={{
-          position: "absolute", inset: 0, width: "100%", height: "100%",
-          objectFit: "cover", objectPosition: bgImagePosition, display: "block",
-          opacity: 1, zIndex: 0,
-        }}
-      />
-    </>
+    <video
+      key={bgVideo}
+      src={bgVideo}
+      ref={videoRef}
+      preload="auto"
+      autoPlay
+      muted
+      playsInline
+      disablePictureInPicture
+      aria-hidden="true"
+      style={{
+        position: "absolute",
+        inset: 0,
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+        objectPosition: bgImagePosition,
+        display: "block",
+        opacity: 1,
+        zIndex: 0,
+      }}
+    />
   );
 }
 

@@ -17,6 +17,7 @@ const HERO_VIDEO_MP4 = "/assets/pfs-home-hero-dji-v2_c53f6df4.mp4";  // DJI dron
 const HERO_VIDEO_WEBM = "/assets/pfs-hero-video_c8080ffb.webm";
 const HERO_POSTER = "/assets/pfs-hero-poster_9c70e41f.jpg";
 const AEROSPACE_IMG = "/assets/pfs-aerospace-jet-in-booth-real_2eb79dc9.png";
+const INTEGRATION_IMG = "/assets/pfs-logo-white-cropped_4e512383.png";
 
 // Distinct stock photos per category — no repeats
 const IMG_PAINT_BOOTH = "/assets/pfs-paint-booth-sprayer-card_42d3ea13.jpg";  // Real PFS booth — technician spraying inside PFS-branded booth
@@ -31,7 +32,7 @@ const IMG_PARTS = "/assets/pfs-filters-card_8b47eabc.png";              // Real 
 const PRODUCT_FAMILIES = [
   { label: "Paint Booths", href: "/products/paint-booths", img: IMG_PAINT_BOOTH, desc: "Cross-flow, semi-downdraft, and full downdraft configurations for any application." },
   { label: "Powder Coating Systems", href: "/products/powder-booths", img: IMG_POWDER, desc: "Spray to waste, powder reclaim, and automated powder coating systems." },
-  { label: "Industrial Ovens", href: "/products/ovens", img: IMG_OVEN, desc: "Batch, conveyor, walk-in, and large-equipment curing ovens built to spec."},
+  { label: "Industrial Ovens", href: "/products/ovens", img: IMG_OVEN, desc: "Batch, conveyor, walk-in, and large-equipment curing ovens built to spec." },
   { label: "Blasting Systems", href: "/products/blast-systems", img: IMG_BLAST, desc: "Blasting booths, reclaim blasting booths, and containerized blast booths." },
   { label: "Prep & Support", href: "/products/prep-support", img: IMG_PREP, desc: "Prep stations, paint mix rooms, sanding booths, and grinding booths." },
   { label: "Air Make-Up Units", href: "/products/air-make-up-units", img: IMG_AMU, desc: "Heated and non-heated AMUs to maintain proper airflow and temperature." },
@@ -163,8 +164,12 @@ export default function Home() {
     <div style={{ backgroundColor: "#0D0D14" }}>
 
       {/* ── Hero ── */}
-      <section className="relative" style={{ minHeight: "100vh", maxHeight: "900px"}}>
-        <div className="absolute inset-0">
+      <section
+        className="relative"
+        style={{
+          minHeight: "clamp(300px, 38vw, 460px)"
+        }}
+      >        <div className="absolute inset-0">
           {/* Video background — no poster to prevent mismatched still-frame flash */}
           <video
             ref={heroVideoRef}
@@ -184,7 +189,7 @@ export default function Home() {
           <div className="absolute bottom-0 left-0 right-0" style={{ height: "220px", background: "linear-gradient(0deg, rgba(5,5,10,0.80) 0%, rgba(5,5,10,0.40) 50%, transparent 100%)", pointerEvents: "none" }} />
         </div>
 
-        <div className="container relative flex flex-col justify-center hero-content-wrapper" style={{ minHeight: "100vh", maxHeight: "900px", paddingTop: "8rem", paddingBottom: "6rem" }}>
+        <div className="container relative flex flex-col justify-center hero-content-wrapper" style={{ minHeight: "clamp(300px, 38vw, 460px);", paddingTop: "8rem", paddingBottom: "6rem" }}>
           <div className="max-w-2xl">
             {/* Eyebrow */}
             <div className="flex items-center gap-3 mb-5">
@@ -194,7 +199,21 @@ export default function Home() {
               </span>
             </div>
 
-            <h1 data-animation="slideLeft" style={{
+            <img
+              src={INTEGRATION_IMG}
+              alt="PFS Industrial Robotics"
+              data-animation="slideLeft"
+              style={{
+                height: "clamp(34px, 4.5vw, 50px)",
+                width: "auto",
+                objectFit: "contain",
+                display: "block",
+                cursor: "pointer",
+                filter: "none",
+                marginBottom: "1.5rem",
+              }}
+            />
+            {/* <h1 data-animation="slideLeft" style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "clamp(3rem, 7vw, 5.5rem)",
               fontWeight: 700,
@@ -205,8 +224,8 @@ export default function Home() {
             }}>
               Engineering the Future<br />
               <span style={{ color: "#FFFFFF", textShadow: "0 0 40px rgba(255,255,255,0.25)" }}>of Industrial Finish</span>
-            </h1>
-            <p style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(0.85rem, 2vw, 1rem)", color: "rgba(255,255,255,0.85)", lineHeight: 2, marginBottom: "2.5rem", maxWidth: "700px", letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 600, whiteSpace: "nowrap"}}>
+            </h1> */}
+            <p style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(0.85rem, 2vw, 1rem)", color: "rgba(255,255,255,0.85)", lineHeight: 2, marginBottom: "2.5rem", maxWidth: "700px", letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 600, whiteSpace: "nowrap" }}>
               PFS Industrial Finishing.&nbsp;&nbsp;Powder.&nbsp;&nbsp;Automation.&nbsp;&nbsp;Filtration.&nbsp;&nbsp;Service.<br />
               <span style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.75em", letterSpacing: "0.1em" }}>ETL Listed &nbsp;·&nbsp; Made in USA</span>
             </p>
