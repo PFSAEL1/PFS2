@@ -1,7 +1,6 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { Route, Switch, useLocation } from "wouter";
-import { useEffect } from "react";
+import { Redirect, Route, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Navbar from "./components/Navbar";
@@ -125,13 +124,9 @@ import CaliforniaServicePage from "./pages/CaliforniaServicePage";
 import LosAngelesServicePage from "@/pages/LosAngelesServicePage";
 import BayAreaServicePage from "@/pages/BayAreaServicePage";
 
-// function ScrollToTop() {
-//   const [location] = useLocation();
-//   useEffect(() => {
-//     window.scrollTo(0, 0);
-//   }, [location]);
-//   return null;
-// }
+function LegacyAutomotiveRefinishRedirect() {
+  return <Redirect to="/products/paint-booths" replace />;
+}
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -151,6 +146,10 @@ function Router() {
   return (
     <Switch key={location}>
       <Route path="/" component={Home} />
+
+      {/* Legacy automotive-refinish fallback: protects visitors who receive a cached SPA shell instead of the edge redirect. */}
+      <Route path="/automotive-refinish" component={LegacyAutomotiveRefinishRedirect} />
+      <Route path="/automotive-refinish/" component={LegacyAutomotiveRefinishRedirect} />
 
       {/* Products */}
       <Route path="/industrial-paint-booths" component={IndustrialLandingPage} />
