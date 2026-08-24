@@ -350,8 +350,8 @@ export default function HeatedAMUPage() {
           </div>
 
           {/* Active config panel */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0", border: `1px solid #e5e5e5`, borderTop: "none" }}>
-            <div style={{ background: "#f5f5f3", display: "flex", alignItems: "center", justifyContent: "center", padding: "3rem", minHeight: "360px" }}>
+          <div className="responsive-grid">
+            <div className="product-image-container">
               <img
                 src={activeConf.img}
                 alt={`Apollo AMU — ${activeConf.label} configuration`}
@@ -359,7 +359,7 @@ export default function HeatedAMUPage() {
                 onClick={() => setLightbox({ src: activeConf.img, alt: `Apollo AMU — ${activeConf.label} configuration` })}
               />
             </div>
-            <div style={{ padding: "3rem" }}>
+            <div className="responsive-grid-content-column">
               <h3 style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "1.6rem", fontWeight: 800, color: "#111", marginBottom: "1rem" }}>
                 {activeConf.label} Configuration
               </h3>

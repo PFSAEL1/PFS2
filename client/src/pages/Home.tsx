@@ -178,7 +178,7 @@ export default function Home() {
             loop
             playsInline
             preload="auto"
-            onCanPlay={e => { (e.currentTarget as HTMLVideoElement).playbackRate = 1.5; }}
+            // onCanPlay={e => { (e.currentTarget as HTMLVideoElement).playbackRate = 1.5; }}
             className="absolute inset-0 w-full h-full object-cover"
             style={{ objectPosition: "center center" }}
           >
@@ -192,14 +192,14 @@ export default function Home() {
         <div className="container relative flex flex-col justify-center hero-content-wrapper" style={{ minHeight: "clamp(300px, 38vw, 460px);", paddingTop: "8rem", paddingBottom: "6rem" }}>
           <div className="max-w-2xl">
             {/* Eyebrow */}
-            <div className="flex items-center gap-3 mb-5">
+            {/* <div className="flex items-center gap-3 mb-5">
               <div style={{ width: "2rem", height: "2px", backgroundColor: "#FFFFFF" }} />
               <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#FFFFFF" }}>
                 PFS
               </span>
-            </div>
+            </div> */}
 
-            <img
+            {/* <img
               src={INTEGRATION_IMG}
               alt="PFS Industrial Robotics"
               style={{
@@ -211,8 +211,8 @@ export default function Home() {
                 filter: "none",
                 marginBottom: "1.5rem",
               }}
-            />
-            {/* <h1 data-animation="slideLeft" style={{
+            /> */}
+            <h1 data-animation="slideLeft" style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
               fontSize: "clamp(3rem, 7vw, 5.5rem)",
               fontWeight: 700,
@@ -221,15 +221,15 @@ export default function Home() {
               letterSpacing: "0.01em",
               marginBottom: "1.5rem",
             }}>
-              Engineering the Future<br />
-              <span style={{ color: "#FFFFFF", textShadow: "0 0 40px rgba(255,255,255,0.25)" }}>of Industrial Finish</span>
-            </h1> */}
+             Finishing Equipment.<br />
+              <span style={{ color: "#FFFFFF", textShadow: "0 0 40px rgba(255,255,255,0.25)" }}></span>
+            </h1>
             <p className="hero-description">
-              PFS Industrial Finishing.&nbsp;&nbsp;Powder.&nbsp;&nbsp;Automation.&nbsp;&nbsp;Filtration.&nbsp;&nbsp;Service.<br />
+           Automation.&nbsp;&nbsp;Filtration.&nbsp;&nbsp;Service.<br />
               <span style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.75em", letterSpacing: "0.1em" }}>ETL Listed &nbsp;·&nbsp; Made in USA</span>
             </p>
 
-            <div style={{ display: "flex", flexDirection: "row", flexWrap: "nowrap", gap: "0.75rem", marginBottom: "2.5rem", alignItems: "center" }}>
+            <div style={{ display: "flex", flexDirection: "row", flexWrap: "nowrap", gap: "0.75rem", alignItems: "center" }}>
               <Link data-animation="slideLeft" href="/contact/request-a-quote">
                 <span className="btn-primary" style={{ fontSize: "0.78rem", padding: "0.75rem 1.4rem", whiteSpace: "nowrap" }}>
                   START A PROJECT <ArrowRight size={14} />

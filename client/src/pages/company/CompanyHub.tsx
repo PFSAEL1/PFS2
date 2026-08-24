@@ -313,7 +313,7 @@ export default function CompanyHub() {
 
           <div style={{ textAlign: "center" }}>
             <a data-animation="slideRight" 
-              href="https://www.google.com/maps/place/Platinum+Finishing+Systems+-+Spray+Booths/@38.5107813,-122.790046,17z/data=!3m1!4b1!4m6!3m5!1s0x80843e9a96d2e3ab:0xf9cb90a9f3dee95f"
+              href="https://www.google.com/maps/search/?api=1&query=Platinum%20Finishing%20Systems%2C%201400%20Airport%20Blvd%2C%20Santa%20Rosa%2C%20CA%2095403"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-glow"

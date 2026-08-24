@@ -450,7 +450,7 @@ export default function PartsHubPage() {
         overflow: "hidden",
         background: "#0a0a0a",
       }}>
-        <video
+        {/* <video
           autoPlay
           muted
           loop
@@ -463,7 +463,16 @@ export default function PartsHubPage() {
           }}
         >
           <source src={HERO_VIDEO} type="video/mp4" />
-        </video>
+        </video> */}
+
+         {/* Background image */}
+        <div style={{
+          position: "absolute", inset: 0,
+          backgroundImage: "url('/assets/filters-hero.jpeg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          zIndex: 0,
+        }} />
         {/* Gradient — bottom-heavy so text is readable, video stays crisp */}
         <div style={{
           position: "absolute", inset: 0,

@@ -99,10 +99,10 @@ export default function Footer() {
                 (888) 545-7715 Toll Free
               </a>
 
-              <a href="mailto:info@pfsspraybooths.com" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "rgba(255,255,255)", display: "block", textDecoration: "none", transition: "color 0.15s" }}
+              {/* <a href="mailto:info@pfsspraybooths.com" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "rgba(255,255,255)", display: "block", textDecoration: "none", transition: "color 0.15s" }}
                 onMouseEnter={e => (e.currentTarget.style.color = "white")} onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255)")}>
                 info@pfsspraybooths.com
-              </a>
+              </a> */}
               <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "rgba(255,255,255)" }}>
                 1400 Airport Blvd, Santa Rosa, CA 95403
               </p>
