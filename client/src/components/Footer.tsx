@@ -58,7 +58,7 @@ const FOOTER_COLS = [
   {
     heading: "Company",
     links: [
-      { label: "About PFS", href: "/company/about" },
+      { label: "About PFS", href: "/company" },
       { label: "Manufacturing", href: "/company/manufacturing" },
       { label: "Certifications", href: "/company/certifications" },
       { label: "Careers", href: "/company/careers" },

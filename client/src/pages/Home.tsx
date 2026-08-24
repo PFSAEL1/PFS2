@@ -202,7 +202,6 @@ export default function Home() {
             <img
               src={INTEGRATION_IMG}
               alt="PFS Industrial Robotics"
-              data-animation="slideLeft"
               style={{
                 height: "clamp(34px, 4.5vw, 50px)",
                 width: "auto",
@@ -225,7 +224,7 @@ export default function Home() {
               Engineering the Future<br />
               <span style={{ color: "#FFFFFF", textShadow: "0 0 40px rgba(255,255,255,0.25)" }}>of Industrial Finish</span>
             </h1> */}
-            <p style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(0.85rem, 2vw, 1rem)", color: "rgba(255,255,255,0.85)", lineHeight: 2, marginBottom: "2.5rem", maxWidth: "700px", letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 600, whiteSpace: "nowrap" }}>
+            <p className="hero-description">
               PFS Industrial Finishing.&nbsp;&nbsp;Powder.&nbsp;&nbsp;Automation.&nbsp;&nbsp;Filtration.&nbsp;&nbsp;Service.<br />
               <span style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.75em", letterSpacing: "0.1em" }}>ETL Listed &nbsp;·&nbsp; Made in USA</span>
             </p>
@@ -376,7 +375,7 @@ export default function Home() {
       </section>
 
       {/* ── Why PFS ── */}
-      <section ref={whyRef} style={{ padding: "7rem 0", backgroundColor: "#0A0A0A", position: "relative", overflow: "hidden" }}>
+      <section ref={whyRef} style={{ padding: "0", backgroundColor: "#0A0A0A", position: "relative", overflow: "hidden" }}>
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 100% 40%, rgba(255,255,255,0.04) 0%, transparent 50%), linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.3) 100%)", pointerEvents: "none" }} />
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -396,12 +395,12 @@ export default function Home() {
                 Equipment. Automation. Filtration. Service. One partner supporting your finishing operation from initial engineering through the life of the system.
               </p>
 
-              <div className="space-y-5">
+              {/* <div className="space-y-5">
                 {WHY_PFS.map((item, i) => (
                   <div key={item.title} className={`flex gap-4 ${i + 2}`}>
-                    {/* <div style={{ flexShrink: 0, width: "44px", height: "44px", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <div style={{ flexShrink: 0, width: "44px", height: "44px", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                       {item.icon}
-                    </div> */}
+                    </div>
                     <div>
                       <h4 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1rem", fontWeight: 700, color: "white", letterSpacing: "0.04em", marginBottom: "0.3rem" }}>
                         {item.title}
@@ -412,10 +411,10 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
-              </div>
+              </div> */}
 
               <div data-animation="slideRight" className="mt-10">
-                <Link href="/company/about">
+                <Link href="/company">
                   <span className="btn-primary">About PFS <ArrowRight size={14} /></span>
                 </Link>
               </div>
@@ -452,7 +451,7 @@ export default function Home() {
                         </div>
                       ))}
                     </div>
-                    <div className="flex flex-wrap gap-3">
+                    {/* <div className="flex flex-wrap gap-3">
                       <Link data-animation="slideLeft" href="/contact/request-a-quote">
                         <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", backgroundColor: "#1B2B4B", color: "#FFFFFF", border: "2px solid #1B2B4B", padding: "0.9rem 2rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.95rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", cursor: "pointer", textDecoration: "none", minHeight: "50px" }}>
                           Get Pricing <ArrowRight size={14} />
@@ -463,7 +462,7 @@ export default function Home() {
                           Our Story <ArrowRight size={13} />
                         </span>
                       </Link>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -594,12 +593,12 @@ export default function Home() {
       </section>
 
       {/* ── Final CTA ── */}
-      <section style={{ backgroundColor: "#0A0A0A", position: "relative", overflow: "hidden", padding: "5rem 0", borderTop: "1px solid rgba(255,255,255,0.1)" }}>
+      <section style={{ backgroundColor: "#0A0A0A", position: "relative", padding: "5rem 0", borderTop: "1px solid rgba(255,255,255,0.1)" }}>
         <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(0,0,0,0.2) 0%, transparent 50%, rgba(0,0,0,0.15) 100%)", pointerEvents: "none" }} />
         <div className="absolute right-0 top-0 bottom-0" style={{ width: "40%", background: "radial-gradient(ellipse at right, rgba(255,255,255,0.06) 0%, transparent 70%)", pointerEvents: "none" }} />
 
         <div className="container relative">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="custom-responsive-row">
             <div>
               <div style={{ width: "2rem", height: "2px", backgroundColor: "rgba(255,255,255,0.5)", marginBottom: "1rem" }} />
               <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 3rem)", fontWeight: 800, color: "white", lineHeight: 1.0, letterSpacing: "-0.02em" }}>
@@ -610,8 +609,8 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-wrap gap-3 flex-shrink-0">
-              <Link data-animation="slideLeft" href="/contact/request-a-quote">
-                <span style={{
+              <Link href="/contact/request-a-quote">
+                <span data-animation="slideLeft" style={{
                   display: "inline-flex", alignItems: "center", gap: "0.45rem",
                   backgroundColor: "white", color: "#0A0A0A",
                   border: "2px solid white", padding: "0.8rem 1.75rem",

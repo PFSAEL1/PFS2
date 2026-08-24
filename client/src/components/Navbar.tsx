@@ -148,7 +148,7 @@ const NAV_ITEMS: NavItem[] = [
     label: "Company",
     href: "/company",
     children: [
-      { label: "About Us", href: "/company/about" },
+      { label: "About Us", href: "/company" },
       { label: "Meet the Team", href: "/company/team" },
       { label: "Manufacturing", href: "/company/manufacturing" },
       { label: "Certifications", href: "/company/certifications" },
@@ -452,7 +452,7 @@ export default function Navbar() {
       {/* ── Utility bar — hidden on mobile when drawer is open to avoid duplication ── */}
       <div className={mobileOpen ? "hidden xl:block" : ""} style={{ backgroundColor: "#1C1C1E", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
         <div className="container">
-          <div className="flex items-center justify-between" style={{ paddingTop: "0.38rem", paddingBottom: "0.38rem" }}>
+          <div className="flex items-center justify-between custom-responsive-div" style={{ paddingTop: "0.38rem", paddingBottom: "0.38rem" }}>
             <div className="flex items-center gap-5">
               <a href="tel:8885457715" className="flex items-center transition-colors"
                 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.62rem", color: "#FFFFFF", letterSpacing: "0.08em", textTransform: "uppercase" }}
