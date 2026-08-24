@@ -229,7 +229,7 @@ export default function Home() {
               <span style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.75em", letterSpacing: "0.1em" }}>ETL Listed &nbsp;·&nbsp; Made in USA</span>
             </p>
 
-            <div style={{ display: "flex", flexDirection: "row", flexWrap: "nowrap", gap: "0.75rem", alignItems: "center" }}>
+            <div style={{ display: "flex",flexWrap: "wrap", flexDirection: "row", gap: "0.75rem", alignItems: "center" }}>
               <Link data-animation="slideLeft" href="/contact/request-a-quote">
                 <span className="btn-primary" style={{ fontSize: "0.78rem", padding: "0.75rem 1.4rem", whiteSpace: "nowrap" }}>
                   START A PROJECT <ArrowRight size={14} />
