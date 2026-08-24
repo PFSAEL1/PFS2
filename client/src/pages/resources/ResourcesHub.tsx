@@ -4,7 +4,7 @@ import { Link } from "wouter";
 import { ArrowRight, BookOpen, FileText, Play, Users, HelpCircle, Filter, ExternalLink } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
-const IMG = "/assets/pfs-paint-booth-sprayer-card_42d3ea13.jpg";
+const IMG = "/assets/ro.png";
 
 const RESOURCES = [
   {

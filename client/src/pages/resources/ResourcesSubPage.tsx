@@ -387,15 +387,51 @@ function GatedDownload({ doc }: { doc: typeof GATED_DOWNLOADS[0] }) {
 }
 
 // ─── Page ──────────────────────────────────────────────────────────────────
-interface ResContent { title: string; desc: string; body: string; }
+interface ResContent { title: string; desc: string; body: string; image: string; }
 
 const CONTENT: Record<string, ResContent> = {
-  "spec-sheets": { title: "Spec Sheets", desc: "Technical specifications for all PFS equipment families.", body: "Download technical specification sheets for PFS spray paint booths, powder coating booths, industrial ovens, blast systems, and air make-up units. Spec sheets include dimensions, airflow data, electrical requirements, and performance specifications." },
-  "installation-guides": { title: "Installation Guides", desc: "Installation and commissioning guides for PFS equipment.", body: "PFS installation guides provide step-by-step instructions for installing and commissioning all PFS equipment. Guides cover site preparation, equipment assembly, utility connections, and initial startup procedures." },
-  "videos": { title: "Videos", desc: "Product overview and installation videos.", body: "Watch product overview videos, installation demonstrations, and customer testimonials for PFS finishing equipment. Videos are available for all major product families." },
-  "case-studies": { title: "Case Studies", desc: "Real-world PFS installations across industries.", body: "Read about real PFS installations across collision repair, automotive manufacturing, aerospace, heavy equipment, and other industries. Case studies include project details, challenges, and results." },
-  "faqs": { title: "Frequently Asked Questions", desc: "Common questions about PFS equipment.", body: "Find answers to frequently asked questions about PFS spray booths, powder coating systems, industrial ovens, and service programs. Can't find your answer? Contact our team." },
-  "downloads": { title: "Installation Guides & Maintenance", desc: "Installation guide, maintenance manual, and spec sheets for all PFS spray booth models.", body: "Download the PFS Installation Guide, Maintenance Manual, and Spec Sheets — all bundled here. These documents cover site preparation, panel assembly, utility connections, airflow balancing, filter replacement schedules, motor maintenance, and full equipment specifications. Enter your contact information to unlock instant access, free of charge." },
+  "spec-sheets": {
+    title: "Spec Sheets",
+    desc: "Technical specifications for all PFS equipment families.",
+    body: "Download technical specification sheets for PFS spray paint booths, powder coating booths, industrial ovens, blast systems, and air make-up units.",
+    image: "/assets/spec-sheets-banner.jpg",
+  },
+
+  "installation-guides": {
+    title: "Installation Guides",
+    desc: "Installation and commissioning guides for PFS equipment.",
+    body: "PFS installation guides provide step-by-step instructions for installing and commissioning all PFS equipment.",
+    image: "/assets/installation-guides-banner.jpg",
+
+  },
+
+  "videos": {
+    title: "Videos",
+    desc: "Product overview and installation videos.",
+    body: "Watch product overview videos, installation demonstrations, and customer testimonials for PFS finishing equipment.",
+    image: "/assets/videos.png",
+  },
+
+  "case-studies": {
+    title: "Case Studies",
+    desc: "Real-world PFS installations across industries.",
+    body: "Read about real PFS installations across collision repair, automotive manufacturing, aerospace, heavy equipment, and other industries.",
+    image: "/assets/cs.png",
+  },
+
+  "faqs": {
+    title: "Frequently Asked Questions",
+    desc: "Common questions about PFS equipment.",
+    body: "Find answers to frequently asked questions about PFS spray booths, powder coating systems, industrial ovens, and service programs.",
+    image: "/assets/faqs.png",
+  },
+
+  "downloads": {
+    title: "Installation Guides & Maintenance",
+    desc: "Installation guide, maintenance manual, and spec sheets for all PFS spray booth models.",
+    body: "Download the PFS Installation Guide, Maintenance Manual, and Spec Sheets — all bundled here.",
+    image: "/assets/downloads.png",
+  },
 };
 
 export default function ResourcesSubPage() {
@@ -424,18 +460,18 @@ export default function ResourcesSubPage() {
 
   return (
     <div>
-      <PageHero title={content.title} subtitle={content.desc} breadcrumbs={[{ label: "Resources", href: "/resources" }, { label: content.title }]} bgImage={IMG} />
+      <PageHero title={content.title} subtitle={content.desc} breadcrumbs={[{ label: "Resources", href: "/resources" }, { label: content.title }]} bgImage={content.image} />
       <section className="py-16 bg-white">
         <div className="container">
           <div className="grid lg:grid-cols-3 gap-10">
             <div className="lg:col-span-2">
               <span className="section-label">Resources</span>
-              <h2 data-animation="slideLeft"  className="section-heading">{content.title}</h2>
+              <h2 data-animation="slideLeft" className="section-heading">{content.title}</h2>
               <p data-animation="slideRight" className="section-body mb-8">{content.body}</p>
 
               {/* Gated downloads for installation-guides and downloads pages */}
               {showGatedDownloads ? (
-                <div> 
+                <div>
                   <div
                     style={{
                       display: "flex",
@@ -459,7 +495,7 @@ export default function ResourcesSubPage() {
               ) : (
                 <div className="p-6 border border-gray-200 bg-gray-50">
                   <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "#555", lineHeight: 1.7, marginBottom: "1rem" }}>Resources are available upon request. Contact us to receive the documentation you need.</p>
-                  <Link  href="/contact/request-a-quote"><span data-animation="slideRight" className="btn-glow">Request Resources <ArrowRight size={14} /></span></Link>
+                  <Link href="/contact/request-a-quote"><span data-animation="slideRight" className="btn-glow">Request Resources <ArrowRight size={14} /></span></Link>
                 </div>
               )}
             </div>

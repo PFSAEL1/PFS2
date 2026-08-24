@@ -5,11 +5,6 @@
   "framework": "vite",
   "redirects": [
     {
-      "source": "/company",
-      "destination": "/company",
-      "permanent": true
-    },
-    {
       "source": "/services",
       "destination": "/service",
       "permanent": true

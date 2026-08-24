@@ -11,15 +11,15 @@ import { GalleryGrid } from "@/components/GalleryLightbox";
 import { useSEO } from "@/hooks/useSEO";
 
 // ── CDN PATHS ─────────────────────────────────────────────────────────────────
-const HERO_IMG       = "/assets/amu-apollo-rooftop-hero_b5d9fad1.jpg";
-const RENDER_VERT    = "/assets/amu-render-vertical_2325a440.jpg";
-const RENDER_HORIZ   = "/assets/amu-render-horizontal_0819be8f.jpg";
+const HERO_IMG = "/assets/amu-apollo-rooftop-hero_b5d9fad1.jpg";
+const RENDER_VERT = "/assets/amu-render-vertical_2325a440.jpg";
+const RENDER_HORIZ = "/assets/amu-render-horizontal_0819be8f.jpg";
 // Gallery real install photos (cleaned — no Spray-Tech logos)
-const AMU_INSTALL1   = "/assets/amu-vertical-outdoor-install1-clean_1af3eb06.jpg";
-const AMU_INSTALL2   = "/assets/amu-vertical-outdoor-install2_35bf9401.jpg";
-const AMU_ROOFTOP    = "/assets/amu-apollo-rooftop_e0c4456e.jpg";
-const AMU_INDOOR     = "/assets/amu-apollo-indoor-pair_dde60680.jpg";
-const AMU_OUTDOOR    = "/assets/amu-outdoor-multi-unit-clean_69bc9731.jpg";
+const AMU_INSTALL1 = "/assets/amu-vertical-outdoor-install1-clean_1af3eb06.jpg";
+const AMU_INSTALL2 = "/assets/amu-vertical-outdoor-install2_35bf9401.jpg";
+const AMU_ROOFTOP = "/assets/amu-apollo-rooftop_e0c4456e.jpg";
+const AMU_INDOOR = "/assets/amu-apollo-indoor-pair_dde60680.jpg";
+const AMU_OUTDOOR = "/assets/amu-outdoor-multi-unit-clean_69bc9731.jpg";
 const AMU_BOOTH_0445 = "/assets/amu-0445-clean_dcd2d77e.jpg";
 const AMU_BOOTH_WALL = "/assets/amu-booth-mounted-install_258f1ac0.jpg";
 
@@ -264,18 +264,83 @@ export default function HeatedAMUPage() {
         />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.90) 0%, rgba(0,0,0,0.50) 50%, rgba(0,0,0,0.15) 100%)" }} />
         <div className="container" style={{ position: "relative", zIndex: 2, paddingBottom: "4rem" }}>
-          <div style={{ display: "flex", gap: "0.5rem", marginBottom: "1.2rem", flexWrap: "wrap" }}>
-            <Link href="/products"><span style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.1em", color: "rgba(255,255,255,0.55)", textTransform: "uppercase", cursor: "pointer" }}>Products</span></Link>
-            <span style={{ color: "rgba(255,255,255,0.35)", fontSize: "0.7rem" }}>/</span>
-            <Link href="/products/air-make-up-units"><span style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.1em", color: "rgba(255,255,255,0.55)", textTransform: "uppercase", cursor: "pointer" }}>Air Make-Up Units</span></Link>
-            <span style={{ color: "rgba(255,255,255,0.35)", fontSize: "0.7rem" }}>/</span>
-            <span style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.1em", color: "rgba(255,255,255,0.85)", textTransform: "uppercase" }}>Heated</span>
+          <div
+            style={{
+              display: "flex",
+              gap: "0.5rem",
+              marginBottom: "1.2rem",
+              flexWrap: "wrap",
+              alignItems: "center",
+            }}
+          >
+            <Link
+              href="/products"
+              style={{
+                fontFamily: "'Chakra Petch', sans-serif",
+                fontSize: "0.7rem",
+                fontWeight: 600,
+                letterSpacing: "0.1em",
+                color: "rgba(255,255,255,0.55)",
+                textTransform: "uppercase",
+                cursor: "pointer",
+                textDecoration: "none",
+              }}
+            >
+              Products
+            </Link>
+
+            <span
+              style={{
+                color: "rgba(255,255,255,0.35)",
+                fontSize: "0.7rem",
+              }}
+            >
+              /
+            </span>
+
+            <Link
+              href="/products/air-make-up-units"
+              style={{
+                fontFamily: "'Chakra Petch', sans-serif",
+                fontSize: "0.7rem",
+                fontWeight: 600,
+                letterSpacing: "0.1em",
+                color: "rgba(255,255,255,0.55)",
+                textTransform: "uppercase",
+                cursor: "pointer",
+                textDecoration: "none",
+              }}
+            >
+              Air Make-Up Units
+            </Link>
+
+            <span
+              style={{
+                color: "rgba(255,255,255,0.35)",
+                fontSize: "0.7rem",
+              }}
+            >
+              /
+            </span>
+
+            <span
+              style={{
+                fontFamily: "'Chakra Petch', sans-serif",
+                fontSize: "0.7rem",
+                fontWeight: 600,
+                letterSpacing: "0.1em",
+                color: "rgba(255,255,255,0.85)",
+                textTransform: "uppercase",
+              }}
+            >
+              Heated
+            </span>
           </div>
           <div style={{ maxWidth: "680px" }}>
             <div style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.18em", color: "rgba(255,255,255,0.55)", textTransform: "uppercase", marginBottom: "0.8rem" }}>
               PFS APOLLO AMU SERIES
             </div>
-            <h1 data-animation="slideLeft"  style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(2.4rem,5vw,4rem)", fontWeight: 800, color: "#ffffff", lineHeight: 1.05, marginBottom: "1.2rem", letterSpacing: "-0.01em" }}>
+            <h1 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(2.4rem,5vw,4rem)", fontWeight: 800, color: "#ffffff", lineHeight: 1.05, marginBottom: "1.2rem", letterSpacing: "-0.01em" }}>
               Heated Air<br />Make-Up Units
             </h1>
             <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "1.05rem", color: "rgba(255,255,255,0.78)", lineHeight: 1.7, marginBottom: "2rem", maxWidth: "560px" }}>
@@ -320,7 +385,7 @@ export default function HeatedAMUPage() {
         <div className="container">
           <div style={{ marginBottom: "2.5rem" }}>
             <span style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.6rem" }}>FIVE CONFIGURATIONS</span>
-            <h2 data-animation="slideLeft"  style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 800, color: "#111", lineHeight: 1.1 }}>Choose Your Installation Type</h2>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 800, color: "#111", lineHeight: 1.1 }}>Choose Your Installation Type</h2>
             <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "#555", lineHeight: 1.7, maxWidth: "560px", marginTop: "0.75rem" }}>
               Every facility is different. PFS Apollo AMUs ship in five configurations to fit your footprint, ductwork layout, and installation requirements.
             </p>
@@ -409,7 +474,7 @@ export default function HeatedAMUPage() {
         <div className="container">
           <div style={{ marginBottom: "2.5rem" }}>
             <span style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.6rem" }}>HEAT SOURCES</span>
-            <h2 data-animation="slideLeft"style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 800, color: "#111", lineHeight: 1.1 }}>Natural Gas, Propane, or Electric</h2>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 800, color: "#111", lineHeight: 1.1 }}>Natural Gas, Propane, or Electric</h2>
           </div>
 
           {/* Fuel selector buttons */}
@@ -452,7 +517,7 @@ export default function HeatedAMUPage() {
         <div className="container">
           <div style={{ marginBottom: "2.5rem" }}>
             <span style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: "rgba(255,255,255,0.5)", textTransform: "uppercase", display: "block", marginBottom: "0.6rem" }}>CONTROL PANELS</span>
-            <h2 data-animation="slideLeft"  style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 800, color: "#ffffff", lineHeight: 1.1 }}>PFS Control Panel Options</h2>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 800, color: "#ffffff", lineHeight: 1.1 }}>PFS Control Panel Options</h2>
             <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.65)", lineHeight: 1.7, maxWidth: "560px", marginTop: "0.75rem" }}>
               Every Apollo AMU pairs with a PFS control panel. Choose the level of automation, VFD count, and HMI capability that matches your production requirements. Industrial PLC communication protocols (EtherNet/IP, Modbus, DeviceNet) available on request for CP4000 series.
             </p>
@@ -510,12 +575,12 @@ export default function HeatedAMUPage() {
           </div>
           <GalleryGrid
             images={[
-              { src: HERO_IMG,       alt: "PFS Apollo AMU — rooftop horizontal installation" },
-              { src: AMU_INSTALL1,   alt: "PFS Apollo AMU — vertical outdoor install with ductwork, side view" },
-              { src: AMU_INSTALL2,   alt: "PFS Apollo AMU — vertical outdoor install with ladder, blue sky" },
-              { src: AMU_ROOFTOP,    alt: "Apollo AMU horizontal unit installed on flat roof" },
-              { src: AMU_INDOOR,     alt: "Two Apollo AMU units installed indoors with ductwork" },
-              { src: AMU_OUTDOOR,    alt: "Multiple AMU units installed on outdoor pad with large ductwork" },
+              { src: HERO_IMG, alt: "PFS Apollo AMU — rooftop horizontal installation" },
+              { src: AMU_INSTALL1, alt: "PFS Apollo AMU — vertical outdoor install with ductwork, side view" },
+              { src: AMU_INSTALL2, alt: "PFS Apollo AMU — vertical outdoor install with ladder, blue sky" },
+              { src: AMU_ROOFTOP, alt: "Apollo AMU horizontal unit installed on flat roof" },
+              { src: AMU_INDOOR, alt: "Two Apollo AMU units installed indoors with ductwork" },
+              { src: AMU_OUTDOOR, alt: "Multiple AMU units installed on outdoor pad with large ductwork" },
               { src: AMU_BOOTH_0445, alt: "Apollo AMU booth-mounted install — unit being set with forklift" },
               { src: AMU_BOOTH_WALL, alt: "AMU booth-mounted install — vertical unit on exterior wall with control panel" },
             ]}
@@ -556,11 +621,11 @@ export default function HeatedAMUPage() {
 
 
       {/* FAQ SECTION */}
-      <section style={{ background:"#f8f9fb", padding:"clamp(2.5rem, 6vw, 4rem) 0", borderTop:"1px solid #e5e7eb" }}>
-        <div className="container" style={{ maxWidth:"860px" }}>
-          <div style={{ textAlign:"center", marginBottom:"2.5rem" }}>
-            <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:"#1B3A6B",textTransform:"uppercase",display:"block",marginBottom:"0.4rem" }}>FREQUENTLY ASKED QUESTIONS</span>
-            <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.4rem,3.5vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Heated Air Make-Up Units — Common Questions</h2>
+      <section style={{ background: "#f8f9fb", padding: "clamp(2.5rem, 6vw, 4rem) 0", borderTop: "1px solid #e5e7eb" }}>
+        <div className="container" style={{ maxWidth: "860px" }}>
+          <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
+            <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: "#1B3A6B", textTransform: "uppercase", display: "block", marginBottom: "0.4rem" }}>FREQUENTLY ASKED QUESTIONS</span>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed','Oswald',sans-serif", fontSize: "clamp(1.4rem,3.5vw,2.2rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Heated Air Make-Up Units — Common Questions</h2>
           </div>
           {[
             { q: "What is a heated air make-up unit (AMU)?", a: "A heated air make-up unit (AMU) is a rooftop or wall-mounted air handler that supplies tempered replacement air to a spray booth to compensate for the air exhausted by the booth's ventilation system. Without a make-up air unit, a spray booth creates negative pressure in the building — causing cold drafts, contamination, and code violations. A heated AMU maintains positive booth pressure, controls booth temperature, and ensures consistent airflow velocity for optimal finish quality." },
@@ -569,26 +634,28 @@ export default function HeatedAMUPage() {
             { q: "What fuel types are available for PFS heated AMUs?", a: "PFS heated AMUs are available with natural gas, propane (LP), or electric heating. Natural gas is the most common and most economical option where available. Propane is available for facilities without natural gas service. Electric heating is available for facilities where gas is not permitted or for low-BTU applications." },
             { q: "Can a PFS AMU be integrated with the booth control panel?", a: "Yes. PFS AMUs are designed to integrate with the PFS Core Control Panel — the same UL 508A certified control panel supplied with PFS spray booths. The integrated control system manages spray, flash, and bake cycles, coordinates booth and AMU operation, and provides safety interlocks for both units from a single control interface." },
           ].map((item, i) => (
-            <details key={i} style={{ borderBottom:"1px solid #e5e7eb", padding:"1.25rem 0" }}>
-              <summary style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"clamp(0.95rem,2.5vw,1.1rem)",fontWeight:800,color:"#111",letterSpacing:"0.01em",cursor:"pointer",listStyle:"none",display:"flex",justifyContent:"space-between",alignItems:"center",gap:"1rem" }}>
+            <details key={i} style={{ borderBottom: "1px solid #e5e7eb", padding: "1.25rem 0" }}>
+              <summary style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "clamp(0.95rem,2.5vw,1.1rem)", fontWeight: 800, color: "#111", letterSpacing: "0.01em", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "1rem" }}>
                 {item.q}
-                <span style={{ color:"#1B3A6B", flexShrink:0, fontSize:"1.4rem", fontWeight:300, lineHeight:1 }}>+</span>
+                <span style={{ color: "#1B3A6B", flexShrink: 0, fontSize: "1.4rem", fontWeight: 300, lineHeight: 1 }}>+</span>
               </summary>
-              <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"clamp(0.82rem,2vw,0.9rem)",color:"#555",lineHeight:1.75,margin:"1rem 0 0",paddingRight:"1.5rem" }}>{item.a}</p>
+              <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(0.82rem,2vw,0.9rem)", color: "#555", lineHeight: 1.75, margin: "1rem 0 0", paddingRight: "1.5rem" }}>{item.a}</p>
             </details>
           ))}
         </div>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": [
-            { "@type": "Question", "name": "What is a heated air make-up unit (AMU)?", "acceptedAnswer": { "@type": "Answer", "text": "A heated air make-up unit (AMU) is a rooftop or wall-mounted air handler that supplies tempered replacement air to a spray booth to compensate for the air exhausted by the booth's ventilation system. ..." } },
-            { "@type": "Question", "name": "Why does a spray booth need a make-up air unit?", "acceptedAnswer": { "@type": "Answer", "text": "A spray booth exhausts large volumes of air — typically 10,000 to 30,000 CFM or more depending on booth size. This exhausted air must be replaced with fresh, tempered air to maintain positive booth pr..." } },
-            { "@type": "Question", "name": "What is the difference between a heated AMU and an unheated AMU?", "acceptedAnswer": { "@type": "Answer", "text": "A heated AMU conditions the incoming replacement air to a set temperature — typically 65–75°F for spray cycles and up to 160°F for bake/cure cycles. An unheated AMU supplies outside air at ambient tem..." } },
-            { "@type": "Question", "name": "What fuel types are available for PFS heated AMUs?", "acceptedAnswer": { "@type": "Answer", "text": "PFS heated AMUs are available with natural gas, propane (LP), or electric heating. Natural gas is the most common and most economical option where available. Propane is available for facilities withou..." } },
-            { "@type": "Question", "name": "Can a PFS AMU be integrated with the booth control panel?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. PFS AMUs are designed to integrate with the PFS Core Control Panel — the same UL 508A certified control panel supplied with PFS spray booths. The integrated control system manages spray, flash, a..." } }
-          ]
-        }) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              { "@type": "Question", "name": "What is a heated air make-up unit (AMU)?", "acceptedAnswer": { "@type": "Answer", "text": "A heated air make-up unit (AMU) is a rooftop or wall-mounted air handler that supplies tempered replacement air to a spray booth to compensate for the air exhausted by the booth's ventilation system. ..." } },
+              { "@type": "Question", "name": "Why does a spray booth need a make-up air unit?", "acceptedAnswer": { "@type": "Answer", "text": "A spray booth exhausts large volumes of air — typically 10,000 to 30,000 CFM or more depending on booth size. This exhausted air must be replaced with fresh, tempered air to maintain positive booth pr..." } },
+              { "@type": "Question", "name": "What is the difference between a heated AMU and an unheated AMU?", "acceptedAnswer": { "@type": "Answer", "text": "A heated AMU conditions the incoming replacement air to a set temperature — typically 65–75°F for spray cycles and up to 160°F for bake/cure cycles. An unheated AMU supplies outside air at ambient tem..." } },
+              { "@type": "Question", "name": "What fuel types are available for PFS heated AMUs?", "acceptedAnswer": { "@type": "Answer", "text": "PFS heated AMUs are available with natural gas, propane (LP), or electric heating. Natural gas is the most common and most economical option where available. Propane is available for facilities withou..." } },
+              { "@type": "Question", "name": "Can a PFS AMU be integrated with the booth control panel?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. PFS AMUs are designed to integrate with the PFS Core Control Panel — the same UL 508A certified control panel supplied with PFS spray booths. The integrated control system manages spray, flash, a..." } }
+            ]
+          })
+        }} />
       </section>
 
       {/* ── BOTTOM CTA ── */}
@@ -601,7 +668,7 @@ export default function HeatedAMUPage() {
             Get a quote for your Apollo AMU — sized to your booth CFM, climate, and heat source.
           </p>
           <Link href="/contact/request-a-quote?from=heated-amu">
-            <span data-animation="slideRight"  className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
+            <span data-animation="slideRight" className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
           </Link>
         </div>
       </section>

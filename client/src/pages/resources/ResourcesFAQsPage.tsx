@@ -4,7 +4,7 @@ import { Link } from "wouter";
 import { ChevronDown, ArrowRight, Phone } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
-const IMG = "/assets/pfs-paint-booth-sprayer-card_42d3ea13.jpg";
+const IMG = "/assets/faqs.png";
 
 // ─── FAQ Data ─────────────────────────────────────────────────────────────
 const FAQ_SECTIONS = [

@@ -6,6 +6,7 @@ import { useSEO } from '@/hooks/useSEO';
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import PageHero from "@/components/PageHero";
+const IMG = "/assets/blogs.png";
 
 const BLUE = "#1B3A6B";
 const GOLD = "#C8922A";
@@ -87,11 +88,15 @@ export default function BlogHubPage() {
 
   return (
     <div style={{ backgroundColor: "#f8f9fb" }}>
-      <PageHero
-        title="Spray Booth Guides & Resources"
-        subtitle="Technical guides, buyer's guides, and maintenance resources from PFS engineers."
-        breadcrumbs={[{ label: "Resources", href: "/resources" }, { label: "Blog" }]}
-      />
+    <PageHero
+  title="Spray Booth Guides & Resources"
+  subtitle="Technical guides, buyer's guides, and maintenance resources from PFS engineers."
+  breadcrumbs={[
+    { label: "Resources", href: "/resources" },
+    { label: "Blog" }
+  ]}
+        bgImage={IMG}
+/>
 
       <div className="container" style={{ paddingTop: "3rem", paddingBottom: "4rem" }}>
         <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: "1.75rem" }}>
