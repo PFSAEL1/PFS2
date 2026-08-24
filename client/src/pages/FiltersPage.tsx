@@ -117,7 +117,7 @@ export default function FiltersPage() {
       }}>
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: "url('/assets/pfs-booth-clean-interior-wide_3d9c498b.jpeg')",
+          backgroundImage: "url('/assets/filters-hero.jpeg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           zIndex: 0,
@@ -177,39 +177,39 @@ export default function FiltersPage() {
                 <Phone size={14} /> Call for Filters: (888) 545-7715
               </span>
             </a>
-     <a
-  data-animation="slideRight"
-  href="https://pfsfilters.com"
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{
-    fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-    fontWeight: 700,
-    fontSize: "0.85rem",
-    letterSpacing: "0.1em",
-    textTransform: "uppercase",
-    padding: "0.75rem 2rem",
-    backgroundColor: "transparent",
-    color: "#fff",
-    border: "1.5px solid rgba(255,255,255,0.55)",
-    cursor: "pointer",
-    transition: "border-color 0.2s, background 0.2s",
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "0.4rem",
-    textDecoration: "none",
-  }}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.borderColor = "#fff";
-    e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.08)";
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.borderColor = "rgba(255,255,255,0.55)";
-    e.currentTarget.style.backgroundColor = "transparent";
-  }}
->
-  Order Online at pfsfilters.com <ExternalLink size={13} />
-</a>
+            <a
+              data-animation="slideRight"
+              href="https://pfsfilters.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                fontWeight: 700,
+                fontSize: "0.85rem",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                padding: "0.75rem 2rem",
+                backgroundColor: "transparent",
+                color: "#fff",
+                border: "1.5px solid rgba(255,255,255,0.55)",
+                cursor: "pointer",
+                transition: "border-color 0.2s, background 0.2s",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.4rem",
+                textDecoration: "none",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = "#fff";
+                e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.08)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = "rgba(255,255,255,0.55)";
+                e.currentTarget.style.backgroundColor = "transparent";
+              }}
+            >
+              Order Online at pfsfilters.com <ExternalLink size={13} />
+            </a>
           </div>
         </div>
       </section>
