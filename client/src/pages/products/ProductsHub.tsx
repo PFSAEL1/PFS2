@@ -15,7 +15,7 @@ const FAMILIES = [
     imgPosition: "center 40%",
     desc: "Enclosed, open face, outdoor, shipping container, aircraft, and custom spray paint booths. built with ETL/UL certified components, made in USA.",
     badge: "Most Popular",
-        tags: ["ETL/UL Certified Components", "Made in USA"],
+    tags: ["ETL/UL Certified Components", "Made in USA"],
   },
   {
     label: "Powder Coating Systems",
@@ -23,7 +23,7 @@ const FAMILIES = [
     img: "/assets/pfs-powder-coating-card2_32de7c98.png",
     desc: "Spray to waste, powder reclaim, and automated powder coating systems for high-volume finishing lines.",
     badge: null,
-        tags: ["ETL/UL Certified Components", "Made in USA"],
+    tags: ["ETL/UL Certified Components", "Made in USA"],
   },
   {
     label: "Industrial Ovens",
@@ -32,7 +32,7 @@ const FAMILIES = [
     imgPosition: "center 50%",
     desc: "Batch, conveyor, walk-in, infrared, and large-equipment curing ovens. Any temperature, any size.",
     badge: null,
-        tags: ["ETL/UL Certified Components", "Made in USA"],
+    tags: ["ETL/UL Certified Components", "Made in USA"],
   },
   {
     label: "Prep & Support",
@@ -40,7 +40,7 @@ const FAMILIES = [
     img: "/assets/pfs-prep-station-curtain-real_c07d32e0.jpg",
     desc: "Prep stations, paint walls, paint mix rooms, sanding and grinding booths for complete finishing environments.",
     badge: null,
-        tags: ["ETL/UL Certified Components", "Made in USA"],
+    tags: ["ETL/UL Certified Components", "Made in USA"],
   },
   {
     label: "Blasting Systems",
@@ -49,7 +49,7 @@ const FAMILIES = [
     imgPosition: "center 55%",
     desc: "Blasting booths, reclaim blasting booths, and containerized blast booths for surface preparation.",
     badge: null,
-        tags: ["ETL/UL Certified Components", "Made in USA"],
+    tags: ["ETL/UL Certified Components", "Made in USA"],
   },
   {
     label: "Air Make-Up Units",
@@ -57,7 +57,7 @@ const FAMILIES = [
     img: "/assets/pfs-amu-card_41f0dd88.jpg",
     desc: "Heated and non-heated AMUs for proper airflow and temperature control. OSHA and NFPA 33 compliant.",
     badge: null,
-        tags: ["ETL/UL Certified Components", "Made in USA"],
+    tags: ["ETL/UL Certified Components", "Made in USA"],
   },
   {
     label: "Environmental Rooms",
@@ -65,7 +65,7 @@ const FAMILIES = [
     img: "/assets/pfs-environmental-room-exterior-showroom_08ee80dd.jpg",
     desc: "Temperature and process-controlled finishing rooms for humidity-sensitive coatings and precision applications.",
     badge: null,
-        tags: ["ETL/UL Certified Components", "Made in USA"],
+    tags: ["ETL/UL Certified Components", "Made in USA"],
   },
   {
     label: "Parts & Filters",
@@ -192,16 +192,44 @@ export default function ProductsHub() {
                   Tell us what you need and our team will send a detailed quote within 24 hours — no obligation.
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
-                <Link data-animation="slideLeft" href="/contact/request-a-quote">
-                  <span className="btn-glow flex items-center gap-2">Get Pricing <ArrowRight size={14} /></span>
-                </Link>
-                <a data-animation="slideRight" href="tel:+18885457715">
-                  <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#ffffff", border: "1.5px solid rgba(255,255,255,0.4)", padding: "0.6rem 1.2rem", cursor: "pointer" }}>
-                    <Phone size={14} /> (888) 545-7715
-                  </span>
-                </a>
-              </div>
+             <div className="flex flex-col min-[768px]:flex-row gap-3 flex-shrink-0 max-[767px]:w-full">
+  <Link
+    className="max-[767px]:w-full max-[767px]:block"
+    data-animation="slideLeft"
+    href="/contact/request-a-quote"
+  >
+    <span
+      className="btn-glow flex items-center justify-center gap-2 max-[767px]:w-full"
+    >
+      Get Pricing <ArrowRight size={14} />
+    </span>
+  </Link>
+
+  <a
+    className="max-[767px]:w-full max-[767px]:block"
+    data-animation="slideRight"
+    href="tel:+18885457715"
+  >
+    <span
+      className="flex items-center justify-center max-[767px]:w-full"
+      style={{
+        gap: "0.5rem",
+        fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+        fontSize: "0.8rem",
+        fontWeight: 700,
+        letterSpacing: "0.1em",
+        textTransform: "uppercase",
+        color: "#ffffff",
+        border: "1.5px solid rgba(255,255,255,0.4)",
+        padding: "0.6rem 1.2rem",
+        cursor: "pointer",
+        boxSizing: "border-box",
+      }}
+    >
+      <Phone size={14} /> (888) 545-7715
+    </span>
+  </a>
+</div>
             </div>
           </div>
         </div>

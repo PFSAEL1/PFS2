@@ -95,7 +95,7 @@ export default function Footer() {
             </p>
             <div className="space-y-1.5">
               <a href="tel:8885457715" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.8rem", color: "rgba(255,255,255)", display: "block", textDecoration: "none", transition: "color 0.15s" }}
-                onMouseEnter={e => (e.currentTarget.style.color = "white")} onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255)")}>
+                onMouseEnter={e => (e.currentTarget.style.color = "white")} onMouseLeave={e => (e.currentTarget.style.color = "rgb(180, 180, 180)")}>
                 (888) 545-7715 Toll Free
               </a>
 
@@ -131,16 +131,28 @@ export default function Footer() {
                       <a href={link.href} target="_blank" rel="noopener noreferrer"
                         style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.78rem", color: "rgb(255,255,255)", textDecoration: "none", transition: "color 0.15s" }}
                         onMouseEnter={e => (e.currentTarget.style.color = "white")}
-                        onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.45)")}>
+                        onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.9)")}>
                         {link.label} ↗
                       </a>
                     </li>
                   ) : (
                     <li key={link.label}>
                       <Link href={link.href}>
-                        <span style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.78rem", color: "rgb(255,255,255)", cursor: "pointer", transition: "color 0.15s" }}
-                          onMouseEnter={e => ((e.target as HTMLElement).style.color = "white")}
-                          onMouseLeave={e => ((e.target as HTMLElement).style.color = "rgba(255,255,255)")}>
+                        <span
+                          style={{
+                            fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
+                            fontSize: "0.78rem",
+                            color: "rgb(255,255,255)",
+                            cursor: "pointer",
+                            transition: "color 0.15s",
+                          }}
+                          onMouseEnter={e => {
+                            e.currentTarget.style.color = "rgb(180, 180, 180)";
+                          }}
+                          onMouseLeave={e => {
+                            e.currentTarget.style.color = "rgba(255,255,255,0.9)";
+                          }}
+                        >
                           {link.label}
                         </span>
                       </Link>

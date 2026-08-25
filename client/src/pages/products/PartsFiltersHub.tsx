@@ -21,7 +21,7 @@ export default function PartsFiltersHub() {
   useSEO({
     title: "Spray Booth Filters & Replacement Parts | PFS Industrial Finishing",
     description: "PFS OEM spray booth filters and replacement parts for industrial paint booths, powder coating systems, and blast equipment. Intake filters, exhaust filters, ceiling filters, and specialty filtration media.",
-    canonical: "/parts",
+    canonical: "/products/parts-filters",
   });
 
   return (

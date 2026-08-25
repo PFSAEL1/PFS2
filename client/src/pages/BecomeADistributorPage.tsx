@@ -204,7 +204,7 @@ export default function BecomeADistributorPage() {
       {/* ── PROGRAM DETAILS ── */}
       <section style={{ padding: "5rem 0" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "start" }}>
+          <div className="content-grid">
 
             {/* Requirements */}
             <div>

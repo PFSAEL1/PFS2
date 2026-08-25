@@ -23,7 +23,7 @@ const FEATURED_IMG = "/assets/pfs-military-humvee-booth-clean_ef5c4409.jpeg";
 
 // Gallery — 6 military-specific photos (jet turbine removed — aerospace product, not military)
 const GALLERY: GalleryImage[] = [
-  { src: "/assets/pfs-military-humvee-booth-clean_15890e0d.png",          alt: "Military HMMWV inside PFS paint booth" },
+  { src: "/assets/military vehicle.png",          alt: "Military HMMWV inside PFS paint booth" },
   { src: "/assets/pfs-helios-military-booth_f3b03d46.png",               alt: "PFS Helios Series booth with armored military vehicle" },
   { src: "/assets/pfs-military-stryker-outdoor-base_9293cfd5.png",       alt: "PFS booth with Stryker armored vehicle at military base" },
   { src: "/assets/pfs-military-booth-exterior-warehouse_0980594a.jpeg",  alt: "PFS booth exterior in warehouse" },

@@ -343,269 +343,255 @@ export default function SprinterVanBoothPage() {
         </div>
       </section> */}
 
-
-  {/* ── SPRINTER VAN HERO ── */}
-{/* ── SPRINTER VAN HERO ── */}
-<section
-  style={{
-    position: "relative",
-    minHeight: "clamp(380px,60vh,640px)",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "flex-end",
-    overflow: "hidden",
-    background: "#0a0a0a",
-  }}
->
-  {/* HERO IMAGE */}
-  <img
-    src={HERO_IMG}
-    alt="PFS Sprinter Van paint booth — full interior view"
-    style={{
-      position: "absolute",
-      inset: 0,
-      width: "100%",
-      height: "100%",
-      objectFit: "cover",
-      objectPosition: "center 35%",
-      opacity: 0.55,
-    }}
-  />
-
-  {/* DARK OVERLAY */}
-  <div
-    style={{
-      position: "absolute",
-      inset: 0,
-      background: "rgba(0,0,0,0.22)",
-    }}
-  />
-
-  {/* BOTTOM GRADIENT / SHADOW */}
-  <div
-    style={{
-      position: "absolute",
-      inset: 0,
-      background:
-        "linear-gradient(to top, rgba(4,8,20,0.97) 0%, rgba(4,8,20,0.82) 32%, rgba(4,8,20,0.42) 62%, rgba(4,8,20,0.06) 100%)",
-    }}
-  />
-
-  {/* BLUE ACCENT LINE */}
-  <div
-    style={{
-      position: "absolute",
-      bottom: 0,
-      left: 0,
-      right: 0,
-      height: "3px",
-      background: BLUE,
-      zIndex: 3,
-    }}
-  />
-
-  {/* CONTENT */}
-  <div
-    className="container"
-    style={{
-      position: "relative",
-      zIndex: 2,
-      paddingTop: "5rem",
-      paddingBottom: "clamp(4.5rem, 10vw, 6.5rem)",
-    }}
-  >
-    {/* BREADCRUMBS */}
-    <nav style={{ marginBottom: "1.5rem" }}>
-      <span
+      {/* ── SPRINTER VAN HERO ── */}
+      <section
         style={{
-          fontFamily: "'Inter', sans-serif",
-          fontSize: "0.7rem",
-          color: "rgba(255,255,255,0.45)",
-          letterSpacing: "0.08em",
-          textTransform: "uppercase",
-        }}
-      >
-        <Link href="/">
-          <span
-            style={{
-              cursor: "pointer",
-              color: "rgba(255,255,255,0.45)",
-            }}
-          >
-            HOME
-          </span>
-        </Link>{" / "}
-
-        <Link href="/products">
-          <span
-            style={{
-              cursor: "pointer",
-              color: "rgba(255,255,255,0.45)",
-            }}
-          >
-            PRODUCTS
-          </span>
-        </Link>{" / "}
-
-        <Link href="/products/paint-booths">
-          <span
-            style={{
-              cursor: "pointer",
-              color: "rgba(255,255,255,0.45)",
-            }}
-          >
-            PAINT BOOTHS
-          </span>
-        </Link>{" / "}
-
-        <Link href="/products/paint-booths/enclosed">
-          <span
-            style={{
-              cursor: "pointer",
-              color: "rgba(255,255,255,0.45)",
-            }}
-          >
-            ENCLOSED
-          </span>
-        </Link>{" / "}
-
-        <span
-          style={{
-            color: "rgba(255,255,255,0.85)",
-          }}
-        >
-          SPRINTER VAN
-        </span>
-      </span>
-    </nav>
-
-    {/* MAIN HERO CONTENT */}
-    <div
-      style={{
-        maxWidth: "680px",
-      }}
-    >
-      {/* BADGE */}
-      <span
-        style={{
-          display: "inline-flex",
-          alignItems: "center",
-          gap: "0.4rem",
-          background: "rgba(27,58,107,0.75)",
-          border: "1px solid rgba(107,163,224,0.4)",
-          color: "#6fa3e0",
-          borderRadius: "2px",
-          fontFamily: "'Barlow Condensed', sans-serif",
-          fontSize: "0.7rem",
-          fontWeight: 700,
-          letterSpacing: "0.14em",
-          textTransform: "uppercase",
-          padding: "0.3rem 0.75rem",
-          marginBottom: "1.25rem",
-        }}
-      >
-        <Maximize2 size={12} />
-        11–12 FT INTERIOR CLEARANCE
-      </span>
-
-      {/* TITLE */}
-      <h1
-        data-animation="slideLeft"
-        style={{
-          fontFamily: "'Barlow Condensed','Oswald',sans-serif",
-          fontSize: "clamp(2.6rem,7vw,5rem)",
-          fontWeight: 900,
-          color: "#fff",
-          letterSpacing: "-0.01em",
-          lineHeight: 1.0,
-          marginBottom: "1rem",
-          maxWidth: "680px",
-          textTransform: "uppercase",
-        }}
-      >
-        Sprinter Van
-        <br />
-        Paint Booths
-      </h1>
-
-      {/* DESCRIPTION */}
-      <p
-        data-animation="slideLeft"
-        style={{
-          fontFamily: "'Inter',sans-serif",
-          fontSize: "clamp(0.88rem,1.5vw,1rem)",
-          color: "rgba(255,255,255,0.72)",
-          lineHeight: 1.65,
-          marginBottom: "1.5rem",
-          maxWidth: "520px",
-        }}
-      >
-        built with ETL/UL listed components, NFPA 33 compliant booths
-        built for Sprinter vans, high-roof cargo vans, and tall
-        commercial vehicles. Available in cross-flow, side downdraft,
-        or full downdraft — Orion, Helios, or Zenith series.
-      </p>
-
-      {/* CTA BUTTONS */}
-      <div
-        style={{
+          position: "relative",
+          minHeight: "clamp(380px,60vh,640px)",
           display: "flex",
           flexDirection: "column",
-          gap: "0.85rem",
-          maxWidth: "340px",
+          justifyContent: "flex-end",
+          overflow: "hidden",
+          background: "#0a0a0a",
         }}
       >
-        {/* GET PRICING */}
-        <Link
-          data-animation="slideLeft"
-          href="/contact/request-a-quote?from=sprinter-van-booth"
-        >
-          <span
-            className="btn-glow"
-            style={{
-              width: "100%",
-              justifyContent: "center",
-            }}
-          >
-            GET PRICING <ArrowRight size={16} />
-          </span>
-        </Link>
-
-        {/* CALL */}
-        <a
-          data-animation="slideRight"
-          href="tel:8885457715"
+        {/* HERO IMAGE */}
+        <img
+          src={HERO_IMG}
+          alt="PFS Sprinter Van paint booth — full interior view"
           style={{
+            position: "absolute",
+            inset: 0,
             width: "100%",
-            textDecoration: "none",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center 35%",
+            opacity: 0.55,
+          }}
+        />
+
+        {/* DARK OVERLAY */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "rgba(0,0,0,0.22)",
+          }}
+        />
+
+        {/* BOTTOM GRADIENT / SHADOW */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(to top, rgba(4,8,20,0.97) 0%, rgba(4,8,20,0.82) 32%, rgba(4,8,20,0.42) 62%, rgba(4,8,20,0.06) 100%)",
+          }}
+        />
+
+        {/* BLUE ACCENT LINE */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            height: "3px",
+            background: BLUE,
+            zIndex: 3,
+          }}
+        />
+
+        {/* CONTENT */}
+        <div
+          className="container"
+          style={{
+            position: "relative",
+            zIndex: 2,
+            paddingTop: "5rem",
+            paddingBottom: "clamp(4.5rem, 10vw, 6.5rem)",
           }}
         >
-          <span
+          {/* BREADCRUMBS */}
+          <nav style={{ marginBottom: "1.5rem" }}>
+            <span
+              style={{
+                fontFamily: "'Inter', sans-serif",
+                fontSize: "0.7rem",
+                color: "rgba(255,255,255,0.45)",
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+              }}
+            >
+              <Link href="/">
+                <span
+                  style={{
+                    cursor: "pointer",
+                    color: "rgba(255,255,255,0.45)",
+                  }}
+                >
+                  HOME
+                </span>
+              </Link>{" / "}
+
+              <Link href="/products">
+                <span
+                  style={{
+                    cursor: "pointer",
+                    color: "rgba(255,255,255,0.45)",
+                  }}
+                >
+                  PRODUCTS
+                </span>
+              </Link>{" / "}
+
+              <Link href="/products/paint-booths">
+                <span
+                  style={{
+                    cursor: "pointer",
+                    color: "rgba(255,255,255,0.45)",
+                  }}
+                >
+                  PAINT BOOTHS
+                </span>
+              </Link>{" / "}
+
+              <Link href="/products/paint-booths/enclosed">
+                <span
+                  style={{
+                    cursor: "pointer",
+                    color: "rgba(255,255,255,0.45)",
+                  }}
+                >
+                  ENCLOSED
+                </span>
+              </Link>{" / "}
+
+              <span
+                style={{
+                  color: "rgba(255,255,255,0.85)",
+                }}
+              >
+                SPRINTER VAN
+              </span>
+            </span>
+          </nav>
+
+          {/* MAIN HERO CONTENT */}
+          <div
             style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: "0.5rem",
-              background: "transparent",
-              color: "#fff",
-              border: "1.5px solid rgba(255,255,255,0.5)",
-              fontFamily: "'Barlow Condensed',sans-serif",
-              fontSize: "clamp(0.88rem,3vw,0.95rem)",
-              fontWeight: 700,
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              padding: "1.1rem 2rem",
-              cursor: "pointer",
-              width: "100%",
+              maxWidth: "680px",
             }}
           >
-            CALL (888) 545-7715
-          </span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+            {/* BADGE */}
+            <span
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.4rem",
+                background: "rgba(27,58,107,0.75)",
+                border: "1px solid rgba(107,163,224,0.4)",
+                color: "#6fa3e0",
+                borderRadius: "2px",
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontSize: "0.7rem",
+                fontWeight: 700,
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+                padding: "0.3rem 0.75rem",
+                marginBottom: "1.25rem",
+              }}
+            >
+              <Maximize2 size={12} />
+              11–12 FT INTERIOR CLEARANCE
+            </span>
+
+            {/* TITLE */}
+            <h1
+              data-animation="slideLeft"
+              style={{
+                fontFamily: "'Barlow Condensed','Oswald',sans-serif",
+                fontSize: "clamp(2.6rem,7vw,5rem)",
+                fontWeight: 900,
+                color: "#fff",
+                letterSpacing: "-0.01em",
+                lineHeight: 1.0,
+                marginBottom: "1rem",
+                maxWidth: "680px",
+                textTransform: "uppercase",
+              }}
+            >
+              Sprinter Van
+              <br />
+              Paint Booths
+            </h1>
+
+            {/* DESCRIPTION */}
+            <p
+              data-animation="slideLeft"
+              style={{
+                fontFamily: "'Inter',sans-serif",
+                fontSize: "clamp(0.88rem,1.5vw,1rem)",
+                color: "rgba(255,255,255,0.72)",
+                lineHeight: 1.65,
+                marginBottom: "1.5rem",
+                maxWidth: "520px",
+              }}
+            >
+              built with ETL/UL listed components, NFPA 33 compliant booths
+              built for Sprinter vans, high-roof cargo vans, and tall
+              commercial vehicles. Available in cross-flow, side downdraft,
+              or full downdraft — Orion, Helios, or Zenith series.
+            </p>
+
+            {/* CTA BUTTONS */}
+            <div className="flex w-full flex-col gap-3.5 min-[768px]:max-w-[340px]">
+              {/* GET PRICING */}
+              <Link
+                data-animation="slideLeft"
+                href="/contact/request-a-quote?from=sprinter-van-booth"
+                className="block w-full"
+              >
+                <span
+                  className="btn-glow flex w-full items-center justify-center gap-2"
+                  style={{
+                    boxSizing: "border-box",
+                  }}
+                >
+                  GET PRICING <ArrowRight size={16} />
+                </span>
+              </Link>
+
+              {/* CALL */}
+              <a
+                data-animation="slideRight"
+                href="tel:8885457715"
+                className="block w-full"
+                style={{ textDecoration: "none" }}
+              >
+                <span
+                  className="flex w-full items-center justify-center gap-2"
+                  style={{
+                    background: "transparent",
+                    color: "#fff",
+                    border: "1.5px solid rgba(255,255,255,0.5)",
+                    fontFamily: "'Barlow Condensed', sans-serif",
+                    fontSize: "clamp(0.88rem, 3vw, 0.95rem)",
+                    fontWeight: 700,
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    padding: "1.1rem 2rem",
+                    cursor: "pointer",
+                    boxSizing: "border-box",
+                  }}
+                >
+                  CALL (888) 545-7715
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ── CERT CAROUSEL ── */}
       <CertCarousel />
@@ -720,8 +706,19 @@ export default function SprinterVanBoothPage() {
           </div>
 
           <div data-animation="slideRight" style={{ textAlign: "center", marginTop: "2rem" }}>
-            <Link href="/contact/request-a-quote?from=sprinter-van-booth">
-              <span className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
+            <Link
+              href="/contact/request-a-quote?from=sprinter-van-booth"
+              className="block w-full min-[768px]:inline-block min-[768px]:w-auto"
+            >
+              <span
+                data-animation="slideRight"
+                className="btn-glow flex w-full items-center justify-center gap-2 min-[768px]:inline-flex min-[768px]:w-auto"
+                style={{
+                  boxSizing: "border-box",
+                }}
+              >
+                GET PRICING <ArrowRight size={15} />
+              </span>
             </Link>
           </div>
         </div>
@@ -735,11 +732,39 @@ export default function SprinterVanBoothPage() {
               <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.3rem" }}>STANDARD FEATURES</span>
               <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed','Oswald',sans-serif", fontSize: "clamp(1.3rem,2.5vw,1.9rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Every Unit Ships Fully Certified</h2>
             </div>
-            <button data-animation="slideRight"
-              onClick={() => setSpecsOpen(v => !v)}
-              style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: specsOpen ? BLUE : "transparent", border: `2px solid ${BLUE}`, color: specsOpen ? "#fff" : BLUE, fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.82rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.75rem 1.5rem", cursor: "pointer", transition: "background 0.15s,color 0.15s", whiteSpace: "nowrap" }}
+            <button
+              data-animation="slideRight"
+              onClick={() => setSizesOpen(v => !v)}
+              className="w-full min-[768px]:w-auto"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "0.5rem",
+                background: sizesOpen ? BLUE : "transparent",
+                border: `2px solid ${BLUE}`,
+                color: sizesOpen ? "#fff" : BLUE,
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontSize: "0.82rem",
+                fontWeight: 800,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                padding: "0.75rem 1.5rem",
+                cursor: "pointer",
+                transition: "background 0.15s, color 0.15s",
+                whiteSpace: "nowrap",
+                boxSizing: "border-box",
+              }}
             >
-              {specsOpen ? <><ChevronUp size={14} /> HIDE FEATURES</> : <><ChevronDown size={14} /> SEE ALL FEATURES</>}
+              {sizesOpen ? (
+                <>
+                  <ChevronUp size={14} /> HIDE SIZES
+                </>
+              ) : (
+                <>
+                  <ChevronDown size={14} /> SEE SIZES
+                </>
+              )}
             </button>
           </div>
 
@@ -767,12 +792,40 @@ export default function SprinterVanBoothPage() {
               <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.3rem" }}>AVAILABLE SIZES</span>
               <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed','Oswald',sans-serif", fontSize: "clamp(1.3rem,2.5vw,1.9rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Orion, Helios & Zenith — All Available in Van Height</h2>
             </div>
-            <button data-animation="slideRight"
-              onClick={() => setSizesOpen(v => !v)}
-              style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: sizesOpen ? BLUE : "transparent", border: `2px solid ${BLUE}`, color: sizesOpen ? "#fff" : BLUE, fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.82rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.75rem 1.5rem", cursor: "pointer", transition: "background 0.15s,color 0.15s", whiteSpace: "nowrap" }}
-            >
-              {sizesOpen ? <><ChevronUp size={14} /> HIDE SIZES</> : <><ChevronDown size={14} /> SEE SIZES</>}
-            </button>
+          <button
+  data-animation="slideRight"
+  onClick={() => setSizesOpen(v => !v)}
+  className="w-full min-[768px]:w-auto"
+  style={{
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "0.5rem",
+    background: sizesOpen ? BLUE : "transparent",
+    border: `2px solid ${BLUE}`,
+    color: sizesOpen ? "#fff" : BLUE,
+    fontFamily: "'Barlow Condensed', sans-serif",
+    fontSize: "0.82rem",
+    fontWeight: 800,
+    letterSpacing: "0.1em",
+    textTransform: "uppercase",
+    padding: "0.75rem 1.5rem",
+    cursor: "pointer",
+    transition: "background 0.15s, color 0.15s",
+    whiteSpace: "nowrap",
+    boxSizing: "border-box",
+  }}
+>
+  {sizesOpen ? (
+    <>
+      <ChevronUp size={14} /> HIDE SIZES
+    </>
+  ) : (
+    <>
+      <ChevronDown size={14} /> SEE SIZES
+    </>
+  )}
+</button>
           </div>
 
           {sizesOpen && (
@@ -844,10 +897,55 @@ export default function SprinterVanBoothPage() {
             Tell us your vehicle height, facility dimensions, and airflow preference. We'll spec the right booth and ship it nationally.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center" }}>
-            <Link data-animation="slideLeft" href="/contact/request-a-quote?from=sprinter-van-booth">
-              <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#fff", color: BLUE, fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.9rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", padding: "1rem 2.5rem", cursor: "pointer" }}>REQUEST A QUOTE <ArrowRight size={14} /></span>
+            <Link
+              data-animation="slideLeft"
+              href="/contact/request-a-quote?from=sprinter-van-booth"
+              className="w-full min-[768px]:w-auto"
+            >
+              <span
+                style={{
+                  display: "inline-flex",
+                  width: "100%",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "0.5rem",
+                  background: "#fff",
+                  color: BLUE,
+                  fontFamily: "'Barlow Condensed', sans-serif",
+                  fontSize: "0.9rem",
+                  fontWeight: 800,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  padding: "1rem 2.5rem",
+                  cursor: "pointer",
+                  boxSizing: "border-box",
+                }}
+              >
+                REQUEST A QUOTE <ArrowRight size={14} />
+              </span>
             </Link>
-            <a data-animation="slideRight" href="tel:8885457715" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", color: "#fff", border: "2px solid rgba(255,255,255,0.5)", fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.9rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "1rem 2.5rem" }}>
+
+            <a
+              data-animation="slideRight"
+              href="tel:8885457715"
+              className="w-full min-[768px]:w-auto"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "0.5rem",
+                background: "transparent",
+                color: "#fff",
+                border: "2px solid rgba(255,255,255,0.5)",
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontSize: "0.9rem",
+                fontWeight: 700,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                padding: "1rem 2.5rem",
+                boxSizing: "border-box",
+              }}
+            >
               CALL (888) 545-7715
             </a>
           </div>

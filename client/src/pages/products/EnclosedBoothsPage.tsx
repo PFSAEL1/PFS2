@@ -12,15 +12,15 @@ import { ArrowRight, CheckCircle2, Info } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
 const HERO_VIDEO = "/assets/pfs-enclosed-tesla-hero_9c110001.mp4";
-const HERO_IMG   = "/assets/pfs-zenith-tesla-source_c7c540fe.jpg"; // poster fallback
+const HERO_IMG = "/assets/pfs-zenith-tesla-source_c7c540fe.jpg"; // poster fallback
 const HEATED_IMG = "/assets/enclosed-booth-card-zenith_7e010642.jpg";
 const CROSSFLOW_IMG = "/assets/orion-crossflow-render-v3_63c04d8e.webp"; // Real PFS cross-flow booth — shop floor with teal filter doors
 const SEMI_DD_IMG = "/assets/orion-semi-down-epoxy_9144ba19.png";
-const FULL_DD_IMG    = "/assets/zenith_angle_epoxy_cc380a7d_3247b846.webp";
-const RAISED_BM_IMG  = "/assets/PFS_Zenith_FullDD_Front_Epoxy_v2_1a902210.png";
+const FULL_DD_IMG = "/assets/zenith_angle_epoxy_cc380a7d_3247b846.webp";
+const RAISED_BM_IMG = "/assets/PFS_Zenith_FullDD_Front_Epoxy_v2_1a902210.png";
 const SIDE_DD_IMG = "/assets/helios_front_v27_epoxy_dbe93c9f.png";
 const SPRINTER_IMG = "/assets/pfs-sprinter-van-mercedes-clean_84aa20f4.jpg";
-const TRUCKS_IMG      = "/assets/pfs-truck-booth-card_a0d45884_fca2d2cb.jpeg";
+const TRUCKS_IMG = "/assets/pfs-truck-booth-card_a0d45884_fca2d2cb.jpeg";
 const DOUBLE_WALL_IMG = "/assets/pfs-double-wall-booth-v2_8cdb7a24.webp";
 
 const CONFIGURATIONS = [
@@ -166,7 +166,7 @@ export default function EnclosedBoothsPage() {
           loop
           playsInline
           disablePictureInPicture
-         
+
           aria-hidden="true"
           style={{
             position: "absolute", inset: 0,
@@ -189,8 +189,16 @@ export default function EnclosedBoothsPage() {
           <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "clamp(0.95rem, 1.8vw, 1.1rem)", color: "rgba(255,255,255,0.82)", lineHeight: 1.7, marginBottom: "2.5rem", maxWidth: "500px" }}>
             Full-enclosure spray booths in every airflow configuration — cross-flow, semi-downdraft, full downdraft, side downdraft, heated, and high-clearance for Sprinter vans.
           </p>
-          <Link href="/contact/request-a-quote?from=enclosed-booth">
-            <span data-animation="slideRight" className="btn-glow">GET PRICING <ArrowRight size={16} /></span>
+          <Link
+            href="/contact/request-a-quote?from=enclosed-booth"
+            className="max-[767px]:w-full max-[767px]:block"
+          >
+            <span
+              data-animation="slideRight"
+              className="btn-glow inline-flex items-center justify-center gap-2 max-[767px]:w-full"
+            >
+              GET PRICING <ArrowRight size={16} />
+            </span>
           </Link>
         </div>
       </section>
@@ -309,8 +317,14 @@ export default function EnclosedBoothsPage() {
                   Our engineers will review your application, throughput, and facility constraints and recommend the right configuration.
                 </p>
               </div>
-              <Link data-animation="slideRight" href="/contact/request-a-quote?from=enclosed-booth">
-                <span className="btn-glow flex-shrink-0">Get Pricing <ArrowRight size={14} /></span>
+              <Link
+                data-animation="slideRight"
+                href="/contact/request-a-quote?from=enclosed-booth"
+                className="max-[767px]:w-full max-[767px]:block"
+              >
+                <span className="btn-glow flex items-center justify-center gap-2 max-[767px]:w-full">
+                  Get Pricing <ArrowRight size={14} />
+                </span>
               </Link>
             </div>
           </div>

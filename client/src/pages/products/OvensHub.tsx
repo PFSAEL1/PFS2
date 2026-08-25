@@ -7,7 +7,7 @@ import {
 } from "@/lib/productImages";
 import { useSEO } from "@/hooks/useSEO";
 
-const HERO_IMG   = "/assets/pfs-industrial-oven-hero_52d9f4df.jpg";
+const HERO_IMG = "/assets/pfs-industrial-oven-hero_52d9f4df.jpg";
 const HERO_VIDEO = "/assets/pfs-oven-hero-video_05e4a406.mp4";
 
 // imgHeight: card image area height in px — taller for portrait images so the full subject is visible
@@ -118,45 +118,119 @@ export default function OvensHub() {
           </div>
 
           {/* Card grid — larger images */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 items-stretch">
             {OVENS.map((oven) => (
-              <Link key={oven.label} href={oven.href}>
-                <div className="group cursor-pointer border border-gray-200 hover:border-[#1B2B4B] transition-all duration-300 hover:shadow-[0_0_24px_rgba(27,43,75,0.15)] overflow-hidden h-full flex flex-col">
-                  <div className="overflow-hidden flex-shrink-0 card-image" style={{ height: `${oven.imgHeight}px` }}>
+              <Link
+                key={oven.label}
+                href={oven.href}
+                className="group h-full"
+              >
+                <div className="h-full flex flex-col cursor-pointer border border-gray-200 hover:border-[#1B2B4B] transition-all duration-300 hover:shadow-[0_0_24px_rgba(27,43,75,0.15)] overflow-hidden">
+
+                  {/* Fixed responsive image height */}
+                  <div className="overflow-hidden flex-shrink-0 card-image h-[240px] sm:h-[260px] lg:h-[280px]">
                     <img
                       src={oven.img}
                       alt={oven.label}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      style={{ objectPosition: oven.imgPosition }}
+                      style={{
+                        objectPosition: oven.imgPosition,
+                      }}
                     />
                   </div>
+
+                  {/* Card content */}
                   <div className="p-6 flex flex-col flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.2rem", fontWeight: 700, color: "#1a1a1a", lineHeight: 1.2 }}>
+
+                    <div className="flex items-start gap-2 mb-2">
+                      <h3
+                        style={{
+                          fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                          fontSize: "1.2rem",
+                          fontWeight: 700,
+                          color: "#1a1a1a",
+                          lineHeight: 1.2,
+                        }}
+                      >
                         {oven.label}
                       </h3>
+
                       {oven.badge && (
-                        <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", backgroundColor: "#1B2B4B", color: "white", padding: "0.15rem 0.5rem", flexShrink: 0 }}>
+                        <span
+                          style={{
+                            fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                            fontSize: "0.65rem",
+                            fontWeight: 700,
+                            letterSpacing: "0.08em",
+                            textTransform: "uppercase",
+                            backgroundColor: "#1B2B4B",
+                            color: "white",
+                            padding: "0.15rem 0.5rem",
+                            flexShrink: 0,
+                          }}
+                        >
                           {oven.badge}
                         </span>
                       )}
                     </div>
-                    <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.85rem", color: "#555", lineHeight: 1.7, marginBottom: "1rem", flex: 1 }}>
+
+                    <p
+                      style={{
+                        fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
+                        fontSize: "0.85rem",
+                        color: "#555",
+                        lineHeight: 1.7,
+                        marginBottom: "1rem",
+                      }}
+                    >
                       {oven.desc}
                     </p>
+
                     <div className="flex flex-wrap gap-1 mb-4">
-                      {oven.tags.map(tag => (
-                        <span key={tag} style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.65rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", backgroundColor: "#f4f4f2", color: "#444", padding: "0.2rem 0.5rem" }}>{tag}</span>
+                      {oven.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          style={{
+                            fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                            fontSize: "0.65rem",
+                            fontWeight: 600,
+                            letterSpacing: "0.08em",
+                            textTransform: "uppercase",
+                            backgroundColor: "#f4f4f2",
+                            color: "#444",
+                            padding: "0.2rem 0.5rem",
+                          }}
+                        >
+                          {tag}
+                        </span>
                       ))}
                     </div>
-                    <div className="flex items-center gap-1" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1B2B4B" }}>
-                      GET PRICING <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+
+                    {/* Always at bottom */}
+                    <div
+                      className="mt-auto flex items-center gap-1"
+                      style={{
+                        fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                        fontSize: "0.75rem",
+                        fontWeight: 700,
+                        letterSpacing: "0.1em",
+                        textTransform: "uppercase",
+                        color: "#1B2B4B",
+                      }}
+                    >
+                      GET PRICING
+                      <ArrowRight
+                        size={12}
+                        className="group-hover:translate-x-1 transition-transform"
+                      />
                     </div>
+
                   </div>
                 </div>
               </Link>
             ))}
           </div>
+
 
           {/* Conversion CTA bar */}
           <div style={{ backgroundColor: "#1a1a1a", padding: "2.5rem 2rem" }}>

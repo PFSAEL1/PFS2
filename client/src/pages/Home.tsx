@@ -221,34 +221,64 @@ export default function Home() {
               letterSpacing: "0.01em",
               marginBottom: "1.5rem",
             }}>
-             Finishing Equipment.<br />
+              Finishing Equipment.<br />
               <span style={{ color: "#FFFFFF", textShadow: "0 0 40px rgba(255,255,255,0.25)" }}></span>
             </h1>
             <p className="hero-description">
-           Automation.&nbsp;&nbsp;Filtration.&nbsp;&nbsp;Service.<br />
+              Automation.&nbsp;&nbsp;Filtration.&nbsp;&nbsp;Service.<br />
               <span style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.75em", letterSpacing: "0.1em" }}>ETL Listed &nbsp;·&nbsp; Made in USA</span>
             </p>
 
-            <div style={{ display: "flex",flexWrap: "wrap", flexDirection: "row", gap: "0.75rem", alignItems: "center" }}>
-              <Link data-animation="slideLeft" href="/contact/request-a-quote">
-                <span className="btn-primary" style={{ fontSize: "0.78rem", padding: "0.75rem 1.4rem", whiteSpace: "nowrap" }}>
+            <div className="flex flex-wrap flex-row gap-3 items-center max-[767px]:flex-col max-[767px]:w-full">
+              <Link
+                data-animation="slideLeft"
+                href="/contact/request-a-quote"
+                className="max-[767px]:w-full"
+              >
+                <span
+                  className="btn-primary max-[767px]:w-full"
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    gap: "0.4rem",
+                    fontSize: "0.78rem",
+                    padding: "0.75rem 1.4rem",
+                    whiteSpace: "nowrap",
+                  }}
+                >
                   START A PROJECT <ArrowRight size={14} />
                 </span>
               </Link>
+
               {/* Mobile-only: View Products CTA */}
-              <Link data-animation="slideRight" href="/products">
-                <span className="md:hidden" style={{
-                  display: "inline-flex", alignItems: "center", gap: "0.4rem",
-                  fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-                  fontSize: "0.78rem", fontWeight: 700, letterSpacing: "0.1em",
-                  textTransform: "uppercase", whiteSpace: "nowrap",
-                  color: "#ffffff",
-                  border: "1.5px solid rgba(255,255,255,0.6)",
-                  padding: "0.75rem 1.2rem",
-                  cursor: "pointer",
-                  transition: "all 0.2s ease",
-                  boxShadow: "0 0 12px rgba(255,255,255,0.15), inset 0 0 12px rgba(255,255,255,0.05)",
-                }}>
+              <Link
+                data-animation="slideRight"
+                href="/products"
+                className="max-[767px]:w-full"
+              >
+                <span
+                  className="md:hidden max-[767px]:w-full"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "0.4rem",
+                    fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                    fontSize: "0.78rem",
+                    fontWeight: 700,
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    whiteSpace: "nowrap",
+                    color: "#ffffff",
+                    border: "1.5px solid rgba(255,255,255,0.6)",
+                    padding: "0.75rem 1.2rem",
+                    cursor: "pointer",
+                    transition: "all 0.2s ease",
+                    boxShadow:
+                      "0 0 12px rgba(255,255,255,0.15), inset 0 0 12px rgba(255,255,255,0.05)",
+                  }}
+                >
                   EXPLORE EQUIPMENT <ArrowRight size={14} />
                 </span>
               </Link>
@@ -349,24 +379,61 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-4 items-center">
-            <Link data-animation="slideLeft" href="/products">
-              <span style={{
-                display: "inline-flex", alignItems: "center", gap: "0.45rem",
-                border: "1.5px solid rgba(255,255,255,0.18)", color: "rgba(255,255,255,0.7)",
-                padding: "0.7rem 1.5rem",
-                fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.78rem", fontWeight: 600,
-                letterSpacing: "0.12em", textTransform: "uppercase",
-                transition: "all 0.2s ease", cursor: "pointer",
-              }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "#FFFFFF"; (e.currentTarget as HTMLElement).style.color = "white"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.18)"; (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.7)"; }}
+          <div className="mt-10 flex flex-wrap gap-4 items-center max-[767px]:flex-col max-[767px]:w-full">
+            <Link
+              data-animation="slideLeft"
+              href="/products"
+              className="max-[767px]:w-full"
+            >
+              <span
+                className="max-[767px]:w-full"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "0.45rem",
+                  border: "1.5px solid rgba(255,255,255,0.18)",
+                  color: "rgba(255,255,255,0.7)",
+                  padding: "0.7rem 1.5rem",
+                  fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                  fontSize: "0.78rem",
+                  fontWeight: 600,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  transition: "all 0.2s ease",
+                  cursor: "pointer",
+                }}
+                onMouseEnter={e => {
+                  (e.currentTarget as HTMLElement).style.borderColor = "#FFFFFF";
+                  (e.currentTarget as HTMLElement).style.color = "white";
+                }}
+                onMouseLeave={e => {
+                  (e.currentTarget as HTMLElement).style.borderColor =
+                    "rgba(255,255,255,0.18)";
+                  (e.currentTarget as HTMLElement).style.color =
+                    "rgba(255,255,255,0.7)";
+                }}
               >
                 View All Products <ArrowRight size={13} />
               </span>
             </Link>
-            <Link data-animation="slideRight" href="/contact/request-a-quote">
-              <span className="btn-primary" style={{ fontSize: "0.78rem", padding: "0.7rem 1.75rem" }}>
+
+            <Link
+              data-animation="slideRight"
+              href="/contact/request-a-quote"
+              className="max-[767px]:w-full"
+            >
+              <span
+                className="btn-primary max-[767px]:w-full"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "0.45rem",
+                  fontSize: "0.78rem",
+                  padding: "0.7rem 1.75rem",
+                }}
+              >
                 Get Pricing <ArrowRight size={13} />
               </span>
             </Link>
@@ -415,7 +482,7 @@ export default function Home() {
 
               <div data-animation="slideRight" className="mt-10">
                 <Link href="/company">
-                  <span className="btn-primary">About PFS <ArrowRight size={14} /></span>
+                  <span className="btn-primary max-[767px]:w-full">About PFS <ArrowRight size={14} /></span>
                 </Link>
               </div>
             </div>
@@ -503,12 +570,12 @@ export default function Home() {
 
           <div data-animation="slideRight" className="mt-8">
             <Link href="/industries">
-              <span style={{
+              <span className="max-[767px]:w-full" style={{
                 display: "inline-flex", alignItems: "center", gap: "0.45rem",
                 border: "1.5px solid rgba(255,255,255,0.18)", color: "rgba(255,255,255,0.7)",
                 padding: "0.7rem 1.5rem",
                 fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.78rem", fontWeight: 600,
-                letterSpacing: "0.12em", textTransform: "uppercase",
+                letterSpacing: "0.12em", textTransform: "uppercase", justifyContent: "center",
                 transition: "all 0.2s ease", cursor: "pointer",
               }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "#FFFFFF"; (e.currentTarget as HTMLElement).style.color = "white"; }}
@@ -535,9 +602,25 @@ export default function Home() {
             <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.92rem", color: "rgba(255,255,255,0.55)", lineHeight: 1.8, marginBottom: "2.5rem", maxWidth: "480px" }}>
               Beyond individual booths and ovens, PFS engineers complete liquid paint lines, powder coating lines, conveyor systems, pretreatment systems, and robotic finishing cells — all under one roof.
             </p>
-            <div data-animation="slideRight">
-              <Link href="/integration-automation">
-                <span className="btn-primary">Explore Integration & Automation <ArrowRight size={14} /></span>
+            <div
+              data-animation="slideRight"
+              className="max-[767px]:w-full"
+            >
+              <Link
+                href="/integration-automation"
+                className="max-[767px]:w-full"
+              >
+                <span
+                  className="btn-primary max-[767px]:w-full"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "0.45rem",
+                  }}
+                >
+                  Explore Integration & Automation <ArrowRight size={14} />
+                </span>
               </Link>
             </div>
           </div>
@@ -609,27 +692,49 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-wrap gap-3 flex-shrink-0">
-              <Link href="/contact/request-a-quote">
-                <span data-animation="slideLeft" style={{
-                  display: "inline-flex", alignItems: "center", gap: "0.45rem",
-                  backgroundColor: "white", color: "#0A0A0A",
-                  border: "2px solid white", padding: "0.8rem 1.75rem",
-                  fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.82rem", fontWeight: 700,
-                  letterSpacing: "0.1em", textTransform: "uppercase",
-                  transition: "all 0.2s ease", cursor: "pointer",
-                }}
-                  onMouseEnter={e => { (e.currentTarget as HTMLElement).style.backgroundColor = "transparent"; (e.currentTarget as HTMLElement).style.color = "white"; }}
-                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.backgroundColor = "white"; (e.currentTarget as HTMLElement).style.color = "#0A0A0A"; }}
+              <Link
+                href="/contact/request-a-quote"
+                className="max-[767px]:w-full max-[767px]:block"
+              >
+                <span
+                  data-animation="slideLeft"
+                  className="max-[767px]:w-full"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "0.45rem",
+                    backgroundColor: "white",
+                    color: "#0A0A0A",
+                    border: "2px solid white",
+                    padding: "0.8rem 1.75rem",
+                    fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                    fontSize: "0.82rem",
+                    fontWeight: 700,
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    transition: "all 0.2s ease",
+                    cursor: "pointer",
+                    boxSizing: "border-box",
+                  }}
+                  onMouseEnter={e => {
+                    (e.currentTarget as HTMLElement).style.backgroundColor = "transparent";
+                    (e.currentTarget as HTMLElement).style.color = "white";
+                  }}
+                  onMouseLeave={e => {
+                    (e.currentTarget as HTMLElement).style.backgroundColor = "white";
+                    (e.currentTarget as HTMLElement).style.color = "#0A0A0A";
+                  }}
                 >
                   Request Info <ArrowRight size={14} />
                 </span>
               </Link>
-              <a data-animation="slideRight" href="tel:8885457715" style={{
+              <a className="max-[767px]:w-full" data-animation="slideRight" href="tel:8885457715" style={{
                 display: "inline-flex", alignItems: "center", gap: "0.45rem",
                 backgroundColor: "transparent", color: "white",
                 border: "2px solid rgba(255,255,255,0.45)", padding: "0.8rem 1.75rem",
                 fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.82rem", fontWeight: 700,
-                letterSpacing: "0.1em", textTransform: "uppercase",
+                letterSpacing: "0.1em", textTransform: "uppercase", justifyContent: "center",
                 transition: "all 0.2s ease", cursor: "pointer", textDecoration: "none",
               }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "white"; }}

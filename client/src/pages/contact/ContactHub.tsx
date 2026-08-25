@@ -6,7 +6,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { submitLead } from "@/lib/submitLead";
 
-const IMG = "/assets/pfs-helios-enclosed-booth-real_2bc88039.jpeg";
+const IMG = "/assets/pfs-helios-enclosed-booth-real_2bc88039.jpeg" ;
 
 export default function ContactHub() {
   useSEO({
@@ -31,6 +31,7 @@ export default function ContactHub() {
         subtitle="Get in touch with the PFS team — we're ready to help with your finishing equipment project."
         breadcrumbs={[{ label: "Contact" }]}
         bgImage={IMG}
+
       />
       <section className="py-16 bg-white">
         <div className="container">

@@ -15,44 +15,44 @@ import FullDowndraftAirflowSVG from "@/components/FullDowndraftAirflowSVG";
 import { useSEO } from "@/hooks/useSEO";
 
 const HERO_VIDEO = "/assets/pfs-truck-booth-hero_3f01f2e0.mp4";
-const HERO_IMG   = "/assets/pfs-truck-booth-card_a0d45884_fca2d2cb.jpeg";
+const HERO_IMG = "/assets/pfs-truck-booth-card_a0d45884_fca2d2cb.jpeg";
 
-const CROSSFLOW_IMG  = "/assets/orion-truck-crossflow-render_57425bd5.webp";  // Orion truck crossflow render
+const CROSSFLOW_IMG = "/assets/orion-truck-crossflow-render_57425bd5.webp";  // Orion truck crossflow render
 const CROSSFLOW_REAL = "/assets/truck-crossflow-real-angled_64504e75.jpg";  // real PFS cross-flow truck booth, angled view
-const SIDEDOWN_IMG   = "/assets/truck-side-downdraft-real_9b13f2c8_9c33f80f.webp";   // 1237162335 — real PFS side-downdraft truck booth exterior
-const SEMIDRAFT_IMG  = "/assets/truck-semi-downdraft-real_f5973ddd.jpg";    // IMG_4702 — real PFS semi-downdraft truck booth
-const DOWNDRAFT_IMG  = "/assets/truck-full-downdraft-real_8999c17d.jpg";    // IMG_9703 — real PFS full-downdraft truck booth
+const SIDEDOWN_IMG = "/assets/truck-side-downdraft-real_9b13f2c8_9c33f80f.webp";   // 1237162335 — real PFS side-downdraft truck booth exterior
+const SEMIDRAFT_IMG = "/assets/truck-semi-downdraft-real_f5973ddd.jpg";    // IMG_4702 — real PFS semi-downdraft truck booth
+const DOWNDRAFT_IMG = "/assets/truck-full-downdraft-real_8999c17d.jpg";    // IMG_9703 — real PFS full-downdraft truck booth
 
 const BLUE = "#1B3A6B";
 
 const GALLERY_IMGS: { src: string; alt: string; pos?: string }[] = [
   // Renders + Real install photos — cross-flow truck booths
-  { src: "/assets/orion-truck-crossflow-branded-epoxy_a48943e2.webp", alt: "PFS Orion truck cross-flow booth — branded epoxy render, front view with teal filter wall",   pos: "center 50%" },
-  { src: "/assets/orion-truck-crossflow-render_57425bd5.webp",    alt: "PFS Orion truck cross-flow booth render — exterior view showing large filter door panel",      pos: "center 40%" },
-  { src: "/assets/truck-crossflow-real-angled_64504e75.jpg",      alt: "PFS cross-flow truck booth — angled exterior view showing PFS logo and green filter doors",   pos: "center 30%" },
-  { src: "/assets/truck-crossflow-real-front_9753e774.jpg",       alt: "PFS cross-flow truck booth — front view showing full filter door panel and PFS Orion badge",  pos: "center 35%" },
+  { src: "/assets/orion-truck-crossflow-branded-epoxy_a48943e2.webp", alt: "PFS Orion truck cross-flow booth — branded epoxy render, front view with teal filter wall", pos: "center 50%" },
+  { src: "/assets/orion-truck-crossflow-render_57425bd5.webp", alt: "PFS Orion truck cross-flow booth render — exterior view showing large filter door panel", pos: "center 40%" },
+  { src: "/assets/truck-crossflow-real-angled_64504e75.jpg", alt: "PFS cross-flow truck booth — angled exterior view showing PFS logo and green filter doors", pos: "center 30%" },
+  { src: "/assets/truck-crossflow-real-front_9753e774.jpg", alt: "PFS cross-flow truck booth — front view showing full filter door panel and PFS Orion badge", pos: "center 35%" },
   // Side-downdraft truck booth
-  { src: "/assets/truck-side-downdraft-real_9b13f2c8_9c33f80f.webp",       alt: "PFS side-downdraft truck booth — exterior view with doors open showing dark interior",        pos: "center 40%" },
+  { src: "/assets/truck-side-downdraft-real_9b13f2c8_9c33f80f.webp", alt: "PFS side-downdraft truck booth — exterior view with doors open showing dark interior", pos: "center 40%" },
   // Semi-downdraft truck booth
-  { src: "/assets/truck-semi-downdraft-real_f5973ddd.jpg",        alt: "PFS semi-downdraft truck booth — exterior with PFS badge and green filter doors",              pos: "center 35%" },
+  { src: "/assets/truck-semi-downdraft-real_f5973ddd.jpg", alt: "PFS semi-downdraft truck booth — exterior with PFS badge and green filter doors", pos: "center 35%" },
   // Full-downdraft truck booth
-  { src: "/assets/truck-full-downdraft-real_8999c17d.jpg",        alt: "PFS full-downdraft truck booth — exterior view showing PFS Orion branding",                   pos: "center 30%" },
+  { src: "/assets/truck-full-downdraft-real_8999c17d.jpg", alt: "PFS full-downdraft truck booth — exterior view showing PFS Orion branding", pos: "center 30%" },
   // Interior shots
-  { src: "/assets/truck-booth-interior-wide_e6ae87b7.webp",       alt: "PFS truck booth interior — wide angle showing full-length white walls and ceiling filter grid",  pos: "center 40%" },
-  { src: "/assets/truck-booth-interior-tall_7c5c2cab_0e2c7470.webp",       alt: "PFS truck booth interior — tall angle showing ceiling plenum and white panel walls",            pos: "center 35%" },
+  { src: "/assets/truck-booth-interior-wide_e6ae87b7.webp", alt: "PFS truck booth interior — wide angle showing full-length white walls and ceiling filter grid", pos: "center 40%" },
+  { src: "/assets/truck-booth-interior-tall_7c5c2cab_0e2c7470.webp", alt: "PFS truck booth interior — tall angle showing ceiling plenum and white panel walls", pos: "center 35%" },
   // Exterior and facility shots
-  { src: "/assets/truck-booth-exterior-scissorlift_bd7c73c3_705cc3a5.webp", alt: "PFS truck booth exterior — two-bay installation with scissor lift during commissioning",        pos: "center 40%" },
-  { src: "/assets/truck-booth-fire-suppression_cff15201_95935e0f.webp",    alt: "PFS truck booth fire suppression system — red suppression cylinders along exhaust plenum",      pos: "center 45%" },
-  { src: "/assets/truck-booth-orion-prep-station_3bb06809.jpg",   alt: "PFS Orion truck booth with adjacent prep station — full exterior view in warehouse",            pos: "center 40%" },
+  { src: "/assets/truck-booth-exterior-scissorlift_bd7c73c3_705cc3a5.webp", alt: "PFS truck booth exterior — two-bay installation with scissor lift during commissioning", pos: "center 40%" },
+  { src: "/assets/truck-booth-fire-suppression_cff15201_95935e0f.webp", alt: "PFS truck booth fire suppression system — red suppression cylinders along exhaust plenum", pos: "center 45%" },
+  { src: "/assets/truck-booth-orion-prep-station_3bb06809.jpg", alt: "PFS Orion truck booth with adjacent prep station — full exterior view in warehouse", pos: "center 40%" },
   // Additional gallery photos
-  { src: "/assets/truck-booth-gallery-9836_a1831407.jpg",         alt: "PFS truck paint booth — real install photo",  pos: "center 40%" },
-  { src: "/assets/truck-booth-gallery-9835_bc3cf0a9.jpg",         alt: "PFS truck paint booth — real install photo",  pos: "center 40%" },
-  { src: "/assets/truck-booth-gallery-9834_12448f3f.jpg",         alt: "PFS truck paint booth — real install photo",  pos: "center 40%" },
-  { src: "/assets/truck-booth-gallery-4700_e9a10b83.jpg",         alt: "PFS truck paint booth — real install photo",  pos: "center 40%" },
-  { src: "/assets/truck-booth-gallery-4716_22a8ab5b.jpg",         alt: "PFS truck paint booth — real install photo",  pos: "center 40%" },
-  { src: "/assets/truck-booth-gallery-4720_9140ebdd.jpg",         alt: "PFS truck paint booth — real install photo",  pos: "center 40%" },
-  { src: "/assets/truck-booth-gallery-4710_98ed6e0a.jpg",         alt: "PFS truck paint booth — real install photo",  pos: "center 40%" },
-  { src: "/assets/truck-booth-gallery-0809_6a0002a8.jpg",         alt: "PFS truck paint booth — real install photo",  pos: "center 40%" },
+  { src: "/assets/truck-booth-gallery-9836_a1831407.jpg", alt: "PFS truck paint booth — real install photo", pos: "center 40%" },
+  { src: "/assets/truck-booth-gallery-9835_bc3cf0a9.jpg", alt: "PFS truck paint booth — real install photo", pos: "center 40%" },
+  { src: "/assets/truck-booth-gallery-9834_12448f3f.jpg", alt: "PFS truck paint booth — real install photo", pos: "center 40%" },
+  { src: "/assets/truck-booth-gallery-4700_e9a10b83.jpg", alt: "PFS truck paint booth — real install photo", pos: "center 40%" },
+  { src: "/assets/truck-booth-gallery-4716_22a8ab5b.jpg", alt: "PFS truck paint booth — real install photo", pos: "center 40%" },
+  { src: "/assets/truck-booth-gallery-4720_9140ebdd.jpg", alt: "PFS truck paint booth — real install photo", pos: "center 40%" },
+  { src: "/assets/truck-booth-gallery-4710_98ed6e0a.jpg", alt: "PFS truck paint booth — real install photo", pos: "center 40%" },
+  { src: "/assets/truck-booth-gallery-0809_6a0002a8.jpg", alt: "PFS truck paint booth — real install photo", pos: "center 40%" },
 ];
 
 const SIDE_DOWNDRAFT_GIF = "/assets/side_downdraft_airflow_animation_f31ca9c0.gif";
@@ -195,18 +195,34 @@ function BoothCard({ config }: { config: typeof BOOTH_CONFIGS[0] }) {
         {/* Collapsible features */}
         <button
           onClick={() => setFeaturesOpen(!featuresOpen)}
+          className="w-full md:w-auto"
           style={{
-            display: "flex", alignItems: "center", gap: "0.4rem",
-            background: "none", border: `1px solid ${BLUE}`,
-            color: BLUE, cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "0.4rem",
+            background: "none",
+            border: `1px solid ${BLUE}`,
+            color: BLUE,
+            cursor: "pointer",
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-            fontSize: "0.78rem", fontWeight: 800,
-            letterSpacing: "0.12em", textTransform: "uppercase",
-            padding: "0.55rem 1rem", marginBottom: "1rem",
+            fontSize: "0.78rem",
+            fontWeight: 800,
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+            padding: "0.55rem 1rem",
+            marginBottom: "1rem",
             transition: "background 0.15s, color 0.15s",
+            boxSizing: "border-box",
           }}
-          onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = BLUE; (e.currentTarget as HTMLButtonElement).style.color = "#fff"; }}
-          onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = "none"; (e.currentTarget as HTMLButtonElement).style.color = BLUE; }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = BLUE;
+            e.currentTarget.style.color = "#fff";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = "none";
+            e.currentTarget.style.color = BLUE;
+          }}
         >
           {featuresOpen ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
           {featuresOpen ? "HIDE FEATURES" : `SEE ALL ${config.features.length} FEATURES`}
@@ -258,8 +274,15 @@ function BoothCard({ config }: { config: typeof BOOTH_CONFIGS[0] }) {
         )}
 
         {/* CTA */}
-        <Link href="/contact/request-a-quote?from=truck-booth">
-          <span className="btn-glow" style={{ width: "100%", justifyContent: "center" }}>GET A QUOTE <ArrowRight size={14} /></span>
+        <Link
+          href="/contact/request-a-quote?from=truck-booth"
+          className="block w-full md:w-auto"
+        >
+          <span
+            className="btn-glow flex w-full md:w-auto items-center justify-center"
+          >
+            GET A QUOTE <ArrowRight size={14} />
+          </span>
         </Link>
       </div>
     </div>
@@ -313,7 +336,7 @@ export default function TruckBoothsPage() {
     if (!v) return;
     v.muted = true;
     v.playsInline = true;
-    const play = () => { v.play().catch(() => {}); setVideoReady(true); };
+    const play = () => { v.play().catch(() => { }); setVideoReady(true); };
     v.addEventListener("canplaythrough", play, { once: true });
     v.load();
     return () => v.removeEventListener("canplaythrough", play);
@@ -333,7 +356,7 @@ export default function TruckBoothsPage() {
         <video preload="auto" ref={videoRef}
           autoPlay muted loop playsInline
           disablePictureInPicture
-         
+
           style={{
             position: "absolute", inset: 0,
             width: "100%", height: "100%",
@@ -350,18 +373,53 @@ export default function TruckBoothsPage() {
             <div style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.22em", color: "rgba(255,255,255,0.65)", textTransform: "uppercase", marginBottom: "0.75rem" }}>
               PAINT BOOTHS / TRUCK BOOTHS
             </div>
-            <h1 data-animation="slideLeft"  style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2.4rem, 6vw, 5rem)", fontWeight: 900, color: "#fff", letterSpacing: "-0.01em", lineHeight: 1.0, marginBottom: "1.25rem", maxWidth: "800px" }}>
+            <h1 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2.4rem, 6vw, 5rem)", fontWeight: 900, color: "#fff", letterSpacing: "-0.01em", lineHeight: 1.0, marginBottom: "1.25rem", maxWidth: "800px" }}>
               TRUCK &amp; FLEET<br />PAINT BOOTHS
             </h1>
             <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "clamp(0.95rem, 1.5vw, 1.1rem)", color: "rgba(255,255,255,0.85)", maxWidth: "520px", lineHeight: 1.7, marginBottom: "2rem" }}>
               Purpose-built paint booths for semi trucks, buses, RVs, and fleet vehicles. manufactured in the USA with ETL/UL listed components, NFPA 33 compliant, made in the USA. Ships nationally.
             </p>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-              <Link data-animation="slideLeft" href="/contact/request-a-quote?from=truck-booth">
-                <span className="btn-glow">GET PRICING <ArrowRight size={16} /></span>
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "1rem",
+              }}
+            >
+              <Link
+                data-animation="slideLeft"
+                href="/contact/request-a-quote?from=truck-booth"
+                className="w-full md:w-auto block"
+              >
+                <span
+                  className="btn-glow flex w-full md:w-auto items-center justify-center"
+                >
+                  GET PRICING <ArrowRight size={16} />
+                </span>
               </Link>
-              <a data-animation="slideRight" href="tel:8885457715">
-                <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.55)", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.9rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "1.1rem 2.5rem", cursor: "pointer" }}>
+
+              <a
+                data-animation="slideRight"
+                href="tel:8885457715"
+                className="w-full md:w-auto block"
+              >
+                <span
+                  className="flex w-full md:w-auto items-center justify-center"
+                  style={{
+                    gap: "0.5rem",
+                    background: "transparent",
+                    color: "#fff",
+                    border: "1.5px solid rgba(255,255,255,0.55)",
+                    fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                    fontSize: "0.9rem",
+                    fontWeight: 700,
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    padding: "1.1rem 2.5rem",
+                    cursor: "pointer",
+                    boxSizing: "border-box",
+                  }}
+                >
                   (888) 545-7715
                 </span>
               </a>
@@ -415,14 +473,60 @@ export default function TruckBoothsPage() {
               A PFS engineer will prepare a detailed quote — typically within 24 hours.
             </p>
           </div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-            <Link data-animation="slideLeft" href="/contact/request-a-quote?from=truck-booth">
-              <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#fff", color: BLUE, fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.9rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", padding: "1.1rem 2.5rem", cursor: "pointer" }}>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "1rem",
+            }}
+          >
+            <Link
+              data-animation="slideLeft"
+              href="/contact/request-a-quote?from=truck-booth"
+              className="block w-full md:w-auto"
+            >
+              <span
+                className="flex w-full md:w-auto items-center justify-center"
+                style={{
+                  gap: "0.5rem",
+                  background: "#fff",
+                  color: BLUE,
+                  fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                  fontSize: "0.9rem",
+                  fontWeight: 800,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  padding: "1.1rem 2.5rem",
+                  cursor: "pointer",
+                  boxSizing: "border-box",
+                }}
+              >
                 GET PRICING <ArrowRight size={16} />
               </span>
             </Link>
-            <a data-animation="slideRight" href="tel:8885457715">
-              <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.55)", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.9rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "1.1rem 2.5rem", cursor: "pointer" }}>
+
+            <a
+              data-animation="slideRight"
+              href="tel:8885457715"
+              className="block w-full md:w-auto"
+            >
+              <span
+                className="flex w-full md:w-auto items-center justify-center"
+                style={{
+                  gap: "0.5rem",
+                  background: "transparent",
+                  color: "#fff",
+                  border: "1.5px solid rgba(255,255,255,0.55)",
+                  fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                  fontSize: "0.9rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  padding: "1.1rem 2.5rem",
+                  cursor: "pointer",
+                  boxSizing: "border-box",
+                }}
+              >
                 CALL (888) 545-7715
               </span>
             </a>

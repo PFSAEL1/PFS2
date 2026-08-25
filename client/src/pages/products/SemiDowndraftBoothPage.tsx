@@ -337,12 +337,40 @@ export default function SemiDowndraftBoothPage() {
                 style={{ width: "100%", height: "auto", display: "block", objectFit: "contain", objectPosition: "center" }}
               />
             </div>
-            <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
-              <Link data-animation="slideLeft" href="/contact/request-a-quote?from=semi-downdraft-booth">
-                <span className="btn-glow">REQUEST A QUOTE <ArrowRight size={15} /></span>
+            <div className="flex flex-col min-[768px]:flex-row gap-4 justify-center max-[767px]:w-full">
+              <Link
+                data-animation="slideLeft"
+                href="/contact/request-a-quote?from=semi-downdraft-booth"
+                className="max-[767px]:w-full max-[767px]:block"
+              >
+                <span className="btn-glow flex items-center justify-center gap-2 max-[767px]:w-full">
+                  REQUEST A QUOTE <ArrowRight size={15} />
+                </span>
               </Link>
-              <Link data-animation="slideRight" href="/products/paint-booths/enclosed">
-                <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", color: BLUE, border: `2px solid ${BLUE}`, fontFamily: "'Barlow Condensed',sans-serif", fontSize: "clamp(0.82rem,2.5vw,0.88rem)", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", padding: "1rem 2rem", cursor: "pointer" }}>SEE ALL ENCLOSED BOOTHS <ArrowRight size={15} /></span>
+
+              <Link
+                data-animation="slideRight"
+                href="/products/paint-booths/enclosed"
+                className="max-[767px]:w-full max-[767px]:block"
+              >
+                <span
+                  className="flex items-center justify-center gap-2 max-[767px]:w-full"
+                  style={{
+                    background: "transparent",
+                    color: BLUE,
+                    border: `2px solid ${BLUE}`,
+                    fontFamily: "'Barlow Condensed', sans-serif",
+                    fontSize: "clamp(0.82rem, 2.5vw, 0.88rem)",
+                    fontWeight: 800,
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    padding: "1rem 2rem",
+                    cursor: "pointer",
+                    boxSizing: "border-box",
+                  }}
+                >
+                  SEE ALL ENCLOSED BOOTHS <ArrowRight size={15} />
+                </span>
               </Link>
             </div>
           </div>
@@ -360,9 +388,17 @@ export default function SemiDowndraftBoothPage() {
             </p>
           </div>
           <SemiDowndraftAirflowSVG />
-          <div data-animation="slideRight" style={{ textAlign: "center", marginTop: "1.75rem" }}>
-            <Link href="/contact/request-a-quote?from=semi-downdraft-booth">
-              <span className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
+          <div
+            data-animation="slideRight"
+            className="text-center mt-7"
+          >
+            <Link
+              href="/contact/request-a-quote?from=semi-downdraft-booth"
+              className="inline-block max-[767px]:block max-[767px]:w-full"
+            >
+              <span className="btn-glow inline-flex items-center justify-center gap-2 max-[767px]:w-full">
+                GET PRICING <ArrowRight size={15} />
+              </span>
             </Link>
           </div>
         </div>
@@ -376,8 +412,39 @@ export default function SemiDowndraftBoothPage() {
               <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.3rem" }}>STANDARD FEATURES</span>
               <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed','Oswald',sans-serif", fontSize: "clamp(1.2rem,3vw,1.9rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Every Unit Ships Fully Certified</h2>
             </div>
-            <button data-animation="slideRight" onClick={() => setSpecsOpen(!specsOpen)} style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: specsOpen ? BLUE : "transparent", border: `2px solid ${BLUE}`, color: specsOpen ? "#fff" : BLUE, fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.82rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.75rem 1.25rem", cursor: "pointer", transition: "background 0.15s,color 0.15s", whiteSpace: "nowrap", minHeight: "48px" }}>
-              {specsOpen ? <><ChevronUp size={15} /> HIDE</> : <><ChevronDown size={15} /> SEE SPECS</>}
+            <button
+              data-animation="slideRight"
+              onClick={() => setSpecsOpen(!specsOpen)}
+              className="max-[767px]:w-full max-[767px]:flex max-[767px]:justify-center max-[767px]:box-border"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "0.5rem",
+                background: specsOpen ? BLUE : "transparent",
+                border: `2px solid ${BLUE}`,
+                color: specsOpen ? "#fff" : BLUE,
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontSize: "0.82rem",
+                fontWeight: 800,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                padding: "0.75rem 1.25rem",
+                cursor: "pointer",
+                transition: "background 0.15s, color 0.15s",
+                whiteSpace: "nowrap",
+                minHeight: "48px",
+              }}
+            >
+              {specsOpen ? (
+                <>
+                  <ChevronUp size={15} /> HIDE
+                </>
+              ) : (
+                <>
+                  <ChevronDown size={15} /> SEE SPECS
+                </>
+              )}
             </button>
           </div>
           {specsOpen && (
@@ -420,8 +487,39 @@ export default function SemiDowndraftBoothPage() {
               <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.3rem" }}>STANDARD SIZES</span>
               <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed','Oswald',sans-serif", fontSize: "clamp(1.2rem,3vw,1.9rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>14' Wide — Choose Your Height</h2>
             </div>
-            <button data-animation="slideRight" onClick={() => setSizesOpen(!sizesOpen)} style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: sizesOpen ? BLUE : "transparent", border: `2px solid ${BLUE}`, color: sizesOpen ? "#fff" : BLUE, fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.82rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.75rem 1.25rem", cursor: "pointer", transition: "background 0.15s,color 0.15s", whiteSpace: "nowrap", minHeight: "48px" }}>
-              {sizesOpen ? <><ChevronUp size={15} /> HIDE</> : <><ChevronDown size={15} /> SEE SIZES</>}
+            <button
+              data-animation="slideRight"
+              onClick={() => setSizesOpen(!sizesOpen)}
+              className="max-[767px]:w-full max-[767px]:flex max-[767px]:justify-center max-[767px]:box-border"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "0.5rem",
+                background: sizesOpen ? BLUE : "transparent",
+                border: `2px solid ${BLUE}`,
+                color: sizesOpen ? "#fff" : BLUE,
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontSize: "0.82rem",
+                fontWeight: 800,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                padding: "0.75rem 1.25rem",
+                cursor: "pointer",
+                transition: "background 0.15s, color 0.15s",
+                whiteSpace: "nowrap",
+                minHeight: "48px",
+              }}
+            >
+              {sizesOpen ? (
+                <>
+                  <ChevronUp size={15} /> HIDE
+                </>
+              ) : (
+                <>
+                  <ChevronDown size={15} /> SEE SIZES
+                </>
+              )}
             </button>
           </div>
           {sizesOpen && (
@@ -463,9 +561,17 @@ export default function SemiDowndraftBoothPage() {
           <div className="mb-5">
             <GalleryGrid images={GALLERY_IMGS} cardHeight="clamp(200px,40vw,300px)" className="grid grid-cols-1 sm:grid-cols-2 gap-3" />
           </div>
-          <div data-animation="slideRight" style={{ textAlign: "center" }}>
-            <Link href="/contact/request-a-quote?from=semi-downdraft-booth">
-              <span className="btn-glow">REQUEST A QUOTE <ArrowRight size={15} /></span>
+          <div
+            data-animation="slideRight"
+            className="text-center"
+          >
+            <Link
+              href="/contact/request-a-quote?from=semi-downdraft-booth"
+              className="inline-block max-[767px]:block max-[767px]:w-full"
+            >
+              <span className="btn-glow inline-flex items-center justify-center gap-2 max-[767px]:w-full">
+                REQUEST A QUOTE <ArrowRight size={15} />
+              </span>
             </Link>
           </div>
         </div>
@@ -476,12 +582,56 @@ export default function SemiDowndraftBoothPage() {
         <div className="container" style={{ textAlign: "center" }}>
           <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed','Oswald',sans-serif", fontSize: "clamp(1.5rem,4vw,2.6rem)", fontWeight: 800, color: "#fff", letterSpacing: "-0.01em", marginBottom: "0.65rem" }}>Ready to Configure Your Semi-Downdraft Booth?</h2>
           <p data-animation="slideLeft" style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(0.85rem,2vw,0.95rem)", color: "rgba(255,255,255,0.8)", marginBottom: "1.75rem", maxWidth: "440px", margin: "0 auto 1.75rem" }}>Factory-direct pricing. Fast lead times. Dedicated support from order through installation.</p>
-          <div style={{ display: "flex", gap: "0.85rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link data-animation="slideLeft" href="/contact/request-a-quote?from=semi-downdraft-booth">
-              <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#fff", color: BLUE, fontFamily: "'Barlow Condensed',sans-serif", fontSize: "clamp(0.85rem,2.5vw,0.9rem)", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", padding: "1.1rem 2rem", cursor: "pointer", minHeight: "48px" }}>GET PRICING <ArrowRight size={16} /></span>
+          <div className="flex flex-col min-[768px]:flex-row gap-3.5 justify-center max-[767px]:w-full">
+            <Link
+              data-animation="slideLeft"
+              href="/contact/request-a-quote?from=semi-downdraft-booth"
+              className="max-[767px]:w-full max-[767px]:block"
+            >
+              <span
+                className="flex items-center justify-center gap-2 max-[767px]:w-full"
+                style={{
+                  background: "#fff",
+                  color: BLUE,
+                  fontFamily: "'Barlow Condensed', sans-serif",
+                  fontSize: "clamp(0.85rem, 2.5vw, 0.9rem)",
+                  fontWeight: 800,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  padding: "1.1rem 2rem",
+                  cursor: "pointer",
+                  minHeight: "48px",
+                  boxSizing: "border-box",
+                }}
+              >
+                GET PRICING <ArrowRight size={16} />
+              </span>
             </Link>
-            <a data-animation="slideRight" href="tel:8885457715">
-              <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.6)", fontFamily: "'Barlow Condensed',sans-serif", fontSize: "clamp(0.85rem,2.5vw,0.9rem)", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "1.1rem 2rem", cursor: "pointer", minHeight: "48px" }}>CALL (888) 545-7715</span>
+
+            <a
+              data-animation="slideRight"
+              href="tel:8885457715"
+              className="max-[767px]:w-full max-[767px]:block"
+            >
+              <span
+                className="flex items-center justify-center gap-2 max-[767px]:w-full"
+                style={{
+                  background: "transparent",
+                  color: "#fff",
+                  border: "1.5px solid rgba(255,255,255,0.6)",
+                  fontFamily: "'Barlow Condensed', sans-serif",
+                  fontSize: "clamp(0.85rem, 2.5vw, 0.9rem)",
+                  fontWeight: 700,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  padding: "1.1rem 2rem",
+                  cursor: "pointer",
+                  minHeight: "48px",
+                  boxSizing: "border-box",
+                }}
+              >
+                CALL (888) 545-7715
+              </span>
             </a>
           </div>
         </div>
@@ -495,9 +645,30 @@ export default function SemiDowndraftBoothPage() {
           <p data-animation="slideLeft" style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(0.82rem,2vw,0.9rem)", color: "rgba(255,255,255,0.7)", maxWidth: "460px", margin: "0 auto 1.5rem", lineHeight: 1.7 }}>
             Add a direct-fired or indirect-fired heat system for accelerated cure times. Blanket intake filter upgrades included with all heated configurations. Spray, flash, and bake modes.
           </p>
-          <Link href="/contact/request-a-quote?from=semi-downdraft-booth">
-            <span data-animation="slideRight" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: BLUE, color: "#fff", fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.88rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", padding: "1rem 2rem", cursor: "pointer", minHeight: "48px" }}>ASK ABOUT HEATED OPTIONS <ArrowRight size={15} /></span>
-          </Link>
+         <Link
+  href="/contact/request-a-quote?from=semi-downdraft-booth"
+  className="inline-block max-[767px]:block max-[767px]:w-full"
+>
+  <span
+    data-animation="slideRight"
+    className="inline-flex items-center justify-center gap-2 max-[767px]:flex max-[767px]:w-full"
+    style={{
+      background: BLUE,
+      color: "#fff",
+      fontFamily: "'Barlow Condensed', sans-serif",
+      fontSize: "0.88rem",
+      fontWeight: 800,
+      letterSpacing: "0.1em",
+      textTransform: "uppercase",
+      padding: "1rem 2rem",
+      cursor: "pointer",
+      minHeight: "48px",
+      boxSizing: "border-box",
+    }}
+  >
+    ASK ABOUT HEATED OPTIONS <ArrowRight size={15} />
+  </span>
+</Link>
         </div>
       </section>
 
@@ -509,14 +680,58 @@ export default function SemiDowndraftBoothPage() {
           <p data-animation="slideLeft" style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(0.82rem,2vw,0.88rem)", color: "#666", maxWidth: "460px", margin: "0 auto 1.25rem", lineHeight: 1.7 }}>
             Maximize throughput and compliance by pairing your semi-downdraft booth with a dedicated mixing room for paint prep and an AMU for tempered make-up air.
           </p>
-          <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/products/mixing-rooms">
-              <span data-animation="slideLeft" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", background: BLUE, color: "#fff", fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.82rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.85rem 1.5rem", cursor: "pointer", minHeight: "48px" }}>VIEW MIXING ROOMS <ArrowRight size={13} /></span>
-            </Link>
-            <Link href="/products/air-make-up-units">
-              <span data-animation="slideRight" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", background: "transparent", color: BLUE, border: `2px solid ${BLUE}`, fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.82rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.85rem 1.5rem", cursor: "pointer", minHeight: "48px" }}>VIEW AIR MAKE-UP UNITS <ArrowRight size={13} /></span>
-            </Link>
-          </div>
+          <div className="flex flex-col min-[768px]:flex-row gap-3 justify-center max-[767px]:w-full">
+  <Link
+    href="/products/mixing-rooms"
+    className="max-[767px]:w-full max-[767px]:block"
+  >
+    <span
+      data-animation="slideLeft"
+      className="flex items-center justify-center gap-2 max-[767px]:w-full"
+      style={{
+        background: BLUE,
+        color: "#fff",
+        fontFamily: "'Barlow Condensed', sans-serif",
+        fontSize: "0.82rem",
+        fontWeight: 800,
+        letterSpacing: "0.1em",
+        textTransform: "uppercase",
+        padding: "0.85rem 1.5rem",
+        cursor: "pointer",
+        minHeight: "48px",
+        boxSizing: "border-box",
+      }}
+    >
+      VIEW MIXING ROOMS <ArrowRight size={13} />
+    </span>
+  </Link>
+
+  <Link
+    href="/products/air-make-up-units"
+    className="max-[767px]:w-full max-[767px]:block"
+  >
+    <span
+      data-animation="slideRight"
+      className="flex items-center justify-center gap-2 max-[767px]:w-full"
+      style={{
+        background: "transparent",
+        color: BLUE,
+        border: `2px solid ${BLUE}`,
+        fontFamily: "'Barlow Condensed', sans-serif",
+        fontSize: "0.82rem",
+        fontWeight: 800,
+        letterSpacing: "0.1em",
+        textTransform: "uppercase",
+        padding: "0.85rem 1.5rem",
+        cursor: "pointer",
+        minHeight: "48px",
+        boxSizing: "border-box",
+      }}
+    >
+      VIEW AIR MAKE-UP UNITS <ArrowRight size={13} />
+    </span>
+  </Link>
+</div>
         </div>
       </section>
 

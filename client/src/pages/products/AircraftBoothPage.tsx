@@ -23,32 +23,32 @@ import { useSEO } from "@/hooks/useSEO";
 // HERO_IMG    : side-angle private jet in white spray booth
 // FEATURED_IMG: twin-engine prop in hangar (featured booth section)
 // GALLERY_IMGS: navigable gallery images
-const HERO_IMG       = "/assets/pfs-aerospace-jet-side-booth-hero_34e5d4ce.png"; // real PFS jet side angle
-const HERO_VIDEO     = "/assets/product_aerospace_jet_side_hero_ae4811fe.mp4";  // slow-zoom video from real photo
-const FEATURED_IMG   = "/assets/private_jet_side_angle_fdd4968c.png";
+const HERO_IMG = "/assets/pfs-aerospace-jet-side-booth-hero_34e5d4ce.png"; // real PFS jet side angle
+const HERO_VIDEO = "/assets/product_aerospace_jet_side_hero_ae4811fe.mp4";  // slow-zoom video from real photo
+const FEATURED_IMG = "/assets/private_jet_side_angle_fdd4968c.png";
 const GALLERY_IMGS = [
-  { src: "/assets/pfs-aerospace-jet-side-booth-hero_34e5d4ce.png", alt: "PFS real jet side angle inside aerospace spray booth",      pos: "center 50%" },
+  { src: "/assets/pfs-aerospace-jet-side-booth-hero_34e5d4ce.png", alt: "PFS real jet side angle inside aerospace spray booth", pos: "center 50%" },
   { src: "/assets/aero_technician_spraying_21c4171a.png", alt: "Technician spraying aircraft fuselage in PFS aerospace booth", pos: "center 50%" },
-  { src: "/assets/aero_twin_engine_booth_a8e9c3f1.png",   alt: "PFS-branded private jet inside aerospace spray booth",         pos: "center 50%" },
+  { src: "/assets/aero_twin_engine_booth_a8e9c3f1.png", alt: "PFS-branded private jet inside aerospace spray booth", pos: "center 50%" },
 ];
 
-const ETL_LOGO   = "/assets/pfs-etl-logo_7758f722.png";
-const UL_LOGO    = "/assets/pfs-ul508a-clean_e8efdeb8.jpg";
-const NFPA_LOGO  = "/assets/pfs-nfpa-logo_4b710cc9.png";
-const EPA_LOGO   = "/assets/pfs-epa-logo_e4165f68.webp";
-const OSHA_LOGO  = "/assets/pfs-osha-logo_0c460739.jpg";
-const USA_FLAG   = "/assets/pfs-usa-flag_8fca512e.jpg";
+const ETL_LOGO = "/assets/pfs-etl-logo_7758f722.png";
+const UL_LOGO = "/assets/pfs-ul508a-clean_e8efdeb8.jpg";
+const NFPA_LOGO = "/assets/pfs-nfpa-logo_4b710cc9.png";
+const EPA_LOGO = "/assets/pfs-epa-logo_e4165f68.webp";
+const OSHA_LOGO = "/assets/pfs-osha-logo_0c460739.jpg";
+const USA_FLAG = "/assets/pfs-usa-flag_8fca512e.jpg";
 
 const BLUE = "#1B3A6B";
 
 // ── CERT CAROUSEL DATA ────────────────────────────────────────────────────────
 const CERTS = [
-  { type: "logo", img: ETL_LOGO,  title: "ETL & ETL-C Listed",    sub: "Intertek — USA & Canada",             imgH: 44 },
-  { type: "logo", img: UL_LOGO,   title: "UL 508A Certified",      sub: "Industrial Control Panel Fabricator", imgH: 44 },
-  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant",      sub: "Spray Application Standard",          imgH: 44 },
-  { type: "logo", img: EPA_LOGO,  title: "EPA Compliant",          sub: "Air Quality Standards",               imgH: 36 },
-  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant",         sub: "Workplace Safety Standards",          imgH: 36 },
-  { type: "flag", img: USA_FLAG,  title: "Made in the USA",        sub: "Santa Rosa, CA",                      imgH: 36 },
+  { type: "logo", img: ETL_LOGO, title: "ETL & ETL-C Listed", sub: "Intertek — USA & Canada", imgH: 44 },
+  { type: "logo", img: UL_LOGO, title: "UL 508A Certified", sub: "Industrial Control Panel Fabricator", imgH: 44 },
+  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant", sub: "Spray Application Standard", imgH: 44 },
+  { type: "logo", img: EPA_LOGO, title: "EPA Compliant", sub: "Air Quality Standards", imgH: 36 },
+  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant", sub: "Workplace Safety Standards", imgH: 36 },
+  { type: "flag", img: USA_FLAG, title: "Made in the USA", sub: "Santa Rosa, CA", imgH: 36 },
 ];
 const CERTS_LOOP = [...CERTS, ...CERTS];
 
@@ -85,11 +85,11 @@ const FEATURES_HIDDEN = [
 ];
 
 const BOOTH_LINEUP = [
-  { name: "Crossflow",      desc: "Side-to-side airflow. Cost-effective for large fuselage sections." },
-  { name: "Downdraft",      desc: "Full ceiling-to-floor airflow. Maximum cleanliness for aerospace topcoat." },
+  { name: "Crossflow", desc: "Side-to-side airflow. Cost-effective for large fuselage sections." },
+  { name: "Downdraft", desc: "Full ceiling-to-floor airflow. Maximum cleanliness for aerospace topcoat." },
   { name: "Semi-Downdraft", desc: "Rear-angled exhaust. Versatile for mixed MRO and new-build operations." },
-  { name: "Heated Booth",   desc: "Integrated heat for accelerated cure. Required for most aerospace primers." },
-  { name: "Custom Build",   desc: "Engineered-to-order for wide-body, military, or hangar-integrated systems." },
+  { name: "Heated Booth", desc: "Integrated heat for accelerated cure. Required for most aerospace primers." },
+  { name: "Custom Build", desc: "Engineered-to-order for wide-body, military, or hangar-integrated systems." },
 ];
 
 const RELATED_PRODUCTS = [
@@ -238,7 +238,7 @@ export default function AircraftBoothPage() {
           muted
           loop
           playsInline
-         
+
           aria-hidden="true"
           style={{
             position: "absolute", inset: 0,
@@ -297,22 +297,45 @@ export default function AircraftBoothPage() {
             manufactured in the USA with ETL/UL listed and UL 508A certified components. Clear-span high-bay construction.
             Engineered for commercial, military, and private aircraft — installed nationwide.
           </p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-            <Link data-animation="slideLeft" href="/contact/request-a-quote?from=aircraft-booth">
-              <span className="btn-glow" style={{ width: "100%", maxWidth: "320px", justifyContent: "center" }}>GET PRICING <ArrowRight size={16} /></span>
+          <div className="flex flex-col md:flex-row flex-wrap gap-4">
+            <Link
+              data-animation="slideLeft"
+              href="/contact/request-a-quote?from=aircraft-booth"
+              className="w-full md:w-fit"
+            >
+              <span className="btn-glow w-full md:w-auto inline-flex items-center justify-center">
+                GET PRICING
+                <ArrowRight size={16} />
+              </span>
             </Link>
-            <a data-animation="slideRight" href="tel:8885457715" style={{ width: "100%", maxWidth: "320px" }}>
-              <span style={{
-                display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem",
-                background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.5)",
-                fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.9rem", fontWeight: 700,
-                letterSpacing: "0.1em", textTransform: "uppercase",
-                padding: "1.1rem 2.5rem", cursor: "pointer", width: "100%",
-              }}>
+
+            <a
+              data-animation="slideRight"
+              href="tel:8885457715"
+              className="w-full md:w-fit"
+            >
+              <span
+                className="w-full md:w-auto inline-flex items-center justify-center"
+                style={{
+                  gap: "0.5rem",
+                  background: "transparent",
+                  color: "#fff",
+                  border: "1.5px solid rgba(255,255,255,0.5)",
+                  fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                  fontSize: "0.9rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  padding: "1.1rem 2.5rem",
+                  cursor: "pointer",
+                  boxSizing: "border-box",
+                }}
+              >
                 CALL (888) 545-7715
               </span>
             </a>
           </div>
+
         </div>
       </section>
 
@@ -355,29 +378,75 @@ export default function AircraftBoothPage() {
               </p>
             </div>
             {/* Featured image — natural aspect ratio, no black bars */}
-            <div style={{ width: "100%", maxWidth: "900px", overflow: "hidden", lineHeight: 0 }}>
+            {/* <div style={{ width: "100%", maxWidth: "900px", overflow: "hidden", lineHeight: 0 }}>
               <img
                 src={FEATURED_IMG}
                 alt="PFS Zenith Series — twin-engine aircraft inside aerospace paint booth"
                 style={{ width: "100%", height: "auto", display: "block", objectFit: "cover" }}
               />
-            </div>
-            <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
-              <Link data-animation="slideLeft" href="/contact/request-a-quote?from=aircraft-booth">
-                <span className="btn-glow">REQUEST A QUOTE <ArrowRight size={15} /></span>
-              </Link>
-              <Link data-animation="slideRight" href="/products/paint-booths">
-                <span style={{
-                  display: "inline-flex", alignItems: "center", gap: "0.5rem",
-                  background: "transparent", color: BLUE,
-                  border: `2px solid ${BLUE}`,
-                  fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.88rem", fontWeight: 800,
-                  letterSpacing: "0.1em", textTransform: "uppercase",
-                  padding: "1rem 2.5rem", cursor: "pointer",
-                }}>
-                  SEE ALL BOOTHS <ArrowRight size={15} />
-                </span>
-              </Link>
+            </div> */}
+
+            <div
+  style={{
+    width: "100%",
+    maxWidth: "900px",
+    margin: "0 auto",
+    overflow: "hidden",
+    lineHeight: 0,
+  }}
+>
+  <img
+    src={FEATURED_IMG}
+    alt="PFS Zenith Series — twin-engine aircraft inside aerospace paint booth"
+    style={{
+      display: "block",
+      width: "100%",
+      height: "auto",
+      maxWidth: "100%",
+    }}
+  />
+</div>
+
+            <div className="w-full">
+              <div className="flex w-full flex-col gap-4 md:w-auto md:flex-row md:justify-center">
+
+                <Link
+                  data-animation="slideLeft"
+                  href="/contact/request-a-quote?from=aircraft-booth"
+                  className="block w-full md:w-auto"
+                >
+                  <span className="btn-glow !flex !w-full items-center justify-center md:!inline-flex md:!w-auto">
+                    REQUEST A QUOTE <ArrowRight size={15} />
+                  </span>
+                </Link>
+
+                <Link
+                  data-animation="slideRight"
+                  href="/products/paint-booths"
+                  className="block w-full md:w-auto"
+                >
+                  <span
+                    className="!flex !w-full items-center justify-center md:!inline-flex md:!w-auto"
+                    style={{
+                      gap: "0.5rem",
+                      background: "transparent",
+                      color: BLUE,
+                      border: `2px solid ${BLUE}`,
+                      fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                      fontSize: "0.88rem",
+                      fontWeight: 800,
+                      letterSpacing: "0.1em",
+                      textTransform: "uppercase",
+                      padding: "1rem 2.5rem",
+                      cursor: "pointer",
+                      boxSizing: "border-box",
+                    }}
+                  >
+                    SEE ALL BOOTHS <ArrowRight size={15} />
+                  </span>
+                </Link>
+
+              </div>
             </div>
           </div>
         </div>
@@ -401,9 +470,14 @@ export default function AircraftBoothPage() {
           <div className="mb-8">
             <GalleryGrid images={GALLERY_IMGS} cardHeight="clamp(260px,35vw,440px)" className="grid md:grid-cols-2 gap-3" />
           </div>
-          <div data-animation="slideRight" className="text-center">
-            <Link href="/contact/request-a-quote?from=aircraft-booth">
-              <span className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
+          <div className="flex justify-center w-full">
+            <Link
+              href="/contact/request-a-quote?from=aircraft-booth"
+              className="block w-full md:w-fit text-center"
+            >
+              <span className="btn-glow !flex !w-full items-center justify-center md:!inline-flex md:!w-auto">
+                GET PRICING <ArrowRight size={15} />
+              </span>
             </Link>
           </div>
         </div>
@@ -481,25 +555,48 @@ export default function AircraftBoothPage() {
             </>
           )}
 
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <button data-animation="slideLeft"
+          <div className="flex w-full flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
+            <button
+              data-animation="slideLeft"
               onClick={() => setFeaturesOpen(!featuresOpen)}
+              className="w-full sm:w-auto flex items-center justify-center"
               style={{
-                display: "inline-flex", alignItems: "center", gap: "0.4rem",
-                background: "transparent", border: `1px solid ${BLUE}`, color: BLUE,
-                fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.82rem", fontWeight: 700,
-                letterSpacing: "0.08em", textTransform: "uppercase",
-                padding: "0.75rem 1.5rem", cursor: "pointer",
+                gap: "0.4rem",
+                background: "transparent",
+                border: `1px solid ${BLUE}`,
+                color: BLUE,
+                fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                fontSize: "0.82rem",
+                fontWeight: 700,
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+                padding: "0.75rem 1.5rem",
+                cursor: "pointer",
+                boxSizing: "border-box",
               }}
             >
-              {featuresOpen
-                ? <><ChevronUp size={14} /> SHOW LESS</>
-                : <><ChevronDown size={14} /> SEE ALL SPECIFICATIONS &amp; BOOTH TYPES</>}
+              {featuresOpen ? (
+                <>
+                  <ChevronUp size={14} /> SHOW LESS
+                </>
+              ) : (
+                <>
+                  <ChevronDown size={14} /> SEE ALL SPECIFICATIONS &amp; BOOTH TYPES
+                </>
+              )}
             </button>
-            <Link data-animation="slideRight" href="/contact/request-a-quote?from=aircraft-booth">
-              <span className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
+
+            <Link
+              data-animation="slideRight"
+              href="/contact/request-a-quote?from=aircraft-booth"
+              className="block w-full sm:w-auto text-center"
+            >
+              <span className="btn-glow !flex !w-full items-center justify-center sm:!inline-flex sm:!w-auto">
+                GET PRICING <ArrowRight size={15} />
+              </span>
             </Link>
           </div>
+
         </div>
       </section>
 
@@ -517,35 +614,64 @@ export default function AircraftBoothPage() {
             <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.85)", maxWidth: "440px" }}>
               Quote in 24 hours. manufactured in the USA with ETL/UL listed components. Installed nationwide by PFS-certified technicians.
             </p>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center" }}>
-              <Link data-animation="slideLeft" href="/contact/request-a-quote?from=aircraft-booth">
-                <span style={{
-                  display: "inline-flex", alignItems: "center", gap: "0.5rem",
-                  background: "#fff", color: BLUE,
-                  fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.9rem", fontWeight: 800,
-                  letterSpacing: "0.1em", textTransform: "uppercase",
-                  padding: "1.1rem 2.5rem", cursor: "pointer",
-                }}>
-                  GET PRICING <ArrowRight size={16} />
-                </span>
-              </Link>
-              <a data-animation="slideRight" href="tel:8885457715">
-                <span style={{
-                  display: "inline-flex", alignItems: "center", gap: "0.5rem",
-                  background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.6)",
-                  fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.9rem", fontWeight: 700,
-                  letterSpacing: "0.1em", textTransform: "uppercase",
-                  padding: "1.1rem 2.5rem", cursor: "pointer",
-                }}>
-                  (888) 545-7715
-                </span>
-              </a>
-            </div>
+         <div className="flex w-full flex-col gap-4 md:flex-row md:flex-wrap md:justify-center">
+  <Link
+    data-animation="slideLeft"
+    href="/contact/request-a-quote?from=aircraft-booth"
+    className="block w-full md:w-auto"
+  >
+    <span
+      className="!flex !w-full items-center justify-center md:!inline-flex md:!w-auto"
+      style={{
+        gap: "0.5rem",
+        background: "#fff",
+        color: BLUE,
+        fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+        fontSize: "0.9rem",
+        fontWeight: 800,
+        letterSpacing: "0.1em",
+        textTransform: "uppercase",
+        padding: "1.1rem 2.5rem",
+        cursor: "pointer",
+        boxSizing: "border-box",
+      }}
+    >
+      GET PRICING <ArrowRight size={16} />
+    </span>
+  </Link>
+
+  <a
+    data-animation="slideRight"
+    href="tel:8885457715"
+    className="block w-full md:w-auto"
+  >
+    <span
+      className="!flex !w-full items-center justify-center md:!inline-flex md:!w-auto"
+      style={{
+        gap: "0.5rem",
+        background: "transparent",
+        color: "#fff",
+        border: "1.5px solid rgba(255,255,255,0.6)",
+        fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+        fontSize: "0.9rem",
+        fontWeight: 700,
+        letterSpacing: "0.1em",
+        textTransform: "uppercase",
+        padding: "1.1rem 2.5rem",
+        cursor: "pointer",
+        boxSizing: "border-box",
+      }}
+    >
+      (888) 545-7715
+    </span>
+  </a>
+</div>
+
           </div>
         </div>
       </section>
 
-            {/* RELATED PRODUCTS */}
+      {/* RELATED PRODUCTS */}
       <SiteProductCardSection
         heading="Complete Your Finishing System"
         label="Complete Your System"

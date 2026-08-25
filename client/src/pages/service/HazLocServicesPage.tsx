@@ -270,7 +270,17 @@ export default function HazLocServicesPage() {
           background: "linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.50) 45%, rgba(0,0,0,0.15) 100%)",
           zIndex: 1,
         }} />
-        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "5rem 2rem 4rem", position: "relative", zIndex: 2, width: "100%" }}>
+<div
+  style={{
+    position: "relative",
+    zIndex: 2,
+    width: "100%",
+    paddingTop: "5rem",
+    paddingBottom: "4rem",
+  }}
+  className="container relative"
+>
+
           <div style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "0.7rem", fontWeight: 700,
@@ -344,9 +354,9 @@ export default function HazLocServicesPage() {
       {/* ── INTRO BAND ───────────────────────────────────────────────────── */}
       <section style={{
         background: "#111", borderBottom: "3px solid #1B3A6B",
-        padding: "2rem",
+        padding: "2rem 0px",
       }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.5rem" }}>
+        <div className="container" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.5rem" }}>
           {[
             { label: "Nationwide Coverage", sub: "Service available across all 50 states" },
             { label: "24/7 Emergency Response", sub: "Critical failures don't wait for business hours" },
@@ -370,7 +380,13 @@ export default function HazLocServicesPage() {
       </section>
 
       {/* ── SERVICE CATEGORIES (COLLAPSIBLE) ─────────────────────────────── */}
-      <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "3.5rem 2rem" }}>
+   <section
+  className="container"
+  style={{
+    paddingTop: "3.5rem",
+    paddingBottom: "3.5rem",
+  }}
+>
         <div style={{ marginBottom: "2.5rem" }}>
           <div style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
@@ -520,11 +536,11 @@ export default function HazLocServicesPage() {
 
       {/* ── PM PACKAGES BAND ─────────────────────────────────────────────── */}
       <section style={{
-        background: BLUE, padding: "3.5rem 2rem",
+        background: BLUE, padding: "3.5rem 0px",
         borderTop: "3px solid #111", borderBottom: "3px solid #111",
       }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div style={{ gridColumn: "1 / -1", marginBottom: "0.5rem" }}>
               <div style={{
                 fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
@@ -606,7 +622,8 @@ export default function HazLocServicesPage() {
       </section>
 
       {/* ── FAQ ──────────────────────────────────────────────────────────── */}
-      <section style={{ maxWidth: "900px", margin: "0 auto", padding: "3.5rem 2rem" }}>
+      <section className="container" style={{ paddingTop: "3.5rem",
+    paddingBottom: "3.5rem",}}>
         <div style={{ marginBottom: "2rem" }}>
           <div style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
@@ -673,14 +690,14 @@ export default function HazLocServicesPage() {
         background: "#111", padding: "3.5rem 2rem",
         borderTop: "3px solid #1B3A6B",
       }}>
-        <div style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
+        <div className="container" style={{ textAlign: "center" }}>
           <div style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "0.7rem", fontWeight: 700,
             color: "rgba(255,255,255,0.4)", letterSpacing: "0.2em",
             textTransform: "uppercase", marginBottom: "0.75rem",
           }}>NATIONWIDE COVERAGE — 24/7 EMERGENCY RESPONSE</div>
-          <h2 data-animation="slideLeft"style={{
+          <h2 data-animation="slideLeft" style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 900,
             color: "#fff", textTransform: "uppercase",

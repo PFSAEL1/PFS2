@@ -170,7 +170,7 @@ export default function PageHero({
       ) : bgImage ? (
         <img
           src={bgImage}
-          alt=""
+          alt="hero-banner-image"
           aria-hidden="true"
           style={{
             position: "absolute",
@@ -181,6 +181,7 @@ export default function PageHero({
             objectPosition: bgImagePosition,
             display: "block",
             ...KB_STYLE,
+            
           }}
         />
       ) : null}
@@ -307,42 +308,69 @@ export default function PageHero({
 
         {/* CTA Buttons */}
         {ctaPricing && (
-          <div className="flex flex-wrap gap-3">
-            <Link data-animation="slideLeft" href={ctaPricingHref}>
-              <span className="btn-glow" style={{ padding: "0.75rem 2rem", fontSize: "0.85rem" }}>
-                GET PRICING →
-              </span>
-            </Link>
-            {ctaPhone && (
-              <a data-animation="slideRight" href={`tel:${ctaPhone.replace(/\D/g, "")}`}>
-                <button
-                  style={{
-                    fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-                    fontWeight: 700,
-                    fontSize: "0.85rem",
-                    letterSpacing: "0.1em",
-                    textTransform: "uppercase",
-                    padding: "0.75rem 2rem",
-                    backgroundColor: "transparent",
-                    color: "#fff",
-                    border: "1.5px solid rgba(255,255,255,0.55)",
-                    cursor: "pointer",
-                    transition: "border-color 0.2s, background 0.2s",
-                  }}
-                  onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLElement).style.borderColor = "#fff";
-                    (e.currentTarget as HTMLElement).style.backgroundColor = "rgba(255,255,255,0.08)";
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.55)";
-                    (e.currentTarget as HTMLElement).style.backgroundColor = "transparent";
-                  }}
-                >
-                  CALL {ctaPhone}
-                </button>
-              </a>
-            )}
-          </div>
+        <div className="flex flex-wrap gap-3 max-[767px]:w-full">
+  <Link
+    className="max-[767px]:w-full max-[767px]:block"
+    data-animation="slideLeft"
+    href={ctaPricingHref}
+  >
+    <span
+      className="btn-glow max-[767px]:w-full"
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "0.75rem 2rem",
+        fontSize: "0.85rem",
+        boxSizing: "border-box",
+      }}
+    >
+      GET PRICING →
+    </span>
+  </Link>
+
+  {ctaPhone && (
+    <a
+      className="max-[767px]:w-full max-[767px]:block"
+      data-animation="slideRight"
+      href={`tel:${ctaPhone.replace(/\D/g, "")}`}
+    >
+      <span
+        className="max-[767px]:w-full"
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+          fontWeight: 700,
+          fontSize: "0.85rem",
+          letterSpacing: "0.1em",
+          textTransform: "uppercase",
+          padding: "0.75rem 2rem",
+          backgroundColor: "transparent",
+          color: "#fff",
+          border: "1.5px solid rgba(255,255,255,0.55)",
+          cursor: "pointer",
+          transition: "border-color 0.2s, background 0.2s",
+          boxSizing: "border-box",
+        }}
+        onMouseEnter={(e) => {
+          (e.currentTarget as HTMLElement).style.borderColor = "#fff";
+          (e.currentTarget as HTMLElement).style.backgroundColor =
+            "rgba(255,255,255,0.08)";
+        }}
+        onMouseLeave={(e) => {
+          (e.currentTarget as HTMLElement).style.borderColor =
+            "rgba(255,255,255,0.55)";
+          (e.currentTarget as HTMLElement).style.backgroundColor =
+            "transparent";
+        }}
+      >
+        CALL {ctaPhone}
+      </span>
+    </a>
+  )}
+</div>
         )}
       </div>
     </div>

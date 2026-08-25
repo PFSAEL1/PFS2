@@ -59,7 +59,7 @@ export default function TrustedBy({ label = "Trusted By Industry Leaders" }: Tru
       </div>
 
       {/* Logo grid — wraps responsively, centered */}
-      <div
+      {/* <div
         style={{
           maxWidth: "1100px",
           margin: "0 auto",
@@ -106,7 +106,47 @@ export default function TrustedBy({ label = "Trusted By Industry Leaders" }: Tru
             />
           </div>
         ))}
-      </div>
+      </div> */}
+<div className="trusted-logos">
+  {LOGOS.map((logo) => (
+    <div
+      key={logo.alt}
+      className="trusted-logo"
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        opacity: 0.65,
+        transition: "opacity 0.25s ease",
+        filter: "grayscale(0.15)",
+      }}
+      onMouseEnter={(e) => {
+        const el = e.currentTarget as HTMLElement;
+        el.style.opacity = "1";
+        el.style.filter = "grayscale(0)";
+      }}
+      onMouseLeave={(e) => {
+        const el = e.currentTarget as HTMLElement;
+        el.style.opacity = "0.65";
+        el.style.filter = "grayscale(0.15)";
+      }}
+    >
+      <img
+        src={logo.src}
+        alt={logo.alt}
+        className="trusted-logo-img"
+        style={{
+          height: `${logo.h}px`,
+          width: "auto",
+          maxWidth: "160px",
+          objectFit: "contain",
+          display: "block",
+        }}
+      />
+    </div>
+  ))}
+</div>
+
     </section>
   );
 }

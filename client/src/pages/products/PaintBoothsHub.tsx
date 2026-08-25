@@ -3,18 +3,18 @@ import { ArrowRight, Phone } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
 // All images use manus-storage paths
-const HERO_IMG       = "/assets/pfs-paint-booth-kia-hero_addbde19.jpg";  // Real PFS booth — silver Kia K5 inside white booth
-const HERO_VIDEO     = "/assets/pfs-paint-booth-hero_500b9d60.mp4";       // Cinematic hero video
-const OPEN_FACE_IMG  = "/assets/IMG_2132_c21b2839.jpg";
-const ENCLOSED_IMG   = "/assets/enclosed-booth-card-zenith_7e010642.jpg";
-const OUTDOOR_IMG    = "/assets/pfs-outdoor-hero-8143_9d49ac36.jpg";
-const CONTAINER_IMG  = "/assets/pfs-container-booth-card-v2_b8177420.jpg";
-const AIRCRAFT_IMG   = "/assets/pfs-aerospace-jet-in-booth-real_2eb79dc9.png";
+const HERO_IMG = "/assets/pfs-paint-booth-kia-hero_addbde19.jpg";  // Real PFS booth — silver Kia K5 inside white booth
+const HERO_VIDEO = "/assets/pfs-paint-booth-hero_500b9d60.mp4";       // Cinematic hero video
+const OPEN_FACE_IMG = "/assets/IMG_2132_c21b2839.jpg";
+const ENCLOSED_IMG = "/assets/enclosed-booth-card-zenith_7e010642.jpg";
+const OUTDOOR_IMG = "/assets/pfs-outdoor-hero-8143_9d49ac36.jpg";
+const CONTAINER_IMG = "/assets/pfs-container-booth-card-v2_b8177420.jpg";
+const AIRCRAFT_IMG = "/assets/pfs-aerospace-jet-in-booth-real_2eb79dc9.png";
 const INSPECTION_IMG = "/assets/pfs-inspection-hero_1b83deb1.png";
 const DOUBLE_WALL_IMG = "/assets/pfs-double-wall-booth-v2_8cdb7a24.webp";
-const PARTS_IMG      = "/assets/pfs-parts-booth-angled_01b1a8aa.jpeg";
-const CUSTOM_IMG     = "/assets/pfs-custom-booth-front-card_7e7d1673.jpg";
-const TRUCK_IMG      = "/assets/pfs-truck-booth-card_a0d45884_fca2d2cb.jpeg";
+const PARTS_IMG = "/assets/pfs-parts-booth-angled_01b1a8aa.jpeg";
+const CUSTOM_IMG = "/assets/pfs-custom-booth-front-card_7e7d1673.jpg";
+const TRUCK_IMG = "/assets/pfs-truck-booth-card_a0d45884_fca2d2cb.jpeg";
 
 const BOOTHS = [
   {
@@ -150,7 +150,7 @@ export default function PaintBoothsHub() {
           loop
           playsInline
           disablePictureInPicture
-         
+
           aria-hidden="true"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center" }}
         >
@@ -174,13 +174,28 @@ export default function PaintBoothsHub() {
           <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "clamp(0.85rem, 1.2vw, 1rem)", color: "rgba(255,255,255,0.75)", lineHeight: 1.7, marginBottom: "1.75rem", maxWidth: "560px" }}>
             ETL-certified spray paint booths for automotive, aerospace, industrial, and fleet applications — available in open face, enclosed, aircraft, outdoor, and custom configurations.
           </p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
-            <Link data-animation="slideLeft" href="/contact/request-a-quote">
-              <span className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
-            </Link>
-            <a data-animation="slideRight" href="tel:8885457715">
-              <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.4)", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.85rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.85rem 2rem", cursor: "pointer" }}>CALL (888) 545-7715</span>
-            </a>
+          <div className="flex flex-col min-[768px]:flex-row gap-3 max-[767px]:w-full">
+           <Link
+  data-animation="slideLeft"
+  href="/contact/request-a-quote"
+  className="btn-glow flex items-center justify-center gap-2 box-border px-8 py-[0.85rem] text-[0.88rem] font-bold uppercase tracking-[0.08em] max-[767px]:w-full"
+>
+  GET PRICING <ArrowRight size={15} />
+</Link>
+
+<a
+  data-animation="slideRight"
+  href="tel:8885457715"
+  className="flex items-center justify-center gap-2 box-border px-8 py-[0.85rem] text-[0.88rem] font-bold uppercase tracking-[0.08em] max-[767px]:w-full"
+  style={{
+    background: "transparent",
+    color: "#fff",
+    border: "2px solid rgba(255,255,255,0.4)",
+    fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+  }}
+>
+  CALL (888) 545-7715
+</a>
           </div>
         </div>
       </section>
@@ -248,16 +263,41 @@ export default function PaintBoothsHub() {
                   Our engineers will review your facility, process, and throughput — and recommend the right configuration at no charge.
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
-                <Link data-animation="slideLeft" href="/contact/request-a-quote">
-                  <span className="btn-glow flex items-center gap-2">Get Pricing <ArrowRight size={14} /></span>
-                </Link>
-                <a data-animation="slideRight" href="tel:+18885457715">
-                  <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#ffffff", border: "1.5px solid rgba(255,255,255,0.4)", padding: "0.6rem 1.2rem", cursor: "pointer" }}>
-                    <Phone size={14} /> (888) 545-7715
-                  </span>
-                </a>
-              </div>
+        <div className="flex flex-col min-[768px]:flex-row gap-3 flex-shrink-0 max-[767px]:w-full">
+  <Link
+    data-animation="slideLeft"
+    href="/contact/request-a-quote"
+    className="max-[767px]:w-full max-[767px]:block"
+  >
+    <span className="btn-glow flex items-center justify-center gap-2 max-[767px]:w-full">
+      Get Pricing <ArrowRight size={14} />
+    </span>
+  </Link>
+
+  <a
+    data-animation="slideRight"
+    href="tel:+18885457715"
+    className="max-[767px]:w-full max-[767px]:block"
+  >
+    <span
+      className="flex items-center justify-center gap-2 max-[767px]:w-full"
+      style={{
+        fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+        fontSize: "0.8rem",
+        fontWeight: 700,
+        letterSpacing: "0.1em",
+        textTransform: "uppercase",
+        color: "#ffffff",
+        border: "1.5px solid rgba(255,255,255,0.4)",
+        padding: "0.6rem 1.2rem",
+        cursor: "pointer",
+        boxSizing: "border-box",
+      }}
+    >
+      <Phone size={14} /> (888) 545-7715
+    </span>
+  </a>
+</div>
             </div>
           </div>
         </div>

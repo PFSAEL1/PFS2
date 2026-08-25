@@ -4,9 +4,9 @@ import { ArrowRight } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
 const BLAST_IMG_HERO = "/assets/pfs-blast-systems2_36cb5b96.png";
-const BLAST_IMG      = "/assets/blast-systems-real_c7389401_16a0255c.webp";
-const RECLAIM_BLAST  = "/assets/pfs-reclaim-blast-booth_bd633d6a.png";
-const CONTAINER_BLAST= "/assets/pfs-blast-container_f090af61.png";
+const BLAST_IMG = "/assets/blast-systems-real_c7389401_16a0255c.webp";
+const RECLAIM_BLAST = "/assets/pfs-reclaim-blast-booth_bd633d6a.png";
+const CONTAINER_BLAST = "/assets/pfs-blast-container_f090af61.png";
 
 const SYSTEMS = [
   {
@@ -56,7 +56,7 @@ export default function BlastSystemsHub() {
         <div className="container">
           <div className="mb-10">
             <span className="section-label">Blasting Systems</span>
-            <h2  className="section-heading">Choose Your Configuration</h2>
+            <h2 className="section-heading">Choose Your Configuration</h2>
             <p data-animation="slideLeft" className="section-body max-w-2xl">PFS blasting systems are built for demanding surface preparation applications — protecting workers, containing media, and capturing dust. Available in standard and custom configurations.</p>
           </div>
           <div data-animation="fadeIn" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -80,7 +80,7 @@ export default function BlastSystemsHub() {
                 <h3 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.25rem", fontWeight: 700, color: "#1a1a1a", marginBottom: "0.5rem" }}>Need a Custom Blasting Solution?</h3>
                 <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.875rem", color: "#555", lineHeight: 1.7 }}>Our engineers can design a blasting system around your specific part sizes, media type, and facility requirements.</p>
               </div>
-              <Link data-animation="slideRight"  href="/contact/request-a-quote?from=blast-booth"><span className="btn-glow flex-shrink-0">Get Pricing <ArrowRight size={14} /></span></Link>
+              <Link data-animation="slideRight" href="/contact/request-a-quote?from=blast-booth"><span className="btn-glow flex-shrink-0">Get Pricing <ArrowRight size={14} /></span></Link>
             </div>
           </div>
         </div>
@@ -88,26 +88,71 @@ export default function BlastSystemsHub() {
 
       {/* ── FAQ SECTION ── */}
       <section style={{ background: "#f9f9f9", padding: "4rem 0" }}>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": FAQS.map(({ q, a }) => ({
-            "@type": "Question",
-            "name": q,
-            "acceptedAnswer": { "@type": "Answer", "text": a }
-          }))
-        })}} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": FAQS.map(({ q, a }) => ({
+              "@type": "Question",
+              "name": q,
+              "acceptedAnswer": { "@type": "Answer", "text": a }
+            }))
+          })
+        }} />
         <div className="container" style={{ maxWidth: "860px" }}>
           <p style={{ fontFamily: "'Chakra Petch','Barlow Condensed',sans-serif", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#1a3a6b", marginBottom: "0.75rem" }}>FREQUENTLY ASKED QUESTIONS</p>
           <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch','Barlow Condensed',sans-serif", fontSize: "clamp(1.5rem,3vw,2.2rem)", fontWeight: 800, color: "#0d1b2a", marginBottom: "2.5rem", lineHeight: 1.1 }}>Blast Room & Blast Booth FAQ</h2>
           {FAQS.map(({ q, a }, i) => (
-            <details key={i} style={{ borderBottom: "1px solid #e5e7eb", paddingBottom: "1.25rem", marginBottom: "1.25rem" }}>
-              <summary style={{ fontFamily: "'Chakra Petch','Barlow Condensed',sans-serif", fontSize: "1rem", fontWeight: 700, color: "#0d1b2a", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                {q}
-                <span style={{ fontSize: "1.25rem", color: "#1a3a6b", flexShrink: 0, marginLeft: "1rem" }}>+</span>
-              </summary>
-              <p style={{ fontFamily: "'Archivo Narrow','Inter',sans-serif", fontSize: "0.95rem", color: "#4b5563", lineHeight: 1.75, marginTop: "0.75rem" }}>{a}</p>
-            </details>
+           <details
+  key={i}
+  className="faq-item"
+  style={{
+    borderBottom: "1px solid #e5e7eb",
+    paddingBottom: "1.25rem",
+    marginBottom: "1.25rem",
+  }}
+>
+  <summary
+    style={{
+      fontFamily: "'Chakra Petch','Barlow Condensed',sans-serif",
+      fontSize: "1rem",
+      fontWeight: 700,
+      color: "#0d1b2a",
+      cursor: "pointer",
+      listStyle: "none",
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+    }}
+  >
+    {q}
+
+    <span
+      className="faq-icon"
+      style={{
+        fontSize: "1.25rem",
+        color: "#1a3a6b",
+        flexShrink: 0,
+        marginLeft: "1rem",
+      }}
+    >
+      +
+    </span>
+  </summary>
+
+  <p
+    style={{
+      fontFamily: "'Archivo Narrow','Inter',sans-serif",
+      fontSize: "0.95rem",
+      color: "#4b5563",
+      lineHeight: 1.75,
+      marginTop: "0.75rem",
+    }}
+  >
+    {a}
+  </p>
+</details>
+
           ))}
         </div>
       </section>
