@@ -396,12 +396,63 @@ export default function MixingRoomPage() {
             { q: "Can PFS build a custom-size mixing room?", a: "Yes. PFS manufactures mixing rooms in standard and custom sizes. Standard configurations range from 8' x 8' to 12' x 16', but custom dimensions are available for non-standard facility layouts. Contact a PFS engineer for a custom quote." },
             { q: "What ventilation system does a PFS mixing room use?", a: "PFS mixing rooms use a cross-flow ventilation system that continuously draws fresh air through intake filters on one wall and exhausts through filters on the opposite wall. This constant air exchange removes paint fumes, solvent vapors, and particulates, maintaining a safe working environment and complying with OSHA and NFPA 33 ventilation requirements." },
           ].map((item, i) => (
-            <details key={i} style={{ borderBottom:"1px solid #e5e7eb", padding:"1.25rem 0" }}>
-              <summary style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"clamp(0.95rem,2.5vw,1.1rem)",fontWeight:800,color:"#111",letterSpacing:"0.01em",cursor:"pointer",listStyle:"none",display:"flex",justifyContent:"space-between",alignItems:"center",gap:"1rem" }}>
+            <details
+              key={i}
+              style={{
+                borderBottom: "1px solid #e5e7eb",
+                padding: "1.25rem 0",
+              }}
+              onToggle={(e) => {
+                const icon = e.currentTarget.querySelector(".faq-icon");
+
+                if (icon) {
+                  icon.textContent = e.currentTarget.open ? "−" : "+";
+                }
+              }}
+            >
+              <summary
+                style={{
+                  fontFamily: "'Barlow Condensed',sans-serif",
+                  fontSize: "clamp(0.95rem,2.5vw,1.1rem)",
+                  fontWeight: 800,
+                  color: "#111",
+                  letterSpacing: "0.01em",
+                  cursor: "pointer",
+                  listStyle: "none",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  gap: "1rem",
+                }}
+              >
                 {item.q}
-                <span style={{ color:"#1B3A6B", flexShrink:0, fontSize:"1.4rem", fontWeight:300, lineHeight:1 }}>+</span>
+
+                <span
+                  className="faq-icon"
+                  style={{
+                    color: "#1B3A6B",
+                    flexShrink: 0,
+                    fontSize: "1.4rem",
+                    fontWeight: 500,
+                    lineHeight: 1,
+                  }}
+                >
+                  +
+                </span>
               </summary>
-              <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"clamp(0.82rem,2vw,0.9rem)",color:"#555",lineHeight:1.75,margin:"1rem 0 0",paddingRight:"1.5rem" }}>{item.a}</p>
+
+              <p
+                style={{
+                  fontFamily: "'Inter',sans-serif",
+                  fontSize: "clamp(0.82rem,2vw,0.9rem)",
+                  color: "#555",
+                  lineHeight: 1.75,
+                  margin: "1rem 0 0",
+                  paddingRight: "1.5rem",
+                }}
+              >
+                {item.a}
+              </p>
             </details>
           ))}
         </div>

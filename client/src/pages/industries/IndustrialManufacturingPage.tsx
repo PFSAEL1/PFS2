@@ -430,7 +430,7 @@ export default function IndustrialManufacturingPage() {
         {/* Blue accent line at bottom of hero */}
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "3px", background: BLUE, zIndex: 3 }} />
 
-        <div className="container" style={{ position: "relative", zIndex: 2, paddingTop: "8rem", paddingBottom: "4.5rem" }}>
+        <div className="container industry-ptb">
           <span style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.18em",
@@ -562,7 +562,7 @@ export default function IndustrialManufacturingPage() {
       <TrustedBy label="Trusted By Industry Leaders" />
 
       {/* ── GALLERY PHOTOS (zoomable) ── */}
-      <section style={{ padding: "0 0 4rem", background: "#fff" }}>
+      <section style={{ padding: "4rem 0 4rem", background: "#fff" }}>
         <div className="container">
           <div className="text-center mb-8">
             <span style={{

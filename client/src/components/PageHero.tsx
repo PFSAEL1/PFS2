@@ -36,7 +36,7 @@ interface PageHeroProps {
   ctaPricingHref?: string;
   kenBurns?: boolean; // slow zoom-pan animation on static image
   bgPoster?: string;  // poster frame shown before video loads
-videoStartTime?: number;
+  videoStartTime?: number;
 
 }
 
@@ -70,13 +70,13 @@ function PageHeroVideo({
         v.currentTime = START_TIME;
       }
 
-      v.play().catch(() => {});
+      v.play().catch(() => { });
     };
 
     const restartVideo = () => {
       // When video ends, start again at 2 seconds
       v.currentTime = START_TIME;
-      v.play().catch(() => {});
+      v.play().catch(() => { });
     };
 
     v.addEventListener("loadedmetadata", startVideo);
@@ -159,12 +159,12 @@ export default function PageHero({
 
       {/* Hero photo or video — Aerospace-style fade: still image underneath, video fades in on canplay */}
       {bgVideo ? (
-          <PageHeroVideo
-            bgVideo={bgVideo}
-            bgImage={bgImage}
-            bgImagePosition={bgImagePosition}
-            bgImageFit={bgImageFit}
-            bgPoster={bgPoster}
+        <PageHeroVideo
+          bgVideo={bgVideo}
+          bgImage={bgImage}
+          bgImagePosition={bgImagePosition}
+          bgImageFit={bgImageFit}
+          bgPoster={bgPoster}
           KB_STYLE={KB_STYLE}
         />
       ) : bgImage ? (
@@ -181,7 +181,7 @@ export default function PageHero({
             objectPosition: bgImagePosition,
             display: "block",
             ...KB_STYLE,
-            
+
           }}
         />
       ) : null}
@@ -233,44 +233,89 @@ export default function PageHero({
         {/* Breadcrumb */}
         {breadcrumbs && breadcrumbs.length > 0 && (
           <div
-            className="flex items-center gap-1.5 mb-4"
+            className="breadcrumb-wrapper flex items-center gap-1.5 mb-4"
             style={{
               fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
               fontSize: "0.7rem",
-              color: "rgba(255,255,255,0.5)",
+              color: "rgba(255,255,255,0.85)",
               letterSpacing: "0.04em",
               textTransform: "uppercase",
+              fontWeight: 800,
             }}
           >
             <Link href="/">
               <span
-                style={{ cursor: "pointer", transition: "color 0.15s" }}
-                onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "white")}
-                onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "rgba(255,255,255,0.5)")}
+                className="breadcrumb-item"
+                style={{
+                  cursor: "pointer",
+                  transition: "color 0.15s",
+                  fontWeight: 800,
+                  color: "rgba(255,255,255,0.85)",
+                }}
+                onMouseEnter={(e) =>
+                  ((e.target as HTMLElement).style.color = "white")
+                }
+                onMouseLeave={(e) =>
+                ((e.target as HTMLElement).style.color =
+                  "rgba(255,255,255,0.85)")
+                }
               >
                 Home
               </span>
             </Link>
+
             {breadcrumbs.map((crumb, i) => (
-              <span key={i} className="flex items-center gap-1.5">
-                <span style={{ color: "rgba(255,255,255,0.25)" }}>/</span>
+              <span
+                key={i}
+                className={`breadcrumb-item breadcrumb-item-${i} flex items-center gap-1.5`}
+                style={{
+                  fontWeight: 800,
+                }}
+              >
+                <span
+                  style={{
+                    color: "rgba(255,255,255,0.75)",
+                    fontWeight: 800,
+                  }}
+                >
+                  /
+                </span>
+
                 {crumb.href ? (
                   <Link href={crumb.href}>
                     <span
-                      style={{ cursor: "pointer", transition: "color 0.15s" }}
-                      onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "white")}
-                      onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "rgba(255,255,255,0.5)")}
+                      style={{
+                        cursor: "pointer",
+                        transition: "color 0.15s",
+                        fontWeight: 800,
+                        color: "rgba(255,255,255,0.85)",
+                      }}
+                      onMouseEnter={(e) =>
+                        ((e.target as HTMLElement).style.color = "white")
+                      }
+                      onMouseLeave={(e) =>
+                      ((e.target as HTMLElement).style.color =
+                        "rgba(255,255,255,0.85)")
+                      }
                     >
                       {crumb.label}
                     </span>
                   </Link>
                 ) : (
-                  <span style={{ color: "#FFFFFF" }}>{crumb.label}</span>
+                  <span
+                    style={{
+                      color: "#FFFFFF",
+                      fontWeight: 800,
+                    }}
+                  >
+                    {crumb.label}
+                  </span>
                 )}
               </span>
             ))}
           </div>
         )}
+
 
         {/* Title */}
         <h1 data-animation="slideLeft"
@@ -308,69 +353,69 @@ export default function PageHero({
 
         {/* CTA Buttons */}
         {ctaPricing && (
-        <div className="flex flex-wrap gap-3 max-[767px]:w-full">
-  <Link
-    className="max-[767px]:w-full max-[767px]:block"
-    data-animation="slideLeft"
-    href={ctaPricingHref}
-  >
-    <span
-      className="btn-glow max-[767px]:w-full"
-      style={{
-        display: "inline-flex",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: "0.75rem 2rem",
-        fontSize: "0.85rem",
-        boxSizing: "border-box",
-      }}
-    >
-      GET PRICING →
-    </span>
-  </Link>
+          <div className="flex flex-wrap gap-3 max-[767px]:w-full">
+            <Link
+              className="max-[767px]:w-full max-[767px]:block"
+              data-animation="slideLeft"
+              href={ctaPricingHref}
+            >
+              <span
+                className="btn-glow max-[767px]:w-full"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "0.75rem 2rem",
+                  fontSize: "0.85rem",
+                  boxSizing: "border-box",
+                }}
+              >
+                GET PRICING →
+              </span>
+            </Link>
 
-  {ctaPhone && (
-    <a
-      className="max-[767px]:w-full max-[767px]:block"
-      data-animation="slideRight"
-      href={`tel:${ctaPhone.replace(/\D/g, "")}`}
-    >
-      <span
-        className="max-[767px]:w-full"
-        style={{
-          display: "inline-flex",
-          alignItems: "center",
-          justifyContent: "center",
-          fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-          fontWeight: 700,
-          fontSize: "0.85rem",
-          letterSpacing: "0.1em",
-          textTransform: "uppercase",
-          padding: "0.75rem 2rem",
-          backgroundColor: "transparent",
-          color: "#fff",
-          border: "1.5px solid rgba(255,255,255,0.55)",
-          cursor: "pointer",
-          transition: "border-color 0.2s, background 0.2s",
-          boxSizing: "border-box",
-        }}
-        onMouseEnter={(e) => {
-          (e.currentTarget as HTMLElement).style.borderColor = "#fff";
-          (e.currentTarget as HTMLElement).style.backgroundColor =
-            "rgba(255,255,255,0.08)";
-        }}
-        onMouseLeave={(e) => {
-          (e.currentTarget as HTMLElement).style.borderColor =
-            "rgba(255,255,255,0.55)";
-          (e.currentTarget as HTMLElement).style.backgroundColor =
-            "transparent";
-        }}
-      >
-        CALL {ctaPhone}
-      </span>
-    </a>
-  )}
-</div>
+            {ctaPhone && (
+              <a
+                className="max-[767px]:w-full max-[767px]:block"
+                data-animation="slideRight"
+                href={`tel:${ctaPhone.replace(/\D/g, "")}`}
+              >
+                <span
+                  className="max-[767px]:w-full"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                    fontWeight: 700,
+                    fontSize: "0.85rem",
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    padding: "0.75rem 2rem",
+                    backgroundColor: "transparent",
+                    color: "#fff",
+                    border: "1.5px solid rgba(255,255,255,0.55)",
+                    cursor: "pointer",
+                    transition: "border-color 0.2s, background 0.2s",
+                    boxSizing: "border-box",
+                  }}
+                  onMouseEnter={(e) => {
+                    (e.currentTarget as HTMLElement).style.borderColor = "#fff";
+                    (e.currentTarget as HTMLElement).style.backgroundColor =
+                      "rgba(255,255,255,0.08)";
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.currentTarget as HTMLElement).style.borderColor =
+                      "rgba(255,255,255,0.55)";
+                    (e.currentTarget as HTMLElement).style.backgroundColor =
+                      "transparent";
+                  }}
+                >
+                  CALL {ctaPhone}
+                </span>
+              </a>
+            )}
+          </div>
         )}
       </div>
     </div>

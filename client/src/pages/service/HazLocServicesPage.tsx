@@ -262,7 +262,7 @@ export default function HazLocServicesPage() {
         <div style={{
           position: "absolute", inset: 0,
           backgroundImage: "url('/assets/Hazardous-banner.png')",
-          backgroundSize: "contain", backgroundPosition: "center center", backgroundRepeat: "no-repeat",
+          backgroundSize: "cover", backgroundPosition: "center center", backgroundRepeat: "no-repeat",
           backgroundColor: "#0a0a0a", zIndex: 0,
         }} />
         <div style={{

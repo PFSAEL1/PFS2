@@ -74,7 +74,7 @@ export default function ResourcesHub() {
       <section className="py-16 bg-white">
         <div className="container">
           <div className="mb-10">
-            <span className="section-label">Resource Library</span>
+            <span style={{ color: "rgb(27, 58, 107)" }} className="section-label">Resource Library</span>
             <h2 data-animation="slideLeft" className="section-heading-lg">Everything You Need to Specify, Install, and Operate PFS Equipment</h2>
           </div>
           <div data-animation="fadeIn" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

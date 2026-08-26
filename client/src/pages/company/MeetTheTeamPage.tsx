@@ -11,15 +11,15 @@ const GOLD = "#B8860B";
 const BLUE_DARK = "#1B3A6B";
 
 const VALUES = [
-  { icon: Shield,    title: "Professionalism", tagline: "Do it right the first time.", body: "We represent ourselves and our clients with integrity at every touchpoint — from the first call to the final inspection. No shortcuts. No excuses." },
-  { icon: Target,    title: "Precision",        tagline: "Every detail matters.",       body: "Spray finishing is an exacting science. Our equipment is engineered to spec, our installations are executed to plan, and our quality checks leave nothing to chance." },
-  { icon: Zap,       title: "Speed with Quality", tagline: "Fast — never sloppy.",     body: "We move quickly because our clients' operations depend on it. But speed is never an excuse for cutting corners. We deliver on time and we deliver right." },
-  { icon: Heart,     title: "Integrity",        tagline: "Say it, mean it.",            body: "We quote what we build and build what we quote. Our word is our contract. If something isn't right, we make it right — no fine print, no runaround." },
-  { icon: Lightbulb, title: "Innovation",       tagline: "Always improve.",             body: "We don't rest on legacy designs. Every project is an opportunity to engineer a better solution — better airflow, better controls, better lead times, better outcomes." },
+  { icon: Shield, title: "Professionalism", tagline: "Do it right the first time.", body: "We represent ourselves and our clients with integrity at every touchpoint — from the first call to the final inspection. No shortcuts. No excuses." },
+  { icon: Target, title: "Precision", tagline: "Every detail matters.", body: "Spray finishing is an exacting science. Our equipment is engineered to spec, our installations are executed to plan, and our quality checks leave nothing to chance." },
+  { icon: Zap, title: "Speed with Quality", tagline: "Fast — never sloppy.", body: "We move quickly because our clients' operations depend on it. But speed is never an excuse for cutting corners. We deliver on time and we deliver right." },
+  { icon: Heart, title: "Integrity", tagline: "Say it, mean it.", body: "We quote what we build and build what we quote. Our word is our contract. If something isn't right, we make it right — no fine print, no runaround." },
+  { icon: Lightbulb, title: "Innovation", tagline: "Always improve.", body: "We don't rest on legacy designs. Every project is an opportunity to engineer a better solution — better airflow, better controls, better lead times, better outcomes." },
 ];
 const PILLARS = [
-  { num: "01", title: "Speed",          body: "When we control manufacturing, we control the schedule. No waiting on third-party fabricators. No supply chain surprises. Your booth ships when we say it ships." },
-  { num: "02", title: "Quality",        body: "Every weld, every panel, every control panel is built to our standards — not someone else's. In-house production means we catch problems before they become your problems." },
+  { num: "01", title: "Speed", body: "When we control manufacturing, we control the schedule. No waiting on third-party fabricators. No supply chain surprises. Your booth ships when we say it ships." },
+  { num: "02", title: "Quality", body: "Every weld, every panel, every control panel is built to our standards — not someone else's. In-house production means we catch problems before they become your problems." },
   { num: "03", title: "Accountability", body: "One company. One point of contact. From engineering to installation to service. If there's ever an issue, you call us — and we answer." },
 ];
 
@@ -74,27 +74,27 @@ const LEADERSHIP = [
 
 // ── Management ───────────────────────────────────────────────────────────────
 const MANAGEMENT = [
-  { name: "Alberto Perez",            title: "Assembly Manager & Lead Technician", photo: "/assets/team-alberto-perez_dc1cde45.webp" },
-  { name: "Cindy Salazar",            title: "Office Manager",                     photo: "/assets/team-cindy-salazar_d67bcb18.webp" },
-  { name: "Jaime Garcia",            title: "Production Manager",                  photo: "/assets/team-jaime-garcia_b9d7737b.webp" },
-  { name: "Frank Garcia",            title: "Fabrication Manager",                 photo: "/assets/team-frank-garcia_8319a409.webp" },
-  { name: "Kevin Hinostrosa",        title: "Welding Manager",                     photo: "/assets/team-kevin-hinostrosa_78aaa989.webp" },
-  { name: "Sai Bhuvanesh Nandipati", title: "Engineering Lead",                    photo: "/assets/team-sai-nandipati_d2924fe4.webp" },
-  { name: "Diego Madrid Cuzal",      title: "Installation Manager",                photo: null },
+  { name: "Alberto Perez", title: "Assembly Manager & Lead Technician", photo: "/assets/team-alberto-perez_dc1cde45.webp" },
+  { name: "Cindy Salazar", title: "Office Manager", photo: "/assets/team-cindy-salazar_d67bcb18.webp" },
+  { name: "Jaime Garcia", title: "Production Manager", photo: "/assets/team-jaime-garcia_b9d7737b.webp" },
+  { name: "Frank Garcia", title: "Fabrication Manager", photo: "/assets/team-frank-garcia_8319a409.webp" },
+  { name: "Kevin Hinostrosa", title: "Welding Manager", photo: "/assets/team-kevin-hinostrosa_78aaa989.webp" },
+  { name: "Sai Bhuvanesh Nandipati", title: "Engineering Lead", photo: "/assets/team-sai-nandipati_d2924fe4.webp" },
+  { name: "Diego Madrid Cuzal", title: "Installation Manager", photo: null },
 ];
 
 // ── Team ─────────────────────────────────────────────────────────────────────
 const TEAM = [
-  { name: "Genaro Bustamante",        title: "Lead Welder",                        photo: "/assets/team-genaro-bustamante_0317113b.webp" },
-  { name: "Juan Morales",             title: "Lead Fabrication",                   photo: "/assets/team-juan-morales_2765b41a.webp" },
-  { name: "Jair Valencia Jr",         title: "Sales Specialist",                   photo: "/assets/team-jair-valencia_a4c83c71.webp" },
-  { name: "Cursine Garcia Untiveros", title: "Welding Tech",                       photo: "/assets/team-cursine-garcia_f3f7f889.webp" },
-  { name: "Enrique Estrada",          title: "Assembly Tech",                      photo: "/assets/team-enrique-estrada_85787397.webp" },
-  { name: "Jesus Tosdato",            title: "Installation Lead",                  photo: null },
-  { name: "Aremi Espinoza Barajas",   title: "Engineering",                        photo: "/assets/team-aremi-espinoza_8ffb35c8.webp" },
-  { name: "Daniel Villalobos",        title: "Fabrication Tech",                   photo: null },
-  { name: "Leah Garcia Hluz",         title: "Marketing Assistant",                photo: "/assets/team-leah-garcia-hluz_c2ec4d3b.webp" },
-  { name: "Jose Torres",              title: "Service Lead",                       photo: null },
+  { name: "Genaro Bustamante", title: "Lead Welder", photo: "/assets/team-genaro-bustamante_0317113b.webp" },
+  { name: "Juan Morales", title: "Lead Fabrication", photo: "/assets/team-juan-morales_2765b41a.webp" },
+  { name: "Jair Valencia Jr", title: "Sales Specialist", photo: "/assets/team-jair-valencia_a4c83c71.webp" },
+  { name: "Cursine Garcia Untiveros", title: "Welding Tech", photo: "/assets/team-cursine-garcia_f3f7f889.webp" },
+  { name: "Enrique Estrada", title: "Assembly Tech", photo: "/assets/team-enrique-estrada_85787397.webp" },
+  { name: "Jesus Tosdato", title: "Installation Lead", photo: null },
+  { name: "Aremi Espinoza Barajas", title: "Engineering", photo: "/assets/team-aremi-espinoza_8ffb35c8.webp" },
+  { name: "Daniel Villalobos", title: "Fabrication Tech", photo: null },
+  { name: "Leah Garcia Hluz", title: "Marketing Assistant", photo: "/assets/team-leah-garcia-hluz_c2ec4d3b.webp" },
+  { name: "Jose Torres", title: "Service Lead", photo: null },
 ];
 
 // ── Placeholder silhouette ────────────────────────────────────────────────────
@@ -188,29 +188,114 @@ export default function MeetTheTeamPage() {
     <div style={{ background: "#0a0a0a", minHeight: "100vh", color: "#fff" }}>
 
       {/* ── Hero: Full Team Photo ── */}
-      <div style={{ position: "relative", width: "100%", overflow: "hidden", maxHeight: "520px" }}>
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          overflow: "hidden",
+          maxHeight: "520px",
+        }}
+      >
         <img
           src={GROUP_PHOTO}
           alt="The full PFS team outside the PFS Industrial Finishing Equipment manufacturing facility in Santa Rosa, CA"
-          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 72%", display: "block", maxHeight: "520px" }}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center 72%",
+            display: "block",
+            maxHeight: "520px",
+          }}
         />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(10,10,10,0.1) 0%, rgba(10,10,10,0.0) 40%, rgba(10,10,10,0.8) 100%)" }} />
-        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "2.5rem 2rem 2rem", maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ fontFamily: "'Chakra Petch',sans-serif", fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.25em", color: "#C8A84B", textTransform: "uppercase", marginBottom: "0.5rem" }}>PFS INDUSTRIAL FINISHING EQUIPMENT</div>
-          <h1 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch',sans-serif", fontSize: "clamp(1.8rem,4vw,3rem)", fontWeight: 700, color: "#fff", margin: 0, lineHeight: 1.1 }}>Meet the Team</h1>
-          <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow',sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.75)", marginTop: "0.6rem", maxWidth: "520px" }}>The people behind every system we ship — built to the highest standard in industrial finishing.</p>
+
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(to bottom, rgba(10,10,10,0.1) 0%, rgba(10,10,10,0.0) 40%, rgba(10,10,10,0.8) 100%)",
+          }}
+        />
+
+        {/* Container */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            right: 0,
+          }}
+        >
+          <div className="container"
+            style={{
+              paddingTop: "2.5em",
+              paddingBottom: "2em",
+              boxSizing: "border-box",
+            }}
+          >
+            <div
+              style={{
+                fontFamily: "'Chakra Petch',sans-serif",
+                fontSize: "0.6rem",
+                fontWeight: 700,
+                letterSpacing: "0.25em",
+                color: "#C8A84B",
+                textTransform: "uppercase",
+                marginBottom: "0.5rem",
+              }}
+            >
+              PFS INDUSTRIAL FINISHING EQUIPMENT
+            </div>
+
+            <h1
+              data-animation="slideLeft"
+              style={{
+                fontFamily: "'Chakra Petch',sans-serif",
+                fontSize: "clamp(1.8rem,4vw,3rem)",
+                fontWeight: 700,
+                color: "#fff",
+                margin: 0,
+                lineHeight: 1.1,
+              }}
+            >
+              Meet the Team
+            </h1>
+
+            <p
+              data-animation="slideLeft"
+              style={{
+                fontFamily: "'Archivo Narrow',sans-serif",
+                fontSize: "1rem",
+                color: "rgba(255,255,255,0.75)",
+                marginTop: "0.6rem",
+                maxWidth: "520px",
+              }}
+            >
+              The people behind every system we ship — built to the highest standard
+              in industrial finishing.
+            </p>
+          </div>
         </div>
       </div>
 
+
       {/* ── Intro ── */}
-      <div style={{ maxWidth: "860px", margin: "0 auto", padding: "3.5rem 1.5rem 2rem" }}>
+      <div className="container"
+        style={{
+          maxWidth: "860px",
+          margin: "0 auto",
+          paddingTop: "3.5rem",
+          paddingBottom: "2rem",
+        }}
+      >
         <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow',sans-serif", fontSize: "1.05rem", color: "rgba(255,255,255,0.7)", lineHeight: 1.75, textAlign: "center" }}>
           PFS was founded in 2012 and brought manufacturing fully in-house in 2020. Today our team of engineers, fabricators, welders, assembly technicians, and field service specialists designs, builds, and installs finishing systems across the United States and Canada — for clients including SpaceX, Tesla, PACCAR, CARSTAR, and Caterpillar.
         </p>
       </div>
 
       {/* ── Leadership ── */}
-      <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "1rem 1.5rem 4rem" }}>
+      <section className="container" style={{ paddingTop: "1rem",paddingBottom: "4rem" }}>
         <SectionHeader label="LEADERSHIP" />
         <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.5rem" }}>
           {LEADERSHIP.map(m => <LeaderCard key={m.name} member={m} />)}
@@ -218,7 +303,7 @@ export default function MeetTheTeamPage() {
       </section>
 
       {/* ── Management ── */}
-      <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem 4rem" }}>
+      <section className="container" style={{ paddingTop: "1rem",paddingBottom: "4rem"}}>
         <SectionHeader label="MANAGEMENT" />
         <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "1.25rem" }}>
           {MANAGEMENT.map(m => <TeamCard key={m.name} member={m} />)}
@@ -226,7 +311,7 @@ export default function MeetTheTeamPage() {
       </section>
 
       {/* ── Team ── */}
-      <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem 4rem" }}>
+      <section className="container" style={{ paddingTop: "1rem",paddingBottom: "4rem" }}>
         <SectionHeader label="THE TEAM" />
         <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))", gap: "1.1rem" }}>
           {TEAM.map(m => <TeamCard key={m.name} member={m} />)}
@@ -234,8 +319,8 @@ export default function MeetTheTeamPage() {
       </section>
 
       {/* ── Core Purpose / Values / Vertical Integration ── */}
-      <section style={{ background: "#0d1520", borderTop: "1px solid rgba(27,58,107,0.3)", padding: "3rem 1.5rem 1rem" }}>
-        <div style={{ maxWidth: "860px", margin: "0 auto" }}>
+      <section style={{ background: "#0d1520", borderTop: "1px solid rgba(27,58,107,0.3)", paddingTop: "3rem", paddingBottom: "1rem" }}>
+        <div className="container" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "2.5rem" }}>
           <Collapsible title="Core Purpose" label="What Drives Us">
             <div style={{ background: BLUE_DARK, padding: "2rem", position: "relative", overflow: "hidden" }}>
               <div style={{ position: "absolute", inset: 0, backgroundImage: "repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 80px)" }} />
@@ -283,11 +368,11 @@ export default function MeetTheTeamPage() {
       </section>
 
       {/* ── Join Us CTA ── */}
-      <section style={{ background: "#0d1520", borderTop: "1px solid rgba(27,58,107,0.3)", padding: "4rem 1.5rem" }}>
-        <div style={{ maxWidth: "700px", margin: "0 auto", textAlign: "center" }}>
+      <section style={{ background: "#0d1520", borderTop: "1px solid rgba(27,58,107,0.3)", paddingTop: "4rem", paddingBottom: "4rem" }}>
+        <div className="container" style={{ textAlign: "center" }}>
           <div style={{ fontFamily: "'Chakra Petch',sans-serif", fontSize: "0.55rem", fontWeight: 700, letterSpacing: "0.22em", color: "#1B3A6B", textTransform: "uppercase", marginBottom: "0.75rem" }}>JOIN THE TEAM</div>
           <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch',sans-serif", fontSize: "clamp(1.4rem,3vw,2rem)", fontWeight: 700, color: "#fff", marginBottom: "1rem" }}>We Build What Others Can't</h2>
-          <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow',sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.65)", lineHeight: 1.7, marginBottom: "2rem" }}>
+          <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow',sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.65)", lineHeight: 1.7, marginBottom: "2rem", maxWidth: "600px", marginLeft: "auto", marginRight: "auto" }}>
             PFS is growing. We are always looking for skilled fabricators, welders, service technicians, and engineers who take pride in their craft. If you want to build systems that end up at SpaceX, Tesla, and PACCAR — we want to hear from you.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>

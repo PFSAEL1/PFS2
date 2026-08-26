@@ -317,7 +317,7 @@ export default function CollisionRepairPage() {
         {/* Blue accent line at bottom of hero */}
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "3px", background: BLUE, zIndex: 3 }} />
 
-        <div className="container" style={{ position: "relative", zIndex: 2, paddingTop: "8rem", paddingBottom: "4.5rem" }}>
+        <div className="container industry-ptb">
           {/* Breadcrumb */}
           <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginBottom: "1rem" }}>
             <Link href="/industries">
@@ -461,7 +461,7 @@ export default function CollisionRepairPage() {
       <TrustedBy label="Trusted By Industry Leaders" />
 
       {/* ── GALLERY PHOTOS ── */}
-      <section style={{ padding: "0 0 4rem", background: "#fff" }}>
+      <section style={{ padding: "4rem 0 4rem", background: "#fff" }}>
         <div className="container">
           <div className="text-center mb-8">
             <h2 data-animation="slideLeft" style={{

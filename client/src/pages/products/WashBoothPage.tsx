@@ -574,12 +574,12 @@ export default function WashBoothPage() {
       />
 
       {/* STICKY MOBILE CTA */}
-      <div className="md:hidden" style={{ position: "fixed", bottom: 0, left: 0, right: 0, zIndex: 100, display: "flex", background: "#111", borderTop: `3px solid ${BLUE}` }}>
+      {/* <div className="md:hidden" style={{ position: "fixed", bottom: 0, left: 0, right: 0, zIndex: 100, display: "flex", background: "#111", borderTop: `3px solid ${BLUE}` }}>
         <a href="tel:8885457715" style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center", gap: "0.4rem", padding: "1rem", fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.82rem", fontWeight: 700, color: "#fff", letterSpacing: "0.08em", textTransform: "uppercase", borderRight: "1px solid rgba(255,255,255,0.15)" }}>☎ (888) 545-7715</a>
         <Link href="/contact/request-a-quote?from=wash-booth" style={{ flex: 1 }}>
           <span className="btn-glow" style={{ width: "100%", justifyContent: "center" }}>GET PRICING →</span>
         </Link>
-      </div>
+      </div> */}
 
     </div>
   );

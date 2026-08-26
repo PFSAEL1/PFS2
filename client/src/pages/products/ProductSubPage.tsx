@@ -1375,7 +1375,9 @@ export default function ProductSubPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Main content */}
             <div className="lg:col-span-2">
-              <span className="section-label">{data.breadcrumbs[1]?.label || "Products"}</span>
+              <span style={{ color: "rgb(27, 58, 107)" }} className="section-label">
+                {data.breadcrumbs[1]?.label || "Products"}
+              </span>
               {data.seriesBadge && (
                 <span style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", background: "rgba(27,43,75,0.08)", border: "1px solid rgba(27,43,75,0.2)", color: "#1B2B4B", borderRadius: "2px", fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "0.28rem 0.75rem", marginBottom: "0.75rem" }}>
                   {data.seriesBadge}

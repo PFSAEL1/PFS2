@@ -18,27 +18,27 @@ import { SiteProductCardSection } from "@/components/SiteProductCard";
 import { useSEO } from "@/hooks/useSEO";
 
 // ── IMAGES ────────────────────────────────────────────────────────────────────
-const HERO_IMG     = "/assets/pfs-energy-hero_82223207.png";
-const HERO_VIDEO   = "/assets/pfs-energy-hero_cc935a28.mp4";
+const HERO_IMG = "/assets/pfs-energy-hero_82223207.png";
+const HERO_VIDEO = "/assets/pfs-energy-hero_cc935a28.mp4";
 const FEATURED_IMG = "/assets/pfs-energy-hero_82223207.png";
 
-const ETL_LOGO  = "/assets/pfs-etl-logo_7758f722.png";
-const UL_LOGO   = "/assets/pfs-ul508a-clean_e8efdeb8.jpg";
+const ETL_LOGO = "/assets/pfs-etl-logo_7758f722.png";
+const UL_LOGO = "/assets/pfs-ul508a-clean_e8efdeb8.jpg";
 const NFPA_LOGO = "/assets/pfs-nfpa-logo_4b710cc9.png";
-const EPA_LOGO  = "/assets/pfs-epa-logo_e4165f68.webp";
+const EPA_LOGO = "/assets/pfs-epa-logo_e4165f68.webp";
 const OSHA_LOGO = "/assets/pfs-osha-logo_0c460739.jpg";
-const USA_FLAG  = "/assets/pfs-usa-flag_8fca512e.jpg";
+const USA_FLAG = "/assets/pfs-usa-flag_8fca512e.jpg";
 
 const BLUE = "#1B3A6B";
 
 // ── CERT CAROUSEL ─────────────────────────────────────────────────────────────
 const CERTS = [
-  { type: "logo", img: ETL_LOGO,  title: "ETL & ETL-C Listed",       sub: "Intertek — USA & Canada",               imgH: 44 },
-  { type: "logo", img: UL_LOGO,   title: "UL 508A Certified",         sub: "Industrial Control Panel Fabricator",   imgH: 44 },
-  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant",         sub: "Spray Application Standard",            imgH: 44 },
-  { type: "logo", img: EPA_LOGO,  title: "EPA Compliant",             sub: "Air Quality Standards",                 imgH: 36 },
-  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant",            sub: "Workplace Safety Standards",            imgH: 36 },
-  { type: "flag", img: USA_FLAG,  title: "Made in the USA",           sub: "Santa Rosa, CA",                        imgH: 36 },
+  { type: "logo", img: ETL_LOGO, title: "ETL & ETL-C Listed", sub: "Intertek — USA & Canada", imgH: 44 },
+  { type: "logo", img: UL_LOGO, title: "UL 508A Certified", sub: "Industrial Control Panel Fabricator", imgH: 44 },
+  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant", sub: "Spray Application Standard", imgH: 44 },
+  { type: "logo", img: EPA_LOGO, title: "EPA Compliant", sub: "Air Quality Standards", imgH: 36 },
+  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant", sub: "Workplace Safety Standards", imgH: 36 },
+  { type: "flag", img: USA_FLAG, title: "Made in the USA", sub: "Santa Rosa, CA", imgH: 36 },
 ];
 const CERTS_LOOP = [...CERTS, ...CERTS];
 
@@ -75,11 +75,11 @@ const FEATURES_HIDDEN = [
 ];
 
 const BOOTH_LINEUP = [
-  { name: "Crossflow",      desc: "Side-to-side airflow. Cost-effective for large switchgear, transformers, and pipeline sections." },
-  { name: "Downdraft",      desc: "Ceiling-to-floor airflow. Maximum cleanliness for precision electrical component finishing." },
+  { name: "Crossflow", desc: "Side-to-side airflow. Cost-effective for large switchgear, transformers, and pipeline sections." },
+  { name: "Downdraft", desc: "Ceiling-to-floor airflow. Maximum cleanliness for precision electrical component finishing." },
   { name: "Semi-Downdraft", desc: "Rear-angled exhaust. Versatile for mixed component types and sizes." },
-  { name: "Heated Booth",   desc: "Integrated heat for accelerated cure. Required for industrial coatings, epoxies, and primers." },
-  { name: "Custom Build",   desc: "Engineered-to-order for oversized utility infrastructure or multi-bay production lines." },
+  { name: "Heated Booth", desc: "Integrated heat for accelerated cure. Required for industrial coatings, epoxies, and primers." },
+  { name: "Custom Build", desc: "Engineered-to-order for oversized utility infrastructure or multi-bay production lines." },
 ];
 
 const PRODUCTS = [
@@ -334,7 +334,7 @@ export default function EnergyUtilitiesPage() {
     if (!v) return;
     v.muted = true;
     v.playsInline = true;
-    const play = () => { v.play().catch(() => {}); setVideoReady(true); };
+    const play = () => { v.play().catch(() => { }); setVideoReady(true); };
     v.addEventListener("canplaythrough", play, { once: true });
     v.load();
     return () => v.removeEventListener("canplaythrough", play);
@@ -352,7 +352,7 @@ export default function EnergyUtilitiesPage() {
         justifyContent: "flex-end",
         overflow: "hidden",
       }}>
-                <img
+        <img
           src={HERO_IMG}
           alt="PFS industrial spray booth for energy and utilities sector"
           aria-hidden="true"
@@ -364,7 +364,7 @@ export default function EnergyUtilitiesPage() {
           loop
           playsInline
           disablePictureInPicture
-         
+
           aria-hidden="true"
           style={{
             position: "absolute", inset: 0,
@@ -382,7 +382,7 @@ export default function EnergyUtilitiesPage() {
         }} />
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "3px", background: BLUE, zIndex: 3 }} />
 
-        <div className="container" style={{ position: "relative", zIndex: 2, paddingTop: "8rem", paddingBottom: "4.5rem" }}>
+        <div className="container industry-ptb">
           <span style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.18em",
@@ -514,7 +514,7 @@ export default function EnergyUtilitiesPage() {
       <TrustedBy label="Trusted By Industry Leaders" />
 
       {/* ── GALLERY PHOTOS (zoomable) ── */}
-      <section style={{ padding: "0 0 4rem", background: "#fff" }}>
+      <section style={{ padding: "4rem 0 4rem", background: "#fff" }}>
         <div className="container">
           <div className="text-center mb-8">
             <h2 data-animation="slideLeft" style={{
@@ -698,7 +698,7 @@ export default function EnergyUtilitiesPage() {
         </div>
       </section>
 
-            {/* RELATED PRODUCTS */}
+      {/* RELATED PRODUCTS */}
       <SiteProductCardSection
         heading="You May Also Need"
         label="Complete Your System"

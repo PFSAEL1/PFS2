@@ -87,7 +87,11 @@ function GatedDownload({ doc }: { doc: typeof GATED_DOWNLOADS[0] }) {
       }}
     >
       {/* Document header */}
-      <div data-animation="fadeIn" style={{ padding: "1.5rem", display: "flex", gap: "1.25rem", alignItems: "flex-start" }}>
+      <div
+        data-animation="fadeIn"
+        className="flex min-[481px]:flex-row max-[480px]:flex-col gap-5 items-start p-6"
+      >
+
         <div
           style={{
             width: 48,
@@ -465,7 +469,10 @@ export default function ResourcesSubPage() {
         <div className="container">
           <div className="grid lg:grid-cols-3 gap-10">
             <div className="lg:col-span-2">
-              <span className="section-label">Resources</span>
+              <span style={{ color: "rgb(27, 58, 107)" }} className="section-label">
+                Resources
+              </span>
+
               <h2 data-animation="slideLeft" className="section-heading">{content.title}</h2>
               <p data-animation="slideRight" className="section-body mb-8">{content.body}</p>
 

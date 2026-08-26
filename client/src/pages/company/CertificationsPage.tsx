@@ -139,15 +139,14 @@ export default function CertificationsPage() {
     <div style={{ background: "#fff" }}>
 
       {/* ── VIDEO HERO ─────────────────────────────────────────────────────── */}
-      <section
+      <section className="industry-ptb"
         style={{
           position: "relative",
           background: "#080810",
           overflow: "hidden",
           minHeight: "60vh",
           display: "flex",
-          alignItems: "flex-end",
-          paddingTop: "7rem",
+          alignItems: "flex-end",          
         }}
       >
         <video autoPlay muted loop playsInline style={{ position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",opacity:0.55 }}>

@@ -67,9 +67,11 @@ export default function PartsFiltersHub() {
       {/* Three cards */}
       <section className="py-14 section-gray">
         <div className="container">
-          <div data-animation="fadeIn" className="grid md:grid-cols-3 gap-6">
+      <div data-animation="fadeIn" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
             {/* Filters */}
-            <div className="p-7 bg-white card-hover">
+            <div style={{display: "flex", flexDirection: "column"}} className="p-7 bg-white card-hover">
               <div className="w-10 h-10 flex items-center justify-center mb-4" style={{ backgroundColor: "#FFF0F0", color: "#FFFFFF", borderRadius: "2px" }}>
                 <Package size={20} />
               </div>
@@ -78,13 +80,13 @@ export default function PartsFiltersHub() {
               <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.85rem", color: "#555", lineHeight: 1.7, marginBottom: "1.25rem" }}>
                 Intake filters, exhaust filters, floor filters, and specialty filtration media for all PFS booth models. Order online at pfsfilters.com with fast shipping.
               </p>
-              <a href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" className="btn-glow flex items-center gap-2" style={{ fontSize: "0.75rem" }}>
+              <a href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" className="btn-glow flex items-center gap-2" style={{ marginTop: "auto", fontSize: "0.75rem" }}>
                 Order Filters <ExternalLink size={13} />
               </a>
             </div>
 
             {/* OEM Parts */}
-            <div className="p-7 bg-white card-hover">
+            <div style={{display: "flex", flexDirection: "column"}} className="p-7 bg-white card-hover">
               <div className="w-10 h-10 flex items-center justify-center mb-4" style={{ backgroundColor: "#FFF0F0", color: "#FFFFFF", borderRadius: "2px" }}>
                 <Wrench size={20} />
               </div>
@@ -93,13 +95,13 @@ export default function PartsFiltersHub() {
               <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.85rem", color: "#555", lineHeight: 1.7, marginBottom: "1.25rem" }}>
                 Genuine PFS OEM replacement parts including motors, fans, controls, LED lighting, and structural components for all equipment families — current and legacy.
               </p>
-              <Link href="/parts">
-                <span className="btn-glow" style={{ fontSize: "0.75rem", display: "block", width: "100%",textAlign: "center" }}>Request Parts</span>
+              <Link href="/parts" style={{ marginTop: "auto" }}>
+                <span className="btn-glow" style={{ marginTop: "auto", fontSize: "0.75rem", display: "block", width: "100%", textAlign: "center" }}>Request Parts</span>
               </Link>
             </div>
 
             {/* Filter Programs */}
-            <div className="p-7 bg-white card-hover">
+            <div style={{display: "flex", flexDirection: "column"}} className="p-7 bg-white card-hover">
               <div className="w-10 h-10 flex items-center justify-center mb-4" style={{ backgroundColor: "#FFF0F0", color: "#FFFFFF", borderRadius: "2px" }}>
                 <RefreshCw size={20} />
               </div>
@@ -108,7 +110,7 @@ export default function PartsFiltersHub() {
               <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.85rem", color: "#555", lineHeight: 1.7, marginBottom: "1.25rem" }}>
                 Scheduled filter delivery programs to ensure you never run out of critical filtration media. Customized to your booth model and production volume.
               </p>
-              <a href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" className="btn-glow flex items-center gap-2" style={{ fontSize: "0.75rem" }}>
+              <a href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" className="btn-glow flex items-center gap-2" style={{ marginTop: "auto", fontSize: "0.75rem" }}>
                 Learn More <ExternalLink size={13} />
               </a>
             </div>
@@ -130,7 +132,7 @@ export default function PartsFiltersHub() {
               <div className="grid grid-cols-2 gap-2">
                 {FILTER_TYPES.map((f) => (
                   <div key={f} className="flex items-center gap-2.5">
-                    <CheckCircle size={14} style={{ color: "#FFFFFF", flexShrink: 0 }} />
+                    <CheckCircle size={14} style={{ flexShrink: 0 }} />
                     <span style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.82rem", color: "#444" }}>{f}</span>
                   </div>
                 ))}

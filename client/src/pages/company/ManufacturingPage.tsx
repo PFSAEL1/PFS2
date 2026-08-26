@@ -107,7 +107,7 @@ export default function ManufacturingPage() {
         {/* Bottom accent line */}
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "3px", background: "#1B3A6B", zIndex: 3 }} />
 
-        <div className="container" style={{ position: "relative", zIndex: 2, paddingTop: "8rem", paddingBottom: "4.5rem" }}>
+        <div className="container industry-ptb">
           {/* Breadcrumb */}
           <div
             style={{

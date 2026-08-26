@@ -16,31 +16,31 @@ import { SiteProductCardSection } from "@/components/SiteProductCard";
 import { useSEO } from "@/hooks/useSEO";
 
 // ── IMAGES ────────────────────────────────────────────────────────────────────
-const HERO_IMG     = "/assets/pfs-school-bus-booth_179842ca_6651f8d4.png";
-const HERO_VIDEO   = "/assets/industry_truck_fleet_school_bus_hero_27f9918f.mp4";
+const HERO_IMG = "/assets/pfs-school-bus-booth_179842ca_6651f8d4.png";
+const HERO_VIDEO = "/assets/industry_truck_fleet_school_bus_hero_27f9918f.mp4";
 const FEATURED_IMG = "/assets/pfs-school-bus-booth_179842ca_6651f8d4.png";
-const GALLERY_1    = "/assets/pfs-school-bus-booth_179842ca_6651f8d4.png";
-const GALLERY_2    = "/assets/pfs-truck-fleet-coach-bus-rear_88083367.jpg";
-const GALLERY_3    = "/assets/pfs-truck-fleet-coach-bus-front_3a5f10aa.jpg";
-const GALLERY_4    = "/assets/pfs-truck-box-truck-booth_34276fb7_b502ec3d.png";
+const GALLERY_1 = "/assets/pfs-school-bus-booth_179842ca_6651f8d4.png";
+const GALLERY_2 = "/assets/pfs-truck-fleet-coach-bus-rear_88083367.jpg";
+const GALLERY_3 = "/assets/pfs-truck-fleet-coach-bus-front_3a5f10aa.jpg";
+const GALLERY_4 = "/assets/pfs-truck-box-truck-booth_34276fb7_b502ec3d.png";
 
-const ETL_LOGO  = "/assets/pfs-etl-logo_7758f722.png";
-const UL_LOGO   = "/assets/pfs-ul508a-clean_e8efdeb8.jpg";
+const ETL_LOGO = "/assets/pfs-etl-logo_7758f722.png";
+const UL_LOGO = "/assets/pfs-ul508a-clean_e8efdeb8.jpg";
 const NFPA_LOGO = "/assets/pfs-nfpa-logo_4b710cc9.png";
-const EPA_LOGO  = "/assets/pfs-epa-logo_e4165f68.webp";
+const EPA_LOGO = "/assets/pfs-epa-logo_e4165f68.webp";
 const OSHA_LOGO = "/assets/pfs-osha-logo_0c460739.jpg";
-const USA_FLAG  = "/assets/pfs-usa-flag_8fca512e.jpg";
+const USA_FLAG = "/assets/pfs-usa-flag_8fca512e.jpg";
 
 const BLUE = "#1B3A6B";
 
 // ── CERT CAROUSEL ─────────────────────────────────────────────────────────────
 const CERTS = [
-  { type: "logo", img: ETL_LOGO,  title: "ETL & ETL-C Listed",       sub: "Intertek — USA & Canada",             filter: "none", imgH: 44 },
-  { type: "logo", img: UL_LOGO,   title: "UL 508A Certified",         sub: "Industrial Control Panel Fabricator", filter: "none", imgH: 44 },
-  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant",         sub: "Spray Application Standard",          filter: "none", imgH: 44 },
-  { type: "logo", img: EPA_LOGO,  title: "EPA Compliant",             sub: "Air Quality Standards",               filter: "none", imgH: 36 },
-  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant",            sub: "Workplace Safety Standards",          filter: "none", imgH: 36 },
-  { type: "flag", img: USA_FLAG,  title: "Made in the USA",           sub: "Santa Rosa, CA",                      filter: "none", imgH: 36 },
+  { type: "logo", img: ETL_LOGO, title: "ETL & ETL-C Listed", sub: "Intertek — USA & Canada", filter: "none", imgH: 44 },
+  { type: "logo", img: UL_LOGO, title: "UL 508A Certified", sub: "Industrial Control Panel Fabricator", filter: "none", imgH: 44 },
+  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant", sub: "Spray Application Standard", filter: "none", imgH: 44 },
+  { type: "logo", img: EPA_LOGO, title: "EPA Compliant", sub: "Air Quality Standards", filter: "none", imgH: 36 },
+  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant", sub: "Workplace Safety Standards", filter: "none", imgH: 36 },
+  { type: "flag", img: USA_FLAG, title: "Made in the USA", sub: "Santa Rosa, CA", filter: "none", imgH: 36 },
 ];
 const CERTS_LOOP = [...CERTS, ...CERTS];
 
@@ -77,11 +77,11 @@ const FEATURES_HIDDEN = [
 ];
 
 const BOOTH_LINEUP = [
-  { name: "Drive-Through Crossflow",  desc: "Side-to-side airflow. Entry and exit doors. Ideal for high-volume fleet operations." },
-  { name: "Semi-Downdraft",           desc: "Rear-angled exhaust. Versatile for mixed fleet types and transit vehicles." },
-  { name: "Heated Drive-Through",     desc: "Integrated heat for accelerated cure. Required for fleet primer and topcoat." },
-  { name: "Open Face Booth",          desc: "High-volume open-front finishing for fleet components and sub-assemblies." },
-  { name: "Custom Fleet Build",       desc: "Engineered-to-order for transit authorities, DOT facilities, and large fleet operations." },
+  { name: "Drive-Through Crossflow", desc: "Side-to-side airflow. Entry and exit doors. Ideal for high-volume fleet operations." },
+  { name: "Semi-Downdraft", desc: "Rear-angled exhaust. Versatile for mixed fleet types and transit vehicles." },
+  { name: "Heated Drive-Through", desc: "Integrated heat for accelerated cure. Required for fleet primer and topcoat." },
+  { name: "Open Face Booth", desc: "High-volume open-front finishing for fleet components and sub-assemblies." },
+  { name: "Custom Fleet Build", desc: "Engineered-to-order for transit authorities, DOT facilities, and large fleet operations." },
 ];
 
 const PRODUCTS = [
@@ -206,37 +206,204 @@ function CertCarousel() {
 // ── HERO ─────────────────────────────────────────────────────────────────────
 function HeroSection() {
   return (
-    <section style={{ position: "relative", height: "clamp(420px, 60vh, 680px)", background: "#0a0a0a" }}>
-      <video preload="auto" autoPlay muted loop playsInline
-          disablePictureInPicture style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}>
+    <section className="industry-ptb"
+      style={{
+        position: "relative",
+        minHeight: "clamp(420px, 60vh, 680px)",
+        background: "#0a0a0a",
+        boxSizing: "border-box",
+        overflow: "hidden",
+      }}
+    >
+      {/* Background Video */}
+      <video
+        preload="auto"
+        autoPlay
+        muted
+        loop
+        playsInline
+        disablePictureInPicture
+        style={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          objectPosition: "center",
+          zIndex: 0,
+        }}
+      >
         <source src={HERO_VIDEO} type="video/mp4" />
       </video>
-      {/* Minimal bottom vignette only — no color tint */}
-      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0) 70%)" }} />
-      <div style={{ position: "relative", zIndex: 2, height: "100%", display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: "0 0 3.5rem" }}>
+
+      {/* Bottom Vignette */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background:
+            "linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0) 70%)",
+          zIndex: 1,
+          pointerEvents: "none",
+        }}
+      />
+
+      {/* Content */}
+      <div
+        style={{
+          position: "relative",
+          zIndex: 2,
+          width: "100%",
+        }}
+      >
         <div className="container">
-          <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginBottom: "1rem" }}>
-            <Link href="/industries"><span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 600, color: "rgba(255,255,255,0.6)", letterSpacing: "0.1em", textTransform: "uppercase", cursor: "pointer" }}>Industries</span></Link>
-            <span style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.7rem" }}>/</span>
-            <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 600, color: "rgba(255,255,255,0.9)", letterSpacing: "0.1em", textTransform: "uppercase" }}>Truck, Bus & Fleet</span>
+          {/* Breadcrumb */}
+          <div
+            style={{
+              display: "flex",
+              gap: "0.5rem",
+              alignItems: "center",
+              marginBottom: "1rem",
+            }}
+          >
+            <Link href="/industries">
+              <span
+                style={{
+                  fontFamily:
+                    "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                  fontSize: "0.7rem",
+                  fontWeight: 600,
+                  color: "rgba(255,255,255,0.6)",
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  cursor: "pointer",
+                }}
+              >
+                Industries
+              </span>
+            </Link>
+
+            <span
+              style={{
+                color: "rgba(255,255,255,0.4)",
+                fontSize: "0.7rem",
+              }}
+            >
+              /
+            </span>
+
+            <span
+              style={{
+                fontFamily:
+                  "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                fontSize: "0.7rem",
+                fontWeight: 600,
+                color: "rgba(255,255,255,0.9)",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+              }}
+            >
+              Truck, Bus & Fleet
+            </span>
           </div>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", background: BLUE, color: "#fff", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.65rem", fontWeight: 800, letterSpacing: "0.18em", textTransform: "uppercase", padding: "0.28rem 0.85rem", marginBottom: "1rem" }}>
+
+          {/* Series Badge */}
+          <div
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.4rem",
+              background: BLUE,
+              color: "#fff",
+              fontFamily:
+                "'Chakra Petch', 'Barlow Condensed', sans-serif",
+              fontSize: "0.65rem",
+              fontWeight: 800,
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              padding: "0.28rem 0.85rem",
+              marginBottom: "1rem",
+            }}
+          >
             PFS INDUSTRIAL SERIES
           </div>
-          <h1 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(2.2rem, 6vw, 4.5rem)", fontWeight: 900, color: "#fff", lineHeight: 0.95, letterSpacing: "-0.02em", marginBottom: "1.25rem", textTransform: "uppercase" }}>
-            Truck, Bus<br />&amp; Fleet Finishing
+
+          {/* Heading */}
+          <h1
+            data-animation="slideLeft"
+            style={{
+              fontFamily:
+                "'Chakra Petch', 'Barlow Condensed', sans-serif",
+              fontSize: "clamp(2.2rem, 6vw, 4.5rem)",
+              fontWeight: 900,
+              color: "#fff",
+              lineHeight: 0.95,
+              letterSpacing: "-0.02em",
+              marginBottom: "1.25rem",
+              textTransform: "uppercase",
+            }}
+          >
+            Truck, Bus
+            <br />
+            &amp; Fleet Finishing
           </h1>
-          <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "clamp(0.9rem, 1.5vw, 1.05rem)", color: "rgba(255,255,255,0.85)", maxWidth: "520px", lineHeight: 1.65, marginBottom: "2rem" }}>
-            Drive-through configurations for Class 6–8 trucks, transit buses, and school buses. ETL/UL listed and UL 508A certified components. NFPA 33 compliant. Custom heights to 18+ ft. Built for fleet refinishing, transit authorities, and commercial vehicle manufacturers — installed nationwide.
+
+          {/* Description */}
+          <p
+            data-animation="slideLeft"
+            style={{
+              fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
+              fontSize: "clamp(0.9rem, 1.5vw, 1.05rem)",
+              color: "rgba(255,255,255,0.85)",
+              maxWidth: "520px",
+              lineHeight: 1.65,
+              marginBottom: "2rem",
+            }}
+          >
+            Drive-through configurations for Class 6–8 trucks, transit buses,
+            and school buses. ETL/UL listed and UL 508A certified components.
+            NFPA 33 compliant. Custom heights to 18+ ft. Built for fleet
+            refinishing, transit authorities, and commercial vehicle
+            manufacturers — installed nationwide.
           </p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-            <Link data-animation="slideLeft" href="/contact/request-a-quote">
+
+          {/* Buttons */}
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "1rem",
+            }}
+          >
+            <Link
+              data-animation="slideLeft"
+              href="/contact/request-a-quote"
+            >
               <span className="btn-glow-white">
                 GET PRICING <ArrowRight size={15} />
               </span>
             </Link>
+
             <a href="tel:8885457715">
-              <span data-animation="slideRight" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.55)", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.88rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "1rem 2.5rem", cursor: "pointer" }}>
+              <span
+                data-animation="slideRight"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                  background: "transparent",
+                  color: "#fff",
+                  border: "1.5px solid rgba(255,255,255,0.55)",
+                  fontFamily:
+                    "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                  fontSize: "0.88rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  padding: "1rem 2.5rem",
+                  cursor: "pointer",
+                }}
+              >
                 (888) 545-7715
               </span>
             </a>
@@ -244,6 +411,7 @@ function HeroSection() {
         </div>
       </div>
     </section>
+
   );
 }
 
@@ -277,7 +445,7 @@ export default function TruckBusFleetPage() {
       {/* ── HERO ── */}
       <HeroSection />
 
-            {/* ── CERT CAROUSEL (untouched — Template #1 standard) ── */}
+      {/* ── CERT CAROUSEL (untouched — Template #1 standard) ── */}
       <CertCarousel />
 
       {/* ── FEATURED PAINT BOOTH ── */}
@@ -306,10 +474,10 @@ export default function TruckBusFleetPage() {
               />
             </div>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
-              <Link data-animation="slideLeft"  href="/contact/request-a-quote">
+              <Link data-animation="slideLeft" href="/contact/request-a-quote">
                 <span className="btn-glow">REQUEST A QUOTE <ArrowRight size={15} /></span>
               </Link>
-              <Link data-animation="slideRight"  href="/products/paint-booths/enclosed">
+              <Link data-animation="slideRight" href="/products/paint-booths/enclosed">
                 <span className="btn-glow">
                   SEE ALL BOOTHS <ArrowRight size={15} />
                 </span>
@@ -323,7 +491,7 @@ export default function TruckBusFleetPage() {
       <TrustedBy label="Trusted By Industry Leaders" />
 
       {/* ── GALLERY PHOTOS (zoomable) ── */}
-      <section style={{ padding: "0 0 4rem", background: "#fff" }}>
+      <section style={{ padding: "4rem 0 4rem", background: "#fff" }}>
         <div className="container">
           <div className="text-center mb-8">
             <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em" }}>
@@ -339,7 +507,7 @@ export default function TruckBusFleetPage() {
             ]}
             cardHeight="clamp(220px,30vw,360px)"
           />
-          <div data-animation="slideRight" className="text-center">
+          <div data-animation="slideRight" className="text-center mt-8">
             <Link href="/contact/request-a-quote">
               <span className="btn-glow">GET PRICING <ArrowRight size={15} /></span>
             </Link>
@@ -358,7 +526,7 @@ export default function TruckBusFleetPage() {
               Certified. Engineered. Delivered Complete.
             </h2>
           </div>
-          <div data-animation="fadeIn"  className="grid md:grid-cols-3 gap-5 mb-5">
+          <div data-animation="fadeIn" className="grid md:grid-cols-3 gap-5 mb-5">
             {FEATURES_VISIBLE.map((f) => (
               <div key={f.title} style={{ background: "#fff", padding: "1.75rem", borderTop: `3px solid ${BLUE}`, display: "flex", flexDirection: "column" }}>
                 <div style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "2rem", fontWeight: 900, color: `rgba(27,58,107,0.12)`, lineHeight: 1, marginBottom: "0.5rem" }}>{f.num}</div>
@@ -452,11 +620,11 @@ export default function TruckBusFleetPage() {
       {/* ── RECOMMENDED PRODUCTS ── */}
 
       {/* FAQ SECTION */}
-      <section style={{ background:"#f8f9fb", padding:"clamp(2.5rem, 6vw, 4rem) 0", borderTop:"1px solid #e5e7eb" }}>
-        <div className="container" style={{ maxWidth:"860px" }}>
-          <div style={{ textAlign:"center", marginBottom:"2.5rem" }}>
-            <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:"#1B3A6B",textTransform:"uppercase",display:"block",marginBottom:"0.4rem" }}>FREQUENTLY ASKED QUESTIONS</span>
-            <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.4rem,3.5vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Truck, Bus & Fleet Spray Booths — Common Questions</h2>
+      <section style={{ background: "#f8f9fb", padding: "clamp(2.5rem, 6vw, 4rem) 0", borderTop: "1px solid #e5e7eb" }}>
+        <div className="container" style={{ maxWidth: "860px" }}>
+          <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
+            <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: "#1B3A6B", textTransform: "uppercase", display: "block", marginBottom: "0.4rem" }}>FREQUENTLY ASKED QUESTIONS</span>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed','Oswald',sans-serif", fontSize: "clamp(1.4rem,3.5vw,2.2rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Truck, Bus & Fleet Spray Booths — Common Questions</h2>
           </div>
           {[
             { q: "What size spray booth is needed for painting semi-trucks?", a: "A full-size semi-truck (Class 8) requires a spray booth that is at least 16 ft wide x 50 ft deep x 14 ft tall to accommodate the cab and trailer. Shops that paint both cab and trailer together need a booth 16–18 ft wide x 60–80 ft deep. PFS manufactures truck and fleet booths in all standard and custom sizes." },
@@ -465,12 +633,12 @@ export default function TruckBusFleetPage() {
             { q: "Does a truck spray booth need a heated make-up air unit?", a: "A heated make-up air unit is strongly recommended for truck and fleet spray booths in any climate where temperatures fall below 65°F. Heated make-up air maintains consistent booth temperature for spray and bake cycles, accelerates paint cure, and ensures year-round production capability. PFS manufactures heated AMUs sized for booths of all sizes." },
             { q: "Can PFS build a drive-through spray booth for fleet operations?", a: "Yes. PFS manufactures drive-through spray booths with doors at both ends for efficient vehicle flow in high-volume fleet painting operations. Drive-through booths eliminate the need to back vehicles in and out, reducing cycle time and improving throughput. Contact a PFS engineer for drive-through booth specifications." },
           ].map((item, i) => (
-            <details key={i} style={{ borderBottom:"1px solid #e5e7eb", padding:"1.25rem 0" }}>
-              <summary style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"clamp(0.95rem,2.5vw,1.1rem)",fontWeight:800,color:"#111",letterSpacing:"0.01em",cursor:"pointer",listStyle:"none",display:"flex",justifyContent:"space-between",alignItems:"center",gap:"1rem" }}>
+            <details key={i} style={{ borderBottom: "1px solid #e5e7eb", padding: "1.25rem 0" }}>
+              <summary style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "clamp(0.95rem,2.5vw,1.1rem)", fontWeight: 800, color: "#111", letterSpacing: "0.01em", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "1rem" }}>
                 {item.q}
-                <span style={{ color:"#1B3A6B", flexShrink:0, fontSize:"1.4rem", fontWeight:300, lineHeight:1 }}>+</span>
+                <span style={{ color: "#1B3A6B", flexShrink: 0, fontSize: "1.4rem", fontWeight: 300, lineHeight: 1 }}>+</span>
               </summary>
-              <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"clamp(0.82rem,2vw,0.9rem)",color:"#555",lineHeight:1.75,margin:"1rem 0 0",paddingRight:"1.5rem" }}>{item.a}</p>
+              <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(0.82rem,2vw,0.9rem)", color: "#555", lineHeight: 1.75, margin: "1rem 0 0", paddingRight: "1.5rem" }}>{item.a}</p>
             </details>
           ))}
         </div>
