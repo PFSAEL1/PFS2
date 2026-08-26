@@ -46,7 +46,7 @@ export default function PartsFiltersHub() {
                 Using genuine OEM parts and certified filtration media is critical to maintaining your booth's airflow performance, compliance certifications, and warranty coverage. PFS stocks a comprehensive inventory for all current and legacy equipment models.
               </p>
               <p className="section-body mb-8">
-                Order filters and consumables online at <a href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" style={{ color: "#FFFFFF", fontWeight: 600 }}>pfsfilters.com</a> — or contact our parts team for OEM components and bulk pricing.
+                Order filters and consumables online at <a href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 600 }}>pfsfilters.com</a> — or contact our parts team for OEM components and bulk pricing.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a data-animation="slideLeft" href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" className="btn-glow flex items-center gap-2">
@@ -94,7 +94,7 @@ export default function PartsFiltersHub() {
                 Genuine PFS OEM replacement parts including motors, fans, controls, LED lighting, and structural components for all equipment families — current and legacy.
               </p>
               <Link href="/parts">
-                <span className="btn-glow" style={{ fontSize: "0.75rem", display: "inline-flex" }}>Request Parts</span>
+                <span className="btn-glow" style={{ fontSize: "0.75rem", display: "block", width: "100%",textAlign: "center" }}>Request Parts</span>
               </Link>
             </div>
 

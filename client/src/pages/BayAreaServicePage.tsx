@@ -219,7 +219,7 @@ export default function BayAreaServicePage() {
         />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0.15) 100%)" }} />
         <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center" }}>
-          <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 2rem", width: "100%" }}>
+          <div className="container">
             <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(0,168,150,0.9)", color: "#fff", fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", padding: "6px 14px", borderRadius: 4, marginBottom: 20 }}>
               <MapPin size={12} /> BAY AREA — 9 COUNTIES — 20+ YEARS
             </div>
@@ -238,10 +238,10 @@ export default function BayAreaServicePage() {
                   REQUEST SERVICE <ArrowRight size={16} />
                 </a>
               </Link>
-              <a data-animation="fadeIn" href="tel:+18885457715" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(255,255,255,0.7)", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase"}}>
+              <a data-animation="fadeIn" href="tel:+18885457715" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(255,255,255,0.7)", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase" }}>
                 <Phone size={16} /> (888) 545-7715
               </a>
-              <a data-animation="slideRight" href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(0,168,150,0.7)", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase"}}>
+              <a data-animation="slideRight" href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(0,168,150,0.7)", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase" }}>
                 <Filter size={16} /> PFS FILTERS
               </a>
             </div>
@@ -250,8 +250,22 @@ export default function BayAreaServicePage() {
       </section>
 
       {/* STATS STRIP */}
-      <section style={{ background: "#0a1628", padding: "20px 2rem" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", flexWrap: "wrap", gap: 16, justifyContent: "center" }}>
+      <section
+        style={{
+          background: "#0a1628",
+          padding: "20px 0",
+        }}
+      >
+        <div
+          className="container"
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 16,
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           {[
             { label: "Bay Area HQ", value: "Santa Rosa, CA" },
             { label: "Counties Served", value: "All 9" },
@@ -259,18 +273,46 @@ export default function BayAreaServicePage() {
             { label: "Emergency Response", value: "24/7" },
             { label: "Compliance", value: "BAAQMD · CARB · NFPA 33" },
           ].map((s) => (
-            <div key={s.label} style={{ textAlign: "center", padding: "8px 24px", borderRight: "1px solid rgba(255,255,255,0.1)" }}>
-              <div data-animation="slideLeft"   style={{ color: "#00a896", fontSize: "1.1rem", fontWeight: 800 }}>{s.value}</div>
-              <div data-animation="slideRight" style={{ color: "rgba(255,255,255,0.55)", fontSize: "0.7rem", letterSpacing: "0.1em", textTransform: "uppercase" }}>{s.label}</div>
+            <div
+              key={s.label}
+              style={{
+                textAlign: "center",
+                padding: "8px 24px",
+                borderRight: "1px solid rgba(255,255,255,0.1)",
+              }}
+            >
+              <div
+                data-animation="slideLeft"
+                style={{
+                  color: "#00a896",
+                  fontSize: "1.1rem",
+                  fontWeight: 800,
+                }}
+              >
+                {s.value}
+              </div>
+
+              <div
+                data-animation="slideRight"
+                style={{
+                  color: "rgba(255,255,255,0.55)",
+                  fontSize: "0.7rem",
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                }}
+              >
+                {s.label}
+              </div>
             </div>
           ))}
         </div>
       </section>
 
+
       {/* BAAQMD COMPLIANCE SECTION */}
-      <section style={{ background: "#fff", padding: "64px 2rem" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center" }}>
+      <section style={{ background: "#fff", paddingTop: 64, paddingBottom: 64 }}>
+        <div className="container">
+          <div   className="compliance-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center" }}>
             <div>
               <div style={{ color: "#00a896", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 12 }}>BAAQMD COMPLIANCE</div>
               <h2 data-animation="slideLeft" style={{ fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 900, color: "#0a1628", marginBottom: 20, lineHeight: 1.2 }}>
@@ -310,19 +352,19 @@ export default function BayAreaServicePage() {
       </section>
 
       {/* SERVICES GRID */}
-      <section style={{ background: "#f8f9fa", padding: "64px 2rem" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+      <section style={{ background: "#f8f9fa", paddingTop: 64, paddingBottom: 64 }}>
+        <div className="container">
           <div style={{ textAlign: "center", marginBottom: 48 }}>
             <div style={{ color: "#00a896", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 12 }}>WHAT WE DO</div>
             <h2 data-animation="slideLeft" style={{ fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 900, color: "#0a1628" }}>Bay Area Spray Booth Services</h2>
           </div>
           <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
             {SERVICES.map((svc) => (
-              <div key={svc.title} style={{ background: "#fff", border: "1px solid #e5e7eb", borderRadius: 8, padding: 28 }}>
+              <div key={svc.title} style={{ display: "flex", flexDirection: "column", background: "#fff", border: "1px solid #e5e7eb", borderRadius: 8, padding: 28 }}>
                 <svc.icon size={28} style={{ color: "#00a896", marginBottom: 14 }} />
                 <h3 style={{ fontSize: "0.85rem", fontWeight: 800, color: "#0a1628", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 10 }}>{svc.title}</h3>
                 <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.65, marginBottom: 16 }}>{svc.desc}</p>
-                <Link href="/contact/service-request">
+                <Link href="/contact/service-request" style={{ marginTop: "auto" }}>
                   <a className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: 6, color: "#00a896", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", transition: "all 0.2s" }}>
                     REQUEST SERVICE <ArrowRight size={13} />
                   </a>
@@ -334,8 +376,8 @@ export default function BayAreaServicePage() {
       </section>
 
       {/* WHY PFS */}
-      <section style={{ background: "#0a1628", padding: "64px 2rem" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+      <section style={{ background: "#0a1628", paddingTop: 64, paddingBottom: 64 }}>
+        <div className="container">
           <div style={{ textAlign: "center", marginBottom: 48 }}>
             <div style={{ color: "#00a896", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 12 }}>WHY PFS</div>
             <h2 data-animation="slideLeft" style={{ fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 900, color: "#fff" }}>The Bay Area's Manufacturer-Direct Service Provider</h2>
@@ -353,8 +395,8 @@ export default function BayAreaServicePage() {
       </section>
 
       {/* INDUSTRIES SERVED */}
-      <section style={{ background: "#fff", padding: "64px 2rem" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+      <section style={{ background: "#fff", paddingTop: 64, paddingBottom: 64 }}>
+        <div className="container">
           <div style={{ textAlign: "center", marginBottom: 48 }}>
             <div style={{ color: "#00a896", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 12 }}>INDUSTRIES SERVED</div>
             <h2 data-animation="slideLeft" style={{ fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 900, color: "#0a1628" }}>Bay Area Industries We Serve</h2>
@@ -374,8 +416,8 @@ export default function BayAreaServicePage() {
       </section>
 
       {/* SERVICE AREA — COUNTIES */}
-      <section style={{ background: "#f8f9fa", padding: "64px 2rem" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+      <section style={{ background: "#f8f9fa", paddingTop: 64, paddingBottom: 64 }}>
+        <div className="container">
           <div style={{ textAlign: "center", marginBottom: 48 }}>
             <div data-animation="slideLeft" style={{ color: "#00a896", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 12 }}>SERVICE AREA</div>
             <h2 data-animation="slideLeft" style={{ fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 900, color: "#0a1628" }}>All Nine Bay Area Counties</h2>
@@ -400,8 +442,8 @@ export default function BayAreaServicePage() {
       </section>
 
       {/* CROSS-LINKS TO OTHER CA PAGES */}
-      <section style={{ background: "#fff", padding: "48px 2rem" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+      <section style={{ background: "#fff", paddingTop: 48, paddingBottom: 48 }}>
+        <div className="container">
           <div style={{ textAlign: "center", marginBottom: 32 }}>
             <h2 data-animation="slideLeft">Cross-Linking to Other California Pages</h2>
             <p data-animation="slideLeft" style={{ color: "#666", marginTop: 8 }}>PFS provides spray booth service, manufacturing, and compliance inspections statewide.</p>
@@ -412,7 +454,7 @@ export default function BayAreaServicePage() {
                 <MapPin size={14} /> California Service Page <ArrowRight size={14} />
               </a>
             </Link>
-            <Link data-animation="slideRight"  href="/spray-booth-service-los-angeles">
+            <Link data-animation="slideRight" href="/spray-booth-service-los-angeles">
               <a className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#0a1628", color: "#fff", padding: "12px 24px", fontWeight: 700, fontSize: "0.82rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase", borderRadius: 4, transition: "all 0.2s" }}>
                 <MapPin size={14} /> Los Angeles Service Page <ArrowRight size={14} />
               </a>
@@ -422,8 +464,8 @@ export default function BayAreaServicePage() {
       </section>
 
       {/* CTA FOOTER */}
-      <section style={{ background: "#0a1628", padding: "64px 2rem", textAlign: "center" }}>
-        <div style={{ maxWidth: 700, margin: "0 auto" }}>
+      <section style={{ background: "#0a1628", paddingTop: 64, paddingBottom: 64, textAlign: "center" }}>
+        <div className="container">
           <h2 data-animation="slideLeft" style={{ color: "#fff", fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 900, marginBottom: 16 }}>
             Ready to Schedule Bay Area Service?
           </h2>
@@ -432,11 +474,11 @@ export default function BayAreaServicePage() {
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 16, justifyContent: "center" }}>
             <Link data-animation="slideLeft" href="/contact/service-request">
-              <a className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#00a896", color: "#fff", padding: "16px 32px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase"}}>
+              <a className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#00a896", color: "#fff", padding: "16px 32px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase" }}>
                 REQUEST SERVICE <ArrowRight size={16} />
               </a>
             </Link>
-            <a data-animation="slideRight" href="tel:+18885457715" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(255,255,255,0.5)", color: "#fff", padding: "16px 32px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase"}}>
+            <a data-animation="slideRight" href="tel:+18885457715" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(255,255,255,0.5)", color: "#fff", padding: "16px 32px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase" }}>
               <Phone size={16} /> (888) 545-7715
             </a>
           </div>

@@ -316,7 +316,7 @@ export default function ServiceSubPage() {
         <div className="container">
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
-              <span className="section-label">Service Details</span>
+              <span style={{color:"#1B3A6B"}}className="section-label">Service Details</span>
               <h2 data-animation="slideLeft" className="section-heading">{content.title}</h2>
               <div className="red-divider" />
               <p className="section-body mb-8">{content.body}</p>
@@ -325,7 +325,7 @@ export default function ServiceSubPage() {
               <div className="grid sm:grid-cols-2 gap-3 mb-8">
                 {content.features.map((f) => (
                   <div key={f} className="flex items-start gap-3">
-                    <CheckCircle size={15} style={{ color: "#FFFFFF", flexShrink: 0, marginTop: "2px" }} />
+                    <CheckCircle size={15} style={{  flexShrink: 0, marginTop: "2px" }} />
                     <span style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.85rem", color: "#444", lineHeight: 1.65 }}>{f}</span>
                   </div>
                 ))}
@@ -396,7 +396,7 @@ export default function ServiceSubPage() {
       {content.gallery && content.gallery.length > 0 && (
         <section className="py-12" style={{ background: "#F4F4F2" }}>
           <div className="container">
-            <span className="section-label">{sub === "installation-services" ? "Installation Gallery" : "Field Service Gallery"}</span>
+            <span style={{ color: "#1B3A6B" }} className="section-label">{sub === "installation-services" ? "Installation Gallery" : "Field Service Gallery"}</span>
             <h2 data-animation="slideLeft" className="section-heading" style={{ marginBottom: "1.5rem" }}>Our Work</h2>
             <div style={{
               display: "grid",

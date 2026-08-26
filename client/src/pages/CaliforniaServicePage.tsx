@@ -404,20 +404,43 @@ export default function CaliforniaServicePage() {
           </p>
           <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: 24 }}>
             {SERVICES.map(svc => (
-              <div key={svc.title} style={{ background: "#fff", border: "1px solid #e2e8f0", padding: "28px 28px 32px", transition: "box-shadow 0.2s, transform 0.2s" }}
+              <div key={svc.title} style={{ background: "#fff", border: "1px solid #e2e8f0", padding: "28px 28px 32px", transition: "box-shadow 0.2s, transform 0.2s", display: "flex", flexDirection: "column" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 32px rgba(0,0,0,0.1)"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(-2px)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; (e.currentTarget as HTMLDivElement).style.transform = "none"; }}>
                 <div style={{ marginBottom: 14 }}>{svc.icon}</div>
                 <h3 style={{ fontSize: "1rem", fontWeight: 800, color: "#0d1b2e", margin: "0 0 10px", textTransform: "uppercase", letterSpacing: "0.03em", fontFamily: "'Chakra Petch', sans-serif" }}>{svc.title}</h3>
                 <p style={{ color: "#4a5568", fontSize: "0.875rem", lineHeight: 1.7, margin: "0 0 20px" }}>{svc.desc}</p>
-                <Link
-                  href="/contact/service-request"
-                  style={{ display: "inline-flex", alignItems: "center", gap: 6, color: "#1e3a6e", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", transition: "all 0.2s", padding: "8px 14px", border: "1px solid transparent" }}
-                  onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.border = "1px solid #1e3a6e"; el.style.boxShadow = "0 0 12px rgba(30,58,110,0.25)"; }}
-                  onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.border = "1px solid transparent"; el.style.boxShadow = "none"; }}
-                >
-                  REQUEST SERVICE <ArrowRight size={12} />
-                </Link>
+               <Link
+  href="/contact/service-request"
+  style={{
+    marginTop: "auto",
+    display: "inline-flex",
+    alignItems: "center",
+    padding: 0,
+    gap: 6,
+    color: "#1e3a6e",
+    fontSize: "0.75rem",
+    fontWeight: 700,
+    letterSpacing: "0.1em",
+    textTransform: "uppercase",
+    textDecoration: "none",
+    transition: "all 0.2s",
+    border: "none",
+  }}
+  onMouseEnter={e => {
+    const el = e.currentTarget as HTMLAnchorElement;
+    el.style.border = "none";
+    el.style.boxShadow = "none";
+  }}
+  onMouseLeave={e => {
+    const el = e.currentTarget as HTMLAnchorElement;
+    el.style.border = "none";
+    el.style.boxShadow = "none";
+  }}
+>
+  REQUEST SERVICE <ArrowRight size={12} />
+</Link>
+
               </div>
             ))}
           </div>
@@ -487,7 +510,7 @@ export default function CaliforniaServicePage() {
 
       {/* COMPLIANCE SECTION */}
       <section style={{ paddingTop: 80, paddingBottom: 80, background: "#fff" }}>
-        <div className="container" style={{ margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(2rem,5vw,5rem)", alignItems: "start" }}>
+        <div className="container compliance-grid" style={{ margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(2rem,5vw,5rem)", alignItems: "start" }}>
           <div>
             <p style={{ color: "#1e3a6e", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 8 }}>CALIFORNIA REGULATORY COMPLIANCE</p>
             <h2 data-animation="slideLeft" style={{ fontSize: "clamp(1.6rem,3.5vw,2.4rem)", fontWeight: 900, color: "#0d1b2e", margin: "0 0 16px", fontFamily: "'Chakra Petch', sans-serif", textTransform: "uppercase" }}>

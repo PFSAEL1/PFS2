@@ -222,7 +222,7 @@ export default function LosAngelesServicePage() {
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center" }}
         />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(13,27,46,0.92) 0%, rgba(13,27,46,0.6) 60%, rgba(0,0,0,0.3) 100%)" }} />
-        <div style={{ position: "relative", zIndex: 1, height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", padding: "0 clamp(1.5rem,5vw,5rem)" }}>
+        <div className="container" style={{ position: "relative", zIndex: 1, height: "100%", display: "flex", flexDirection: "column", justifyContent: "center" }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: 8, marginBottom: 16 }}>
             <MapPin size={14} color="#60a5fa" />
             <span style={{ color: "#60a5fa", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase" }}>LOS ANGELES COUNTY — SOUTH COAST AQMD SPECIALISTS</span>
@@ -239,7 +239,7 @@ export default function LosAngelesServicePage() {
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
             <a data-animation="slideLeft"
               href="tel:8885457715"
-              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#1e3a6e", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "2px solid #1e3a6e"}}
+              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#1e3a6e", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "2px solid #1e3a6e" }}
               onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#2a4f96"; el.style.boxShadow = "0 0 18px rgba(30,58,110,0.7)"; }}
               onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#1e3a6e"; el.style.boxShadow = "none"; }}
             >
@@ -247,7 +247,7 @@ export default function LosAngelesServicePage() {
             </a>
             <Link data-animation="fadeIn"
               href="/contact/service-request"
-              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "2px solid rgba(255,255,255,0.5)"}}
+              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "2px solid rgba(255,255,255,0.5)" }}
               onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "rgba(255,255,255,0.12)"; el.style.boxShadow = "0 0 18px rgba(255,255,255,0.2)"; }}
               onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "transparent"; el.style.boxShadow = "none"; }}
             >
@@ -257,7 +257,7 @@ export default function LosAngelesServicePage() {
               href="https://pfsfilters.com"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(255,255,255,0.12)", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "2px solid rgba(255,255,255,0.35)"}}
+              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(255,255,255,0.12)", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "2px solid rgba(255,255,255,0.35)" }}
               onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "rgba(255,255,255,0.22)"; el.style.boxShadow = "0 0 18px rgba(255,255,255,0.18)"; }}
               onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "rgba(255,255,255,0.12)"; el.style.boxShadow = "none"; }}
             >
@@ -268,25 +268,111 @@ export default function LosAngelesServicePage() {
       </section>
 
       {/* STATS STRIP */}
-      <section style={{ background: "#1e3a6e", padding: "20px clamp(1.5rem,5vw,5rem)" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", gap: 40, flexWrap: "wrap", justifyContent: "space-between", alignItems: "center" }}>
-          {WHY_PFS.map(item => (
-            <div key={item.stat} style={{ textAlign: "center" }}>
-              <div data-animation="slideLeft" style={{ color: "#fff", fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 900, fontFamily: "'Chakra Petch', sans-serif" }}>{item.stat}</div>
-              <div data-animation="slideRight" style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" }}>{item.label}</div>
-            </div>
-          ))}
-          <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-            {["South Coast AQMD", "NFPA 33 Compliant", "CARB Compliant", "NESHAP Compliant", "OSHA Compliant"].map(tag => (
-              <span key={tag} style={{ color: "rgba(255,255,255,0.85)", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", background: "rgba(255,255,255,0.1)", padding: "4px 10px" }}>{tag}</span>
+      <section
+        style={{
+          background: "#1e3a6e",
+          padding: "20px 0",
+        }}
+      >
+        <div
+          className="container"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 20,
+            alignItems: "stretch",
+          }}
+        >
+          {/* ROW 1 — STATS */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              gap: 40,
+              justifyContent: "space-between",
+              alignItems: "center",
+              flexWrap: "wrap",
+            }}
+          >
+            {WHY_PFS.map(item => (
+              <div
+                key={item.stat}
+                style={{
+                  textAlign: "center",
+                  flex: "1 1 120px",
+                }}
+              >
+                <div
+                  data-animation="slideLeft"
+                  style={{
+                    color: "#fff",
+                    fontSize: "clamp(1.6rem,3vw,2.2rem)",
+                    fontWeight: 900,
+                    fontFamily: "'Chakra Petch', sans-serif",
+                  }}
+                >
+                  {item.stat}
+                </div>
+
+                <div
+                  data-animation="slideRight"
+                  style={{
+                    color: "rgba(255,255,255,0.7)",
+                    fontSize: "0.7rem",
+                    fontWeight: 700,
+                    letterSpacing: "0.12em",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  {item.label}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* ROW 2 — COMPLIANCE */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              gap: 10,
+              justifyContent: "flex-start",
+              alignItems: "center",
+              flexWrap: "wrap",
+            }}
+          >
+            {[
+              "South Coast AQMD",
+              "NFPA 33 Compliant",
+              "CARB Compliant",
+              "NESHAP Compliant",
+              "OSHA Compliant",
+            ].map(tag => (
+              <span
+                key={tag}
+                style={{
+                  color: "rgba(255,255,255,0.85)",
+                  fontSize: "0.7rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  background: "rgba(255,255,255,0.1)",
+                  padding: "4px 10px",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                {tag}
+              </span>
             ))}
           </div>
         </div>
       </section>
 
+
+
       {/* SOUTH COAST AQMD SECTION */}
-      <section style={{ padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,5rem)", background: "#fff" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(2rem,5vw,5rem)", alignItems: "start" }}>
+      <section style={{ paddingTop: 80, paddingBottom: 80, background: "#fff" }}>
+        <div className="container compliance-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(2rem,5vw,5rem)", alignItems: "start" }}>
           <div>
             <p style={{ color: "#1e3a6e", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 8 }}>SOUTH COAST AQMD COMPLIANCE</p>
             <h2 data-animation="slideLeft" style={{ fontSize: "clamp(1.6rem,3.5vw,2.4rem)", fontWeight: 900, color: "#0d1b2e", margin: "0 0 16px", fontFamily: "'Chakra Petch', sans-serif", textTransform: "uppercase" }}>
@@ -301,7 +387,7 @@ export default function LosAngelesServicePage() {
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
               <Link data-animation="slideLeft"
                 href="/contact/service-request"
-                style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#1e3a6e", color: "#fff", padding: "13px 24px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none"}}
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#1e3a6e", color: "#fff", padding: "13px 24px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none" }}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#2a4f96"; el.style.boxShadow = "0 0 18px rgba(30,58,110,0.6)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#1e3a6e"; el.style.boxShadow = "none"; }}
               >
@@ -309,7 +395,7 @@ export default function LosAngelesServicePage() {
               </Link>
               <a data-animation="slideRight"
                 href="tel:8885457715"
-                style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "#1e3a6e", padding: "13px 24px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "1px solid #1e3a6e"}}
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "#1e3a6e", padding: "13px 24px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "1px solid #1e3a6e" }}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.boxShadow = "0 0 14px rgba(30,58,110,0.35)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.boxShadow = "none"; }}
               >
@@ -335,8 +421,8 @@ export default function LosAngelesServicePage() {
       </section>
 
       {/* SERVICES GRID */}
-      <section style={{ padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,5rem)", background: "#f8f9fa" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+      <section style={{ paddingTop: 80, paddingBottom: 80, background: "#f8f9fa" }}>
+        <div className="container">
           <p style={{ color: "#1e3a6e", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 8 }}>LOS ANGELES COUNTY SERVICE</p>
           <h2 data-animation="slideLeft" style={{ fontSize: "clamp(1.8rem,4vw,2.8rem)", fontWeight: 900, color: "#0d1b2e", margin: "0 0 12px", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", textTransform: "uppercase" }}>
             Every Spray Booth Service You Need
@@ -346,7 +432,7 @@ export default function LosAngelesServicePage() {
           </p>
           <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: 24 }}>
             {SERVICES.map(svc => (
-              <div key={svc.title} style={{ background: "#fff", border: "1px solid #e2e8f0", padding: "28px 28px 32px", transition: "box-shadow 0.2s, transform 0.2s" }}
+              <div key={svc.title} style={{ background: "#fff", border: "1px solid #e2e8f0", padding: "28px 28px 32px", transition: "box-shadow 0.2s, transform 0.2s", display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "space-between" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 32px rgba(0,0,0,0.1)"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(-2px)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; (e.currentTarget as HTMLDivElement).style.transform = "none"; }}>
                 <div style={{ marginBottom: 14 }}>{svc.icon}</div>
@@ -354,12 +440,35 @@ export default function LosAngelesServicePage() {
                 <p style={{ color: "#4a5568", fontSize: "0.875rem", lineHeight: 1.7, margin: "0 0 20px" }}>{svc.desc}</p>
                 <Link
                   href="/contact/service-request"
-                  style={{ display: "inline-flex", alignItems: "center", gap: 6, color: "#1e3a6e", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", transition: "all 0.2s", padding: "8px 14px", border: "1px solid transparent" }}
-                  onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.border = "1px solid #1e3a6e"; el.style.boxShadow = "0 0 12px rgba(30,58,110,0.25)"; }}
-                  onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.border = "1px solid transparent"; el.style.boxShadow = "none"; }}
+                  style={{
+                    marginTop: "auto",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    padding: 0,
+                    gap: 6,
+                    color: "#1e3a6e",
+                    fontSize: "0.75rem",
+                    fontWeight: 700,
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    textDecoration: "none",
+                    transition: "all 0.2s",
+                    border: "none",
+                  }}
+                  onMouseEnter={e => {
+                    const el = e.currentTarget as HTMLAnchorElement;
+                    el.style.border = "none";
+                    el.style.boxShadow = "none";
+                  }}
+                  onMouseLeave={e => {
+                    const el = e.currentTarget as HTMLAnchorElement;
+                    el.style.border = "none";
+                    el.style.boxShadow = "none";
+                  }}
                 >
                   REQUEST SERVICE <ArrowRight size={12} />
                 </Link>
+
               </div>
             ))}
           </div>
@@ -367,10 +476,10 @@ export default function LosAngelesServicePage() {
       </section>
 
       {/* INDUSTRIES WE SERVE */}
-      <section style={{ padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,5rem)", background: "#0d1b2e" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+      <section style={{ paddingTop: 80, paddingBottom: 80, background: "#0d1b2e" }}>
+        <div className="container" >
           <p style={{ color: "#60a5fa", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 8 }}>INDUSTRIES SERVED — LOS ANGELES COUNTY</p>
-          <h2 data-animation="slideLeft"  style={{ fontSize: "clamp(1.8rem,4vw,2.8rem)", fontWeight: 900, color: "#fff", margin: "0 0 12px", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", textTransform: "uppercase" }}>
+          <h2 data-animation="slideLeft" style={{ fontSize: "clamp(1.8rem,4vw,2.8rem)", fontWeight: 900, color: "#fff", margin: "0 0 12px", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", textTransform: "uppercase" }}>
             Every Industry. Every Booth Brand.
           </h2>
           <p data-animation="slideLeft" style={{ color: "rgba(255,255,255,0.7)", fontSize: "1rem", maxWidth: 620, margin: "0 0 48px", lineHeight: 1.6 }}>
@@ -378,14 +487,14 @@ export default function LosAngelesServicePage() {
           </p>
           <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 20 }}>
             {INDUSTRIES.map(ind => (
-              <div key={ind.name} style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", padding: "22px 24px 26px", transition: "background 0.2s, box-shadow 0.2s" }}
+              <div key={ind.name} style={{ display: "flex", flexDirection: "column", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", padding: "22px 24px 26px", transition: "background 0.2s, box-shadow 0.2s" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.background = "rgba(255,255,255,0.09)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 0 20px rgba(96,165,250,0.1)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.background = "rgba(255,255,255,0.05)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; }}>
                 <h3 style={{ fontSize: "0.9rem", fontWeight: 800, color: "#fff", margin: "0 0 10px", textTransform: "uppercase", letterSpacing: "0.03em", fontFamily: "'Chakra Petch', sans-serif" }}>{ind.name}</h3>
                 <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "0.82rem", lineHeight: 1.65, margin: "0 0 16px" }}>{ind.desc}</p>
                 <Link
                   href="/contact/service-request"
-                  style={{ display: "inline-flex", alignItems: "center", gap: 6, color: "#60a5fa", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", transition: "all 0.2s" }}
+                  style={{ marginTop: "auto", display: "inline-flex", alignItems: "center", gap: 6, color: "#60a5fa", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", transition: "all 0.2s" }}
                   onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#93c5fd"; }}
                   onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#60a5fa"; }}
                 >
@@ -398,8 +507,8 @@ export default function LosAngelesServicePage() {
       </section>
 
       {/* INLINE CTA BAND */}
-      <section style={{ background: "#1e3a6e", padding: "clamp(2rem,4vw,3.5rem) clamp(1.5rem,5vw,5rem)" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", flexWrap: "wrap", gap: 24, alignItems: "center", justifyContent: "space-between" }}>
+      <section style={{ background: "#1e3a6e", paddingTop: 56, paddingBottom: 56 }}>
+        <div className="container" style={{ display: "flex", flexDirection: "column", gap: 24, alignItems: "start", justifyContent: "space-between" }}>
           <div>
             <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 8 }}>BOOTH DOWN IN LA? WE RESPOND FAST.</p>
             <h2 data-animation="slideLeft" style={{ color: "#fff", fontSize: "clamp(1.4rem,3vw,2rem)", fontWeight: 900, margin: 0, fontFamily: "'Chakra Petch', sans-serif", textTransform: "uppercase" }}>
@@ -409,7 +518,7 @@ export default function LosAngelesServicePage() {
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
             <a data-animation="slideLeft"
               href="tel:8885457715"
-              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", color: "#0d1b2e", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none"}}
+              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", color: "#0d1b2e", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none" }}
               onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#f0f4ff"; el.style.boxShadow = "0 0 18px rgba(255,255,255,0.4)"; }}
               onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#fff"; el.style.boxShadow = "none"; }}
             >
@@ -417,7 +526,7 @@ export default function LosAngelesServicePage() {
             </a>
             <Link data-animation="slideRight"
               href="/contact/service-request"
-              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "1px solid rgba(255,255,255,0.4)"}}
+              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "1px solid rgba(255,255,255,0.4)" }}
               onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "rgba(255,255,255,0.08)"; el.style.boxShadow = "0 0 16px rgba(255,255,255,0.15)"; }}
               onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "transparent"; el.style.boxShadow = "none"; }}
             >
@@ -428,8 +537,8 @@ export default function LosAngelesServicePage() {
       </section>
 
       {/* SERVICE AREAS */}
-      <section style={{ padding: "clamp(3rem,5vw,4rem) clamp(1.5rem,5vw,5rem)", background: "#fff" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+      <section style={{ paddingTop: 80, paddingBottom: 80, background: "#fff" }}>
+        <div className="container">
           <p style={{ color: "#1e3a6e", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 8 }}>WHERE WE WORK</p>
           <h2 data-animation="slideLeft" style={{ fontSize: "clamp(1.6rem,3.5vw,2.4rem)", fontWeight: 900, color: "#0d1b2e", margin: "0 0 12px", fontFamily: "'Chakra Petch', sans-serif", textTransform: "uppercase" }}>
             Los Angeles &amp; South Coast Air Basin Coverage
@@ -475,8 +584,8 @@ export default function LosAngelesServicePage() {
       </section>
 
       {/* WHY PFS */}
-      <section style={{ padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,5rem)", background: "#f8f9fa" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+      <section style={{ paddingTop: 80, paddingBottom: 80, background: "#f8f9fa" }}>
+        <div className="container">
           <p style={{ color: "#1e3a6e", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 8 }}>WHY CHOOSE PFS</p>
           <h2 data-animation="slideLeft" style={{ fontSize: "clamp(1.6rem,3.5vw,2.4rem)", fontWeight: 900, color: "#0d1b2e", margin: "0 0 40px", fontFamily: "'Chakra Petch', sans-serif", textTransform: "uppercase" }}>
             California's Spray Booth Manufacturer<br />&amp; Service Provider
@@ -499,8 +608,8 @@ export default function LosAngelesServicePage() {
       </section>
 
       {/* CALIFORNIA LINK */}
-      <section style={{ background: "#fff", padding: "clamp(2rem,4vw,3rem) clamp(1.5rem,5vw,5rem)", borderTop: "1px solid #e2e8f0" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", flexWrap: "wrap", gap: 20, alignItems: "center", justifyContent: "space-between" }}>
+      <section style={{ background: "#fff", paddingTop: 48, paddingBottom: 48, borderTop: "1px solid #e2e8f0" }}>
+        <div className="container" style={{ display: "flex", flexWrap: "wrap", gap: 20, alignItems: "center", justifyContent: "space-between" }}>
           <div>
             <p data-animation="slideLeft" style={{ color: "#4a5568", fontSize: "0.85rem", margin: 0 }}>
               Need service in Northern California, the Bay Area, or Sacramento?
@@ -508,7 +617,7 @@ export default function LosAngelesServicePage() {
           </div>
           <Link data-animation="slideRight"
             href="/spray-booth-service-california"
-            style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "#1e3a6e", padding: "12px 22px", fontSize: "0.78rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "1px solid #1e3a6e"}}
+            style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "#1e3a6e", padding: "12px 22px", fontSize: "0.78rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "1px solid #1e3a6e" }}
             onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.boxShadow = "0 0 14px rgba(30,58,110,0.3)"; }}
             onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.boxShadow = "none"; }}
           >
@@ -518,41 +627,159 @@ export default function LosAngelesServicePage() {
       </section>
 
       {/* BOTTOM CTA */}
-      <section style={{ background: "#1e3a6e", padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,5rem)", textAlign: "center" }}>
-        <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 12 }}>READY TO GET YOUR BOOTH SERVICED IN LA?</p>
-        <h2 data-animation="slideLeft" style={{ color: "#fff", fontSize: "clamp(1.6rem,4vw,2.8rem)", fontWeight: 900, margin: "0 0 16px", fontFamily: "'Chakra Petch', sans-serif", textTransform: "uppercase" }}>
-          Schedule Los Angeles Service Today
-        </h2>
-        <p data-animation="slideLeft" style={{ color: "rgba(255,255,255,0.75)", fontSize: "1rem", maxWidth: 520, margin: "0 auto 32px", lineHeight: 1.6 }}>
-          Call us directly or submit a service request online. We'll confirm your appointment and dispatch a certified PFS technician to your Los Angeles County facility.
-        </p>
-        <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
-          <a 
-            href="tel:8885457715"
+      {/* BOTTOM CTA */}
+      <section
+        style={{
+          background: "#1e3a6e",
+          paddingTop: 80,
+          paddingBottom: 80,
+          textAlign: "center",
+        }}
+      >
+        <div className="container">
+
+          <p
+            style={{
+              color: "rgba(255,255,255,0.6)",
+              fontSize: "0.75rem",
+              fontWeight: 700,
+              letterSpacing: "0.15em",
+              textTransform: "uppercase",
+              marginBottom: 12,
+            }}
+          >
+            READY TO GET YOUR BOOTH SERVICED IN LA?
+          </p>
+
+          <h2
             data-animation="slideLeft"
-            style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", color: "#0d1b2e", padding: "16px 32px", fontSize: "0.85rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none"}}
-            onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#f0f4ff"; el.style.boxShadow = "0 0 20px rgba(255,255,255,0.4)"; }}
-            onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#fff"; el.style.boxShadow = "none"; }}
+            style={{
+              color: "#fff",
+              fontSize: "clamp(1.6rem,4vw,2.8rem)",
+              fontWeight: 900,
+              margin: "0 0 16px",
+              fontFamily: "'Chakra Petch', sans-serif",
+              textTransform: "uppercase",
+            }}
           >
-            <Phone size={15} /> CALL (888) 545-7715
-          </a>
-          <Link
-            href="/contact/service-request"
-            data-animation="fadeIn"
-            style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "#fff", padding: "16px 32px", fontSize: "0.85rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "2px solid rgba(255,255,255,0.6)"}}
-            onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "rgba(255,255,255,0.1)"; el.style.boxShadow = "0 0 20px rgba(255,255,255,0.2)"; }}
-            onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "transparent"; el.style.boxShadow = "none"; }}
+            Schedule Los Angeles Service Today
+          </h2>
+
+          <p
+            data-animation="slideLeft"
+            style={{
+              color: "rgba(255,255,255,0.75)",
+              fontSize: "1rem",
+              maxWidth: 520,
+              margin: "0 auto 32px",
+              lineHeight: 1.6,
+            }}
           >
-            SUBMIT SERVICE REQUEST <ArrowRight size={15} />
-          </Link>
-          <Link data-animation="slideRight"
-            href="/spray-booth-service-california"
-            style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "rgba(255,255,255,0.7)", padding: "16px 24px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "1px solid rgba(255,255,255,0.3)"}}
-            onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "rgba(255,255,255,0.08)"; el.style.boxShadow = "0 0 16px rgba(255,255,255,0.15)"; }}
-            onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "transparent"; el.style.boxShadow = "none"; }}
+            Call us directly or submit a service request online. We'll confirm your
+            appointment and dispatch a certified PFS technician to your Los Angeles
+            County facility.
+          </p>
+
+          <div
+            style={{
+              display: "flex",
+              gap: 14,
+              justifyContent: "center",
+              flexWrap: "wrap",
+            }}
           >
-            ALL CALIFORNIA SERVICE <ArrowRight size={13} />
-          </Link>
+            <a
+              href="tel:8885457715"
+              data-animation="slideLeft"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                background: "#fff",
+                color: "#0d1b2e",
+                padding: "16px 32px",
+                fontSize: "0.85rem",
+                fontWeight: 800,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                textDecoration: "none",
+              }}
+              onMouseEnter={e => {
+                const el = e.currentTarget as HTMLAnchorElement;
+                el.style.background = "#f0f4ff";
+                el.style.boxShadow = "0 0 20px rgba(255,255,255,0.4)";
+              }}
+              onMouseLeave={e => {
+                const el = e.currentTarget as HTMLAnchorElement;
+                el.style.background = "#fff";
+                el.style.boxShadow = "none";
+              }}
+            >
+              <Phone size={15} /> CALL (888) 545-7715
+            </a>
+
+            <Link
+              href="/contact/service-request"
+              data-animation="fadeIn"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                background: "transparent",
+                color: "#fff",
+                padding: "16px 32px",
+                fontSize: "0.85rem",
+                fontWeight: 800,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                textDecoration: "none",
+                border: "2px solid rgba(255,255,255,0.6)",
+              }}
+              onMouseEnter={e => {
+                const el = e.currentTarget as HTMLAnchorElement;
+                el.style.background = "rgba(255,255,255,0.1)";
+                el.style.boxShadow = "0 0 20px rgba(255,255,255,0.2)";
+              }}
+              onMouseLeave={e => {
+                const el = e.currentTarget as HTMLAnchorElement;
+                el.style.background = "transparent";
+                el.style.boxShadow = "none";
+              }}
+            >
+              SUBMIT SERVICE REQUEST <ArrowRight size={15} />
+            </Link>
+
+            <Link
+              data-animation="slideRight"
+              href="/spray-booth-service-california"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                background: "transparent",
+                color: "rgba(255,255,255,0.7)",
+                padding: "16px 24px",
+                fontSize: "0.8rem",
+                fontWeight: 700,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                textDecoration: "none",
+                border: "1px solid rgba(255,255,255,0.3)",
+              }}
+              onMouseEnter={e => {
+                const el = e.currentTarget as HTMLAnchorElement;
+                el.style.background = "rgba(255,255,255,0.08)";
+                el.style.boxShadow = "0 0 16px rgba(255,255,255,0.15)";
+              }}
+              onMouseLeave={e => {
+                const el = e.currentTarget as HTMLAnchorElement;
+                el.style.background = "transparent";
+                el.style.boxShadow = "none";
+              }}
+            >
+              ALL CALIFORNIA SERVICE <ArrowRight size={13} />
+            </Link>
+          </div>
         </div>
       </section>
 

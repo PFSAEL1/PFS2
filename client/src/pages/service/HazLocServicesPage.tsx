@@ -261,7 +261,7 @@ export default function HazLocServicesPage() {
       }}>
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: "url('/assets/pfs-hazloc-enclosure-hero_ab43557c.jpg')",
+          backgroundImage: "url('/assets/Hazardous-banner.png')",
           backgroundSize: "contain", backgroundPosition: "center center", backgroundRepeat: "no-repeat",
           backgroundColor: "#0a0a0a", zIndex: 0,
         }} />
@@ -270,16 +270,16 @@ export default function HazLocServicesPage() {
           background: "linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.50) 45%, rgba(0,0,0,0.15) 100%)",
           zIndex: 1,
         }} />
-<div
-  style={{
-    position: "relative",
-    zIndex: 2,
-    width: "100%",
-    paddingTop: "5rem",
-    paddingBottom: "4rem",
-  }}
-  className="container relative"
->
+        <div
+          style={{
+            position: "relative",
+            zIndex: 2,
+            width: "100%",
+            paddingTop: "5rem",
+            paddingBottom: "4rem",
+          }}
+          className="container relative"
+        >
 
           <div style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
@@ -380,13 +380,13 @@ export default function HazLocServicesPage() {
       </section>
 
       {/* ── SERVICE CATEGORIES (COLLAPSIBLE) ─────────────────────────────── */}
-   <section
-  className="container"
-  style={{
-    paddingTop: "3.5rem",
-    paddingBottom: "3.5rem",
-  }}
->
+      <section
+        className="container"
+        style={{
+          paddingTop: "3.5rem",
+          paddingBottom: "3.5rem",
+        }}
+      >
         <div style={{ marginBottom: "2.5rem" }}>
           <div style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
@@ -460,28 +460,63 @@ export default function HazLocServicesPage() {
                       fontSize: "0.88rem", color: "#444", lineHeight: 1.7,
                       margin: "1rem 0 1.25rem",
                     }}>{svc.desc}</p>
-
-                    <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: "1.5rem", alignItems: "start" }}>
+                    <div
+                      className="service-scope-grid"
+                      style={{
+                        display: "grid",
+                        gridTemplateColumns: "1fr auto",
+                        gap: "1.5rem",
+                        alignItems: "start",
+                      }}
+                    >
                       {/* Bullets */}
                       <div>
-                        <div style={{
-                          fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-                          fontSize: "0.65rem", fontWeight: 700,
-                          color: BLUE, letterSpacing: "0.15em",
-                          textTransform: "uppercase", marginBottom: "0.6rem",
-                        }}>SCOPE OF WORK</div>
-                        <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: "0.35rem" }}>
+                        <div
+                          style={{
+                            fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                            fontSize: "0.65rem",
+                            fontWeight: 700,
+                            color: BLUE,
+                            letterSpacing: "0.15em",
+                            textTransform: "uppercase",
+                            marginBottom: "0.6rem",
+                          }}
+                        >
+                          SCOPE OF WORK
+                        </div>
+
+                        <ul
+                          style={{
+                            margin: 0,
+                            padding: 0,
+                            listStyle: "none",
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "0.35rem",
+                          }}
+                        >
                           {svc.bullets.map((b) => (
-                            <li key={b} style={{
-                              fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
-                              fontSize: "0.82rem", color: "#333",
-                              display: "flex", alignItems: "flex-start", gap: "0.5rem",
-                            }}>
-                              <span style={{
-                                width: "5px", height: "5px",
-                                background: BLUE, borderRadius: "50%",
-                                flexShrink: 0, marginTop: "0.45rem",
-                              }} />
+                            <li
+                              key={b}
+                              style={{
+                                fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
+                                fontSize: "0.82rem",
+                                color: "#333",
+                                display: "flex",
+                                alignItems: "flex-start",
+                                gap: "0.5rem",
+                              }}
+                            >
+                              <span
+                                style={{
+                                  width: "5px",
+                                  height: "5px",
+                                  background: BLUE,
+                                  borderRadius: "50%",
+                                  flexShrink: 0,
+                                  marginTop: "0.45rem",
+                                }}
+                              />
                               {b}
                             </li>
                           ))}
@@ -489,27 +524,53 @@ export default function HazLocServicesPage() {
                       </div>
 
                       {/* Standards */}
-                      <div style={{ minWidth: "160px" }}>
-                        <div style={{
-                          fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-                          fontSize: "0.65rem", fontWeight: 700,
-                          color: BLUE, letterSpacing: "0.15em",
-                          textTransform: "uppercase", marginBottom: "0.6rem",
-                        }}>STANDARDS</div>
-                        <div style={{ display: "flex", flexDirection: "column", gap: "0.3rem" }}>
+                      <div className="service-standards" style={{ minWidth: "160px" }}>
+                        <div
+                          style={{
+                            fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                            fontSize: "0.65rem",
+                            fontWeight: 700,
+                            color: BLUE,
+                            letterSpacing: "0.15em",
+                            textTransform: "uppercase",
+                            marginBottom: "0.6rem",
+                          }}
+                        >
+                          STANDARDS
+                        </div>
+                        <div
+                          className="service-standards-list"
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "0.3rem",
+                          }}
+                        >
                           {svc.standards.map((s) => (
-                            <span key={s} style={{
-                              fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-                              fontSize: "0.68rem", fontWeight: 700,
-                              color: "#fff", background: BLUE,
-                              padding: "0.2rem 0.55rem", borderRadius: "2px",
-                              letterSpacing: "0.06em", textTransform: "uppercase",
-                              display: "inline-block",
-                            }}>{s}</span>
+                            <span
+                              key={s}
+                              className="service-standard-badge"
+                              style={{
+                                fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                                fontSize: "0.68rem",
+                                fontWeight: 700,
+                                color: "#fff",
+                                width:"100%",
+                                background: BLUE,
+                                padding: "0.2rem 0.55rem",
+                                borderRadius: "2px",
+                                letterSpacing: "0.06em",
+                                textTransform: "uppercase",
+                                display: "inline-block",
+                              }}
+                            >
+                              {s}
+                            </span>
                           ))}
                         </div>
                       </div>
                     </div>
+
 
                     <div style={{ marginTop: "1.25rem" }}>
                       <Link href="/contact/service-request">
@@ -622,8 +683,10 @@ export default function HazLocServicesPage() {
       </section>
 
       {/* ── FAQ ──────────────────────────────────────────────────────────── */}
-      <section className="container" style={{ paddingTop: "3.5rem",
-    paddingBottom: "3.5rem",}}>
+      <section className="container" style={{
+        paddingTop: "3.5rem",
+        paddingBottom: "3.5rem",
+      }}>
         <div style={{ marginBottom: "2rem" }}>
           <div style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
