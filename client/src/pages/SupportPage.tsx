@@ -173,10 +173,10 @@ export default function SupportPage() {
                 (888) 545-7715 — Toll Free
               </a>
 
-              <a href="mailto:info@pfsspraybooths.com" style={{ display: "flex", alignItems: "center", gap: "0.6rem", color: "rgba(255,255,255,0.7)", textDecoration: "none", fontFamily: "'Archivo Narrow', sans-serif", fontSize: "0.9rem" }}>
+              {/* <a href="mailto:info@pfsspraybooths.com" style={{ display: "flex", alignItems: "center", gap: "0.6rem", color: "rgba(255,255,255,0.7)", textDecoration: "none", fontFamily: "'Archivo Narrow', sans-serif", fontSize: "0.9rem" }}>
                 <Mail size={14} style={{ color: "rgba(255,255,255,0.4)", flexShrink: 0 }} />
                 info@pfsspraybooths.com
-              </a>
+              </a> */}
             </div>
           </div>
 

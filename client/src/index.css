@@ -112,6 +112,63 @@
   border-top: none;
 }
 
+html.modal-open,
+body.modal-open {
+  overflow: hidden !important;
+}
+.success-continue-btn {
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+
+  background-color: #1B3A6B;
+  color: #fff;
+
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 12.48px;
+  font-weight: 700;
+
+  border: 1.5px solid #6BA3E073;
+  border-radius: 0;
+
+  padding: 12px 28px;
+
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.success-continue-btn:hover {
+  color: #fff !important;
+  background: #0f1a30 !important;
+  border: 1.5px solid #6ba3e0 !important;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 50px #6ba3e0f2,
+    0 0 100px #6ba3e08c,
+    0 0 16px #fff9;
+}
+
+.success-continue-btn:focus-visible {
+  outline: 2px solid #6ba3e0;
+  outline-offset: 3px;
+}
+
+.success-continue-btn:active {
+  transform: translateY(0);
+}
+
 .custom-responsive-row {
   display: flex;
   align-items: center;
@@ -196,6 +253,13 @@
 .booth-feature span {
   color: rgba(255, 255, 255, 0.4);
   font-size: 1.2rem;
+}
+
+.site-filter-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
 }
 
 .industry-ptb {
@@ -297,6 +361,11 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+  }
+
+  .site-filter-row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .batch-breadcrumb {
@@ -405,17 +474,18 @@
     flex-wrap: wrap;
     row-gap: 0.4rem;
     font-size: 0.72rem !important;
-font-weight: 800 !important;
-letter-spacing: 0.05em !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.05em !important;
   }
 
   .breadcrumb-wrapper .breadcrumb-item-2 {
     flex-basis: 100%;
   }
+
   .breadcrumb-wrapper .breadcrumb-item,
-.breadcrumb-wrapper .breadcrumb-item span {
-font-weight: 800 !important;
-}
+  .breadcrumb-wrapper .breadcrumb-item span {
+    font-weight: 800 !important;
+  }
 }
 
 

@@ -5,11 +5,13 @@
  *   intake filters, exhaust filters, polyester filters, fiberglass filters
  */
 import { useSEO } from "@/hooks/useSEO";
+import { useState } from "react";
 import { Link } from "wouter";
 import { Phone, ArrowRight, CheckCircle, ExternalLink } from "lucide-react";
 
 const BLUE = "#1B3A6B";
 const BLUE_LIGHT = "#2A5298";
+
 
 const FILTER_TYPES = [
   {
@@ -84,6 +86,8 @@ const FAQ_ITEMS = [
 ];
 
 export default function FiltersPage() {
+  const [expandedCards, setExpandedCards] = useState({});
+
   useSEO({
     title: "Spray Booth Filters | Paint Booth Replacement Filters | PFS — pfsfilters.com",
     description: "PFS spray booth filters — exhaust filters, intake filters, pre-filters, ceiling media, and OEM replacement kits. Spec-matched to your booth. Subscription programs available for automatic delivery. NFPA 33 compliant. Ships nationally from Santa Rosa, CA. Call (888) 545-7715 or order at pfsfilters.com.",
@@ -117,7 +121,7 @@ export default function FiltersPage() {
       }}>
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: "url('/assets/filters-hero.jpeg')",
+          backgroundImage: "url('/assets/filters-cover.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           zIndex: 0,
@@ -125,7 +129,7 @@ export default function FiltersPage() {
         }} />
         <div style={{
           position: "absolute", inset: 0,
-          background: "linear-gradient(90deg, rgba(27,58,107,0.92) 0%, rgba(27,58,107,0.65) 60%, rgba(27,58,107,0.3) 100%)",
+          // background: "linear-gradient(90deg, rgba(27,58,107,0.92) 0%, rgba(27,58,107,0.65) 60%, rgba(27,58,107,0.3) 100%)",
           zIndex: 1,
         }} />
         <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "4rem 2rem 3.5rem", position: "relative", zIndex: 2, width: "100%" }}>
@@ -217,7 +221,7 @@ export default function FiltersPage() {
       {/* INTRO BODY COPY */}
       <section style={{ background: "#fff", padding: "4rem 2rem" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "start" }}>
+          <div className="site-filter-row">
             <div>
               <div style={{
                 fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
@@ -378,54 +382,177 @@ export default function FiltersPage() {
             gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))",
             gap: "1.5rem",
           }}>
-            {FILTER_TYPES.map((filter) => (
-              <div key={filter.name} style={{
-                background: "#fff",
-                borderRadius: "2px",
-                padding: "1.75rem",
-                border: "1px solid #e2e8f0",
-                boxShadow: "0 1px 4px rgba(0,0,0,0.06)",
-              }}>
-                <div style={{ fontSize: "2rem", marginBottom: "0.75rem" }}>{filter.icon}</div>
-                <h3 style={{
-                  fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-                  fontSize: "1.1rem", fontWeight: 900,
-                  color: "#111", textTransform: "uppercase",
-                  letterSpacing: "0.03em", margin: "0 0 0.2rem",
-                }}>
-                  {filter.name}
-                </h3>
-                <div style={{
-                  fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-                  fontSize: "0.72rem", fontWeight: 700,
-                  color: BLUE, letterSpacing: "0.1em",
-                  textTransform: "uppercase", marginBottom: "0.75rem",
-                }}>
-                  {filter.subtitle}
+            {FILTER_TYPES.map((filter) => {
+              const isExpanded = !!expandedCards[filter.name];
+
+              const toggleCard = () => {
+                setExpandedCards((prev) => ({
+                  ...prev,
+                  [filter.name]: !prev[filter.name],
+                }));
+              };
+
+              return (
+                <div
+                  key={filter.name}
+                  style={{
+                    background: "#fff",
+                    borderRadius: "2px",
+                    padding: "1.75rem",
+                    border: "1px solid #e2e8f0",
+                    boxShadow: "0 1px 4px rgba(0,0,0,0.06)",
+                  }}
+                >
+                  {/* ICON */}
+                  <div
+                    style={{
+                      fontSize: "2rem",
+                      marginBottom: "0.75rem",
+                    }}
+                  >
+                    {filter.icon}
+                  </div>
+
+                  {/* TITLE */}
+                  <h3
+                    style={{
+                      fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                      fontSize: "1.1rem",
+                      fontWeight: 900,
+                      color: "#111",
+                      textTransform: "uppercase",
+                      letterSpacing: "0.03em",
+                      margin: "0 0 0.2rem",
+                    }}
+                  >
+                    {filter.name}
+                  </h3>
+
+                  {/* SUBTITLE */}
+                  <div
+                    style={{
+                      fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                      fontSize: "0.72rem",
+                      fontWeight: 700,
+                      color: BLUE,
+                      letterSpacing: "0.1em",
+                      textTransform: "uppercase",
+                      marginBottom: "0.75rem",
+                    }}
+                  >
+                    {filter.subtitle}
+                  </div>
+
+                  {/* DESCRIPTION */}
+                  <p
+                    style={{
+                      fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
+                      fontSize: "0.85rem",
+                      color: "#555",
+                      lineHeight: 1.65,
+                      margin: "0 0 0.75rem",
+
+                      // 3 lines when collapsed
+                      display: isExpanded ? "block" : "-webkit-box",
+                      WebkitBoxOrient: "vertical",
+                      WebkitLineClamp: isExpanded ? "unset" : 3,
+                      overflow: "hidden",
+                    }}
+                  >
+                    {filter.desc}
+                  </p>
+
+                  {/* SPECS - HIDDEN UNTIL READ MORE */}
+                  {isExpanded && (
+                    <ul
+                      style={{
+                        margin: "0 0 1rem",
+                        padding: 0,
+                        listStyle: "none",
+                      }}
+                    >
+                      {filter.specs.map((spec) => (
+                        <li
+                          key={spec}
+                          style={{
+                            display: "flex",
+                            alignItems: "flex-start",
+                            gap: "0.4rem",
+                            marginBottom: "0.3rem",
+                          }}
+                        >
+                          <span
+                            style={{
+                              width: "5px",
+                              height: "5px",
+                              background: BLUE,
+                              borderRadius: "50%",
+                              flexShrink: 0,
+                              marginTop: "6px",
+                            }}
+                          />
+
+                          <span
+                            style={{
+                              fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
+                              fontSize: "0.78rem",
+                              color: "#444",
+                            }}
+                          >
+                            {spec}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  {/* READ MORE / READ LESS */}
+                  <button
+                    type="button"
+                    onClick={toggleCard}
+                    aria-expanded={isExpanded}
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "0.35rem",
+                      background: "transparent",
+                      border: "none",
+                      padding: 0,
+                      color: BLUE,
+                      fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                      fontSize: "0.75rem",
+                      fontWeight: 800,
+                      letterSpacing: "0.08em",
+                      textTransform: "uppercase",
+                      cursor: "pointer",
+                    }}
+                  >
+                    {isExpanded ? "Read Less" : "Read More"}
+
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      style={{
+                       
+                        transition: "transform 0.2s ease",
+                      }}
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </button>
+
                 </div>
-                <p style={{
-                  fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
-                  fontSize: "0.85rem", color: "#555", lineHeight: 1.65,
-                  marginBottom: "1rem",
-                }}>
-                  {filter.desc}
-                </p>
-                <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
-                  {filter.specs.map((spec) => (
-                    <li key={spec} style={{
-                      display: "flex", alignItems: "flex-start", gap: "0.4rem",
-                      marginBottom: "0.3rem",
-                    }}>
-                      <span style={{ width: "5px", height: "5px", background: BLUE, borderRadius: "50%", flexShrink: 0, marginTop: "6px" }} />
-                      <span style={{
-                        fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
-                        fontSize: "0.78rem", color: "#444",
-                      }}>{spec}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+              );
+            })}
+
           </div>
         </div>
       </section>
@@ -433,7 +560,7 @@ export default function FiltersPage() {
       {/* FILTER ROTATION PROGRAM */}
       <section style={{ background: "#fff", padding: "4rem 2rem" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "center" }}>
+          <div className="site-filter-row">
             <div>
               <div style={{
                 fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",

@@ -68,20 +68,21 @@ const FAMILIES = [
     tags: ["ETL/UL Certified Components", "Made in USA"],
   },
   {
-    label: "Parts & Filters",
-    href: "/products/parts-filters",
-    img: "/assets/pfs-filters-card_8b47eabc.png",
-    desc: "OEM parts, filters, and consumables for all PFS systems. Fast shipping from our US warehouse.",
-    badge: null,
-    tags: ["OEM Parts", "Fast Shipping"],
-  },
-  {
     label: "Integration & Automation",
     href: "/integration-automation",
     img: "/assets/pfs-robotics-card_2aac132b.jpg",
     desc: "Conveyor systems, robotic finishing, PLC controls, and full line integration for automated finishing operations.",
     badge: "Enterprise",
     tags: ["Robotic", "PLC Controls"],
+  },
+
+    {
+    label: "Parts & Filters",
+    href: "/products/parts-filters",
+    img: "/assets/pfs-filters-card_8b47eabc.png",
+    desc: "OEM parts, filters, and consumables for all PFS systems. Fast shipping from our US warehouse.",
+    badge: null,
+    tags: ["OEM Parts", "Fast Shipping"],
   },
 ];
 

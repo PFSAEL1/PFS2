@@ -454,7 +454,7 @@ export default function LegalPage() {
               >
                 <Phone size={13} /> (888) 545-7715
               </a>
-              <a
+              {/* <a
                 href="mailto:info@pfsspraybooths.com"
                 style={{
                   display: "inline-flex",
@@ -472,7 +472,7 @@ export default function LegalPage() {
                 onMouseLeave={e => ((e.target as HTMLElement).style.color = "rgba(255,255,255,0.6)")}
               >
                 <Mail size={13} /> info@pfsspraybooths.com
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

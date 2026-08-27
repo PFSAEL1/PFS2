@@ -443,11 +443,11 @@ export default function NewsPage() {
             </p>
           </div>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <a data-animation="slideLeft" href="mailto:info@pfsspraybooths.com">
+            {/* <a data-animation="slideLeft" href="mailto:info@pfsspraybooths.com">
               <button className="btn-glow" style={{ fontFamily: "'Chakra Petch',sans-serif", fontWeight: 700, fontSize: "0.82rem", letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.85rem 2rem", cursor: "pointer", display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
                 EMAIL US <ArrowRight size={14} />
               </button>
-            </a>
+            </a> */}
             <a data-animation="slideRight" href="tel:8885457715">
               <button style={{ fontFamily: "'Chakra Petch',sans-serif", fontWeight: 700, fontSize: "0.82rem", letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.85rem 2rem", background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.5)", cursor: "pointer", transition: "border-color 0.2s" }}
                 onMouseEnter={e => (e.currentTarget.style.borderColor = "#fff")}

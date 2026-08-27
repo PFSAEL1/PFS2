@@ -78,13 +78,13 @@ export default function ContactHub() {
                       <a href="tel:8885457715" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.9rem", color: "#1a1a1a", fontWeight: 600 }}>(888) 545-7715</a>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
+                  {/* <div className="flex items-start gap-3">
                     <Mail size={16} style={{ color: "#FFFFFF", marginTop: "2px", flexShrink: 0 }} />
                     <div>
                       <div style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.82rem", color: "#888", marginBottom: "0.15rem" }}>Email</div>
                       <a href="mailto:info@pfsspraybooths.com" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.9rem", color: "#1a1a1a", fontWeight: 600 }}>info@pfsspraybooths.com</a>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="flex items-start gap-3">
                     <MapPin size={16} style={{ color: "#FFFFFF", marginTop: "2px", flexShrink: 0 }} />
                     <div>

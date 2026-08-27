@@ -400,9 +400,9 @@ export default function BecomeADistributorPage() {
               <a href="tel:+18885457715" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", color: "#fff", fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.88rem", fontWeight: 700, letterSpacing: "0.08em", textDecoration: "none" }}>
                 <Phone size={16} color={GOLD} /> (888) 545-7715
               </a>
-              <a href="mailto:info@pfsspraybooths.com" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", color: "#fff", fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.88rem", fontWeight: 700, letterSpacing: "0.08em", textDecoration: "none" }}>
+              {/* <a href="mailto:info@pfsspraybooths.com" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", color: "#fff", fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.88rem", fontWeight: 700, letterSpacing: "0.08em", textDecoration: "none" }}>
                 <Mail size={16} color={GOLD} /> info@pfsspraybooths.com
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
