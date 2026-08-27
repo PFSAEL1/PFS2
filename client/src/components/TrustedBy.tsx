@@ -26,6 +26,7 @@ const LOGOS: Logo[] = [
   { src: "/assets/missionbell-color_bec2319c.png",  alt: "Mission Bell",      h: 32 },
   { src: "/assets/pfs-logo-united-rentals_f3409286.png", alt: "United Rentals",  h: 44 },
   { src: "/assets/ael-logo-black_8bbd6f11.jpeg",           alt: "Advanced Extraction Labs (AEL)", h: 52 },
+    { src: "/assets/Dj.svg", alt: "Dj Engineering", h: 44},
 ];
 
 interface TrustedByProps {

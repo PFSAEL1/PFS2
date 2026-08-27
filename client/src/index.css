@@ -116,6 +116,7 @@ html.modal-open,
 body.modal-open {
   overflow: hidden !important;
 }
+
 .success-continue-btn {
 
   display: inline-flex;
@@ -140,9 +141,12 @@ body.modal-open {
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
- .raq-form .form-input:focus,.raq-form .form-input:active {
-    border-color: #ddd;
- }
+
+.raq-form .form-input:focus,
+.raq-form .form-input:active {
+  border-color: #ddd;
+}
+
 .success-continue-btn:hover {
   color: #fff !important;
   background: #0f1a30 !important;
@@ -207,6 +211,13 @@ body.modal-open {
   gap: 2.5rem 3.5rem;
 }
 
+.career-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
 .content-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -222,6 +233,12 @@ body.modal-open {
   justify-content: center;
   gap: 3rem;
   flex-wrap: wrap;
+}
+
+.site-responsive-card {
+  grid-template-columns: 1fr auto;
+  display: grid;
+  gap: 1rem;
 }
 
 .booth-feature {
@@ -359,6 +376,10 @@ body.modal-open {
     align-items: flex-start;
   }
 
+  .site-responsive-card {
+    grid-template-columns: 1fr ;
+  }
+
   .site-filter-row {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -374,6 +395,11 @@ body.modal-open {
   }
 
   .content-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .career-content-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }

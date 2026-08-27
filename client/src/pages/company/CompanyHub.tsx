@@ -13,7 +13,7 @@ const BLUE = "#1B3A6B";
 const GOLD = "#C8A84B";
 
 const HERO_VIDEO_MP4 = "/assets/pfs-facility-drone-hero_ca12546c.mp4";
-const HERO_POSTER    = "/assets/pfs-facility-building_bece7d21.jpg";
+// const HERO_POSTER    = "/assets/pfs-facility-building_bece7d21.jpg";
 const FACILITY_SIGN  = "/assets/pfs-facility-sign_9582dc74.jpg";
 const STORY_VIDEO    = "/assets/pfs-drone-facility_460ea18b.mp4";
 
@@ -99,7 +99,7 @@ export default function CompanyHub() {
 
       {/* ── HERO ── */}
       <section style={{ position: "relative", height: "clamp(420px, 60vh, 680px)", overflow: "hidden" }}>
-        <img src={HERO_POSTER} alt="PFS Platinum Finishing Systems facility in Santa Rosa California" aria-hidden="true" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", transition: "opacity 0.6s", opacity: videoLoaded ? 0 : 1 }} />
+        {/* <img src={HERO_POSTER} alt="PFS Platinum Finishing Systems facility in Santa Rosa California" aria-hidden="true" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%", transition: "opacity 0.6s", opacity: videoLoaded ? 0 : 1 }} /> */}
         <video preload="auto" ref={videoRef} playsInline muted loop style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center", opacity: videoLoaded ? 1 : 0, transition: "opacity 0.8s" }}>
           <source src={HERO_VIDEO_MP4} type="video/mp4" />
         </video>

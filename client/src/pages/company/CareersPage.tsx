@@ -78,9 +78,9 @@ export default function CareersPage() {
       {/* ── INTRO ── */}
       <section style={{ padding: "4rem 0", background: "#fff" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center" }}>
+          <div className="career-content-grid">
             <div>
-              <span className="section-label">Join Our Team</span>
+              <span style={{color:"#1b3a6b"}} className="section-label">Join Our Team</span>
               <h2 data-animation="slideLeft"   className="section-heading">Build Something That Lasts</h2>
               <p className="section-body" style={{ marginBottom: "1rem" }}>
                 PFS was founded in 2012 and has been engineering and manufacturing industrial finishing equipment in Santa Rosa, California with over 20 years of combined industry experience behind our team. We build spray paint booths, powder coating systems, industrial ovens, and blast equipment for customers across North America — from collision repair shops to aerospace facilities to military installations.
@@ -126,12 +126,12 @@ export default function CareersPage() {
       <section style={{ padding: "4rem 0", background: "#f5f5f5" }}>
         <div className="container">
           <div style={{ marginBottom: "2rem" }}>
-            <span className="section-label">Open Positions</span>
+            <span style={{color:"#1b3a6b"}} className="section-label">Open Positions</span>
             <h2 data-animation="slideLeft"  className="section-heading">Current Openings</h2>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
             {OPENINGS.map((job, i) => (
-              <div key={i} style={{ background: "#fff", border: "1px solid #e5e5e5", padding: "1.75rem", display: "grid", gridTemplateColumns: "1fr auto", gap: "1rem", alignItems: "center" }}>
+              <div  className="site-responsive-card"  key={i} style={{ background: "#fff", border: "1px solid #e5e5e5", padding: "1.75rem", gap: "1rem", alignItems: "center" }}>
                 <div>
                   <h3 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "1.1rem", fontWeight: 700, color: "#0D1117", textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: "0.4rem" }}>{job.title}</h3>
                   <div style={{ display: "flex", gap: "1.25rem", marginBottom: "0.75rem", flexWrap: "wrap" }}>
