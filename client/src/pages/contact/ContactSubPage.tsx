@@ -177,7 +177,9 @@ export default function ContactSubPage() {
           <div className="grid lg:grid-cols-3 gap-12">
 
             <div className="lg:col-span-2">
-              <span className="section-label">{content.formTitle}</span>
+              <span style={{ color: "var(--primary)" }} className="section-label">
+                {content.formTitle}
+              </span>
 
               <h2 data-animation="slideLeft" className="section-heading">
                 {content.title}
@@ -187,7 +189,7 @@ export default function ContactSubPage() {
                 {content.desc}
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-5 raq-form">
 
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
@@ -425,10 +427,9 @@ export default function ContactSubPage() {
                 color: "#555",
                 lineHeight: 1.65,
                 margin: "0 auto 1.5rem",
-                maxWidth: "380px",
               }}
             >
-              Thank you for contacting PFS. A PFS representative will contact
+              Thank you for contacting PFS. <br></br> A PFS representative will contact
               you shortly.
             </p>
 

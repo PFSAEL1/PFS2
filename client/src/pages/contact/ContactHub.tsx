@@ -1,12 +1,12 @@
 import PageHero from "@/components/PageHero";
 import { useSEO } from '@/hooks/useSEO';
 import { Link } from "wouter";
-import { Phone, Mail, MapPin } from "lucide-react";
-import { useState } from "react";
+import { Phone, Mail, MapPin, CheckCircle, X } from "lucide-react";
+import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import { submitLead } from "@/lib/submitLead";
 
-const IMG = "/assets/pfs-helios-enclosed-booth-real_2bc88039.jpeg" ;
+const IMG = "/assets/pfs-helios-enclosed-booth-real_2bc88039.jpeg";
 
 export default function ContactHub() {
   useSEO({
@@ -16,13 +16,63 @@ export default function ContactHub() {
   });
 
   const [form, setForm] = useState({ name: "", company: "", email: "", phone: "", message: "" });
+  const [submitted, setSubmitted] = useState(false);
 
-  function handleSubmit(e: React.FormEvent) {
+  // Prevent background page scrolling while success overlay is open
+  useEffect(() => {
+    if (!submitted) return;
+
+    const scrollY = window.scrollY;
+
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.width = "100%";
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.left = "";
+      document.body.style.right = "";
+      document.body.style.width = "";
+      document.body.style.overflow = "";
+
+      window.scrollTo(0, scrollY);
+    };
+  }, [submitted]);
+
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    submitLead({ name: form.name, company: form.company, email: form.email, phone: form.phone, message: form.message, formSource: "contact-general" });
-    toast.success("Message sent! A PFS representative will contact you shortly.");
-    setForm({ name: "", company: "", email: "", phone: "", message: "" });
+
+    try {
+      await submitLead({
+        name: form.name,
+        company: form.company,
+        email: form.email,
+        phone: form.phone,
+        message: form.message,
+        formSource: "contact-general",
+      });
+
+      setForm({
+        name: "",
+        company: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+
+      // Show success overlay
+      setSubmitted(true);
+    } catch (error) {
+      console.error("Form submission failed:", error);
+
+      toast.error("Something went wrong. Please try again.");
+    }
   }
+
 
   return (
     <div>
@@ -37,9 +87,9 @@ export default function ContactHub() {
         <div className="container">
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
-              <span className="section-label">Get in Touch</span>
+              <span style={{ color: "var(--primary)" }} className="section-label">Get in Touch</span>
               <h2 data-animation="slideLeft" className="section-heading">Send Us a Message</h2>
-              <form onSubmit={handleSubmit} className="space-y-5 mt-6">
+              <form onSubmit={handleSubmit} className="space-y-5 mt-6 raq-form">
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
                     <label className="form-label">Name *</label>
@@ -107,6 +157,133 @@ export default function ContactHub() {
           </div>
         </div>
       </section>
+      {/* =========================================
+    SUCCESS OVERLAY
+   ========================================= */}
+      {submitted && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="success-title"
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 9999,
+            background: "rgba(0, 0, 0, 0.65)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "1rem",
+          }}
+        >
+          {/* SUCCESS MODAL */}
+          <div
+            style={{
+              position: "relative",
+              width: "100%",
+              maxWidth: "480px",
+              background: "#fff",
+              padding: "2.5rem 2rem",
+              borderRadius: "4px",
+              textAlign: "center",
+              boxShadow: "0 20px 60px rgba(0, 0, 0, 0.3)",
+            }}
+          >
+            {/* CLOSE / EXIT BUTTON */}
+            <button
+              type="button"
+              aria-label="Close success message"
+              onClick={() => setSubmitted(false)}
+              style={{
+                position: "absolute",
+                top: "12px",
+                right: "12px",
+                width: "36px",
+                height: "36px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: 0,
+                border: "none",
+                background: "transparent",
+                color: "#555",
+                cursor: "pointer",
+                borderRadius: "50%",
+                transition: "all 0.2s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "#f1f1f1";
+                e.currentTarget.style.color = "#111";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "transparent";
+                e.currentTarget.style.color = "#555";
+              }}
+            >
+              <X size={20} strokeWidth={2} />
+            </button>
+
+            {/* SUCCESS ICON */}
+            <div
+              style={{
+                width: "64px",
+                height: "64px",
+                margin: "0 auto 1.25rem",
+                borderRadius: "50%",
+                background: "#EEF4FF",
+                color: "#1B3A6B",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <CheckCircle size={34} strokeWidth={2} />
+            </div>
+
+            {/* TITLE */}
+            <h2
+              id="success-title"
+              style={{
+                fontFamily:
+                  "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                fontSize: "clamp(1.35rem, 5vw, 1.75rem)",
+                fontWeight: 900,
+                color: "#111",
+                textTransform: "uppercase",
+                letterSpacing: "0.02em",
+                margin: "0 0 0.75rem",
+                lineHeight: 1.15,
+              }}
+            >
+              Submitted Successfully
+            </h2>
+
+            {/* MESSAGE */}
+            <p
+              style={{
+                fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
+                fontSize: "0.95rem",
+                color: "#555",
+                lineHeight: 1.65,
+                margin: "0 auto 1.5rem",
+              }}
+            >
+              Thank you for contacting PFS.<br></br> A PFS representative will contact
+              you shortly.
+            </p>
+
+            {/* CONTINUE BUTTON */}
+            <button
+              type="button"
+              onClick={() => setSubmitted(false)}
+              className="success-continue-btn"
+            >
+              Continue
+            </button>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }

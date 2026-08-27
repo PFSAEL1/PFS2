@@ -122,23 +122,17 @@ body.modal-open {
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-
   background-color: #1B3A6B;
   color: #fff;
-
   font-family: "Chakra Petch", sans-serif;
   font-size: 12.48px;
   font-weight: 700;
-
   border: 1.5px solid #6BA3E073;
   border-radius: 0;
-
   padding: 12px 28px;
-
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-
   transition:
     color 0.25s ease,
     background-color 0.25s ease,
@@ -146,7 +140,9 @@ body.modal-open {
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
-
+ .raq-form .form-input:focus,.raq-form .form-input:active {
+    border-color: #ddd;
+ }
 .success-continue-btn:hover {
   color: #fff !important;
   background: #0f1a30 !important;
