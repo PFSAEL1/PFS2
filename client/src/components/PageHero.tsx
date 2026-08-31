@@ -98,7 +98,8 @@ function PageHeroVideo({
       key={bgVideo}
       src={bgVideo}
       ref={videoRef}
-      preload="auto"
+      poster={bgPoster}
+      preload="metadata"
       autoPlay
       muted
       playsInline
@@ -170,8 +171,11 @@ export default function PageHero({
       ) : bgImage ? (
         <img
           src={bgImage}
-          alt="hero-banner-image"
+          alt={title ? `${title} banner` : "hero-banner-image"}
           aria-hidden="true"
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
           style={{
             position: "absolute",
             inset: 0,
@@ -181,7 +185,6 @@ export default function PageHero({
             objectPosition: bgImagePosition,
             display: "block",
             ...KB_STYLE,
-
           }}
         />
       ) : null}

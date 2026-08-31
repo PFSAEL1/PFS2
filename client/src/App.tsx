@@ -1,3 +1,4 @@
+import { lazy, Suspense, useEffect } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Redirect, Route, Switch, useLocation } from "wouter";
@@ -6,124 +7,124 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import MobileCTABar from "./components/MobileCTABar";
-
-// Pages
-import Home from "./pages/Home";
-import NotFound from "./pages/NotFound";
 import GlobalAnimations from "./GlobalAnimations";
 
+// Pages
+const Home = lazy(() => import("./pages/Home"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+
 // Products
-import ProductsHub from "./pages/products/ProductsHub";
-import PaintBoothsHub from "./pages/products/PaintBoothsHub";
-import OutdoorBoothPage from "./pages/products/OutdoorBoothPage";
-import ContainerBoothPage from "./pages/products/ContainerBoothPage";
-import EnclosedBoothsPage from "./pages/products/EnclosedBoothsPage";
-import SprinterVanBoothPage from "./pages/products/SprinterVanBoothPage";
-import PowderBoothsHub from "./pages/products/PowderBoothsHub";
-import OvensHub from "./pages/products/OvensHub";
-import PrepSupportHub from "./pages/products/PrepSupportHub";
-import PaintWallsPage from "./pages/products/PaintWallsPage";
-import BlastSystemsHub from "./pages/products/BlastSystemsHub";
-import AirMakeUpUnitsHub from "./pages/products/AirMakeUpUnitsHub";
-import HeatedAMUPage from "./pages/products/HeatedAMUPage";
-import EnvironmentalRoomsHub from "./pages/products/EnvironmentalRoomsHub";
-import TemperatureControlledRoomsPage from "./pages/products/TemperatureControlledRoomsPage";
-import PartsFiltersHub from "./pages/products/PartsFiltersHub";
-import ProductSubPage from "./pages/products/ProductSubPage";
-import SprayToWastePage from "./pages/products/SprayToWastePage";
-import PowderReclaimPage from "./pages/products/PowderReclaimPage";
-import AircraftBoothPage from "./pages/products/AircraftBoothPage";
-import CrossFlowBoothPage from "./pages/products/CrossFlowBoothPage";
-import OpenFaceBoothPage from "./pages/products/OpenFaceBoothPage";
-import CrossFlowAllPage from "./pages/products/CrossFlowAllPage";
-import SemiDowndraftBoothPage from "./pages/products/SemiDowndraftBoothPage";
-import FullDowndraftBoothPage from "./pages/products/FullDowndraftBoothPage";
-import DowndraftRaisedBasementPage from "./pages/products/DowndraftRaisedBasementPage";
-import SideDowndraftBoothPage from "@/pages/products/SideDowndraftBoothPage";
-import HeatedBoothPage from "@/pages/products/HeatedBoothPage";
-import DoubleWallBoothPage from '@/pages/products/DoubleWallBoothPage';
-import InspectionBoothPage from '@/pages/products/InspectionBoothPage';
-import TruckBoothsPage from '@/pages/products/TruckBoothsPage';
-import PrepHub from "./pages/products/PrepHub";
-import PrepStationsPage from "./pages/products/PrepStationsPage";
-import BatchOvenPage from "./pages/products/BatchOvenPage";
-import WalkInOvenPage from "./pages/products/WalkInOvenPage";
-import MixingRoomPage from "./pages/products/MixingRoomPage";
-import { BlastingBoothsPage, ReclaimBlastingBoothsPage } from "./pages/products/BlastingBoothPage";
-import WashBoothPage from "./pages/products/WashBoothPage";
-import HydrogenBusPage from "./pages/products/HydrogenBusPage";
+const ProductsHub = lazy(() => import("./pages/products/ProductsHub"));
+const PaintBoothsHub = lazy(() => import("./pages/products/PaintBoothsHub"));
+const OutdoorBoothPage = lazy(() => import("./pages/products/OutdoorBoothPage"));
+const ContainerBoothPage = lazy(() => import("./pages/products/ContainerBoothPage"));
+const EnclosedBoothsPage = lazy(() => import("./pages/products/EnclosedBoothsPage"));
+const SprinterVanBoothPage = lazy(() => import("./pages/products/SprinterVanBoothPage"));
+const PowderBoothsHub = lazy(() => import("./pages/products/PowderBoothsHub"));
+const OvensHub = lazy(() => import("./pages/products/OvensHub"));
+const PrepSupportHub = lazy(() => import("./pages/products/PrepSupportHub"));
+const PaintWallsPage = lazy(() => import("./pages/products/PaintWallsPage"));
+const BlastSystemsHub = lazy(() => import("./pages/products/BlastSystemsHub"));
+const AirMakeUpUnitsHub = lazy(() => import("./pages/products/AirMakeUpUnitsHub"));
+const HeatedAMUPage = lazy(() => import("./pages/products/HeatedAMUPage"));
+const EnvironmentalRoomsHub = lazy(() => import("./pages/products/EnvironmentalRoomsHub"));
+const TemperatureControlledRoomsPage = lazy(() => import("./pages/products/TemperatureControlledRoomsPage"));
+const PartsFiltersHub = lazy(() => import("./pages/products/PartsFiltersHub"));
+const ProductSubPage = lazy(() => import("./pages/products/ProductSubPage"));
+const SprayToWastePage = lazy(() => import("./pages/products/SprayToWastePage"));
+const PowderReclaimPage = lazy(() => import("./pages/products/PowderReclaimPage"));
+const AircraftBoothPage = lazy(() => import("./pages/products/AircraftBoothPage"));
+const CrossFlowBoothPage = lazy(() => import("./pages/products/CrossFlowBoothPage"));
+const OpenFaceBoothPage = lazy(() => import("./pages/products/OpenFaceBoothPage"));
+const CrossFlowAllPage = lazy(() => import("./pages/products/CrossFlowAllPage"));
+const SemiDowndraftBoothPage = lazy(() => import("./pages/products/SemiDowndraftBoothPage"));
+const FullDowndraftBoothPage = lazy(() => import("./pages/products/FullDowndraftBoothPage"));
+const DowndraftRaisedBasementPage = lazy(() => import("./pages/products/DowndraftRaisedBasementPage"));
+const SideDowndraftBoothPage = lazy(() => import("@/pages/products/SideDowndraftBoothPage"));
+const HeatedBoothPage = lazy(() => import("@/pages/products/HeatedBoothPage"));
+const DoubleWallBoothPage = lazy(() => import("@/pages/products/DoubleWallBoothPage"));
+const InspectionBoothPage = lazy(() => import("@/pages/products/InspectionBoothPage"));
+const TruckBoothsPage = lazy(() => import("@/pages/products/TruckBoothsPage"));
+const PrepHub = lazy(() => import("./pages/products/PrepHub"));
+const PrepStationsPage = lazy(() => import("./pages/products/PrepStationsPage"));
+const BatchOvenPage = lazy(() => import("./pages/products/BatchOvenPage"));
+const WalkInOvenPage = lazy(() => import("./pages/products/WalkInOvenPage"));
+const MixingRoomPage = lazy(() => import("./pages/products/MixingRoomPage"));
+const BlastingBoothsPage = lazy(() => import("./pages/products/BlastingBoothPage").then(m => ({ default: m.BlastingBoothsPage })));
+const ReclaimBlastingBoothsPage = lazy(() => import("./pages/products/BlastingBoothPage").then(m => ({ default: m.ReclaimBlastingBoothsPage })));
+const WashBoothPage = lazy(() => import("./pages/products/WashBoothPage"));
+const HydrogenBusPage = lazy(() => import("./pages/products/HydrogenBusPage"));
 
 // Industries
-import IndustriesHub from "./pages/industries/IndustriesHub";
-import IndustryPage from "./pages/industries/IndustryPage";
-import EducationPage from "./pages/industries/EducationPage";
-import WoodworkingPage from "./pages/industries/WoodworkingPage";
-import IndustrialManufacturingPage from "./pages/industries/IndustrialManufacturingPage";
-import AerospacePage from "./pages/industries/AerospacePage";
-import TruckBusFleetPage from "./pages/industries/TruckBusFleetPage";
-import CollisionRepairPage from "./pages/industries/CollisionRepairPage";
-import GovernmentMilitaryPage from "./pages/industries/GovernmentMilitaryPage";
-import MarinePage from "./pages/industries/MarinePage";
-import RailTransitPage from "./pages/industries/RailTransitPage";
-import AutomotiveManufacturingPage from "./pages/industries/AutomotiveManufacturingPage";
-import HeavyEquipmentPage from "@/pages/industries/HeavyEquipmentPage";
-import EnergyUtilitiesPage from "@/pages/industries/EnergyUtilitiesPage";
+const IndustriesHub = lazy(() => import("./pages/industries/IndustriesHub"));
+const IndustryPage = lazy(() => import("./pages/industries/IndustryPage"));
+const EducationPage = lazy(() => import("./pages/industries/EducationPage"));
+const WoodworkingPage = lazy(() => import("./pages/industries/WoodworkingPage"));
+const IndustrialManufacturingPage = lazy(() => import("./pages/industries/IndustrialManufacturingPage"));
+const AerospacePage = lazy(() => import("./pages/industries/AerospacePage"));
+const TruckBusFleetPage = lazy(() => import("./pages/industries/TruckBusFleetPage"));
+const CollisionRepairPage = lazy(() => import("./pages/industries/CollisionRepairPage"));
+const GovernmentMilitaryPage = lazy(() => import("./pages/industries/GovernmentMilitaryPage"));
+const MarinePage = lazy(() => import("./pages/industries/MarinePage"));
+const RailTransitPage = lazy(() => import("./pages/industries/RailTransitPage"));
+const AutomotiveManufacturingPage = lazy(() => import("./pages/industries/AutomotiveManufacturingPage"));
+const HeavyEquipmentPage = lazy(() => import("@/pages/industries/HeavyEquipmentPage"));
+const EnergyUtilitiesPage = lazy(() => import("@/pages/industries/EnergyUtilitiesPage"));
 
 // Integration & Automation
-import IntegrationHub from "./pages/integration/IntegrationHub";
-import IntegrationSubPage from "./pages/integration/IntegrationSubPage";
+const IntegrationHub = lazy(() => import("./pages/integration/IntegrationHub"));
+const IntegrationSubPage = lazy(() => import("./pages/integration/IntegrationSubPage"));
 
 // Service
-import ServiceHub from "./pages/service/ServiceHub";
-import ServiceSubPage from "./pages/service/ServiceSubPage";
-import HazLocServicesPage from "./pages/service/HazLocServicesPage";
-import SprayToWasteServicePage from "./pages/service/SprayToWasteServicePage";
-import PowderReclaimServicePage from "./pages/service/PowderReclaimServicePage";
+const ServiceHub = lazy(() => import("./pages/service/ServiceHub"));
+const ServiceSubPage = lazy(() => import("./pages/service/ServiceSubPage"));
+const HazLocServicesPage = lazy(() => import("./pages/service/HazLocServicesPage"));
+const SprayToWasteServicePage = lazy(() => import("./pages/service/SprayToWasteServicePage"));
+const PowderReclaimServicePage = lazy(() => import("./pages/service/PowderReclaimServicePage"));
 
 // Company
-import CompanyHub from "./pages/company/CompanyHub";
-import CompanySubPage from "./pages/company/CompanySubPage";
-import CareersPage from "./pages/company/CareersPage";
-import MeetTheTeamPage from "./pages/company/MeetTheTeamPage";
-import CertificationsPage from "./pages/company/CertificationsPage";
-import ManufacturingPage from "./pages/company/ManufacturingPage";
-import NewsPage from "./pages/company/NewsPage";
+const CompanyHub = lazy(() => import("./pages/company/CompanyHub"));
+const CompanySubPage = lazy(() => import("./pages/company/CompanySubPage"));
+const CareersPage = lazy(() => import("./pages/company/CareersPage"));
+const MeetTheTeamPage = lazy(() => import("./pages/company/MeetTheTeamPage"));
+const CertificationsPage = lazy(() => import("./pages/company/CertificationsPage"));
+const ManufacturingPage = lazy(() => import("./pages/company/ManufacturingPage"));
+const NewsPage = lazy(() => import("./pages/company/NewsPage"));
 
 // Resources
-import ResourcesHub from "./pages/resources/ResourcesHub";
-import ResourcesSubPage from "./pages/resources/ResourcesSubPage";
-import ResourcesFAQsPage from "./pages/resources/ResourcesFAQsPage";
+const ResourcesHub = lazy(() => import("./pages/resources/ResourcesHub"));
+const ResourcesSubPage = lazy(() => import("./pages/resources/ResourcesSubPage"));
+const ResourcesFAQsPage = lazy(() => import("./pages/resources/ResourcesFAQsPage"));
 
 // Blog
-import BlogHubPage from "./pages/blog/BlogHubPage";
-import BlogPricingGuidePage from "./pages/blog/BlogPricingGuidePage";
-import BlogCrossflowVsDowndraftPage from "./pages/blog/BlogCrossflowVsDowndraftPage";
-import BlogUL508AControlPanelPage from "./pages/blog/BlogUL508AControlPanelPage";
-import BlogMaintenanceChecklistPage from "./pages/blog/BlogMaintenanceChecklistPage";
+const BlogHubPage = lazy(() => import("./pages/blog/BlogHubPage"));
+const BlogPricingGuidePage = lazy(() => import("./pages/blog/BlogPricingGuidePage"));
+const BlogCrossflowVsDowndraftPage = lazy(() => import("./pages/blog/BlogCrossflowVsDowndraftPage"));
+const BlogUL508AControlPanelPage = lazy(() => import("./pages/blog/BlogUL508AControlPanelPage"));
+const BlogMaintenanceChecklistPage = lazy(() => import("./pages/blog/BlogMaintenanceChecklistPage"));
 
 // Contact
-import ContactHub from "./pages/contact/ContactHub";
-import ContactSubPage from "./pages/contact/ContactSubPage";
+const ContactHub = lazy(() => import("./pages/contact/ContactHub"));
+const ContactSubPage = lazy(() => import("./pages/contact/ContactSubPage"));
 
 // Parts
-import PartsHubPage from "./pages/parts/PartsHubPage";
+const PartsHubPage = lazy(() => import("./pages/parts/PartsHubPage"));
 
 // AEL Bridge
-import EnclosuresStorage from "./pages/EnclosuresStorage";
+const EnclosuresStorage = lazy(() => import("./pages/EnclosuresStorage"));
 // Landing Pages
-import IndustrialLandingPage from "./pages/landing/IndustrialLandingPage";
+const IndustrialLandingPage = lazy(() => import("./pages/landing/IndustrialLandingPage"));
 // Support
-import SupportPage from "./pages/SupportPage";
-import BecomeADistributorPage from "./pages/BecomeADistributorPage";
-import LegalPage from "./pages/LegalPage";
-import FiltersPage from "./pages/FiltersPage";
-import NeshapFiltersPage from "./pages/filters/NeshapFiltersPage";
-import CaliforniaFiltersPage from "./pages/filters/CaliforniaFiltersPage";
-import PaintBoothFiltersPage from "./pages/filters/PaintBoothFiltersPage";
-import CaliforniaServicePage from "./pages/CaliforniaServicePage";
-import LosAngelesServicePage from "@/pages/LosAngelesServicePage";
-import BayAreaServicePage from "@/pages/BayAreaServicePage";
-import { useEffect } from "react";
+const SupportPage = lazy(() => import("./pages/SupportPage"));
+const BecomeADistributorPage = lazy(() => import("./pages/BecomeADistributorPage"));
+const LegalPage = lazy(() => import("./pages/LegalPage"));
+const FiltersPage = lazy(() => import("./pages/FiltersPage"));
+const NeshapFiltersPage = lazy(() => import("./pages/filters/NeshapFiltersPage"));
+const CaliforniaFiltersPage = lazy(() => import("./pages/filters/CaliforniaFiltersPage"));
+const PaintBoothFiltersPage = lazy(() => import("./pages/filters/PaintBoothFiltersPage"));
+const CaliforniaServicePage = lazy(() => import("./pages/CaliforniaServicePage"));
+const LosAngelesServicePage = lazy(() => import("@/pages/LosAngelesServicePage"));
+const BayAreaServicePage = lazy(() => import("@/pages/BayAreaServicePage"));
 
 function LegacyAutomotiveRefinishRedirect() {
   return <Redirect to="/products/paint-booths" replace />;
@@ -137,12 +138,27 @@ function ScrollToTop() {
   return null;
 }
 
+function PageLoader() {
+  return (
+    <div className="w-full min-h-[50vh] flex flex-col items-center justify-center bg-[#f8f9fb] py-20">
+      <div className="w-10 h-10 border-3 border-[#1B3A6B]/20 border-t-[#1B3A6B] rounded-full animate-spin mb-3" />
+      <span className="text-xs font-semibold uppercase tracking-widest text-[#1B3A6B]/70 font-mono">
+        Loading...
+      </span>
+    </div>
+  );
+}
+
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col">
       <ScrollToTop />
       <Navbar />
-      <main className="flex-1">{children}</main>
+      <main className="flex-1">
+        <Suspense fallback={<PageLoader />}>
+          {children}
+        </Suspense>
+      </main>
       <Footer />
       {/* Sticky mobile CTA bar — only visible on mobile (<768px) */}
       <MobileCTABar />
