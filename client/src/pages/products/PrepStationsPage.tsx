@@ -14,7 +14,7 @@ const HERO_VIDEO = "/assets/pfs-prep-station-hero_2554e281.mp4";
 
 const GALLERY_IMGS = [
   // ── REAL INSTALL PHOTOS ──
-  { src: "/assets/prep-pfs-ceiling-bay_4951f2ee.png", alt: "PFS Orion Prep — ceiling-mounted bay with blue curtains and built-in lighting, factory install", pos: "center 40%" },
+  { src: "/assets/prep-pfs-ceiling-bay_4951f2ee.png", alt: "PFS Orion Prep — ceiling-mounted bay with blue curtains and built-in lighting, factory install", pos: "center 50%" },
   { src: "/assets/prep-multi-bay-bronze_254a9acf.webp", alt: "PFS Orion Prep — multi-bay prep station with PFS Bronze Edition signage, PFS", pos: "center 50%" },
   { src: "/assets/pfs-exhaust-wall-curtain-2133_325854c1.webp", alt: "PFS prep station — exterior view with blue curtain walls, exhaust stack, and PFS branding", pos: "center 50%" },
   { src: "/assets/prep-curtain-blue-close_04a96de3.webp", alt: "PFS prep station — close-up of blue vinyl curtain panels with clear vision strip", pos: "center 50%" },
@@ -31,7 +31,7 @@ const GALLERY_IMGS = [
   { src: "/assets/prep-featured-multi_cdce74a7.png", alt: "PFS Orion Prep — three-bay multi-bay render, ceiling-mounted, black curtains", pos: "center 50%" },
   // ── NEW INSTALL PHOTOS ──
   { src: "/assets/prep-station-front-shelves_6eb5db66.jpeg", alt: "PFS prep station — front view showing exhaust wall with open storage shelves below, factory floor", pos: "center 50%" },
-  { src: "/assets/prep-station-with-booth-wide_2c5f7c58.jpeg", alt: "PFS prep station and enclosed paint booth — wide install view showing full system layout", pos: "center 40%" },
+  { src: "/assets/prep-station-with-booth-wide_2c5f7c58.jpeg", alt: "PFS prep station and enclosed paint booth — wide install view showing full system layout", pos: "center 50%" },
 ];
 
 const ETL_LOGO = "/assets/pfs-etl-logo_7758f722.png";
@@ -588,8 +588,8 @@ export default function PrepStationsPage() {
               },
             ].map(cfg => (
               <div key={cfg.title} style={{ background: "#fff", border: "1px solid #e5e5e5", overflow: "hidden" }}>
-                <div style={{ height: 220, overflow: "hidden" }}>
-                  <img src={cfg.img} alt={cfg.title} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }} />
+                <div style={{ height: 280, overflow: "hidden" }}>
+                  <img src={cfg.img} alt={cfg.title} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 50%" }} />
                 </div>
                 <div style={{ padding: "1.5rem" }}>
                   <h3 style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 800, fontSize: "1.2rem", textTransform: "uppercase", color: "#111", margin: "0 0 0.75rem", letterSpacing: "0.04em" }}>{cfg.title}</h3>
@@ -598,6 +598,20 @@ export default function PrepStationsPage() {
                     {cfg.tags.map(t => (
                       <span key={t} style={{ background: "#f0f4ff", color: BLUE, fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", padding: "0.25rem 0.6rem", borderRadius: 2 }}>{t}</span>
                     ))}
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: "1rem",
+                      flexWrap: "wrap",
+                      marginTop: 40,
+
+                    }}
+                  >
+                    <Link data-animation="slideLeft" href="/products" className="btn-glow" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, letterSpacing: "0.1em", fontSize: "0.85rem", padding: "0.75rem 2rem", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
+                      View Products<ArrowRight size={15} />
+                    </Link>
+
                   </div>
                 </div>
               </div>
@@ -1058,19 +1072,46 @@ export default function PrepStationsPage() {
           <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 800, fontSize: "clamp(1.6rem,3vw,2.4rem)", textTransform: "uppercase", lineHeight: 1.05, color: "#fff", margin: "0 0 2rem" }}>
             ORION PREP GALLERY
           </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "0.75rem" }}>
+          <div
+            className="gallery-grid"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(4, 1fr)",
+              gap: "0.75rem",
+              width: "100%",
+              margin: "0 auto",
+            }}
+          >
             {GALLERY_IMGS.map((img, i) => (
               <div
                 key={i}
                 onClick={() => openLightbox(i)}
-                style={{ aspectRatio: "4/3", overflow: "hidden", cursor: "pointer", position: "relative", background: "#222" }}
+                style={{
+                  aspectRatio: "4 / 3",
+                  overflow: "hidden",
+                  cursor: "pointer",
+                  position: "relative",
+                  background: "#222",
+                  width: "100%",
+                }}
               >
                 <img
                   src={img.src}
                   alt={img.alt}
-                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: img.pos, transition: "transform 0.3s ease" }}
-                  onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.04)")}
-                  onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: img.pos || "center center",
+                    display: "block",
+                    transition: "transform 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "scale(1.04)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "scale(1)";
+                  }}
                 />
               </div>
             ))}

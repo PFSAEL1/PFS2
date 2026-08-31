@@ -205,7 +205,7 @@ export default function AircraftBoothPage() {
   useSEO({
     title: "Aircraft Paint Booths | Aerospace Spray Booths | PFS Industrial",
     description: "PFS aircraft paint booths are custom-engineered for commercial aerospace, military, and general aviation finishing. Large-format configurations, energy-efficient airflow, NFPA 33 compliant, ETL/UL listed components. Manufactured in Santa Rosa, CA.",
-    canonical: "/products/spray-booths/aircraft",
+    canonical: "https://pfsspraybooths.com/products/paint-booths/aircraft",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "FAQPage",

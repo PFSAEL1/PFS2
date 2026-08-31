@@ -306,7 +306,7 @@ export default function OutdoorBoothPage() {
   useSEO({
     title: "Outdoor Spray Booths | Exterior Paint Booths for Large Equipment | PFS",
     description: "PFS outdoor spray booths are engineered for large equipment, agricultural machinery, and structural steel finishing in outdoor environments. Weather-resistant construction, ETL/UL listed components, NFPA 33 compliant. Manufactured in Santa Rosa, CA.",
-    canonical: "/products/outdoor-booths/outdoor",
+    canonical: "https://pfsspraybooths.com/products/outdoor-booths",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Product",

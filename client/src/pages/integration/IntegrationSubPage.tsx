@@ -429,9 +429,9 @@ export default function IntegrationSubPage() {
             </div>
             <div>
               <img src={content.img} alt={`PFS ${content.title} — automated industrial finishing system`} className="w-full object-cover" style={{ height: "280px" }} />
-              {sub === "pretreatment-systems" && (
+              {/* {sub === "pretreatment-systems" && (
                 <img src={PRETREAT_SPRAY} alt="PFS pretreatment spray washer tunnel system" className="w-full object-cover mt-3" style={{ height: "220px" }} />
-              )}
+              )} */}
               <div className="mt-6 p-5 border border-gray-200">
                 <h4 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.9rem", fontWeight: 600, color: "#1a1a1a", letterSpacing: "0.04em", marginBottom: "0.75rem" }}>Start Your Project</h4>
                 <p style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.82rem", color: "#555", lineHeight: 1.7, marginBottom: "1rem" }}>Talk to a PFS systems engineer about your integration project.</p>

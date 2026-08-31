@@ -50,7 +50,7 @@ const FOOTER_COLS = [
       { label: "Service Plans", href: "/service/service-plans" },
       { label: "Retrofits & Upgrades", href: "/service/retrofits-upgrades" },
       { label: "Booth Inspections", href: "/service/booth-inspections" },
-      { label: "OEM Parts", href: "/service/oem-parts" },
+      { label: "OEM Parts", href: "/support" },
       { label: "Filters & Consumables", href: "https://pfsfilters.com", external: true },
       { label: "Technical Support", href: "/service/technical-support" },
     ],

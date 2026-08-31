@@ -11,7 +11,7 @@ import { Phone, ArrowRight, CheckCircle, ExternalLink } from "lucide-react";
 
 const BLUE = "#1B3A6B";
 const BLUE_LIGHT = "#2A5298";
-
+const HERO_VIDEO = "/assets/pfs-parts-filters-hero_9a1b0b80.mp4";
 
 const FILTER_TYPES = [
   {
@@ -19,42 +19,42 @@ const FILTER_TYPES = [
     subtitle: "Fiberglass & Polyester Media",
     desc: "Capture overspray before it reaches your exhaust fans and ductwork. PFS exhaust filters are available in fiberglass and polyester media, cut to fit all PFS booth models and most OEM brands. Proper exhaust filtration is required by NFPA 33 and local fire codes — and protects your fans, ductwork, and downstream equipment from paint buildup.",
     specs: ["Fiberglass media — standard duty", "Polyester media — extended service life", "Cut-to-fit for all PFS models", "NFPA 33 compliant media", "Available in bulk rolls or pre-cut panels"],
-    icon: "💨",
+    // icon: "💨",
   },
   {
     name: "Intake Filters",
     subtitle: "Tacky & Blanket Media",
     desc: "Keep incoming air clean and prevent airborne contaminants from entering your booth. PFS intake filters use tacky media to capture dust, debris, and particulates before they reach your work area. Blanket intake upgrades are available for heated booths requiring higher-efficiency filtration. Clean intake air is the foundation of a quality finish.",
     specs: ["Tacky media — standard intake", "Blanket intake upgrades (heated booths)", "Reduces contamination in finish", "Compatible with all PFS booth models", "Custom sizing available"],
-    icon: "🌬️",
+    // icon: "🌬️",
   },
   {
     name: "Ceiling Filters",
     subtitle: "Downdraft Booth Media",
     desc: "Downdraft spray booths require ceiling filter media to deliver clean, uniform airflow from the plenum into the work area. PFS ceiling filters are engineered for consistent face velocity and even air distribution — critical for achieving a defect-free finish on automotive, aerospace, and industrial work.",
     specs: ["Designed for downdraft booths", "Uniform face velocity distribution", "Reduces turbulence and contamination", "Available for all PFS downdraft models", "Replacement rolls and pre-cut panels"],
-    icon: "⬇️",
+    // icon: "⬇️",
   },
   {
     name: "Paint Arrest Filters",
     subtitle: "Multi-Stage Overspray Capture",
     desc: "Multi-stage paint arrest systems capture heavy overspray loads in high-volume production environments. Used in automated paint lines, powder coating booths, and high-throughput industrial finishing operations, paint arrest filters extend the service life of downstream exhaust media and protect your ventilation system from buildup.",
     specs: ["Multi-stage capture system", "High-volume production environments", "Powder coating booth compatible", "Extends downstream filter life", "Reduces maintenance frequency"],
-    icon: "🔴",
+    // icon: "🔴",
   },
   {
     name: "Carbon & Activated Media",
     subtitle: "VOC Capture & Odor Control",
     desc: "Activated carbon filters capture volatile organic compounds (VOCs) and solvent vapors from spray finishing operations. Required in some jurisdictions under CARB and AQMD air quality permits, carbon media helps facilities meet air quality compliance requirements while reducing odor impact on surrounding areas.",
     specs: ["VOC and solvent vapor capture", "CARB / AQMD compliance support", "Activated carbon media", "Available for exhaust systems", "Consultation available for permit requirements"],
-    icon: "⚗️",
+    // icon: "⚗️",
   },
   {
     name: "OEM Replacement Kits",
     subtitle: "All PFS Models — Current & Legacy",
     desc: "PFS stocks complete filter replacement kits for all current and legacy booth models — so you always get the right media in the right size. Using OEM filters ensures proper fit, correct face velocity, and warranty compliance. Our parts team can identify the correct filter specification for any PFS booth by model number.",
     specs: ["All current PFS models", "Legacy model support", "Correct media specification guaranteed", "Warranty-compliant OEM media", "Bulk order discounts available"],
-    icon: "📦",
+    // icon: "📦",
   },
 ];
 
@@ -110,89 +110,207 @@ export default function FiltersPage() {
     <div style={{ background: "#fff", minHeight: "100vh" }}>
 
       {/* HERO */}
-      <section style={{
-        position: "relative",
-        // overflow: "hidden",
-        minHeight: "460px",
-        display: "flex",
-        alignItems: "center",
-        borderBottom: "3px solid #111",
-        background: "#1C1C1E",
-      }}>
-        <div style={{
-          position: "absolute", inset: 0,
-          backgroundImage: "url('/assets/filters-cover.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          zIndex: 0,
-          opacity: 0.35,
-        }} />
-        <div style={{
-          position: "absolute", inset: 0,
-          // background: "linear-gradient(90deg, rgba(27,58,107,0.92) 0%, rgba(27,58,107,0.65) 60%, rgba(27,58,107,0.3) 100%)",
-          zIndex: 1,
-        }} />
-        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "4rem 2rem 3.5rem", position: "relative", zIndex: 2, width: "100%" }}>
-          <div style={{
-            fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-            fontSize: "0.72rem", fontWeight: 700,
-            color: "rgba(255,255,255,0.55)", letterSpacing: "0.18em",
-            textTransform: "uppercase", marginBottom: "0.75rem",
-            display: "flex", alignItems: "center", gap: "0.6rem",
-          }}>
-            <span style={{ display: "inline-block", width: "28px", height: "2px", background: BLUE_LIGHT }} />
+      <section
+        style={{
+          position: "relative",
+          height: "clamp(460px, 55vh, 580px)",
+          overflow: "hidden",
+          background: "#0a0a0a",
+        }}
+      >
+        {/* HERO VIDEO */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center center",
+            zIndex: 0,
+          }}
+        >
+          <source src={HERO_VIDEO} type="video/mp4" />
+        </video>
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            backgroundImage: "url('/assets/filters-cover.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            opacity: 0.2,
+            zIndex: 1,
+            pointerEvents: "none",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(to top, rgba(5,5,5,0.92) 0%, rgba(5,5,5,0.55) 40%, rgba(5,5,5,0.12) 80%, rgba(5,5,5,0) 100%)",
+            zIndex: 2,
+            pointerEvents: "none",
+          }}
+        />
+
+        {/* Blue accent line */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            height: "3px",
+            background: BLUE,
+            zIndex: 4,
+          }}
+        />
+
+        {/* HERO CONTENT */}
+        <div
+          style={{
+            position: "relative",
+            zIndex: 3,
+            maxWidth: "1200px",
+            margin: "0 auto",
+            padding: "0 2rem",
+            height: "100%",
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
+          {/* Eyebrow */}
+          <div
+            style={{
+              fontFamily:
+                "'Chakra Petch', 'Barlow Condensed', sans-serif",
+              fontSize: "0.72rem",
+              fontWeight: 700,
+              color: "rgba(255,255,255,0.6)",
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              marginBottom: "0.75rem",
+              display: "flex",
+              alignItems: "center",
+              gap: "0.6rem",
+            }}
+          >
+            <span
+              style={{
+                display: "inline-block",
+                width: "28px",
+                height: "2px",
+                background: BLUE_LIGHT,
+              }}
+            />
+
             PFS — SPRAY BOOTH FILTERS & REPLACEMENT MEDIA
           </div>
-          <h1 data-animation="slideLeft" style={{
-            fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-            fontSize: "clamp(2.4rem, 5vw, 3.8rem)", fontWeight: 900,
-            color: "#fff", lineHeight: 1.0, textTransform: "uppercase",
-            letterSpacing: "-0.01em", margin: "0 0 1rem",
-          }}>
-            Spray Booth<br />Filters
-          </h1>
-          <p data-animation="slideLeft" style={{
-            fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
-            fontSize: "clamp(0.88rem, 1.4vw, 1rem)",
-            color: "rgba(255,255,255,0.8)", lineHeight: 1.7,
-            maxWidth: "620px", margin: "0 0 1.75rem",
-          }}>
-            OEM exhaust filters, intake media, ceiling filters, and replacement kits for all PFS booth models and most major OEM brands. NFPA 33 compliant. Ships nationwide from our Northern California warehouse.
-          </p>
-          <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-            {/* <a data-animation="slideLeft" href="tel:8885457715" style={{
-              background: BLUE, color: "#fff",
-              border: "none", padding: "0.85rem 1.8rem",
-              fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-              fontSize: "0.85rem", fontWeight: 800,
-              letterSpacing: "0.1em", textTransform: "uppercase",
-              cursor: "pointer", borderRadius: "2px",
-              display: "inline-flex", alignItems: "center", gap: "0.4rem",
-              textDecoration: "none",
-            }}>
-              <Phone size={14} /> Call for Filters: (888) 545-7715
-            </a> */}
 
-            <a href="tel:+18885457715">
+          {/* Heading */}
+          <h1
+            data-animation="slideLeft"
+            style={{
+              fontFamily:
+                "'Chakra Petch', 'Barlow Condensed', sans-serif",
+              fontSize: "clamp(2.4rem, 5vw, 3.8rem)",
+              fontWeight: 900,
+              color: "#fff",
+              lineHeight: 1,
+              textTransform: "uppercase",
+              letterSpacing: "-0.01em",
+              margin: "0 0 1rem",
+            }}
+          >
+            Spray Booth
+            <br />
+            Filters
+          </h1>
+
+          {/* Description */}
+          <p
+            data-animation="slideLeft"
+            style={{
+              fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
+              fontSize: "clamp(0.9rem, 1.5vw, 1.05rem)",
+              color: "rgba(255,255,255,0.8)",
+              lineHeight: 1.6,
+              maxWidth: "620px",
+              margin: "0 0 1.75rem",
+            }}
+          >
+            OEM exhaust filters, intake media, ceiling filters, and replacement
+            kits for all PFS booth models and most major OEM brands. NFPA 33
+            compliant. Ships nationwide from our Northern California warehouse.
+          </p>
+
+          {/* Buttons */}
+          <div
+           className="hero-buttons"
+            style={{
+              display: "flex",
+              gap: "0.75rem",
+              flexWrap: "wrap",
+              alignItems: "center",
+            }}
+          >
+            {/* Call button */}
+            <a
+              data-animation="slideLeft"
+              href="tel:+18885457715"
+              style={{
+                textDecoration: "none",
+              }}
+            >
               <span
-                className="btn-primary"
-                style={{ fontSize: "0.78rem", padding: "0.7rem 1.75rem" }}
+                style={{
+                  background: BLUE,
+                  color: "#fff",
+                  border: "none",
+                  padding: "0.85rem 1.8rem",
+                  fontFamily:
+                    "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                  fontSize: "0.85rem",
+                  fontWeight: 800,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  cursor: "pointer",
+                  borderRadius: "2px",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.4rem",
+                  textDecoration: "none",
+                  boxSizing: "border-box",
+                }}
               >
-                <Phone size={14} /> Call for Filters: (888) 545-7715
+                <Phone size={14} />
+                Call for Filters: (888) 545-7715
               </span>
             </a>
+
+            {/* Order online */}
             <a
               data-animation="slideRight"
               href="https://pfsfilters.com"
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                fontFamily:
+                  "'Chakra Petch', 'Barlow Condensed', sans-serif",
                 fontWeight: 700,
                 fontSize: "0.85rem",
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
-                padding: "0.75rem 2rem",
+                padding: "0.85rem 1.8rem",
                 backgroundColor: "transparent",
                 color: "#fff",
                 border: "1.5px solid rgba(255,255,255,0.55)",
@@ -202,21 +320,27 @@ export default function FiltersPage() {
                 alignItems: "center",
                 gap: "0.4rem",
                 textDecoration: "none",
+                borderRadius: "2px",
+                boxSizing: "border-box",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = "#fff";
-                e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.08)";
+                e.currentTarget.style.backgroundColor =
+                  "rgba(255,255,255,0.08)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "rgba(255,255,255,0.55)";
+                e.currentTarget.style.borderColor =
+                  "rgba(255,255,255,0.55)";
                 e.currentTarget.style.backgroundColor = "transparent";
               }}
             >
-              Order Online at pfsfilters.com <ExternalLink size={13} />
+              Order Online at pfsfilters.com
+              <ExternalLink size={13} />
             </a>
           </div>
         </div>
       </section>
+
 
       {/* INTRO BODY COPY */}
       <section style={{ background: "#fff", padding: "4rem 2rem" }}>
@@ -540,7 +664,7 @@ export default function FiltersPage() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       style={{
-                       
+
                         transition: "transform 0.2s ease",
                       }}
                     >
