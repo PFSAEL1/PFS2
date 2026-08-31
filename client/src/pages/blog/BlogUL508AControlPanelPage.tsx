@@ -14,7 +14,7 @@ export default function BlogUL508AControlPanelPage() {
   useSEO({
     title: "What Is a UL508A Certified Control Panel and Why Does Your Spray Booth Need One?",
     description: "Learn why UL508A certified control panels are critical for spray booth safety, NFPA compliance, and passing local fire inspections.",
-    canonical: "https://pfsspraybooths.com/blog/ul508a-certified-control-panel-spray-booth",
+    canonical: "/blog/ul508a-certified-control-panel-spray-booth",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Article",

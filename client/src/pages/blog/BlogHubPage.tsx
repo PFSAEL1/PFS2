@@ -83,7 +83,7 @@ export default function BlogHubPage() {
         }
       ]
     },
-    canonical: "https://pfsspraybooths.com/blog",
+    canonical: "/blog",
   });
 
   return (

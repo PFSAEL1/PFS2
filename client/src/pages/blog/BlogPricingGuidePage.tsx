@@ -16,7 +16,7 @@ export default function BlogPricingGuidePage() {
   useSEO({
     title: "How Much Does an Industrial Spray Booth Cost in 2026?",
     description: "Wondering how much a commercial or industrial spray booth costs in 2026? Here is a complete pricing breakdown for crossflow, downdraft, and custom finishing systems.",
-    canonical: "https://pfsspraybooths.com/blog/how-much-does-industrial-spray-booth-cost",
+    canonical: "/blog/how-much-does-industrial-spray-booth-cost",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Article",

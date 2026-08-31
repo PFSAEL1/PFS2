@@ -14,7 +14,7 @@ export default function BlogMaintenanceChecklistPage() {
   useSEO({
     title: "Spray Booth Maintenance Checklist: When to Change Your Filters",
     description: "Keep your spray booth running safely and efficiently. Follow this complete spray booth maintenance and filter replacement checklist from the experts at PFS.",
-    canonical: "https://pfsspraybooths.com/blog/spray-booth-maintenance-filter-checklist",
+    canonical: "/blog/spray-booth-maintenance-filter-checklist",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Article",

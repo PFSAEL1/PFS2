@@ -43,7 +43,11 @@ function setLink(rel: string, href: string) {
 
 export function useSEO({ title, description, canonical, ogImage, jsonLd }: SEOOptions) {
   useEffect(() => {
-    const canonicalUrl = canonical ? `${BASE_URL}${canonical}` : `${BASE_URL}${window.location.pathname}`;
+    const canonicalUrl = canonical
+      ? (canonical.startsWith("http://") || canonical.startsWith("https://")
+          ? canonical
+          : `${BASE_URL}${canonical.startsWith("/") ? "" : "/"}${canonical}`)
+      : `${BASE_URL}${window.location.pathname}`;
     const ogImg = ogImage || DEFAULT_OG_IMAGE;
 
     // Title

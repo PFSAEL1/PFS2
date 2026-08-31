@@ -14,7 +14,7 @@ export default function BlogCrossflowVsDowndraftPage() {
   useSEO({
     title: "Crossflow vs. Downdraft Spray Booths: Which Is Right for Your Shop?",
     description: "Compare crossflow, semi-downdraft, and full downdraft spray booths. Learn the pros, cons, and costs of each airflow design to choose the right system for your shop.",
-    canonical: "https://pfsspraybooths.com/blog/crossflow-vs-downdraft-spray-booth",
+    canonical: "/blog/crossflow-vs-downdraft-spray-booth",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Article",
