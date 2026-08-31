@@ -140,7 +140,7 @@ export default function FiltersPage() {
           style={{
             position: "absolute",
             inset: 0,
-            backgroundImage: "url('/assets/filters-cover.png')",
+            // backgroundImage: "url('/assets/filters-cover.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",

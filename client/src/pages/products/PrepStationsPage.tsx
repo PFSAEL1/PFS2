@@ -8,6 +8,28 @@ import { Link } from "wouter";
 import { ChevronDown, ChevronUp, ArrowRight, Phone } from "lucide-react";
 import { SiteProductCardSection } from "@/components/SiteProductCard";
 import { useSEO } from "@/hooks/useSEO";
+import { GalleryGrid } from "@/components/GalleryLightbox";
+
+const GALLERY_IMAGE_01 = "/assets/prep-pfs-ceiling-bay_4951f2ee.png";
+const GALLERY_IMAGE_02 = "/assets/prep-multi-bay-bronze_254a9acf.webp";
+const GALLERY_IMAGE_03 = "/assets/pfs-exhaust-wall-curtain-2133_325854c1.webp";
+const GALLERY_IMAGE_04 = "/assets/prep-curtain-blue-close_04a96de3.webp";
+const GALLERY_IMAGE_05 = "/assets/prep-curtain-blue-interior_b13d3bd7.png";
+const GALLERY_IMAGE_06 = "/assets/prep-curtain-red-car_4caad6b9.jpg";
+const GALLERY_IMAGE_07 = "/assets/prep-install-1998_a6cdee6e.jpg";
+const GALLERY_IMAGE_08 = "/assets/prep-install-1997_8fa14562.jpg";
+const GALLERY_IMAGE_09 = "/assets/prep-install-0301_065f1881.jpg";
+const GALLERY_IMAGE_10 = "/assets/prep-install-0298_fef36a62.jpg";
+const GALLERY_IMAGE_11 = "/assets/prep-install-8990_8ffd823f.jpg";
+const GALLERY_IMAGE_12 = "/assets/IMG_8990_a26ad617.jpg";
+
+const GALLERY_IMAGE_13 = "/assets/prep-featured-single_efec884d.png";
+const GALLERY_IMAGE_14 = "/assets/prep-featured-multi_cdce74a7.png";
+
+const GALLERY_IMAGE_15 = "/assets/prep-station-front-shelves_6eb5db66.jpeg";
+const GALLERY_IMAGE_16 = "/assets/prep-station-with-booth-wide_2c5f7c58.jpeg";
+
+
 
 /* ── IMAGES ── */
 const HERO_VIDEO = "/assets/pfs-prep-station-hero_2554e281.mp4";
@@ -1072,7 +1094,7 @@ export default function PrepStationsPage() {
           <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 800, fontSize: "clamp(1.6rem,3vw,2.4rem)", textTransform: "uppercase", lineHeight: 1.05, color: "#fff", margin: "0 0 2rem" }}>
             ORION PREP GALLERY
           </h2>
-          <div
+          {/* <div
             className="gallery-grid"
             style={{
               display: "grid",
@@ -1115,7 +1137,82 @@ export default function PrepStationsPage() {
                 />
               </div>
             ))}
-          </div>
+          </div> */}
+          <GalleryGrid
+            images={[
+              {
+                src: GALLERY_IMAGE_01,
+                alt: "PFS Orion Prep — ceiling-mounted bay with blue curtains and built-in lighting, factory install",
+              },
+              {
+                src: GALLERY_IMAGE_02,
+                alt: "PFS Orion Prep — multi-bay prep station with PFS Bronze Edition signage, PFS",
+              },
+              {
+                src: GALLERY_IMAGE_03,
+                alt: "PFS prep station — exterior view with blue curtain walls, exhaust stack, and PFS branding",
+              },
+              {
+                src: GALLERY_IMAGE_04,
+                alt: "PFS prep station — close-up of blue vinyl curtain panels with clear vision strip",
+              },
+              {
+                src: GALLERY_IMAGE_05,
+                alt: "PFS prep station — interior view of blue curtain bay with exhaust filter wall and PFS branding",
+              },
+              {
+                src: GALLERY_IMAGE_06,
+                alt: "PFS prep station — curtain bay with vehicle inside, red lower curtain and clear upper panels",
+              },
+              {
+                src: GALLERY_IMAGE_07,
+                alt: "PFS prep station install — real field photo 1",
+              },
+              {
+                src: GALLERY_IMAGE_08,
+                alt: "PFS prep station install — real field photo 2",
+              },
+              {
+                src: GALLERY_IMAGE_09,
+                alt: "PFS prep station install — real field photo 3",
+              },
+              {
+                src: GALLERY_IMAGE_10,
+                alt: "PFS prep station install — real field photo 4",
+              },
+              {
+                src: GALLERY_IMAGE_11,
+                alt: "PFS prep station install — real field photo 5",
+              },
+              {
+                src: GALLERY_IMAGE_12,
+                alt: "PFS prep station — exhaust wall with filter media, real install photo",
+              },
+
+              // Renders
+              {
+                src: GALLERY_IMAGE_13,
+                alt: "PFS Orion Prep — single-bay render, angled view, black curtains and green filter media",
+              },
+              {
+                src: GALLERY_IMAGE_14,
+                alt: "PFS Orion Prep — three-bay multi-bay render, ceiling-mounted, black curtains",
+              },
+
+              // New install photos
+              {
+                src: GALLERY_IMAGE_15,
+                alt: "PFS prep station — front view showing exhaust wall with open storage shelves below, factory floor",
+              },
+              {
+                src: GALLERY_IMAGE_16,
+                alt: "PFS prep station and enclosed paint booth — wide install view showing full system layout",
+              },
+            ]}
+            cardHeight="clamp(220px,30vw,360px)"
+          />
+
+
         </div>
       </section>
 
