@@ -483,7 +483,7 @@ export default function CollisionRepairPage() {
               { src: GALLERY_KIA_INSIDE2,alt: "Kia sedan in PFS booth with technician" },
               { src: GALLERY_BOOTH_EXT,  alt: "PFS Helios booth exterior — car visible through glass doors" },
               { src: GALLERY_SPRINTER,   alt: "Mercedes Sprinter van inside PFS paint booth" },
-              { src: GALLERY_0633, alt: "PFS Helios collision repair booth — shop installation wide view" }
+              { src: GALLERY_0633, alt: "PFS Helios collision repair booth — shop installation wide view" },
               { src: GALLERY_0544, alt: "PFS collision repair booth — control panel and fire suppression" },
               { src: GALLERY_0087, alt: "PFS collision repair booth — field installation" },
               { src: GALLERY_MULTI, alt: "PFS multi-booth collision repair showroom floor" },

@@ -74,16 +74,7 @@
       "destination": "/blog/ul508a-certified-control-panel-spray-booth",
       "permanent": true
     },
-    {
-      "source": "/filters",
-      "destination": "/parts/filters",
-      "permanent": true
-    },
-    {
-      "source": "/filters/",
-      "destination": "/parts/filters",
-      "permanent": true
-    },
+  
     {
       "source": "/automotive-refinish",
       "destination": "/products/paint-booths",

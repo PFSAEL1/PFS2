@@ -138,15 +138,15 @@ export default function FiltersPage() {
         </video>
         <div
           style={{
-            position: "absolute",
-            inset: 0,
+            // position: "absolute",
+            // inset: 0,
             // backgroundImage: "url('/assets/filters-cover.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            opacity: 0.2,
-            zIndex: 1,
-            pointerEvents: "none",
+            // backgroundSize: "cover",
+            // backgroundPosition: "center",
+            // backgroundRepeat: "no-repeat",
+            // opacity: 0.2,
+            // zIndex: 1,
+            // pointerEvents: "none",
           }}
         />
         <div
