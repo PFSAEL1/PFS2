@@ -12,18 +12,26 @@ import { SiteProductCardSection } from "@/components/SiteProductCard";
 import { useSEO } from "@/hooks/useSEO";
 
 const HERO_IMG = "/assets/spray-to-waste-hero_2fe77f1d.jpg";
-const FEATURED_IMG = "/assets/pfs-stw-4208_b899a28f.jpg";
+const FEATURED_IMG = "/assets/WhatsApp Image 2026-09-02 at 3.23.14 AM (1).jpeg";
+// const FEATURED_IMG = "/assets/pfs-stw-4208_b899a28f.jpg";
 
 
 const GALLERY_IMGS = [
-  { src: "/assets/pfs-stw-4208_b899a28f.jpg", alt: "PFS spray-to-waste powder booth — exterior view, enclosed white enclosure", pos: "center 50%" },
-  { src: "/assets/pfs-stw-7010_4c202b9d.jpg", alt: "PFS spray-to-waste powder booth — interior view with filter modules", pos: "center 50%" },
-  { src: "/assets/pfs-stw-8411_efbc079f.jpg", alt: "PFS spray-to-waste powder booth — side view", pos: "center 50%" },
-  { src: "/assets/spray-to-waste-pfs-booth-blue-unit_1f718c28.webp", alt: "PFS spray-to-waste powder booth — blue filter module unit", pos: "center 50%" },
-  { src: "/assets/pfs-stw-action1_5dd2f4d4.webp", alt: "PFS spray-to-waste powder booth — powder coating in action", pos: "center 40%" },
-  { src: "/assets/pfs-stw-action2_4d74a007.webp", alt: "PFS spray-to-waste powder booth — operator applying powder coating", pos: "center 40%" },
-  { src: "/assets/spray-to-waste-aerospace-composite_3907664d.png", alt: "PFS spray-to-waste powder booth — aerospace composite part application", pos: "center 50%" },
+  { src: "/assets/WhatsApp Image 2026-09-02 at 3.23.17 AM.jpeg", alt: "PFS spray-to-waste powder booth — exterior view, enclosed white enclosure", pos: "center 50%" },
+  { src: "/assets/WhatsApp Image 2026-09-02 at 3.23.14 AM (1).jpeg", alt: "PFS spray-to-waste powder booth — interior view with filter modules", pos: "center 50%" },
+  { src: "/assets/WhatsApp Image 2026-09-02 at 3.23.14 AM.jpeg", alt: "PFS spray-to-waste powder booth — side view", pos: "center 50%" },
+  // { src: "/assets/WhatsApp Video 2026-09-02 at 3.23.16 AM.mp4", alt: "PFS spray-to-waste powder booth — blue filter module unit", pos: "center 50%" },
 ];
+
+// const GALLERY_IMGS = [
+//   { src: "/assets/pfs-stw-4208_b899a28f.jpg", alt: "PFS spray-to-waste powder booth — exterior view, enclosed white enclosure", pos: "center 50%" },
+//   { src: "/assets/pfs-stw-7010_4c202b9d.jpg", alt: "PFS spray-to-waste powder booth — interior view with filter modules", pos: "center 50%" },
+//   { src: "/assets/pfs-stw-8411_efbc079f.jpg", alt: "PFS spray-to-waste powder booth — side view", pos: "center 50%" },
+//   { src: "/assets/spray-to-waste-pfs-booth-blue-unit_1f718c28.webp", alt: "PFS spray-to-waste powder booth — blue filter module unit", pos: "center 50%" },
+//   { src: "/assets/pfs-stw-action1_5dd2f4d4.webp", alt: "PFS spray-to-waste powder booth — powder coating in action", pos: "center 40%" },
+//   { src: "/assets/pfs-stw-action2_4d74a007.webp", alt: "PFS spray-to-waste powder booth — operator applying powder coating", pos: "center 40%" },
+//   { src: "/assets/spray-to-waste-aerospace-composite_3907664d.png", alt: "PFS spray-to-waste powder booth — aerospace composite part application", pos: "center 50%" },
+// ];
 
 const ETL_LOGO = "/assets/pfs-etl-logo_7758f722.png";
 const UL_LOGO = "/assets/pfs-ul508a-clean_e8efdeb8.jpg";
@@ -292,7 +300,8 @@ export default function SprayToWastePage() {
               preload="auto"
               style={{ width: "100%", display: "block", maxHeight: 540, objectFit: "cover" }}
             >
-              <source src="/assets/pfs-stw-action-clip_ba3b60d0.mp4" type="video/mp4" />
+              <source src="/assets/WhatsApp Video 2026-09-02 at 3.23.16 AM.mp4" type="video/mp4" />
+              {/* <source src="/assets/pfs-stw-action-clip_ba3b60d0.mp4" type="video/mp4" /> */}
             </video>
           </div>
         </div>
