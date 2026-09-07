@@ -140,7 +140,7 @@ export default function BecomeADistributorPage() {
     <div style={{ background: "#fff" }}>
 
       {/* ── HERO ── */}
-      <section style={{ position: "relative", minHeight: "clamp(480px, 65vh, 720px)", display: "flex", alignItems: "flex-end", overflow: "hidden" }}>
+      <section style={{ position: "relative", minHeight: "clamp(480px, 65vh, 720px)", display: "flex", alignItems: "center", overflow: "hidden" }}>
         <img
           src={HELIOS_HERO}
           alt="PFS Helios Series enclosed spray booth"
@@ -149,7 +149,7 @@ export default function BecomeADistributorPage() {
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(10,20,40,0.92) 0%, rgba(10,20,40,0.55) 55%, rgba(10,20,40,0.2) 100%)" }} />
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "3px", background: GOLD, zIndex: 3 }} />
 
-        <div className="container" style={{ position: "relative", zIndex: 2, paddingBottom: "4rem", paddingTop: "6rem" }}>
+        <div className="container site-res-content-wrapper" style={{ position: "relative", zIndex: 2 }}>
           <div style={{ maxWidth: 680 }}>
             <p style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.2em", color: GOLD, textTransform: "uppercase", marginBottom: "0.8rem" }}>
               Partnership Program

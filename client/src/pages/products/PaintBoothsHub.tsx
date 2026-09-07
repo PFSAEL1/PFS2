@@ -143,7 +143,7 @@ export default function PaintBoothsHub() {
   return (
     <div>
       {/* ── HERO — full-bleed video, text overlaid at bottom (matches Aerospace format) ── */}
-      <section style={{ position: "relative", minHeight: "70vh", display: "flex", flexDirection: "column", justifyContent: "flex-end", overflow: "hidden" }}>
+      <section style={{ position: "relative", minHeight: "70vh", display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden" }}>
         <video preload="auto"
           autoPlay
           muted
@@ -160,7 +160,7 @@ export default function PaintBoothsHub() {
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(5,5,5,0.95) 0%, rgba(5,5,5,0.65) 35%, rgba(5,5,5,0.25) 70%, rgba(5,5,5,0.08) 100%)" }} />
         {/* Blue accent line at bottom */}
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "3px", background: "#1B3A6B", zIndex: 3 }} />
-        <div className="container" style={{ position: "relative", zIndex: 2, paddingTop: "8rem", paddingBottom: "4.5rem" }}>
+        <div className="container site-hero-content-wrapper" style={{ position: "relative", zIndex: 2 }}>
           <div style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.68rem", color: "rgba(255,255,255,0.45)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: "0.85rem", display: "flex", gap: "0.4rem", alignItems: "center" }}>
             <Link href="/"><span style={{ cursor: "pointer", color: "rgba(255,255,255,0.45)" }}>Home</span></Link>
             <span style={{ color: "rgba(255,255,255,0.2)" }}>/</span>

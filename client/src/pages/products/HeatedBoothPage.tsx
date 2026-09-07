@@ -217,7 +217,7 @@ export default function HeatedBoothPage() {
           minHeight: "clamp(520px, 70vh, 680px)",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "flex-end",
+          justifyContent: "center",
           overflow: "hidden",
           background: "#0a0a0a",
         }}

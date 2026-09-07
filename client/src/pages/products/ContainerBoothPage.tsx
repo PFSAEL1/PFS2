@@ -202,7 +202,7 @@ export default function ContainerBoothPage() {
           </video>
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 55%, rgba(0,0,0,0.1) 100%)", zIndex: 1 }} />
         </div>
-        <div className="container" style={{ position: "relative", zIndex: 2, padding: "5rem 0 4rem" }}>
+        <div className="container" style={{ position: "relative", zIndex: 2, paddingTop: "5rem", paddingBottom: "4rem" }}>
           <nav style={{ marginBottom: "1.5rem" }}>
             <span style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.7rem", color: "rgba(255,255,255,0.45)", letterSpacing: "0.08em", textTransform: "uppercase" }}>
               <Link href="/"><span style={{ cursor: "pointer", color: "rgba(255,255,255,0.45)" }}>HOME</span></Link>{" / "}

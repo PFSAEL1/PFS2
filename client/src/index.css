@@ -124,8 +124,36 @@ body.modal-open {
   margin: 0 auto;
 }
 
-.success-continue-btn {
+.site-hero-content-wrapper {
+  padding-top: 8rem;
+  padding-bottom: 4.5rem;
+}
 
+.site-career-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: flex-end;
+  /* Desktop: bottom */
+}
+
+.site-career-wrapper .container {
+  width: 100%;
+  padding-top: 0 !important;
+  padding-bottom: 2rem !important;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.site-res-content-wrapper {
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+}
+
+.success-continue-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -313,6 +341,30 @@ body.modal-open {
     overflow-wrap: break-word;
     word-break: break-all;
   }
+
+  .site-hero-content-wrapper {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .site-res-content-wrapper {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .site-career-wrapper {
+    align-items: center;
+  }
+
+  .site-career-wrapper .container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    text-align: left;
+  }
+
+
+
+
 
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr) !important;
@@ -1268,7 +1320,7 @@ body.modal-open {
 
   /* Hero: reduce top padding so CTA is above fold */
   .hero-content-wrapper {
-    padding-top: 6rem !important;
+    padding-top: 4rem !important;
     padding-bottom: 4rem !important;
   }
 

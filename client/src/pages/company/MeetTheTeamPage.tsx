@@ -220,12 +220,7 @@ export default function MeetTheTeamPage() {
 
         {/* Container */}
         <div
-          style={{
-            position: "absolute",
-            bottom: 0,
-            left: 0,
-            right: 0,
-          }}
+          className="site-career-wrapper"
         >
           <div className="container"
             style={{
@@ -295,7 +290,7 @@ export default function MeetTheTeamPage() {
       </div>
 
       {/* ── Leadership ── */}
-      <section className="container" style={{ paddingTop: "1rem",paddingBottom: "4rem" }}>
+      <section className="container" style={{ paddingTop: "1rem", paddingBottom: "4rem" }}>
         <SectionHeader label="LEADERSHIP" />
         <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.5rem" }}>
           {LEADERSHIP.map(m => <LeaderCard key={m.name} member={m} />)}
@@ -303,7 +298,7 @@ export default function MeetTheTeamPage() {
       </section>
 
       {/* ── Management ── */}
-      <section className="container" style={{ paddingTop: "1rem",paddingBottom: "4rem"}}>
+      <section className="container" style={{ paddingTop: "1rem", paddingBottom: "4rem" }}>
         <SectionHeader label="MANAGEMENT" />
         <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "1.25rem" }}>
           {MANAGEMENT.map(m => <TeamCard key={m.name} member={m} />)}
@@ -311,7 +306,7 @@ export default function MeetTheTeamPage() {
       </section>
 
       {/* ── Team ── */}
-      <section className="container" style={{ paddingTop: "1rem",paddingBottom: "4rem" }}>
+      <section className="container" style={{ paddingTop: "1rem", paddingBottom: "4rem" }}>
         <SectionHeader label="THE TEAM" />
         <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))", gap: "1.1rem" }}>
           {TEAM.map(m => <TeamCard key={m.name} member={m} />)}

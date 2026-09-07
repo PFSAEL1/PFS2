@@ -186,7 +186,7 @@ export default function WalkInOvenPage() {
         <img src={HERO_IMG} alt="PFS VULCAN walk-in oven" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(5,5,5,0.96) 0%, rgba(5,5,5,0.72) 38%, rgba(5,5,5,0.35) 70%, rgba(5,5,5,0.12) 100%)" }} />
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "3px", background: BLUE, zIndex: 3 }} />
-        <div className="container" style={{ position: "relative", zIndex: 2, paddingTop: "8rem", paddingBottom: "3.5rem" }}>
+        <div className="container site-hero-content-wrapper" style={{ position: "relative", zIndex: 2 }}>
           <nav
             className="walkin-breadcrumb"
             style={{

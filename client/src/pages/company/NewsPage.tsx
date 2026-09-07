@@ -76,8 +76,7 @@ export default function NewsPage() {
           overflow: "hidden",
           minHeight: "55vh",
           display: "flex",
-          alignItems: "flex-end",
-          paddingTop: "7rem",
+          alignItems: "flex-end"
         }}
       >
         {/* Dark overlay for text readability */}
@@ -96,6 +95,7 @@ export default function NewsPage() {
           style={{
             position: "relative",
             zIndex: 2,
+            paddingTop: "3.5rem",
             paddingBottom: "3.5rem",
           }}
         >
