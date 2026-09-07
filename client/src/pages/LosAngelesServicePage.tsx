@@ -237,23 +237,23 @@ export default function LosAngelesServicePage() {
             Los Angeles · Long Beach · Anaheim · Riverside · San Bernardino · Orange County · Ventura County · Inland Empire
           </p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-            <a data-animation="slideLeft"
+            {/* <a data-animation="slideLeft"
               href="tel:8885457715"
               style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#1e3a6e", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "2px solid #1e3a6e" }}
               onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#2a4f96"; el.style.boxShadow = "0 0 18px rgba(30,58,110,0.7)"; }}
               onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#1e3a6e"; el.style.boxShadow = "none"; }}
             >
               <Phone size={14} /> CALL (888) 545-7715
-            </a>
-            <Link data-animation="fadeIn"
+            </a> */}
+            <Link data-animation="slideRight"
               href="/contact/service-request"
               style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "2px solid rgba(255,255,255,0.5)" }}
               onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "rgba(255,255,255,0.12)"; el.style.boxShadow = "0 0 18px rgba(255,255,255,0.2)"; }}
               onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "transparent"; el.style.boxShadow = "none"; }}
             >
-              REQUEST SERVICE <ArrowRight size={14} />
+              REQUEST Info <ArrowRight size={14} />
             </Link>
-            <a data-animation="slideRight"
+            {/* <a data-animation="slideRight"
               href="https://pfsfilters.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -262,7 +262,7 @@ export default function LosAngelesServicePage() {
               onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "rgba(255,255,255,0.12)"; el.style.boxShadow = "none"; }}
             >
               <Filter size={14} /> PFS FILTERS
-            </a>
+            </a> */}
           </div>
         </div>
       </section>

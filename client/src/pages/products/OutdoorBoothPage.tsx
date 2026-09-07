@@ -396,11 +396,11 @@ export default function OutdoorBoothPage() {
               <span
                 className="btn-glow flex w-full md:w-auto items-center justify-center"
               >
-                GET PRICING <ArrowRight size={16} />
+                Request Info <ArrowRight size={16} />
               </span>
             </Link>
 
-            <a
+            {/* <a
               data-animation="slideRight"
               href="tel:8885457715"
               className="block w-full md:w-auto"
@@ -424,7 +424,7 @@ export default function OutdoorBoothPage() {
               >
                 CALL (888) 545-7715
               </span>
-            </a>
+            </a> */}
           </div>
         </div>
       </section>

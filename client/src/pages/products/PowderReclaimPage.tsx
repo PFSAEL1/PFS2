@@ -240,11 +240,11 @@ export default function PowderReclaimPage() {
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
             <Link data-animation="slideLeft" href="/contact/request-a-quote?from=powder-reclaim">
-              <span className="btn-glow" style={{ justifyContent: "center" }}>GET PRICING <ArrowRight size={16} /></span>
+              <span className="btn-glow" style={{ justifyContent: "center" }}>Request Info <ArrowRight size={16} /></span>
             </Link>
-            <a data-animation="slideRight" href="tel:8885457715">
+            {/* <a data-animation="slideRight" href="tel:8885457715">
               <span className="btn-glow-white" style={{ background: "transparent", color: "#fff", justifyContent: "center" }}>CALL (888) 545-7715</span>
-            </a>
+            </a> */}
           </div>
         </div>
       </section>

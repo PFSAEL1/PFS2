@@ -19,32 +19,32 @@ import { SiteProductCardSection } from "@/components/SiteProductCard";
 import { useSEO } from "@/hooks/useSEO";
 
 // ── IMAGES ────────────────────────────────────────────────────────────────────
-const HERO_IMG      = "/assets/pfs-heavy-equip-hero_126eff72.jpg";
-const HERO_VIDEO    = "/assets/pfs-heavy-equip-hero_e8cc5ad9.mp4";
-const FEATURED_IMG  = "/assets/pfs-heavy-equip-featured_88fd415c.jpg";
-const GALLERY_1     = "/assets/pfs-heavy-equip-gallery-4699_6cce56cb.jpg";
-const GALLERY_2     = "/assets/pfs-heavy-equip-gallery-1690_3bc692e9.jpg";
-const GALLERY_3     = "/assets/pfs-heavy-equip-gallery-14371_149ca544.jpg";
-const GALLERY_4     = "/assets/pfs-heavy-equip-gallery-1860_5524160a.jpg";
-const GALLERY_5     = "/assets/pfs-heavy-equip-gallery-874_7da53ce0.jpg";
+const HERO_IMG = "/assets/pfs-heavy-equip-hero_126eff72.jpg";
+const HERO_VIDEO = "/assets/pfs-heavy-equip-hero_e8cc5ad9.mp4";
+const FEATURED_IMG = "/assets/pfs-heavy-equip-featured_88fd415c.jpg";
+const GALLERY_1 = "/assets/pfs-heavy-equip-gallery-4699_6cce56cb.jpg";
+const GALLERY_2 = "/assets/pfs-heavy-equip-gallery-1690_3bc692e9.jpg";
+const GALLERY_3 = "/assets/pfs-heavy-equip-gallery-14371_149ca544.jpg";
+const GALLERY_4 = "/assets/pfs-heavy-equip-gallery-1860_5524160a.jpg";
+const GALLERY_5 = "/assets/pfs-heavy-equip-gallery-874_7da53ce0.jpg";
 
-const ETL_LOGO  = "/assets/pfs-etl-logo_7758f722.png";
-const UL_LOGO   = "/assets/pfs-ul508a-clean_e8efdeb8.jpg";
+const ETL_LOGO = "/assets/pfs-etl-logo_7758f722.png";
+const UL_LOGO = "/assets/pfs-ul508a-clean_e8efdeb8.jpg";
 const NFPA_LOGO = "/assets/pfs-nfpa-logo_4b710cc9.png";
-const EPA_LOGO  = "/assets/pfs-epa-logo_e4165f68.webp";
+const EPA_LOGO = "/assets/pfs-epa-logo_e4165f68.webp";
 const OSHA_LOGO = "/assets/pfs-osha-logo_0c460739.jpg";
-const USA_FLAG  = "/assets/pfs-usa-flag_8fca512e.jpg";
+const USA_FLAG = "/assets/pfs-usa-flag_8fca512e.jpg";
 
 const BLUE = "#1B3A6B";
 
 // ── CERT CAROUSEL ─────────────────────────────────────────────────────────────
 const CERTS = [
-  { type: "logo", img: ETL_LOGO,  title: "ETL & ETL-C Listed",       sub: "Intertek — USA & Canada",               imgH: 44 },
-  { type: "logo", img: UL_LOGO,   title: "UL 508A Certified",         sub: "Industrial Control Panel Fabricator",   imgH: 44 },
-  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant",         sub: "Spray Application Standard",            imgH: 44 },
-  { type: "logo", img: EPA_LOGO,  title: "EPA Compliant",             sub: "Air Quality Standards",                 imgH: 36 },
-  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant",            sub: "Workplace Safety Standards",            imgH: 36 },
-  { type: "flag", img: USA_FLAG,  title: "Made in the USA",           sub: "Santa Rosa, CA",                        imgH: 36 },
+  { type: "logo", img: ETL_LOGO, title: "ETL & ETL-C Listed", sub: "Intertek — USA & Canada", imgH: 44 },
+  { type: "logo", img: UL_LOGO, title: "UL 508A Certified", sub: "Industrial Control Panel Fabricator", imgH: 44 },
+  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant", sub: "Spray Application Standard", imgH: 44 },
+  { type: "logo", img: EPA_LOGO, title: "EPA Compliant", sub: "Air Quality Standards", imgH: 36 },
+  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant", sub: "Workplace Safety Standards", imgH: 36 },
+  { type: "flag", img: USA_FLAG, title: "Made in the USA", sub: "Santa Rosa, CA", imgH: 36 },
 ];
 const CERTS_LOOP = [...CERTS, ...CERTS];
 
@@ -81,11 +81,11 @@ const FEATURES_HIDDEN = [
 ];
 
 const BOOTH_LINEUP = [
-  { name: "Crossflow",      desc: "Side-to-side airflow. Cost-effective for large equipment and agricultural machinery." },
-  { name: "Downdraft",      desc: "Ceiling-to-floor airflow. Maximum cleanliness for OEM-spec equipment finishing." },
+  { name: "Crossflow", desc: "Side-to-side airflow. Cost-effective for large equipment and agricultural machinery." },
+  { name: "Downdraft", desc: "Ceiling-to-floor airflow. Maximum cleanliness for OEM-spec equipment finishing." },
   { name: "Semi-Downdraft", desc: "Rear-angled exhaust. Versatile for mixed equipment types and sizes." },
-  { name: "Heated Booth",   desc: "Integrated heat for accelerated cure. Required for industrial coatings and primers." },
-  { name: "Custom Build",   desc: "Engineered-to-order for mining trucks, cranes, or multi-bay production lines." },
+  { name: "Heated Booth", desc: "Integrated heat for accelerated cure. Required for industrial coatings and primers." },
+  { name: "Custom Build", desc: "Engineered-to-order for mining trucks, cranes, or multi-bay production lines." },
 ];
 
 const PRODUCTS = [
@@ -340,7 +340,7 @@ export default function HeavyEquipmentPage() {
     if (!v) return;
     v.muted = true;
     v.playsInline = true;
-    const play = () => { v.play().catch(() => {}); setVideoReady(true); };
+    const play = () => { v.play().catch(() => { }); setVideoReady(true); };
     v.addEventListener("canplaythrough", play, { once: true });
     v.load();
     return () => v.removeEventListener("canplaythrough", play);
@@ -358,7 +358,7 @@ export default function HeavyEquipmentPage() {
         justifyContent: "flex-end",
         overflow: "hidden",
       }}>
-                <img
+        <img
           src={HERO_IMG}
           alt="PFS heavy equipment paint booth for construction machinery finishing"
           aria-hidden="true"
@@ -370,7 +370,7 @@ export default function HeavyEquipmentPage() {
           loop
           playsInline
           disablePictureInPicture
-         
+
           aria-hidden="true"
           style={{
             position: "absolute", inset: 0,
@@ -396,7 +396,7 @@ export default function HeavyEquipmentPage() {
           }}>
             HEAVY EQUIPMENT &amp; CONSTRUCTION
           </span>
-          <h1 data-animation="slideLeft"  style={{
+          <h1 data-animation="slideLeft" style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
             fontSize: "clamp(2.6rem, 7vw, 5rem)",
             fontWeight: 800, color: "#fff", lineHeight: 1.0,
@@ -429,9 +429,9 @@ export default function HeavyEquipmentPage() {
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
             <Link data-animation="slideLeft" href="/contact/request-a-quote">
-              <span className="btn-glow" style={{ width: "100%", maxWidth: "320px", justifyContent: "center" }}>GET PRICING <ArrowRight size={16} /></span>
+              <span className="btn-glow" style={{ width: "100%", maxWidth: "320px", justifyContent: "center" }}>Request Info<ArrowRight size={16} /></span>
             </Link>
-            <a data-animation="slideRight" href="tel:8885457715" style={{ width: "100%", maxWidth: "320px" }}>
+            {/* <a data-animation="slideRight" href="tel:8885457715" style={{ width: "100%", maxWidth: "320px" }}>
               <span style={{
                 display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem",
                 background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.5)",
@@ -441,7 +441,7 @@ export default function HeavyEquipmentPage() {
               }}>
                 CALL (888) 545-7715
               </span>
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
@@ -705,7 +705,7 @@ export default function HeavyEquipmentPage() {
         </div>
       </section>
 
-            {/* RELATED PRODUCTS */}
+      {/* RELATED PRODUCTS */}
       <SiteProductCardSection
         heading="You May Also Need"
         label="Complete Your System"

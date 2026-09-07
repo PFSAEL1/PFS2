@@ -380,10 +380,10 @@ function HeroSection() {
               href="/contact/request-a-quote"
             >
               <span className="btn-glow-white">
-                GET PRICING <ArrowRight size={15} />
+                REQUEST info <ArrowRight size={15} />
               </span>
             </Link>
-
+            {/* 
             <a href="tel:8885457715">
               <span
                 data-animation="slideRight"
@@ -406,7 +406,7 @@ function HeroSection() {
               >
                 (888) 545-7715
               </span>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

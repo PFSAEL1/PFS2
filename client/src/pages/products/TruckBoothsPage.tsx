@@ -394,11 +394,11 @@ export default function TruckBoothsPage() {
                 <span
                   className="btn-glow flex w-full md:w-auto items-center justify-center"
                 >
-                  GET PRICING <ArrowRight size={16} />
+                  Request Info <ArrowRight size={16} />
                 </span>
               </Link>
 
-              <a
+              {/* <a
                 data-animation="slideRight"
                 href="tel:8885457715"
                 className="w-full md:w-auto block"
@@ -422,7 +422,7 @@ export default function TruckBoothsPage() {
                 >
                   (888) 545-7715
                 </span>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

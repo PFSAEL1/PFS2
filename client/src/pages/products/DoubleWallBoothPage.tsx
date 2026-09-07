@@ -347,10 +347,10 @@ export default function DoubleWallBoothPage() {
                   boxSizing: "border-box",
                 }}
               >
-                GET PRICING <ArrowRight size={16} />
+                Request Info<ArrowRight size={16} />
               </span>
             </Link>
-
+            {/* 
             <a
               data-animation="slideRight"
               href="tel:8885457715"
@@ -378,7 +378,7 @@ export default function DoubleWallBoothPage() {
               >
                 CALL (888) 545-7715
               </span>
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
@@ -733,30 +733,30 @@ export default function DoubleWallBoothPage() {
           <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.18em", color: "rgba(255,255,255,0.45)", textTransform: "uppercase", display: "block", marginBottom: "0.5rem" }}>ADD-ON</span>
           <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed','Oswald',sans-serif", fontSize: "clamp(1.5rem,3vw,2.2rem)", fontWeight: 800, color: "#fff", letterSpacing: "-0.01em", marginBottom: "0.75rem" }}>Heated Options Available</h2>
           <p data-animation="slideLeft" style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.9rem", color: "rgba(255,255,255,0.7)", maxWidth: "480px", margin: "0 auto 1.75rem", lineHeight: 1.7 }}>The double-wall insulated panel construction makes the Zenith the ideal platform for heated configurations. Add a direct-fired or indirect-fired heat system for accelerated cure times up to 180°F. Blanket intake filter upgrades included with all heated configurations.</p>
-        <Link
-  href="/contact/request-a-quote?from=double-wall-booth"
-  className="heated-options-link block w-full md:w-fit"
->
-  <span
-    data-animation="slideRight"
-    className="heated-options-btn flex w-full md:w-fit items-center justify-center gap-2"
-    style={{
-      background: BLUE,
-      color: "#fff",
-      fontFamily: "'Barlow Condensed', sans-serif",
-      fontSize: "0.88rem",
-      fontWeight: 800,
-      letterSpacing: "0.1em",
-      textTransform: "uppercase",
-      padding: "1rem 2.5rem",
-      cursor: "pointer",
-      boxSizing: "border-box",
-      whiteSpace: "nowrap",
-    }}
-  >
-    ASK ABOUT HEATED OPTIONS <ArrowRight size={15} />
-  </span>
-</Link>
+          <Link
+            href="/contact/request-a-quote?from=double-wall-booth"
+            className="heated-options-link block w-full md:w-fit"
+          >
+            <span
+              data-animation="slideRight"
+              className="heated-options-btn flex w-full md:w-fit items-center justify-center gap-2"
+              style={{
+                background: BLUE,
+                color: "#fff",
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontSize: "0.88rem",
+                fontWeight: 800,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                padding: "1rem 2.5rem",
+                cursor: "pointer",
+                boxSizing: "border-box",
+                whiteSpace: "nowrap",
+              }}
+            >
+              ASK ABOUT HEATED OPTIONS <ArrowRight size={15} />
+            </span>
+          </Link>
         </div>
       </section>
 

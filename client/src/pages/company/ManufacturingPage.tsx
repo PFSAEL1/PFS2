@@ -11,7 +11,7 @@ import { useSEO } from "@/hooks/useSEO";
 const HERO_VIDEO = "/assets/manufacturing-hero_9216dee6.mp4";
 
 const STATS = [
-  { num: "100%",   label: "USA Fabricated" },
+  { num: "100%", label: "USA Fabricated" },
   { num: "1,000+", label: "Systems Installed" },
   { num: "ETL/UL", label: "Listed Components" },
   { num: "NFPA 33", label: "Built to Standard" },
@@ -177,7 +177,7 @@ export default function ManufacturingPage() {
 
           {/* CTAs */}
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <Link data-animation="slideLeft"  href="/contact/request-a-quote">
+            <Link data-animation="slideLeft" href="/contact/request-a-quote">
               <button
                 style={{
                   fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
@@ -201,7 +201,7 @@ export default function ManufacturingPage() {
                 REQUEST INFO <ArrowRight size={14} />
               </button>
             </Link>
-            <Link data-animation="slideRight" href="/products">
+            {/* <Link data-animation="slideRight" href="/products">
               <button
                 style={{
                   fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
@@ -221,7 +221,7 @@ export default function ManufacturingPage() {
               >
                 VIEW PRODUCTS
               </button>
-            </Link>
+            </Link> */}
           </div>
         </div>
 

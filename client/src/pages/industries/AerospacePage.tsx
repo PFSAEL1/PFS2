@@ -24,32 +24,32 @@ import { useSEO } from "@/hooks/useSEO";
 // FEATURED_IMG: twin-engine prop in hangar (featured Zenith booth section)
 // GALLERY_1   : technician spraying fuselage (zoomable gallery)
 // GALLERY_2   : PFS-branded jet side profile (zoomable gallery)
-const HERO_IMG       = "/assets/private_jet_front_facing_0a4e4e26.png";
-const HERO_VIDEO     = "/assets/industry_aerospace_hero_853cec31.mp4";
-const FEATURED_IMG   = "/assets/pfs-aerospace-plane-in-booth_daa826f8.png";
-const OLD_FEATURED   = "/assets/private_jet_side_angle_fdd4968c.png";
-const GALLERY_1      = "/assets/aero_technician_spraying_21c4171a.png";
-const GALLERY_2      = "/assets/aero_pfs_jet_side_0b0bc5eb.png";
-const GALLERY_REAL   = "/assets/pfs-aerospace-jet-in-booth-real_2eb79dc9.png";
+const HERO_IMG = "/assets/private_jet_front_facing_0a4e4e26.png";
+const HERO_VIDEO = "/assets/industry_aerospace_hero_853cec31.mp4";
+const FEATURED_IMG = "/assets/pfs-aerospace-plane-in-booth_daa826f8.png";
+const OLD_FEATURED = "/assets/private_jet_side_angle_fdd4968c.png";
+const GALLERY_1 = "/assets/aero_technician_spraying_21c4171a.png";
+const GALLERY_2 = "/assets/aero_pfs_jet_side_0b0bc5eb.png";
+const GALLERY_REAL = "/assets/pfs-aerospace-jet-in-booth-real_2eb79dc9.png";
 
-const ETL_LOGO       = "/assets/pfs-etl-logo_7758f722.png";
-const UL_LOGO        = "/assets/pfs-ul508a-clean_e8efdeb8.jpg";
-const NFPA_LOGO      = "/assets/pfs-nfpa-logo_4b710cc9.png";
-const EPA_LOGO       = "/assets/pfs-epa-logo_e4165f68.webp";
-const OSHA_LOGO      = "/assets/pfs-osha-logo_0c460739.jpg";
-const USA_FLAG       = "/assets/pfs-usa-flag_8fca512e.jpg";
+const ETL_LOGO = "/assets/pfs-etl-logo_7758f722.png";
+const UL_LOGO = "/assets/pfs-ul508a-clean_e8efdeb8.jpg";
+const NFPA_LOGO = "/assets/pfs-nfpa-logo_4b710cc9.png";
+const EPA_LOGO = "/assets/pfs-epa-logo_e4165f68.webp";
+const OSHA_LOGO = "/assets/pfs-osha-logo_0c460739.jpg";
+const USA_FLAG = "/assets/pfs-usa-flag_8fca512e.jpg";
 
 // Brand blue
-const BLUE      = "#1B3A6B";
+const BLUE = "#1B3A6B";
 
 // ── CERT CAROUSEL ─────────────────────────────────────────────────────────────
 const CERTS = [
-  { type: "logo", img: ETL_LOGO,  title: "ETL & ETL-C Listed",       sub: "Intertek — USA & Canada",               filter: "none", imgH: 44 },
-  { type: "logo", img: UL_LOGO,   title: "UL 508A Certified",         sub: "Industrial Control Panel Fabricator",   filter: "none", imgH: 44 },
-  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant",         sub: "Spray Application Standard",            filter: "none", imgH: 44 },
-  { type: "logo", img: EPA_LOGO,  title: "EPA Compliant",             sub: "Air Quality Standards",                 filter: "none", imgH: 36 },
-  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant",            sub: "Workplace Safety Standards",            filter: "none", imgH: 36 },
-  { type: "flag", img: USA_FLAG,  title: "Made in the USA",           sub: "Santa Rosa, CA",                        filter: "none", imgH: 36 },
+  { type: "logo", img: ETL_LOGO, title: "ETL & ETL-C Listed", sub: "Intertek — USA & Canada", filter: "none", imgH: 44 },
+  { type: "logo", img: UL_LOGO, title: "UL 508A Certified", sub: "Industrial Control Panel Fabricator", filter: "none", imgH: 44 },
+  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant", sub: "Spray Application Standard", filter: "none", imgH: 44 },
+  { type: "logo", img: EPA_LOGO, title: "EPA Compliant", sub: "Air Quality Standards", filter: "none", imgH: 36 },
+  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant", sub: "Workplace Safety Standards", filter: "none", imgH: 36 },
+  { type: "flag", img: USA_FLAG, title: "Made in the USA", sub: "Santa Rosa, CA", filter: "none", imgH: 36 },
 ];
 const CERTS_LOOP = [...CERTS, ...CERTS];
 
@@ -86,11 +86,11 @@ const FEATURES_HIDDEN = [
 ];
 
 const BOOTH_LINEUP = [
-  { name: "Crossflow",      desc: "Side-to-side airflow. Cost-effective for large fuselage sections." },
-  { name: "Downdraft",      desc: "Full ceiling-to-floor airflow. Maximum cleanliness for aerospace topcoat." },
+  { name: "Crossflow", desc: "Side-to-side airflow. Cost-effective for large fuselage sections." },
+  { name: "Downdraft", desc: "Full ceiling-to-floor airflow. Maximum cleanliness for aerospace topcoat." },
   { name: "Semi-Downdraft", desc: "Rear-angled exhaust. Versatile for mixed MRO and new-build operations." },
-  { name: "Heated Booth",   desc: "Integrated heat for accelerated cure. Required for most aerospace primers." },
-  { name: "Custom Build",   desc: "Engineered-to-order for wide-body, military, or hangar-integrated systems." },
+  { name: "Heated Booth", desc: "Integrated heat for accelerated cure. Required for most aerospace primers." },
+  { name: "Custom Build", desc: "Engineered-to-order for wide-body, military, or hangar-integrated systems." },
 ];
 
 const PRODUCTS = [
@@ -330,7 +330,7 @@ export default function AerospacePage() {
     if (!v) return;
     v.muted = true;
     v.playsInline = true;
-    const play = () => { v.play().catch(() => {}); setVideoReady(true); };
+    const play = () => { v.play().catch(() => { }); setVideoReady(true); };
     v.addEventListener("canplaythrough", play, { once: true });
     v.load();
     return () => v.removeEventListener("canplaythrough", play);
@@ -348,7 +348,7 @@ export default function AerospacePage() {
         justifyContent: "flex-end",
         overflow: "hidden",
       }}>
-                <img
+        <img
           src={HERO_IMG}
           alt="PFS aerospace spray booth for aircraft and aviation finishing"
           aria-hidden="true"
@@ -360,7 +360,7 @@ export default function AerospacePage() {
           loop
           playsInline
           disablePictureInPicture
-         
+
           aria-hidden="true"
           style={{
             position: "absolute", inset: 0,
@@ -422,9 +422,9 @@ export default function AerospacePage() {
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
             <Link data-animation="slideLeft" href="/contact/request-a-quote">
-              <span className="btn-glow" style={{ width: "100%", maxWidth: "320px", justifyContent: "center" }}>GET PRICING <ArrowRight size={16} /></span>
+              <span className="btn-glow" style={{ width: "100%", maxWidth: "320px", justifyContent: "center" }}>Request Info<ArrowRight size={16} /></span>
             </Link>
-            <a data-animation="slideRight" href="tel:8885457715" style={{ width: "100%", maxWidth: "320px" }}>
+            {/* <a data-animation="slideRight" href="tel:8885457715" style={{ width: "100%", maxWidth: "320px" }}>
               <span style={{
                 display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem",
                 background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.5)",
@@ -434,7 +434,7 @@ export default function AerospacePage() {
               }}>
                 CALL (888) 545-7715
               </span>
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
@@ -477,8 +477,8 @@ export default function AerospacePage() {
                 Clear-span high-bay construction. Laminar downdraft airflow at 100 FPM uniform face velocity. ETL/UL listed and UL 508A certified components. Custom-engineered to your aircraft dimensions.
               </p>
             </div>
-              <div style={{ width: "100%", maxWidth: "900px", position: "relative", overflow: "hidden", borderRadius: "2px" }}>
-                <img
+            <div style={{ width: "100%", maxWidth: "900px", position: "relative", overflow: "hidden", borderRadius: "2px" }}>
+              <img
                 src={FEATURED_IMG}
                 alt="PFS Zenith Series — Aerospace Paint Booth with twin-engine aircraft"
                 style={{
@@ -486,7 +486,7 @@ export default function AerospacePage() {
                   objectFit: "cover", objectPosition: "center",
                 }}
               />
-              </div>
+            </div>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
               <Link data-animation="slideLeft" href="/contact/request-a-quote">
                 <span className="btn-glow">REQUEST A QUOTE <ArrowRight size={15} /></span>
@@ -526,8 +526,8 @@ export default function AerospacePage() {
           <GalleryGrid
             images={[
               { src: GALLERY_REAL, alt: "Private jet masked and prepped inside PFS aerospace paint booth" },
-              { src: GALLERY_1,    alt: "Technician spraying aircraft fuselage in PFS aerospace booth" },
-              { src: GALLERY_2,    alt: "PFS-branded jet side profile in aerospace paint booth" },
+              { src: GALLERY_1, alt: "Technician spraying aircraft fuselage in PFS aerospace booth" },
+              { src: GALLERY_2, alt: "PFS-branded jet side profile in aerospace paint booth" },
               { src: OLD_FEATURED, alt: "PFS Zenith Series aerospace paint booth with twin-engine aircraft — side angle" },
             ]}
             cardHeight="clamp(220px,30vw,360px)"
@@ -726,11 +726,11 @@ export default function AerospacePage() {
       </section>
 
       {/* FAQ SECTION */}
-      <section style={{ background:"#f8f9fb", padding:"clamp(2.5rem, 6vw, 4rem) 0", borderTop:"1px solid #e5e7eb" }}>
-        <div className="container" style={{ maxWidth:"860px" }}>
-          <div style={{ textAlign:"center", marginBottom:"2.5rem" }}>
-            <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:"#1B3A6B",textTransform:"uppercase",display:"block",marginBottom:"0.4rem" }}>FREQUENTLY ASKED QUESTIONS</span>
-            <h2 data-animation="slideLeft"  style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.4rem,3.5vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Aerospace Spray Booths & Finishing Systems — Common Questions</h2>
+      <section style={{ background: "#f8f9fb", padding: "clamp(2.5rem, 6vw, 4rem) 0", borderTop: "1px solid #e5e7eb" }}>
+        <div className="container" style={{ maxWidth: "860px" }}>
+          <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
+            <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: "#1B3A6B", textTransform: "uppercase", display: "block", marginBottom: "0.4rem" }}>FREQUENTLY ASKED QUESTIONS</span>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed','Oswald',sans-serif", fontSize: "clamp(1.4rem,3.5vw,2.2rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Aerospace Spray Booths & Finishing Systems — Common Questions</h2>
           </div>
           {[
             { q: "What spray booth standards apply to aerospace finishing operations?", a: "Aerospace finishing operations are subject to NFPA 33 (Standard for Spray Application of Flammable or Combustible Materials), OSHA 1910.94 (Ventilation), and applicable FAA, NADCAP, and Boeing/Airbus supplier quality requirements. PFS aerospace booths are built to NFPA 33 and OSHA standards with ETL/UL listed and certified components. NADCAP and OEM-specific requirements are addressed during the engineering phase." },
@@ -741,18 +741,18 @@ export default function AerospacePage() {
             { q: "What is NEHSAP and how does it affect aerospace spray booth filtration?", a: "NEHSAP (National Emission Standards for Hazardous Air Pollutants) Subpart GG applies to aerospace manufacturing and rework facilities that use HAP-containing coatings. It requires facilities to use compliant spray booths with sufficient capture efficiency to control HAP emissions at the source. PFS aerospace booths are engineered with multi-stage intake and exhaust filtration — including optional HEPA secondary filtration — to meet NEHSAP capture efficiency requirements and support your facility's air permit compliance." },
             { q: "Does PFS supply replacement filters for aerospace spray booths?", a: "Yes. PFS supplies OEM replacement filter media for all PFS aerospace booths including fiberglass intake panels, polyester exhaust media, and HEPA secondary filtration modules. Replacement filters are available through our parts store or by contacting our service team. Magnehelic differential pressure gauges on each booth indicate when filter replacement is required based on actual airflow data." },
           ].map((item, i) => (
-            <details key={i} style={{ borderBottom:"1px solid #e5e7eb", padding:"1.25rem 0" }}>
-              <summary style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"clamp(0.95rem,2.5vw,1.1rem)",fontWeight:800,color:"#111",letterSpacing:"0.01em",cursor:"pointer",listStyle:"none",display:"flex",justifyContent:"space-between",alignItems:"center",gap:"1rem" }}>
+            <details key={i} style={{ borderBottom: "1px solid #e5e7eb", padding: "1.25rem 0" }}>
+              <summary style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "clamp(0.95rem,2.5vw,1.1rem)", fontWeight: 800, color: "#111", letterSpacing: "0.01em", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "1rem" }}>
                 {item.q}
-                <span style={{ color:"#1B3A6B", flexShrink:0, fontSize:"1.4rem", fontWeight:300, lineHeight:1 }}>+</span>
+                <span style={{ color: "#1B3A6B", flexShrink: 0, fontSize: "1.4rem", fontWeight: 300, lineHeight: 1 }}>+</span>
               </summary>
-              <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"clamp(0.82rem,2vw,0.9rem)",color:"#555",lineHeight:1.75,margin:"1rem 0 0",paddingRight:"1.5rem" }}>{item.a}</p>
+              <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(0.82rem,2vw,0.9rem)", color: "#555", lineHeight: 1.75, margin: "1rem 0 0", paddingRight: "1.5rem" }}>{item.a}</p>
             </details>
           ))}
         </div>
       </section>
 
-            {/* RELATED PRODUCTS */}
+      {/* RELATED PRODUCTS */}
       <SiteProductCardSection
         heading="You May Also Need"
         label="Complete Your System"

@@ -296,9 +296,9 @@ export default function SemiDowndraftBoothPage() {
           {/* CTAs — stacked on mobile, side-by-side on desktop */}
           <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem", maxWidth: "340px" }}>
             <Link data-animation="slideLeft" href="/contact/request-a-quote?from=semi-downdraft-booth">
-              <span className="btn-glow" style={{ width: "100%", justifyContent: "center" }}>GET PRICING <ArrowRight size={16} /></span>
+              <span className="btn-glow" style={{ width: "100%", justifyContent: "center" }}>Request Info <ArrowRight size={16} /></span>
             </Link>
-            <a data-animation="slideRight" href="tel:8885457715" style={{ width: "100%" }}>
+            {/* <a data-animation="slideRight" href="tel:8885457715" style={{ width: "100%" }}>
               <span style={{
                 display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem",
                 background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.5)",
@@ -306,7 +306,7 @@ export default function SemiDowndraftBoothPage() {
                 letterSpacing: "0.1em", textTransform: "uppercase",
                 padding: "1.1rem 2rem", cursor: "pointer", width: "100%",
               }}>CALL (888) 545-7715</span>
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
@@ -645,30 +645,30 @@ export default function SemiDowndraftBoothPage() {
           <p data-animation="slideLeft" style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(0.82rem,2vw,0.9rem)", color: "rgba(255,255,255,0.7)", maxWidth: "460px", margin: "0 auto 1.5rem", lineHeight: 1.7 }}>
             Add a direct-fired or indirect-fired heat system for accelerated cure times. Blanket intake filter upgrades included with all heated configurations. Spray, flash, and bake modes.
           </p>
-         <Link
-  href="/contact/request-a-quote?from=semi-downdraft-booth"
-  className="inline-block max-[767px]:block max-[767px]:w-full"
->
-  <span
-    data-animation="slideRight"
-    className="inline-flex items-center justify-center gap-2 max-[767px]:flex max-[767px]:w-full"
-    style={{
-      background: BLUE,
-      color: "#fff",
-      fontFamily: "'Barlow Condensed', sans-serif",
-      fontSize: "0.88rem",
-      fontWeight: 800,
-      letterSpacing: "0.1em",
-      textTransform: "uppercase",
-      padding: "1rem 2rem",
-      cursor: "pointer",
-      minHeight: "48px",
-      boxSizing: "border-box",
-    }}
-  >
-    ASK ABOUT HEATED OPTIONS <ArrowRight size={15} />
-  </span>
-</Link>
+          <Link
+            href="/contact/request-a-quote?from=semi-downdraft-booth"
+            className="inline-block max-[767px]:block max-[767px]:w-full"
+          >
+            <span
+              data-animation="slideRight"
+              className="inline-flex items-center justify-center gap-2 max-[767px]:flex max-[767px]:w-full"
+              style={{
+                background: BLUE,
+                color: "#fff",
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontSize: "0.88rem",
+                fontWeight: 800,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                padding: "1rem 2rem",
+                cursor: "pointer",
+                minHeight: "48px",
+                boxSizing: "border-box",
+              }}
+            >
+              ASK ABOUT HEATED OPTIONS <ArrowRight size={15} />
+            </span>
+          </Link>
         </div>
       </section>
 
@@ -681,57 +681,57 @@ export default function SemiDowndraftBoothPage() {
             Maximize throughput and compliance by pairing your semi-downdraft booth with a dedicated mixing room for paint prep and an AMU for tempered make-up air.
           </p>
           <div className="flex flex-col min-[768px]:flex-row gap-3 justify-center max-[767px]:w-full">
-  <Link
-    href="/products/mixing-rooms"
-    className="max-[767px]:w-full max-[767px]:block"
-  >
-    <span
-      data-animation="slideLeft"
-      className="flex items-center justify-center gap-2 max-[767px]:w-full"
-      style={{
-        background: BLUE,
-        color: "#fff",
-        fontFamily: "'Barlow Condensed', sans-serif",
-        fontSize: "0.82rem",
-        fontWeight: 800,
-        letterSpacing: "0.1em",
-        textTransform: "uppercase",
-        padding: "0.85rem 1.5rem",
-        cursor: "pointer",
-        minHeight: "48px",
-        boxSizing: "border-box",
-      }}
-    >
-      VIEW MIXING ROOMS <ArrowRight size={13} />
-    </span>
-  </Link>
+            <Link
+              href="/products/mixing-rooms"
+              className="max-[767px]:w-full max-[767px]:block"
+            >
+              <span
+                data-animation="slideLeft"
+                className="flex items-center justify-center gap-2 max-[767px]:w-full"
+                style={{
+                  background: BLUE,
+                  color: "#fff",
+                  fontFamily: "'Barlow Condensed', sans-serif",
+                  fontSize: "0.82rem",
+                  fontWeight: 800,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  padding: "0.85rem 1.5rem",
+                  cursor: "pointer",
+                  minHeight: "48px",
+                  boxSizing: "border-box",
+                }}
+              >
+                VIEW MIXING ROOMS <ArrowRight size={13} />
+              </span>
+            </Link>
 
-  <Link
-    href="/products/air-make-up-units"
-    className="max-[767px]:w-full max-[767px]:block"
-  >
-    <span
-      data-animation="slideRight"
-      className="flex items-center justify-center gap-2 max-[767px]:w-full"
-      style={{
-        background: "transparent",
-        color: BLUE,
-        border: `2px solid ${BLUE}`,
-        fontFamily: "'Barlow Condensed', sans-serif",
-        fontSize: "0.82rem",
-        fontWeight: 800,
-        letterSpacing: "0.1em",
-        textTransform: "uppercase",
-        padding: "0.85rem 1.5rem",
-        cursor: "pointer",
-        minHeight: "48px",
-        boxSizing: "border-box",
-      }}
-    >
-      VIEW AIR MAKE-UP UNITS <ArrowRight size={13} />
-    </span>
-  </Link>
-</div>
+            <Link
+              href="/products/air-make-up-units"
+              className="max-[767px]:w-full max-[767px]:block"
+            >
+              <span
+                data-animation="slideRight"
+                className="flex items-center justify-center gap-2 max-[767px]:w-full"
+                style={{
+                  background: "transparent",
+                  color: BLUE,
+                  border: `2px solid ${BLUE}`,
+                  fontFamily: "'Barlow Condensed', sans-serif",
+                  fontSize: "0.82rem",
+                  fontWeight: 800,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  padding: "0.85rem 1.5rem",
+                  cursor: "pointer",
+                  minHeight: "48px",
+                  boxSizing: "border-box",
+                }}
+              >
+                VIEW AIR MAKE-UP UNITS <ArrowRight size={13} />
+              </span>
+            </Link>
+          </div>
         </div>
       </section>
 

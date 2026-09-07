@@ -12,7 +12,7 @@ import { SiteProductCardSection } from "@/components/SiteProductCard";
 import { useSEO } from "@/hooks/useSEO";
 
 const HERO_IMG = "/assets/spray-to-waste-hero_2fe77f1d.jpg";
-const FEATURED_IMG = "/assets/WhatsApp Image 2026-09-02 at 3.23.14 AM (1).jpeg";
+const FEATURED_IMG = "/assets/spray-to-waste.png";
 // const FEATURED_IMG = "/assets/pfs-stw-4208_b899a28f.jpg";
 
 
@@ -255,11 +255,11 @@ export default function SprayToWastePage() {
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
             <Link data-animation="slideLeft" href="/contact/request-a-quote?from=spray-to-waste">
-              <span className="btn-glow" style={{ justifyContent: "center" }}>GET PRICING <ArrowRight size={16} /></span>
+              <span className="btn-glow" style={{ justifyContent: "center" }}>Request Info<ArrowRight size={16} /></span>
             </Link>
-            <a data-animation="slideRight" href="tel:8885457715">
+            {/* <a data-animation="slideRight" href="tel:8885457715">
               <span className="btn-glow-white" style={{ background: "transparent", color: "#fff", justifyContent: "center" }}>CALL (888) 545-7715</span>
-            </a>
+            </a> */}
           </div>
         </div>
       </section>

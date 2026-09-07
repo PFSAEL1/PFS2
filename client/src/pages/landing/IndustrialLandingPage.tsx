@@ -86,14 +86,14 @@ export default function IndustrialLandingPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
               <button className="btn-glow px-8 py-4 text-base font-bold tracking-widest uppercase">
-                Get Pricing →
+                Request Info
               </button>
             </Link>
-            <Link href="/contact">
+            {/* <Link href="/contact">
               <button className="border border-white text-white px-8 py-4 text-base font-bold tracking-widest uppercase hover:bg-white hover:text-[#111] transition-colors">
                 Talk to an Engineer
               </button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>

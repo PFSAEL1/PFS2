@@ -231,11 +231,11 @@ export default function SideDowndraftBoothPage() {
                   boxSizing: "border-box",
                 }}
               >
-                GET PRICING <ArrowRight size={16} />
+                Request Info <ArrowRight size={16} />
               </span>
             </Link>
 
-            <a
+            {/* <a
               data-animation="slideRight"
               href="tel:8885457715"
               className="w-full min-[768px]:w-auto"
@@ -258,7 +258,7 @@ export default function SideDowndraftBoothPage() {
               >
                 CALL (888) 545-7715
               </span>
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
@@ -464,39 +464,39 @@ export default function SideDowndraftBoothPage() {
               <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed','Oswald',sans-serif", fontSize: "clamp(1.3rem,2.5vw,1.9rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>14' Wide — Choose Your Height</h2>
             </div>
             <button
-  data-animation="slideRight"
-  onClick={() => setSizesOpen(!sizesOpen)}
-  className="w-full min-[768px]:w-auto"
-  style={{
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "0.5rem",
-    background: sizesOpen ? BLUE : "transparent",
-    border: `2px solid ${BLUE}`,
-    color: sizesOpen ? "#fff" : BLUE,
-    fontFamily: "'Barlow Condensed', sans-serif",
-    fontSize: "0.82rem",
-    fontWeight: 800,
-    letterSpacing: "0.1em",
-    textTransform: "uppercase",
-    padding: "0.75rem 1.5rem",
-    cursor: "pointer",
-    transition: "background 0.15s, color 0.15s",
-    whiteSpace: "nowrap",
-    boxSizing: "border-box",
-  }}
->
-  {sizesOpen ? (
-    <>
-      <ChevronUp size={15} /> HIDE SIZES
-    </>
-  ) : (
-    <>
-      <ChevronDown size={15} /> SEE STANDARD SIZES
-    </>
-  )}
-</button>
+              data-animation="slideRight"
+              onClick={() => setSizesOpen(!sizesOpen)}
+              className="w-full min-[768px]:w-auto"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "0.5rem",
+                background: sizesOpen ? BLUE : "transparent",
+                border: `2px solid ${BLUE}`,
+                color: sizesOpen ? "#fff" : BLUE,
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontSize: "0.82rem",
+                fontWeight: 800,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                padding: "0.75rem 1.5rem",
+                cursor: "pointer",
+                transition: "background 0.15s, color 0.15s",
+                whiteSpace: "nowrap",
+                boxSizing: "border-box",
+              }}
+            >
+              {sizesOpen ? (
+                <>
+                  <ChevronUp size={15} /> HIDE SIZES
+                </>
+              ) : (
+                <>
+                  <ChevronDown size={15} /> SEE STANDARD SIZES
+                </>
+              )}
+            </button>
           </div>
           {sizesOpen && (
             <>

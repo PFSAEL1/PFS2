@@ -175,27 +175,27 @@ export default function PaintBoothsHub() {
             ETL-certified spray paint booths for automotive, aerospace, industrial, and fleet applications — available in open face, enclosed, aircraft, outdoor, and custom configurations.
           </p>
           <div className="flex flex-col min-[768px]:flex-row gap-3 max-[767px]:w-full">
-           <Link
-  data-animation="slideLeft"
-  href="/contact/request-a-quote"
-  className="btn-glow flex items-center justify-center gap-2 box-border px-8 py-[0.85rem] text-[0.88rem] font-bold uppercase tracking-[0.08em] max-[767px]:w-full"
->
-  GET PRICING <ArrowRight size={15} />
-</Link>
+            <Link
+              data-animation="slideLeft"
+              href="/contact/request-a-quote"
+              className="btn-glow flex items-center justify-center gap-2 box-border px-8 py-[0.85rem] text-[0.88rem] font-bold uppercase tracking-[0.08em] max-[767px]:w-full"
+            >
+              Request Info <ArrowRight size={15} />
+            </Link>
 
-<a
-  data-animation="slideRight"
-  href="tel:8885457715"
-  className="flex items-center justify-center gap-2 box-border px-8 py-[0.85rem] text-[0.88rem] font-bold uppercase tracking-[0.08em] max-[767px]:w-full"
-  style={{
-    background: "transparent",
-    color: "#fff",
-    border: "2px solid rgba(255,255,255,0.4)",
-    fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-  }}
->
-  CALL (888) 545-7715
-</a>
+            {/* <a
+              data-animation="slideRight"
+              href="tel:8885457715"
+              className="flex items-center justify-center gap-2 box-border px-8 py-[0.85rem] text-[0.88rem] font-bold uppercase tracking-[0.08em] max-[767px]:w-full"
+              style={{
+                background: "transparent",
+                color: "#fff",
+                border: "2px solid rgba(255,255,255,0.4)",
+                fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+              }}
+            >
+              CALL (888) 545-7715
+            </a> */}
           </div>
         </div>
       </section>
@@ -263,41 +263,41 @@ export default function PaintBoothsHub() {
                   Our engineers will review your facility, process, and throughput — and recommend the right configuration at no charge.
                 </p>
               </div>
-        <div className="flex flex-col min-[768px]:flex-row gap-3 flex-shrink-0 max-[767px]:w-full">
-  <Link
-    data-animation="slideLeft"
-    href="/contact/request-a-quote"
-    className="max-[767px]:w-full max-[767px]:block"
-  >
-    <span className="btn-glow flex items-center justify-center gap-2 max-[767px]:w-full">
-      Get Pricing <ArrowRight size={14} />
-    </span>
-  </Link>
+              <div className="flex flex-col min-[768px]:flex-row gap-3 flex-shrink-0 max-[767px]:w-full">
+                <Link
+                  data-animation="slideLeft"
+                  href="/contact/request-a-quote"
+                  className="max-[767px]:w-full max-[767px]:block"
+                >
+                  <span className="btn-glow flex items-center justify-center gap-2 max-[767px]:w-full">
+                    Get Pricing <ArrowRight size={14} />
+                  </span>
+                </Link>
 
-  <a
-    data-animation="slideRight"
-    href="tel:+18885457715"
-    className="max-[767px]:w-full max-[767px]:block"
-  >
-    <span
-      className="flex items-center justify-center gap-2 max-[767px]:w-full"
-      style={{
-        fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-        fontSize: "0.8rem",
-        fontWeight: 700,
-        letterSpacing: "0.1em",
-        textTransform: "uppercase",
-        color: "#ffffff",
-        border: "1.5px solid rgba(255,255,255,0.4)",
-        padding: "0.6rem 1.2rem",
-        cursor: "pointer",
-        boxSizing: "border-box",
-      }}
-    >
-      <Phone size={14} /> (888) 545-7715
-    </span>
-  </a>
-</div>
+                <a
+                  data-animation="slideRight"
+                  href="tel:+18885457715"
+                  className="max-[767px]:w-full max-[767px]:block"
+                >
+                  <span
+                    className="flex items-center justify-center gap-2 max-[767px]:w-full"
+                    style={{
+                      fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                      fontSize: "0.8rem",
+                      fontWeight: 700,
+                      letterSpacing: "0.1em",
+                      textTransform: "uppercase",
+                      color: "#ffffff",
+                      border: "1.5px solid rgba(255,255,255,0.4)",
+                      padding: "0.6rem 1.2rem",
+                      cursor: "pointer",
+                      boxSizing: "border-box",
+                    }}
+                  >
+                    <Phone size={14} /> (888) 545-7715
+                  </span>
+                </a>
+              </div>
             </div>
           </div>
         </div>

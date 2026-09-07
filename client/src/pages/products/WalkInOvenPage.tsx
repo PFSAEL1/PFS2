@@ -286,11 +286,11 @@ export default function WalkInOvenPage() {
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
             <Link data-animation="slideLeft" href="/contact/request-a-quote?from=walk-in-oven">
-              <span className="btn-glow" style={{ width: "100%", maxWidth: "320px", justifyContent: "center" }}>GET PRICING <ArrowRight size={16} /></span>
+              <span className="btn-glow" style={{ width: "100%", maxWidth: "320px", justifyContent: "center" }}>Request Info<ArrowRight size={16} /></span>
             </Link>
-            <Link data-animation="slideRight" href="/contact/talk-to-an-engineer?from=walk-in-oven">
+            {/* <Link data-animation="slideRight" href="/contact/talk-to-an-engineer?from=walk-in-oven">
               <span className="btn-glow-white" style={{ width: "100%", maxWidth: "320px", justifyContent: "center" }}>TALK TO AN ENGINEER <ArrowRight size={16} /></span>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>

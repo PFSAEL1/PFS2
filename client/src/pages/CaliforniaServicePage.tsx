@@ -262,23 +262,23 @@ export default function CaliforniaServicePage() {
             Los Angeles County · Bay Area · North Bay · Sacramento · Solano County · Napa · Central Valley · All of California
           </p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-            <a data-animation="slideLeft"
+            {/* <a data-animation="slideLeft"
               href="tel:8885457715"
               style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#1e3a6e", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "2px solid #1e3a6e" }}
               onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#2a4f96"; el.style.boxShadow = "0 0 18px rgba(30,58,110,0.7)"; }}
               onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#1e3a6e"; el.style.boxShadow = "none"; }}
             >
               <Phone size={14} /> CALL (888) 545-7715
-            </a>
-            <Link data-animation="fadeIn"
+            </a> */}
+            <Link data-animation="slideLeft"
               href="/contact/service-request"
               style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "2px solid rgba(255,255,255,0.5)" }}
               onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "rgba(255,255,255,0.12)"; el.style.boxShadow = "0 0 18px rgba(255,255,255,0.2)"; }}
               onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "transparent"; el.style.boxShadow = "none"; }}
             >
-              REQUEST SERVICE <ArrowRight size={14} />
+              REQUEST Info <ArrowRight size={14} />
             </Link>
-            <a data-animation="slideRight"
+            {/* <a data-animation="slideRight"
               href="https://pfsfilters.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -287,7 +287,7 @@ export default function CaliforniaServicePage() {
               onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "rgba(255,255,255,0.12)"; el.style.boxShadow = "none"; }}
             >
               <Filter size={14} /> PFS FILTERS
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
@@ -410,36 +410,36 @@ export default function CaliforniaServicePage() {
                 <div style={{ marginBottom: 14 }}>{svc.icon}</div>
                 <h3 style={{ fontSize: "1rem", fontWeight: 800, color: "#0d1b2e", margin: "0 0 10px", textTransform: "uppercase", letterSpacing: "0.03em", fontFamily: "'Chakra Petch', sans-serif" }}>{svc.title}</h3>
                 <p style={{ color: "#4a5568", fontSize: "0.875rem", lineHeight: 1.7, margin: "0 0 20px" }}>{svc.desc}</p>
-               <Link
-  href="/contact/service-request"
-  style={{
-    marginTop: "auto",
-    display: "inline-flex",
-    alignItems: "center",
-    padding: 0,
-    gap: 6,
-    color: "#1e3a6e",
-    fontSize: "0.75rem",
-    fontWeight: 700,
-    letterSpacing: "0.1em",
-    textTransform: "uppercase",
-    textDecoration: "none",
-    transition: "all 0.2s",
-    border: "none",
-  }}
-  onMouseEnter={e => {
-    const el = e.currentTarget as HTMLAnchorElement;
-    el.style.border = "none";
-    el.style.boxShadow = "none";
-  }}
-  onMouseLeave={e => {
-    const el = e.currentTarget as HTMLAnchorElement;
-    el.style.border = "none";
-    el.style.boxShadow = "none";
-  }}
->
-  REQUEST SERVICE <ArrowRight size={12} />
-</Link>
+                <Link
+                  href="/contact/service-request"
+                  style={{
+                    marginTop: "auto",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    padding: 0,
+                    gap: 6,
+                    color: "#1e3a6e",
+                    fontSize: "0.75rem",
+                    fontWeight: 700,
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    textDecoration: "none",
+                    transition: "all 0.2s",
+                    border: "none",
+                  }}
+                  onMouseEnter={e => {
+                    const el = e.currentTarget as HTMLAnchorElement;
+                    el.style.border = "none";
+                    el.style.boxShadow = "none";
+                  }}
+                  onMouseLeave={e => {
+                    const el = e.currentTarget as HTMLAnchorElement;
+                    el.style.border = "none";
+                    el.style.boxShadow = "none";
+                  }}
+                >
+                  REQUEST SERVICE <ArrowRight size={12} />
+                </Link>
 
               </div>
             ))}

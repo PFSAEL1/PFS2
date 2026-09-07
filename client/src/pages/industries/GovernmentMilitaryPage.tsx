@@ -15,41 +15,41 @@ import { SiteProductCardSection } from "@/components/SiteProductCard";
 import { useSEO } from "@/hooks/useSEO";
 
 // ── CDN IMAGES ────────────────────────────────────────────────────────────────
-const HERO_VIDEO   = "/assets/pfs-military-hero-video_55488949.mp4";
-const HERO_IMG     = "/assets/pfs-military-humvee-booth-clean_ef5c4409.jpeg"; // poster fallback
+const HERO_VIDEO = "/assets/pfs-military-hero-video_55488949.mp4";
+const HERO_IMG = "/assets/pfs-military-humvee-booth-clean_ef5c4409.jpeg"; // poster fallback
 
 // Featured product image — clean Humvee JPEG (no phone UI chrome)
 const FEATURED_IMG = "/assets/pfs-military-humvee-booth-clean_ef5c4409.jpeg";
 
 // Gallery — 6 military-specific photos (jet turbine removed — aerospace product, not military)
 const GALLERY: GalleryImage[] = [
-  { src: "/assets/military vehicle.png",          alt: "Military HMMWV inside PFS paint booth" },
-  { src: "/assets/pfs-helios-military-booth_f3b03d46.png",               alt: "PFS Helios Series booth with armored military vehicle" },
-  { src: "/assets/pfs-military-stryker-outdoor-base_9293cfd5.png",       alt: "PFS booth with Stryker armored vehicle at military base" },
-  { src: "/assets/pfs-military-booth-exterior-warehouse_0980594a.jpeg",  alt: "PFS booth exterior in warehouse" },
-  { src: "/assets/pfs-military-booth-interior-ceiling_e9371cbf.jpeg",    alt: "Interior ceiling of large PFS military paint booth" },
-  { src: "/assets/pfs-military-booth-fire-suppression_ac66ffc7.jpeg",    alt: "PFS booth with red fire suppression tanks in warehouse" },
+  { src: "/assets/military vehicle.png", alt: "Military HMMWV inside PFS paint booth" },
+  { src: "/assets/pfs-helios-military-booth_f3b03d46.png", alt: "PFS Helios Series booth with armored military vehicle" },
+  { src: "/assets/pfs-military-stryker-outdoor-base_9293cfd5.png", alt: "PFS booth with Stryker armored vehicle at military base" },
+  { src: "/assets/pfs-military-booth-exterior-warehouse_0980594a.jpeg", alt: "PFS booth exterior in warehouse" },
+  { src: "/assets/pfs-military-booth-interior-ceiling_e9371cbf.jpeg", alt: "Interior ceiling of large PFS military paint booth" },
+  { src: "/assets/pfs-military-booth-fire-suppression_ac66ffc7.jpeg", alt: "PFS booth with red fire suppression tanks in warehouse" },
 ];
 
 // Cert logos
-const ETL_LOGO  = "/assets/pfs-etl-logo_7758f722.png";
-const UL_LOGO   = "/assets/pfs-ul508a-clean_e8efdeb8.jpg";
+const ETL_LOGO = "/assets/pfs-etl-logo_7758f722.png";
+const UL_LOGO = "/assets/pfs-ul508a-clean_e8efdeb8.jpg";
 const NFPA_LOGO = "/assets/pfs-nfpa-logo_4b710cc9.png";
-const EPA_LOGO  = "/assets/pfs-epa-logo_e4165f68.webp";
+const EPA_LOGO = "/assets/pfs-epa-logo_e4165f68.webp";
 const OSHA_LOGO = "/assets/pfs-osha-logo_0c460739.jpg";
-const USA_FLAG  = "/assets/pfs-usa-flag_8fca512e.jpg";
+const USA_FLAG = "/assets/pfs-usa-flag_8fca512e.jpg";
 
 const BLUE = "#1B3A6B";
 // (Ken Burns slideshow replaced with video hero)
 
 // ── CERT CAROUSEL ─────────────────────────────────────────────────────────────
 const CERTS = [
-  { type: "logo", img: ETL_LOGO,  title: "ETL & ETL-C Listed",       sub: "Intertek — USA & Canada",             imgH: 44 },
-  { type: "logo", img: UL_LOGO,   title: "UL 508A Certified",         sub: "Industrial Control Panel Fabricator", imgH: 44 },
-  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant",         sub: "Spray Application Standard",          imgH: 44 },
-  { type: "logo", img: EPA_LOGO,  title: "EPA Compliant",             sub: "Air Quality Standards",               imgH: 36 },
-  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant",            sub: "Workplace Safety Standards",          imgH: 36 },
-  { type: "flag", img: USA_FLAG,  title: "Made in the USA",           sub: "Santa Rosa, CA",                      imgH: 36 },
+  { type: "logo", img: ETL_LOGO, title: "ETL & ETL-C Listed", sub: "Intertek — USA & Canada", imgH: 44 },
+  { type: "logo", img: UL_LOGO, title: "UL 508A Certified", sub: "Industrial Control Panel Fabricator", imgH: 44 },
+  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant", sub: "Spray Application Standard", imgH: 44 },
+  { type: "logo", img: EPA_LOGO, title: "EPA Compliant", sub: "Air Quality Standards", imgH: 36 },
+  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant", sub: "Workplace Safety Standards", imgH: 36 },
+  { type: "flag", img: USA_FLAG, title: "Made in the USA", sub: "Santa Rosa, CA", imgH: 36 },
 ];
 const CERTS_LOOP = [...CERTS, ...CERTS];
 
@@ -192,7 +192,7 @@ export default function GovernmentMilitaryPage() {
     if (!v) return;
     v.muted = true;
     v.playsInline = true;
-    const play = () => { v.play().catch(() => {}); setVideoReady(true); };
+    const play = () => { v.play().catch(() => { }); setVideoReady(true); };
     v.addEventListener("canplaythrough", play, { once: true });
     v.load();
     return () => v.removeEventListener("canplaythrough", play);
@@ -202,7 +202,7 @@ export default function GovernmentMilitaryPage() {
     <div className="bg-white">
       {/* ── FULL-BLEED HERO — Video background ── */}
       <section style={{ position: "relative", minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "flex-end", overflow: "hidden" }}>
-                <img
+        <img
           src={HERO_IMG}
           alt="PFS government and military spray booth installation"
           aria-hidden="true"
@@ -214,8 +214,8 @@ export default function GovernmentMilitaryPage() {
           loop
           playsInline
           disablePictureInPicture
-         
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", zIndex: 0 , opacity: videoReady ? 1 : 0, transition: "opacity 0.7s ease" }}
+
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", zIndex: 0, opacity: videoReady ? 1 : 0, transition: "opacity 0.7s ease" }}
         >
           <source src={HERO_VIDEO} type="video/mp4" />
         </video>
@@ -232,7 +232,7 @@ export default function GovernmentMilitaryPage() {
             for Government &amp; Defense<br />
             Applications
           </h1>
-            <span style={{ display: "block", alignItems: "center", gap: "0.4rem", background: "rgba(27,58,107,0.75)", border: "1px solid rgba(107,163,224,0.4)", color: "#6fa3e0", borderRadius: "2px", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "0.3rem 0.75rem", marginBottom: "1.25rem", width: "fit-content" }}>
+          <span style={{ display: "block", alignItems: "center", gap: "0.4rem", background: "rgba(27,58,107,0.75)", border: "1px solid rgba(107,163,224,0.4)", color: "#6fa3e0", borderRadius: "2px", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "0.3rem 0.75rem", marginBottom: "1.25rem", width: "fit-content" }}>
             PFS HELIOS SERIES
           </span>
           <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "clamp(0.95rem, 1.8vw, 1.1rem)", color: "rgba(255,255,255,0.82)", lineHeight: 1.7, marginBottom: "2.5rem", maxWidth: "500px" }}>
@@ -240,13 +240,13 @@ export default function GovernmentMilitaryPage() {
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem", maxWidth: "360px" }}>
             <Link data-animation="slideLeft" href="/contact/request-a-quote">
-              <span className="btn-glow" style={{ width: "100%", maxWidth: "320px", justifyContent: "center" }}>GET PRICING <ArrowRight size={16} /></span>
+              <span className="btn-glow" style={{ width: "100%", maxWidth: "320px", justifyContent: "center" }}>Request Info <ArrowRight size={16} /></span>
             </Link>
-            <a data-animation="slideRight" href="tel:8885457715" style={{ width: "100%", maxWidth: "320px" }}>
+            {/* <a data-animation="slideRight" href="tel:8885457715" style={{ width: "100%", maxWidth: "320px" }}>
               <span style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem", background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.5)", fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.9rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "1.1rem 2.5rem", cursor: "pointer", width: "100%" }}>
                 CALL (888) 545-7715
               </span>
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
@@ -399,7 +399,7 @@ export default function GovernmentMilitaryPage() {
           <div style={{ background: "#fff", border: "1px solid #dce4ef", padding: "1.25rem 1.5rem", maxWidth: "960px", margin: "0 auto" }}>
             <div style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: BLUE, marginBottom: "0.75rem" }}>Secondary NAICS Codes</div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
-              {["236210","236220","238390","321992","332322","332323","332439","332999","811310","812332"].map(code => (
+              {["236210", "236220", "238390", "321992", "332322", "332323", "332439", "332999", "811310", "812332"].map(code => (
                 <span key={code} style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.82rem", fontWeight: 700, background: "#eff4ff", color: BLUE, border: "1px solid #c7d9f5", padding: "0.3rem 0.75rem", letterSpacing: "0.04em" }}>{code}</span>
               ))}
             </div>
@@ -432,7 +432,7 @@ export default function GovernmentMilitaryPage() {
         </div>
       </section>
 
-            {/* RELATED PRODUCTS */}
+      {/* RELATED PRODUCTS */}
       <SiteProductCardSection
         heading="You May Also Need"
         label="Complete Your System"

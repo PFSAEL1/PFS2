@@ -316,9 +316,9 @@ export default function FullDowndraftBoothPage() {
           {/* CTAs */}
           <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem", maxWidth: "340px" }}>
             <Link data-animation="slideLeft" href="/contact/request-a-quote?from=full-downdraft-booth">
-              <span className="btn-glow" style={{ width: "100%", justifyContent: "center" }}>GET PRICING <ArrowRight size={16} /></span>
+              <span className="btn-glow" style={{ width: "100%", justifyContent: "center" }}>Request Info <ArrowRight size={16} /></span>
             </Link>
-            <a data-animation="slideRight" href="tel:8885457715" style={{ width: "100%" }}>
+            {/* <a data-animation="slideRight" href="tel:8885457715" style={{ width: "100%" }}>
               <span style={{
                 display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem",
                 background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.5)",
@@ -326,7 +326,7 @@ export default function FullDowndraftBoothPage() {
                 letterSpacing: "0.1em", textTransform: "uppercase",
                 padding: "1.1rem 2rem", cursor: "pointer", width: "100%",
               }}>CALL (888) 545-7715</span>
-            </a>
+            </a> */}
           </div>
         </div>
       </section>

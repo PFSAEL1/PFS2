@@ -558,12 +558,12 @@ export default function SprinterVanBoothPage() {
                     boxSizing: "border-box",
                   }}
                 >
-                  GET PRICING <ArrowRight size={16} />
+                  request info <ArrowRight size={16} />
                 </span>
               </Link>
 
               {/* CALL */}
-              <a
+              {/* <a
                 data-animation="slideRight"
                 href="tel:8885457715"
                 className="block w-full"
@@ -587,7 +587,7 @@ export default function SprinterVanBoothPage() {
                 >
                   CALL (888) 545-7715
                 </span>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
@@ -792,40 +792,40 @@ export default function SprinterVanBoothPage() {
               <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.3rem" }}>AVAILABLE SIZES</span>
               <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed','Oswald',sans-serif", fontSize: "clamp(1.3rem,2.5vw,1.9rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Orion, Helios & Zenith — All Available in Van Height</h2>
             </div>
-          <button
-  data-animation="slideRight"
-  onClick={() => setSizesOpen(v => !v)}
-  className="w-full min-[768px]:w-auto"
-  style={{
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "0.5rem",
-    background: sizesOpen ? BLUE : "transparent",
-    border: `2px solid ${BLUE}`,
-    color: sizesOpen ? "#fff" : BLUE,
-    fontFamily: "'Barlow Condensed', sans-serif",
-    fontSize: "0.82rem",
-    fontWeight: 800,
-    letterSpacing: "0.1em",
-    textTransform: "uppercase",
-    padding: "0.75rem 1.5rem",
-    cursor: "pointer",
-    transition: "background 0.15s, color 0.15s",
-    whiteSpace: "nowrap",
-    boxSizing: "border-box",
-  }}
->
-  {sizesOpen ? (
-    <>
-      <ChevronUp size={14} /> HIDE SIZES
-    </>
-  ) : (
-    <>
-      <ChevronDown size={14} /> SEE SIZES
-    </>
-  )}
-</button>
+            <button
+              data-animation="slideRight"
+              onClick={() => setSizesOpen(v => !v)}
+              className="w-full min-[768px]:w-auto"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "0.5rem",
+                background: sizesOpen ? BLUE : "transparent",
+                border: `2px solid ${BLUE}`,
+                color: sizesOpen ? "#fff" : BLUE,
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontSize: "0.82rem",
+                fontWeight: 800,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                padding: "0.75rem 1.5rem",
+                cursor: "pointer",
+                transition: "background 0.15s, color 0.15s",
+                whiteSpace: "nowrap",
+                boxSizing: "border-box",
+              }}
+            >
+              {sizesOpen ? (
+                <>
+                  <ChevronUp size={14} /> HIDE SIZES
+                </>
+              ) : (
+                <>
+                  <ChevronDown size={14} /> SEE SIZES
+                </>
+              )}
+            </button>
           </div>
 
           {sizesOpen && (

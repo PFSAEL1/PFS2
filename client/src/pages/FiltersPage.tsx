@@ -255,7 +255,7 @@ export default function FiltersPage() {
 
           {/* Buttons */}
           <div
-           className="hero-buttons"
+            className="hero-buttons"
             style={{
               display: "flex",
               gap: "0.75rem",
@@ -292,13 +292,13 @@ export default function FiltersPage() {
                   boxSizing: "border-box",
                 }}
               >
-                <Phone size={14} />
-                Call for Filters: (888) 545-7715
+                {/* <Phone size={14} /> */}
+                Request Info
               </span>
             </a>
 
             {/* Order online */}
-            <a
+            {/* <a
               data-animation="slideRight"
               href="https://pfsfilters.com"
               target="_blank"
@@ -336,7 +336,7 @@ export default function FiltersPage() {
             >
               Order Online at pfsfilters.com
               <ExternalLink size={13} />
-            </a>
+            </a> */}
           </div>
         </div>
       </section>

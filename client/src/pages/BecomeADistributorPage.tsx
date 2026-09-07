@@ -161,16 +161,16 @@ export default function BecomeADistributorPage() {
               Partner with the manufacturer. Sell factory-direct finishing equipment — spray booths, ovens, blast rooms, and powder coating systems — with full technical backing and protected territory.
             </p>
             <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-              <a data-animation="slideLeft"href="#apply">
+              <a data-animation="slideLeft" href="#apply">
                 <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: GOLD, color: "#fff", fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.82rem", fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", padding: "0.9rem 2rem", cursor: "pointer" }}>
                   Apply Now <ArrowRight size={15} />
                 </span>
               </a>
-              <a data-animation="slideRight" href="tel:+18885457715">
+              {/* <a data-animation="slideRight" href="tel:+18885457715">
                 <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", color: "#fff", fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.82rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.9rem 2rem", border: "2px solid rgba(255,255,255,0.5)", cursor: "pointer" }}>
                   <Phone size={14} /> Call (888) 545-7715
                 </span>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

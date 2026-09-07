@@ -233,17 +233,17 @@ export default function BayAreaServicePage() {
               NFPA 33 &nbsp;·&nbsp; CARB &nbsp;·&nbsp; BAAQMD &nbsp;·&nbsp; NESHAP &nbsp;·&nbsp; OSHA 1910.107
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
-              <Link data-animation="slideLeft" href="/contact/service-request">
+              <Link data-animation="slideRight" href="/contact/service-request">
                 <a className="btn-glow" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#00a896", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase" }}>
-                  REQUEST SERVICE <ArrowRight size={16} />
+                  REQUEST info <ArrowRight size={16} />
                 </a>
               </Link>
-              <a data-animation="fadeIn" href="tel:+18885457715" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(255,255,255,0.7)", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase" }}>
-                <Phone size={16} /> (888) 545-7715
-              </a>
-              <a data-animation="slideRight" href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(0,168,150,0.7)", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase" }}>
+              {/* <a data-animation="fadeIn" href="tel:+18885457715" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(255,255,255,0.7)", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase" }}>
+                (888) 545-7715
+              </a> */}
+              {/* <a data-animation="slideRight" href="https://pfsfilters.com" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "2px solid rgba(0,168,150,0.7)", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textDecoration: "none", textTransform: "uppercase" }}>
                 <Filter size={16} /> PFS FILTERS
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
@@ -312,7 +312,7 @@ export default function BayAreaServicePage() {
       {/* BAAQMD COMPLIANCE SECTION */}
       <section style={{ background: "#fff", paddingTop: 64, paddingBottom: 64 }}>
         <div className="container">
-          <div   className="compliance-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center" }}>
+          <div className="compliance-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center" }}>
             <div>
               <div style={{ color: "#00a896", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 12 }}>BAAQMD COMPLIANCE</div>
               <h2 data-animation="slideLeft" style={{ fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 900, color: "#0a1628", marginBottom: 20, lineHeight: 1.2 }}>

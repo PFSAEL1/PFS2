@@ -395,25 +395,25 @@ export default function HeatedBoothPage() {
             </p>
 
             {/* CTAs */}
-          <div className="flex flex-col gap-3.5 w-full min-[768px]:w-auto min-[768px]:max-w-[340px]">
-  {/* GET PRICING */}
-  <Link
-    data-animation="slideLeft"
-    href="/contact/request-a-quote?from=heated-booth"
-    className="block w-full min-[768px]:w-auto"
-  >
-    <span
-      className="btn-glow flex w-full items-center justify-center gap-2 min-[768px]:w-auto"
-      style={{
-        boxSizing: "border-box",
-      }}
-    >
-      GET PRICING <ArrowRight size={16} />
-    </span>
-  </Link>
+            <div className="flex flex-col gap-3.5 w-full min-[768px]:w-auto min-[768px]:max-w-[340px]">
+              {/* GET PRICING */}
+              <Link
+                data-animation="slideLeft"
+                href="/contact/request-a-quote?from=heated-booth"
+                className="block w-full min-[768px]:w-auto"
+              >
+                <span
+                  className="btn-glow flex w-full items-center justify-center gap-2 min-[768px]:w-auto"
+                  style={{
+                    boxSizing: "border-box",
+                  }}
+                >
+                  Request Info <ArrowRight size={16} />
+                </span>
+              </Link>
 
-  {/* PHONE */}
-  <a
+              {/* PHONE */}
+              {/* <a
     data-animation="slideRight"
     href="tel:8885457715"
     className="block w-full min-[768px]:w-auto"
@@ -439,8 +439,8 @@ export default function HeatedBoothPage() {
     >
       CALL (888) 545-7715
     </span>
-  </a>
-</div>
+  </a> */}
+            </div>
           </div>
         </div>
       </section>
@@ -476,18 +476,18 @@ export default function HeatedBoothPage() {
               ))}
             </div>
             <div
-  data-animation="slideRight"
-  className="flex justify-center w-full"
->
-  <Link
-    href="/contact/request-a-quote?from=heated-booth"
-    className="block w-full min-[768px]:inline-block min-[768px]:w-auto"
-  >
-    <span className="btn-glow flex w-full items-center justify-center gap-2 min-[768px]:inline-flex min-[768px]:w-auto">
-      REQUEST A QUOTE <ArrowRight size={15} />
-    </span>
-  </Link>
-</div>
+              data-animation="slideRight"
+              className="flex justify-center w-full"
+            >
+              <Link
+                href="/contact/request-a-quote?from=heated-booth"
+                className="block w-full min-[768px]:inline-block min-[768px]:w-auto"
+              >
+                <span className="btn-glow flex w-full items-center justify-center gap-2 min-[768px]:inline-flex min-[768px]:w-auto">
+                  REQUEST A QUOTE <ArrowRight size={15} />
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -500,40 +500,40 @@ export default function HeatedBoothPage() {
               <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.3rem" }}>STANDARD FEATURES</span>
               <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.3rem, 2.5vw, 1.9rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Every Heated Booth Ships Fully Certified</h2>
             </div>
-         <button
-  data-animation="slideRight"
-  onClick={() => setSpecsOpen(!specsOpen)}
-  className="w-full min-[768px]:w-auto"
-  style={{
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "0.5rem",
-    background: specsOpen ? BLUE : "transparent",
-    border: `2px solid ${BLUE}`,
-    color: specsOpen ? "#fff" : BLUE,
-    fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-    fontSize: "0.82rem",
-    fontWeight: 800,
-    letterSpacing: "0.1em",
-    textTransform: "uppercase",
-    padding: "0.75rem 1.5rem",
-    cursor: "pointer",
-    transition: "background 0.15s, color 0.15s",
-    whiteSpace: "nowrap",
-    boxSizing: "border-box",
-  }}
->
-  {specsOpen ? (
-    <>
-      <ChevronUp size={15} /> HIDE SPECS
-    </>
-  ) : (
-    <>
-      <ChevronDown size={15} /> SEE STANDARD SPECS
-    </>
-  )}
-</button>
+            <button
+              data-animation="slideRight"
+              onClick={() => setSpecsOpen(!specsOpen)}
+              className="w-full min-[768px]:w-auto"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "0.5rem",
+                background: specsOpen ? BLUE : "transparent",
+                border: `2px solid ${BLUE}`,
+                color: specsOpen ? "#fff" : BLUE,
+                fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                fontSize: "0.82rem",
+                fontWeight: 800,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                padding: "0.75rem 1.5rem",
+                cursor: "pointer",
+                transition: "background 0.15s, color 0.15s",
+                whiteSpace: "nowrap",
+                boxSizing: "border-box",
+              }}
+            >
+              {specsOpen ? (
+                <>
+                  <ChevronUp size={15} /> HIDE SPECS
+                </>
+              ) : (
+                <>
+                  <ChevronDown size={15} /> SEE STANDARD SPECS
+                </>
+              )}
+            </button>
           </div>
           {specsOpen && (
             <>
@@ -577,40 +577,40 @@ export default function HeatedBoothPage() {
               <span style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: BLUE, textTransform: "uppercase", display: "block", marginBottom: "0.3rem" }}>STANDARD SIZES</span>
               <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.3rem, 2.5vw, 1.9rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Available on All Three PFS Series</h2>
             </div>
-           <button
-  data-animation="slideRight"
-  onClick={() => setSizesOpen(!sizesOpen)}
-  className="w-full min-[768px]:w-auto"
-  style={{
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "0.5rem",
-    background: sizesOpen ? BLUE : "transparent",
-    border: `2px solid ${BLUE}`,
-    color: sizesOpen ? "#fff" : BLUE,
-    fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-    fontSize: "0.82rem",
-    fontWeight: 800,
-    letterSpacing: "0.1em",
-    textTransform: "uppercase",
-    padding: "0.75rem 1.5rem",
-    cursor: "pointer",
-    transition: "background 0.15s, color 0.15s",
-    whiteSpace: "nowrap",
-    boxSizing: "border-box",
-  }}
->
-  {sizesOpen ? (
-    <>
-      <ChevronUp size={15} /> HIDE SIZES
-    </>
-  ) : (
-    <>
-      <ChevronDown size={15} /> SEE STANDARD SIZES
-    </>
-  )}
-</button>
+            <button
+              data-animation="slideRight"
+              onClick={() => setSizesOpen(!sizesOpen)}
+              className="w-full min-[768px]:w-auto"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "0.5rem",
+                background: sizesOpen ? BLUE : "transparent",
+                border: `2px solid ${BLUE}`,
+                color: sizesOpen ? "#fff" : BLUE,
+                fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                fontSize: "0.82rem",
+                fontWeight: 800,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                padding: "0.75rem 1.5rem",
+                cursor: "pointer",
+                transition: "background 0.15s, color 0.15s",
+                whiteSpace: "nowrap",
+                boxSizing: "border-box",
+              }}
+            >
+              {sizesOpen ? (
+                <>
+                  <ChevronUp size={15} /> HIDE SIZES
+                </>
+              ) : (
+                <>
+                  <ChevronDown size={15} /> SEE STANDARD SIZES
+                </>
+              )}
+            </button>
           </div>
           {sizesOpen && (
             <>
@@ -679,57 +679,57 @@ export default function HeatedBoothPage() {
             <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800, color: "#fff", letterSpacing: "-0.01em", margin: "0 0 0.5rem" }}>Ready to Configure Your Heated Booth?</h2>
             <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.9rem", color: "rgba(255,255,255,0.75)", margin: 0 }}>Factory-direct pricing. Fast lead times. Dedicated support from order through installation.</p>
           </div>
-        <div className="flex w-full flex-col gap-4 min-[768px]:w-auto min-[768px]:flex-row">
-  <Link
-    data-animation="slideLeft"
-    href="/contact/request-a-quote?from=heated-booth"
-    className="block w-full min-[768px]:w-auto"
-  >
-    <span
-      className="flex w-full items-center justify-center gap-2 min-[768px]:w-auto"
-      style={{
-        background: "#fff",
-        color: BLUE,
-        fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-        fontSize: "0.88rem",
-        fontWeight: 800,
-        letterSpacing: "0.1em",
-        textTransform: "uppercase",
-        padding: "1rem 2rem",
-        cursor: "pointer",
-        boxSizing: "border-box",
-      }}
-    >
-      GET PRICING <ArrowRight size={14} />
-    </span>
-  </Link>
+          <div className="flex w-full flex-col gap-4 min-[768px]:w-auto min-[768px]:flex-row">
+            <Link
+              data-animation="slideLeft"
+              href="/contact/request-a-quote?from=heated-booth"
+              className="block w-full min-[768px]:w-auto"
+            >
+              <span
+                className="flex w-full items-center justify-center gap-2 min-[768px]:w-auto"
+                style={{
+                  background: "#fff",
+                  color: BLUE,
+                  fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                  fontSize: "0.88rem",
+                  fontWeight: 800,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  padding: "1rem 2rem",
+                  cursor: "pointer",
+                  boxSizing: "border-box",
+                }}
+              >
+                GET PRICING <ArrowRight size={14} />
+              </span>
+            </Link>
 
-  <a
-    data-animation="slideRight"
-    href="tel:8885457715"
-    className="block w-full min-[768px]:w-auto"
-    style={{ textDecoration: "none" }}
-  >
-    <span
-      className="flex w-full items-center justify-center gap-2 min-[768px]:w-auto"
-      style={{
-        background: "transparent",
-        color: "#fff",
-        border: "1.5px solid rgba(255,255,255,0.6)",
-        fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-        fontSize: "0.88rem",
-        fontWeight: 700,
-        letterSpacing: "0.1em",
-        textTransform: "uppercase",
-        padding: "1rem 2rem",
-        cursor: "pointer",
-        boxSizing: "border-box",
-      }}
-    >
-      CALL (888) 545-7715
-    </span>
-  </a>
-</div>
+            <a
+              data-animation="slideRight"
+              href="tel:8885457715"
+              className="block w-full min-[768px]:w-auto"
+              style={{ textDecoration: "none" }}
+            >
+              <span
+                className="flex w-full items-center justify-center gap-2 min-[768px]:w-auto"
+                style={{
+                  background: "transparent",
+                  color: "#fff",
+                  border: "1.5px solid rgba(255,255,255,0.6)",
+                  fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                  fontSize: "0.88rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  padding: "1rem 2rem",
+                  cursor: "pointer",
+                  boxSizing: "border-box",
+                }}
+              >
+                CALL (888) 545-7715
+              </span>
+            </a>
+          </div>
         </div>
       </section>
 

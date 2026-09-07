@@ -412,10 +412,10 @@ export default function PrepStationsPage() {
                   gap: "0.5rem",
                 }}
               >
-                REQUEST A QUOTE <ArrowRight size={15} />
+                Request Info <ArrowRight size={15} />
               </Link>
 
-              <a
+              {/* <a
                 data-animation="slideRight"
                 href="tel:8885457715"
                 style={{
@@ -435,7 +435,7 @@ export default function PrepStationsPage() {
                 }}
               >
                 <Phone size={14} /> (888) 545-7715
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

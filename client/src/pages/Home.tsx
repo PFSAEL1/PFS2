@@ -247,12 +247,12 @@ export default function Home() {
                     whiteSpace: "nowrap",
                   }}
                 >
-                  START A PROJECT <ArrowRight size={14} />
+                  Request Info <ArrowRight size={14} />
                 </span>
               </Link>
 
               {/* Mobile-only: View Products CTA */}
-              <Link
+              {/* <Link
                 data-animation="slideRight"
                 href="/products"
                 className="max-[767px]:w-full"
@@ -281,10 +281,8 @@ export default function Home() {
                 >
                   EXPLORE EQUIPMENT <ArrowRight size={14} />
                 </span>
-              </Link>
+              </Link> */}
             </div>
-
-
           </div>
         </div>
 

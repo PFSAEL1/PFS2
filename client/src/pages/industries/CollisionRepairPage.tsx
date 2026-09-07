@@ -13,8 +13,8 @@ import { SiteProductCardSection } from "@/components/SiteProductCard";
 import { useSEO } from "@/hooks/useSEO";
 
 // ── IMAGES ────────────────────────────────────────────────────────────────────
-const HERO_IMG      = "/assets/pfs-collision-repair-helios-hero_73dfbc88.png";
-const HERO_VIDEO    = "/assets/industry_collision_repair_hero_d7d15cc6.mp4";
+const HERO_IMG = "/assets/pfs-collision-repair-helios-hero_73dfbc88.png";
+const HERO_VIDEO = "/assets/industry_collision_repair_hero_d7d15cc6.mp4";
 
 // Featured product — 0557 only (centered hero shot)
 const FEATURED_0557 = "/assets/pfs-collision-0557_6ef79f15.jpg";
@@ -22,40 +22,40 @@ const FEATURED_0557 = "/assets/pfs-collision-0557_6ef79f15.jpg";
 const GALLERY_0559 = "/assets/pfs-collision-0559_72c3d053.jpg";
 
 // Gallery — all photos
-const GALLERY_0633  = "/assets/pfs-collision-0633_fde8f8e1.jpg";
-const GALLERY_0544  = "/assets/pfs-collision-0544_b0b29dda.jpg";
-const GALLERY_0087  = "/assets/pfs-collision-0087_51e49914.jpg";
+const GALLERY_0633 = "/assets/pfs-collision-0633_fde8f8e1.jpg";
+const GALLERY_0544 = "/assets/pfs-collision-0544_b0b29dda.jpg";
+const GALLERY_0087 = "/assets/pfs-collision-0087_51e49914.jpg";
 const GALLERY_MULTI = "/assets/pfs-collision-repair-multi-booth-showroom_9f44f9a6.jpeg";
 const GALLERY_STACK = "/assets/pfs-heated-booth-exhaust-stack_ca825d7b.jpeg";
-const GALLERY_AMU   = "/assets/pfs-apollo-amu-rooftop_9a42ebf0.jpg";
-const GALLERY_DOWN  = "/assets/pfs-downdraft-raised-basement-booth_2c67ebec.jpeg";
+const GALLERY_AMU = "/assets/pfs-apollo-amu-rooftop_9a42ebf0.jpg";
+const GALLERY_DOWN = "/assets/pfs-downdraft-raised-basement-booth_2c67ebec.jpeg";
 // New user-uploaded photos
-const GALLERY_BOOTH_WIDE    = "/assets/collision-booth-wide_2d3b3c7b.jpeg";
-const GALLERY_BOOTH_FRONT   = "/assets/collision-booth-front_76b972e6.jpeg";
-const GALLERY_BOOTH_ANGLE   = "/assets/collision-booth-angle_9f4965f5.jpeg";
-const GALLERY_CAR_INSIDE    = "/assets/collision-car-inside_faa69114.jpeg";
-const GALLERY_KIA_INSIDE    = "/assets/collision-kia-inside_5ce4ba53.jpeg";
-const GALLERY_KIA_INSIDE2   = "/assets/collision-kia-inside2_6da2d589.jpeg";
-const GALLERY_BOOTH_EXT     = "/assets/collision-booth-exterior_fdd41c21.jpeg";
-const GALLERY_SPRINTER      = "/assets/collision-sprinter-inside_17be38f9.jpeg";
+const GALLERY_BOOTH_WIDE = "/assets/collision-booth-wide_2d3b3c7b.jpeg";
+const GALLERY_BOOTH_FRONT = "/assets/collision-booth-front_76b972e6.jpeg";
+const GALLERY_BOOTH_ANGLE = "/assets/collision-booth-angle_9f4965f5.jpeg";
+const GALLERY_CAR_INSIDE = "/assets/collision-car-inside_faa69114.jpeg";
+const GALLERY_KIA_INSIDE = "/assets/collision-kia-inside_5ce4ba53.jpeg";
+const GALLERY_KIA_INSIDE2 = "/assets/collision-kia-inside2_6da2d589.jpeg";
+const GALLERY_BOOTH_EXT = "/assets/collision-booth-exterior_fdd41c21.jpeg";
+const GALLERY_SPRINTER = "/assets/collision-sprinter-inside_17be38f9.jpeg";
 
-const ETL_LOGO  = "/assets/pfs-etl-logo_7758f722.png";
-const UL_LOGO   = "/assets/pfs-ul508a-clean_e8efdeb8.jpg";
+const ETL_LOGO = "/assets/pfs-etl-logo_7758f722.png";
+const UL_LOGO = "/assets/pfs-ul508a-clean_e8efdeb8.jpg";
 const NFPA_LOGO = "/assets/pfs-nfpa-logo_4b710cc9.png";
-const EPA_LOGO  = "/assets/pfs-epa-logo_e4165f68.webp";
+const EPA_LOGO = "/assets/pfs-epa-logo_e4165f68.webp";
 const OSHA_LOGO = "/assets/pfs-osha-logo_0c460739.jpg";
-const USA_FLAG  = "/assets/pfs-usa-flag_8fca512e.jpg";
+const USA_FLAG = "/assets/pfs-usa-flag_8fca512e.jpg";
 
 const BLUE = "#1B3A6B";
 
 // ── CERT CAROUSEL ─────────────────────────────────────────────────────────────
 const CERTS = [
-  { type: "logo", img: ETL_LOGO,  title: "ETL & ETL-C Listed",       sub: "Intertek — USA & Canada",               imgH: 44 },
-  { type: "logo", img: UL_LOGO,   title: "UL 508A Certified",         sub: "Industrial Control Panel Fabricator",   imgH: 44 },
-  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant",         sub: "Spray Application Standard",            imgH: 44 },
-  { type: "logo", img: EPA_LOGO,  title: "EPA Compliant",             sub: "Air Quality Standards",                 imgH: 36 },
-  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant",            sub: "Workplace Safety Standards",            imgH: 36 },
-  { type: "flag", img: USA_FLAG,  title: "Made in the USA",           sub: "Santa Rosa, CA",                        imgH: 36 },
+  { type: "logo", img: ETL_LOGO, title: "ETL & ETL-C Listed", sub: "Intertek — USA & Canada", imgH: 44 },
+  { type: "logo", img: UL_LOGO, title: "UL 508A Certified", sub: "Industrial Control Panel Fabricator", imgH: 44 },
+  { type: "logo", img: NFPA_LOGO, title: "NFPA 33 Compliant", sub: "Spray Application Standard", imgH: 44 },
+  { type: "logo", img: EPA_LOGO, title: "EPA Compliant", sub: "Air Quality Standards", imgH: 36 },
+  { type: "logo", img: OSHA_LOGO, title: "OSHA Compliant", sub: "Workplace Safety Standards", imgH: 36 },
+  { type: "flag", img: USA_FLAG, title: "Made in the USA", sub: "Santa Rosa, CA", imgH: 36 },
 ];
 const CERTS_LOOP = [...CERTS, ...CERTS];
 
@@ -97,11 +97,11 @@ const FEATURES_HIDDEN = [
 ];
 
 const BOOTH_LINEUP = [
-  { name: "Downdraft",      desc: "Full ceiling-to-floor airflow. Maximum cleanliness for OEM color match." },
+  { name: "Downdraft", desc: "Full ceiling-to-floor airflow. Maximum cleanliness for OEM color match." },
   { name: "Semi-Downdraft", desc: "Rear-angled exhaust. Versatile for mixed collision and prep work." },
-  { name: "Crossflow",      desc: "Side-to-side airflow. Cost-effective for high-volume shops." },
-  { name: "Prep Station",   desc: "Dedicated prep and sealer station. Keeps your main booth in production." },
-  { name: "Heated Booth",   desc: "Integrated bake cycle for accelerated cure." },
+  { name: "Crossflow", desc: "Side-to-side airflow. Cost-effective for high-volume shops." },
+  { name: "Prep Station", desc: "Dedicated prep and sealer station. Keeps your main booth in production." },
+  { name: "Heated Booth", desc: "Integrated bake cycle for accelerated cure." },
 ];
 
 const PRODUCTS = [
@@ -276,7 +276,7 @@ export default function CollisionRepairPage() {
     if (!v) return;
     v.muted = true;
     v.playsInline = true;
-    const play = () => { v.play().catch(() => {}); setVideoReady(true); };
+    const play = () => { v.play().catch(() => { }); setVideoReady(true); };
     v.addEventListener("canplaythrough", play, { once: true });
     v.load();
     return () => v.removeEventListener("canplaythrough", play);
@@ -371,9 +371,9 @@ export default function CollisionRepairPage() {
 
           <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
             <Link data-animation="slideLeft" href="/contact/request-a-quote">
-              <span className="btn-glow" style={{ width: "100%", maxWidth: "320px", justifyContent: "center" }}>GET PRICING <ArrowRight size={16} /></span>
+              <span className="btn-glow" style={{ width: "100%", maxWidth: "320px", justifyContent: "center" }}>Request Info<ArrowRight size={16} /></span>
             </Link>
-            <a  data-animation="slideRight" href="tel:8885457715" style={{ width: "100%", maxWidth: "320px" }}>
+            {/* <a  data-animation="slideRight" href="tel:8885457715" style={{ width: "100%", maxWidth: "320px" }}>
               <span style={{
                 display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem",
                 background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.5)",
@@ -383,7 +383,7 @@ export default function CollisionRepairPage() {
               }}>
                 CALL (888) 545-7715
               </span>
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
@@ -474,22 +474,22 @@ export default function CollisionRepairPage() {
           </div>
           <GalleryGrid
             images={[
-              { src: GALLERY_0559,       alt: "PFS Helios Series collision repair booth — installed in auto body shop" },
+              { src: GALLERY_0559, alt: "PFS Helios Series collision repair booth — installed in auto body shop" },
               { src: GALLERY_BOOTH_WIDE, alt: "PFS Helios booth with mixing station — wide shop view" },
-              { src: GALLERY_BOOTH_FRONT,alt: "PFS Helios booth — front view with three-door configuration" },
-              { src: GALLERY_BOOTH_ANGLE,alt: "PFS Helios booth — angle view during installation" },
+              { src: GALLERY_BOOTH_FRONT, alt: "PFS Helios booth — front view with three-door configuration" },
+              { src: GALLERY_BOOTH_ANGLE, alt: "PFS Helios booth — angle view during installation" },
               { src: GALLERY_CAR_INSIDE, alt: "Vehicle inside PFS collision repair paint booth" },
               { src: GALLERY_KIA_INSIDE, alt: "Kia sedan inside PFS downdraft paint booth" },
-              { src: GALLERY_KIA_INSIDE2,alt: "Kia sedan in PFS booth with technician" },
-              { src: GALLERY_BOOTH_EXT,  alt: "PFS Helios booth exterior — car visible through glass doors" },
-              { src: GALLERY_SPRINTER,   alt: "Mercedes Sprinter van inside PFS paint booth" },
+              { src: GALLERY_KIA_INSIDE2, alt: "Kia sedan in PFS booth with technician" },
+              { src: GALLERY_BOOTH_EXT, alt: "PFS Helios booth exterior — car visible through glass doors" },
+              { src: GALLERY_SPRINTER, alt: "Mercedes Sprinter van inside PFS paint booth" },
               { src: GALLERY_0633, alt: "PFS Helios collision repair booth — shop installation wide view" },
               { src: GALLERY_0544, alt: "PFS collision repair booth — control panel and fire suppression" },
               { src: GALLERY_0087, alt: "PFS collision repair booth — field installation" },
               { src: GALLERY_MULTI, alt: "PFS multi-booth collision repair showroom floor" },
               { src: GALLERY_STACK, alt: "PFS heated booth exhaust stack and heater unit install" },
-              { src: GALLERY_AMU,   alt: "PFS Apollo AMU rooftop air make-up unit install" },
-              { src: GALLERY_DOWN,  alt: "PFS downdraft raised basement booth — open doors, ramps, grated floor" },
+              { src: GALLERY_AMU, alt: "PFS Apollo AMU rooftop air make-up unit install" },
+              { src: GALLERY_DOWN, alt: "PFS downdraft raised basement booth — open doors, ramps, grated floor" },
             ]}
             cardHeight="clamp(220px,30vw,360px)"
           />
@@ -639,11 +639,11 @@ export default function CollisionRepairPage() {
 
 
       {/* FAQ SECTION */}
-      <section style={{ background:"#f8f9fb", padding:"clamp(2.5rem, 6vw, 4rem) 0", borderTop:"1px solid #e5e7eb" }}>
-        <div className="container" style={{ maxWidth:"860px" }}>
-          <div style={{ textAlign:"center", marginBottom:"2.5rem" }}>
-            <span style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"0.7rem",fontWeight:700,letterSpacing:"0.14em",color:"#1B3A6B",textTransform:"uppercase",display:"block",marginBottom:"0.4rem" }}>FREQUENTLY ASKED QUESTIONS</span>
-            <h2 data-animation="slideLeft" style={{ fontFamily:"'Barlow Condensed','Oswald',sans-serif",fontSize:"clamp(1.4rem,3.5vw,2.2rem)",fontWeight:800,color:"#111",letterSpacing:"-0.01em",margin:0 }}>Collision Repair Spray Booths — Common Questions</h2>
+      <section style={{ background: "#f8f9fb", padding: "clamp(2.5rem, 6vw, 4rem) 0", borderTop: "1px solid #e5e7eb" }}>
+        <div className="container" style={{ maxWidth: "860px" }}>
+          <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
+            <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", color: "#1B3A6B", textTransform: "uppercase", display: "block", marginBottom: "0.4rem" }}>FREQUENTLY ASKED QUESTIONS</span>
+            <h2 data-animation="slideLeft" style={{ fontFamily: "'Barlow Condensed','Oswald',sans-serif", fontSize: "clamp(1.4rem,3.5vw,2.2rem)", fontWeight: 800, color: "#111", letterSpacing: "-0.01em", margin: 0 }}>Collision Repair Spray Booths — Common Questions</h2>
           </div>
           {[
             { q: "What size spray booth do I need for a collision repair shop?", a: "A standard collision repair spray booth for passenger cars and light trucks is typically 14 ft wide x 24 ft deep x 9 ft tall. Shops that service SUVs, vans, and light-duty trucks should consider a 14 ft wide x 27 ft deep x 10 ft tall booth. Shops that service full-size trucks, RVs, and commercial vehicles need a 16–18 ft wide x 40+ ft deep booth. PFS manufactures all of these sizes and custom configurations." },
@@ -652,12 +652,12 @@ export default function CollisionRepairPage() {
             { q: "What is the best spray booth for a high-volume collision repair shop?", a: "High-volume collision repair shops benefit from a heated full-downdraft booth with a direct-fired or indirect-fired make-up air unit, a prep station for sanding and priming, and a mixing room for paint storage and mixing. PFS manufactures all of these systems and can design a complete finishing room package for your shop." },
             { q: "How long does it take to install a collision repair spray booth?", a: "A standard collision repair spray booth installation typically takes 3–5 days for a single booth with a make-up air unit. Larger systems with prep stations, mixing rooms, and custom electrical work may take 1–2 weeks. PFS provides complete installation services and coordinates with your general contractor and electrical contractor to minimize downtime." },
           ].map((item, i) => (
-            <details key={i} style={{ borderBottom:"1px solid #e5e7eb", padding:"1.25rem 0" }}>
-              <summary style={{ fontFamily:"'Barlow Condensed',sans-serif",fontSize:"clamp(0.95rem,2.5vw,1.1rem)",fontWeight:800,color:"#111",letterSpacing:"0.01em",cursor:"pointer",listStyle:"none",display:"flex",justifyContent:"space-between",alignItems:"center",gap:"1rem" }}>
+            <details key={i} style={{ borderBottom: "1px solid #e5e7eb", padding: "1.25rem 0" }}>
+              <summary style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "clamp(0.95rem,2.5vw,1.1rem)", fontWeight: 800, color: "#111", letterSpacing: "0.01em", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "1rem" }}>
                 {item.q}
-                <span style={{ color:"#1B3A6B", flexShrink:0, fontSize:"1.4rem", fontWeight:300, lineHeight:1 }}>+</span>
+                <span style={{ color: "#1B3A6B", flexShrink: 0, fontSize: "1.4rem", fontWeight: 300, lineHeight: 1 }}>+</span>
               </summary>
-              <p style={{ fontFamily:"'Inter',sans-serif",fontSize:"clamp(0.82rem,2vw,0.9rem)",color:"#555",lineHeight:1.75,margin:"1rem 0 0",paddingRight:"1.5rem" }}>{item.a}</p>
+              <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(0.82rem,2vw,0.9rem)", color: "#555", lineHeight: 1.75, margin: "1rem 0 0", paddingRight: "1.5rem" }}>{item.a}</p>
             </details>
           ))}
         </div>

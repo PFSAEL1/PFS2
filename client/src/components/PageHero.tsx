@@ -373,11 +373,11 @@ export default function PageHero({
                   boxSizing: "border-box",
                 }}
               >
-                GET PRICING →
+                Request Info
               </span>
             </Link>
 
-            {ctaPhone && (
+            {/* {ctaPhone && (
               <a
                 className="max-[767px]:w-full max-[767px]:block"
                 data-animation="slideRight"
@@ -417,7 +417,7 @@ export default function PageHero({
                   CALL {ctaPhone}
                 </span>
               </a>
-            )}
+            )} */}
           </div>
         )}
       </div>

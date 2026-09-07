@@ -527,10 +527,10 @@ export default function PartsHubPage() {
                 cursor: "pointer", borderRadius: "2px",
                 display: "flex", alignItems: "center", gap: "0.4rem",
               }}>
-                REQUEST PARTS QUOTE <ArrowRight size={14} />
+                Request Info<ArrowRight size={14} />
               </button>
             </Link>
-            <a data-animation="slideRight" href="tel:+18885457715">
+            {/* <a data-animation="slideRight" href="tel:+18885457715">
               <button style={{
                 background: "transparent", color: "#fff",
                 border: "2px solid rgba(255,255,255,0.4)",
@@ -543,7 +543,7 @@ export default function PartsHubPage() {
               }}>
                 <Phone size={14} /> (888) 545-7715
               </button>
-            </a>
+            </a> */}
           </div>
         </div>
       </section>

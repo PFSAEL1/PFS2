@@ -349,11 +349,11 @@ export default function DowndraftRaisedBasementPage() {
                   boxSizing: "border-box",
                 }}
               >
-                GET PRICING <ArrowRight size={16} />
+                REQUEST INFO <ArrowRight size={16} />
               </span>
             </Link>
 
-            <a
+            {/* <a
               data-animation="slideRight"
               href="tel:8885457715"
               className="block w-full"
@@ -377,7 +377,7 @@ export default function DowndraftRaisedBasementPage() {
               >
                 CALL (888) 545-7715
               </span>
-            </a>
+            </a> */}
           </div>
         </div>
       </section>

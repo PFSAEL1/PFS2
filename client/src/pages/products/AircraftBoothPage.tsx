@@ -304,12 +304,12 @@ export default function AircraftBoothPage() {
               className="w-full md:w-fit"
             >
               <span className="btn-glow w-full md:w-auto inline-flex items-center justify-center">
-                GET PRICING
+                Request Info
                 <ArrowRight size={16} />
               </span>
             </Link>
 
-            <a
+            {/* <a
               data-animation="slideRight"
               href="tel:8885457715"
               className="w-full md:w-fit"
@@ -333,7 +333,7 @@ export default function AircraftBoothPage() {
               >
                 CALL (888) 545-7715
               </span>
-            </a>
+            </a> */}
           </div>
 
         </div>
@@ -387,25 +387,25 @@ export default function AircraftBoothPage() {
             </div> */}
 
             <div
-  style={{
-    width: "100%",
-    maxWidth: "900px",
-    margin: "0 auto",
-    overflow: "hidden",
-    lineHeight: 0,
-  }}
->
-  <img
-    src={FEATURED_IMG}
-    alt="PFS Zenith Series — twin-engine aircraft inside aerospace paint booth"
-    style={{
-      display: "block",
-      width: "100%",
-      height: "auto",
-      maxWidth: "100%",
-    }}
-  />
-</div>
+              style={{
+                width: "100%",
+                maxWidth: "900px",
+                margin: "0 auto",
+                overflow: "hidden",
+                lineHeight: 0,
+              }}
+            >
+              <img
+                src={FEATURED_IMG}
+                alt="PFS Zenith Series — twin-engine aircraft inside aerospace paint booth"
+                style={{
+                  display: "block",
+                  width: "100%",
+                  height: "auto",
+                  maxWidth: "100%",
+                }}
+              />
+            </div>
 
             <div className="w-full">
               <div className="flex w-full flex-col gap-4 md:w-auto md:flex-row md:justify-center">
@@ -614,58 +614,58 @@ export default function AircraftBoothPage() {
             <p data-animation="slideLeft" style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.85)", maxWidth: "440px" }}>
               Quote in 24 hours. manufactured in the USA with ETL/UL listed components. Installed nationwide by PFS-certified technicians.
             </p>
-         <div className="flex w-full flex-col gap-4 md:flex-row md:flex-wrap md:justify-center">
-  <Link
-    data-animation="slideLeft"
-    href="/contact/request-a-quote?from=aircraft-booth"
-    className="block w-full md:w-auto"
-  >
-    <span
-      className="!flex !w-full items-center justify-center md:!inline-flex md:!w-auto"
-      style={{
-        gap: "0.5rem",
-        background: "#fff",
-        color: BLUE,
-        fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-        fontSize: "0.9rem",
-        fontWeight: 800,
-        letterSpacing: "0.1em",
-        textTransform: "uppercase",
-        padding: "1.1rem 2.5rem",
-        cursor: "pointer",
-        boxSizing: "border-box",
-      }}
-    >
-      GET PRICING <ArrowRight size={16} />
-    </span>
-  </Link>
+            <div className="flex w-full flex-col gap-4 md:flex-row md:flex-wrap md:justify-center">
+              <Link
+                data-animation="slideLeft"
+                href="/contact/request-a-quote?from=aircraft-booth"
+                className="block w-full md:w-auto"
+              >
+                <span
+                  className="!flex !w-full items-center justify-center md:!inline-flex md:!w-auto"
+                  style={{
+                    gap: "0.5rem",
+                    background: "#fff",
+                    color: BLUE,
+                    fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                    fontSize: "0.9rem",
+                    fontWeight: 800,
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    padding: "1.1rem 2.5rem",
+                    cursor: "pointer",
+                    boxSizing: "border-box",
+                  }}
+                >
+                  GET PRICING <ArrowRight size={16} />
+                </span>
+              </Link>
 
-  <a
-    data-animation="slideRight"
-    href="tel:8885457715"
-    className="block w-full md:w-auto"
-  >
-    <span
-      className="!flex !w-full items-center justify-center md:!inline-flex md:!w-auto"
-      style={{
-        gap: "0.5rem",
-        background: "transparent",
-        color: "#fff",
-        border: "1.5px solid rgba(255,255,255,0.6)",
-        fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-        fontSize: "0.9rem",
-        fontWeight: 700,
-        letterSpacing: "0.1em",
-        textTransform: "uppercase",
-        padding: "1.1rem 2.5rem",
-        cursor: "pointer",
-        boxSizing: "border-box",
-      }}
-    >
-      (888) 545-7715
-    </span>
-  </a>
-</div>
+              <a
+                data-animation="slideRight"
+                href="tel:8885457715"
+                className="block w-full md:w-auto"
+              >
+                <span
+                  className="!flex !w-full items-center justify-center md:!inline-flex md:!w-auto"
+                  style={{
+                    gap: "0.5rem",
+                    background: "transparent",
+                    color: "#fff",
+                    border: "1.5px solid rgba(255,255,255,0.6)",
+                    fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+                    fontSize: "0.9rem",
+                    fontWeight: 700,
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    padding: "1.1rem 2.5rem",
+                    cursor: "pointer",
+                    boxSizing: "border-box",
+                  }}
+                >
+                  (888) 545-7715
+                </span>
+              </a>
+            </div>
 
           </div>
         </div>

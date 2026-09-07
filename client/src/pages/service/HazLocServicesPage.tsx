@@ -331,10 +331,10 @@ export default function HazLocServicesPage() {
                 cursor: "pointer", borderRadius: "2px",
                 display: "flex", alignItems: "center", gap: "0.4rem",
               }}>
-                REQUEST SERVICE <ArrowRight size={14} />
+                Request Info <ArrowRight size={14} />
               </button>
             </Link>
-            <a data-animation="slideRight" href="tel:+18885457715">
+            {/* <a data-animation="slideRight" href="tel:+18885457715">
               <button style={{
                 background: RED, color: "#fff", border: "none",
                 padding: "0.85rem 1.8rem",
@@ -346,7 +346,7 @@ export default function HazLocServicesPage() {
               }}>
                 <Phone size={14} /> (888) 545-7715
               </button>
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
@@ -555,7 +555,7 @@ export default function HazLocServicesPage() {
                                 fontSize: "0.68rem",
                                 fontWeight: 700,
                                 color: "#fff",
-                                width:"100%",
+                                width: "100%",
                                 background: BLUE,
                                 padding: "0.2rem 0.55rem",
                                 borderRadius: "2px",

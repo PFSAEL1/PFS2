@@ -155,118 +155,118 @@ function ServiceCard({ id, label, tagline, img, icon, desc, bullets, href, accen
     return () => { if (script.parentNode) script.parentNode.removeChild(script); };
   }, []);
   return (
-    <Link  data-animation="fadeIn" href={href} style={{ textDecoration: "none", display: "block" }}>
-    <div
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      style={{
-        background: "#fff",
-        border: `2px solid ${hovered ? accent : "#e2e8f0"}`,
-        borderRadius: "2px",
-        // overflow: "hidden",
-        transition: "border-color 0.15s, box-shadow 0.15s",
-        boxShadow: hovered
-          ? `0 0 0 3px rgba(27,58,107,0.08), 0 8px 28px rgba(27,58,107,0.12)`
-          : "0 1px 4px rgba(0,0,0,0.06)",
-        display: "flex",
-        flexDirection: "column",
-        position: "relative",
-        cursor: "pointer",
-      }}
-    >
-      {badge && (
-        <div style={{
-          position: "absolute", top: "0.75rem", left: "0.75rem", zIndex: 2,
-          background: accent,
-          color: "#fff",
-          fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-          fontSize: "0.65rem", fontWeight: 800,
-          letterSpacing: "0.1em", textTransform: "uppercase",
-          padding: "0.2rem 0.55rem", borderRadius: "2px",
-        }}>
-          {badge}
-        </div>
-      )}
-
-      <div className="card-image" style={{ width: "100%", aspectRatio: "3/2", overflow: "hidden", background: "#111" }}>
-        <img
-          src={img}
-          alt={label}
-          style={{
-            width: "100%", height: "100%", objectFit: "cover",
-            transition: "transform 0.35s",
-            transform: hovered ? "scale(1.04)" : "scale(1)",
-          }}
-        />
-      </div>
-
-      <div style={{ padding: "1.25rem 1.25rem 1rem", flex: 1, display: "flex", flexDirection: "column" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.35rem" }}>
-          <span style={{ color: accent }}>{icon}</span>
-          <span style={{
+    <Link data-animation="fadeIn" href={href} style={{ textDecoration: "none", display: "block" }}>
+      <div
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        style={{
+          background: "#fff",
+          border: `2px solid ${hovered ? accent : "#e2e8f0"}`,
+          borderRadius: "2px",
+          // overflow: "hidden",
+          transition: "border-color 0.15s, box-shadow 0.15s",
+          boxShadow: hovered
+            ? `0 0 0 3px rgba(27,58,107,0.08), 0 8px 28px rgba(27,58,107,0.12)`
+            : "0 1px 4px rgba(0,0,0,0.06)",
+          display: "flex",
+          flexDirection: "column",
+          position: "relative",
+          cursor: "pointer",
+        }}
+      >
+        {badge && (
+          <div style={{
+            position: "absolute", top: "0.75rem", left: "0.75rem", zIndex: 2,
+            background: accent,
+            color: "#fff",
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-            fontSize: "1.05rem", fontWeight: 900,
-            color: "#111", textTransform: "uppercase", letterSpacing: "0.03em",
+            fontSize: "0.65rem", fontWeight: 800,
+            letterSpacing: "0.1em", textTransform: "uppercase",
+            padding: "0.2rem 0.55rem", borderRadius: "2px",
           }}>
-            {label}
-          </span>
+            {badge}
+          </div>
+        )}
+
+        <div className="card-image" style={{ width: "100%", aspectRatio: "3/2", overflow: "hidden", background: "#111" }}>
+          <img
+            src={img}
+            alt={label}
+            style={{
+              width: "100%", height: "100%", objectFit: "cover",
+              transition: "transform 0.35s",
+              transform: hovered ? "scale(1.04)" : "scale(1)",
+            }}
+          />
         </div>
 
-        <div style={{
-          fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-          fontSize: "0.78rem", fontWeight: 700,
-          color: accent, letterSpacing: "0.06em",
-          textTransform: "uppercase", marginBottom: "0.6rem",
-        }}>
-          {tagline}
-        </div>
-
-        <p style={{
-          fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
-          fontSize: "0.8rem", color: "#555", lineHeight: 1.6,
-          marginBottom: "0.75rem", flex: 1,
-        }}>
-          {desc}
-        </p>
-
-        <ul style={{ margin: "0 0 1rem", padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: "0.25rem" }}>
-          {bullets.map((b) => (
-            <li key={b} style={{
-              fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
-              fontSize: "0.75rem", color: "#444",
-              display: "flex", alignItems: "center", gap: "0.4rem",
+        <div style={{ padding: "1.25rem 1.25rem 1rem", flex: 1, display: "flex", flexDirection: "column" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.35rem" }}>
+            <span style={{ color: accent }}>{icon}</span>
+            <span style={{
+              fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+              fontSize: "1.05rem", fontWeight: 900,
+              color: "#111", textTransform: "uppercase", letterSpacing: "0.03em",
             }}>
-              <span style={{ width: "5px", height: "5px", background: accent, borderRadius: "50%", flexShrink: 0 }} />
-              {b}
-            </li>
-          ))}
-        </ul>
+              {label}
+            </span>
+          </div>
 
-        <div
-          style={{
-            width: "100%",
-            background: accent, color: "#fff",
-            padding: "0.7rem 1rem",
+          <div style={{
             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-            fontSize: "0.8rem", fontWeight: 800,
-            letterSpacing: "0.08em", textTransform: "uppercase",
-            borderRadius: "2px",
-            display: "flex", alignItems: "center", justifyContent: "center", gap: "0.4rem",
-            transition: "box-shadow 0.2s ease, transform 0.15s ease",
-          }}
-          onMouseEnter={e => {
-            (e.currentTarget as HTMLDivElement).style.boxShadow = `0 0 22px ${accent}88`;
-            (e.currentTarget as HTMLDivElement).style.transform = "translateY(-1px)";
-          }}
-          onMouseLeave={e => {
-            (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
-            (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
-          }}
-        >
+            fontSize: "0.78rem", fontWeight: 700,
+            color: accent, letterSpacing: "0.06em",
+            textTransform: "uppercase", marginBottom: "0.6rem",
+          }}>
+            {tagline}
+          </div>
+
+          <p style={{
+            fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
+            fontSize: "0.8rem", color: "#555", lineHeight: 1.6,
+            marginBottom: "0.75rem", flex: 1,
+          }}>
+            {desc}
+          </p>
+
+          <ul style={{ margin: "0 0 1rem", padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: "0.25rem" }}>
+            {bullets.map((b) => (
+              <li key={b} style={{
+                fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
+                fontSize: "0.75rem", color: "#444",
+                display: "flex", alignItems: "center", gap: "0.4rem",
+              }}>
+                <span style={{ width: "5px", height: "5px", background: accent, borderRadius: "50%", flexShrink: 0 }} />
+                {b}
+              </li>
+            ))}
+          </ul>
+
+          <div
+            style={{
+              width: "100%",
+              background: accent, color: "#fff",
+              padding: "0.7rem 1rem",
+              fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
+              fontSize: "0.8rem", fontWeight: 800,
+              letterSpacing: "0.08em", textTransform: "uppercase",
+              borderRadius: "2px",
+              display: "flex", alignItems: "center", justifyContent: "center", gap: "0.4rem",
+              transition: "box-shadow 0.2s ease, transform 0.15s ease",
+            }}
+            onMouseEnter={e => {
+              (e.currentTarget as HTMLDivElement).style.boxShadow = `0 0 22px ${accent}88`;
+              (e.currentTarget as HTMLDivElement).style.transform = "translateY(-1px)";
+            }}
+            onMouseLeave={e => {
+              (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
+              (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
+            }}
+          >
             LEARN MORE <ArrowRight size={13} />
           </div>
+        </div>
       </div>
-    </div>
     </Link>
   );
 }
@@ -342,10 +342,10 @@ export default function ServiceHub() {
                 cursor: "pointer", borderRadius: "2px",
                 display: "flex", alignItems: "center", gap: "0.4rem",
               }}>
-                REQUEST SERVICE <ArrowRight size={14} />
+                Request Info<ArrowRight size={14} />
               </button>
             </Link>
-            <a data-animation="slideRight" href="tel:+18885457715">
+            {/* <a data-animation="slideRight" href="tel:+18885457715">
               <button style={{
                 background: RED, color: "#fff",
                 border: "none", padding: "0.85rem 1.8rem",
@@ -357,7 +357,7 @@ export default function ServiceHub() {
               }}>
                 <Phone size={14} /> 24/7: (888) 545-7715
               </button>
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
@@ -384,7 +384,7 @@ export default function ServiceHub() {
         </div>
 
         <div style={{
-          display: "grid", 
+          display: "grid",
           gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
           gap: "1.5rem",
         }}>
@@ -436,16 +436,16 @@ export default function ServiceHub() {
               textDecoration: "none",
               // transition: "box-shadow 0.2s ease, background 0.18s ease, transform 0.15s ease",
             }}
-            onMouseEnter={e => {
-              e.currentTarget.style.background = "#2A5298";
-              e.currentTarget.style.boxShadow = "0 0 28px rgba(27,58,107,0.85), 0 4px 16px rgba(27,58,107,0.5)";
-              e.currentTarget.style.transform = "translateY(-2px)";
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.background = BLUE;
-              e.currentTarget.style.boxShadow = "none";
-              e.currentTarget.style.transform = "translateY(0)";
-            }}>
+              onMouseEnter={e => {
+                e.currentTarget.style.background = "#2A5298";
+                e.currentTarget.style.boxShadow = "0 0 28px rgba(27,58,107,0.85), 0 4px 16px rgba(27,58,107,0.5)";
+                e.currentTarget.style.transform = "translateY(-2px)";
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.background = BLUE;
+                e.currentTarget.style.boxShadow = "none";
+                e.currentTarget.style.transform = "translateY(0)";
+              }}>
               California Service Page
             </a>
             <a data-animation="fadeIn" href="/spray-booth-service-los-angeles" style={{
@@ -459,18 +459,18 @@ export default function ServiceHub() {
               textDecoration: "none",
               // transition: "box-shadow 0.2s ease, background 0.18s ease, color 0.18s ease, transform 0.15s ease",
             }}
-            onMouseEnter={e => {
-              e.currentTarget.style.background = BLUE;
-              e.currentTarget.style.color = "#fff";
-              e.currentTarget.style.boxShadow = "0 0 28px rgba(27,58,107,0.85), 0 4px 16px rgba(27,58,107,0.5)";
-              e.currentTarget.style.transform = "translateY(-2px)";
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.background = "transparent";
-              e.currentTarget.style.color = BLUE;
-              e.currentTarget.style.boxShadow = "none";
-              e.currentTarget.style.transform = "translateY(0)";
-            }}>
+              onMouseEnter={e => {
+                e.currentTarget.style.background = BLUE;
+                e.currentTarget.style.color = "#fff";
+                e.currentTarget.style.boxShadow = "0 0 28px rgba(27,58,107,0.85), 0 4px 16px rgba(27,58,107,0.5)";
+                e.currentTarget.style.transform = "translateY(-2px)";
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.background = "transparent";
+                e.currentTarget.style.color = BLUE;
+                e.currentTarget.style.boxShadow = "none";
+                e.currentTarget.style.transform = "translateY(0)";
+              }}>
               Los Angeles County Service
             </a>
             <a data-animation="slideRight" href="/spray-booth-service-bay-area" style={{
@@ -484,18 +484,18 @@ export default function ServiceHub() {
               textDecoration: "none",
               // transition: "box-shadow 0.2s ease, background 0.18s ease, color 0.18s ease, transform 0.15s ease",
             }}
-            onMouseEnter={e => {
-              e.currentTarget.style.background = BLUE;
-              e.currentTarget.style.color = "#fff";
-              e.currentTarget.style.boxShadow = "0 0 28px rgba(27,58,107,0.85), 0 4px 16px rgba(27,58,107,0.5)";
-              e.currentTarget.style.transform = "translateY(-2px)";
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.background = "transparent";
-              e.currentTarget.style.color = BLUE;
-              e.currentTarget.style.boxShadow = "none";
-              e.currentTarget.style.transform = "translateY(0)";
-            }}>
+              onMouseEnter={e => {
+                e.currentTarget.style.background = BLUE;
+                e.currentTarget.style.color = "#fff";
+                e.currentTarget.style.boxShadow = "0 0 28px rgba(27,58,107,0.85), 0 4px 16px rgba(27,58,107,0.5)";
+                e.currentTarget.style.transform = "translateY(-2px)";
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.background = "transparent";
+                e.currentTarget.style.color = BLUE;
+                e.currentTarget.style.boxShadow = "none";
+                e.currentTarget.style.transform = "translateY(0)";
+              }}>
               Bay Area Service
             </a>
           </div>

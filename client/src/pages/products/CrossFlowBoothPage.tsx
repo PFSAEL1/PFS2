@@ -263,23 +263,23 @@ export default function CrossFlowBoothPage() {
           }}>
             ETL listed. UL 508A certified. Horizontal airflow — the most cost-effective enclosed booth for automotive and industrial finishing. Ships nationally.
           </p>
-        <div className="flex flex-col min-[768px]:flex-row gap-4 w-full min-[768px]:w-auto">
-  <Link
-    data-animation="slideLeft"
-    href="/contact/request-a-quote?from=crossflow-booth"
-    className="w-full min-[768px]:w-auto"
-  >
-    <span
-      className="btn-glow flex w-full items-center justify-center gap-2"
-      style={{
-        boxSizing: "border-box",
-      }}
-    >
-      GET PRICING <ArrowRight size={16} />
-    </span>
-  </Link>
+          <div className="flex flex-col min-[768px]:flex-row gap-4 w-full min-[768px]:w-auto">
+            <Link
+              data-animation="slideLeft"
+              href="/contact/request-a-quote?from=crossflow-booth"
+              className="w-full min-[768px]:w-auto"
+            >
+              <span
+                className="btn-glow flex w-full items-center justify-center gap-2"
+                style={{
+                  boxSizing: "border-box",
+                }}
+              >
+                Request Info<ArrowRight size={16} />
+              </span>
+            </Link>
 
-  <a
+            {/* <a
     data-animation="slideRight"
     href="tel:8885457715"
     className="w-full min-[768px]:w-auto"
@@ -294,8 +294,8 @@ export default function CrossFlowBoothPage() {
     >
       CALL (888) 545-7715
     </span>
-  </a>
-</div>
+  </a> */}
+          </div>
         </div>
       </section>
 
