@@ -33,13 +33,13 @@ const RED = "#C0392B";
 const HERO_IMG = "/assets/spray-to-waste-hero_2fe77f1d.jpg";
 
 const GALLERY = [
-  { src: "/assets/pfs-stw-4208_b899a28f.jpg",                        alt: "PFS spray-to-waste powder booth exterior — white enclosed unit" },
-  { src: "/assets/pfs-stw-7010_4c202b9d.jpg",                        alt: "PFS Nova Series spray-to-waste booth interior with filter modules" },
-  { src: "/assets/pfs-stw-8411_efbc079f.jpg",                        alt: "PFS Nova Series spray-to-waste booth side view" },
+  { src: "/assets/pfs-stw-4208_b899a28f.jpg", alt: "PFS spray-to-waste powder booth exterior — white enclosed unit" },
+  { src: "/assets/pfs-stw-7010_4c202b9d.jpg", alt: "PFS Nova Series spray-to-waste booth interior with filter modules" },
+  { src: "/assets/pfs-stw-8411_efbc079f.jpg", alt: "PFS Nova Series spray-to-waste booth side view" },
   { src: "/assets/spray-to-waste-pfs-booth-blue-unit_1f718c28.webp", alt: "PFS spray-to-waste blue filter module unit" },
-  { src: "/assets/pfs-stw-action1_5dd2f4d4.webp",                    alt: "Powder coating in action inside PFS Nova Series spray-to-waste booth" },
-  { src: "/assets/pfs-stw-action2_4d74a007.webp",                    alt: "Operator applying powder coating in PFS Nova Series spray-to-waste booth" },
-  { src: "/assets/spray-to-waste-aerospace-composite_3907664d.png",  alt: "Aerospace composite part finishing in PFS spray-to-waste system" },
+  { src: "/assets/pfs-stw-action1_5dd2f4d4.webp", alt: "Powder coating in action inside PFS Nova Series spray-to-waste booth" },
+  { src: "/assets/pfs-stw-action2_4d74a007.webp", alt: "Operator applying powder coating in PFS Nova Series spray-to-waste booth" },
+  // { src: "/assets/spray-to-waste-aerospace-composite_3907664d.png",  alt: "Aerospace composite part finishing in PFS spray-to-waste system" },
 ];
 
 const SERVICES = [

@@ -27,11 +27,11 @@ const ENCLOSED_BOOTH_RENDER = "/assets/enclosed-booth-card-zenith_7e010642.jpg";
 // bgImage  : side-angle private jet in white booth (hero)
 // AERO_FEATURED: PFS-branded jet side profile (featured/gallery 1)
 // AERO_GALLERY2: twin-engine prop in hangar (gallery 2)
-const AIRCRAFT_RENDER      = "/assets/pfs-aerospace-jet-side-booth-hero_34e5d4ce.png";   // hero — real PFS jet side angle
-const AIRCRAFT_HERO_VIDEO  = "/assets/product_aerospace_jet_side_hero_ae4811fe.mp4"; // hero video — generated from real photo
-const AERO_FEATURED     = "/assets/aero-pfs-jet-side-profile-clean_5b7a100a.jpg"; // PFS-branded jet
-const AERO_GALLERY2     = "/assets/aero-twin-engine-hangar-clean_122f0945.jpg";  // twin-engine prop
-const AERO_REAL_BOOTH   = "/assets/pfs-aerospace-jet-in-booth-real_2eb79dc9.png"; // real PFS install
+const AIRCRAFT_RENDER = "/assets/pfs-aerospace-jet-side-booth-hero_34e5d4ce.png";   // hero — real PFS jet side angle
+const AIRCRAFT_HERO_VIDEO = "/assets/product_aerospace_jet_side_hero_ae4811fe.mp4"; // hero video — generated from real photo
+const AERO_FEATURED = "/assets/aero-pfs-jet-side-profile-clean_5b7a100a.jpg"; // PFS-branded jet
+const AERO_GALLERY2 = "/assets/aero-twin-engine-hangar-clean_122f0945.jpg";  // twin-engine prop
+const AERO_REAL_BOOTH = "/assets/pfs-aerospace-jet-in-booth-real_2eb79dc9.png"; // real PFS install
 const POWDER_RENDER = IMG_POWDER_COATING;
 const BATCH_OVEN_RENDER = IMG_OVEN_BATCH;
 const CONVEYOR_OVEN_RENDER = IMG_OVEN_CONVEYOR;
@@ -48,6 +48,7 @@ const INSPECTION_RENDER = IMG_INSPECTION;
 const CONVEYOR_IMG = IMG_CONVEYOR_LINE;
 const PRETREAT_IMG = IMG_PRETREATMENT;
 const FILTERS_IMG = IMG_FILTERS;
+const CUSTOM_BOOTH_IMG = "/assets/custom-booth-featured.png";
 
 interface RelatedProduct {
   title: string;
@@ -1428,12 +1429,23 @@ export default function ProductSubPage() {
             {/* Sidebar */}
             <div>
               {/* Featured product image — shown when featuredImage is provided */}
-              {data.featuredImage && (
-                <div style={{ marginBottom: "1.5rem", overflow: "hidden", border: "1px solid #e8e8e6" }}>
+              {CUSTOM_BOOTH_IMG && (
+                <div
+                  style={{
+                    marginBottom: "1.5rem",
+                    overflow: "hidden",
+                    border: "1px solid #e8e8e6",
+                  }}
+                >
                   <img
-                    src={data.featuredImage}
+                    src={CUSTOM_BOOTH_IMG}
                     alt={`${data.title} — featured product`}
-                    style={{ width: "100%", display: "block", objectFit: "cover", maxHeight: 280 }}
+                    style={{
+                      width: "100%",
+                      height: "280px",
+                      display: "block",
+                      objectFit: "cover",
+                    }}
                   />
                 </div>
               )}
