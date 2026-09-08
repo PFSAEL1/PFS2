@@ -119,7 +119,7 @@ export default function MixingRoomPage() {
   useSEO({
     title: "Paint Mixing Rooms | Industrial Paint Mix Rooms | PFS",
     description: "PFS industrial paint mixing rooms provide a safe, ventilated, code-compliant space for paint preparation, thinning, color matching, straining, and storage. Cross-flow ventilation, integrated or stand-alone, ETL/UL listed components, NFPA 33 compliant. Manufactured in Santa Rosa, CA.",
-    canonical: "/products/paint-booths/mixing-room",
+    canonical: "https://www.pfsspraybooths.com/products/mixing-rooms",
   });
 
   const [featuresOpen, setFeaturesOpen] = useState(false);

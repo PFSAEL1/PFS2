@@ -353,7 +353,7 @@ export function BlastingBoothsPage() {
   useSEO({
     title: "Sandblast Booth Systems | Blast Rooms for Industrial Applications | PFS",
     description: "PFS sandblast booth systems prevent blast media from escaping while protecting workers and the workspace. 11-gauge galvanized steel panels, T8 LED lighting, rubber roll-up doors, crane openings available. OSHA and NFPA 33 compliant. Manufactured in Santa Rosa, CA.",
-    canonical: "/products/blast-systems/blasting-booths",
+    canonical: "https://www.pfsspraybooths.com/products/blast-systems/reclaim-blasting-booths",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Product",

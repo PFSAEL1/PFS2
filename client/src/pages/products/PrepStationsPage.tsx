@@ -140,7 +140,7 @@ export default function PrepStationsPage() {
   useSEO({
     title: "Paint Prep Stations | Automotive & Industrial Prep Booths | PFS",
     description: "PFS paint prep stations create a dedicated, ventilated environment for sanding, priming, masking, and surface prep. Downdraft and side-downdraft airflow options. ETL/UL listed components, EPA 6H compliant. Manufactured in Santa Rosa, CA.",
-    canonical: "/products/prep/prep-stations",
+    canonical: "https://www.pfsspraybooths.com/products/prep-support/prep-stations",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Product",

@@ -136,7 +136,7 @@ export default function BatchOvenPage() {
   useSEO({
     title: "Batch Ovens | Industrial Powder Coating Ovens | PFS",
     description: "PFS batch ovens deliver precise, uniform heat for powder coating cure cycles and industrial heat treating. Compact design, rapid heat-up, stable temperature control, NFPA 86 compliant. Manufactured in Santa Rosa, CA with ETL/UL listed components.",
-    canonical: "/products/ovens/batch",
+    canonical: "https://www.pfsspraybooths.com/products/ovens/batch",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Product",

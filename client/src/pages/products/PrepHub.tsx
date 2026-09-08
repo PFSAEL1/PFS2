@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
 const HERO_VIDEO = "/assets/pfs-prep-station-hero_2554e281.mp4";
-const HERO_IMG   = "/assets/pfs-prep-station-facility_f1978a4b.jpg"; // poster fallback
+const HERO_IMG = "/assets/pfs-prep-station-facility_f1978a4b.jpg"; // poster fallback
 const SANDING_IMG = "/assets/pfs-prep-station-curtain-real_c07d32e0.jpg";
 const MIX_ROOM_IMG = "/assets/IMG_0498_a98f5f38.jpg";
 const PREP_STATION_IMG = "/assets/pfs-prep-station-curtain-real_c07d32e0.jpg";
@@ -58,7 +58,7 @@ export default function PrepHub() {
   useSEO({
     title: "Paint Prep Stations & Prep Booths | Surface Preparation | PFS",
     description: "PFS prep stations and prep booths provide a controlled, code-compliant environment for sanding, masking, priming, and surface preparation. Keeps your spray booth reserved for final coats. ETL/UL listed components, NFPA 33 compliant. Manufactured in Santa Rosa, CA.",
-    canonical: "/products/prep",
+    canonical: "https://www.pfsspraybooths.com/products/prep",
   });
 
   useEffect(() => {
@@ -95,7 +95,7 @@ export default function PrepHub() {
           muted
           loop
           playsInline
-         
+
           aria-hidden="true"
           style={{
             position: "absolute", inset: 0,

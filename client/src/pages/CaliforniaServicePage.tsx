@@ -160,7 +160,7 @@ export default function CaliforniaServicePage() {
   useSEO({
     title: "Spray Booth Service California | Paint Booth Repair & Maintenance | PFS",
     description: "PFS provides spray booth service, repair, maintenance, and NFPA 33 compliance inspections throughout California. CARB, AQMD, NESHAP, and OSHA compliant. Serving automotive, aerospace, fleet, marine, woodworking, industrial, and more. Bay Area, Los Angeles, Sacramento, North Bay, Solano County. Call (888) 545-7715.",
-    canonical: "/spray-booth-service-california",
+    canonical: "https://www.pfsspraybooths.com/service/california",
     jsonLd: [
       {
         "@context": "https://schema.org",

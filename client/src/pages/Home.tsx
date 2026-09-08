@@ -86,7 +86,7 @@ export default function Home() {
   useSEO({
     title: "PFS | Turnkey Industrial Finishing Systems — Spray Booths, Powder Coating & Blast Rooms",
     description: "Platinum Finishing Systems (PFS) is a turnkey systems integrator and vertical manufacturer specializing in custom industrial finishing solutions. We design, fabricate, and install complete finishing lines — ETL-certified spray booths, powder coating systems, industrial ovens, blast rooms, robotic applicators, and UL508A control panels — for automotive, aerospace, defense, and industrial manufacturing nationwide. Engineered and built in Santa Rosa, CA.",
-    canonical: "/",
+    canonical: "https://www.pfsspraybooths.com",
     jsonLd: [
       {
         "@context": "https://schema.org",

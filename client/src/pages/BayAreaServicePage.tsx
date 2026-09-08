@@ -127,7 +127,7 @@ export default function BayAreaServicePage() {
   useSEO({
     title: "Bay Area Spray Booth Service | BAAQMD Compliant | PFS — Santa Rosa, CA",
     description: "PFS provides spray booth service, repair, and BAAQMD compliance inspections throughout the nine-county San Francisco Bay Area. Factory-trained technicians, 24/7 emergency response, NFPA 33 and CARB documentation. Serving Oakland, San Jose, San Francisco, Fremont, Concord, and all Bay Area counties.",
-    canonical: "/spray-booth-service-bay-area",
+    canonical: "https://www.pfsspraybooths.com/service/bay-area",
     jsonLd: [
       {
         "@context": "https://schema.org",

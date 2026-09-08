@@ -210,7 +210,7 @@ export default function OpenFaceBoothPage() {
   useSEO({
     title: "Open Face Spray Booths | Industrial Paint Walls & Open Booths | PFS",
     description: "PFS open face spray booths and paint walls provide a code-compliant, ventilated finishing environment for large parts and production lines. ETL/UL listed components, NFPA 33 compliant. Manufactured in Santa Rosa, CA.",
-    canonical: "/products/paint-booths/open-face",
+    canonical: "https://www.pfsspraybooths.com/products/paint-booths/open-face",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Product",

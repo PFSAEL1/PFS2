@@ -129,7 +129,7 @@ export default function EnclosedBoothsPage() {
   useSEO({
     title: "Enclosed Spray Booths | Downdraft, Semi-Downdraft & Cross-Flow | PFS",
     description: "PFS manufactures a complete line of enclosed spray booths — full downdraft, semi-downdraft, side downdraft, and cross-flow configurations. All booths built with ETL/UL listed and certified components. Custom sizes available. Factory-direct from Santa Rosa, CA.",
-    canonical: "/products/spray-booths/enclosed",
+    canonical: "https://www.pfsspraybooths.com/products/paint-booths/enclosed",
   });
 
   useEffect(() => {

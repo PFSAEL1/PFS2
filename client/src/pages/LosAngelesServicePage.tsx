@@ -138,7 +138,7 @@ export default function LosAngelesServicePage() {
   useSEO({
     title: "Spray Booth Service Los Angeles | Paint Booth Repair & AQMD Rule 1151 Compliance | PFS",
     description: "PFS provides spray booth service, repair, maintenance, and South Coast AQMD Rule 1151 compliance inspections throughout Los Angeles County and the South Coast Air Basin. NFPA 33, CARB, NESHAP, and OSHA compliant. Serving automotive, aerospace, fleet, marine, industrial, and all industries. Call (888) 545-7715.",
-    canonical: "/spray-booth-service-los-angeles",
+    canonical: "https://www.pfsspraybooths.com/service/los-angeles",
     jsonLd: [
       {
         "@context": "https://schema.org",
