@@ -5,6 +5,7 @@
  */
 
 import { Link } from "wouter";
+import { PFS_FILTERS_URL } from "@/components/ReplacementFiltersCTA";
 
 const LOGO_URL = "/assets/pfs-logo-transparent-clean_ff3046c5.png";
 
@@ -51,7 +52,7 @@ const FOOTER_COLS = [
       { label: "Retrofits & Upgrades", href: "/service/retrofits-upgrades" },
       { label: "Booth Inspections", href: "/service/booth-inspections" },
       { label: "OEM Parts", href: "/parts" },
-      { label: "Filters & Consumables", href: "https://pfsfilters.com", external: true },
+      { label: "PFS Filters", href: PFS_FILTERS_URL, external: true },
       { label: "Technical Support", href: "/service/technical-support" },
     ],
   },

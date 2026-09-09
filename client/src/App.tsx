@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import MobileCTABar from "./components/MobileCTABar";
+import ReplacementFiltersCTA from "./components/ReplacementFiltersCTA";
 import GlobalAnimations from "./GlobalAnimations";
 
 // Pages
@@ -102,6 +103,7 @@ const BlogPricingGuidePage = lazy(() => import("./pages/blog/BlogPricingGuidePag
 const BlogCrossflowVsDowndraftPage = lazy(() => import("./pages/blog/BlogCrossflowVsDowndraftPage"));
 const BlogUL508AControlPanelPage = lazy(() => import("./pages/blog/BlogUL508AControlPanelPage"));
 const BlogMaintenanceChecklistPage = lazy(() => import("./pages/blog/BlogMaintenanceChecklistPage"));
+const BlogReplacementPaintBoothFiltersPage = lazy(() => import("./pages/blog/BlogReplacementPaintBoothFiltersPage"));
 
 // Contact
 const ContactHub = lazy(() => import("./pages/contact/ContactHub"));
@@ -150,6 +152,14 @@ function PageLoader() {
 }
 
 function Layout({ children }: { children: React.ReactNode }) {
+  const [location] = useLocation();
+  const pathname = location.split(/[?#]/)[0];
+  const showReplacementFiltersCTA =
+    pathname === "/products/paint-booths" ||
+    pathname.startsWith("/products/paint-booths/") ||
+    pathname.startsWith("/products/container-booths") ||
+    pathname === "/products/outdoor-booths";
+
   return (
     <div className="min-h-screen flex flex-col">
       <ScrollToTop />
@@ -158,6 +168,7 @@ function Layout({ children }: { children: React.ReactNode }) {
         <Suspense fallback={<PageLoader />}>
           {children}
         </Suspense>
+        {showReplacementFiltersCTA && <ReplacementFiltersCTA />}
       </main>
       <Footer />
       {/* Sticky mobile CTA bar — only visible on mobile (<768px) */}
@@ -291,6 +302,7 @@ function Router() {
       <Route path="/blog/crossflow-vs-downdraft-spray-booth" component={BlogCrossflowVsDowndraftPage} />
       <Route path="/blog/ul508a-certified-control-panel-spray-booth" component={BlogUL508AControlPanelPage} />
       <Route path="/blog/spray-booth-maintenance-filter-checklist" component={BlogMaintenanceChecklistPage} />
+      <Route path="/blog/replacement-paint-booth-filters" component={BlogReplacementPaintBoothFiltersPage} />
 
       {/* Contact */}
       <Route path="/contact" component={ContactHub} />

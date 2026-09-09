@@ -5,6 +5,7 @@
 import { useSEO } from '@/hooks/useSEO';
 import { Link } from "wouter";
 import { ArrowRight, Phone, CheckCircle } from "lucide-react";
+import { PFS_FILTERS_URL } from "@/components/ReplacementFiltersCTA";
 
 const HERO_IMG = "/assets/pfs-booth-clean-hero-anon_9dfc3e0e.png";
 const BLUE = "#1B3A6B";
@@ -106,7 +107,11 @@ export default function BlogMaintenanceChecklistPage() {
             </table>
           </div>
 
-          <p><Link href="/parts"><span style={{ color: BLUE, fontWeight: 600, cursor: "pointer" }}>Shop OEM Replacement Filters →</span></Link></p>
+          <p>
+            <a href={PFS_FILTERS_URL} target="_blank" rel="noopener noreferrer">
+              <span style={{ color: BLUE, fontWeight: 600, cursor: "pointer" }}>Shop Replacement Filters at PFS Filters →</span>
+            </a>
+          </p>
 
           {/* Daily/Weekly */}
           <h2 style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "1.3rem", fontWeight: 700, color: BLUE, textTransform: "uppercase", letterSpacing: "0.04em", marginTop: "2.5rem", marginBottom: "0.75rem" }}>
@@ -152,8 +157,13 @@ export default function BlogMaintenanceChecklistPage() {
           <p style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "1.1rem", fontWeight: 700, color: "#fff", textTransform: "uppercase", letterSpacing: "0.04em", margin: 0 }}>Need replacement filters or professional booth service?</p>
           <p style={{ fontFamily: "'Archivo Narrow', sans-serif", fontSize: "0.9rem", color: "rgba(255,255,255,0.75)", margin: 0 }}>PFS services all makes and models. OEM filters ship nationally.</p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <Link href="/service/booth-cleaning">
+            <a href={PFS_FILTERS_URL} target="_blank" rel="noopener noreferrer">
               <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: GOLD, color: "#fff", fontFamily: "'Chakra Petch', sans-serif", fontWeight: 700, fontSize: "0.82rem", letterSpacing: "0.12em", textTransform: "uppercase", padding: "0.75rem 1.5rem", cursor: "pointer" }}>
+                Shop Replacement Filters <ArrowRight size={14} />
+              </span>
+            </a>
+            <Link href="/service/booth-cleaning">
+              <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", color: "#fff", border: "1px solid rgba(255,255,255,0.4)", fontFamily: "'Chakra Petch', sans-serif", fontWeight: 700, fontSize: "0.82rem", letterSpacing: "0.12em", textTransform: "uppercase", padding: "0.75rem 1.5rem", cursor: "pointer" }}>
                 Contact the PFS Service Team <ArrowRight size={14} />
               </span>
             </Link>

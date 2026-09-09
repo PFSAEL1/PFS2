@@ -1,5 +1,5 @@
 // Blog Hub Page — /blog
-// Lists all 4 SEO blog posts as clean editorial cards
+// Lists SEO blog posts as clean editorial cards
 // Linked from Resources hub and sitemap
 
 import { useSEO } from '@/hooks/useSEO';
@@ -44,6 +44,14 @@ const POSTS = [
     img: "/assets/pfs-booth-clean-hero-anon_9dfc3e0e.png",
     date: "August 2026",
   },
+  {
+    slug: "/blog/replacement-paint-booth-filters",
+    label: "FILTER RESOURCE",
+    title: "Replacement Paint Booth Filters: What to Keep on Hand",
+    desc: "A short guide to planning intake, exhaust, ceiling, and prefilter media for routine paint booth maintenance.",
+    img: "/assets/pfs-filters-product-lineup_ef6011fa.png",
+    date: "September 2026",
+  },
 ];
 
 export default function BlogHubPage() {
@@ -80,6 +88,11 @@ export default function BlogHubPage() {
           "@type": "BlogPosting",
           "headline": "Spray Booth Maintenance Checklist: When to Change Your Filters",
           "url": "https://pfsspraybooths.com/blog/spray-booth-maintenance-filter-checklist"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Replacement Paint Booth Filters: What to Keep on Hand",
+          "url": "https://pfsspraybooths.com/blog/replacement-paint-booth-filters"
         }
       ]
     },

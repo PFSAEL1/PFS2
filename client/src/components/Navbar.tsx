@@ -9,6 +9,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { ChevronDown, ChevronRight, Phone, Mail, Search, Menu, X } from "lucide-react";
+import { PFS_FILTERS_URL } from "@/components/ReplacementFiltersCTA";
 
 // Official PFS logo — transparent PNG; filter:invert(1) makes it white on dark navbar
 const LOGO_URL = "/assets/pfs-logo-white-cropped_4e512383.png";
@@ -131,7 +132,7 @@ const NAV_ITEMS: NavItem[] = [
     children: [
       { label: "Services Overview", href: "/service" },
       { label: "OEM Parts Store", href: "/parts" },
-      { label: "Browse All Filters →", href: "https://pfsfilters.com", external: true },
+      { label: "Replacement Filters", href: PFS_FILTERS_URL, external: true },
     ],
   },
   {
@@ -470,20 +471,32 @@ export default function Navbar() {
             </div>
             <div className="flex items-center gap-3 md:gap-5">
               {[
-                { label: "Order Filters", href: "/filters" },
-                { label: "Support", href: "/support" },
-                { label: "Contact", href: "/contact" },
-                { label: "Distributor", href: "/become-a-distributor" },
-              ].map((item) => (
-                <Link key={item.label} href={item.href}>
-                  <span
-                    style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.62rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#FFFFFF", transition: "color 0.15s", cursor: "pointer", whiteSpace: "nowrap" }}
-                    onMouseEnter={e => ((e.target as HTMLElement).style.color = "rgba(255,255,255,0.75)")}
-                    onMouseLeave={e => ((e.target as HTMLElement).style.color = "#FFFFFF")}>
-                    {item.label}
-                  </span>
-                </Link>
-              ))}
+                { label: "Replacement Filters", href: PFS_FILTERS_URL, external: true },
+                { label: "Order Filters", href: "/filters", external: false },
+                { label: "Support", href: "/support", external: false },
+                { label: "Contact", href: "/contact", external: false },
+                { label: "Distributor", href: "/become-a-distributor", external: false },
+              ].map((item) =>
+                item.external ? (
+                  <a key={item.label} href={item.href} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+                    <span
+                      style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.62rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#FFFFFF", transition: "color 0.15s", cursor: "pointer", whiteSpace: "nowrap" }}
+                      onMouseEnter={e => ((e.target as HTMLElement).style.color = "rgba(255,255,255,0.75)")}
+                      onMouseLeave={e => ((e.target as HTMLElement).style.color = "#FFFFFF")}>
+                      {item.label}
+                    </span>
+                  </a>
+                ) : (
+                  <Link key={item.label} href={item.href}>
+                    <span
+                      style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.62rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#FFFFFF", transition: "color 0.15s", cursor: "pointer", whiteSpace: "nowrap" }}
+                      onMouseEnter={e => ((e.target as HTMLElement).style.color = "rgba(255,255,255,0.75)")}
+                      onMouseLeave={e => ((e.target as HTMLElement).style.color = "#FFFFFF")}>
+                      {item.label}
+                    </span>
+                  </Link>
+                )
+              )}
             </div>
           </div>
         </div>
