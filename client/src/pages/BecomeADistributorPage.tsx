@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import { useState } from "react";
 import { useSEO } from '@/hooks/useSEO';
 import { submitLead } from "@/lib/submitLead";
+import { HEAR_ABOUT_US_OPTIONS, INDUSTRY_OPTIONS } from "@/lib/formConstants";
 import { Link } from "wouter";
 import { ArrowRight, CheckCircle2, TrendingUp, Wrench, Package, Users, Phone, Mail } from "lucide-react";
 
@@ -43,8 +44,8 @@ const BENEFITS = [
 const REQUIREMENTS = [
   "Established industrial, automotive, or finishing equipment distribution network",
   "Ability to provide local sales, installation coordination, and first-line service",
-  "Minimum annual volume commitment (discussed during qualification)",
-  "Alignment with PFS quality and customer service standards",
+  "Commitment to brand standards, product training, and customer satisfaction",
+  "Dedicated sales representative or team for finishing equipment line",
 ];
 
 const PROGRAM_FEATURES = [
@@ -56,27 +57,23 @@ const PROGRAM_FEATURES = [
   "Dedicated PFS sales rep and engineering support contact",
 ];
 
-interface FormData {
-  firstName: string;
-  lastName: string;
-  company: string;
-  email: string;
-  phone: string;
-  territory: string;
-  experience: string;
-  message: string;
-}
-
 export default function BecomeADistributorPage() {
   useSEO({
-    title: "Become a PFS Distributor | Industrial Finishing Equipment Partner Program",
-    description: "Partner with Platinum Finishing Systems to offer ETL-certified spray paint booths, powder coating systems, industrial ovens, and blast equipment. Competitive margins, factory support, and exclusive territory opportunities.",
+    title: "Become an Authorized PFS Distributor | Spray Booth & Finishing Equipment Partner",
+    description: "Join the PFS distributor network. Expand your product line with ETL-certified spray booths, powder coating systems, industrial ovens, and blast rooms. Protected territories and factory support.",
     canonical: "/become-a-distributor",
   });
 
-  const [form, setForm] = useState<FormData>({
-    firstName: "", lastName: "", company: "", email: "",
-    phone: "", territory: "", experience: "", message: "",
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    company: "",
+    email: "",
+    phone: "",
+    territory: "",
+    experience: "",
+    hearAboutUs: "",
+    message: "",
   });
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -88,7 +85,18 @@ export default function BecomeADistributorPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
-    submitLead({ firstName: form.firstName, lastName: form.lastName, company: form.company, email: form.email, phone: form.phone, territory: form.territory, experience: form.experience, message: form.message, formSource: "distributor-application" });
+    submitLead({
+      firstName: form.firstName,
+      lastName: form.lastName,
+      company: form.company,
+      email: form.email,
+      phone: form.phone,
+      territory: form.territory,
+      experience: form.experience,
+      hearAboutUs: form.hearAboutUs,
+      message: form.message,
+      formSource: "distributor-application",
+    });
     await new Promise(r => setTimeout(r, 800));
     setSubmitting(false);
     setSubmitted(true);
@@ -345,13 +353,24 @@ export default function BecomeADistributorPage() {
                     onChange={handleChange}
                   >
                     <option value="">Select your primary market...</option>
-                    <option value="automotive">Automotive / Collision Repair</option>
-                    <option value="industrial">Industrial / Manufacturing</option>
-                    <option value="aerospace">Aerospace & Defense</option>
-                    <option value="woodworking">Woodworking / Furniture</option>
-                    <option value="powder">Powder Coating</option>
-                    <option value="general">General Industrial Distribution</option>
-                    <option value="other">Other</option>
+                    {INDUSTRY_OPTIONS.map((item) => (
+                      <option key={item} value={item}>{item}</option>
+                    ))}
+                  </select>
+                </div>
+
+                <div style={{ marginBottom: "1.25rem" }}>
+                  <label style={labelStyle}>How did you hear about us?</label>
+                  <select
+                    style={{ ...inputStyle, appearance: "none" as const }}
+                    name="hearAboutUs"
+                    value={form.hearAboutUs}
+                    onChange={handleChange}
+                  >
+                    <option value="">Select an option...</option>
+                    {HEAR_ABOUT_US_OPTIONS.map((item) => (
+                      <option key={item} value={item}>{item}</option>
+                    ))}
                   </select>
                 </div>
 

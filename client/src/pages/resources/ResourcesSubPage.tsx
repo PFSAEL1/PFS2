@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useSEO } from '@/hooks/useSEO';
 import { submitLead } from "@/lib/submitLead";
+import { HEAR_ABOUT_US_OPTIONS, INDUSTRY_OPTIONS } from "@/lib/formConstants";
 import PageHero from "@/components/PageHero";
 import { Link, useParams } from "wouter";
 import { ArrowRight, Download, FileText, Lock, CheckCircle } from "lucide-react";
@@ -60,7 +61,14 @@ const GATED_DOWNLOADS = [
 function GatedDownload({ doc }: { doc: typeof GATED_DOWNLOADS[0] }) {
   const [open, setOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({ name: "", company: "", email: "", phone: "" });
+  const [form, setForm] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+    industry: "",
+    hearAboutUs: "",
+  });
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const validate = () => {
@@ -74,7 +82,16 @@ function GatedDownload({ doc }: { doc: typeof GATED_DOWNLOADS[0] }) {
     e.preventDefault();
     const errs = validate();
     if (Object.keys(errs).length > 0) { setErrors(errs); return; }
-    submitLead({ name: form.name, company: form.company, email: form.email, phone: form.phone, document: doc.title, formSource: "resource-download" });
+    submitLead({
+      name: form.name,
+      company: form.company,
+      email: form.email,
+      phone: form.phone,
+      industry: form.industry,
+      hearAboutUs: form.hearAboutUs,
+      document: doc.title,
+      formSource: "resource-download",
+    });
     setSubmitted(true);
   };
 
@@ -318,6 +335,54 @@ function GatedDownload({ doc }: { doc: typeof GATED_DOWNLOADS[0] }) {
                     outline: "none",
                   }}
                 />
+              </div>
+              <div>
+                <label style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#333", display: "block", marginBottom: "0.35rem" }}>
+                  Industry
+                </label>
+                <select
+                  value={form.industry}
+                  onChange={e => setForm(f => ({ ...f, industry: e.target.value }))}
+                  style={{
+                    width: "100%",
+                    padding: "0.6rem 0.85rem",
+                    border: "1px solid #d1d5db",
+                    fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
+                    fontSize: "0.875rem",
+                    color: "#1a1a1a",
+                    background: "#fff",
+                    outline: "none",
+                  }}
+                >
+                  <option value="">Select an industry...</option>
+                  {INDUSTRY_OPTIONS.map(item => (
+                    <option key={item} value={item}>{item}</option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label style={{ fontFamily: "'Chakra Petch', sans-serif", fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#333", display: "block", marginBottom: "0.35rem" }}>
+                  How did you hear about us?
+                </label>
+                <select
+                  value={form.hearAboutUs}
+                  onChange={e => setForm(f => ({ ...f, hearAboutUs: e.target.value }))}
+                  style={{
+                    width: "100%",
+                    padding: "0.6rem 0.85rem",
+                    border: "1px solid #d1d5db",
+                    fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
+                    fontSize: "0.875rem",
+                    color: "#1a1a1a",
+                    background: "#fff",
+                    outline: "none",
+                  }}
+                >
+                  <option value="">Select an option...</option>
+                  {HEAR_ABOUT_US_OPTIONS.map(item => (
+                    <option key={item} value={item}>{item}</option>
+                  ))}
+                </select>
               </div>
             </div>
             <button

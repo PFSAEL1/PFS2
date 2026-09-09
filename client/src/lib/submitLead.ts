@@ -21,6 +21,8 @@ export interface LeadData {
   product?: string;
   experience?: string;
   document?: string;
+  industry?: string;
+  hearAboutUs?: string;
   formSource: string;
   pageUrl?: string;
 }

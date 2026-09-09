@@ -5,6 +5,7 @@ import { Phone, Mail, CheckCircle, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import { submitLead } from "@/lib/submitLead";
+import { HEAR_ABOUT_US_OPTIONS, INDUSTRY_OPTIONS } from "@/lib/formConstants";
 
 /* ─────────────────────────────────────────────────────────────────────────
    CONTEXTUAL IMAGE MAP
@@ -109,6 +110,8 @@ export default function ContactSubPage() {
     company: "",
     email: "",
     phone: "",
+    industry: "",
+    hearAboutUs: "",
     message: "",
   });
 
@@ -126,6 +129,8 @@ export default function ContactSubPage() {
         company: form.company,
         email: form.email,
         phone: form.phone,
+        industry: form.industry,
+        hearAboutUs: form.hearAboutUs,
         message: form.message,
         formSource: `contact-${sub}`,
       });
@@ -135,6 +140,8 @@ export default function ContactSubPage() {
         company: "",
         email: "",
         phone: "",
+        industry: "",
+        hearAboutUs: "",
         message: "",
       });
 
@@ -240,6 +247,40 @@ export default function ContactSubPage() {
                         setForm((f) => ({ ...f, phone: e.target.value }))
                       }
                     />
+                  </div>
+                </div>
+
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className="form-label">Industry</label>
+                    <select
+                      className="form-input"
+                      value={form.industry}
+                      onChange={(e) =>
+                        setForm((f) => ({ ...f, industry: e.target.value }))
+                      }
+                    >
+                      <option value="">Select an industry...</option>
+                      {INDUSTRY_OPTIONS.map((item) => (
+                        <option key={item} value={item}>{item}</option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="form-label">How did you hear about us?</label>
+                    <select
+                      className="form-input"
+                      value={form.hearAboutUs}
+                      onChange={(e) =>
+                        setForm((f) => ({ ...f, hearAboutUs: e.target.value }))
+                      }
+                    >
+                      <option value="">Select an option...</option>
+                      {HEAR_ABOUT_US_OPTIONS.map((item) => (
+                        <option key={item} value={item}>{item}</option>
+                      ))}
+                    </select>
                   </div>
                 </div>
 

@@ -5,18 +5,40 @@
 
 import { useState } from "react";
 import { submitLead } from "@/lib/submitLead";
+import { HEAR_ABOUT_US_OPTIONS, INDUSTRY_OPTIONS } from "@/lib/formConstants";
 
 const HELIOS_IMG = "/assets/helios-booth-warehouse_7b31d966.jpg";
 
 export default function QuoteFormSection() {
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({
-    firstName: "", lastName: "", company: "", email: "", phone: "", state: "", product: "", message: "",
+    firstName: "",
+    lastName: "",
+    company: "",
+    email: "",
+    phone: "",
+    state: "",
+    product: "",
+    industry: "",
+    hearAboutUs: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    submitLead({ firstName: form.firstName, lastName: form.lastName, company: form.company, email: form.email, phone: form.phone, state: form.state, product: form.product, message: form.message, formSource: "homepage-quote" });
+    submitLead({
+      firstName: form.firstName,
+      lastName: form.lastName,
+      company: form.company,
+      email: form.email,
+      phone: form.phone,
+      state: form.state,
+      product: form.product,
+      industry: form.industry,
+      hearAboutUs: form.hearAboutUs,
+      message: form.message,
+      formSource: "homepage-quote",
+    });
     setSubmitted(true);
   };
 
@@ -168,6 +190,27 @@ export default function QuoteFormSection() {
                       <option>Blasting System</option>
                       <option>Filters &amp; Parts</option>
                       <option>Other</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label style={labelStyle}>Industry</label>
+                    <select value={form.industry} onChange={(e) => setForm({ ...form, industry: e.target.value })} style={{ ...inputStyle, appearance: "none" as const }}>
+                      <option value="">Select an industry...</option>
+                      {INDUSTRY_OPTIONS.map((item) => (
+                        <option key={item} value={item}>{item}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div>
+                    <label style={labelStyle}>How did you hear about us?</label>
+                    <select value={form.hearAboutUs} onChange={(e) => setForm({ ...form, hearAboutUs: e.target.value })} style={{ ...inputStyle, appearance: "none" as const }}>
+                      <option value="">Select an option...</option>
+                      {HEAR_ABOUT_US_OPTIONS.map((item) => (
+                        <option key={item} value={item}>{item}</option>
+                      ))}
                     </select>
                   </div>
                 </div>

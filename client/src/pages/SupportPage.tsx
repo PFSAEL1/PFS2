@@ -10,13 +10,15 @@ import { useSEO } from '@/hooks/useSEO';
 import { submitLead } from "@/lib/submitLead";
 import { Link } from "wouter";
 import { Phone, Mail, CheckCircle, ArrowRight, AlertCircle } from "lucide-react";
+import { HEAR_ABOUT_US_OPTIONS, INDUSTRY_OPTIONS } from "@/lib/formConstants";
 
-const TECH_HERO = "/assets/pfs-tech-support-studio_25c3ec02.png";
+const TECH_HERO = "/assets/pfs-service-team-real_47805166.jpg";
 
 const EQUIPMENT_TYPES = [
-  "Spray Paint Booth",
-  "Powder Coating Booth",
-  "Industrial Oven",
+  "Spray Paint Booth (Automotive)",
+  "Spray Paint Booth (Industrial / Truck)",
+  "Powder Coating Booth / System",
+  "Curing / Batch Oven",
   "Air Make-Up Unit (AMU)",
   "Blast Booth / Blast Room",
   "Prep Station",
@@ -38,6 +40,8 @@ export default function SupportPage() {
     phone: "",
     email: "",
     equipment: "",
+    industry: "",
+    hearAboutUs: "",
     issue: "",
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -64,7 +68,17 @@ export default function SupportPage() {
       setErrors(errs);
       return;
     }
-    submitLead({ name: form.name, company: form.company, phone: form.phone, email: form.email, equipment: form.equipment, issue: form.issue, formSource: "support-request" });
+    submitLead({
+      name: form.name,
+      company: form.company,
+      phone: form.phone,
+      email: form.email,
+      equipment: form.equipment,
+      industry: form.industry,
+      hearAboutUs: form.hearAboutUs,
+      issue: form.issue,
+      formSource: "support-request",
+    });
     setSubmitted(true);
   }
 
@@ -281,6 +295,35 @@ export default function SupportPage() {
                       ))}
                     </select>
                   </Field>
+
+                  {/* Industry + How did you hear about us */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <Field label="Industry">
+                      <select
+                        value={form.industry}
+                        onChange={e => handleChange("industry", e.target.value)}
+                        style={inputStyle(false)}
+                      >
+                        <option value="">Select an industry...</option>
+                        {INDUSTRY_OPTIONS.map(item => (
+                          <option key={item} value={item}>{item}</option>
+                        ))}
+                      </select>
+                    </Field>
+
+                    <Field label="How did you hear about us?">
+                      <select
+                        value={form.hearAboutUs}
+                        onChange={e => handleChange("hearAboutUs", e.target.value)}
+                        style={inputStyle(false)}
+                      >
+                        <option value="">Select an option...</option>
+                        {HEAR_ABOUT_US_OPTIONS.map(item => (
+                          <option key={item} value={item}>{item}</option>
+                        ))}
+                      </select>
+                    </Field>
+                  </div>
 
                   {/* Issue Description — mandatory */}
                   <Field label="Describe the Issue" required error={errors.issue}>

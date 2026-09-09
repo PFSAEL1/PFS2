@@ -47,6 +47,8 @@ function buildDescription(body: Record<string, any>) {
   if (body.document) details.push(`Requested document: ${body.document}`);
   if (body.territory) details.push(`Territory / Region: ${body.territory}`);
   if (body.experience) details.push(`Industry Experience: ${body.experience}`);
+  if (body.industry) details.push(`Industry: ${body.industry}`);
+  if (body.hearAboutUs) details.push(`How did you hear about us: ${body.hearAboutUs}`);
   if (body.product) details.push(`Product Interest: ${body.product}`);
   if (body.formSource) details.push(`PFS form: ${body.formSource}`);
   if (body.pageUrl) details.push(`Source page: ${body.pageUrl}`);
