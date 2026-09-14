@@ -42,8 +42,8 @@ export function GalleryLightbox({ images, index, onClose, onNavigate }: GalleryL
     document.body.style.overflow = "hidden";
 
     const handler = (e: KeyboardEvent) => {
-      if (e.key === "Escape")     onClose();
-      if (e.key === "ArrowLeft")  prev();
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft") prev();
       if (e.key === "ArrowRight") next();
     };
     window.addEventListener("keydown", handler);
@@ -339,8 +339,9 @@ export function GalleryGrid({ images, cardHeight = "clamp(200px,22vw,320px)", fu
                 background: "#222",
                 flexShrink: 0,
                 // fullBleed: stretch to full viewport width; otherwise normal card width
-                width: fullBleed ? "100vw" : "clamp(220px, 85vw, 380px)",
-                height: fullBleed ? "clamp(280px, 56vw, 600px)" : cardHeight,
+                width: "clamp(220px, 85vw, 380px)",
+                // width: fullBleed ? "100vw" : "clamp(220px, 85vw, 380px)",
+                height: fullBleed ? "clamp(220px,30vw,360px)" : cardHeight,
                 scrollSnapAlign: "start",
                 display: "flex",
                 alignItems: "center",

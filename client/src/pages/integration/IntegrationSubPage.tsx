@@ -396,11 +396,11 @@ export default function IntegrationSubPage() {
         bgImage={content.img}
         bgVideo={
           sub === "liquid-paint-lines" ? PAINT_VIDEO :
-          sub === "pretreatment-systems" ? PRETREAT_VIDEO :
-          sub === "robotic-finishing-cells" ? ROBOTIC_VIDEO :
-          sub === "conveyor-systems" ? CONVEYOR_VIDEO :
-          sub === "system-integration" ? SYSTEM_INTEGRATION_VIDEO :
-          sub === "powder-coating-lines" ? POWDER_VIDEO : undefined
+            sub === "pretreatment-systems" ? PRETREAT_VIDEO :
+              sub === "robotic-finishing-cells" ? ROBOTIC_VIDEO :
+                sub === "conveyor-systems" ? CONVEYOR_VIDEO :
+                  sub === "system-integration" ? SYSTEM_INTEGRATION_VIDEO :
+                    sub === "powder-coating-lines" ? POWDER_VIDEO : undefined
         }
         ctaPricingHref={`/contact/request-a-quote?from=integration-${sub}`}
       />
@@ -423,7 +423,7 @@ export default function IntegrationSubPage() {
                 ))}
               </ul>
               <div className="flex flex-wrap gap-3">
-                <Link data-animation="slideLeft"  href={`/contact/request-a-quote?from=integration-${sub}`}><span className="btn-glow">Request Info <ArrowRight size={14} /></span></Link>
+                <Link data-animation="slideLeft" href={`/contact/request-a-quote?from=integration-${sub}`}><span className="btn-glow">Request Info <ArrowRight size={14} /></span></Link>
                 <Link data-animation="slideRight" href="/contact/talk-to-an-engineer"><span className="btn-outline">Talk to an Engineer</span></Link>
               </div>
             </div>
@@ -448,11 +448,12 @@ export default function IntegrationSubPage() {
         <section style={{ padding: "3rem 0", backgroundColor: "#1a1a1a" }}>
           <div className="container">
             <span className="section-label" style={{ color: "rgba(255,255,255,0.5)", display: "block", marginBottom: "0.75rem" }}>REAL INSTALLS</span>
+            <GalleryGrid
+              images={content.galleryImages.map((src, i) => ({ src, alt: `PFS ${content.title} installation ${i + 1}` }))}
+              fullBleed
+            />
           </div>
-          <GalleryGrid
-            images={content.galleryImages.map((src, i) => ({ src, alt: `PFS ${content.title} installation ${i + 1}` }))}
-            fullBleed
-          />
+
         </section>
       )}
 
@@ -467,7 +468,7 @@ export default function IntegrationSubPage() {
               </h2>
             </div>
             <FAQAccordion faqs={content.faqs} />
-            <div data-animation="slideRight"  className="mt-8">
+            <div data-animation="slideRight" className="mt-8">
               <Link href="/contact/talk-to-an-engineer"><span className="btn-glow">Ask an Engineer <ArrowRight size={14} /></span></Link>
             </div>
           </div>
