@@ -240,14 +240,14 @@ export default function CaliforniaServicePage() {
     <div style={{ background: "#f8f9fa", minHeight: "100vh" }}>
 
       {/* HERO */}
-      <section style={{ position: "relative", height: "70vh", minHeight: 520, overflow: "hidden" }}>
+      <section style={{ position: "relative", overflow: "hidden" }}>
         <img
           src={HERO_IMG}
           alt="PFS spray booth service technician inside a California paint booth"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center" }}
         />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(13,27,46,0.88) 0%, rgba(13,27,46,0.55) 60%, rgba(0,0,0,0.3) 100%)" }} />
-        <div className="container" style={{ position: "relative", zIndex: 1, height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", paddingTop: 80, paddingBottom: 80 }}>
+        <div className="container" style={{ position: "relative", zIndex: 1, height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", paddingTop: 50, paddingBottom: 50 }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: 8, marginBottom: 16 }}>
             <MapPin size={14} color="#60a5fa" />
             <span style={{ color: "#60a5fa", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase" }}>SERVING ALL OF CALIFORNIA — 20+ YEARS</span>
@@ -263,13 +263,13 @@ export default function CaliforniaServicePage() {
           </p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
             {/* <a data-animation="slideLeft"
-              href="tel:8885457715"
-              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#1e3a6e", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "2px solid #1e3a6e" }}
-              onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#2a4f96"; el.style.boxShadow = "0 0 18px rgba(30,58,110,0.7)"; }}
-              onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#1e3a6e"; el.style.boxShadow = "none"; }}
-            >
-              <Phone size={14} /> CALL (888) 545-7715
-            </a> */}
+                href="tel:8885457715"
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#1e3a6e", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "2px solid #1e3a6e" }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#2a4f96"; el.style.boxShadow = "0 0 18px rgba(30,58,110,0.7)"; }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#1e3a6e"; el.style.boxShadow = "none"; }}
+              >
+                <Phone size={14} /> CALL (888) 545-7715
+              </a> */}
             <Link data-animation="slideLeft"
               href="/contact/service-request"
               style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "2px solid rgba(255,255,255,0.5)" }}
@@ -279,15 +279,15 @@ export default function CaliforniaServicePage() {
               REQUEST Info <ArrowRight size={14} />
             </Link>
             {/* <a data-animation="slideRight"
-              href="https://pfsfilters.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(255,255,255,0.12)", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "2px solid rgba(255,255,255,0.35)" }}
-              onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "rgba(255,255,255,0.22)"; el.style.boxShadow = "0 0 18px rgba(255,255,255,0.18)"; }}
-              onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "rgba(255,255,255,0.12)"; el.style.boxShadow = "none"; }}
-            >
-              <Filter size={14} /> PFS FILTERS
-            </a> */}
+                href="https://pfsfilters.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(255,255,255,0.12)", color: "#fff", padding: "14px 28px", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", border: "2px solid rgba(255,255,255,0.35)" }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "rgba(255,255,255,0.22)"; el.style.boxShadow = "0 0 18px rgba(255,255,255,0.18)"; }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "rgba(255,255,255,0.12)"; el.style.boxShadow = "none"; }}
+              >
+                <Filter size={14} /> PFS FILTERS
+              </a> */}
           </div>
         </div>
       </section>
@@ -408,9 +408,9 @@ export default function CaliforniaServicePage() {
                 onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 32px rgba(0,0,0,0.1)"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(-2px)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; (e.currentTarget as HTMLDivElement).style.transform = "none"; }}>
                 <div style={{ marginBottom: 14 }}>{svc.icon}</div>
-                <h3 style={{ fontSize: "1rem", fontWeight: 800, color: "#0d1b2e", margin: "0 0 10px", textTransform: "uppercase", letterSpacing: "0.03em", fontFamily: "'Chakra Petch', sans-serif" }}>{svc.title}</h3>
-                <p style={{ color: "#4a5568", fontSize: "0.875rem", lineHeight: 1.7, margin: "0 0 20px" }}>{svc.desc}</p>
-                <Link
+                <h3 data-animation="slideLeft" style={{ fontSize: "1rem", fontWeight: 800, color: "#0d1b2e", margin: "0 0 10px", textTransform: "uppercase", letterSpacing: "0.03em", fontFamily: "'Chakra Petch', sans-serif" }}>{svc.title}</h3>
+                <p data-animation="slideLeft" style={{ color: "#4a5568", fontSize: "0.875rem", lineHeight: 1.7, margin: "0 0 20px" }}>{svc.desc}</p>
+                <Link data-animation="slideRight"
                   href="/contact/service-request"
                   style={{
                     marginTop: "auto",

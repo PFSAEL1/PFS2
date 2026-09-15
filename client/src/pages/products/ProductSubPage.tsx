@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useParams, useLocation } from "wouter";
 import { SiteProductCardSection } from "@/components/SiteProductCard";
+import ProductImageGallery from "@/components/ui/ProductImageGallery";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { GalleryGrid } from "@/components/GalleryLightbox";
 import {
@@ -50,6 +51,9 @@ const PRETREAT_IMG = IMG_PRETREATMENT;
 const FILTERS_IMG = IMG_FILTERS;
 const CUSTOM_BOOTH_IMG = "/assets/custom-booth-featured.png";
 
+const featureImage = "/assets/centerized-img-two.png";
+const image2 = "/assets/centerized-img-one.png";
+
 interface RelatedProduct {
   title: string;
   subtitle: string;
@@ -84,6 +88,7 @@ interface PageData {
     interiorImage: string;
     specs?: { label: string; value: string }[];
   };
+  featureImages?: string[];
 }
 
 const PAGE_DATA: Record<string, PageData> = {
@@ -781,6 +786,7 @@ const PAGE_DATA: Record<string, PageData> = {
       { title: "Powder Coating Systems", subtitle: "The coating process after blasting", href: "/products/powder-booths", image: POWDER_RENDER },
       { title: "Enclosed Paint Booths", subtitle: "Paint after blast prep", href: "/products/paint-booths/enclosed", image: ENCLOSED_BOOTH_RENDER },
     ],
+
   },
   "blast-systems/reclaim-blasting-booths": {
     seoTitle: "Reclaim Blasting Booths | Media Recovery Blast Booth | PFS",
@@ -806,6 +812,10 @@ const PAGE_DATA: Record<string, PageData> = {
     relatedProducts: [
       { title: "Powder Coating Systems", subtitle: "The coating process after blasting", href: "/products/powder-booths", image: POWDER_RENDER },
       { title: "Conveyor Systems", subtitle: "Move parts through the finishing line", href: "/integration-automation/conveyor-systems", image: CONVEYOR_IMG },
+    ],
+    featureImages: [
+      "/assets/reclaimp-feature.png",
+      "/assets/reclaim-image-two.png"
     ],
   },
   "blast-systems/containerized-blast-booths": {
@@ -841,6 +851,11 @@ const PAGE_DATA: Record<string, PageData> = {
     relatedProducts: [
       { title: "Container Paint Booths", subtitle: "Portable spray booth in a container", href: "/products/container-booths/40ft", image: "/assets/pfs-container-booth-card-v2_b8177420.jpg" },
       { title: "Powder Coating Systems", subtitle: "The coating process after blasting", href: "/products/powder-booths", image: POWDER_RENDER },
+    ],
+    featureImages: [
+      "/assets/centerized-img-one.png",
+      "/assets/centerized-img-two.png",
+
     ],
   },
   "blast-systems/blast-booths": {
@@ -1429,7 +1444,7 @@ export default function ProductSubPage() {
             {/* Sidebar */}
             <div>
               {/* Featured product image — shown when featuredImage is provided */}
-              {CUSTOM_BOOTH_IMG && (
+              {/* {CUSTOM_BOOTH_IMG && (
                 <div
                   style={{
                     marginBottom: "1.5rem",
@@ -1437,17 +1452,32 @@ export default function ProductSubPage() {
                     border: "1px solid #e8e8e6",
                   }}
                 >
-                  <img
-                    src={CUSTOM_BOOTH_IMG}
-                    alt={`${data.title} — featured product`}
-                    style={{
-                      width: "100%",
-                      height: "280px",
-                      display: "block",
-                      objectFit: "cover",
-                    }}
+                  <ProductImageGallery
+                    images={[
+                      featureImage,
+                      image2
+                    ]}
+                    alt="PFS Goliath Series Blasting Booth"
                   />
                 </div>
+              )} */}
+              {data.featureImages && data.featureImages.length > 0 && (
+
+                <div
+                  style={{
+                    marginBottom: "1.5rem",
+                    overflow: "hidden",
+                    border: "1px solid #e8e8e6",
+                  }}
+                >
+
+                  <ProductImageGallery
+                    images={data.featureImages}
+                    alt={data.title}
+                  />
+
+                </div>
+
               )}
               <div style={{ backgroundColor: "#f8f8f6", border: "1px solid #e8e8e6", padding: "1.5rem" }}>
                 <h4 style={{ fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#1a1a1a", marginBottom: "1rem" }}>

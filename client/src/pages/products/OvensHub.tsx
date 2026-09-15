@@ -118,7 +118,7 @@ export default function OvensHub() {
           </div>
 
           {/* Card grid — larger images */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 items-stretch">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 items-stretch">
             {OVENS.map((oven) => (
               <Link
                 key={oven.label}
@@ -128,7 +128,7 @@ export default function OvensHub() {
                 <div className="h-full flex flex-col cursor-pointer border border-gray-200 hover:border-[#1B2B4B] transition-all duration-300 hover:shadow-[0_0_24px_rgba(27,43,75,0.15)] overflow-hidden">
 
                   {/* Fixed responsive image height */}
-                  <div className="overflow-hidden flex-shrink-0 card-image h-[240px] sm:h-[260px] lg:h-[280px]">
+                  <div className="overflow-hidden flex-shrink-0 card-image h-[220px] sm:h-[240px] lg:h-[260px]">
                     <img
                       src={oven.img}
                       alt={oven.label}
@@ -140,13 +140,13 @@ export default function OvensHub() {
                   </div>
 
                   {/* Card content */}
-                  <div className="p-6 flex flex-col flex-1">
+                  <div className="p-5 flex flex-col flex-1">
 
                     <div className="flex items-start gap-2 mb-2">
                       <h3
                         style={{
                           fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-                          fontSize: "1.2rem",
+                          fontSize: "1rem",
                           fontWeight: 700,
                           color: "#1a1a1a",
                           lineHeight: 1.2,
@@ -159,13 +159,13 @@ export default function OvensHub() {
                         <span
                           style={{
                             fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-                            fontSize: "0.65rem",
+                            fontSize: "0.55rem",
                             fontWeight: 700,
                             letterSpacing: "0.08em",
                             textTransform: "uppercase",
                             backgroundColor: "#1B2B4B",
                             color: "white",
-                            padding: "0.15rem 0.5rem",
+                            padding: "0.20rem 0.5rem",
                             flexShrink: 0,
                           }}
                         >
@@ -179,7 +179,7 @@ export default function OvensHub() {
                         fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
                         fontSize: "0.85rem",
                         color: "#555",
-                        lineHeight: 1.7,
+                        lineHeight: 1.5,
                         marginBottom: "1rem",
                       }}
                     >

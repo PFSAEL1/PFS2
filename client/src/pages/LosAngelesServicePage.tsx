@@ -436,9 +436,9 @@ export default function LosAngelesServicePage() {
                 onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 32px rgba(0,0,0,0.1)"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(-2px)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; (e.currentTarget as HTMLDivElement).style.transform = "none"; }}>
                 <div style={{ marginBottom: 14 }}>{svc.icon}</div>
-                <h3 style={{ fontSize: "1rem", fontWeight: 800, color: "#0d1b2e", margin: "0 0 10px", textTransform: "uppercase", letterSpacing: "0.03em", fontFamily: "'Chakra Petch', sans-serif" }}>{svc.title}</h3>
-                <p style={{ color: "#4a5568", fontSize: "0.875rem", lineHeight: 1.7, margin: "0 0 20px" }}>{svc.desc}</p>
-                <Link
+                <h3 data-animation="slideLeft" style={{ fontSize: "1rem", fontWeight: 800, color: "#0d1b2e", margin: "0 0 10px", textTransform: "uppercase", letterSpacing: "0.03em", fontFamily: "'Chakra Petch', sans-serif" }}>{svc.title}</h3>
+                <p data-animation="slideLeft" style={{ color: "#4a5568", fontSize: "0.875rem", lineHeight: 1.7, margin: "0 0 20px" }}>{svc.desc}</p>
+                <Link data-animation="slideRight"
                   href="/contact/service-request"
                   style={{
                     marginTop: "auto",
@@ -590,7 +590,7 @@ export default function LosAngelesServicePage() {
           <h2 data-animation="slideLeft" style={{ fontSize: "clamp(1.6rem,3.5vw,2.4rem)", fontWeight: 900, color: "#0d1b2e", margin: "0 0 40px", fontFamily: "'Chakra Petch', sans-serif", textTransform: "uppercase" }}>
             California's Spray Booth Manufacturer<br />&amp; Service Provider
           </h2>
-          <div data-animation="fadeIn" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: 24 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: 24 }}>
             {[
               { icon: <Wrench size={20} color="#1e3a6e" />, title: "Manufacturer-Trained Technicians", desc: "Our technicians are trained on PFS equipment and all major booth brands. We know what to look for because we build the booths ourselves." },
               { icon: <Clock size={20} color="#1e3a6e" />, title: "Fast Response Times", desc: "California-based technicians mean same-day and next-day service throughout LA County and the South Coast Air Basin. We don't make you wait." },
@@ -599,8 +599,8 @@ export default function LosAngelesServicePage() {
             ].map(item => (
               <div key={item.title} style={{ padding: "24px", border: "1px solid #e2e8f0", background: "#fff" }}>
                 <div style={{ marginBottom: 12 }}>{item.icon}</div>
-                <h3 style={{ fontSize: "0.9rem", fontWeight: 800, color: "#0d1b2e", margin: "0 0 10px", textTransform: "uppercase", letterSpacing: "0.03em", fontFamily: "'Chakra Petch', sans-serif" }}>{item.title}</h3>
-                <p style={{ color: "#4a5568", fontSize: "0.85rem", lineHeight: 1.6, margin: 0 }}>{item.desc}</p>
+                <h3 data-animation="slideLeft" style={{ fontSize: "0.9rem", fontWeight: 800, color: "#0d1b2e", margin: "0 0 10px", textTransform: "uppercase", letterSpacing: "0.03em", fontFamily: "'Chakra Petch', sans-serif" }}>{item.title}</h3>
+                <p data-animation="slideRight" style={{ color: "#4a5568", fontSize: "0.85rem", lineHeight: 1.6, margin: 0 }}>{item.desc}</p>
               </div>
             ))}
           </div>

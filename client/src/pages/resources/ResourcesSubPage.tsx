@@ -470,7 +470,7 @@ const CONTENT: Record<string, ResContent> = {
     title: "Installation Guides",
     desc: "Installation and commissioning guides for PFS equipment.",
     body: "PFS installation guides provide step-by-step instructions for installing and commissioning all PFS equipment.",
-    image: "/assets/installation-guides-banner.jpg",
+    image: "/assets/pfs-paint-booth-sprayer-card_42d3ea13.jpg",
 
   },
 

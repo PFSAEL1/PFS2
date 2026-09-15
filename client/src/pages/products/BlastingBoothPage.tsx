@@ -14,9 +14,16 @@ import { GalleryGrid } from "@/components/GalleryLightbox";
 import PageHero from "@/components/PageHero";
 import { SiteProductCardSection } from "@/components/SiteProductCard";
 import { useSEO } from "@/hooks/useSEO";
+import ProductImageGallery from "@/components/ui/ProductImageGallery";
+
 
 const BLUE = "#1B2B4B";
 const BLUE_LIGHT = "#2a4a8a";
+
+const featureImage = "/assets/blasting-syste-feature.png";
+const image2 = "/assets/blasting-image-two.png";
+
+
 
 // ── Images ────────────────────────────────────────────────────────────────────
 const BLASTING_HERO = "/assets/pfs-blast-booth-interior_cf77951a.png";
@@ -284,11 +291,13 @@ function Sidebar({ featuredImage, relatedHref, relatedLabel }: {
 }) {
   return (
     <div>
-      <div style={{ marginBottom: "1.5rem", overflow: "hidden", border: "1px solid #e8e8e6" }}>
-        <img
-          src={featuredImage}
+      <div style={{ marginBottom: "1.5rem", overflow: "hidden" }}>
+        <ProductImageGallery
+          images={[
+            featureImage,
+            image2
+          ]}
           alt="PFS Goliath Series Blasting Booth"
-          style={{ width: "100%", display: "block", objectFit: "cover", maxHeight: 280 }}
         />
       </div>
       <div style={{ backgroundColor: "#f8f8f6", border: "1px solid #e8e8e6", padding: "1.5rem", marginBottom: "1.5rem" }}>

@@ -12,7 +12,7 @@ import { Link } from "wouter";
 import { Phone, Mail, CheckCircle, ArrowRight, AlertCircle } from "lucide-react";
 import { HEAR_ABOUT_US_OPTIONS, INDUSTRY_OPTIONS } from "@/lib/formConstants";
 
-const TECH_HERO = "/assets/pfs-service-team-real_47805166.jpg";
+const TECH_HERO = "/assets/pfs-tech-support-studio.png";
 
 const EQUIPMENT_TYPES = [
   "Spray Paint Booth (Automotive)",

@@ -162,6 +162,7 @@ const NAV_ITEMS: NavItem[] = [
     href: "/resources",
     children: [
       { label: "Resources Overview", href: "/resources" },
+      { label: "Order Filters", href: "https://www.pfsfilters.com", external: true },
       { label: "Downloads", href: "/resources/downloads" },
       { label: "Case Studies", href: "/resources/case-studies" },
       { label: "FAQs", href: "/resources/faqs" },
@@ -246,14 +247,14 @@ function ProductsMegaMenu() {
                           target="_blank"
                           rel="noopener noreferrer"
                           style={{
-                          fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
-                          fontSize: "0.78rem",
-                          color: "#666",
-                          display: "block",
-                          padding: "0.28rem 1.5rem",
-                          textDecoration: "none",
-                          transition: "color 0.15s, background 0.15s",
-                        }}
+                            fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
+                            fontSize: "0.78rem",
+                            color: "#666",
+                            display: "block",
+                            padding: "0.28rem 1.5rem",
+                            textDecoration: "none",
+                            transition: "color 0.15s, background 0.15s",
+                          }}
                           className="hover:text-[#1B2B4B] hover:bg-blue-50"
                         >
                           {item.label} ↗
@@ -262,15 +263,15 @@ function ProductsMegaMenu() {
                         <Link key={item.href + item.label} href={item.href}>
                           <span
                             style={{
-                            fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
-                            fontSize: "0.78rem",
-                            color: "#555",
-                            display: "block",
-                            fontWeight: 600,
-                            padding: "0.28rem 1.5rem",
-                            transition: "color 0.15s, background 0.15s",
-                            cursor: "pointer",
-                          }}
+                              fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
+                              fontSize: "0.78rem",
+                              color: "#555",
+                              display: "block",
+                              fontWeight: 600,
+                              padding: "0.28rem 1.5rem",
+                              transition: "color 0.15s, background 0.15s",
+                              cursor: "pointer",
+                            }}
                             className="hover:text-[#1B2B4B] hover:bg-blue-50"
                           >
                             {item.label}
@@ -348,17 +349,17 @@ function SimpleDropdown({ items, noFeatured = false }: { items: NavSubItem[]; no
           <div style={{ borderBottom: "1px solid #f0f0f0", marginBottom: "0.4rem", paddingBottom: "0.4rem" }}>
             <Link href={firstItem.href}>
               <span
-              style={{
-                fontFamily: "'Chakra Petch', sans-serif",
-                fontSize: "0.68rem",
-                fontWeight: 600,
-                color: "#1C1C1E",
-                display: "block",
-                padding: "0.3rem 0.85rem",
-                letterSpacing: "0.08em",
-                textTransform: "uppercase",
-                cursor: "pointer",
-              }}
+                style={{
+                  fontFamily: "'Chakra Petch', sans-serif",
+                  fontSize: "0.68rem",
+                  fontWeight: 600,
+                  color: "#1C1C1E",
+                  display: "block",
+                  padding: "0.3rem 0.85rem",
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  cursor: "pointer",
+                }}
                 className="hover:text-[#1B2B4B]"
               >
                 {firstItem.label} →
@@ -472,7 +473,7 @@ export default function Navbar() {
             <div className="flex items-center gap-3 md:gap-5">
               {[
                 { label: "Replacement Filters", href: PFS_FILTERS_URL, external: true },
-                { label: "Order Filters", href: "/filters", external: false },
+                // { label: "Order Filters", href: "/filters", external: false },
                 { label: "Support", href: "/support", external: false },
                 { label: "Contact", href: "/contact", external: false },
                 { label: "Distributor", href: "/become-a-distributor", external: false },
@@ -539,31 +540,31 @@ export default function Navbar() {
                   lineHeight: 1,
                 };
                 return (
-                <div key={item.label} className="relative h-full flex items-center"
-                  onMouseEnter={() => setOpenMenu(item.label)}
-                  onMouseLeave={() => setOpenMenu(null)}>
-                  {item.href.startsWith("http") ? (
-                    <a href={item.href} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
-                      <div className="flex items-center gap-1 px-2.5 h-full transition-all" style={navItemStyle}>
-                        {item.label}
-                        {(item.sections || item.children) && (
-                          <ChevronDown size={9} style={{ transition: "transform 0.2s", transform: openMenu === item.label ? "rotate(180deg)" : "rotate(0deg)", flexShrink: 0 }} />
-                        )}
-                      </div>
-                    </a>
-                  ) : (
-                  <Link href={item.href}>
-                    <div className="flex items-center gap-1 px-2.5 h-full transition-all" style={navItemStyle}>
-                      {item.label}
-                      {(item.sections || item.children) && (
-                        <ChevronDown size={9} style={{ transition: "transform 0.2s", transform: openMenu === item.label ? "rotate(180deg)" : "rotate(0deg)", flexShrink: 0 }} />
-                      )}
-                    </div>
-                  </Link>
-                  )}
-                  {openMenu === item.label && item.sections && <ProductsMegaMenu />}
-                  {openMenu === item.label && item.children && <SimpleDropdown items={item.children} noFeatured={true} />}
-                </div>
+                  <div key={item.label} className="relative h-full flex items-center"
+                    onMouseEnter={() => setOpenMenu(item.label)}
+                    onMouseLeave={() => setOpenMenu(null)}>
+                    {item.href.startsWith("http") ? (
+                      <a href={item.href} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+                        <div className="flex items-center gap-1 px-2.5 h-full transition-all" style={navItemStyle}>
+                          {item.label}
+                          {(item.sections || item.children) && (
+                            <ChevronDown size={9} style={{ transition: "transform 0.2s", transform: openMenu === item.label ? "rotate(180deg)" : "rotate(0deg)", flexShrink: 0 }} />
+                          )}
+                        </div>
+                      </a>
+                    ) : (
+                      <Link href={item.href}>
+                        <div className="flex items-center gap-1 px-2.5 h-full transition-all" style={navItemStyle}>
+                          {item.label}
+                          {(item.sections || item.children) && (
+                            <ChevronDown size={9} style={{ transition: "transform 0.2s", transform: openMenu === item.label ? "rotate(180deg)" : "rotate(0deg)", flexShrink: 0 }} />
+                          )}
+                        </div>
+                      </Link>
+                    )}
+                    {openMenu === item.label && item.sections && <ProductsMegaMenu />}
+                    {openMenu === item.label && item.children && <SimpleDropdown items={item.children} noFeatured={true} />}
+                  </div>
                 );
               })}
             </nav>
@@ -597,7 +598,7 @@ export default function Navbar() {
             <span style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.88rem", fontWeight: 600, color: "#FFFFFF", letterSpacing: "0.03em" }}>(888) 545-7715</span>
             <span style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.72rem", color: "rgba(255,255,255,0.45)", marginLeft: "auto" }}>TAP TO CALL</span>
           </a>
-                    {NAV_ITEMS.map((item) => (
+          {NAV_ITEMS.map((item) => (
             <div key={item.label} style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
               <button className="w-full flex items-center justify-between px-5 py-3.5"
                 onClick={() => setMobileExpanded(mobileExpanded === item.label ? null : item.label)}>

@@ -290,7 +290,14 @@ export default function CompanyHub() {
                 time: "Verified Customer",
                 company: "Coastline Autosport Group · Walnut, CA",
                 text: "As President of Coastline Autosport Group, I highly recommend PFS for anyone that requires any type of refinishing or installation. PFS was able to complete our project on time. Not only did they do everything they said they would, they finished before the deadline. We need more dependable companies like this in our industry."
-              }
+              },
+              {
+                name: "Larry",
+
+                text: "Your installation crew was most efficient with the entire install process, they worked aggressively towards meeting our schedule requirements, their work ethic was non-stop from the minute they arrived in the morning until end of their shift. They were very knowledgeable about the product and provided very good instructions and information of the operating abilities of the product."
+              },
+
+
             ].map((review, idx) => (
               <div key={idx} style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", padding: "1.75rem", position: "relative" }}>
                 <div style={{ position: "absolute", top: "1.25rem", right: "1.25rem", width: 28, height: 28, borderRadius: "50%", background: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>

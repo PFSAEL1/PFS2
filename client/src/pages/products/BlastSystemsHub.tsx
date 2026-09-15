@@ -3,10 +3,10 @@ import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
-const BLAST_IMG_HERO = "/assets/pfs-blast-systems2_36cb5b96.png";
-const BLAST_IMG = "/assets/blast-systems-real_c7389401_16a0255c.webp";
-const RECLAIM_BLAST = "/assets/pfs-reclaim-blast-booth_bd633d6a.png";
-const CONTAINER_BLAST = "/assets/pfs-blast-container_f090af61.png";
+const BLAST_IMG_HERO = "/assets/blasting-systems-banner.png";
+const BLAST_IMG = "/assets/pfs-blasting-booths.png";
+const RECLAIM_BLAST = "/assets/pfsp-reclaim-blasting-booth.png";
+const CONTAINER_BLAST = "/assets/containerized-blast-booths.png";
 
 const SYSTEMS = [
   {
@@ -103,55 +103,55 @@ export default function BlastSystemsHub() {
           <p style={{ fontFamily: "'Chakra Petch','Barlow Condensed',sans-serif", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#1a3a6b", marginBottom: "0.75rem" }}>FREQUENTLY ASKED QUESTIONS</p>
           <h2 data-animation="slideLeft" style={{ fontFamily: "'Chakra Petch','Barlow Condensed',sans-serif", fontSize: "clamp(1.5rem,3vw,2.2rem)", fontWeight: 800, color: "#0d1b2a", marginBottom: "2.5rem", lineHeight: 1.1 }}>Blast Room & Blast Booth FAQ</h2>
           {FAQS.map(({ q, a }, i) => (
-           <details
-  key={i}
-  className="faq-item"
-  style={{
-    borderBottom: "1px solid #e5e7eb",
-    paddingBottom: "1.25rem",
-    marginBottom: "1.25rem",
-  }}
->
-  <summary
-    style={{
-      fontFamily: "'Chakra Petch','Barlow Condensed',sans-serif",
-      fontSize: "1rem",
-      fontWeight: 700,
-      color: "#0d1b2a",
-      cursor: "pointer",
-      listStyle: "none",
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-    }}
-  >
-    {q}
+            <details
+              key={i}
+              className="faq-item"
+              style={{
+                borderBottom: "1px solid #e5e7eb",
+                paddingBottom: "1.25rem",
+                marginBottom: "1.25rem",
+              }}
+            >
+              <summary
+                style={{
+                  fontFamily: "'Chakra Petch','Barlow Condensed',sans-serif",
+                  fontSize: "1rem",
+                  fontWeight: 700,
+                  color: "#0d1b2a",
+                  cursor: "pointer",
+                  listStyle: "none",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                {q}
 
-    <span
-      className="faq-icon"
-      style={{
-        fontSize: "1.25rem",
-        color: "#1a3a6b",
-        flexShrink: 0,
-        marginLeft: "1rem",
-      }}
-    >
-      +
-    </span>
-  </summary>
+                <span
+                  className="faq-icon"
+                  style={{
+                    fontSize: "1.25rem",
+                    color: "#1a3a6b",
+                    flexShrink: 0,
+                    marginLeft: "1rem",
+                  }}
+                >
+                  +
+                </span>
+              </summary>
 
-  <p
-    style={{
-      fontFamily: "'Archivo Narrow','Inter',sans-serif",
-      fontSize: "0.95rem",
-      color: "#4b5563",
-      lineHeight: 1.75,
-      marginTop: "0.75rem",
-    }}
-  >
-    {a}
-  </p>
-</details>
+              <p
+                style={{
+                  fontFamily: "'Archivo Narrow','Inter',sans-serif",
+                  fontSize: "0.95rem",
+                  color: "#4b5563",
+                  lineHeight: 1.75,
+                  marginTop: "0.75rem",
+                }}
+              >
+                {a}
+              </p>
+            </details>
 
           ))}
         </div>
