@@ -1391,7 +1391,7 @@ export default function ProductSubPage() {
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Main content */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 order-2 lg:order-1">
               <span style={{ color: "rgb(27, 58, 107)" }} className="section-label">
                 {data.breadcrumbs[1]?.label || "Products"}
               </span>
@@ -1443,7 +1443,7 @@ export default function ProductSubPage() {
             </div>
 
             {/* Sidebar */}
-            <div>
+            <div className="order-1 lg:order-2">
               {/* Featured product image — shown when featuredImage is provided */}
               {/* {CUSTOM_BOOTH_IMG && (
                 <div

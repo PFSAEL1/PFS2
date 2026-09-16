@@ -304,7 +304,7 @@ function Sidebar({
   relatedLabel: string;
 }) {
   return (
-    <div>
+    <div className="order-1 lg:order-2">
       {/* Product Image Gallery */}
       <div
         style={{
@@ -513,7 +513,7 @@ export function BlastingBoothsPage() {
       <section style={{ padding: "3rem 0", backgroundColor: "#fff" }}>
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 order-2 lg:order-1">
 
               {/* Series badge */}
               <span style={{
