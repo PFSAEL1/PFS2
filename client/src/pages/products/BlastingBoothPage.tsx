@@ -20,10 +20,18 @@ import ProductImageGallery from "@/components/ui/ProductImageGallery";
 const BLUE = "#1B2B4B";
 const BLUE_LIGHT = "#2a4a8a";
 
-const featureImage = "/assets/blasting-syste-feature.png";
-const image2 = "/assets/blasting-image-two.png";
+// const featureImage = "/assets/blasting-syste-feature.png";
+// const image2 = "/assets/blasting-image-two.png";
 
+const BLAST_SIDEBAR_IMAGES = [
+  "/assets/blasting-syste-feature.png",
+  "/assets/blasting-image-two.png",
+];
 
+const RECLAIM_SIDEBAR_IMAGES = [
+  "/assets/pfs-blast-reclaim-unit_d0656341.png",
+  "/assets/reclaim-blasting-booths-hero.png",
+];
 
 // ── Images ────────────────────────────────────────────────────────────────────
 const BLASTING_HERO = "/assets/pfs-blast-booth-interior_cf77951a.png";
@@ -284,71 +292,157 @@ const RECLAIM_COMPONENTS = [
 ];
 
 // ── Sidebar component ─────────────────────────────────────────────────────────
-function Sidebar({ featuredImage, relatedHref, relatedLabel }: {
-  featuredImage: string;
+function Sidebar({
+  galleryImages,
+  galleryAlt,
+  relatedHref,
+  relatedLabel,
+}: {
+  galleryImages: string[];
+  galleryAlt: string;
   relatedHref: string;
   relatedLabel: string;
 }) {
   return (
     <div>
-      <div style={{ marginBottom: "1.5rem", overflow: "hidden" }}>
+      {/* Product Image Gallery */}
+      <div
+        style={{
+          marginBottom: "1.5rem",
+          overflow: "hidden",
+        }}
+      >
         <ProductImageGallery
-          images={[
-            featureImage,
-            image2
-          ]}
-          alt="PFS Goliath Series Blasting Booth"
+          images={galleryImages}
+          alt={galleryAlt}
         />
       </div>
-      <div style={{ backgroundColor: "#f8f8f6", border: "1px solid #e8e8e6", padding: "1.5rem", marginBottom: "1.5rem" }}>
-        <h4 style={{
-          fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-          fontSize: "0.8rem", fontWeight: 700,
-          letterSpacing: "0.12em", textTransform: "uppercase",
-          color: "#1a1a1a", marginBottom: "1rem",
-        }}>
+
+      {/* Quick Links */}
+      <div
+        style={{
+          backgroundColor: "#f8f8f6",
+          border: "1px solid #e8e8e6",
+          padding: "1.5rem",
+          marginBottom: "1.5rem",
+        }}
+      >
+        <h4
+          style={{
+            fontFamily:
+              "'Chakra Petch', 'Barlow Condensed', sans-serif",
+            fontSize: "0.8rem",
+            fontWeight: 700,
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+            color: "#1a1a1a",
+            marginBottom: "1rem",
+          }}
+        >
           Quick Links
         </h4>
+
         {[
-          { label: relatedLabel, href: relatedHref },
-          { label: "Get Pricing", href: "/contact/request-a-quote" },
-          { label: "Service & Support", href: "/service" },
-          { label: "View All Products", href: "/products" },
+          {
+            label: relatedLabel,
+            href: relatedHref,
+          },
+          {
+            label: "Get Pricing",
+            href: "/contact/request-a-quote",
+          },
+          {
+            label: "Service & Support",
+            href: "/service",
+          },
+          {
+            label: "View All Products",
+            href: "/products",
+          },
         ].map((link) => (
           <Link key={link.label} href={link.href}>
-            <div className="flex items-center justify-between py-2.5 group" style={{ borderBottom: "1px solid #ebebeb", cursor: "pointer" }}>
-              <span style={{ fontFamily: "'Archivo Narrow', 'Inter', sans-serif", fontSize: "0.82rem", color: "#444" }} className="group-hover:text-[#1B2B4B]">
+            <div
+              className="flex items-center justify-between py-2.5 group"
+              style={{
+                borderBottom: "1px solid #ebebeb",
+                cursor: "pointer",
+              }}
+            >
+              <span
+                style={{
+                  fontFamily:
+                    "'Archivo Narrow', 'Inter', sans-serif",
+                  fontSize: "0.82rem",
+                  color: "#444",
+                }}
+                className="group-hover:text-[#1B2B4B]"
+              >
                 {link.label}
               </span>
-              <ArrowRight size={12} style={{ color: BLUE }} />
+
+              <ArrowRight
+                size={12}
+                style={{ color: BLUE }}
+              />
             </div>
           </Link>
         ))}
       </div>
-      <div style={{ backgroundColor: "#1a1a1a", padding: "1.5rem" }}>
-        <h4 style={{
-          fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-          fontSize: "1rem", fontWeight: 700,
-          color: "#ffffff", marginBottom: "0.5rem",
-        }}>
+
+      {/* Help / Pricing */}
+      <div
+        style={{
+          backgroundColor: "#1a1a1a",
+          padding: "1.5rem",
+        }}
+      >
+        <h4
+          style={{
+            fontFamily:
+              "'Chakra Petch', 'Barlow Condensed', sans-serif",
+            fontSize: "1rem",
+            fontWeight: 700,
+            color: "#ffffff",
+            marginBottom: "0.5rem",
+          }}
+        >
           Need Help Specifying?
         </h4>
-        <p style={{
-          fontFamily: "'Archivo Narrow', 'Inter', sans-serif",
-          fontSize: "0.8rem", color: "rgba(255,255,255,0.75)",
-          lineHeight: 1.6, marginBottom: "1rem",
-        }}>
-          Our engineers will help you select the right booth size, media type, and reclaim configuration for your application.
+
+        <p
+          style={{
+            fontFamily:
+              "'Archivo Narrow', 'Inter', sans-serif",
+            fontSize: "0.8rem",
+            color: "rgba(255,255,255,0.75)",
+            lineHeight: 1.6,
+            marginBottom: "1rem",
+          }}
+        >
+          Our engineers will help you select the right booth
+          size, media type, and reclaim configuration for your
+          application.
         </p>
+
         <Link href="/contact/request-a-quote?from=blast-booth">
-          <span style={{
-            display: "inline-flex", alignItems: "center", gap: "0.4rem",
-            fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
-            fontSize: "0.72rem", fontWeight: 700,
-            letterSpacing: "0.12em", textTransform: "uppercase",
-            color: "#ffffff", borderBottom: "2px solid rgba(255,255,255,0.4)",
-            paddingBottom: "2px", cursor: "pointer",
-          }}>
+          <span
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.4rem",
+              fontFamily:
+                "'Chakra Petch', 'Barlow Condensed', sans-serif",
+              fontSize: "0.72rem",
+              fontWeight: 700,
+              letterSpacing: "0.12em",
+              textTransform: "uppercase",
+              color: "#ffffff",
+              borderBottom:
+                "2px solid rgba(255,255,255,0.4)",
+              paddingBottom: "2px",
+              cursor: "pointer",
+            }}
+          >
             GET PRICING <ArrowRight size={12} />
           </span>
         </Link>
@@ -356,6 +450,7 @@ function Sidebar({ featuredImage, relatedHref, relatedLabel }: {
     </div>
   );
 }
+
 
 // ── BLASTING BOOTHS PAGE ──────────────────────────────────────────────────────
 export function BlastingBoothsPage() {
@@ -535,10 +630,12 @@ export function BlastingBoothsPage() {
 
             {/* Sidebar */}
             <Sidebar
-              featuredImage={FEATURED_BLAST}
+              galleryImages={BLAST_SIDEBAR_IMAGES}
+              galleryAlt="PFS Blast Systems"
               relatedHref="/products/blast-systems"
               relatedLabel="View All Blasting Systems"
             />
+
           </div>
         </div>
       </section>
@@ -690,10 +787,12 @@ export function ReclaimBlastingBoothsPage() {
 
             {/* Sidebar */}
             <Sidebar
-              featuredImage={FEATURED_RECLAIM}
+              galleryImages={RECLAIM_SIDEBAR_IMAGES}
+              galleryAlt="Reclaim Blasting Booths"
               relatedHref="/products/blast-systems"
               relatedLabel="View All Blasting Systems"
             />
+
           </div>
         </div>
       </section>

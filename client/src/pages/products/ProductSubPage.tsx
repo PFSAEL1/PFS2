@@ -855,6 +855,7 @@ const PAGE_DATA: Record<string, PageData> = {
     featureImages: [
       "/assets/centerized-img-one.png",
       "/assets/centerized-img-two.png",
+      "/assets/conteinerized-blast-three.png",
 
     ],
   },
@@ -1467,7 +1468,6 @@ export default function ProductSubPage() {
                   style={{
                     marginBottom: "1.5rem",
                     overflow: "hidden",
-                    border: "1px solid #e8e8e6",
                   }}
                 >
 
@@ -1475,7 +1475,6 @@ export default function ProductSubPage() {
                     images={data.featureImages}
                     alt={data.title}
                   />
-
                 </div>
 
               )}
