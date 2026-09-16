@@ -27,7 +27,7 @@ const GALLERY_IMGS = [
   { src: "/assets/spray-to-waste-pfs-booth-blue-unit_1f718c28.webp", alt: "PFS spray-to-waste powder booth — blue filter module unit", pos: "center 50%" },
   { src: "/assets/pfs-stw-action1_5dd2f4d4.webp", alt: "PFS spray-to-waste powder booth — powder coating in action", pos: "center 40%" },
   { src: "/assets/pfs-stw-action2_4d74a007.webp", alt: "PFS spray-to-waste powder booth — operator applying powder coating", pos: "center 40%" },
-  { src: "/assets/spray-to-waste-aerospace-composite_3907664d.png", alt: "PFS spray-to-waste powder booth — aerospace composite part application", pos: "center 50%" },
+  // { src: "/assets/spray-to-waste-aerospace-composite_3907664d.png", alt: "PFS spray-to-waste powder booth — aerospace composite part application", pos: "center 50%" },
 ];
 
 // const GALLERY_IMGS = [

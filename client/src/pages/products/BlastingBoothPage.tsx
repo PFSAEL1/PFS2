@@ -29,8 +29,8 @@ const BLAST_SIDEBAR_IMAGES = [
 ];
 
 const RECLAIM_SIDEBAR_IMAGES = [
-  "/assets/pfs-blast-reclaim-unit_d0656341.png",
-  "/assets/reclaim-blasting-booths-hero.png",
+  "/assets/reclaim-one.png",
+  "/assets/reclaim-two.png",
 ];
 
 // ── Images ────────────────────────────────────────────────────────────────────
@@ -635,7 +635,6 @@ export function BlastingBoothsPage() {
               relatedHref="/products/blast-systems"
               relatedLabel="View All Blasting Systems"
             />
-
           </div>
         </div>
       </section>
@@ -679,7 +678,7 @@ export function ReclaimBlastingBoothsPage() {
       <section style={{ padding: "3rem 0", backgroundColor: "#fff" }}>
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 order-2 lg:order-1">
 
               {/* Series badge */}
               <span style={{
@@ -785,13 +784,15 @@ export function ReclaimBlastingBoothsPage() {
 
             </div>
 
-            {/* Sidebar */}
-            <Sidebar
-              galleryImages={RECLAIM_SIDEBAR_IMAGES}
-              galleryAlt="Reclaim Blasting Booths"
-              relatedHref="/products/blast-systems"
-              relatedLabel="View All Blasting Systems"
-            />
+            {/* Gallery / Sidebar */}
+            <div className="order-1 lg:order-2">
+              <Sidebar
+                galleryImages={RECLAIM_SIDEBAR_IMAGES}
+                galleryAlt="Reclaim Blasting Booths"
+                relatedHref="/products/blast-systems"
+                relatedLabel="View All Blasting Systems"
+              />
+            </div>
 
           </div>
         </div>

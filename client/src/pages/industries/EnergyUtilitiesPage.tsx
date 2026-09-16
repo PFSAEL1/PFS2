@@ -98,7 +98,7 @@ const PRODUCTS = [
   {
     label: "Powder Coating Systems",
     href: "/products/powder-booths",
-    img: "/assets/pfs-render-powder-booth_3dd083c1.jpg",
+    img: "/assets/pfs-powder-blue-quoting.png",
     desc: "Powder coating booths for electrical enclosures, frames, and infrastructure components.",
   },
   {
