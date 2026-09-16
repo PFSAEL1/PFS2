@@ -30,7 +30,7 @@ const BLAST_SIDEBAR_IMAGES = [
 
 const RECLAIM_SIDEBAR_IMAGES = [
   "/assets/reclaim-one.png",
-  "/assets/reclaim-two.png",
+  "/assets/rbb-new.jpeg",
 ];
 
 // ── Images ────────────────────────────────────────────────────────────────────

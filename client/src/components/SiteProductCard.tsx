@@ -25,6 +25,7 @@ export function SiteProductCard({ label, href, img, desc }: SiteProductCardProps
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         style={{
+          height: "100%",
           display: "flex",
           flexDirection: "column",
           background: "#fff",
@@ -52,7 +53,7 @@ export function SiteProductCard({ label, href, img, desc }: SiteProductCardProps
           />
         </div>
         {/* Card body */}
-        <div style={{ padding: "1.1rem 1.2rem 1.3rem" }}>
+        <div style={{ padding: "1.1rem 1.2rem 1.3rem", display: "flex", flexDirection: "column" }}>
           <div data-animation="slideLeft"
             style={{
               fontFamily: "'Chakra Petch', 'Barlow Condensed', sans-serif",
@@ -89,6 +90,7 @@ export function SiteProductCard({ label, href, img, desc }: SiteProductCardProps
               color: "#1B3A6B",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
+              marginTop: "auto"
             }}
           >
             LEARN MORE <ArrowRight size={12} />

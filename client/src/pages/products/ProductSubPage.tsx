@@ -853,9 +853,9 @@ const PAGE_DATA: Record<string, PageData> = {
       { title: "Powder Coating Systems", subtitle: "The coating process after blasting", href: "/products/powder-booths", image: POWDER_RENDER },
     ],
     featureImages: [
-      "/assets/centerized-img-one-new.png",
-      "/assets/centerized-img-two.png",
-      "/assets/conteinerized-blast-three.png",
+      "/assets/cbb-image.png",
+      "/assets/cbb-image-one.jpeg",
+      "/assets/cbb-image-two.jpeg",
 
     ],
   },
