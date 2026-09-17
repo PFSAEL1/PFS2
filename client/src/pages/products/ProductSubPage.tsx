@@ -559,6 +559,9 @@ const PAGE_DATA: Record<string, PageData> = {
       "/assets/conveyor-oven-entry_8df7b0be.png",
       "/assets/conveyor-oven-line_2746ee95.png",
     ],
+    featureImages: [
+      "/assets/conveyor-oven-entry_8df7b0be.png"
+    ],
     relatedHref: "/products/ovens",
     relatedLabel: "View All Industrial Ovens",
     relatedProducts: [
@@ -602,7 +605,10 @@ const PAGE_DATA: Record<string, PageData> = {
     title: "Large Equipment Ovens",
     subtitle: "Oversized industrial ovens for heavy equipment, agricultural machinery, and large structural components.",
     bgImage: "/assets/pfs-large-equipment-oven-tractor_871dfb4d.jpg",
-    featuredImage: "/assets/pfs-large-equipment-oven-tractor_871dfb4d.jpg",
+    featureImages: [
+      "/assets/pfs-large-equipment-oven-tractor_871dfb4d.jpg"
+    ],
+
     galleryImages: [
       "/assets/pfs-large-equipment-oven-tractor_871dfb4d.jpg",
       "/assets/pfs-large-oven-1_5ae8ed8b.jpg",
@@ -667,6 +673,9 @@ const PAGE_DATA: Record<string, PageData> = {
     title: "Custom Industrial Ovens",
     subtitle: "Custom-engineered industrial ovens for unique applications, process requirements, and facility constraints.",
     bgImage: CUSTOM_OVEN_RENDER,
+    featureImages: [
+      "/assets/pfs-batch-ovens-new.png"
+    ],
     breadcrumbs: [{ label: "Products", href: "/products" }, { label: "Industrial Ovens", href: "/products/ovens" }, { label: "Custom Ovens" }],
     body: "PFS engineers custom industrial ovens for applications that require non-standard dimensions, specialized temperature profiles, or integration with automated finishing lines.",
     features: ["Custom dimensions and configurations", "In-house engineering", "Automation integration", "ETL/UL Certified Components", "Any heat source", "Full installation support"],

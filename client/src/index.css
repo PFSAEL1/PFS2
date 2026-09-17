@@ -124,6 +124,19 @@ body.modal-open {
   margin: 0 auto;
 }
 
+.product-image-gallery__viewport {
+  height: 280px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.product-image-gallery__image-button {
+  height: 280px;
+  width: 100%;
+  object-fit: cover;
+}
+
+
 .site-hero-content-wrapper {
   padding-top: 8rem;
   padding-bottom: 4.5rem;
@@ -559,6 +572,10 @@ body.modal-open {
     height: 440px;
   }
 
+  .product-image-gallery__image-button {
+    height: 440px;
+  }
+
   .product-image-gallery__arrow {
     width: 40px;
     height: 40px;
@@ -572,9 +589,7 @@ body.modal-open {
     right: 8px;
   }
 
-  .product-image-gallery__image-button {
-    height: 440px;
-  }
+
 }
 
 /* Mobile */

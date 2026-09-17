@@ -22,9 +22,16 @@ const GALLERY_IMGS = [
   { src: "/assets/pfs-walkin-batch-booth-front-wide_4f44f772.jpg", alt: "PFS batch curing oven — front view with double entry doors, installed in industrial facility", pos: "center 50%" },
   { src: "/assets/pfs-walkin-batch-booth-front-scissor_13c63689.jpg", alt: "PFS batch curing oven — front view with scissor lift during installation", pos: "center 50%" },
   { src: "/assets/pfs-walkin-batch-booth-side-angle1_9b6faf8e.jpg", alt: "PFS batch curing oven — side angle view showing panel construction and exhaust stack", pos: "center 50%" },
-  { src: "/assets/pfs-walkin-batch-booth-side-angle2_9b7ce2ca.jpg", alt: "PFS batch curing oven — side angle view during installation", pos: "center 50%" },
+  // { src: "/assets/pfs-walkin-batch-booth-side-angle2_9b7ce2ca.jpg", alt: "PFS batch curing oven — side angle view during installation", pos: "center 50%" },
   // Renders
   { src: "/assets/pfs-vulcan-oven-card_ad72eade_316de7d1.png", alt: "PFS VULCAN batch curing oven — product render", pos: "center 50%" },
+  { src: "/assets/batch-oven-one.jpeg", alt: "PFS VULCAN batch curing oven — product render", pos: "center 50%" },
+  { src: "/assets/batch-ovens-two.jpeg", alt: "PFS VULCAN batch curing oven — product render", pos: "center 50%" },
+  { src: "/assets/batch-oven-three.jpeg", alt: "PFS VULCAN batch curing oven — product render", pos: "center 50%" },
+  { src: "/assets/batch-oven-four.jpeg", alt: "PFS VULCAN batch curing oven — product render", pos: "center 50%" },
+  { src: "/assets/batch-oven-five.jpeg", alt: "PFS VULCAN batch curing oven — product render", pos: "center 50%" },
+
+
 ];
 
 const ETL_LOGO = "/assets/pfs-etl-logo_7758f722.png";
