@@ -28,7 +28,7 @@ const GALLERY_IMGS = [
   { src: "/assets/batch-oven-one.jpeg", alt: "PFS VULCAN batch curing oven — product render", pos: "center 50%" },
   { src: "/assets/batch-ovens-two.jpeg", alt: "PFS VULCAN batch curing oven — product render", pos: "center 50%" },
   { src: "/assets/batch-oven-three.jpeg", alt: "PFS VULCAN batch curing oven — product render", pos: "center 50%" },
-  { src: "/assets/batch-oven-four.jpeg", alt: "PFS VULCAN batch curing oven — product render", pos: "center 50%" },
+  // { src: "/assets/batch-oven-four.jpeg", alt: "PFS VULCAN batch curing oven — product render", pos: "center 50%" },
   { src: "/assets/batch-oven-five.jpeg", alt: "PFS VULCAN batch curing oven — product render", pos: "center 50%" },
 
 
