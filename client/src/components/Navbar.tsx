@@ -162,7 +162,7 @@ const NAV_ITEMS: NavItem[] = [
     href: "/resources",
     children: [
       { label: "Resources Overview", href: "/resources" },
-      { label: "Order Filters", href: "https://www.pfsfilters.com", external: true },
+      { label: "Order Filters", href: "https://www.pfsfilters.com/shop", external: true },
       { label: "Downloads", href: "/resources/downloads" },
       { label: "Case Studies", href: "/resources/case-studies" },
       { label: "FAQs", href: "/resources/faqs" },
@@ -472,8 +472,12 @@ export default function Navbar() {
             </div>
             <div className="flex items-center gap-3 md:gap-5">
               {[
-                { label: "Replacement Filters", href: PFS_FILTERS_URL, external: true },
-                // { label: "Order Filters", href: "/filters", external: false },
+                {
+                  label: "Replacement Filters",
+                  href: "https://www.pfsfilters.com/",
+                  external: true
+                },
+                { label: "Products", href: "/products", external: false },
                 { label: "Support", href: "/support", external: false },
                 { label: "Contact", href: "/contact", external: false },
                 { label: "Distributor", href: "/become-a-distributor", external: false },
